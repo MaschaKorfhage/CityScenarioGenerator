@@ -1,12 +1,20 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
 # from cityscenariogenerator.builda_file_import.config_sample_generation import ConfigSamplingMode, SamplingModeEnum
+from pathlib import Path
+import random
+import sys
 import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
 import create_lpg_configs
 
 
 def import_buildings_from_builda_file():
+    # init random
+    seed = random.randrange(sys.maxsize)
+    random.seed(seed)
+    print(f"Using RNG seed {seed}")
+
     # get building data from builda csv file
     (
         building_ids,
@@ -30,9 +38,11 @@ def import_buildings_from_builda_file():
     print(building_objects)
 
     # create an LPG config for each building
+    config_creator = create_lpg_configs.LPGConfigCreator()
     buildings = dict(zip(building_ids, building_objects))
     for id, building in buildings.items():
-        create_lpg_configs.create_lpg_building_config(id, building)
+        config_creator.add_lpg_house(id, building)
+    config_creator.create_house_config_files(Path("./LPG_House_configs"))
 
 
 if __name__ == "__main__":

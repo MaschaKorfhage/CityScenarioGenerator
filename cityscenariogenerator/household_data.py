@@ -1,22 +1,17 @@
+"""Defines dataclasses for storing household and building related information from BUILDA"""
+
 from dataclasses import dataclass
 
 
 @dataclass
 class HouseholdData:
     household_name: str
-    cars: int
+    num_cars: int
 
 
 @dataclass
 class BuildingData:
     households: list[HouseholdData]
-
-
-@dataclass
-class PersonRawData:
-    age: int
-    gender: str
-    employment: str
 
 
 @dataclass
