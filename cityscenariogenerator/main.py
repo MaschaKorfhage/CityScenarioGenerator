@@ -3,6 +3,7 @@
 # from cityscenariogenerator.builda_file_import.config_sample_generation import ConfigSamplingMode, SamplingModeEnum
 import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
+import create_lpg_configs
 
 
 def import_buildings_from_builda_file():
@@ -18,22 +19,20 @@ def import_buildings_from_builda_file():
         pv_generations_in_kwh,
         commodities,
         supply_levels,
-        number_of_persons_per_building,
-        working_status_per_building,
-        female_status_per_building,
-        senior_status_per_building,
+        building_data_list,
     ) = builda_file_sampler.get_buildings_from_builda(number_of_random_samples=2)
 
     # get lpg profiles based on builda data
-    dict_lpg_households = lpg_household_sampler.get_lpg_households_based_on_builda_data(
-        list_dwellings_per_building=number_of_dwellings,
-        list_number_of_persons_per_building=number_of_persons_per_building,
-        list_working_status_per_building=working_status_per_building,
-        list_female_status_per_building=female_status_per_building,
-        list_senior_status_per_building=senior_status_per_building,
+    building_objects = lpg_household_sampler.get_lpg_households_based_on_builda_data(
+        building_data_list
     )
     print(building_ids)
-    print(dict_lpg_households)
+    print(building_objects)
+
+    # create an LPG config for each building
+    buildings = dict(zip(building_ids, building_objects))
+    for id, building in buildings.items():
+        create_lpg_configs.create_lpg_building_config(id, building)
 
 
 if __name__ == "__main__":

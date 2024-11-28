@@ -4,8 +4,14 @@ import os
 import pandas as pd
 from typing import Dict, List
 
-# from hisim import utils
 import random
+
+from household_data import (
+    BuildingData,
+    BuildingRawData,
+    HouseholdData,
+    HouseholdRawData,
+)
 
 DATA_PATH = os.path.join(
     "cityscenariogenerator", "builda_file_import", "data_used_for_config_generation"
@@ -80,55 +86,6 @@ def create_random_samples_for_household_data(
         sample_list, weights=sample_weights, k=number_of_random_samples
     )
     return random_samples
-
-
-def sort_lpg_households_according_to_household_types(
-    lpg_household_data, dict_zensus_household_types_and_weights
-):
-    """Sort LPG households according to their column names."""
-    dict_with_household_type_and_lpg_households = {}
-    for key in dict_zensus_household_types_and_weights.keys():
-        dict_with_household_type_and_lpg_households.update(
-            {key: lpg_household_data.loc[lpg_household_data["householdtype"] == key]}
-        )
-
-    return dict_with_household_type_and_lpg_households
-
-
-def test_distribution(
-    sample_list: List,
-    random_samples_generated: List,
-    dict_literature_percentages_of_samples: Dict,
-):
-    """Test percentages of randomly generated samples with literature values in order to validate the generated distribution."""
-    all_relative_differences = []
-    percentages_sample = []
-    percentages_literature = []
-
-    for sample in sample_list:
-        if sample in random_samples_generated:
-
-            count = random_samples_generated.count(sample)
-
-            percentage_generated = count / len(random_samples_generated)
-
-            percentage_literature = dict_literature_percentages_of_samples[sample]
-
-            relative_difference = (
-                abs(percentage_generated - percentage_literature)
-                / percentage_literature
-            )
-
-            percentages_sample.append(percentage_generated)
-            percentages_literature.append(percentage_literature)
-            all_relative_differences.append(relative_difference)
-
-    print("sample percentages ", percentages_sample)
-    print("literature percentages ", percentages_literature)
-    print(
-        "rel. difference of sample percentages and literature values ",
-        all_relative_differences,
-    )
 
 
 def get_representative_lpg_household_for_each_household_type(
@@ -300,44 +257,40 @@ def get_random_distributions_of_lpg_households_for_multiple_buildings(
 
 
 def get_lpg_household_based_on_builda_household_information(
-    number_of_dwellings_per_building: int,
-    number_of_persons_per_household: int,
-    working_status_per_household: float,
-    female_status_per_household: float,
-    senior_status_per_household: float,
-):
+    household_data: HouseholdRawData,
+) -> HouseholdData:
     """Get lpg household based on builda household information."""
     # get lpg households
     lpg_household_data = get_lpg_households()
     lpg_household_data = lpg_household_data.loc[
-        lpg_household_data["number of residents"] == number_of_persons_per_household
+        lpg_household_data["number of residents"] == household_data.num_persons
     ]
 
     lpg_household_data_working = lpg_household_data.loc[
-        lpg_household_data["working status"] == working_status_per_household
+        lpg_household_data["working status"] == household_data.working_ratio
     ]
     lpg_household_data_female = lpg_household_data_working.loc[
-        lpg_household_data_working["female status"] == female_status_per_household
+        lpg_household_data_working["female status"] == household_data.female_ratio
     ]
     lpg_household_data_senior = lpg_household_data_female.loc[
-        lpg_household_data_female["senior status float"] == senior_status_per_household
+        lpg_household_data_female["senior status float"] == household_data.senior_ratio
     ]
     # at the end, if dataframe is not empty take random choice and get the final random lpg household
     if lpg_household_data_senior.empty is False:
 
-        final_random_lpg_household = random.choice(
+        lpg_household_name = random.choice(
             list(lpg_household_data_senior["lpg household"])
         )
 
     # or if dataframe was empty and no lpg household was found with this working status, take a random sample out of precedent dataframe
     else:
         if lpg_household_data_female.empty is False:
-            final_random_lpg_household = random.choice(
+            lpg_household_name = random.choice(
                 list(lpg_household_data_female["lpg household"])
             )
         else:
             if lpg_household_data_working.empty is False:
-                final_random_lpg_household = random.choice(
+                lpg_household_name = random.choice(
                     list(lpg_household_data_working["lpg household"])
                 )
             else:
@@ -348,64 +301,26 @@ def get_lpg_household_based_on_builda_household_information(
                     list_of_random_number_of_residents,
                     list_of_random_working_status,
                 ) = get_random_distribution_of_lpg_households_per_building(
-                    number_of_dwellings_per_building=number_of_dwellings_per_building
+                    household_data.num_persons
                 )
-                final_random_lpg_household = list_of_random_lpg_households[0]
-    return final_random_lpg_household
+                lpg_household_name = list_of_random_lpg_households[0]
+    return HouseholdData(lpg_household_name, household_data.num_cars)
 
 
-def get_lpg_households_based_on_builda_data(
-    list_number_of_persons_per_building: List[List[int]],
-    list_dwellings_per_building: List[int],
-    list_working_status_per_building: List[List[float]],
-    list_female_status_per_building: List[List[float]],
-    list_senior_status_per_building: List[List[float]],
-):
+def get_lpg_households_based_on_builda_data(building_data_list: list[BuildingRawData]):
     """Get lpg households based on builda data."""
 
-    dict_lpg_households_per_number_of_dwellings: Dict = {}
-    list_all_lpg_households = []
+    buildings: list[BuildingData] = []
     # iterate over buildings
-    for building_index, number_of_dwellings_per_building in enumerate(
-        list_dwellings_per_building
-    ):
+    for building_data in building_data_list:
 
-        list_number_of_persons_per_household = list_number_of_persons_per_building[
-            building_index
-        ]
-        list_working_status_per_household = list_working_status_per_building[
-            building_index
-        ]
-        list_female_status_per_household = list_female_status_per_building[
-            building_index
-        ]
-        list_senior_status_per_household = list_senior_status_per_building[
-            building_index
-        ]
-        list_with_lpg_households_per_building = []
+        households = []
         # iterate over dwellings in building
-        for dwelling_index in range(number_of_dwellings_per_building):
-            final_lpg_household = get_lpg_household_based_on_builda_household_information(
-                number_of_dwellings_per_building=number_of_dwellings_per_building,
-                number_of_persons_per_household=list_number_of_persons_per_household[
-                    dwelling_index
-                ],
-                working_status_per_household=list_working_status_per_household[
-                    dwelling_index
-                ],
-                female_status_per_household=list_female_status_per_household[
-                    dwelling_index
-                ],
-                senior_status_per_household=list_senior_status_per_household[
-                    dwelling_index
-                ],
+        for household_data in building_data.households:
+            final_lpg_household = (
+                get_lpg_household_based_on_builda_household_information(household_data)
             )
-            list_with_lpg_households_per_building.append(final_lpg_household)
-        list_all_lpg_households.append(list_with_lpg_households_per_building)
-    # put huseholds in dict
-    dict_lpg_households_per_number_of_dwellings.update(
-        {"lpg_households": list_all_lpg_households}
-    )
-    print(dict_lpg_households_per_number_of_dwellings)
+            households.append(final_lpg_household)
+        buildings.append(BuildingData(households))
 
-    return dict_lpg_households_per_number_of_dwellings
+    return buildings

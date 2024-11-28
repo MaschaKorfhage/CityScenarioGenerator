@@ -4,6 +4,8 @@ import pandas as pd
 from typing import List
 from ast import literal_eval
 
+from household_data import BuildingRawData, HouseholdRawData
+
 
 def get_working_status(employment_list_per_household: List[str]) -> float:
     """Get working status based on employment list for each household."""
@@ -54,7 +56,7 @@ def get_senior_status(employment_list_per_household: List[str]) -> float:
 
 
 def get_buildings_from_builda(
-    number_of_random_samples: int,
+    number_of_random_samples: int | None = None,
 ) -> tuple[
     List, List, List, List, List, List, List, List, List, List, List, List, List, List
 ]:
@@ -67,8 +69,11 @@ def get_buildings_from_builda(
     print(f"Read builda data from {path_to_builda_data}")
 
     d_f = pd.read_excel(path_to_builda_data, header=0)
-    # take random samples from df
-    d_f = d_f.sample(n=number_of_random_samples, axis=0)
+
+    if number_of_random_samples is not None:
+        # take random samples from df
+        d_f = d_f.sample(n=number_of_random_samples, axis=0)
+
     # remove rows where norm heating load is nan
     d_f = d_f[d_f["norm_heating_load_kw"].notna()]
     building_ids = list(d_f["id"])
@@ -110,58 +115,49 @@ def get_buildings_from_builda(
                 )
 
     # get households (from new census)
-    number_of_persons_per_building = []
-    working_status_per_building = []
-    female_status_per_building = []
-    senior_status_per_building = []
+    buildings = []
     if "households" in d_f.columns:
         for household_list_string in d_f["households"].values:
-            if isinstance(household_list_string, str):
-                household_list_string = literal_eval(household_list_string)
-                # go through household list for each building
-                number_of_persons_per_households = []
-                working_status_per_households = []
-                female_status_per_households = []
-                senior_status_per_households = []
-                for household_dict in household_list_string:
-                    # get number of persons per household
-                    number_of_persons_per_household = len(household_dict["persons"])
-                    number_of_persons_per_households.append(
-                        number_of_persons_per_household
-                    )
-                    # get employment for each person per household
-                    employment_list_per_household = []
-                    gender_list_per_household = []
-                    for person_dict in household_dict["persons"]:
-                        # get employment for each person per household
-                        employment_list_per_household.append(person_dict["employment"])
-                        # get gender for each person per household
-                        gender_list_per_household.append(person_dict["gender"])
-                    # get mean working status per household
-                    working_status_per_household = get_working_status(
-                        employment_list_per_household=employment_list_per_household
-                    )
-                    working_status_per_households.append(working_status_per_household)
-                    # get mean female status per household
-                    female_status_per_household = get_female_status(
-                        gender_list_per_household=gender_list_per_household
-                    )
-                    female_status_per_households.append(female_status_per_household)
-                    # get mean senior status per household
-                    senior_status_per_household = get_senior_status(
-                        employment_list_per_household=employment_list_per_household
-                    )
-                    senior_status_per_households.append(senior_status_per_household)
-
-                number_of_persons_per_building.append(number_of_persons_per_households)
-                working_status_per_building.append(working_status_per_households)
-                female_status_per_building.append(female_status_per_households)
-                senior_status_per_building.append(senior_status_per_households)
-
-            else:
+            if not isinstance(household_list_string, str):
                 print(
                     f"household_list_string is no string but {type(household_list_string)} {household_list_string}. This data will be neglected."
                 )
+                continue
+
+            household_list_string = literal_eval(household_list_string)
+            # go through household list for each building
+            number_of_persons_per_households = []
+            raw_households = []
+            for household_dict in household_list_string:
+                # get number of persons per household
+                number_of_persons_per_households.append(len(household_dict["persons"]))
+                num_cars = household_dict["cars"]
+
+                # get employment for each person per household
+                employment_list_per_household = []
+                gender_list_per_household = []
+                for person_dict in household_dict["persons"]:
+                    # get employment for each person per household
+                    employment_list_per_household.append(person_dict["employment"])
+                    # get gender for each person per household
+                    gender_list_per_household.append(person_dict["gender"])
+
+                # get mean working status per household
+                working_status = get_working_status(employment_list_per_household)
+                # get mean female status per household
+                female_status = get_female_status(gender_list_per_household)
+                # get mean senior status per household
+                senior_status = get_senior_status(employment_list_per_household)
+                raw_households.append(
+                    HouseholdRawData(
+                        len(person_dict),
+                        num_cars,
+                        working_status,
+                        female_status,
+                        senior_status,
+                    )
+                )
+            buildings.append(BuildingRawData(raw_households))
 
     return (
         building_ids,
@@ -174,10 +170,7 @@ def get_buildings_from_builda(
         pv_generations_in_kwh,
         commodities,
         supply_levels,
-        number_of_persons_per_building,
-        working_status_per_building,
-        female_status_per_building,
-        senior_status_per_building,
+        buildings,
     )
 
 
