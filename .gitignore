@@ -1,6 +1,3 @@
-# data directory
-/data/
-
 # scripts and logs
 slurm_scripts
 logs
