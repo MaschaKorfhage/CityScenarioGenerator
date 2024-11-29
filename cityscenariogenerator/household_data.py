@@ -2,6 +2,8 @@
 
 from dataclasses import dataclass
 
+from builda_client.model import Coordinates
+
 
 @dataclass
 class HouseholdData:
@@ -12,6 +14,7 @@ class HouseholdData:
 @dataclass
 class BuildingData:
     households: list[HouseholdData]
+    coordinates: Coordinates
 
 
 @dataclass
@@ -26,3 +29,4 @@ class HouseholdRawData:
 @dataclass
 class BuildingRawData:
     households: list[HouseholdRawData]
+    coordinates: Coordinates

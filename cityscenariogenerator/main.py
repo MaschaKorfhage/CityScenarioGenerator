@@ -15,11 +15,6 @@ import create_lpg_configs
 
 
 def import_buildings_from_builda_file():
-    # init random
-    seed = random.randrange(sys.maxsize)
-    random.seed(seed)
-    print(f"Using RNG seed {seed}")
-
     # get building data from builda csv file
     (
         building_ids,
@@ -65,6 +60,11 @@ def create_configs_from_buildings(
 
 
 if __name__ == "__main__":
+    # init random
+    seed = random.randrange(sys.maxsize)
+    random.seed(seed)
+    print(f"Using RNG seed {seed}")
+
     builda_query = {"city": "Heimbach", "postcode": "52396", "street": "Bachstraße"}
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)

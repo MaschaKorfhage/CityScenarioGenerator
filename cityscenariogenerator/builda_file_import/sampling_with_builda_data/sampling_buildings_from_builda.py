@@ -3,8 +3,22 @@
 import pandas as pd
 from typing import List
 from ast import literal_eval
+from builda_client.model import Coordinates
 
 from household_data import BuildingRawData, HouseholdRawData
+
+
+def parse_coordinates(coordinate_str: str) -> Coordinates:
+    """
+    Parses coordinates from a str in the format POINT(4356954.886156103 3235845.6588559514).
+
+    :param coordinate_str: the parsed coordinate object
+    """
+    number_str = coordinate_str.removeprefix("POINT(").removesuffix(")")
+    numbers = number_str.split(" ")
+    if not numbers or len(numbers) != 2:
+        raise Exception(f"Unexpected coordinate format: {coordinate_str}")
+    return Coordinates(float(numbers[0]), float(numbers[1]))
 
 
 def get_working_status(employment_list_per_household: List[str]) -> float:
@@ -117,13 +131,16 @@ def get_buildings_from_builda(
     # get households (from new census)
     buildings = []
     if "households" in d_f.columns:
-        for household_list_string in d_f["households"].values:
+        for coordinate_str, household_list_string in d_f[
+            ["centroid", "households"]
+        ].values:
             if not isinstance(household_list_string, str):
                 print(
                     f"household_list_string is no string but {type(household_list_string)} {household_list_string}. This data will be neglected."
                 )
                 continue
 
+            coordinates = parse_coordinates(coordinate_str)
             household_list_string = literal_eval(household_list_string)
             # go through household list for each building
             number_of_persons_per_households = []
@@ -157,7 +174,7 @@ def get_buildings_from_builda(
                         senior_status,
                     )
                 )
-            buildings.append(BuildingRawData(raw_households))
+            buildings.append(BuildingRawData(raw_households, coordinates))
 
     return (
         building_ids,

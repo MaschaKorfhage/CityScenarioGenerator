@@ -6,7 +6,7 @@ import random
 import shutil
 from typing import Any
 from pylpg import lpgdata
-from builda_client.client import NonResidentialBuildingWithSourceDto
+from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates
 
 import household_data
 
@@ -100,6 +100,10 @@ class LPGConfigCreator:
             poiPreferences,
         )  # TODO: add PersonPoiPreferences once they are in the python bindings
 
+    def convert_coordinates(self, coordinates: Coordinates) -> lpgdata.Coordinates:
+        """Convert coordinates from BUILDA format to LPG format"""
+        return lpgdata.Coordinates(coordinates.latitude, coordinates.longitude)
+
     def add_lpg_house(
         self, id: str, building: household_data.BuildingData
     ) -> lpgdata.HouseData:
@@ -110,7 +114,11 @@ class LPGConfigCreator:
             self.create_lpg_household(i, hh) for i, hh in enumerate(building.households)
         ]
         house = lpgdata.HouseData(
-            id, None, households, lpgdata.HouseTypes.HT23_No_Infrastructure_at_all
+            id,
+            None,
+            self.convert_coordinates(building.coordinates),
+            households,
+            lpgdata.HouseTypes.HT23_No_Infrastructure_at_all,
         )
         self.houses[id] = house
         return house
@@ -144,7 +152,9 @@ class LPGConfigCreator:
 
         location = self.select_location(building)
         timelimit = None
-        poi = lpgdata.PointOfInterestData(location, timelimit)
+        poi = lpgdata.PointOfInterestData(
+            location, self.convert_coordinates(building.coordinates.value), timelimit
+        )
         self.pois[building.id] = poi
         return poi
 

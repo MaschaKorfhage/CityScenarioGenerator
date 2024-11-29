@@ -321,6 +321,6 @@ def get_lpg_households_based_on_builda_data(building_data_list: list[BuildingRaw
                 get_lpg_household_based_on_builda_household_information(household_data)
             )
             households.append(final_lpg_household)
-        buildings.append(BuildingData(households))
+        buildings.append(BuildingData(households, building_data.coordinates))
 
     return buildings
