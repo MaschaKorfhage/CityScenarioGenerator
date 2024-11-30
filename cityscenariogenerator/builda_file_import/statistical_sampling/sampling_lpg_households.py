@@ -17,10 +17,13 @@ DATA_PATH = os.path.join(
     "cityscenariogenerator", "builda_file_import", "data_used_for_config_generation"
 )
 
+#: the colum with the household ID to choose
+HH_KEY_COLUMN = "lpg household name"
+
 
 def get_lpg_households():
     """Read lpg households."""
-    hh_data_path = os.path.join(DATA_PATH, "Tabelle_LPG_Households.xlsx")
+    hh_data_path = os.path.join(DATA_PATH, "Tabelle_LPG_Households.csv")
     lpg_household_data = pd.read_excel(hh_data_path)
 
     return lpg_household_data
@@ -170,13 +173,13 @@ def get_representative_lpg_household_for_each_household_type(
         if lpg_household_working.empty is False:
 
             final_random_lpg_household = random.choice(
-                list(lpg_household_working["lpg household"])
+                list(lpg_household_working[HH_KEY_COLUMN])
             )
 
         # or if dataframe was empty and no lpg household was found with this working status, take a random sample out of precedent dataframe
         else:
             final_random_lpg_household = random.choice(
-                list(lpg_household["lpg household"])
+                list(lpg_household[HH_KEY_COLUMN])
             )
 
         list_of_random_lpg_household_samples.append(final_random_lpg_household)
@@ -277,21 +280,20 @@ def get_lpg_household_based_on_builda_household_information(
     ]
     # at the end, if dataframe is not empty take random choice and get the final random lpg household
     if lpg_household_data_senior.empty is False:
-
         lpg_household_name = random.choice(
-            list(lpg_household_data_senior["lpg household"])
+            list(lpg_household_data_senior[HH_KEY_COLUMN])
         )
 
     # or if dataframe was empty and no lpg household was found with this working status, take a random sample out of precedent dataframe
     else:
         if lpg_household_data_female.empty is False:
             lpg_household_name = random.choice(
-                list(lpg_household_data_female["lpg household"])
+                list(lpg_household_data_female[HH_KEY_COLUMN])
             )
         else:
             if lpg_household_data_working.empty is False:
                 lpg_household_name = random.choice(
-                    list(lpg_household_data_working["lpg household"])
+                    list(lpg_household_data_working[HH_KEY_COLUMN])
                 )
             else:
                 # if no lpg household is compatible with builda household, choose randoml based on census 2011
