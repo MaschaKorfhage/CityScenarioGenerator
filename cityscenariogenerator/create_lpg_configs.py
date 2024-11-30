@@ -78,7 +78,7 @@ class LPGConfigCreator:
     MAX_POIS_PER_TYPE = 3
 
     def __init__(self) -> None:
-        self.houses: dict[str, lpgdata.HouseData] = {}
+        self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
         self.pois: dict[str, lpgdata.PointOfInterestData] = {}
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
         self.nace_loc_mapping = load_nace_location_mapping()
@@ -153,7 +153,8 @@ class LPGConfigCreator:
             households,
             lpgdata.HouseTypes.HT23_No_Infrastructure_at_all,
         )
-        self.houses[id] = house
+        hcj = lpgdata.HouseCreationAndCalculationJob(house)
+        self.houses[id] = hcj
         return house
 
     def get_matching_locations(
@@ -190,8 +191,10 @@ class LPGConfigCreator:
         poi = lpgdata.PointOfInterestData(
             location, self.convert_coordinates(building.coordinates.value), timelimit
         )
-        self.pois[building.id] = poi
-        self.poi_ids_by_type[location].append(building.id)
+        # determine the ID of the POI
+        poi_id = f"{location} {building.id}"
+        self.pois[poi_id] = poi
+        self.poi_ids_by_type[location].append(poi_id)
         return poi
 
     def determine_person_in_hh(
@@ -224,7 +227,6 @@ class LPGConfigCreator:
                 p: distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
             }
             # randomly select some POIs, using the inverted distances as weights
-            distmin: float = min(distances.values())
             if len(distances) > 1:
                 # norm the distances to [0, 1] to avoid double precision issues
                 distmax: float = max(distances.values())
@@ -237,9 +239,7 @@ class LPGConfigCreator:
                 poi_ids, size=size, replace=False, p=probabilities
             )
             # store the pois with according int weights in the persons preferences
-            poi_weights.update(
-                {location + "-" + poi_id: weights[poi_id] for poi_id in selected_pois}
-            )
+            poi_weights.update({poi_id: weights[poi_id] for poi_id in selected_pois})
         return poi_weights
 
     def create_poi_preferences(self):
@@ -248,21 +248,27 @@ class LPGConfigCreator:
         if not self.pois:
             raise Exception("No POIs have been added yet.")
 
-        for id, house in self.houses.items():
+        for id, hcj in self.houses.items():
             # store all POI that are used by persons in this house
-            relevant_pois: set[str] = set()
-            for hh in house.Households:
-                all_poi_preferences: dict[str, lpgdata.PersonPoiPreferences] = {}
+            relevant_pois: dict[str, lpgdata.PointOfInterestData] = {}
+            for hh in hcj.House.Households:
+                hh_poi_preferences: dict[str, lpgdata.PersonPoiPreferences] = {}
                 persons = self.determine_person_in_hh(hh)
                 for person in persons:
-                    poi_weights = self.select_pois_for_person(person, house.Coordinates)
+                    poi_weights = self.select_pois_for_person(
+                        person, hcj.House.Coordinates
+                    )
                     routes = []
-                    all_poi_preferences[person.PersonName] = (
+                    hh_poi_preferences[person.PersonName] = (
                         lpgdata.PersonPoiPreferences(poi_weights, routes, True)
                     )
-                    relevant_pois.update(poi_weights.keys())
-                hh.PointOfInterestPreferences = all_poi_preferences
-            # TODO: save the relevant POIs in a CityData
+                    # add selected POIs to the list of used POIs for the house
+                    relevant_pois.update(
+                        {poi_id: self.pois[poi_id] for poi_id in poi_weights.keys()}
+                    )
+                hh.PointOfInterestPreferences = hh_poi_preferences
+            # save the relevant POIs for this building in a CityData object
+            hcj.City = lpgdata.CityData(relevant_pois)
 
     def create_config_files(self, path: Path, clear_folder: bool = False):
         if path.is_dir() and clear_folder:
@@ -277,8 +283,8 @@ class LPGConfigCreator:
 
     def create_house_config_files(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
-        for id, house in self.houses.items():
-            self.create_lpg_object_config_file(path, id, house)
+        for id, hcj in self.houses.items():
+            self.create_lpg_object_config_file(path, id, hcj)
 
     def create_poi_config_files(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
