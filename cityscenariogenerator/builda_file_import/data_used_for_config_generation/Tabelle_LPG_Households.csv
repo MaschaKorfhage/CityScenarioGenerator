@@ -1,0 +1,65 @@
+﻿lpg household;number of residents;householdtype;senior status;senior status float;working status;non-working status;gender;female status;male status
+CHR01_Couple_both_at_Work;2;couple without kids;non_seniors;0;1;0;"[""female"", ""male""]";0.5;0.5
+CHR02_Couple_30_64_age_with_work;2;couple without kids;non_seniors;0;1;0;"[""female"", ""male""]";0.5;0.5
+CHR03_Family_1_child_both_at_work;3;couple with kids;non_seniors;0;0.67;0.33;"[""female"", ""male"", ""male""]";0.333333333;0.666666667
+CHR04_Couple_30_64_years_1_at_work_1_at_home;2;couple without kids;non_seniors;0;0.5;0.5;"[""female"", ""male""]";0.5;0.5
+CHR05_Family_3_children_both_with_work;5;couple with kids;non_seniors;0;0.4;0.60;"[""female"", ""female"", ""male"", ""male"", ""male""]";0.4;0.6
+CHR06_Jak_Jobless;1;single;non_seniors;0;0;1;"[""male""]";0;1
+CHR07_Single_with_work;1;single;non_seniors;0;1;0;"[""male""]";0;1
+CHR08_Single_woman_2_children_with_work;3;single woman and kids;non_seniors;0;0.33;0.67;"[""female"", ""male"", ""male""]";0.333333333;0.666666667
+CHR09_Single_woman_30_64_years_with_work;1;single;non_seniors;0;1;0;"[""female""]";1;0
+CHR10_Single_man_30_64_age_shift_worker;1;single;non_seniors;0;1;0;"[""male""]";0;1
+CHR11_Student_Female_Philosophy;1;single;non_seniors;0;0;1;"[""female""]";1;0
+CHR12_Student_2_Male_Philosophy;1;single;non_seniors;0;0;1;"[""male""]";0;1
+CHR13_Student_with_Work;1;single;non_seniors;0;1;0;"[""female""]";1;0
+CHR14_3_adults_Couple_30_64_years_both_at_work_Senior_at_home;3;multiple people (no family);seniors_and_non_seniors;0.333333333;0.67;0.33;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR15_Multigenerational_Home_working_couple_2_children_2_seniors;6;couple with kids;seniors_and_non_seniors;0.333333333;0.33;0.67;"[""female"", ""female"", ""female"",""male"", ""male"", ""male""]";0.5;0.5
+CHR16_Couple_over_65_years;2;couple without kids;seniors;;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR17_Shiftworker_Couple;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
+CHR18_Family_2_children_parents_without_work;4;couple with kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR19_Couple_30_64_years_both_at_work_with_homehelp;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR20_one_at_work_one_work_home_3_children;5;couple with kids;non_seniors;0;0.20;0.80;"[""female"", ""male"", ""male"", ""male""]";0.25;0.75
+CHR21_Couple_30_64_years_shift_worker;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
+CHR22_Single_woman_1_child_with_work;2;single woman and kids;non_seniors;0;0.50;0.50;"[""female"", ""female""]";1;0
+CHR23_Single_man_over_65_years;1;single;seniors;1;0.00;1.00;"[""male""]";0;1
+CHR24_Single_woman_over_65_years;1;single;seniors;1;0.00;1.00;"[""female""]";1;0
+CHR25_Single_woman_under_30_years_with_work;1;single;non_seniors;0;1.00;0.00;"[""female""]";1;0
+CHR26_Single_woman_under_30_years_without_work;1;single;non_seniors;0;0.00;1.00;"[""female""]";1;0
+CHR27_Family_both_at_work_2_children;4;couple with kids;non_seniors;0;0.50;0.50;"[""female"", ""female"", ""female"", ""male""]";0.75;0.25
+CHR28_Single_man_under_30_years_without_work;1;single;non_seniors;0;0.00;1.00;"[""male""]";0;1
+CHR29_Single_man_under_30_years_with_work;1;single;non_seniors;0;1.00;0.00;"[""male""]";0;1
+CHR30_Single_Retired_Man;1;single;seniors;1;0.00;1.00;"[""male""]";0;1
+CHR31_Single_Retired_Woman;1;single;seniors;1;0.00;1.00;"[""female""]";1;0
+CHR32_Couple_under_30_years_without_work;2;couple without kids;non_seniors;0;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR33_Couple_under_30_years_with_work;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
+CHR34_Couple_under_30_years_one_at_work_one_at_home;2;couple without kids;non_seniors;0;0.50;0.50;"[""female"", ""male""]";0.5;0.5
+CHR35_Single_woman_30_64_years_with_work;1;single;non_seniors;0;1.00;0.00;"[""female""]";1;0
+CHR36_Single_woman_30_64_years_without_work;1;single;non_seniors;0;0.00;1.00;"[""female""]";1;0
+CHR37_Single_man_30_64_years_with_work;1;single;non_seniors;0;1.00;0.00;"[""male""]";0;1
+CHR38_Single_man_30_64_years_without_work;1;single;non_seniors;0;0.00;1.00;"[""male""]";0;1
+CHR39_Couple_30_64_years_with_work;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
+CHR40_Couple_30_64_years_without_work;2;couple without kids;non_seniors;0;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR41_Family_with_3_children_both_at_work;5;couple with kids;non_seniors;0;0.40;0.60;"[""female"", ""female"", ""male"", ""male"", ""male""]";0.4;0.6
+CHR42_Single_man_with_2_children_with_work;3;single man and kids;non_seniors;0;0.33;0.67;"[""female"", ""male"", ""male""]";0.333333333;0.666666667
+CHR43_Single_man_with_1_child_with_work;2;single man and kids;non_seniors;0;0.50;0.50;"[""male"", ""male""]";0;1
+CHR44_Family_with_2_children_1_at_work_1_at_home;4;couple with kids;non_seniors;0;0.25;0.75;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR45_Family_with_1_child_1_at_work_1_at_home;3;couple with kids;non_seniors;0;0.33;0.67;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR46_Single_woman_1_child_without_work;2;single woman and kids;non_seniors;0;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR47_Single_woman_2_children_without_work;3;single woman and kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR48_Family_with_2_children_without_work;4;couple with kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR49_Family_with_1_child_without_work;3;couple with kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR50_Single_woman_with_3_children_without_work;4;couple with kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR51_Couple_over_65_years_II;2;couple without kids;seniors;1;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR52_Student_Flatsharing;3;multiple people (no family);non_seniors;0;0.33;0.67;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR53_2_Parents_1_Working_2_Children;4;couple with kids;non_seniors;0;0.25;0.75;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR54_Retired_Couple_no_work;2;couple without kids;seniors;1;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR55_Couple_with_work_around_40;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
+CHR56_Couple_with_2_children_husband_at_work;4;couple with kids;non_seniors;0;0.25;0.75;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR57_Family_with_2_Children_Man_at_work;4;couple with kids;non_seniors;0;0.25;0.75;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHR58_Retired_Couple_no_work_no_cooking;2;couple without kids;seniors;1;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHR59_Family_3_children_parents_without_work;5;couple with kids;non_seniors;0;0.00;1.00;"[""female"", ""female"", ""female"", ""male"", ""male""]";0.6;0.4
+CHR60_Family_1_toddler_one_at_work_one_at_home;3;couple with kids;non_seniors;0;0.33;0.67;"[""female"", ""female"", ""male""]";0.666666667;0.333333333
+CHR61_Family_1_child_both_at_work_early_living_pattern;3;couple with kids;non_seniors;0;0.67;0.33;"[""female"", ""male"", ""male""]";0.333333333;0.666666667
+CHS01_Couple_with_2_Children_Dad_Employed;4;couple with kids;non_seniors;0;0.25;0.75;"[""female"", ""female"", ""male"", ""male""]";0.5;0.5
+CHS04_Retired_Couple_no_work;2;couple without kids;seniors;1;0.00;1.00;"[""female"", ""male""]";0.5;0.5
+CHS12_Shiftworker_Couple;2;couple without kids;non_seniors;0;1.00;0.00;"[""female"", ""male""]";0.5;0.5
