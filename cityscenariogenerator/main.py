@@ -5,7 +5,7 @@ import random
 import sys
 
 
-from builda_client.client import NonResidentialBuildingWithSourceDto
+from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates
 
 import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
@@ -14,7 +14,7 @@ from household_data import BuildingData
 import create_lpg_configs
 
 
-def import_buildings_from_builda_file():
+def import_buildings_from_builda_file() -> dict[str, BuildingData]:
     # get building data from builda csv file
     (
         building_ids,
@@ -28,7 +28,7 @@ def import_buildings_from_builda_file():
         commodities,
         supply_levels,
         building_data_list,
-    ) = builda_file_sampler.get_buildings_from_builda(number_of_random_samples=2)
+    ) = builda_file_sampler.get_buildings_from_builda(number_of_random_samples=5)
 
     # get lpg profiles based on builda data
     building_objects = lpg_household_sampler.get_lpg_households_based_on_builda_data(
@@ -50,13 +50,36 @@ def create_configs_from_buildings(
     for nonres_building in nonres_buildings:
         config_creator.add_poi(nonres_building)
 
-    # TODO: include coordinates in house
-    # TODO: create POI preferences (nearest ones)
-
-    # create an LPG config for each building
+    # create an LPG house config for each residential building
     for id, building in res_buildings.items():
         config_creator.add_lpg_house(id, building)
-    config_creator.create_config_files(path)
+
+    # determine which POIs each person visits
+    config_creator.create_poi_preferences()
+    # create config files for all created objects
+    config_creator.create_config_files(path, True)
+
+
+def overwrite_residential_coordinates(
+    nonres_buildings: list[NonResidentialBuildingWithSourceDto],
+    res_buildings: dict[str, BuildingData],
+):
+    """This is for testing with buildings from the Builda dump file with
+    buildings all over Germany"""
+    # determine latitude/longitude ranges from nonresidential buildings
+    allcoordinates = [b.coordinates.value for b in nonres_buildings]
+    latitudes = [c.latitude for c in allcoordinates]
+    latmin = min(latitudes)
+    latrange = max(latitudes) - latmin
+    longitudes = [c.longitude for c in allcoordinates]
+    longmin = min(longitudes)
+    longrange = max(longitudes) - longmin
+
+    # replace coordinates of residential buildings with random fitting values
+    for building in res_buildings.values():
+        lat = random.random() * latrange + latmin
+        long = random.random() * longrange + longmin
+        building.coordinates = Coordinates(lat, long)
 
 
 if __name__ == "__main__":
@@ -70,6 +93,9 @@ if __name__ == "__main__":
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
     res_buildings = import_buildings_from_builda_file()
+
+    # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
+    overwrite_residential_coordinates(nonres_buildings, res_buildings)
 
     create_configs_from_buildings(
         Path("./LPG_House_configs"), res_buildings, nonres_buildings

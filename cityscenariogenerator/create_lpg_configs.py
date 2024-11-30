@@ -1,14 +1,62 @@
 """Creates configuration files for the LPG out of BuildingData objects generated from BUILDA"""
 
+from collections import defaultdict
+import itertools
 import json
+import math
 from pathlib import Path
 import random
 import shutil
-from typing import Any
+from typing import Any, Iterable
+import numpy
 from pylpg import lpgdata
-from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates
+from builda_client import client as builda
 
 import household_data
+
+
+def load_nace_location_mapping() -> dict[str, list[str]]:
+    """
+    Loads the mapping of nace codes to corresponding descriptions and the
+    mapping of nace code descriptions to matching LPG locations, and combines
+    both mappings into one.
+
+    :return: mapping dict from nace codes to LPG locations
+    """
+    path = r"data\nace_code_descriptions.json"
+    with open(path, "r") as f:
+        nace_to_description = json.load(f)
+    path = r"data\nace_codes_to_locations.json"
+    with open(path, "r") as f:
+        description_to_loc = json.load(f)
+    combined = {
+        nace: description_to_loc[desc]
+        for nace, desc in nace_to_description.items()
+        if desc in description_to_loc
+    }
+    return combined
+
+
+def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
+    """
+    Generates a dict that maps each household template name to
+    a list of persons in this template.
+
+    :return: dict with a list of occupants for each household template
+    """
+    persons = [
+        getattr(lpgdata.TemplatePersons, p)
+        for p in dir(lpgdata.TemplatePersons)
+        if not p.startswith("__")
+    ]
+    # adapt the household template names to fit to the usual
+    return {k: list(g) for k, g in itertools.groupby(persons, lambda p: p.TemplateName)}
+
+
+def distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
+    """Calculates euclidean distance between two sets of coordinates"""
+    # TODO: implement a geographically correct distance function
+    return math.dist([c1.Latitude, c1.Longitude], [c2.Latitude, c2.Longitude])
 
 
 class LPGConfigCreator:
@@ -25,31 +73,16 @@ class LPGConfigCreator:
     NO_CAR_TRANSPORT_DEVICE_SETS = ONE_CAR_TRANSPORT_DEVICE_SETS
     MORE_CAR_TRANSPORT_DEVICE_SETS = TWO_CAR_TRANSPORT_DEVICE_SETS
 
+    # determine how many POIs of the same location type a person can visit
+    MIN_POIS_PER_TYPE = 1
+    MAX_POIS_PER_TYPE = 3
+
     def __init__(self) -> None:
         self.houses: dict[str, lpgdata.HouseData] = {}
         self.pois: dict[str, lpgdata.PointOfInterestData] = {}
-        self.nace_loc_mapping = self.load_nace_location_mapping()
-
-    def load_nace_location_mapping(self) -> dict[str, list[str]]:
-        """
-        Loads the mapping of nace codes to corresponding descriptions and the
-        mapping of nace code descriptions to matching LPG locations, and combines
-        both mappings into one.
-
-        :return: mapping dict from nace codes to LPG locations
-        """
-        path = r"data\nace_code_descriptions.json"
-        with open(path, "r") as f:
-            nace_to_description = json.load(f)
-        path = r"data\nace_codes_to_locations.json"
-        with open(path, "r") as f:
-            description_to_loc = json.load(f)
-        combined = {
-            nace: description_to_loc[desc]
-            for nace, desc in nace_to_description.items()
-            if desc in description_to_loc
-        }
-        return combined
+        self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
+        self.nace_loc_mapping = load_nace_location_mapping()
+        self.persons_in_each_hh = build_household_person_map()
 
     def select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -86,7 +119,6 @@ class LPGConfigCreator:
         )
         transport_device_set = self.select_transportation_device_set(household_data)
         charging_station_set = self.select_charging_station_set(transport_device_set)
-        poiPreferences = {"personname": lpgdata.PersonPoiPreferences()}
         return lpgdata.HouseholdData(
             None,
             hh_template_spec,
@@ -97,10 +129,11 @@ class LPGConfigCreator:
             transport_device_set,
             None,
             lpgdata.HouseholdDataSpecificationType.ByTemplateName,
-            poiPreferences,
-        )  # TODO: add PersonPoiPreferences once they are in the python bindings
+        )
 
-    def convert_coordinates(self, coordinates: Coordinates) -> lpgdata.Coordinates:
+    def convert_coordinates(
+        self, coordinates: builda.Coordinates
+    ) -> lpgdata.Coordinates:
         """Convert coordinates from BUILDA format to LPG format"""
         return lpgdata.Coordinates(coordinates.latitude, coordinates.longitude)
 
@@ -124,7 +157,7 @@ class LPGConfigCreator:
         return house
 
     def get_matching_locations(
-        self, building: NonResidentialBuildingWithSourceDto
+        self, building: builda.NonResidentialBuildingWithSourceDto
     ) -> list[str]:
         use: dict | None = building.use.value
         if not use:
@@ -135,7 +168,9 @@ class LPGConfigCreator:
         code = nace_text.split("_")[0]
         return self.nace_loc_mapping[code]
 
-    def select_location(self, building: NonResidentialBuildingWithSourceDto) -> str:
+    def select_location(
+        self, building: builda.NonResidentialBuildingWithSourceDto
+    ) -> str:
         matching_locations = self.get_matching_locations(building)
         if not matching_locations:
             # use "Employment" locations as default for now
@@ -143,7 +178,7 @@ class LPGConfigCreator:
         return random.choice(matching_locations)
 
     def add_poi(
-        self, building: NonResidentialBuildingWithSourceDto
+        self, building: builda.NonResidentialBuildingWithSourceDto
     ) -> lpgdata.PointOfInterestData:
         if building.id in self.pois:
             raise Exception(
@@ -156,7 +191,78 @@ class LPGConfigCreator:
             location, self.convert_coordinates(building.coordinates.value), timelimit
         )
         self.pois[building.id] = poi
+        self.poi_ids_by_type[location].append(building.id)
         return poi
+
+    def determine_person_in_hh(
+        self, hh: lpgdata.HouseholdData
+    ) -> list[lpgdata.PersonData]:
+        return self.persons_in_each_hh[hh.HouseholdTemplateSpec.HouseholdTemplateName]
+
+    def get_poi_distances(
+        self,
+        coordinates: lpgdata.Coordinates,
+        poi_list: list[lpgdata.PointOfInterestData],
+    ):
+        return [distance(coordinates, p.Coordinates) for p in poi_list]
+
+    def select_pois_for_person(
+        self,
+        person: lpgdata.PersonData,
+        coordinates: lpgdata.Coordinates,
+        has_car: bool = True,
+    ) -> dict[str, int]:
+        poi_weights = {}
+        for location, poi_ids in self.poi_ids_by_type.items():
+            # determine how many POIs of this type the person will select
+            size = random.randint(
+                LPGConfigCreator.MIN_POIS_PER_TYPE, LPGConfigCreator.MAX_POIS_PER_TYPE
+            )
+            size = min(size, len(poi_ids))
+            # calculate distances to all POIs of this type
+            distances = {
+                p: distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
+            }
+            # randomly select some POIs, using the inverted distances as weights
+            distmin: float = min(distances.values())
+            if len(distances) > 1:
+                # norm the distances to [0, 1] to avoid double precision issues
+                distmax: float = max(distances.values())
+                distances = {p: d / distmax for p, d in distances.items()}
+
+            weights = {poi: 1 / (d + 0.1) for poi, d in distances.items()}
+            weightsum: float = sum(weights.values())
+            probabilities = [w / weightsum for w in weights.values()]
+            selected_pois: Iterable[lpgdata.PointOfInterestData] = numpy.random.choice(
+                poi_ids, size=size, replace=False, p=probabilities
+            )
+            # store the pois with according int weights in the persons preferences
+            poi_weights.update(
+                {location + "-" + poi_id: weights[poi_id] for poi_id in selected_pois}
+            )
+        return poi_weights
+
+    def create_poi_preferences(self):
+        if not self.houses:
+            raise Exception("No houses have been added yet.")
+        if not self.pois:
+            raise Exception("No POIs have been added yet.")
+
+        for id, house in self.houses.items():
+            # store all POI that are used by persons in this house
+            relevant_pois: set[str] = set()
+            for hh in house.Households:
+                all_poi_preferences: dict[str, lpgdata.PersonPoiPreferences] = {}
+                persons = self.determine_person_in_hh(hh)
+                for person in persons:
+                    poi_weights = self.select_pois_for_person(person, house.Coordinates)
+                    routes = []
+                    all_poi_preferences[person.PersonName] = (
+                        lpgdata.PersonPoiPreferences(poi_weights, routes, True)
+                    )
+                    relevant_pois.update(poi_weights.keys())
+                hh.PointOfInterestPreferences = all_poi_preferences
+            # TODO: save the relevant POIs in a CityData
 
     def create_config_files(self, path: Path, clear_folder: bool = False):
         if path.is_dir() and clear_folder:
