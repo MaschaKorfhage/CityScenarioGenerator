@@ -24,7 +24,7 @@ HH_KEY_COLUMN = "lpg household name"
 def get_lpg_households():
     """Read lpg households."""
     hh_data_path = os.path.join(DATA_PATH, "Tabelle_LPG_Households.csv")
-    lpg_household_data = pd.read_excel(hh_data_path)
+    lpg_household_data = pd.read_csv(hh_data_path, delimiter=";")
 
     return lpg_household_data
 
