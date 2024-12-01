@@ -3,11 +3,14 @@
 from collections import defaultdict
 import itertools
 import json
+import logging
 import math
 from pathlib import Path
 import random
 import shutil
 from typing import Any, Iterable
+import geopy
+import geopy.distance
 import numpy
 from pylpg import lpgdata
 from builda_client import client as builda
@@ -53,10 +56,14 @@ def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
     return {k: list(g) for k, g in itertools.groupby(persons, lambda p: p.TemplateName)}
 
 
-def distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
-    """Calculates euclidean distance between two sets of coordinates"""
+def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
+    """Calculates euclidean distance between two sets of coordinates in m"""
     # TODO: implement a geographically correct distance function
-    return math.dist([c1.Latitude, c1.Longitude], [c2.Latitude, c2.Longitude])
+    # return math.dist([c1.Latitude, c1.Longitude], [c2.Latitude, c2.Longitude])
+    p1 = (c1.Latitude, c1.Longitude)
+    p2 = (c2.Latitude, c2.Longitude)
+    dist = geopy.distance.distance(p1, p2)
+    return dist.m
 
 
 class LPGConfigCreator:
@@ -75,7 +82,7 @@ class LPGConfigCreator:
 
     # determine how many POIs of the same location type a person can visit
     MIN_POIS_PER_TYPE = 1
-    MAX_POIS_PER_TYPE = 3
+    MAX_POIS_PER_TYPE = 2
 
     def __init__(self) -> None:
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
@@ -83,6 +90,7 @@ class LPGConfigCreator:
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
         self.nace_loc_mapping = load_nace_location_mapping()
         self.persons_in_each_hh = build_household_person_map()
+        self.global_city_definition = lpgdata.CityData()
 
     def select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -127,6 +135,7 @@ class LPGConfigCreator:
             str(index),
             charging_station_set,
             transport_device_set,
+            None,
             None,
             lpgdata.HouseholdDataSpecificationType.ByTemplateName,
         )
@@ -207,7 +216,7 @@ class LPGConfigCreator:
         coordinates: lpgdata.Coordinates,
         poi_list: list[lpgdata.PointOfInterestData],
     ):
-        return [distance(coordinates, p.Coordinates) for p in poi_list]
+        return [calc_distance(coordinates, p.Coordinates) for p in poi_list]
 
     def select_pois_for_person(
         self,
@@ -224,7 +233,7 @@ class LPGConfigCreator:
             size = min(size, len(poi_ids))
             # calculate distances to all POIs of this type
             distances = {
-                p: distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
+                p: calc_distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
             }
             # randomly select some POIs, using the inverted distances as weights
             if len(distances) > 1:
@@ -242,12 +251,46 @@ class LPGConfigCreator:
             poi_weights.update({poi_id: weights[poi_id] for poi_id in selected_pois})
         return poi_weights
 
+    def _get_site_coordinates(
+        self, site_name: str, house_coordinates: lpgdata.Coordinates
+    ) -> lpgdata.Coordinates:
+        if site_name == lpgdata.Sites.Home.Name:
+            return house_coordinates
+        return self.pois[site_name].Coordinates
+
+    def create_random_routes_for_testing(
+        self, pois: Iterable[str], house_coordinates: lpgdata.Coordinates
+    ) -> list[lpgdata.RouteData]:
+        """Creates simple dummy routes from every POI to every other one."""
+        routes = []
+        sites = list(pois) + [lpgdata.Sites.Home.Name]
+        for poi_id_start in sites:
+            for poi_id_end in sites:
+                if poi_id_start == poi_id_end:
+                    continue
+                start = self._get_site_coordinates(poi_id_start, house_coordinates)
+                end = self._get_site_coordinates(poi_id_end, house_coordinates)
+                # the LPG expects integer distances
+                dist = int(calc_distance(start, end))
+                routes.append(
+                    lpgdata.RouteData(
+                        poi_id_start,
+                        poi_id_end,
+                        dist,
+                        0,
+                        lpgdata.TransportationDeviceCategories.Bus_Category,
+                        1,
+                    )
+                )
+        return routes
+
     def create_poi_preferences(self):
         if not self.houses:
             raise Exception("No houses have been added yet.")
         if not self.pois:
             raise Exception("No POIs have been added yet.")
 
+        all_relevant_pois = {}
         for id, hcj in self.houses.items():
             # store all POI that are used by persons in this house
             relevant_pois: dict[str, lpgdata.PointOfInterestData] = {}
@@ -258,28 +301,47 @@ class LPGConfigCreator:
                     poi_weights = self.select_pois_for_person(
                         person, hcj.House.Coordinates
                     )
-                    routes = []
                     hh_poi_preferences[person.PersonName] = (
-                        lpgdata.PersonPoiPreferences(poi_weights, routes, True)
+                        lpgdata.PersonPoiPreferences(poi_weights, [], True)
                     )
                     # add selected POIs to the list of used POIs for the house
                     relevant_pois.update(
                         {poi_id: self.pois[poi_id] for poi_id in poi_weights.keys()}
                     )
+
+                # set routes now that all relevant POIs for the household are known
+                relevant_pois_for_hh = {
+                    poi
+                    for pref in hh_poi_preferences.values()
+                    for poi in pref.PoiWeights.keys()
+                }
+                for person in persons:
+                    hh_poi_preferences[person.PersonName].Routes = (
+                        self.create_random_routes_for_testing(
+                            relevant_pois_for_hh, hcj.House.Coordinates
+                        )
+                    )
+
                 hh.PointOfInterestPreferences = hh_poi_preferences
             # save the relevant POIs for this building in a CityData object
             hcj.City = lpgdata.CityData(relevant_pois)
+            all_relevant_pois.update(relevant_pois)
+        logging.info(
+            f"{len(self.pois) - len(all_relevant_pois)} POIs are not visited by anyone."
+        )
+        self.global_city_definition.PointsOfInterest = all_relevant_pois
 
     def create_config_files(self, path: Path, clear_folder: bool = False):
         if path.is_dir() and clear_folder:
-            print(f"Clearing directory: {path}")
+            logging.info(f"Clearing directory: {path}")
             shutil.rmtree(path)
         # make sure the directory exists
         path.mkdir(parents=True, exist_ok=True)
         if any(path.iterdir()):
             raise Exception(f"Target directory was not empty: {path}")
         self.create_house_config_files(path / "houses")
-        self.create_poi_config_files(path / "POIs")
+        # self.create_poi_config_files(path / "POIs")
+        self.create_global_city_config_file(path)
 
     def create_house_config_files(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
@@ -296,6 +358,12 @@ class LPGConfigCreator:
         house_json = house.to_json(indent=4)
         with open(filename, "w+") as f:
             f.write(house_json)
+
+    def create_global_city_config_file(self, path: Path):
+        filename = path / "city.json"
+        city_data = self.global_city_definition.to_json(indent=4)
+        with open(filename, "w+") as f:
+            f.write(city_data)
 
 
 def check_nace_to_location_mapping():

@@ -1,7 +1,9 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
+import logging
 from pathlib import Path
 import random
+import shutil
 import sys
 
 
@@ -14,7 +16,9 @@ from household_data import BuildingData
 import create_lpg_configs
 
 
-def import_buildings_from_builda_file() -> dict[str, BuildingData]:
+def import_buildings_from_builda_file(
+    number_of_buildings: int,
+) -> dict[str, BuildingData]:
     # get building data from builda csv file
     (
         building_ids,
@@ -28,7 +32,9 @@ def import_buildings_from_builda_file() -> dict[str, BuildingData]:
         commodities,
         supply_levels,
         building_data_list,
-    ) = builda_file_sampler.get_buildings_from_builda(number_of_random_samples=5)
+    ) = builda_file_sampler.get_buildings_from_builda(
+        number_of_random_samples=number_of_buildings
+    )
 
     # get lpg profiles based on builda data
     building_objects = lpg_household_sampler.get_lpg_households_based_on_builda_data(
@@ -83,20 +89,29 @@ def overwrite_residential_coordinates(
 
 
 if __name__ == "__main__":
+    logging.basicConfig(
+        format="%(asctime)s %(levelname)-8s %(message)s",
+        level=logging.INFO,
+        datefmt="%Y-%m-%d %H:%M:%S",
+    )
     # init random
     seed = random.randrange(sys.maxsize)
     random.seed(seed)
-    print(f"Using RNG seed {seed}")
+    logging.info(f"Using RNG seed {seed}")
 
-    builda_query = {"city": "Heimbach", "postcode": "52396", "street": "Bachstraße"}
+    builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
-    res_buildings = import_buildings_from_builda_file()
+    res_buildings = import_buildings_from_builda_file(1)
 
     # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
     overwrite_residential_coordinates(nonres_buildings, res_buildings)
 
-    create_configs_from_buildings(
-        Path("./LPG_House_configs"), res_buildings, nonres_buildings
-    )
+    path = Path("./LPG_city_scenario")
+    create_configs_from_buildings(path, res_buildings, nonres_buildings)
+    logging.info(f"Finished writing city scenario to {path}")
+
+    # copy the Calcspec.json into the scenario directory
+    filename = "Calcspec.json"
+    shutil.copyfile(Path(filename), path / "Calcspec.json")

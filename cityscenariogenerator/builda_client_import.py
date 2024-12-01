@@ -1,5 +1,6 @@
 """Imports buildings from BUILDA"""
 
+import logging
 from builda_client.client import (
     BuildaClient,
     ResidentialBuildingWithSourceDto,
@@ -21,9 +22,7 @@ def get_nonresidential_buildings(
     client = BuildaClient()
     nonres_building_data = client.get_non_residential_buildings(**search_args)
     nonres_buildings = nonres_building_data.buildings
-    print(
-        f"Non-residential buildings in {search_args['city']}: {len(nonres_buildings)}"
-    )
+    logging.info(f"Non-residential buildings in {search_args}: {len(nonres_buildings)}")
     # c = Counter(get_building_category(b) for b in nonres_buildings)
     return nonres_buildings
 
@@ -33,7 +32,9 @@ def get_residential_buildings(search_args: dict):
     client = BuildaClient()
     res_building_data = client.get_residential_buildings(**search_args)
     res_buildings = res_building_data.buildings
-    print(f"Residential buildings in {search_args['city']}: {len(res_buildings)}")
+    logging.info(
+        f"Residential buildings in {search_args['city']}: {len(res_buildings)}"
+    )
     for building in res_buildings:
         get_building(building)
         break
