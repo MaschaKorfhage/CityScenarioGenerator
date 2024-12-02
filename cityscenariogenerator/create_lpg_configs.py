@@ -4,7 +4,6 @@ from collections import defaultdict
 import itertools
 import json
 import logging
-import math
 from pathlib import Path
 import random
 import shutil
@@ -16,6 +15,18 @@ from pylpg import lpgdata
 from builda_client import client as builda
 
 import household_data
+
+
+def get_lpg_remote_locations() -> set[str]:
+    """
+    Returns a list of all LPG locations that are not at home,
+    and that therefore requrire a POI.
+
+    :return: list of location names
+    """
+    with open("data/lpg_remote_locations.txt", "r") as f:
+        all_locations = f.read()
+    return set(all_locations.splitlines())
 
 
 def load_nace_location_mapping() -> dict[str, list[str]]:
@@ -57,9 +68,7 @@ def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
 
 
 def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
-    """Calculates euclidean distance between two sets of coordinates in m"""
-    # TODO: implement a geographically correct distance function
-    # return math.dist([c1.Latitude, c1.Longitude], [c2.Latitude, c2.Longitude])
+    """Calculates the distance between two sets of coordinates in m"""
     p1 = (c1.Latitude, c1.Longitude)
     p2 = (c2.Latitude, c2.Longitude)
     dist = geopy.distance.distance(p1, p2)
@@ -82,7 +91,11 @@ class LPGConfigCreator:
 
     # determine how many POIs of the same location type a person can visit
     MIN_POIS_PER_TYPE = 1
-    MAX_POIS_PER_TYPE = 2
+    MAX_POIS_PER_TYPE = 1
+
+    #: these are special locations which would ideally model inter-household relationships
+    #  for now, just use random POIs for them
+    SPECIAL_LOCATIONS = ["Friend's House", "Childrens House", "Parents House"]
 
     def __init__(self) -> None:
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
@@ -178,13 +191,15 @@ class LPGConfigCreator:
         code = nace_text.split("_")[0]
         return self.nace_loc_mapping[code]
 
-    def select_location(
+    def select_lpg_location_for_poi(
         self, building: builda.NonResidentialBuildingWithSourceDto
     ) -> str:
         matching_locations = self.get_matching_locations(building)
         if not matching_locations:
-            # use "Employment" locations as default for now
-            matching_locations = self.nace_loc_mapping["78"]
+            # use "Employment" or the special locations as default for now
+            matching_locations = (
+                self.nace_loc_mapping["78"] + LPGConfigCreator.SPECIAL_LOCATIONS
+            )
         return random.choice(matching_locations)
 
     def add_poi(
@@ -195,7 +210,7 @@ class LPGConfigCreator:
                 f"Encountered a duplicate non-residential building ID: {building.id}"
             )
 
-        location = self.select_location(building)
+        location = self.select_lpg_location_for_poi(building)
         timelimit = None
         poi = lpgdata.PointOfInterestData(
             location, self.convert_coordinates(building.coordinates.value), timelimit
@@ -284,11 +299,25 @@ class LPGConfigCreator:
                 )
         return routes
 
+    def check_location_availability(self):
+        """
+        Checks if there is at least one POI for every LPG location. If locations are missing,
+        households that require them cannot be simulated.
+        """
+        locations = get_lpg_remote_locations()
+        available = self.poi_ids_by_type.keys()
+        missing = locations - available
+        if missing:
+            print(
+                f"The following {len(missing)} locations are not covered by any POI: {missing}"
+            )
+
     def create_poi_preferences(self):
         if not self.houses:
             raise Exception("No houses have been added yet.")
         if not self.pois:
             raise Exception("No POIs have been added yet.")
+        self.check_location_availability()
 
         all_relevant_pois = {}
         for id, hcj in self.houses.items():
@@ -301,25 +330,15 @@ class LPGConfigCreator:
                     poi_weights = self.select_pois_for_person(
                         person, hcj.House.Coordinates
                     )
+                    routes = self.create_random_routes_for_testing(
+                        poi_weights.keys(), hcj.House.Coordinates
+                    )
                     hh_poi_preferences[person.PersonName] = (
-                        lpgdata.PersonPoiPreferences(poi_weights, [], True)
+                        lpgdata.PersonPoiPreferences(poi_weights, routes, True)
                     )
                     # add selected POIs to the list of used POIs for the house
                     relevant_pois.update(
                         {poi_id: self.pois[poi_id] for poi_id in poi_weights.keys()}
-                    )
-
-                # set routes now that all relevant POIs for the household are known
-                relevant_pois_for_hh = {
-                    poi
-                    for pref in hh_poi_preferences.values()
-                    for poi in pref.PoiWeights.keys()
-                }
-                for person in persons:
-                    hh_poi_preferences[person.PersonName].Routes = (
-                        self.create_random_routes_for_testing(
-                            relevant_pois_for_hh, hcj.House.Coordinates
-                        )
                     )
 
                 hh.PointOfInterestPreferences = hh_poi_preferences
@@ -368,59 +387,7 @@ class LPGConfigCreator:
 
 def check_nace_to_location_mapping():
     """Checks whether all locations are covered in the mapping, and whether all location names are correct"""
-    all_locations = """Museum
-Dance Studio
-Bar Location
-Hiking Location
-Concert House
-Cinema Location
-Opera
-Dance Club
-Cafe
-Singing School
-Walking Location
-Friend's House
-Doctors Office
-Childrens House
-Indoor Swimming Pool
-Local Recreational Area
-Mountain Road
-Running Path
-Yoga Studio
-Bow Range
-Outdoor Swimming Pool
-Golf Club
-Bicycle Route
-Theater
-Fishing Location
-Soccer Practice Location
-Horse Stable
-Summer Camp
-Musical Society
-Parents House
-Flea Market Location
-Fitness Studio
-Festival Location
-Hunting Forest
-School
-School 1
-School 2
-School 3
-Kindergarden
-Community College
-University
-Food Market
-Supermarket
-Shopping Mall
-Car Wash
-Office Workplace 1
-Office Workplace 2
-Workplace (shift worker)
-Volunteer Workplace
-Home
-Office
-"""
-    locations = all_locations.splitlines()
+    locations = get_lpg_remote_locations()
     print(f"Locations: {len(locations)}")
 
     print("\nLocations that are not covered yet:")

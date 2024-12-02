@@ -95,7 +95,7 @@ if __name__ == "__main__":
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     # init random
-    seed = random.randrange(sys.maxsize)
+    seed = 0  # random.randrange(sys.maxsize)
     random.seed(seed)
     logging.info(f"Using RNG seed {seed}")
 
