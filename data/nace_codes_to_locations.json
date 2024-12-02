@@ -103,16 +103,19 @@
     ],
     "Residential care activities": [],
     "Social work activities without accommodation": [
-        "Volunteer Workplace"
+        "Volunteer Workplace",
+        "Kindergarden"
     ],
-    "Creative, arts and entertainment activities": [],
-    "Libraries, archives, museums and other cultural activities": [
-        "Museum",
+    "Creative, arts and entertainment activities": [
+        "Singing School",
         "Concert House",
         "Opera",
         "Theater",
         "Cinema Location",
         "Musical Society"
+    ],
+    "Libraries, archives, museums and other cultural activities": [
+        "Museum"
     ],
     "Gambling and betting activities": [],
     "Sports activities and amusement and recreation activities": [
@@ -139,7 +142,9 @@
     ],
     "Activities of membership organisations": [],
     "Repair of computers and personal and household goods": [],
-    "Other personal service activities": [],
+    "Other personal service activities": [
+        "Car Wash"
+    ],
     "Activities of households as employers of domestic personnel": [
         "Home"
     ],
