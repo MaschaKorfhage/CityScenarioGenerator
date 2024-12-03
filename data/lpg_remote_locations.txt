@@ -33,9 +33,6 @@ Fitness Studio
 Festival Location
 Hunting Forest
 School
-School 1
-School 2
-School 3
 Kindergarden
 Community College
 University
@@ -43,8 +40,7 @@ Food Market
 Supermarket
 Shopping Mall
 Car Wash
-Office Workplace 1
-Office Workplace 2
+Office Workplace
 Workplace (shift worker)
 Volunteer Workplace
 Home
