@@ -145,7 +145,7 @@ class LPGConfigCreator:
             hh_template_spec,
             None,
             str(index),
-            str(index),
+            f"Household {index}",
             charging_station_set,
             transport_device_set,
             None,
@@ -188,6 +188,8 @@ class LPGConfigCreator:
         nace_text = use.get("nace_code", "")
         if not nace_text:
             return []
+        # get the number of the NACE code (BUILDA entries don't always contain the full
+        # NACE code text, but the number is correct)
         code = nace_text.split("_")[0]
         return self.nace_loc_mapping[code]
 

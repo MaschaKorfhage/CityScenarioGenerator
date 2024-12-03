@@ -1,6 +1,7 @@
 """Module for getting samples for Germany from BUILDA database."""
 
 import logging
+import random
 import pandas as pd
 from typing import List
 from ast import literal_eval
@@ -87,7 +88,8 @@ def get_buildings_from_builda(
 
     if number_of_random_samples is not None:
         # take random samples from df
-        d_f = d_f.sample(n=number_of_random_samples, axis=0)
+        seed = random.randrange(2**32)
+        d_f = d_f.sample(n=number_of_random_samples, axis=0, random_state=seed)
 
     # remove rows where norm heating load is nan
     d_f = d_f[d_f["norm_heating_load_kw"].notna()]
