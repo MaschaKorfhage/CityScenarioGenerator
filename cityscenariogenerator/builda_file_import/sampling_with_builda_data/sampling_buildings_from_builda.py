@@ -1,5 +1,6 @@
 """Module for getting samples for Germany from BUILDA database."""
 
+import logging
 import pandas as pd
 from typing import List
 from ast import literal_eval
@@ -80,7 +81,7 @@ def get_buildings_from_builda(
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_winterberg_with_heating_systems/buildings_winterberg_only_residential.xlsx"
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_germany_new_census/ethos_builda_v8_random_buildings.xlsx"
     path_to_builda_data = r"C:\Users\David-Arbeit\Downloads\builda_data\ethos_builda_v8_random_buildings.xlsx"
-    print(f"Read builda data from {path_to_builda_data}")
+    logging.info(f"Read builda data from {path_to_builda_data}")
 
     d_f = pd.read_excel(path_to_builda_data, header=0)
 
