@@ -81,10 +81,8 @@
     "Veterinary activities": [],
     "Rental and leasing activities": [],
     "Employment activities": [
-        "Office Workplace 1",
-        "Office Workplace 2",
+        "Office Workplace",
         "Workplace (shift worker)",
-        "Office",
         "Volunteer Workplace"
     ],
     "Travel agency, tour operator and other reservation service and related activities": [],
@@ -93,10 +91,7 @@
     "Office administrative, office support and other business support activities": [],
     "Public administration and defence; compulsory social security": [],
     "Education": [
-        "School",
-        "School 1",
-        "School 2",
-        "School 3"
+        "School"
     ],
     "Human health activities": [
         "Doctors Office"
