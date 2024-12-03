@@ -60,6 +60,11 @@ def create_configs_from_buildings(
     for id, building in res_buildings.items():
         config_creator.add_lpg_house(id, building)
 
+    # TODO: workaround for missing POI types; define the custom
+    #       POIs properly or remove them
+    custom_poi_path = Path("data/custom_pois.json")
+    config_creator.load_and_add_custom_pois(custom_poi_path)
+
     # determine which POIs each person visits
     config_creator.create_poi_preferences()
     # create config files for all created objects
@@ -104,6 +109,7 @@ if __name__ == "__main__":
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
     res_buildings = import_buildings_from_builda_file(1)
+    # TODO: make everything reproducible with same seed - Res-Buildings are already reproducible
 
     # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
     overwrite_residential_coordinates(nonres_buildings, res_buildings)

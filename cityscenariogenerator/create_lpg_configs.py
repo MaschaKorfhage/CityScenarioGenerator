@@ -314,6 +314,25 @@ class LPGConfigCreator:
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
             )
 
+    def load_and_add_custom_pois(self, custom_poi_path: Path):
+        """
+        Loads additional custom POIs from a file and adds them to the
+        list of available POIs. This can be helpful if the target city does
+        not contain certain POI types and people need to go to specific POIs in
+        the surrounding area for the corresponding activities.
+
+        :param custom_poi_path: path to the POI file to load
+        """
+        # load the custom POIs from file
+        with open(custom_poi_path, "r") as f:
+            json_str = f.read()
+            poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest
+        # add them to the POIs stored in the attributes
+        self.pois.update(poi_dict)
+        for id, poi in poi_dict.items():
+            self.poi_ids_by_type[poi.LocationType].append(id)
+        logging.info(f"Loaded {len(poi_dict)} custom POIs")
+
     def create_poi_preferences(self):
         if not self.houses:
             raise Exception("No houses have been added yet.")
