@@ -145,7 +145,7 @@ class LPGConfigCreator:
             hh_template_spec,
             None,
             str(index),
-            f"Household {index}",
+            f"Generated {household_data.household_name} - {index}",
             charging_station_set,
             transport_device_set,
             None,
@@ -281,8 +281,8 @@ class LPGConfigCreator:
         """Creates simple dummy routes from every POI to every other one."""
         routes = []
         sites = list(pois) + [lpgdata.Sites.Home.Name]
-        for poi_id_start in sites:
-            for poi_id_end in sites:
+        for i, poi_id_start in enumerate(sites):
+            for poi_id_end in sites[i + 1 :]:
                 if poi_id_start == poi_id_end:
                     continue
                 start = self._get_site_coordinates(poi_id_start, house_coordinates)
