@@ -109,7 +109,6 @@ if __name__ == "__main__":
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
     res_buildings = import_buildings_from_builda_file(1)
-    # TODO: make everything reproducible with same seed - Res-Buildings are already reproducible
 
     # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
     overwrite_residential_coordinates(nonres_buildings, res_buildings)
