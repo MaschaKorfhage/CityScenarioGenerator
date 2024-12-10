@@ -11,6 +11,7 @@ from typing import Any, Iterable
 import geopy
 import geopy.distance
 import numpy
+from tqdm import tqdm
 from pylpg import lpgdata
 from builda_client import client as builda
 
@@ -107,7 +108,7 @@ def copy_calcspec_file(
     # save the adjusted settings to the result directory
     result_json_str: str = house_job.to_json()
     result_file_path = result_directory / "Calcspec.json"
-    logging.info(f"Saving simulation settings here: {result_file_path}")
+    logging.info(f"Saving simulation settings to {result_file_path}")
     with open(result_file_path, "w+") as f:
         f.write(result_json_str)
 
@@ -382,8 +383,9 @@ class LPGConfigCreator:
             raise Exception("No POIs have been added yet.")
         self.check_location_availability()
 
+        logging.info("Creating POI preferences for all persons")
         all_relevant_pois = {}
-        for id, hcj in self.houses.items():
+        for id, hcj in tqdm(self.houses.items()):
             # store all POI that are used by persons in this house
             relevant_pois: dict[str, lpgdata.PointOfInterestData] = {}
             for hh in hcj.House.Households:
