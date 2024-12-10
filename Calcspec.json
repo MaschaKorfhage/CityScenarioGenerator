@@ -2,22 +2,14 @@
     "CalcSpec": {
         "LoadtypesForPostprocessing": [],
         "CalculationName": "",
-        //"DefaultForOutputFiles": "All",
         "DefaultForOutputFiles": "NoFiles",
         "CalcOptions": [
-			"OverallSum",
-			//"SumProfileExternalEntireHouse",
-			"ActionsEachTimestep",
-			"TransportationStatistics",
-			//"/ThoughtsLogfile",
-			//"ActivationFrequencies",
-			//"LocationsFile",
-			//"ActionCarpetPlot",
-			//"TimeOfUsePlot",
-			//"MakeGraphics"
+            "OverallSum",
+            "ActionsEachTimestep",
+            "TransportationStatistics"
         ],
         "DeleteAllButPDF": false,
-		"DeleteDAT": true,
+        "DeleteDAT": true,
         "DeleteSqlite": false,
         "OutputDirectory": "D:/LPG/MyResults",
         "SkipExisting": false,
