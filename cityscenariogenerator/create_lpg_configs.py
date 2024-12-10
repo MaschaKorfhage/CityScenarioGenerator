@@ -38,10 +38,10 @@ def load_nace_location_mapping() -> dict[str, list[str]]:
 
     :return: mapping dict from nace codes to LPG locations
     """
-    path = r"data\nace_code_descriptions.json"
+    path = "data/nace_code_descriptions.json"
     with open(path, "r") as f:
         nace_to_description = json.load(f)
-    path = r"data\nace_codes_to_locations.json"
+    path = "data/nace_codes_to_locations.json"
     with open(path, "r") as f:
         description_to_loc = json.load(f)
     combined = {
