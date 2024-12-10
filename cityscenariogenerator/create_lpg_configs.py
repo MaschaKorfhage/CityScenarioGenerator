@@ -202,24 +202,22 @@ class LPGConfigCreator:
         """Convert coordinates from BUILDA format to LPG format"""
         return lpgdata.Coordinates(coordinates.latitude, coordinates.longitude)
 
-    def add_lpg_house(
-        self, id: str, building: household_data.BuildingData
-    ) -> lpgdata.HouseData:
-        if id in self.houses:
-            raise Exception(f"Encountered a duplicate building ID: {id}")
+    def add_lpg_house(self, building: household_data.BuildingData) -> lpgdata.HouseData:
+        if building.id in self.houses:
+            raise Exception(f"Encountered a duplicate building ID: {building.id}")
 
         households = [
             self.create_lpg_household(i, hh) for i, hh in enumerate(building.households)
         ]
         house = lpgdata.HouseData(
-            id,
+            building.id,
             None,
             self.convert_coordinates(building.coordinates),
             households,
             lpgdata.HouseTypes.HT23_No_Infrastructure_at_all,
         )
         hcj = lpgdata.HouseCreationAndCalculationJob(house)
-        self.houses[id] = hcj
+        self.houses[building.id] = hcj
         return house
 
     def get_matching_locations(

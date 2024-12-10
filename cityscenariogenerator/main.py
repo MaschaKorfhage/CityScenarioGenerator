@@ -11,11 +11,12 @@ from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinate
 import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
 import builda_client_import
+import utils
 from household_data import BuildingData
 import create_lpg_configs
 
 
-def import_buildings_from_builda_file(
+def import_residential_buildings_from_builda_file(
     number_of_buildings: int,
 ) -> dict[str, BuildingData]:
     # get building data from builda csv file
@@ -36,18 +37,32 @@ def import_buildings_from_builda_file(
     )
 
     # get lpg profiles based on builda data
-    building_objects = lpg_household_sampler.get_lpg_households_based_on_builda_data(
+    buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
         building_data_list
     )
-    # print(building_ids)
-    # print(building_objects)
-    buildings = dict(zip(building_ids, building_objects))
+    return buildings
+
+
+def import_residential_buildings_from_builda(
+    builda_query: dict,
+) -> list[BuildingData]:
+    # load residential buildings from BUILDA
+    raw_buildings = builda_client_import.get_residential_buildings(builda_query)
+    # parse the household data into data objects
+    building_data_list = builda_file_sampler.convert_residential_buildings_from_builda(
+        raw_buildings
+    )
+
+    # determine LPG households for each building
+    buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
+        building_data_list
+    )
     return buildings
 
 
 def create_configs_from_buildings(
     path: Path,
-    res_buildings: dict[str, BuildingData],
+    res_buildings: list[BuildingData],
     nonres_buildings: list[NonResidentialBuildingWithSourceDto],
 ):
     config_creator = create_lpg_configs.LPGConfigCreator()
@@ -56,8 +71,8 @@ def create_configs_from_buildings(
         config_creator.add_poi(nonres_building)
 
     # create an LPG house config for each residential building
-    for id, building in res_buildings.items():
-        config_creator.add_lpg_house(id, building)
+    for building in res_buildings:
+        config_creator.add_lpg_house(building)
 
     # TODO: workaround for missing POI types; define the custom
     #       POIs properly or remove them
@@ -110,25 +125,25 @@ def create_city_scenario(
     random.seed(seed)
     logging.info(f"Using RNG seed {seed}")
 
+    # collect residential buildings
+    res_buildings = import_residential_buildings_from_builda(builda_query)
+
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
-    # collect residential buildings
-    num_residential_buildings = 1
-    res_buildings = import_buildings_from_builda_file(num_residential_buildings)
 
-    # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
-    overwrite_residential_coordinates(nonres_buildings, res_buildings)
+    # determine the output directory
+    query_str = utils.descriptive_query_text(builda_query)
+    result_dir_name = f"scenario{query_str}"
+    result_dir_path = scenario_directory / result_dir_name
 
-    result_directory = (
-        scenario_directory / f"LPG_city_scenario_{num_residential_buildings}"
-    )
-    create_configs_from_buildings(result_directory, res_buildings, nonres_buildings)
-    logging.info(f"Finished writing city scenario to {result_directory}")
+    # create config files for the collected buildings
+    create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)
+    logging.info(f"Finished writing city scenario to {result_dir_path}")
 
     # copy the Calcspec.json into the scenario directory
     template_filename = "Calcspec.json"
     create_lpg_configs.copy_calcspec_file(
-        result_directory, template_filename, db_file_path, lpg_result_path
+        result_dir_path, template_filename, db_file_path, lpg_result_path
     )
 
 
@@ -139,8 +154,10 @@ if __name__ == "__main__":
     lpg_result_dir = ""
 
     # for the cluster
-    # scenario_directory = Path("R:/phd_dir/data/city_scenarios")
-    # db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
-    # lpg_result_dir = "./CitySimulationResults/"
+    scenario_directory = Path("R:/phd_dir/data/city_scenarios")
+    db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
+    lpg_result_dir = (
+        "/storage_cluster/projects/2022-d-neuroth-phd/data/city_simulation_results/"
+    )
 
     create_city_scenario(builda_query, scenario_directory, db_file_path, lpg_result_dir)

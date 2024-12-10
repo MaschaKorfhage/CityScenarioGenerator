@@ -13,6 +13,7 @@ class HouseholdData:
 
 @dataclass
 class BuildingData:
+    id: str
     households: list[HouseholdData]
     coordinates: Coordinates
 
@@ -28,5 +29,6 @@ class HouseholdRawData:
 
 @dataclass
 class BuildingRawData:
+    id: str
     households: list[HouseholdRawData]
     coordinates: Coordinates

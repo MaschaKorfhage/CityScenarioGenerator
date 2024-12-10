@@ -9,8 +9,6 @@ from builda_client.client import (
 )
 from builda_client.dev_client import BuildaDevClient, Phase, ResidentialBuilding
 
-from household_data import BuildingData
-
 
 def get_building_category(building: NonResidentialBuildingWithSourceDto):
     if building.use.value is None:
@@ -45,10 +43,3 @@ def get_residential_buildings(search_args: dict) -> list[ResidentialBuilding]:
     res_buildings = client.get_residential_buildings(**search_args)
     logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
     return res_buildings
-
-
-def map_residential_buildings(
-    res_buildings: list[ResidentialBuilding],
-) -> dict[str, BuildingData]:
-    for building in res_buildings:
-        building.households

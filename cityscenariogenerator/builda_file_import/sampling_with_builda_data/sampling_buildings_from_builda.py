@@ -6,6 +6,7 @@ import pandas as pd
 from typing import List
 from ast import literal_eval
 from builda_client.model import Coordinates
+from builda_client.dev_client import ResidentialBuilding
 
 from household_data import BuildingRawData, HouseholdRawData
 
@@ -74,14 +75,14 @@ def get_senior_status(employment_list_per_household: List[str]) -> float:
 def get_buildings_from_builda(
     number_of_random_samples: int | None = None,
 ) -> tuple[
-    List, List, List, List, List, List, List, List, List, List, List, List, List, List
+    List, List, List, List, List, List, List, List, List, List, List[BuildingRawData]
 ]:
     """Read German buildings and their properties from Builda."""
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_mass_simulations_paper/samples_builda_1.xlsx"
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_winterberg/buildings_winterberg_only_residential.xlsx"
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_winterberg_with_heating_systems/buildings_winterberg_only_residential.xlsx"
     # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_germany_new_census/ethos_builda_v8_random_buildings.xlsx"
-    path_to_builda_data = r"C:\Users\David-Arbeit\Downloads\builda_data\ethos_builda_v8_random_buildings.xlsx"
+    path_to_builda_data = r"D:\Home\OneDrive - Forschungszentrum Jülich GmbH\Promotion\builda_data\ethos_builda_v8_random_buildings.xlsx"
     logging.info(f"Read builda data from {path_to_builda_data}")
 
     d_f = pd.read_excel(path_to_builda_data, header=0)
@@ -134,8 +135,8 @@ def get_buildings_from_builda(
     # get households (from new census)
     buildings = []
     if "households" in d_f.columns:
-        for coordinate_str, household_list_string in d_f[
-            ["centroid", "households"]
+        for id, coordinate_str, household_list_string in d_f[
+            ["id", "centroid", "households"]
         ].values:
             if not isinstance(household_list_string, str):
                 print(
@@ -177,7 +178,7 @@ def get_buildings_from_builda(
                         senior_status,
                     )
                 )
-            buildings.append(BuildingRawData(raw_households, coordinates))
+            buildings.append(BuildingRawData(id, raw_households, coordinates))
 
     return (
         building_ids,
@@ -192,6 +193,53 @@ def get_buildings_from_builda(
         supply_levels,
         buildings,
     )
+
+
+def convert_residential_buildings_from_builda(
+    buildings: list[ResidentialBuilding],
+) -> list[BuildingRawData]:
+    """Parses household information for each house and stores it in data objects"""
+    converted_buildings = []
+    for building in buildings:
+        # go through household list for each building
+        number_of_persons_per_households = []
+        raw_households = []
+
+        # type annotation is apparently not up to date, households is no str
+        household_list: list = building.households
+        for household_dict in household_list:
+            # get number of persons per household
+            number_of_persons_per_households.append(len(household_dict["persons"]))
+            num_cars = household_dict["cars"]
+
+            # get employment for each person per household
+            employment_list_per_household = []
+            gender_list_per_household = []
+            for person_dict in household_dict["persons"]:
+                # get employment for each person per household
+                employment_list_per_household.append(person_dict["employment"])
+                # get gender for each person per household
+                gender_list_per_household.append(person_dict["gender"])
+
+            # get mean working status per household
+            working_status = get_working_status(employment_list_per_household)
+            # get mean female status per household
+            female_status = get_female_status(gender_list_per_household)
+            # get mean senior status per household
+            senior_status = get_senior_status(employment_list_per_household)
+            raw_households.append(
+                HouseholdRawData(
+                    len(person_dict),
+                    num_cars,
+                    working_status,
+                    female_status,
+                    senior_status,
+                )
+            )
+        converted_buildings.append(
+            BuildingRawData(building.id, raw_households, building.coordinates)
+        )
+    return converted_buildings
 
 
 if __name__ == "__main__":
