@@ -75,6 +75,43 @@ def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
     return dist.m
 
 
+def copy_calcspec_file(
+    result_directory: Path,
+    template_path: str = "Calcspec.json",
+    db_file_path: str = "",
+    lpg_result_path: str = "",
+):
+    """
+    Reads the house job template file (which only contains the database path and the
+    CalcSpec), adapts some settings if necessary, and saves the new settings to the
+    output directory.
+
+    :param result_directory: output directory to save the settings file to
+    :param template_path: path to the settings template file, defaults to "Calcspec.json"
+    :param db_file_path: database path to specify in the settings
+    :param lpg_result_path: LPG output path to specifiy in the settings
+    """
+    with open(template_path, "r") as f:
+        lines = f.readlines()
+        # remove line comments (which are no valid JSON)
+        filtered_lines = [s for s in lines if not s.strip().startswith("//")]
+        json_str = "\n".join(filtered_lines)
+    house_job: lpgdata.HouseCreationAndCalculationJob = (
+        lpgdata.HouseCreationAndCalculationJob.from_json(json_str)
+    )
+    # change some settings if necessary
+    if db_file_path:
+        house_job.PathToDatabase = db_file_path
+    if lpg_result_path:
+        house_job.CalcSpec.OutputDirectory = lpg_result_path
+    # save the adjusted settings to the result directory
+    result_json_str: str = house_job.to_json()
+    result_file_path = result_directory / "Calcspec.json"
+    logging.info(f"Saving simulation settings here: {result_file_path}")
+    with open(result_file_path, "w+") as f:
+        f.write(result_json_str)
+
+
 class LPGConfigCreator:
     ONE_CAR_TRANSPORT_DEVICE_SETS = [
         lpgdata.TransportationDeviceSets.Bus_and_one_30_km_h_Car,

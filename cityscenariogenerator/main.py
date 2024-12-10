@@ -3,7 +3,6 @@
 import logging
 from pathlib import Path
 import random
-import shutil
 import sys
 
 
@@ -93,31 +92,55 @@ def overwrite_residential_coordinates(
         building.coordinates = Coordinates(lat, long)
 
 
-if __name__ == "__main__":
+def create_city_scenario(
+    builda_query: dict,
+    scenario_directory: Path,
+    db_file_path: str = "",
+    lpg_result_path: str = "",
+):
+    # init logging
     logging.basicConfig(
         format="%(asctime)s %(levelname)-8s %(message)s",
         level=logging.INFO,
         datefmt="%Y-%m-%d %H:%M:%S",
     )
-    # init random
+
+    # init RNG
     seed = 0  # random.randrange(sys.maxsize)
     random.seed(seed)
     logging.info(f"Using RNG seed {seed}")
 
-    builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
-    num_residential_buildings = 2
+    num_residential_buildings = 1
     res_buildings = import_buildings_from_builda_file(num_residential_buildings)
 
     # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
     overwrite_residential_coordinates(nonres_buildings, res_buildings)
 
-    path = Path(f"./scenarios/LPG_city_scenario_{num_residential_buildings}")
-    create_configs_from_buildings(path, res_buildings, nonres_buildings)
-    logging.info(f"Finished writing city scenario to {path}")
+    result_directory = (
+        scenario_directory / f"LPG_city_scenario_{num_residential_buildings}"
+    )
+    create_configs_from_buildings(result_directory, res_buildings, nonres_buildings)
+    logging.info(f"Finished writing city scenario to {result_directory}")
 
     # copy the Calcspec.json into the scenario directory
-    filename = "Calcspec.json"
-    shutil.copyfile(Path(filename), path / "Calcspec.json")
+    template_filename = "Calcspec.json"
+    create_lpg_configs.copy_calcspec_file(
+        result_directory, template_filename, db_file_path, lpg_result_path
+    )
+
+
+if __name__ == "__main__":
+    builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
+    scenario_directory = Path("./scenarios")
+    db_file_path = ""
+    lpg_result_dir = ""
+
+    # for the cluster
+    # scenario_directory = Path("R:/phd_dir/data/city_scenarios")
+    # db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
+    # lpg_result_dir = "./CitySimulationResults/"
+
+    create_city_scenario(builda_query, scenario_directory, db_file_path, lpg_result_dir)
