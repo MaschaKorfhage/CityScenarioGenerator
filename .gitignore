@@ -1,6 +1,9 @@
 # generated scenario files
 scenarios
 
+# .env file
+.env
+
 # scripts and logs
 slurm_scripts
 logs

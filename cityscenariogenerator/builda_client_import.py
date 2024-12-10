@@ -1,12 +1,15 @@
 """Imports buildings from BUILDA"""
 
 import logging
+import os
+from dotenv import load_dotenv
 from builda_client.client import (
     BuildaClient,
-    ResidentialBuildingWithSourceDto,
     NonResidentialBuildingWithSourceDto,
 )
-from pprint import pprint
+from builda_client.dev_client import BuildaDevClient, Phase, ResidentialBuilding
+
+from household_data import BuildingData
 
 
 def get_building_category(building: NonResidentialBuildingWithSourceDto):
@@ -27,18 +30,25 @@ def get_nonresidential_buildings(
     return nonres_buildings
 
 
-def get_residential_buildings(search_args: dict):
+def get_residential_buildings(search_args: dict) -> list[ResidentialBuilding]:
+    # load credentials for the BuildaDevClient
+    load_dotenv()
     # init the Builda API client
-    client = BuildaClient()
-    res_building_data = client.get_residential_buildings(**search_args)
-    res_buildings = res_building_data.buildings
-    logging.info(
-        f"Residential buildings in {search_args['city']}: {len(res_buildings)}"
+    client = BuildaDevClient(
+        proxy=False,
+        username=os.getenv("username"),
+        password=os.getenv("password"),
+        phase=Phase.PRODUCTION,
+        version="v8_20240916",
     )
+
+    res_buildings = client.get_residential_buildings(**search_args)
+    logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
+    return res_buildings
+
+
+def map_residential_buildings(
+    res_buildings: list[ResidentialBuilding],
+) -> dict[str, BuildingData]:
     for building in res_buildings:
-        get_building(building)
-        break
-
-
-def get_building(building: ResidentialBuildingWithSourceDto):
-    pprint(building)
+        building.households
