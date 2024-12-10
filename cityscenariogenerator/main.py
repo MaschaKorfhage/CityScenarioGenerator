@@ -108,12 +108,13 @@ if __name__ == "__main__":
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     # collect residential buildings
-    res_buildings = import_buildings_from_builda_file(1)
+    num_residential_buildings = 2
+    res_buildings = import_buildings_from_builda_file(num_residential_buildings)
 
     # TODO: temporary fix - overwrite coordinates with fake values for Heimbach
     overwrite_residential_coordinates(nonres_buildings, res_buildings)
 
-    path = Path("./LPG_city_scenario")
+    path = Path(f"./scenarios/LPG_city_scenario_{num_residential_buildings}")
     create_configs_from_buildings(path, res_buildings, nonres_buildings)
     logging.info(f"Finished writing city scenario to {path}")
 
