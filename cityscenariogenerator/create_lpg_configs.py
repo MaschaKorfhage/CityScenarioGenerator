@@ -106,7 +106,7 @@ def copy_calcspec_file(
     if lpg_result_path:
         house_job.CalcSpec.OutputDirectory = lpg_result_path
     # save the adjusted settings to the result directory
-    result_json_str: str = house_job.to_json()
+    result_json_str: str = house_job.to_json(indent=4)
     result_file_path = result_directory / "Calcspec.json"
     logging.info(f"Saving simulation settings to {result_file_path}")
     with open(result_file_path, "w+") as f:

@@ -82,7 +82,7 @@ def create_configs_from_buildings(
     # determine which POIs each person visits
     config_creator.create_poi_preferences()
     # create config files for all created objects
-    config_creator.create_config_files(path, True)
+    config_creator.create_config_files(path)
 
 
 def overwrite_residential_coordinates(
@@ -110,8 +110,8 @@ def overwrite_residential_coordinates(
 def create_city_scenario(
     builda_query: dict,
     scenario_directory: Path,
+    lpg_result_dir: Path,
     db_file_path: str = "",
-    lpg_result_path: str = "",
 ):
     # init logging
     logging.basicConfig(
@@ -133,8 +133,9 @@ def create_city_scenario(
 
     # determine the output directory
     query_str = utils.descriptive_query_text(builda_query)
-    result_dir_name = f"scenario{query_str}"
+    result_dir_name = f"scenario_{query_str}"
     result_dir_path = scenario_directory / result_dir_name
+    lpg_result_path = lpg_result_dir / result_dir_name
 
     # create config files for the collected buildings
     create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)
@@ -143,21 +144,21 @@ def create_city_scenario(
     # copy the Calcspec.json into the scenario directory
     template_filename = "Calcspec.json"
     create_lpg_configs.copy_calcspec_file(
-        result_dir_path, template_filename, db_file_path, lpg_result_path
+        result_dir_path, template_filename, db_file_path, str(lpg_result_path)
     )
 
 
 if __name__ == "__main__":
     builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     scenario_directory = Path("./scenarios")
-    db_file_path = ""
     lpg_result_dir = ""
+    db_file_path = ""
 
     # for the cluster
     scenario_directory = Path("R:/phd_dir/data/city_scenarios")
-    db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
-    lpg_result_dir = (
+    lpg_result_dir = Path(
         "/storage_cluster/projects/2022-d-neuroth-phd/data/city_simulation_results/"
     )
+    db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
 
-    create_city_scenario(builda_query, scenario_directory, db_file_path, lpg_result_dir)
+    create_city_scenario(builda_query, scenario_directory, lpg_result_dir, db_file_path)
