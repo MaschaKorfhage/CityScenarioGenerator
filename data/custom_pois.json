@@ -63,6 +63,14 @@
                 "Longitude": 6.5
             },
             "TimeLimit": null
+        },
+        "Home for household help Custom": {
+            "LocationType": "Home",
+            "Coordinates": {
+                "Latitude": 50.8,
+                "Longitude": 6.6
+            },
+            "TimeLimit": null
         }
     }
 }
