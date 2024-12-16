@@ -14,7 +14,7 @@
         "OutputDirectory": "D:/LPG/MyResults",
         "SkipExisting": false,
         "RandomSeed": 1,
-        "EnableIdlemode": false,
+        "EnableIdlemode": true,
         "EnableTransportation": true,
         "DeviceSelection": null,
         "EnergyIntensityType": "Random",
