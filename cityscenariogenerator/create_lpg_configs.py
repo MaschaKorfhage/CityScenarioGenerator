@@ -15,6 +15,7 @@ from tqdm import tqdm
 from pylpg import lpgdata
 from builda_client import client as builda
 
+import scenario_statistics
 import household_data
 
 
@@ -424,6 +425,7 @@ class LPGConfigCreator:
         self.create_house_config_files(path / "houses")
         # self.create_poi_config_files(path / "POIs")
         self.create_global_city_config_file(path)
+        self.create_scenario_statistics(path / "statistics")
 
     def create_house_config_files(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
@@ -446,6 +448,15 @@ class LPGConfigCreator:
         city_data = self.global_city_definition.to_json(indent=4)
         with open(filename, "w+") as f:
             f.write(city_data)
+
+    def create_scenario_statistics(self, path: Path):
+        """
+        Write statistics about this scenario
+
+        :param path: path for the statistics files
+        """
+        path.mkdir(parents=True, exist_ok=True)
+        scenario_statistics.write_household_statistics(self.houses.values(), path)
 
 
 def check_nace_to_location_mapping():

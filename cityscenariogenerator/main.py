@@ -151,7 +151,7 @@ def create_city_scenario(
 if __name__ == "__main__":
     builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     scenario_directory = Path("./scenarios")
-    lpg_result_dir = ""
+    lpg_result_dir = Path("D:/LPG/Results")
     db_file_path = ""
 
     # for the cluster
