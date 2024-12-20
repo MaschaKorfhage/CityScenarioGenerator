@@ -8,12 +8,11 @@ from pathlib import Path
 import random
 import shutil
 from typing import Any, Iterable
-import geopy
-import geopy.distance
+import geopy.distance  # type: ignore
 import numpy
-from tqdm import tqdm
-from pylpg import lpgdata
-from builda_client import client as builda
+from tqdm import tqdm  # type: ignore
+from pylpg import lpgdata  # type: ignore
+from builda_client import client as builda  # type: ignore
 
 import scenario_statistics
 import household_data
@@ -282,8 +281,8 @@ class LPGConfigCreator:
         person: lpgdata.PersonData,
         coordinates: lpgdata.Coordinates,
         has_car: bool = True,
-    ) -> dict[str, int]:
-        poi_weights = {}
+    ) -> dict[str, float]:
+        poi_weights: dict[str, float] = {}
         for location, poi_ids in self.poi_ids_by_type.items():
             # determine how many POIs of this type the person will select
             size = random.randint(
@@ -303,7 +302,7 @@ class LPGConfigCreator:
             weights = {poi: 1 / (d + 0.1) for poi, d in distances.items()}
             weightsum: float = sum(weights.values())
             probabilities = [w / weightsum for w in weights.values()]
-            selected_pois: Iterable[lpgdata.PointOfInterestData] = numpy.random.choice(
+            selected_pois: Iterable[str] = numpy.random.choice(
                 poi_ids, size=size, replace=False, p=probabilities
             )
             # store the pois with according int weights in the persons preferences
@@ -317,7 +316,7 @@ class LPGConfigCreator:
             return house_coordinates
         return self.pois[site_name].Coordinates
 
-    def create_random_routes_for_testing(
+    def create_random_routes_for_one_person(
         self, pois: Iterable[str], house_coordinates: lpgdata.Coordinates
     ) -> list[lpgdata.RouteData]:
         """Creates simple dummy routes from every POI to every other one."""
@@ -343,7 +342,7 @@ class LPGConfigCreator:
                 )
         return routes
 
-    def check_location_availability(self):
+    def check_location_availability(self) -> None:
         """
         Checks if there is at least one POI for every LPG location. If locations are missing,
         households that require them cannot be simulated.
@@ -356,7 +355,7 @@ class LPGConfigCreator:
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
             )
 
-    def load_and_add_custom_pois(self, custom_poi_path: Path):
+    def load_and_add_custom_pois(self, custom_poi_path: Path) -> None:
         """
         Loads additional custom POIs from a file and adds them to the
         list of available POIs. This can be helpful if the target city does
@@ -375,7 +374,7 @@ class LPGConfigCreator:
             self.poi_ids_by_type[poi.LocationType].append(id)
         logging.info(f"Loaded {len(poi_dict)} custom POIs")
 
-    def create_poi_preferences(self):
+    def create_poi_preferences(self) -> None:
         if not self.houses:
             raise Exception("No houses have been added yet.")
         if not self.pois:
@@ -394,11 +393,8 @@ class LPGConfigCreator:
                     poi_weights = self.select_pois_for_person(
                         person, hcj.House.Coordinates
                     )
-                    routes = self.create_random_routes_for_testing(
-                        poi_weights.keys(), hcj.House.Coordinates
-                    )
                     hh_poi_preferences[person.PersonName] = (
-                        lpgdata.PersonPoiPreferences(poi_weights, routes, True)
+                        lpgdata.PersonPoiPreferences(poi_weights)
                     )
                     # add selected POIs to the list of used POIs for the house
                     relevant_pois.update(
@@ -406,6 +402,7 @@ class LPGConfigCreator:
                     )
 
                 hh.PointOfInterestPreferences = hh_poi_preferences
+
             # save the relevant POIs for this building in a CityData object
             hcj.City = lpgdata.CityData(relevant_pois)
             all_relevant_pois.update(relevant_pois)
@@ -413,6 +410,19 @@ class LPGConfigCreator:
             f"{len(self.pois) - len(all_relevant_pois)} POIs are not visited by anyone."
         )
         self.global_city_definition.PointsOfInterest = all_relevant_pois
+
+    def create_routes_for_testing(self):
+        logging.info("Creating routes for all persons")
+        all_routes = []
+        for id, hcj in tqdm(self.houses.items()):
+            for hh in hcj.House.Households:
+                for person, poi_preferences in hh.PointOfInterestPreferences.items():
+                    routes = self.create_random_routes_for_one_person(
+                        poi_preferences.PoiWeights.keys(), hcj.House.Coordinates
+                    )
+                    all_routes.extend(routes)
+        self.global_city_definition.Routes = all_routes
+        self.global_city_definition.MirrorRoutes = True
 
     def create_config_files(self, path: Path, clear_folder: bool = False):
         if path.is_dir() and clear_folder:
@@ -445,9 +455,21 @@ class LPGConfigCreator:
 
     def create_global_city_config_file(self, path: Path):
         filename = path / "city.json"
+        if self.global_city_definition.Routes:
+            self.create_routes_config_file(path)
+            self.global_city_definition.Routes = None
         city_data = self.global_city_definition.to_json(indent=4)
         with open(filename, "w+") as f:
             f.write(city_data)
+
+    def create_routes_config_file(self, path: Path):
+        filename = path / "routes.json"
+        route_dict = {
+            f"{i}": r.to_dict()
+            for i, r in enumerate(self.global_city_definition.Routes)
+        }
+        with open(filename, "w+") as f:
+            json.dump(route_dict, f, indent=4)
 
     def create_scenario_statistics(self, path: Path):
         """

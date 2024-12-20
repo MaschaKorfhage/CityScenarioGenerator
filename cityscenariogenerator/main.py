@@ -6,7 +6,7 @@ import random
 import sys
 
 
-from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates
+from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates  # type: ignore
 
 import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
@@ -81,6 +81,10 @@ def create_configs_from_buildings(
 
     # determine which POIs each person visits
     config_creator.create_poi_preferences()
+
+    # create random routes for testing
+    config_creator.create_routes_for_testing()
+
     # create config files for all created objects
     config_creator.create_config_files(path)
 
