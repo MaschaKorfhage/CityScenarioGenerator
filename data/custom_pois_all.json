@@ -359,14 +359,6 @@
                 "Longitude": 6.61
             },
             "TimeLimit": null
-        },
-        "Home Custom": {
-            "LocationType": "Home",
-            "Coordinates": {
-                "Latitude": 50.87,
-                "Longitude": 6.28
-            },
-            "TimeLimit": null
         }
     }
 }
