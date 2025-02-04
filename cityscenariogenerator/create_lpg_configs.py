@@ -316,32 +316,6 @@ class LPGConfigCreator:
             return house_coordinates
         return self.pois[site_name].Coordinates
 
-    def create_random_routes_for_one_person(
-        self, pois: Iterable[str], house_coordinates: lpgdata.Coordinates
-    ) -> list[lpgdata.RouteData]:
-        """Creates simple dummy routes from every POI to every other one."""
-        routes = []
-        sites = list(pois) + [lpgdata.Sites.Home.Name]
-        for i, poi_id_start in enumerate(sites):
-            for poi_id_end in sites[i + 1 :]:
-                if poi_id_start == poi_id_end:
-                    continue
-                start = self._get_site_coordinates(poi_id_start, house_coordinates)
-                end = self._get_site_coordinates(poi_id_end, house_coordinates)
-                # the LPG expects integer distances
-                dist = int(calc_distance(start, end))
-                routes.append(
-                    lpgdata.RouteData(
-                        poi_id_start,
-                        poi_id_end,
-                        dist,
-                        0,
-                        lpgdata.TransportationDeviceCategories.Bus_Category,
-                        1,
-                    )
-                )
-        return routes
-
     def check_location_availability(self) -> None:
         """
         Checks if there is at least one POI for every LPG location. If locations are missing,
@@ -411,17 +385,48 @@ class LPGConfigCreator:
         )
         self.global_city_definition.PointsOfInterest = all_relevant_pois
 
+    def add_random_routes_for_one_person(
+        self,
+        pois: Iterable[str],
+        house_coordinates: lpgdata.Coordinates,
+        existing_routes: dict[tuple, lpgdata.RouteData],
+    ) -> None:
+        """Creates simple dummy routes from every POI to every other one, if they don't exist yet"""
+        sites = list(pois) + [lpgdata.Sites.Home.Name]
+        for i, poi_id_start in enumerate(sites):
+            for poi_id_end in sites[i + 1 :]:
+                if poi_id_start == poi_id_end:
+                    continue
+                device = lpgdata.TransportationDeviceCategories.Bus_Category
+                key = (poi_id_start, poi_id_end, device.Name)
+                if key in existing_routes:
+                    continue  # there is already a matching route
+                start = self._get_site_coordinates(poi_id_start, house_coordinates)
+                end = self._get_site_coordinates(poi_id_end, house_coordinates)
+                # the LPG expects integer distances
+                dist = int(calc_distance(start, end))
+                existing_routes[key] = lpgdata.RouteData(
+                    poi_id_start,
+                    poi_id_end,
+                    dist,
+                    0,
+                    device,
+                    1,
+                )
+
     def create_routes_for_testing(self):
+        """Creates a set of simple bus routes so that each person can reach all of their POIs. All persons share the same routes."""
         logging.info("Creating routes for all persons")
-        all_routes = []
+        all_routes = {}
         for id, hcj in tqdm(self.houses.items()):
             for hh in hcj.House.Households:
                 for person, poi_preferences in hh.PointOfInterestPreferences.items():
-                    routes = self.create_random_routes_for_one_person(
-                        poi_preferences.PoiWeights.keys(), hcj.House.Coordinates
+                    self.add_random_routes_for_one_person(
+                        poi_preferences.PoiWeights.keys(),
+                        hcj.House.Coordinates,
+                        all_routes,
                     )
-                    all_routes.extend(routes)
-        self.global_city_definition.Routes = all_routes
+        self.global_city_definition.Routes = list(all_routes.values())
         self.global_city_definition.MirrorRoutes = True
 
     def create_config_files(self, path: Path, clear_folder: bool = False):
