@@ -310,9 +310,9 @@ class LPGConfigCreator:
         return poi_weights
 
     def _get_site_coordinates(
-        self, site_name: str, house_coordinates: lpgdata.Coordinates
+        self, site_name: str, house_coordinates: lpgdata.Coordinates, house_id: str
     ) -> lpgdata.Coordinates:
-        if site_name == lpgdata.Sites.Home.Name:
+        if site_name == lpgdata.Sites.Home.Name or site_name == house_id:
             return house_coordinates
         return self.pois[site_name].Coordinates
 
@@ -388,11 +388,13 @@ class LPGConfigCreator:
     def add_random_routes_for_one_person(
         self,
         pois: Iterable[str],
+        house_id: str,
         house_coordinates: lpgdata.Coordinates,
         existing_routes: dict[tuple, lpgdata.RouteData],
     ) -> None:
         """Creates simple dummy routes from every POI to every other one, if they don't exist yet"""
-        sites = list(pois) + [lpgdata.Sites.Home.Name]
+        # relevant sites for this person are all of their POIs and their home
+        sites = list(pois) + [house_id]
         for i, poi_id_start in enumerate(sites):
             for poi_id_end in sites[i + 1 :]:
                 if poi_id_start == poi_id_end:
@@ -401,8 +403,12 @@ class LPGConfigCreator:
                 key = (poi_id_start, poi_id_end, device.Name)
                 if key in existing_routes:
                     continue  # there is already a matching route
-                start = self._get_site_coordinates(poi_id_start, house_coordinates)
-                end = self._get_site_coordinates(poi_id_end, house_coordinates)
+                start = self._get_site_coordinates(
+                    poi_id_start, house_coordinates, house_id
+                )
+                end = self._get_site_coordinates(
+                    poi_id_end, house_coordinates, house_id
+                )
                 # the LPG expects integer distances
                 dist = int(calc_distance(start, end))
                 existing_routes[key] = lpgdata.RouteData(
@@ -423,9 +429,13 @@ class LPGConfigCreator:
                 for person, poi_preferences in hh.PointOfInterestPreferences.items():
                     self.add_random_routes_for_one_person(
                         poi_preferences.PoiWeights.keys(),
+                        id,
                         hcj.House.Coordinates,
                         all_routes,
                     )
+        # set MirrorRoutes to True for all houses
+        for house in self.houses.values():
+            house.City.MirrorRoutes = True
         self.global_city_definition.Routes = list(all_routes.values())
         self.global_city_definition.MirrorRoutes = True
 
