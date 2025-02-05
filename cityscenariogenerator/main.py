@@ -57,6 +57,18 @@ def import_residential_buildings_from_builda(
     buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
         building_data_list
     )
+
+    # check if there are buildings IDs that only differ in case
+    building_ids = set()
+    for building in buildings:
+        id_lower = building.id.lower()
+        if id_lower in building_ids:
+            if sys.platform == "win32":
+                # windows is case-insensitive regarding file names, so this will not work
+                raise Exception(f"Building ID only differs in case: {building.id}")
+            else:
+                logging.warn(f"Building ID only differs in case: {building.id}")
+        building_ids.add(id_lower)
     return buildings
 
 
