@@ -385,7 +385,7 @@ class LPGConfigCreator:
         )
         self.global_city_definition.PointsOfInterest = all_relevant_pois
 
-    def add_random_routes_for_one_person(
+    def add_routes_for_one_person(
         self,
         pois: Iterable[str],
         house_id: str,
@@ -409,15 +409,17 @@ class LPGConfigCreator:
                 end = self._get_site_coordinates(
                     poi_id_end, house_coordinates, house_id
                 )
-                # the LPG expects integer distances
-                dist = int(calc_distance(start, end))
+                # calculate the distance of the route
+                dist = calc_distance(start, end)
                 existing_routes[key] = lpgdata.RouteData(
                     poi_id_start,
                     poi_id_end,
-                    dist,
-                    0,
-                    device,
-                    1,
+                    -1,
+                    -1,
+                    {},
+                    {"pt": dist},
+                    prob_with_car_hh={"pt": 1},
+                    prob_no_car_hh={"pt": 1},
                 )
 
     def create_routes_for_testing(self):
@@ -427,7 +429,7 @@ class LPGConfigCreator:
         for id, hcj in tqdm(self.houses.items()):
             for hh in hcj.House.Households:
                 for person, poi_preferences in hh.PointOfInterestPreferences.items():
-                    self.add_random_routes_for_one_person(
+                    self.add_routes_for_one_person(
                         poi_preferences.PoiWeights.keys(),
                         id,
                         hcj.House.Coordinates,
