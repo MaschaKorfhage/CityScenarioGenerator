@@ -450,7 +450,6 @@ class LPGConfigCreator:
         if any(path.iterdir()):
             raise Exception(f"Target directory was not empty: {path}")
         self.create_house_config_files(path / "houses")
-        # self.create_poi_config_files(path / "POIs")
         self.create_global_city_config_file(path)
         self.create_scenario_statistics(path / "statistics")
 
@@ -473,6 +472,7 @@ class LPGConfigCreator:
     def create_global_city_config_file(self, path: Path):
         filename = path / "city.json"
         if self.global_city_definition.Routes:
+            # extract routes into a separate file
             self.create_routes_config_file(path)
             self.global_city_definition.Routes = None
         city_data = self.global_city_definition.to_json(indent=4)
@@ -496,6 +496,7 @@ class LPGConfigCreator:
         """
         path.mkdir(parents=True, exist_ok=True)
         scenario_statistics.write_household_statistics(self.houses.values(), path)
+        scenario_statistics.write_poi_statistics(self.global_city_definition, path)
 
 
 def check_nace_to_location_mapping():

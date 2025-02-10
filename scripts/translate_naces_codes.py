@@ -1,4 +1,4 @@
-"""A script for parsing, filtering and storing the nace codes in a suitable format for mapping buildigns."""
+"""A script for parsing, filtering and storing the nace codes in a suitable format for mapping buildings."""
 
 import json
 import pandas as pd
