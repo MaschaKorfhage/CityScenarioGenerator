@@ -67,7 +67,7 @@ def import_residential_buildings_from_builda(
                 # windows is case-insensitive regarding file names, so this will not work
                 raise Exception(f"Building ID only differs in case: {building.id}")
             else:
-                logging.warn(f"Building ID only differs in case: {building.id}")
+                logging.warning(f"Building ID only differs in case: {building.id}")
         building_ids.add(id_lower)
     return buildings
 
@@ -88,7 +88,7 @@ def create_configs_from_buildings(
 
     # TODO: workaround for missing POI types; define the custom
     #       POIs properly or remove them
-    custom_poi_path = Path("data/custom_pois.json")
+    custom_poi_path = Path("data/custom_pois_all.json")
     config_creator.load_and_add_custom_pois(custom_poi_path)
 
     # determine which POIs each person visits
