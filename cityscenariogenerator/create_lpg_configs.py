@@ -348,7 +348,7 @@ class LPGConfigCreator:
             self.poi_ids_by_type[poi.LocationType].append(id)
         logging.info(f"Loaded {len(poi_dict)} custom POIs")
 
-    def create_poi_preferences(self) -> None:
+    def create_poi_preferences(self, include_unused_pois: bool = False) -> None:
         if not self.houses:
             raise Exception("No houses have been added yet.")
         if not self.pois:
@@ -383,7 +383,12 @@ class LPGConfigCreator:
         logging.info(
             f"{len(self.pois) - len(all_relevant_pois)} POIs are not visited by anyone."
         )
-        self.global_city_definition.PointsOfInterest = all_relevant_pois
+        if include_unused_pois:
+            # include all POIs read from BUILDA
+            self.global_city_definition.PointsOfInterest = self.pois
+        else:
+            # only include POIs that are actually used by at least one person
+            self.global_city_definition.PointsOfInterest = all_relevant_pois
 
     def add_routes_for_one_person(
         self,
