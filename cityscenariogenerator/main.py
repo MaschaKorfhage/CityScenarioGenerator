@@ -108,7 +108,7 @@ def overwrite_residential_coordinates(
     """This is for testing with buildings from the Builda dump file with
     buildings all over Germany"""
     # determine latitude/longitude ranges from nonresidential buildings
-    allcoordinates = [b.coordinates.value for b in nonres_buildings]
+    allcoordinates = [b.coordinates for b in nonres_buildings]
     latitudes = [c.latitude for c in allcoordinates]
     latmin = min(latitudes)
     latrange = max(latitudes) - latmin

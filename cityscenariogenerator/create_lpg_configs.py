@@ -223,7 +223,7 @@ class LPGConfigCreator:
     def get_matching_locations(
         self, building: builda.NonResidentialBuildingWithSourceDto
     ) -> list[str]:
-        use: dict | None = building.use.value
+        use: dict | None = building.use
         if not use:
             return []
         nace_text = use.get("nace_code", "")
@@ -256,7 +256,7 @@ class LPGConfigCreator:
         location = self.select_lpg_location_for_poi(building)
         timelimit = None
         poi = lpgdata.PointOfInterestData(
-            location, self.convert_coordinates(building.coordinates.value), timelimit
+            location, self.convert_coordinates(building.coordinates), timelimit
         )
         # determine the ID of the POI
         poi_id = f"{location} {building.id}"
