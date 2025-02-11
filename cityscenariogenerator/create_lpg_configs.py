@@ -105,6 +105,8 @@ def copy_calcspec_file(
         house_job.PathToDatabase = db_file_path
     if lpg_result_path:
         house_job.CalcSpec.OutputDirectory = lpg_result_path
+    # TODO: choose an appropriate GeographicLocation and TemperatureProfile
+
     # save the adjusted settings to the result directory
     result_json_str: str = house_job.to_json(indent=4)
     result_file_path = result_directory / "Calcspec.json"
