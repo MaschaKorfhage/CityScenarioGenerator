@@ -6,7 +6,8 @@
         "CalcOptions": [
             "OverallSum",
             "ActionsEachTimestep",
-            "LocationsEntries"
+            "LocationsEntries",
+            "TransportationStatistics"
         ],
         "DeleteAllButPDF": false,
         "DeleteDAT": true,
