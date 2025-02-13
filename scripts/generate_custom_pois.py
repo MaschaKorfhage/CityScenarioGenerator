@@ -14,8 +14,6 @@ locations = content.splitlines()
 all_pois = {}
 
 for location in locations:
-    if location == "Home":
-        continue  # skip the home location
     name = location + " Custom"
     lat = round(random.uniform(50.4, 50.9), 2)
     long = round(random.uniform(6.2, 6.8), 2)

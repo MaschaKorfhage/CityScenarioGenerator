@@ -355,8 +355,16 @@
         "Volunteer Workplace Custom": {
             "LocationType": "Volunteer Workplace",
             "Coordinates": {
-                "Latitude": 50.52,
-                "Longitude": 6.61
+                "Latitude": 50.79,
+                "Longitude": 6.66
+            },
+            "TimeLimit": null
+        },
+        "Home Custom": {
+            "LocationType": "Home",
+            "Coordinates": {
+                "Latitude": 50.78,
+                "Longitude": 6.35
             },
             "TimeLimit": null
         }
