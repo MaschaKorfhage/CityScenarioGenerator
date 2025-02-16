@@ -5,9 +5,9 @@
         "DefaultForOutputFiles": "NoFiles",
         "CalcOptions": [
             "OverallSum",
-            "ActionsEachTimestep",
+            "ActionEntries",
             "LocationsEntries",
-            "TransportationStatistics"
+            "TransportationDefinitions"
         ],
         "DeleteAllButPDF": false,
         "DeleteDAT": true,
