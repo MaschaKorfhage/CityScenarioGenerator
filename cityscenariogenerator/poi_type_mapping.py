@@ -1,22 +1,36 @@
 import abc
+from dataclasses import dataclass
 import json
 from typing import Any
 from builda_client import dev_client as builda  # type: ignore
+from dataclasses_json import dataclass_json  # type: ignore
 
-from lpg_locations import LpgLocations
+from cityscenariogenerator.lpg_locations import LpgLocations
+
+
+@dataclass_json
+@dataclass
+class LocationType:
+    """
+    Stores all LPG locations that apply for a certain type of POI.
+    One object is used for one building code (e.g., ALKIS).
+    """
+
+    non_work_locations: set[str]
+    work_locations: set[str]
 
 
 class PoiLocationMapper(abc.ABC):
 
     @staticmethod
     def load_mapping(path: str) -> dict[str, Any]:
-        with open(path, "r") as f:
+        with open(path, "r", encoding="utf8") as f:
             return json.load(f)
 
     @staticmethod
     def combine_mappings(
-        mapping1: dict[str, str], mapping2: dict[str, list[str]]
-    ) -> dict[str, list[str]]:
+        mapping1: dict[str, str], mapping2: dict[str, Any]
+    ) -> dict[str, Any]:
         return {key: mapping2[val] for key, val in mapping1.items() if val in mapping2}
 
     @abc.abstractmethod
@@ -63,16 +77,30 @@ class NaceCodeMapper(PoiLocationMapper):
         return self.nace_loc_mapping[code]
 
 
-def get_lpg_remote_locations() -> set[str]:
-    """
-    Returns a list of all LPG locations that are not at home,
-    and that therefore requrire a POI.
+class AlkisMapper(PoiLocationMapper):
+    def __init__(self):
+        path_alkis_codes = "data/alkis_code_descriptions.json"
+        self.code_descriptions = PoiLocationMapper.load_mapping(path_alkis_codes)
 
-    :return: list of location names
-    """
-    with open("data/lpg_remote_locations.txt", "r") as f:
-        all_locations = f.read()
-    return set(all_locations.splitlines())
+        path_alkis_locs = "data/alkis_codes_to_locations.json"
+        description_to_loc_dict = PoiLocationMapper.load_mapping(path_alkis_locs)
+        # parse LocationType objects from dicts
+        self.desc_to_loc_type = {
+            k: LocationType.from_dict(d) for k, d in description_to_loc_dict.items() if d  # type: ignore
+        }
+
+        # combine both mappings to directly get from ALKIS code to the LocationType object
+        self.location_mapping = PoiLocationMapper.combine_mappings(
+            self.code_descriptions, self.desc_to_loc_type
+        )
+
+    def get_matching_locations(
+        self, building: builda.NonResidentialBuilding
+    ) -> list[str]:
+        category = building.use.get("raw", {}).get("alkis", "")
+        if not category:
+            return []
+        return self.location_mapping.get(category, [])
 
 
 def check_nace_to_location_mapping():
@@ -94,5 +122,38 @@ def check_nace_to_location_mapping():
                 print(val)
 
 
+def check_alkis_mapping():
+    am = AlkisMapper()
+    mapping = am.location_mapping
+    alkis_codes = am.code_descriptions
+    nowork = [
+        alkis_codes[k]
+        for k, v in mapping.items()
+        if len(v.work_locations) == 0 and len(v.non_work_locations) > 0
+    ]
+    print("ALKIS Codes that cannot be a workplace:")
+    print("\n".join(nowork))
+
+    onlywork = [
+        alkis_codes[k]
+        for k, v in mapping.items()
+        if len(v.non_work_locations) == 0 and len(v.work_locations) > 0
+    ]
+    print("\nALKIS Codes that are only a workplace:")
+    print("\n".join(onlywork))
+
+    empty = [
+        alkis_codes[k]
+        for k, v in mapping.items()
+        if len(v.non_work_locations) == 0 and len(v.work_locations) == 0
+    ]
+    print("\nALKIS Codes without any mapping:")
+    print("\n".join(empty))
+
+    empty = [alkis_codes[k] for k in alkis_codes.keys() if k not in mapping]
+    print("\nExcluded ALKIS Codes:")
+    print("\n".join(empty))
+
+
 if __name__ == "__main__":
-    check_nace_to_location_mapping()
+    check_alkis_mapping()
