@@ -4,31 +4,23 @@ Old format: each code is mapped to a list of locations
 New format: a LocationType object for each code, separating work and non-work locations
 """
 
-from dataclasses import dataclass
 import json
 
-from dataclasses_json import dataclass_json
 
 from cityscenariogenerator.lpg_locations import LpgLocations
+from cityscenariogenerator.poi_type_mapping import LocationType
 
 
-@dataclass_json
-@dataclass
-class LocationType:
-    non_work_locations: set[str]
-    work_locations: set[str]
-
-
-with open("data/alkis_codes_to_locations.json", encoding="utf8") as f:
+with open("data/alkis_codes_to_locations_old.json", encoding="utf8") as f:
     mapping2 = json.load(f)
 
 
-normal_locs = LpgLocations.NON_WORK
+normal_locs = LpgLocations.NO_WORK
 work_locs = LpgLocations.WORK
 
-converted = {}
+converted: dict = {}
 for alkis, locations in mapping2.items():
-    if not locations:
+    if locations is None:
         converted[alkis] = locations
         continue
     normal = {loc for loc in locations if loc in normal_locs}
@@ -36,5 +28,5 @@ for alkis, locations in mapping2.items():
     converted[alkis] = LocationType(normal, work).to_dict()  # type: ignore
 
 
-with open("data/alkis_codes_to_locations2.json", "w+", encoding="utf8") as f:
+with open("data/alkis_codes_to_locations.json", "w+", encoding="utf8") as f:
     json.dump(converted, f, indent=4, ensure_ascii=False)
