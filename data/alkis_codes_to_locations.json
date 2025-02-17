@@ -204,8 +204,8 @@
     },
     "Gebäude für Bewirtung": {
         "non_work_locations": [
-            "Cafe",
-            "Bar Location"
+            "Bar Location",
+            "Cafe"
         ],
         "work_locations": [
             "Workplace (shift worker)"
@@ -213,8 +213,8 @@
     },
     "Gaststätte, Restaurant": {
         "non_work_locations": [
-            "Cafe",
-            "Bar Location"
+            "Bar Location",
+            "Cafe"
         ],
         "work_locations": [
             "Workplace (shift worker)"
@@ -232,7 +232,8 @@
     },
     "Freizeit- und Vergnügungsstätte": {
         "non_work_locations": [
-            "Local Recreational Area"
+            "Local Recreational Area",
+            "Dance Club"
         ],
         "work_locations": []
     },
@@ -241,7 +242,9 @@
         "work_locations": []
     },
     "Kino": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Cinema Location"
+        ],
         "work_locations": [
             "Workplace (shift worker)"
         ]
@@ -779,7 +782,7 @@
     },
     "Berufsbildende Schule": {
         "non_work_locations": [
-            "School"
+            "Community College"
         ],
         "work_locations": []
     },
@@ -881,8 +884,8 @@
     "Gemeindehaus": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Gotteshaus": {
@@ -943,8 +946,8 @@
     },
     "Jugendfreizeitheim": {
         "non_work_locations": [
-            "Summer Camp",
-            "Local Recreational Area"
+            "Local Recreational Area",
+            "Summer Camp"
         ],
         "work_locations": [
             "Volunteer Workplace"
@@ -952,8 +955,8 @@
     },
     "Freizeit-, Vereinsheim, Dorfgemeinschafts-, Bürgerhaus": {
         "non_work_locations": [
-            "Summer Camp",
-            "Local Recreational Area"
+            "Local Recreational Area",
+            "Summer Camp"
         ],
         "work_locations": [
             "Volunteer Workplace"
@@ -1069,19 +1072,19 @@
     },
     "Gebäude für Sportzwecke": {
         "non_work_locations": [
+            "Fitness Studio",
+            "Dance Studio",
             "Yoga Studio",
-            "Dance Club",
-            "Bow Range",
             "Golf Club",
-            "Fitness Studio"
+            "Bow Range"
         ],
         "work_locations": []
     },
     "Sport-, Turnhalle": {
         "non_work_locations": [
+            "Fitness Studio",
             "Yoga Studio",
-            "Dance Club",
-            "Fitness Studio"
+            "Dance Studio"
         ],
         "work_locations": []
     },
@@ -1116,8 +1119,8 @@
     "Gebäude für Kurbetrieb": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Badegebäude für medizinische Zwecke": {
@@ -1129,8 +1132,8 @@
     "Sanatorium": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Gebäude im Zoo": null,
@@ -1147,8 +1150,8 @@
     "Empfangsgebäude des botanischen Gartens": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Gewächshaus (Botanik)": null,
@@ -1156,8 +1159,8 @@
     "Gebäude für andere Erholungseinrichtung": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Schutzhütte": null,
@@ -1188,15 +1191,15 @@
     "Sende-,Funkturm": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Stadt-,Torturm": {
         "non_work_locations": [],
         "work_locations": [
-            "Volunteer Workplace",
-            "Office Workplace"
+            "Office Workplace",
+            "Volunteer Workplace"
         ]
     },
     "Förderturm": null,

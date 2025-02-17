@@ -119,11 +119,12 @@
         "Workplace (shift worker)"
     ],
     "Freizeit- und Vergnügungsstätte": [
+        "Dance Club",
         "Local Recreational Area"
     ],
     "Festsaal": [],
     "Kino": [
-        "Cinema",
+        "Cinema Location",
         "Workplace (shift worker)"
     ],
     "Kegel-, Bowlinghalle": [
@@ -423,7 +424,7 @@
         "School"
     ],
     "Berufsbildende Schule": [
-        "School"
+        "Community College"
     ],
     "Hochschulgebäude (Fachhochschule, Universität)": [
         "University",
@@ -571,14 +572,14 @@
     ],
     "Gebäude für Sportzwecke": [
         "Yoga Studio",
-        "Dance Club",
+        "Dance Studio",
         "Fitness Studio",
         "Golf Club",
         "Bow Range"
     ],
     "Sport-, Turnhalle": [
         "Yoga Studio",
-        "Dance Club",
+        "Dance Studio",
         "Fitness Studio"
     ],
     "Gebäude zum Sportplatz": [

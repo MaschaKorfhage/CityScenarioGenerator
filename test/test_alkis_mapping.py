@@ -8,7 +8,7 @@ from cityscenariogenerator.poi_type_mapping import AlkisMapper, LocationType
 @pytest.fixture
 def alkis_mapping():
     """Returns the ALKIS code to location mapping"""
-    return AlkisMapper.load_alkis_location_mapping()
+    return AlkisMapper().location_mapping
 
 
 def test_alkis_mapping_complete(alkis_mapping: dict[str, LocationType]):
@@ -37,7 +37,7 @@ def test_incorrect_locations(alkis_mapping: dict[str, LocationType]):
             # only locations that belong to non-residential buildings are allowed
             if loc not in LpgLocations.NONRES_BUILD_NO_WORK:
                 wrong_nonwork.append(loc)
-    assert len(wrong_work) == 0, f"Wrong work locations: {", ".join(wrong_work)}"
+    assert len(wrong_work) == 0, f"Invalid work locations: {", ".join(wrong_work)}"
     assert (
         len(wrong_nonwork) == 0
-    ), f"Wrong non-work locations: {", ".join(wrong_nonwork)}"
+    ), f"Invalid non-work locations: {", ".join(wrong_nonwork)}"

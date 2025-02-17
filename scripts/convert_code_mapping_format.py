@@ -23,7 +23,7 @@ for alkis, locations in mapping2.items():
     if locations is None:
         converted[alkis] = locations
         continue
-    normal = {loc for loc in locations if loc in normal_locs}
+    normal = {loc for loc in locations if loc not in work_locs}
     work = {loc for loc in locations if loc in work_locs}
     converted[alkis] = LocationType(normal, work).to_dict()  # type: ignore
 
