@@ -1,0 +1,7 @@
+Hiking Location
+Walking Location
+Mountain Road
+Running Path
+Bicycle Route
+Fishing Location
+Hunting Forest
