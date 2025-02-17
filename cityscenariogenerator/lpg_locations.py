@@ -2,8 +2,13 @@
 A module for loading the locations used in the LoadProfileGenerator.
 """
 
+from pathlib import Path
 
-def load_location_set(path: str) -> set[str]:
+
+LOCATION_DIR = Path("data/lpg_locations")
+
+
+def load_location_set(path: Path) -> set[str]:
     with open(path, "r") as f:
         all_locations = f.read()
     return set(all_locations.splitlines())
@@ -16,7 +21,7 @@ def get_lpg_remote_locations() -> set[str]:
 
     :return: set of location names
     """
-    return load_location_set("data/lpg_remote_locations.txt")
+    return load_location_set(LOCATION_DIR / "all_remote.txt")
 
 
 def get_lpg_work_locations() -> set[str]:
@@ -27,7 +32,7 @@ def get_lpg_work_locations() -> set[str]:
 
     :return: set of location names
     """
-    return load_location_set("data/lpg_work_locations.txt")
+    return load_location_set(LOCATION_DIR / "work.txt")
 
 
 class LpgLocations:
