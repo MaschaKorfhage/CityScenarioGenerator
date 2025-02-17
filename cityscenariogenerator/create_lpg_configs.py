@@ -14,6 +14,7 @@ from tqdm import tqdm  # type: ignore
 from pylpg import lpgdata  # type: ignore
 from builda_client import dev_client as builda  # type: ignore
 
+import cityscenariogenerator.lpg_locations
 import poi_type_mapping
 import scenario_statistics
 import household_data
@@ -285,7 +286,7 @@ class LPGConfigCreator:
         Checks if there is at least one POI for every LPG location. If locations are missing,
         households that require them cannot be simulated.
         """
-        locations = poi_type_mapping.get_lpg_remote_locations()
+        locations = cityscenariogenerator.lpg_locations.LpgLocations.ALL
         available = self.poi_ids_by_type.keys()
         missing = locations - available
         if missing:

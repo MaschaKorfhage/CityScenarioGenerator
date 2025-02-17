@@ -1,9 +1,24 @@
 import abc
 import json
+from typing import Any
 from builda_client import dev_client as builda  # type: ignore
+
+from lpg_locations import LpgLocations
 
 
 class PoiLocationMapper(abc.ABC):
+
+    @staticmethod
+    def load_mapping(path: str) -> dict[str, Any]:
+        with open(path, "r") as f:
+            return json.load(f)
+
+    @staticmethod
+    def combine_mappings(
+        mapping1: dict[str, str], mapping2: dict[str, list[str]]
+    ) -> dict[str, list[str]]:
+        return {key: mapping2[val] for key, val in mapping1.items() if val in mapping2}
+
     @abc.abstractmethod
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
@@ -24,17 +39,13 @@ class NaceCodeMapper(PoiLocationMapper):
 
         :return: mapping dict from nace codes to LPG locations
         """
-        path = "data/nace_code_descriptions.json"
-        with open(path, "r") as f:
-            nace_to_description = json.load(f)
-        path = "data/nace_codes_to_locations.json"
-        with open(path, "r") as f:
-            description_to_loc = json.load(f)
-        combined = {
-            nace: description_to_loc[desc]
-            for nace, desc in nace_to_description.items()
-            if desc in description_to_loc
-        }
+        path_nace_codes = "data/nace_code_descriptions.json"
+        nace_to_description = PoiLocationMapper.load_mapping(path_nace_codes)
+        path_nace_locs = "data/nace_codes_to_locations.json"
+        description_to_loc = PoiLocationMapper.load_mapping(path_nace_locs)
+        combined = PoiLocationMapper.combine_mappings(
+            nace_to_description, description_to_loc
+        )
         return combined
 
     def get_matching_locations(
@@ -66,7 +77,7 @@ def get_lpg_remote_locations() -> set[str]:
 
 def check_nace_to_location_mapping():
     """Checks whether all locations are covered in the mapping, and whether all location names are correct"""
-    locations = get_lpg_remote_locations()
+    locations = LpgLocations.ALL
     print(f"Locations: {len(locations)}")
 
     print("\nLocations that are not covered yet:")
