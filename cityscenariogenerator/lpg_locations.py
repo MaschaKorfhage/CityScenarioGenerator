@@ -29,6 +29,8 @@ class LpgLocations:
 
     ALL = load_location_set(LOCATION_DIR / "all_remote.txt")
     WORK = load_location_set(LOCATION_DIR / "work.txt")
-    NON_WORK = ALL - WORK
+    NO_WORK = ALL - WORK
     RESIDENTIAL = load_location_set(LOCATION_DIR / "residential.txt")
     NO_BUILDING = load_location_set(LOCATION_DIR / "no_building.txt")
+    NONRES_BUILDING = ALL - RESIDENTIAL - NO_BUILDING
+    NONRES_BUILD_NO_WORK = NONRES_BUILDING & NO_WORK
