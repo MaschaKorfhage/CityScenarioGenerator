@@ -5,10 +5,12 @@ def test_lpg_locations_exclusive_sets():
     """
     Test if some of the location sets are mutually exclusive.
     """
-    assert LpgLocations.WORK & LpgLocations.NON_WORK == set()
+    assert LpgLocations.WORK & LpgLocations.NO_WORK == set()
     assert LpgLocations.WORK & LpgLocations.RESIDENTIAL == set()
     assert LpgLocations.WORK & LpgLocations.NO_BUILDING == set()
     assert LpgLocations.RESIDENTIAL & LpgLocations.NO_BUILDING == set()
+    assert LpgLocations.RESIDENTIAL & LpgLocations.NONRES_BUILDING == set()
+    assert LpgLocations.NO_BUILDING & LpgLocations.NONRES_BUILDING == set()
 
 
 def test_lpg_locations_not_empty():
