@@ -1,0 +1,1196 @@
+{
+    "Schullandheim": {
+        "non_work_locations": [
+            "Summer Camp"
+        ],
+        "work_locations": []
+    },
+    "Gemischt genutztes Gebäude mit Wohnen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohngebäude mit Gemeinbedarf": null,
+    "Wohngebäude mit Handel und Dienstleistungen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohn- und Verwaltungsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohn- und Bürogebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohn- und Geschäftsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohngebäude mit Gewerbe und Industrie": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Wohn- und Betriebsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Land- und forstwirtschaftliches Wohn- und Betriebsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Bauernhaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Wohn- und Wirtschaftsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Forsthaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gebäude zur Freizeitgestaltung": {
+        "non_work_locations": [
+            "Local Recreational Area"
+        ],
+        "work_locations": []
+    },
+    "Gartenhaus": null,
+    "Gebäude für Wirtschaft oder Gewerbe": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Handel und Dienstleistungen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bürogebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Kreditinstitut": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Versicherung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Geschäftsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Kaufhaus": {
+        "non_work_locations": [
+            "Shopping Mall"
+        ],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Einkaufszentrum": {
+        "non_work_locations": [
+            "Shopping Mall"
+        ],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Markthalle": {
+        "non_work_locations": [
+            "Food Market"
+        ],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Laden": {
+        "non_work_locations": [
+            "Supermarket"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Kiosk": {
+        "non_work_locations": [
+            "Supermarket"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Apotheke": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Messehalle": [],
+    "Gebäude für Beherbergung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Hotel, Motel, Pension": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Jugendherberge": {
+        "non_work_locations": [
+            "Summer Camp"
+        ],
+        "work_locations": []
+    },
+    "Hütte (mit Übernachtungsmöglichkeit)": {
+        "non_work_locations": [
+            "Summer Camp"
+        ],
+        "work_locations": []
+    },
+    "Campingplatzgebäude": {
+        "non_work_locations": [
+            "Summer Camp"
+        ],
+        "work_locations": []
+    },
+    "Gebäude für Bewirtung": {
+        "non_work_locations": [
+            "Bar Location",
+            "Cafe"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gaststätte, Restaurant": {
+        "non_work_locations": [
+            "Bar Location",
+            "Cafe"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Hütte (ohne Übernachtungsmöglichkeit)": [],
+    "Kantine": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Freizeit- und Vergnügungsstätte": {
+        "non_work_locations": [
+            "Local Recreational Area"
+        ],
+        "work_locations": []
+    },
+    "Festsaal": [],
+    "Kino": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Kegel-, Bowlinghalle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Spielkasino": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Gewerbe und Industrie": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Produktionsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Fabrik": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Betriebsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Brauerei": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Brennerei": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Werkstatt": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Sägewerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Tankstelle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Waschstraße, Waschanlage, Waschhalle": {
+        "non_work_locations": [
+            "Car Wash"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Vorratshaltung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Kühlhaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Speichergebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Lagerhalle, Lagerschuppen, Lagerhaus": null,
+    "Speditionsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Forschungszwecke": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Grundstoffgewinnung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bergwerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Saline": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für betriebliche Sozialeinrichtung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Sonstiges Gebäude für Gewerbe und Industrie": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Mühle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Windmühle": null,
+    "Wassermühle": null,
+    "Schöpfwerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Wetterstation": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Handel und Dienstleistung mit Wohnen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für Gewerbe und Industrie mit Wohnen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Betriebsgebäude zu Verkehrsanlagen (allgemein)": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Betriebsgebäude für Straßenverkehr": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Straßenmeisterei": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Wartehalle": [],
+    "Betriebsgebäude für Schienenverkehr": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bahnwärterhaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Lokschuppen, Wagenhalle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Stellwerk, Blockstelle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Betriebsgebäude des Güterbahnhofs": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Betriebsgebäude für Flugverkehr": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Flugzeughalle": null,
+    "Betriebsgebäude für Schiffsverkehr": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Werft (Halle)": null,
+    "Dock (Halle)": null,
+    "Betriebsgebäude zur Schleuse": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bootshaus": null,
+    "Betriebsgebäude zur Seilbahn": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Spannwerk zur Drahtseilbahn": null,
+    "Gebäude zum Parken": null,
+    "Parkhaus": null,
+    "Parkdeck": null,
+    "Garage": null,
+    "Fahrzeughalle": null,
+    "Gebäude zur Versorgung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zur Energieversorgung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zur Wasserversorgung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Wasserwerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Pumpstation": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Wasserbehälter": null,
+    "Gebäude zur Elektrizitätsversorgung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Elektrizitätswerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Umspannwerk": null,
+    "Umformer": null,
+    "Reaktorgebäude": null,
+    "Turbinenhaus": null,
+    "Kesselhaus": null,
+    "Gebäude für Fernmeldewesen": [],
+    "Gebäude an unterirdischen Leitungen": null,
+    "Gebäude zur Gasversorgung": null,
+    "Gaswerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Heizwerk": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zur Versorgungsanlage": null,
+    "Pumpwerk (nicht für Wasserversorgung)": [],
+    "Gebäude zur Entsorgung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zur Abwasserbeseitigung": [],
+    "Gebäude der Kläranlage": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Toilette": null,
+    "Gebäude zur Abfallbehandlung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Müllbunker": null,
+    "Gebäude zur Müllverbrennung": [],
+    "Gebäude der Abfalldeponie": [],
+    "Gebäude für Land- und Forstwirtschaft": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Land- und forstwirtschaftliches Betriebsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Scheune": null,
+    "Schuppen": null,
+    "Stall": null,
+    "Scheune und Stall": null,
+    "Stall für Tiergroßhaltung": null,
+    "Reithalle": {
+        "non_work_locations": [
+            "Horse Stable"
+        ],
+        "work_locations": []
+    },
+    "Wirtschaftsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Almhütte": {
+        "non_work_locations": [
+            "Local Recreational Area"
+        ],
+        "work_locations": []
+    },
+    "Jagdhaus, Jagdhütte": null,
+    "Treibhaus, Gewächshaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Treibhaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gewächshaus, verschiebbar": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gebäude für öffentliche Zwecke": [],
+    "Verwaltungsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Parlament": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Rathaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Post": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Zollamt": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gericht": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Botschaft, Konsulat": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Kreisverwaltung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Bezirksregierung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Finanzamt": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gebäude für Bildung und Forschung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Allgemein bildende Schule": {
+        "non_work_locations": [
+            "School"
+        ],
+        "work_locations": []
+    },
+    "Berufsbildende Schule": {
+        "non_work_locations": [
+            "School"
+        ],
+        "work_locations": []
+    },
+    "Hochschulgebäude (Fachhochschule, Universität)": {
+        "non_work_locations": [
+            "University"
+        ],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Forschungsinstitut": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gebäude für kulturelle Zwecke": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Schloss": [],
+    "Theater, Oper": {
+        "non_work_locations": [
+            "Opera",
+            "Theater"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Konzertgebäude": {
+        "non_work_locations": [
+            "Concert House"
+        ],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Museum": {
+        "non_work_locations": [
+            "Museum"
+        ],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Rundfunk, Fernsehen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Veranstaltungsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bibliothek, Bücherei": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Burg, Festung": [],
+    "Gebäude für religiöse Zwecke": [],
+    "Kirche": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Synagoge": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Kapelle": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Gemeindehaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Gotteshaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Moschee": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Tempel": [],
+    "Kloster": [],
+    "Gebäude für Gesundheitswesen": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Krankenhaus": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Heilanstalt, Pflegeanstalt, Pflegestation": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Ärztehaus, Poliklinik": {
+        "non_work_locations": [
+            "Doctors Office"
+        ],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude für soziale Zwecke": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Jugendfreizeitheim": {
+        "non_work_locations": [
+            "Local Recreational Area",
+            "Summer Camp"
+        ],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Freizeit-, Vereinsheim, Dorfgemeinschafts-, Bürgerhaus": {
+        "non_work_locations": [
+            "Local Recreational Area",
+            "Summer Camp"
+        ],
+        "work_locations": [
+            "Volunteer Workplace"
+        ]
+    },
+    "Seniorenfreizeitstätte": {
+        "non_work_locations": [
+            "Local Recreational Area"
+        ],
+        "work_locations": []
+    },
+    "Kinderkrippe, Kindergarten, Kindertagesstätte": {
+        "non_work_locations": [
+            "Kindergarden"
+        ],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Gebäude für Sicherheit und Ordnung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Polizei": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Feuerwehr": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Kaserne": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Schutzbunker": null,
+    "Justizvollzugsanstalt": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Friedhofsgebäude": null,
+    "Trauerhalle": null,
+    "Krematorium": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Empfangsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Bahnhofsgebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Flughafengebäude": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zum U-Bahnhof": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Workplace (shift worker)"
+        ]
+    },
+    "Gebäude zum S-Bahnhof": [],
+    "Gebäude zum Busbahnhof": [],
+    "Empfangsgebäude Schifffahrt": [],
+    "Gebäude für öffentliche Zwecke mit Wohnen": [],
+    "Gebäude für Erholungszwecke": {
+        "non_work_locations": [
+            "Local Recreational Area"
+        ],
+        "work_locations": []
+    },
+    "Gebäude für Sportzwecke": {
+        "non_work_locations": [
+            "Yoga Studio",
+            "Dance Club",
+            "Golf Club",
+            "Bow Range",
+            "Fitness Studio"
+        ],
+        "work_locations": []
+    },
+    "Sport-, Turnhalle": {
+        "non_work_locations": [
+            "Dance Club",
+            "Yoga Studio",
+            "Fitness Studio"
+        ],
+        "work_locations": []
+    },
+    "Gebäude zum Sportplatz": {
+        "non_work_locations": [
+            "Soccer Practice Location"
+        ],
+        "work_locations": []
+    },
+    "Badegebäude": {
+        "non_work_locations": [
+            "Indoor Swimming Pool"
+        ],
+        "work_locations": []
+    },
+    "Hallenbad": {
+        "non_work_locations": [
+            "Indoor Swimming Pool"
+        ],
+        "work_locations": []
+    },
+    "Gebäude im Freibad": {
+        "non_work_locations": [
+            "Outdoor Swimming Pool"
+        ],
+        "work_locations": []
+    },
+    "Gebäude im Stadion": [],
+    "Gebäude für Kurbetrieb": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Badegebäude für medizinische Zwecke": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Sanatorium": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Gebäude im Zoo": null,
+    "Empfangsgebäude des Zoos": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Aquarium, Terrarium, Voliere": null,
+    "Tierschauhaus": null,
+    "Stall im Zoo": null,
+    "Gebäude im botanischen Garten": null,
+    "Empfangsgebäude des botanischen Gartens": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Gewächshaus (Botanik)": null,
+    "Pflanzenschauhaus": null,
+    "Gebäude für andere Erholungseinrichtung": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Schutzhütte": null,
+    "Touristisches Informationszentrum": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace"
+        ]
+    },
+    "Nach Quellenlage nicht zu spezifizieren": null,
+    "Wasserturm": null,
+    "Kirchturm": null,
+    "Aussichtsturm": null,
+    "Kontrollturm": null,
+    "Kühlturm": null,
+    "Leuchtturm": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Feuerwachturm": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Workplace (shift worker)"
+        ]
+    },
+    "Sende-,Funkturm": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Stadt-,Torturm": {
+        "non_work_locations": [],
+        "work_locations": [
+            "Office Workplace",
+            "Volunteer Workplace"
+        ]
+    },
+    "Förderturm": null,
+    "Bohrturm": null,
+    "Schloss-, Burgturm": null,
+    "Sonstiges": null,
+    "Biogasanlage": null,
+    "Windrad": null,
+    "Solarzellen": null,
+    "Mast": null,
+    "Freileitungsmast": null,
+    "Funkmast": null,
+    "Radioteleskop": null,
+    "Schornstein": null,
+    "Kran": null,
+    "Drehkran": null,
+    "Portalkran": null,
+    "Laufkran": null,
+    "Trockendock": null,
+    "Hochofen": [],
+    "Silo": null,
+    "Tank": null,
+    "Gasometer": null,
+    "Zuschauertribüne": null,
+    "Zuschauertribüne, überdacht": null,
+    "Zuschauertribüne, nicht überdacht": null,
+    "Stadion": [],
+    "Sprungschanze (Anlauf)": null,
+    "Gradierwerk": null,
+    "Historische Wasserleitung": null,
+    "Aquaedukt": null,
+    "Wachturm": null,
+    "Befestigung (Burgruine)": null,
+    "Burg": null,
+    "Historische Mauer": null,
+    "Stadtmauer": null,
+    "Sonstige historische Mauer": null,
+    "Überdachung": null,
+    "Carport": null,
+    "Mauer": null,
+    "Denkmal": null,
+    "Schiffshebewerk": null,
+    "Kammerschleuse": null,
+    "Brücke": null,
+    "Drehbrücke": null,
+    "Hebebrücke": null,
+    "Zugbrücke": null,
+    "Hochbahn, Hochstraße": null,
+    "Schutzgalerie, Einhausung": null,
+    "Schleusenkammer": null,
+    "Staumauer": null,
+    "Wehr": null,
+    "Sicherheitstor": null,
+    "Siel": null,
+    "Sperrwerk": null,
+    "Tiefgarage": null
+}

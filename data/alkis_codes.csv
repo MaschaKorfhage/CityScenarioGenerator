@@ -1,0 +1,303 @@
+name,description,type
+31001_1000,Wohngebäude,residential
+31001_1010,Wohnhaus,residential
+31001_1020,Wohnheim,residential
+31001_1021,Kinderheim,residential
+31001_1022,Seniorenheim,residential
+31001_1023,Schwesternwohnheim,residential
+31001_1024,"Studenten-, Schülerwohnheim",residential
+31001_1025,Schullandheim,non-residential
+31001_1100,Gemischt genutztes Gebäude mit Wohnen,mixed
+31001_1110,Wohngebäude mit Gemeinbedarf,mixed
+31001_1120,Wohngebäude mit Handel und Dienstleistungen,mixed
+31001_1121,Wohn- und Verwaltungsgebäude,mixed
+31001_1122,Wohn- und Bürogebäude,mixed
+31001_1123,Wohn- und Geschäftsgebäude,mixed
+31001_1130,Wohngebäude mit Gewerbe und Industrie,mixed
+31001_1131,Wohn- und Betriebsgebäude,mixed
+31001_1210,Land- und forstwirtschaftliches Wohngebäude,residential
+31001_1220,Land- und forstwirtschaftliches Wohn- und Betriebsgebäude,mixed
+31001_1221,Bauernhaus,mixed
+31001_1222,Wohn- und Wirtschaftsgebäude,mixed
+31001_1223,Forsthaus,mixed
+31001_1310,Gebäude zur Freizeitgestaltung,non-residential
+31001_1311,Ferienhaus,residential
+31001_1312,Wochenendhaus,residential
+31001_1313,Gartenhaus,non-residential
+31001_2000,Gebäude für Wirtschaft oder Gewerbe,non-residential
+31001_2010,Gebäude für Handel und Dienstleistungen,non-residential
+31001_2020,Bürogebäude,non-residential
+31001_2030,Kreditinstitut,non-residential
+31001_2040,Versicherung,non-residential
+31001_2050,Geschäftsgebäude,non-residential
+31001_2051,Kaufhaus,non-residential
+31001_2052,Einkaufszentrum,non-residential
+31001_2053,Markthalle,non-residential
+31001_2054,Laden,non-residential
+31001_2055,Kiosk,non-residential
+31001_2056,Apotheke,non-residential
+31001_2060,Messehalle,non-residential
+31001_2070,Gebäude für Beherbergung,non-residential
+31001_2071,"Hotel, Motel, Pension",non-residential
+31001_2072,Jugendherberge,non-residential
+31001_2073,Hütte (mit Übernachtungsmöglichkeit),non-residential
+31001_2074,Campingplatzgebäude,non-residential
+31001_2080,Gebäude für Bewirtung,non-residential
+31001_2081,"Gaststätte, Restaurant",non-residential
+31001_2082,Hütte (ohne Übernachtungsmöglichkeit),non-residential
+31001_2083,Kantine,non-residential
+31001_2090,Freizeit- und Vergnügungsstätte,non-residential
+31001_2091,Festsaal,non-residential
+31001_2092,Kino,non-residential
+31001_2093,"Kegel-, Bowlinghalle",non-residential
+31001_2094,Spielkasino,non-residential
+31001_2100,Gebäude für Gewerbe und Industrie,non-residential
+31001_2110,Produktionsgebäude,non-residential
+31001_2111,Fabrik,non-residential
+31001_2112,Betriebsgebäude,non-residential
+31001_2113,Brauerei,non-residential
+31001_2114,Brennerei,non-residential
+31001_2120,Werkstatt,non-residential
+31001_2121,Sägewerk,non-residential
+31001_2130,Tankstelle,non-residential
+31001_2131,"Waschstraße, Waschanlage, Waschhalle",non-residential
+31001_2140,Gebäude für Vorratshaltung,non-residential
+31001_2141,Kühlhaus,non-residential
+31001_2142,Speichergebäude,non-residential
+31001_2143,"Lagerhalle, Lagerschuppen, Lagerhaus",non-residential
+31001_2150,Speditionsgebäude,non-residential
+31001_2160,Gebäude für Forschungszwecke,non-residential
+31001_2170,Gebäude für Grundstoffgewinnung,non-residential
+31001_2171,Bergwerk,non-residential
+31001_2172,Saline,non-residential
+31001_2180,Gebäude für betriebliche Sozialeinrichtung,non-residential
+31001_2200,Sonstiges Gebäude für Gewerbe und Industrie,non-residential
+31001_2210,Mühle,non-residential
+31001_2211,Windmühle,non-residential
+31001_2212,Wassermühle,non-residential
+31001_2213,Schöpfwerk,non-residential
+31001_2220,Wetterstation,non-residential
+31001_2310,Gebäude für Handel und Dienstleistung mit Wohnen,mixed
+31001_2320,Gebäude für Gewerbe und Industrie mit Wohnen,mixed
+31001_2400,Betriebsgebäude zu Verkehrsanlagen (allgemein),non-residential
+31001_2410,Betriebsgebäude für Straßenverkehr,non-residential
+31001_2411,Straßenmeisterei,non-residential
+31001_2412,Wartehalle,non-residential
+31001_2420,Betriebsgebäude für Schienenverkehr,non-residential
+31001_2421,Bahnwärterhaus,non-residential
+31001_2422,"Lokschuppen, Wagenhalle",non-residential
+31001_2423,"Stellwerk, Blockstelle",non-residential
+31001_2424,Betriebsgebäude des Güterbahnhofs,non-residential
+31001_2430,Betriebsgebäude für Flugverkehr,non-residential
+31001_2431,Flugzeughalle,non-residential
+31001_2440,Betriebsgebäude für Schiffsverkehr,non-residential
+31001_2441,Werft (Halle),non-residential
+31001_2442,Dock (Halle),non-residential
+31001_2443,Betriebsgebäude zur Schleuse,non-residential
+31001_2444,Bootshaus,non-residential
+31001_2450,Betriebsgebäude zur Seilbahn,non-residential
+31001_2451,Spannwerk zur Drahtseilbahn,non-residential
+31001_2460,Gebäude zum Parken,non-residential
+31001_2461,Parkhaus,non-residential
+31001_2462,Parkdeck,non-residential
+31001_2463,Garage,non-residential
+31001_2464,Fahrzeughalle,non-residential
+31001_2500,Gebäude zur Versorgung,non-residential
+31001_2501,Gebäude zur Energieversorgung,non-residential
+31001_2510,Gebäude zur Wasserversorgung,non-residential
+31001_2511,Wasserwerk,non-residential
+31001_2512,Pumpstation,non-residential
+31001_2513,Wasserbehälter,non-residential
+31001_2520,Gebäude zur Elektrizitätsversorgung,non-residential
+31001_2521,Elektrizitätswerk,non-residential
+31001_2522,Umspannwerk,non-residential
+31001_2523,Umformer,non-residential
+31001_2527,Reaktorgebäude,non-residential
+31001_2528,Turbinenhaus,non-residential
+31001_2529,Kesselhaus,non-residential
+31001_2540,Gebäude für Fernmeldewesen,non-residential
+31001_2560,Gebäude an unterirdischen Leitungen,non-residential
+31001_2570,Gebäude zur Gasversorgung,non-residential
+31001_2571,Gaswerk,non-residential
+31001_2580,Heizwerk,non-residential
+31001_2590,Gebäude zur Versorgungsanlage,non-residential
+31001_2591,Pumpwerk (nicht für Wasserversorgung),non-residential
+31001_2600,Gebäude zur Entsorgung,non-residential
+31001_2610,Gebäude zur Abwasserbeseitigung,non-residential
+31001_2611,Gebäude der Kläranlage,non-residential
+31001_2612,Toilette,non-residential
+31001_2620,Gebäude zur Abfallbehandlung,non-residential
+31001_2621,Müllbunker,non-residential
+31001_2622,Gebäude zur Müllverbrennung,non-residential
+31001_2623,Gebäude der Abfalldeponie,non-residential
+31001_2700,Gebäude für Land- und Forstwirtschaft,non-residential
+31001_2720,Land- und forstwirtschaftliches Betriebsgebäude,non-residential
+31001_2721,Scheune,non-residential
+31001_2723,Schuppen,non-residential
+31001_2724,Stall,non-residential
+31001_2726,Scheune und Stall,non-residential
+31001_2727,Stall für Tiergroßhaltung,non-residential
+31001_2728,Reithalle,non-residential
+31001_2729,Wirtschaftsgebäude,non-residential
+31001_2732,Almhütte,non-residential
+31001_2735,"Jagdhaus, Jagdhütte",non-residential
+31001_2740,"Treibhaus, Gewächshaus",non-residential
+31001_2741,Treibhaus,non-residential
+31001_2742,"Gewächshaus, verschiebbar",non-residential
+31001_3000,Gebäude für öffentliche Zwecke,non-residential
+31001_3010,Verwaltungsgebäude,non-residential
+31001_3011,Parlament,non-residential
+31001_3012,Rathaus,non-residential
+31001_3013,Post,non-residential
+31001_3014,Zollamt,non-residential
+31001_3015,Gericht,non-residential
+31001_3016,"Botschaft, Konsulat",non-residential
+31001_3017,Kreisverwaltung,non-residential
+31001_3018,Bezirksregierung,non-residential
+31001_3019,Finanzamt,non-residential
+31001_3020,Gebäude für Bildung und Forschung,non-residential
+31001_3021,Allgemein bildende Schule,non-residential
+31001_3022,Berufsbildende Schule,non-residential
+31001_3023,"Hochschulgebäude (Fachhochschule, Universität)",non-residential
+31001_3024,Forschungsinstitut,non-residential
+31001_3030,Gebäude für kulturelle Zwecke,non-residential
+31001_3031,Schloss,non-residential
+31001_3032,"Theater, Oper",non-residential
+31001_3033,Konzertgebäude,non-residential
+31001_3034,Museum,non-residential
+31001_3035,"Rundfunk, Fernsehen",non-residential
+31001_3036,Veranstaltungsgebäude,non-residential
+31001_3037,"Bibliothek, Bücherei",non-residential
+31001_3038,"Burg, Festung",non-residential
+31001_3040,Gebäude für religiöse Zwecke,non-residential
+31001_3041,Kirche,non-residential
+31001_3042,Synagoge,non-residential
+31001_3043,Kapelle,non-residential
+31001_3044,Gemeindehaus,non-residential
+31001_3045,Gotteshaus,non-residential
+31001_3046,Moschee,non-residential
+31001_3047,Tempel,non-residential
+31001_3048,Kloster,non-residential
+31001_3050,Gebäude für Gesundheitswesen,non-residential
+31001_3051,Krankenhaus,non-residential
+31001_3052,"Heilanstalt, Pflegeanstalt, Pflegestation",non-residential
+31001_3053,"Ärztehaus, Poliklinik",non-residential
+31001_3060,Gebäude für soziale Zwecke,non-residential
+31001_3061,Jugendfreizeitheim,non-residential
+31001_3062,"Freizeit-, Vereinsheim, Dorfgemeinschafts-, Bürgerhaus",non-residential
+31001_3063,Seniorenfreizeitstätte,non-residential
+31001_3064,Obdachlosenheim,residential
+31001_3065,"Kinderkrippe, Kindergarten, Kindertagesstätte",non-residential
+31001_3066,Asylbewerberheim,residential
+31001_3070,Gebäude für Sicherheit und Ordnung,non-residential
+31001_3071,Polizei,non-residential
+31001_3072,Feuerwehr,non-residential
+31001_3073,Kaserne,non-residential
+31001_3074,Schutzbunker,non-residential
+31001_3075,Justizvollzugsanstalt,non-residential
+31001_3080,Friedhofsgebäude,non-residential
+31001_3081,Trauerhalle,non-residential
+31001_3082,Krematorium,non-residential
+31001_3090,Empfangsgebäude,non-residential
+31001_3091,Bahnhofsgebäude,non-residential
+31001_3092,Flughafengebäude,non-residential
+31001_3094,Gebäude zum U-Bahnhof,non-residential
+31001_3095,Gebäude zum S-Bahnhof,non-residential
+31001_3097,Gebäude zum Busbahnhof,non-residential
+31001_3098,Empfangsgebäude Schifffahrt,non-residential
+31001_3100,Gebäude für öffentliche Zwecke mit Wohnen,mixed
+31001_3200,Gebäude für Erholungszwecke,non-residential
+31001_3210,Gebäude für Sportzwecke,non-residential
+31001_3211,"Sport-, Turnhalle",non-residential
+31001_3212,Gebäude zum Sportplatz,non-residential
+31001_3220,Badegebäude,non-residential
+31001_3221,Hallenbad,non-residential
+31001_3222,Gebäude im Freibad,non-residential
+31001_3230,Gebäude im Stadion,non-residential
+31001_3240,Gebäude für Kurbetrieb,non-residential
+31001_3241,Badegebäude für medizinische Zwecke,non-residential
+31001_3242,Sanatorium,non-residential
+31001_3260,Gebäude im Zoo,non-residential
+31001_3261,Empfangsgebäude des Zoos,non-residential
+31001_3262,"Aquarium, Terrarium, Voliere",non-residential
+31001_3263,Tierschauhaus,non-residential
+31001_3264,Stall im Zoo,non-residential
+31001_3270,Gebäude im botanischen Garten,non-residential
+31001_3271,Empfangsgebäude des botanischen Gartens,non-residential
+31001_3272,Gewächshaus (Botanik),non-residential
+31001_3273,Pflanzenschauhaus,non-residential
+31001_3280,Gebäude für andere Erholungseinrichtung,non-residential
+31001_3281,Schutzhütte,non-residential
+31001_3290,Touristisches Informationszentrum,non-residential
+31001_9998,Nach Quellenlage nicht zu spezifizieren,
+51001_1001,Wasserturm,non-residential
+51001_1002,Kirchturm,non-residential
+51001_1003,Aussichtsturm,non-residential
+51001_1004,Kontrollturm,non-residential
+51001_1005,Kühlturm,non-residential
+51001_1006,Leuchtturm,non-residential
+51001_1007,Feuerwachturm,non-residential
+51001_1008,"Sende-,Funkturm",non-residential
+51001_1009,"Stadt-,Torturm",non-residential
+51001_1010,Förderturm,non-residential
+51001_1011,Bohrturm,non-residential
+51001_1012,"Schloss-, Burgturm",non-residential
+51001_9998,Nach Quellenlage nicht zu spezifizieren,non-residential
+51001_9999,Sonstiges,non-residential
+51002_1215,Biogasanlage,non-residential
+51002_1220,Windrad,non-residential
+51002_1230,Solarzellen,non-residential
+51002_1250,Mast,non-residential
+51002_1251,Freileitungsmast,non-residential
+51002_1260,Funkmast,non-residential
+51002_1280,Radioteleskop,non-residential
+51002_1290,Schornstein,non-residential
+51002_1330,Kran,non-residential
+51002_1331,Drehkran,non-residential
+51002_1332,Portalkran,non-residential
+51002_1333,Laufkran,non-residential
+51002_1340,Trockendock,non-residential
+51002_1350,Hochofen,non-residential
+51002_1400,Umformer,non-residential
+51002_9999,Sonstiges,non-residential
+51003_1201,Silo,non-residential
+51003_1205,Tank,non-residential
+51003_1206,Gasometer,non-residential
+51003_9999,Sonstiges,non-residential
+51006_1430,Zuschauertribüne,non-residential
+51006_1431,"Zuschauertribüne, überdacht",non-residential
+51006_1432,"Zuschauertribüne, nicht überdacht",non-residential
+51006_1440,Stadion,non-residential
+51006_1470,Sprungschanze (Anlauf),non-residential
+51006_1490,Gradierwerk,non-residential
+51006_9999,Sonstiges,non-residential
+51007_1100,Historische Wasserleitung,non-residential
+51007_1110,Aquaedukt,non-residential
+51007_1210,Wachturm,non-residential
+51007_1400,Befestigung (Burgruine),non-residential
+51007_1410,Burg,non-residential
+51007_1500,Historische Mauer,non-residential
+51007_1510,Stadtmauer,non-residential
+51007_1520,Sonstige historische Mauer,non-residential
+51007_9999,Sonstiges,non-residential
+51009_1610,Überdachung,non-residential
+51009_1611,Carport,non-residential
+51009_1700,Mauer,non-residential
+51009_1750,Denkmal,non-residential
+51009_9999,Sonstiges,non-residential
+52003_1010,Schiffshebewerk,non-residential
+52003_1020,Kammerschleuse,non-residential
+53001_1800,Brücke,non-residential
+53001_1806,Drehbrücke,non-residential
+53001_1807,Hebebrücke,non-residential
+53001_1808,Zugbrücke,non-residential
+53001_1830,"Hochbahn, Hochstraße",non-residential
+53001_1880,"Schutzgalerie, Einhausung",non-residential
+53001_1890,Schleusenkammer,non-residential
+53009_2030,Staumauer,non-residential
+53009_2050,Wehr,non-residential
+53009_2060,Sicherheitstor,non-residential
+53009_2070,Siel,non-residential
+53009_2080,Sperrwerk,non-residential
+53009_2090,Schöpfwerk,non-residential
+31001_2465,Tiefgarage,non-residential
