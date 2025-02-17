@@ -1,3 +1,4 @@
+# Locations that are related to a residential building of another person
 Friend's House
 Childrens House
 Parents House

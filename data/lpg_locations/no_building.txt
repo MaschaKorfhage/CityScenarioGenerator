@@ -1,3 +1,4 @@
+# Locations that are not related to a specific building
 Hiking Location
 Walking Location
 Mountain Road

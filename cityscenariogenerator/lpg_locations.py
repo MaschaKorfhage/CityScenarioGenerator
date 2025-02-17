@@ -17,7 +17,8 @@ def load_location_set(path: Path) -> set[str]:
     """
     with open(path, "r") as f:
         all_locations = f.read()
-    return set(all_locations.splitlines())
+
+    return set(line for line in all_locations.splitlines() if not line.startswith("#"))
 
 
 class LpgLocations:
