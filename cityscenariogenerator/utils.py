@@ -14,6 +14,9 @@ def slugify(value, allow_unicode=False):
     if allow_unicode:
         value = unicodedata.normalize("NFKC", value)
     else:
+        # custom replacement for street names
+        value = value.replace("ß", "ss")
+
         value = (
             unicodedata.normalize("NFKD", value)
             .encode("ascii", "ignore")

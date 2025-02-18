@@ -29,8 +29,12 @@ def get_builda_devclient():
 
 
 def get_building_category(building: NonResidentialBuilding):
-    category = building.use.get("raw", "No category").get("alkis", "No ALKIS data")
-    return category if isinstance(category, str) else tuple(category.values())
+    category = (
+        building.use.get("raw", "No category")
+        .get("alkis")
+        .get("description", "No data")
+    )
+    return category
 
 
 def get_nonresidential_buildings(

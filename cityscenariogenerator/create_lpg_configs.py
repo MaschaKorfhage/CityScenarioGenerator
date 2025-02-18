@@ -111,6 +111,7 @@ class LPGConfigCreator:
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
         self.persons_in_each_hh = build_household_person_map()
         self.global_city_definition = lpgdata.CityData()
+        self.nonresidential_buildings = 0
         self.excluded_nonres_buildings = 0
 
     def select_transportation_device_set(
@@ -222,6 +223,7 @@ class LPGConfigCreator:
             raise Exception(
                 f"Encountered a duplicate non-residential building ID: {building.id}"
             )
+        self.nonresidential_buildings += 1
 
         locations = self.select_lpg_locations_for_nonresidential_building(building)
         if not locations:
@@ -389,8 +391,6 @@ class LPGConfigCreator:
                 existing_routes[key] = lpgdata.RouteData(
                     poi_id_start,
                     poi_id_end,
-                    -1,
-                    -1,
                     {},
                     {"pt": dist},
                     prob_with_car_hh={"pt": 1},
@@ -469,10 +469,11 @@ class LPGConfigCreator:
 
         :param path: path for the statistics files
         """
-        total_nonres = self.excluded_nonres_buildings + len(self.pois)
         logging.info(
-            f"Excluded {self.excluded_nonres_buildings} of {total_nonres} non-residential buildings."
+            f"Excluded {self.excluded_nonres_buildings} of {self.nonresidential_buildings} non-residential buildings."
         )
+        logging.info(f"Generated {len(self.pois)} POIs.")
+
         path.mkdir(parents=True, exist_ok=True)
         scenario_statistics.write_household_statistics(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(self.global_city_definition, path)
