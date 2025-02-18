@@ -36,7 +36,7 @@ class PoiLocationMapper(abc.ABC):
     @abc.abstractmethod
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
-    ) -> list[str]:
+    ) -> LocationType | None:
         pass
 
 
@@ -64,21 +64,24 @@ class NaceCodeMapper(PoiLocationMapper):
 
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
-    ) -> list[str]:
-        use: dict | None = building.use
-        if not use:
-            return []
-        nace_text = use.get("nace_code", "")
-        if not nace_text:
-            return []
-        # get the number of the NACE code (BUILDA entries don't always contain the full
-        # NACE code text, but the number is correct)
-        code = nace_text.split("_")[0]
-        return self.nace_loc_mapping[code]
+    ) -> LocationType | None:
+        raise NotImplementedError(
+            "The interface changed, the Nace mapping has not been updated yet"
+        )
+        # use: dict | None = building.use
+        # if not use:
+        #     return set()
+        # nace_text = use.get("nace_code", "")
+        # if not nace_text:
+        #     return set()
+        # # get the number of the NACE code (BUILDA entries don't always contain the full
+        # # NACE code text, but the number is correct)
+        # code = nace_text.split("_")[0]
+        # return self.nace_loc_mapping[code]
 
 
 class AlkisMapper(PoiLocationMapper):
-    def __init__(self):
+    def __init__(self) -> None:
         path_alkis_codes = "data/alkis_mapping/code_descriptions.json"
         self.code_descriptions = PoiLocationMapper.load_mapping(path_alkis_codes)
 
@@ -90,17 +93,21 @@ class AlkisMapper(PoiLocationMapper):
         }
 
         # combine both mappings to directly get from ALKIS code to the LocationType object
-        self.location_mapping = PoiLocationMapper.combine_mappings(
-            self.code_descriptions, self.desc_to_loc_type
+        self.location_mapping: dict[str, LocationType] = (
+            PoiLocationMapper.combine_mappings(
+                self.code_descriptions, self.desc_to_loc_type
+            )
         )
 
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
-    ) -> list[str]:
-        category = building.use.get("raw", {}).get("alkis", "")
+    ) -> LocationType | None:
+        category = (
+            building.use.get("raw", {}).get("alkis", {}).get("function_type", None)
+        )
         if not category:
-            return []
-        return self.location_mapping.get(category, [])
+            return None
+        return self.location_mapping.get(category, None)
 
 
 def check_nace_to_location_mapping():

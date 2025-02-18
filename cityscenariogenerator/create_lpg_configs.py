@@ -99,27 +99,19 @@ class LPGConfigCreator:
     MIN_POIS_PER_TYPE = 1
     MAX_POIS_PER_TYPE = 1
 
-    #: these are special locations which would ideally model inter-household relationships
-    #  for now, just use random POIs for them
-    SPECIAL_LOCATIONS = ["Friend's House", "Childrens House", "Parents House"]
-    EMPLYOMENT_LOCATIONS = [
-        "Office Workplace",
-        "Workplace (shift worker)",
-        "Volunteer Workplace",
-    ]
-
     def __init__(self) -> None:
         # set numpy random seed
         numpy_seed = random.randrange(2**32)
         logging.info(f"Using numpy RNG seed {numpy_seed}")
         numpy.random.seed(numpy_seed)
 
-        self.poi_mapper = poi_type_mapping.NaceCodeMapper()
+        self.poi_mapper = poi_type_mapping.AlkisMapper()
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
         self.pois: dict[str, lpgdata.PointOfInterestData] = {}
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
         self.persons_in_each_hh = build_household_person_map()
         self.global_city_definition = lpgdata.CityData()
+        self.excluded_nonres_buildings = 0
 
     def select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -193,28 +185,29 @@ class LPGConfigCreator:
         self.houses[building.id] = hcj
         return house
 
-    def select_lpg_location_for_poi(
+    def select_lpg_locations_for_nonresidential_building(
         self, building: builda.NonResidentialBuilding
-    ) -> str:
-        matching_locations = self.poi_mapper.get_matching_locations(building)
-        if not matching_locations:
-            # use "Employment" or the special locations as default for now
-            # TODO: save None as type, and later select Employment among all POIs
-            matching_locations = (
-                LPGConfigCreator.EMPLYOMENT_LOCATIONS
-                + LPGConfigCreator.SPECIAL_LOCATIONS
-            )
-        return random.choice(matching_locations)
+    ) -> Iterable[str]:
+        location_type = self.poi_mapper.get_matching_locations(building)
+        if not location_type:
+            # no locations fit this building
+            return []
 
-    def add_poi(
-        self, building: builda.NonResidentialBuilding
+        if not location_type.non_work_locations and not location_type.work_locations:
+            # no locations assigned yet
+            return []
+
+        # select all locations that will be available in this building
+        # for that, select ALL matching work locations and ONE non-work location
+        locations = list(location_type.work_locations)
+        if len(location_type.non_work_locations) > 0:
+            nonwork = random.choice(list(location_type.non_work_locations))
+            locations.append(nonwork)
+        return locations
+
+    def _add_poi_instance(
+        self, building: builda.NonResidentialBuilding, location: str
     ) -> lpgdata.PointOfInterestData:
-        if building.id in self.pois:
-            raise Exception(
-                f"Encountered a duplicate non-residential building ID: {building.id}"
-            )
-
-        location = self.select_lpg_location_for_poi(building)
         timelimit = None
         poi = lpgdata.PointOfInterestData(
             location, self.convert_coordinates(building.coordinates), timelimit
@@ -223,7 +216,21 @@ class LPGConfigCreator:
         poi_id = f"{location} {building.id}"
         self.pois[poi_id] = poi
         self.poi_ids_by_type[location].append(poi_id)
-        return poi
+
+    def add_poi(self, building: builda.NonResidentialBuilding) -> None:
+        if building.id in self.pois:
+            raise Exception(
+                f"Encountered a duplicate non-residential building ID: {building.id}"
+            )
+
+        locations = self.select_lpg_locations_for_nonresidential_building(building)
+        if not locations:
+            # this building is not relevant for the simulation
+            self.excluded_nonres_buildings += 1
+            return
+        # create one POI for each usage type of the building
+        for location in locations:
+            self._add_poi_instance(building, location)
 
     def determine_person_in_hh(
         self, hh: lpgdata.HouseholdData
@@ -462,6 +469,10 @@ class LPGConfigCreator:
 
         :param path: path for the statistics files
         """
+        total_nonres = self.excluded_nonres_buildings + len(self.pois)
+        logging.info(
+            f"Excluded {self.excluded_nonres_buildings} of {total_nonres} non-residential buildings."
+        )
         path.mkdir(parents=True, exist_ok=True)
         scenario_statistics.write_household_statistics(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(self.global_city_definition, path)

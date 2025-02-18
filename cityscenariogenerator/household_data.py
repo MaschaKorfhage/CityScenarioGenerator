@@ -2,7 +2,7 @@
 
 from dataclasses import dataclass
 
-from builda_client.model import Coordinates
+from builda_client.model import Coordinates  # type: ignore
 
 
 @dataclass

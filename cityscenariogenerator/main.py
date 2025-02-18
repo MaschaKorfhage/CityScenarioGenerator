@@ -5,15 +5,12 @@ from pathlib import Path
 import random
 import sys
 
-
 from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates  # type: ignore
 
-import builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
-import builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
-import builda_client_import
-import utils
-from household_data import BuildingData
-import create_lpg_configs
+import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
+import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
+from cityscenariogenerator import builda_client_import, utils, create_lpg_configs
+from cityscenariogenerator.household_data import BuildingData
 
 
 def import_residential_buildings_from_builda_file(

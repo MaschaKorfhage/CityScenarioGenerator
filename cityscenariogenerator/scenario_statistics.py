@@ -4,7 +4,8 @@ from collections import Counter
 import json
 from pathlib import Path
 from typing import Iterable
-from pylpg import lpgdata
+
+from pylpg import lpgdata  # type: ignore
 
 
 def write_household_statistics(
