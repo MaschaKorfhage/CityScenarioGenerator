@@ -11,7 +11,7 @@ from cityscenariogenerator.lpg_locations import LpgLocations
 from cityscenariogenerator.poi_type_mapping import LocationType
 
 
-with open("data/alkis_codes_to_locations_old.json", encoding="utf8") as f:
+with open("data/alkis_mapping/codes_to_locations_old.json", encoding="utf8") as f:
     mapping2 = json.load(f)
 
 
@@ -28,5 +28,5 @@ for alkis, locations in mapping2.items():
     converted[alkis] = LocationType(normal, work).to_dict()  # type: ignore
 
 
-with open("data/alkis_codes_to_locations.json", "w+", encoding="utf8") as f:
+with open("data/alkis_mapping/location_mapping.json", "w+", encoding="utf8") as f:
     json.dump(converted, f, indent=4, ensure_ascii=False)

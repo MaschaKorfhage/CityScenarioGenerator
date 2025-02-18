@@ -15,9 +15,9 @@ print(data)
 
 # create a JSON file mapping each ALKIS code to its description
 d = dict(zip(data["name"], data["description"]))
-with open("data/alkis_code_descriptions.json", "w+", encoding="utf8") as f:
+with open("data/alkis_mapping/code_descriptions.json", "w+", encoding="utf8") as f:
     json.dump(d, f, indent=4, ensure_ascii=False)
 
 d2: dict[str, list] = {v: [] for k, v in d.items()}
-with open("data/alkis_codes_to_locations.json", "w+", encoding="utf8") as f:
+with open("data/alkis_mapping/location_mapping.json", "w+", encoding="utf8") as f:
     json.dump(d2, f, indent=4, ensure_ascii=False)

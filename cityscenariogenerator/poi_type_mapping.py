@@ -53,9 +53,9 @@ class NaceCodeMapper(PoiLocationMapper):
 
         :return: mapping dict from nace codes to LPG locations
         """
-        path_nace_codes = "data/nace_code_descriptions.json"
+        path_nace_codes = "data/nace_mapping/code_descriptions.json"
         nace_to_description = PoiLocationMapper.load_mapping(path_nace_codes)
-        path_nace_locs = "data/nace_codes_to_locations.json"
+        path_nace_locs = "data/nace_mapping/location_mapping.json"
         description_to_loc = PoiLocationMapper.load_mapping(path_nace_locs)
         combined = PoiLocationMapper.combine_mappings(
             nace_to_description, description_to_loc
@@ -79,10 +79,10 @@ class NaceCodeMapper(PoiLocationMapper):
 
 class AlkisMapper(PoiLocationMapper):
     def __init__(self):
-        path_alkis_codes = "data/alkis_code_descriptions.json"
+        path_alkis_codes = "data/alkis_mapping/code_descriptions.json"
         self.code_descriptions = PoiLocationMapper.load_mapping(path_alkis_codes)
 
-        path_alkis_locs = "data/alkis_codes_to_locations.json"
+        path_alkis_locs = "data/alkis_mapping/location_mapping.json"
         description_to_loc_dict = PoiLocationMapper.load_mapping(path_alkis_locs)
         # parse LocationType objects from dicts
         self.desc_to_loc_type = {
