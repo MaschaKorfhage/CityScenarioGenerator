@@ -232,7 +232,6 @@
     },
     "Freizeit- und Vergnügungsstätte": {
         "non_work_locations": [
-            "Local Recreational Area",
             "Dance Club"
         ],
         "work_locations": []

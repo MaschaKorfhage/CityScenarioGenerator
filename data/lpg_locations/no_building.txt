@@ -6,3 +6,5 @@ Running Path
 Bicycle Route
 Fishing Location
 Hunting Forest
+Festival Location
+Flea Market Location
