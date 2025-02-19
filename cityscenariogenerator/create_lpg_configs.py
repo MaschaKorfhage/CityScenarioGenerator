@@ -16,6 +16,7 @@ from builda_client import dev_client as builda  # type: ignore
 
 from cityscenariogenerator.lpg_locations import LpgLocations
 from cityscenariogenerator import poi_type_mapping, scenario_statistics, household_data
+from cityscenariogenerator.plots import building_map
 
 
 def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
@@ -427,6 +428,7 @@ class LPGConfigCreator:
         self.create_house_config_files(path / "houses")
         self.create_global_city_config_file(path)
         self.create_scenario_statistics(path / "statistics")
+        self.create_plots(path / "plots")
 
     def create_house_config_files(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
@@ -477,3 +479,12 @@ class LPGConfigCreator:
         path.mkdir(parents=True, exist_ok=True)
         scenario_statistics.write_household_statistics(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(self.global_city_definition, path)
+
+    def create_plots(self, path: Path):
+        path.mkdir(parents=True, exist_ok=True)
+
+        data = [
+            building_map.PointWithCategory(poi.Coordinates, poi.LocationType)
+            for id, poi in self.pois.items()
+        ]
+        building_map.map_locations_plot(data, path)

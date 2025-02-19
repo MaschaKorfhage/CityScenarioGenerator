@@ -45,10 +45,7 @@ def get_nonresidential_buildings(
     nonres_buildings = client.get_non_residential_buildings(
         **search_args, exclude_auxiliary=True
     )
-    # nonres_buildings = nonres_building_data.buildings
     logging.info(f"Non-residential buildings in {search_args}: {len(nonres_buildings)}")
-    # c = Counter(get_building_category(b) for b in nonres_buildings)
-    # print("\n".join(f"{v:3d} - {k}" for k, v in c.items()))
     return nonres_buildings
 
 
@@ -61,5 +58,8 @@ def get_residential_buildings(search_args: dict) -> list[ResidentialBuilding]:
 
 if __name__ == "__main__":
     # only for testing queries
-    builda_query = {"city": "Aachen", "postcode": "52066", "street": ""}
-    bd = get_nonresidential_buildings(builda_query)
+    builda_query = {"city": "Aachen"}
+    nonres_buildings = get_nonresidential_buildings(builda_query)
+    c = Counter(get_building_category(b) for b in nonres_buildings)
+    overview = "\n".join(f"{v:3d} - {k}" for k, v in c.most_common())
+    print(overview)
