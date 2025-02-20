@@ -478,7 +478,14 @@ class LPGConfigCreator:
 
         path.mkdir(parents=True, exist_ok=True)
         scenario_statistics.write_household_statistics(self.houses.values(), path)
-        scenario_statistics.write_poi_statistics(self.global_city_definition, path)
+        scenario_statistics.write_poi_statistics(
+            self.global_city_definition.PointsOfInterest.values(),
+            path,
+            "poi_types_relevant",
+        )
+        scenario_statistics.write_poi_statistics(
+            self.pois.values(), path, "poi_types_all"
+        )
 
     def create_plots(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)

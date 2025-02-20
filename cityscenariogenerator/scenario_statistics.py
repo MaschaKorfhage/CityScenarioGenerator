@@ -11,6 +11,14 @@ from pylpg import lpgdata  # type: ignore
 def write_household_statistics(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
 ):
+    """
+    Creates two statistics files about the distribution of households in the scenario.
+    The first lists the distribution of the number of households per house.
+    The second lists the distribution of the different household types.
+
+    :param house_jobs: house configs to analyze
+    :param path: path for the result files
+    """
     hh_per_house = []
     all_households: list[str] = []
     for house_job in house_jobs:
@@ -27,8 +35,17 @@ def write_household_statistics(
         json.dump(dict(hh_types_ordered), f, indent=4)
 
 
-def write_poi_statistics(city_data: lpgdata.CityData, path: Path):
-    poi_types = Counter(poi.LocationType for poi in city_data.PointsOfInterest.values())
+def write_poi_statistics(
+    pois: Iterable[lpgdata.PointOfInterestData], path: Path, name: str = "poi_types"
+):
+    """
+    Writes a JSON file containing the number of each type of PIO in the scenario.
+
+    :param pois: the POIs to analyze
+    :param path: the directory to save the JSON file to
+    :param name: name of the produced file, defaults to "poi_types"
+    """
+    poi_types = Counter(poi.LocationType for poi in pois)
     poi_types_ordered = dict(sorted(poi_types.items()))
-    with open(path / "poi_types.json", "w+") as f:
+    with open(path / f"{name}.json", "w+") as f:
         json.dump(dict(poi_types_ordered), f, indent=4)

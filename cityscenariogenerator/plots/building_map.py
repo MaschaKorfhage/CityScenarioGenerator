@@ -39,7 +39,7 @@ def map_locations_plot(data: list[PointWithCategory], path: Path | None):
 
     # Plot
     fig, ax = plt.subplots(figsize=(10, 8))
-    pa = df.plot(
+    df.plot(
         ax=ax,
         column=category_col,
         categorical=True,
