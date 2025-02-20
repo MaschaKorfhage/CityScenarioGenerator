@@ -17,6 +17,9 @@ class PointWithCategory:
     coordinates: Coordinates
     category: str | int
 
+    def get_point(self) -> Point:
+        return Point(self.coordinates.Longitude, self.coordinates.Latitude)
+
 
 def map_locations_plot(data: list[PointWithCategory], path: Path | None):
     """
@@ -26,9 +29,7 @@ def map_locations_plot(data: list[PointWithCategory], path: Path | None):
     :param path: directory where to save the image file, or None
     """
     # Convert to GeoDataFrame
-    df: gpd.GeoDataFrame = gpd.GeoDataFrame(
-        geometry=[Point(d.coordinates.Longitude, d.coordinates.Latitude) for d in data]
-    )
+    df: gpd.GeoDataFrame = gpd.GeoDataFrame(geometry=[d.get_point() for d in data])
     category_col = "category"
     df[category_col] = [d.category for d in data]
 
@@ -62,7 +63,7 @@ def map_locations_plot(data: list[PointWithCategory], path: Path | None):
     # save and show the plot
     if path is not None:
         fig.savefig(path / "map.png")
-    plt.show()
+    # plt.show()
 
 
 if __name__ == "__main__":

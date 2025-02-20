@@ -16,7 +16,7 @@ from builda_client import dev_client as builda  # type: ignore
 
 from cityscenariogenerator.lpg_locations import LpgLocations
 from cityscenariogenerator import poi_type_mapping, scenario_statistics, household_data
-from cityscenariogenerator.plots import building_map
+from cityscenariogenerator.plots import building_map, building_map_interactive
 
 
 def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
@@ -490,8 +490,9 @@ class LPGConfigCreator:
     def create_plots(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
 
-        data = [
+        all_pois = [
             building_map.PointWithCategory(poi.Coordinates, poi.LocationType)
             for id, poi in self.pois.items()
         ]
-        building_map.map_locations_plot(data, path)
+        building_map.map_locations_plot(all_pois, path)
+        building_map_interactive.map_locations_plot_html(all_pois, path)
