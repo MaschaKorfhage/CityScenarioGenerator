@@ -6,7 +6,6 @@ from pathlib import Path
 import folium
 import folium.plugins
 import geopandas as gpd  # type: ignore
-import matplotlib.cm as cm
 import matplotlib.colors as mcolors
 
 from pylpg.lpgpythonbindings import Coordinates  # type: ignore
@@ -55,7 +54,7 @@ def map_locations_plot_html(data: list[PointWithCategory], path: Path):
         "lightgray",
     ]
     # additional icon colors to distinguish categories with the same marker color
-    icon_colors = ["white", "black", "gray"]
+    icon_colors = ["white", "black", "gray", "blue", "green", "red", "yellow", "pink"]
 
     # Generate categorical colormap
     categories = df["category"].unique()
