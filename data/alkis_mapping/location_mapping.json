@@ -1080,11 +1080,7 @@
         "work_locations": []
     },
     "Sport-, Turnhalle": {
-        "non_work_locations": [
-            "Fitness Studio",
-            "Yoga Studio",
-            "Dance Studio"
-        ],
+        "non_work_locations": [],
         "work_locations": []
     },
     "Gebäude zum Sportplatz": {
