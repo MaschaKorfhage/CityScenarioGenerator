@@ -28,13 +28,18 @@ def get_builda_devclient():
     )
 
 
-def get_building_category(building: NonResidentialBuilding):
+def get_building_category_alkis(building: NonResidentialBuilding):
     category = (
-        building.use.get("raw", "No category")
-        .get("alkis")
-        .get("description", "No data")
+        building.use.get("raw", {}).get("alkis", {}).get("description", "No data")
     )
     return category
+
+
+def get_building_category_osm(building: NonResidentialBuilding):
+    osm = building.use.get("raw", {}).get("osm", {})
+    amenity = osm.get("amenity", "No amenity")
+    building = osm.get("building", "No building")
+    return amenity, building
 
 
 def get_nonresidential_buildings(
@@ -58,8 +63,8 @@ def get_residential_buildings(search_args: dict) -> list[ResidentialBuilding]:
 
 if __name__ == "__main__":
     # only for testing queries
-    builda_query = {"city": "Aachen"}
+    builda_query = {"city": "Wedel"}
     nonres_buildings = get_nonresidential_buildings(builda_query)
-    c = Counter(get_building_category(b) for b in nonres_buildings)
+    c = Counter(get_building_category_osm(b) for b in nonres_buildings)
     overview = "\n".join(f"{v:3d} - {k}" for k, v in c.most_common())
     print(overview)
