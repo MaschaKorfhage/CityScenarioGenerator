@@ -165,7 +165,6 @@ if __name__ == "__main__":
     builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     scenario_dir = Path("./scenarios")
     lpg_result_dir = Path("D:/LPG/Results")
-    db_file_path = ""
 
     # for the cluster
     scenario_dir = Path(
@@ -174,4 +173,4 @@ if __name__ == "__main__":
     lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
     db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
 
-    create_city_scenario(builda_query, scenario_dir, lpg_result_dir, db_file_path)
+    create_city_scenario(builda_query, scenario_dir, lpg_result_dir, "")
