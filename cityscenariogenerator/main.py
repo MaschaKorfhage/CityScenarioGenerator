@@ -171,6 +171,5 @@ if __name__ == "__main__":
         "/storage_cluster/projects/2022-d-neuroth-phd/data/city_scenarios/"
     )
     lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
-    db_file_path = "/fast/home/d-neuroth/repos/LoadProfileGenerator/MassSimulation/bin/Release/net8.0/linux-x64/publish/profilegenerator-latest.db3"
 
     create_city_scenario(builda_query, scenario_dir, lpg_result_dir, "")
