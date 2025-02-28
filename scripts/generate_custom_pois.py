@@ -3,20 +3,14 @@
 import json
 import random
 
-
-path = "data/lpg_remote_locations.txt"
-
-with open(path, "r") as file:
-    content: str = file.read()
-
-locations = content.splitlines()
+from cityscenariogenerator.lpg_locations import LpgLocations
 
 all_pois = {}
 
-for location in locations:
+for location in LpgLocations.ALL:
     name = location + " Custom"
-    lat = round(random.uniform(50.4, 50.9), 2)
-    long = round(random.uniform(6.2, 6.8), 2)
+    lat = round(random.uniform(50.6, 50.6638), 3)
+    long = round(random.uniform(6.4029, 6.5747), 3)
     all_pois[name] = {
         "LocationType": location,
         "Coordinates": {"Latitude": lat, "Longitude": long},
