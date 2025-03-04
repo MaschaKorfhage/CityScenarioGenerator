@@ -5,17 +5,19 @@ import random
 import pandas as pd
 from typing import List
 from ast import literal_eval
-from builda_client.model import Coordinates
-from builda_client.dev_client import ResidentialBuilding
+from builda_client.model import Coordinates  # type: ignore
+from builda_client.dev_client import ResidentialBuilding  # type: ignore
 
-from household_data import BuildingRawData, HouseholdRawData
+from cityscenariogenerator.household_data import BuildingRawData, HouseholdRawData
 
 
 def parse_coordinates(coordinate_str: str) -> Coordinates:
     """
     Parses coordinates from a str in the format POINT(4356954.886156103 3235845.6588559514).
 
-    :param coordinate_str: the parsed coordinate object
+    :param coordinate_str: the string containing the coordinates
+    :raises Exception: if the coordinate string is not in the expected format
+    :return: the parsed coordinate object
     """
     number_str = coordinate_str.removeprefix("POINT(").removesuffix(")")
     numbers = number_str.split(" ")
@@ -25,51 +27,43 @@ def parse_coordinates(coordinate_str: str) -> Coordinates:
 
 
 def get_working_status(employment_list_per_household: List[str]) -> float:
-    """Get working status based on employment list for each household."""
-    working_status_per_household = 0
+    """Get mean working status based on employment list for each household."""
+    working_status_per_household: float = 0
     for employment in employment_list_per_household:
+        # TODO: maybe part time can be treated individually
         if employment in ("full_time", "part_time"):
             working_status = 1
         elif employment in ("retired", "education", "unemployed"):
             working_status = 0
-        working_status_per_household = working_status_per_household + working_status
-    # get mean working status per household
-    working_status_per_household = working_status_per_household / len(
-        employment_list_per_household
-    )
-    return working_status_per_household
+        working_status_per_household += working_status
+    # return mean working status per household
+    return working_status_per_household / len(employment_list_per_household)
 
 
 def get_female_status(gender_list_per_household: List[str]) -> float:
-    """Get female status based on employment list for each household."""
+    """Get mean female status based on gender list for each household."""
     female_status_per_household = 0
     for gender in gender_list_per_household:
         if gender == "female":
             female_status = 1
         elif gender == "male":
             female_status = 0
-        female_status_per_household = female_status_per_household + female_status
-    # get mean female status per household
-    female_status_per_household = female_status_per_household / len(
-        gender_list_per_household
-    )
-    return female_status_per_household
+        female_status_per_household += female_status
+    # return mean female status per household
+    return female_status_per_household / len(gender_list_per_household)
 
 
-def get_senior_status(employment_list_per_household: List[str]) -> float:
-    """Get senior status based on employment list for each household."""
-    senior_status_per_household = 0
-    for employment in employment_list_per_household:
+def get_senior_status(retire_status_list_per_household: List[str]) -> float:
+    """Get mean senior status based on retirement status list for each household."""
+    senior_status_per_household: float = 0
+    for employment in retire_status_list_per_household:
         if employment == "retired":
             senior_status = 1
         else:
             senior_status = 0
-        senior_status_per_household = senior_status_per_household + senior_status
-    # get mean senior status per household
-    senior_status_per_household = senior_status_per_household / len(
-        employment_list_per_household
-    )
-    return senior_status_per_household
+        senior_status_per_household += senior_status
+    # return mean senior status per household
+    return senior_status_per_household / len(retire_status_list_per_household)
 
 
 def get_buildings_from_builda(
@@ -240,22 +234,3 @@ def convert_residential_buildings_from_builda(
             BuildingRawData(building.id, raw_households, building.coordinates)
         )
     return converted_buildings
-
-
-if __name__ == "__main__":
-    (
-        building_ids,
-        tabula_building_codes,
-        conditioned_floor_areas_in_m2,
-        number_of_dwellings,
-        norm_heating_load_in_kw,
-        postal_code,
-        pv_capacities_in_kw,
-        pv_generations_in_kwh,
-        commodities,
-        supply_levels,
-        number_of_persons_per_building,
-        working_status_per_building,
-        female_status_per_building,
-        senior_status_per_building,
-    ) = get_buildings_from_builda(number_of_random_samples=10)
