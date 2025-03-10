@@ -6,7 +6,7 @@ from typing import Dict, List
 
 import random
 
-from household_data import (
+from cityscenariogenerator.household_data import (
     BuildingData,
     BuildingRawData,
     HouseholdData,
@@ -106,7 +106,7 @@ def get_representative_lpg_household_for_each_household_type(
         if household_type in ["single woman and kids", "single man and kids"]:
 
             # for these household types number of residents can be either 2 or 3 (based on LPG households)
-            filtered_dict = {
+            filtered_dict: dict = {
                 key: dict_zensus_number_of_residents_and_weights[key] for key in [2, 3]
             }
             # make random choice for number of residents on basis of zensus
@@ -231,34 +231,6 @@ def get_random_distribution_of_lpg_households_per_building(
     )
 
 
-def get_random_distributions_of_lpg_households_for_multiple_buildings(
-    list_with_number_of_dwellings: List[int],
-):
-    """Get realsitic distributions of lpg houesholds for multiple buildings and their respective number of dwellings."""
-
-    dict_lpg_households_per_number_of_dwellings: Dict = {}
-    list_all_lpg_households = []
-    for index, number_of_dwelling_per_building in enumerate(
-        list_with_number_of_dwellings
-    ):
-        (
-            list_of_random_lpg_households,
-            list_of_random_household_types,
-            list_of_random_number_of_residents,
-            list_of_random_working_status,
-        ) = get_random_distribution_of_lpg_households_per_building(
-            number_of_dwellings_per_building=number_of_dwelling_per_building
-        )
-
-        list_all_lpg_households.append(list_of_random_lpg_households)
-
-    dict_lpg_households_per_number_of_dwellings.update(
-        {"lpg_households": list_all_lpg_households}
-    )
-
-    return dict_lpg_households_per_number_of_dwellings
-
-
 def get_lpg_household_based_on_builda_household_information(
     household_data: HouseholdRawData,
 ) -> HouseholdData:
@@ -296,7 +268,7 @@ def get_lpg_household_based_on_builda_household_information(
                     list(lpg_household_data_working[HH_KEY_COLUMN])
                 )
             else:
-                # if no lpg household is compatible with builda household, choose randoml based on census 2011
+                # if no lpg household is compatible with builda household, choose randomly based on census 2011
                 (
                     list_of_random_lpg_households,
                     list_of_random_household_types,

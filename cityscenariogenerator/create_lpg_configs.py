@@ -251,13 +251,13 @@ class LPGConfigCreator:
         self,
         person: lpgdata.PersonData,
         coordinates: lpgdata.Coordinates,
-        has_car: bool = True,
     ) -> dict[str, float]:
         poi_weights: dict[str, float] = {}
         # TODO: treat locations friends house, childrens house, parents house, and home as special cases
 
         for location, poi_ids in self.poi_ids_by_type.items():
             # determine how many POIs of this type the person will select
+            # TODO: different limits per POI type (one work, multiple supermarkets, ...)
             size = random.randint(
                 LPGConfigCreator.MIN_POIS_PER_TYPE, LPGConfigCreator.MAX_POIS_PER_TYPE
             )
