@@ -207,6 +207,19 @@ class LPGConfigCreator:
             locations.append(nonwork)
         return locations
 
+    def _add_poi_object(self, poi_id: str, poi: lpgdata.PointOfInterestData) -> None:
+        """
+        Adds a new POI object to the internal dicts, checking for duplicate IDs.
+
+        :param poi_id: the ID of the POI
+        :param poi: the POI object to add
+        :raises Exception: if there was already a POI with the same ID
+        """
+        if poi_id in self.pois:
+            raise Exception(f"Encountered a duplicate POI ID: {poi_id}")
+        self.pois[poi_id] = poi
+        self.poi_ids_by_type[poi.LocationType].append(poi_id)
+
     def _add_poi_instance(
         self, building: builda.NonResidentialBuilding, location: str
     ) -> lpgdata.PointOfInterestData:
@@ -216,8 +229,7 @@ class LPGConfigCreator:
         )
         # determine the ID of the POI
         poi_id = f"{location} {building.id}"
-        self.pois[poi_id] = poi
-        self.poi_ids_by_type[location].append(poi_id)
+        self._add_poi_object(poi_id, poi)
 
     def add_poi(self, building: builda.NonResidentialBuilding) -> None:
         if building.id in self.pois:
@@ -247,6 +259,43 @@ class LPGConfigCreator:
     ):
         return [calc_distance(coordinates, p.Coordinates) for p in poi_list]
 
+    def _determine_poi_num_for_person(self) -> int:
+        # TODO: different limits per POI type (one work, multiple supermarkets, ...)
+        size = random.randint(
+            LPGConfigCreator.MIN_POIS_PER_TYPE, LPGConfigCreator.MAX_POIS_PER_TYPE
+        )
+        return size
+
+    def select_residential_poi_for_person(
+        self, person: lpgdata.PersonData
+    ) -> dict[str, float]:
+        """
+        Select residentil buildings for locations such as friend's house and turn them into
+        POIs. This is a simple workaround as an accurate implementation would require significant
+        changes to the LPG city simulation.
+
+        :param person: the person to select residential POIs for
+        """
+        # assign POIs of every residential type to the person
+        poi_weights = {}
+        for location in LpgLocations.RESIDENTIAL:
+            for i in range(self._determine_poi_num_for_person()):
+                # select a random residential building using a uniform distribution
+                house_id: str = random.choice(list(self.houses.keys()))
+                poi_id = f"{location} {house_id}"
+
+                # check if there already exist a POI for this building-location combination
+                if poi_id not in self.pois:
+                    # create the POI
+                    poi = lpgdata.PointOfInterestData(
+                        location, self.houses[house_id].House.Coordinates, None
+                    )
+                    self._add_poi_object(poi_id, poi)
+
+                # add the POI with fixed weight
+                poi_weights[poi_id] = 1.0
+        return poi_weights
+
     def select_pois_for_person(
         self,
         person: lpgdata.PersonData,
@@ -256,11 +305,10 @@ class LPGConfigCreator:
         # TODO: treat locations friends house, childrens house, parents house, and home as special cases
 
         for location, poi_ids in self.poi_ids_by_type.items():
+            if location in LpgLocations.RESIDENTIAL:
+                continue  # residential POIs are added separately below
             # determine how many POIs of this type the person will select
-            # TODO: different limits per POI type (one work, multiple supermarkets, ...)
-            size = random.randint(
-                LPGConfigCreator.MIN_POIS_PER_TYPE, LPGConfigCreator.MAX_POIS_PER_TYPE
-            )
+            size = self._determine_poi_num_for_person()
             size = min(size, len(poi_ids))
             # calculate distances to all POIs of this type
             distances = {
@@ -280,6 +328,10 @@ class LPGConfigCreator:
             )
             # store the pois with according int weights in the persons preferences
             poi_weights.update({poi_id: weights[poi_id] for poi_id in selected_pois})
+
+        # add residential POIs separately
+        res_poi_weights = self.select_residential_poi_for_person(person)
+        poi_weights.update(res_poi_weights)
         return poi_weights
 
     def _get_site_coordinates(

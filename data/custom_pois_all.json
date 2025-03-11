@@ -80,14 +80,6 @@
             },
             "TimeLimit": null
         },
-        "Home Custom": {
-            "LocationType": "Home",
-            "Coordinates": {
-                "Latitude": 50.64,
-                "Longitude": 6.49
-            },
-            "TimeLimit": null
-        },
         "Horse Stable Custom": {
             "LocationType": "Horse Stable",
             "Coordinates": {
@@ -184,14 +176,6 @@
             },
             "TimeLimit": null
         },
-        "Childrens House Custom": {
-            "LocationType": "Childrens House",
-            "Coordinates": {
-                "Latitude": 50.644,
-                "Longitude": 6.494
-            },
-            "TimeLimit": null
-        },
         "Soccer Practice Location Custom": {
             "LocationType": "Soccer Practice Location",
             "Coordinates": {
@@ -221,14 +205,6 @@
             "Coordinates": {
                 "Latitude": 50.612,
                 "Longitude": 6.423
-            },
-            "TimeLimit": null
-        },
-        "Friend's House Custom": {
-            "LocationType": "Friend's House",
-            "Coordinates": {
-                "Latitude": 50.66,
-                "Longitude": 6.512
             },
             "TimeLimit": null
         },
@@ -357,14 +333,6 @@
             "Coordinates": {
                 "Latitude": 50.626,
                 "Longitude": 6.424
-            },
-            "TimeLimit": null
-        },
-        "Parents House Custom": {
-            "LocationType": "Parents House",
-            "Coordinates": {
-                "Latitude": 50.603,
-                "Longitude": 6.495
             },
             "TimeLimit": null
         }
