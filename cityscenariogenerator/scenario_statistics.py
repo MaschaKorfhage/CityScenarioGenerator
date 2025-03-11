@@ -25,7 +25,9 @@ def write_household_statistics(
         hh_per_house.append(len(house_job.House.Households))
         all_households.extend(hh.Name for hh in house_job.House.Households)
 
-    hh_numbers = Counter(hh_per_house)
+    hh_counter = Counter(hh_per_house)
+    hh_numbers: dict = dict(hh_counter)
+    hh_numbers["total"] = hh_counter.total()
     with open(path / "households_per_house.json", "w+") as f:
         json.dump(dict(hh_numbers), f, indent=4)
 

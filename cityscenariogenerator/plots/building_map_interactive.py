@@ -88,7 +88,7 @@ def map_locations_plot_html(data: list[PointWithCategory], path: Path):
 
     # Save map to an HTML file and display
     m.save(path / "poi_map.html")
-    m.show_in_browser()
+    # m.show_in_browser()
 
 
 if __name__ == "__main__":
