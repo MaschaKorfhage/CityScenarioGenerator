@@ -11,6 +11,7 @@ import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampli
 import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
 from cityscenariogenerator import builda_client_import, utils, create_lpg_configs
 from cityscenariogenerator.household_data import BuildingData
+from cityscenariogenerator.utils import clear_directory, init_logging
 
 
 def import_residential_buildings_from_builda_file(
@@ -56,16 +57,14 @@ def import_residential_buildings_from_builda(
     )
 
     # check if there are buildings IDs that only differ in case
-    building_ids = set()
-    for building in buildings:
-        id_lower = building.id.lower()
-        if id_lower in building_ids:
-            if sys.platform == "win32":
-                # windows is case-insensitive regarding file names, so this will not work
-                raise Exception(f"Building ID only differs in case: {building.id}")
-            else:
-                logging.warning(f"Building ID only differs in case: {building.id}")
-        building_ids.add(id_lower)
+    building_ids = {building.id.lower() for building in buildings}
+    if len(building_ids) != len(buildings):
+        message = "Some building IDs only differ in case."
+        if sys.platform == "win32":
+            # windows is case-insensitive regarding file names, so this will not work
+            raise Exception(message)
+        else:
+            logging.warning(message)
     return buildings
 
 
@@ -129,12 +128,17 @@ def create_city_scenario(
     lpg_result_dir: Path,
     db_file_path: str = "",
 ):
-    # init logging
-    logging.basicConfig(
-        format="%(asctime)s %(levelname)-8s %(message)s",
-        level=logging.INFO,
-        datefmt="%Y-%m-%d %H:%M:%S",
-    )
+    # determine the output directory
+    query_str = utils.descriptive_query_text(builda_query)
+    result_dir_name = f"scenario_{query_str}"
+    result_dir_path = scenario_directory / result_dir_name
+    lpg_result_path = lpg_result_dir / result_dir_name
+
+    # clear_directory(result_dir_path)
+    if result_dir_path.exists() and any(result_dir_path.iterdir()):
+        raise Exception(f"Target directory was not empty: {result_dir_path}")
+
+    init_logging(scenario_directory)
 
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)
@@ -146,12 +150,6 @@ def create_city_scenario(
 
     # collect non-residential buildings
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
-
-    # determine the output directory
-    query_str = utils.descriptive_query_text(builda_query)
-    result_dir_name = f"scenario_{query_str}"
-    result_dir_path = scenario_directory / result_dir_name
-    lpg_result_path = lpg_result_dir / result_dir_name
 
     # create config files for the collected buildings
     create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)

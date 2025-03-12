@@ -6,7 +6,6 @@ import json
 import logging
 from pathlib import Path
 import random
-import shutil
 from typing import Any, Iterable
 import geopy.distance  # type: ignore
 import numpy
@@ -469,10 +468,7 @@ class LPGConfigCreator:
         self.global_city_definition.Routes = list(all_routes.values())
         self.global_city_definition.MirrorRoutes = True
 
-    def create_config_files(self, path: Path, clear_folder: bool = False):
-        if path.is_dir() and clear_folder:
-            logging.info(f"Clearing directory: {path}")
-            shutil.rmtree(path)
+    def create_config_files(self, path: Path):
         # make sure the directory exists
         path.mkdir(parents=True, exist_ok=True)
         if any(path.iterdir()):
