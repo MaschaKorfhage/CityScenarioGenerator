@@ -29,7 +29,7 @@ def write_household_statistics(
         )
 
     hh_counter = Counter(hh_per_house)
-    hh_numbers: dict = dict(hh_counter)
+    hh_numbers: dict = dict(sorted(hh_counter.items()))
     hh_numbers["total"] = hh_counter.total()
     with open(path / "households_per_house.json", "w+") as f:
         json.dump(hh_numbers, f, indent=4)
