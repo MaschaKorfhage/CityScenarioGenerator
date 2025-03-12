@@ -23,13 +23,16 @@ def write_household_statistics(
     all_households: list[str] = []
     for house_job in house_jobs:
         hh_per_house.append(len(house_job.House.Households))
-        all_households.extend(hh.Name for hh in house_job.House.Households)
+        all_households.extend(
+            hh.HouseholdTemplateSpec.HouseholdTemplateName
+            for hh in house_job.House.Households
+        )
 
     hh_counter = Counter(hh_per_house)
     hh_numbers: dict = dict(hh_counter)
     hh_numbers["total"] = hh_counter.total()
     with open(path / "households_per_house.json", "w+") as f:
-        json.dump(dict(hh_numbers), f, indent=4)
+        json.dump(hh_numbers, f, indent=4)
 
     household_types = Counter(all_households)
     hh_types_ordered = dict(sorted(household_types.items()))
