@@ -3,6 +3,7 @@
 from collections import Counter
 import logging
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
 from builda_client.dev_client import (  # type: ignore
@@ -28,20 +29,6 @@ def get_builda_devclient():
     )
 
 
-def get_building_category_alkis(building: NonResidentialBuilding):
-    category = (
-        building.use.get("raw", {}).get("alkis", {}).get("description", "No data")
-    )
-    return category
-
-
-def get_building_category_osm(building: NonResidentialBuilding):
-    osm = building.use.get("raw", {}).get("osm", {})
-    amenity = osm.get("amenity", "No amenity")
-    building = osm.get("building", "No building")
-    return amenity, building
-
-
 def get_nonresidential_buildings(
     search_args: dict,
 ) -> list[NonResidentialBuilding]:
@@ -63,8 +50,12 @@ def get_residential_buildings(search_args: dict) -> list[ResidentialBuilding]:
 
 if __name__ == "__main__":
     # only for testing queries
+
+    import cityscenariogenerator.plots.unmapped_building_map as buil_map
+
     builda_query = {"city": "Wedel"}
     nonres_buildings = get_nonresidential_buildings(builda_query)
-    c = Counter(get_building_category_osm(b) for b in nonres_buildings)
+    c = Counter(buil_map.get_building_category_osm(b) for b in nonres_buildings)
     overview = "\n".join(f"{v:3d} - {k}" for k, v in c.most_common())
+    buil_map.alkis_type_map_plot(Path.cwd(), nonres_buildings)
     print(overview)

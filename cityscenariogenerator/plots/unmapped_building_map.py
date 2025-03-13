@@ -6,9 +6,20 @@ import pylpg.lpgpythonbindings  # type: ignore
 from cityscenariogenerator.plots import building_map_interactive
 
 
-def get_category(building: NonResidentialBuilding) -> str:
-    # return building.use.get("raw", {}).get("alkis", {}).get("description", "None")
-    return building.use.get("raw", {}).get("osm", {}).get("amenity", "None")
+def get_building_category_osm(building: NonResidentialBuilding):
+    osm = building.use.get("raw", {}).get("osm", {})
+    amenity = osm.get("amenity", "No amenity")
+    if amenity != "No amenity":
+        return amenity
+    building = osm.get("building", "<< No data >>")
+    return building
+
+
+def get_building_category_alkis(building: NonResidentialBuilding):
+    category = (
+        building.use.get("raw", {}).get("alkis", {}).get("description", "No data")
+    )
+    return category
 
 
 def alkis_type_map_plot(
@@ -26,7 +37,7 @@ def alkis_type_map_plot(
             pylpg.lpgpythonbindings.Coordinates(
                 b.coordinates.latitude, b.coordinates.longitude
             ),
-            get_category(b),
+            get_building_category_osm(b),
         )
         for b in nonres_buildings
     ]
