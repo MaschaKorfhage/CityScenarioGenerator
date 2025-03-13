@@ -91,9 +91,12 @@ class LPGConfigCreator:
         lpgdata.TransportationDeviceSets.Bus_and_two_30_km_h_Cars,
         lpgdata.TransportationDeviceSets.Bus_and_two_60_km_h_Cars,
     ]
-    # TODO: missing transportation device sets for the following variants
-    NO_CAR_TRANSPORT_DEVICE_SETS = ONE_CAR_TRANSPORT_DEVICE_SETS
-    MORE_CAR_TRANSPORT_DEVICE_SETS = TWO_CAR_TRANSPORT_DEVICE_SETS
+    NO_CAR_TRANSPORT_DEVICE_SETS = [
+        lpgdata.TransportationDeviceSets.Bus_and_Bicycles_no_Car
+    ]
+    MORE_CAR_TRANSPORT_DEVICE_SETS = [
+        lpgdata.TransportationDeviceSets.Bus_and_three_30_km_h_Cars
+    ]
 
     # determine how many POIs of the same location type a person can visit
     MIN_POIS_PER_TYPE = 1
