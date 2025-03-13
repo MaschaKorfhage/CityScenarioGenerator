@@ -1,8 +1,14 @@
 from typing import Iterable
-from cityscenariogenerator.plots import building_map_interactive
-from cityscenariogenerator.builda_client_import import NonResidentialBuilding
 
+from builda_client.dev_client import NonResidentialBuilding  # type: ignore
 import pylpg.lpgpythonbindings  # type: ignore
+
+from cityscenariogenerator.plots import building_map_interactive
+
+
+def get_category(building: NonResidentialBuilding) -> str:
+    # return building.use.get("raw", {}).get("alkis", {}).get("description", "None")
+    return building.use.get("raw", {}).get("osm", {}).get("amenity", "None")
 
 
 def alkis_type_map_plot(
@@ -20,8 +26,7 @@ def alkis_type_map_plot(
             pylpg.lpgpythonbindings.Coordinates(
                 b.coordinates.latitude, b.coordinates.longitude
             ),
-            # b.use.get("raw", {}).get("alkis", {}).get("description", "None"),
-            b.use.get("raw", {}).get("osm", {}).get("amenity", "None"),
+            get_category(b),
         )
         for b in nonres_buildings
     ]
