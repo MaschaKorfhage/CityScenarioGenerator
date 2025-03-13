@@ -8,6 +8,7 @@ def test_lpg_locations_exclusive_sets():
     assert LpgLocations.WORK & LpgLocations.NO_WORK == set()
     assert LpgLocations.WORK & LpgLocations.RESIDENTIAL == set()
     assert LpgLocations.WORK & LpgLocations.NO_BUILDING == set()
+    assert LpgLocations.RESIDENTIAL & LpgLocations.NON_RESIDENTIAL == set()
     assert LpgLocations.RESIDENTIAL & LpgLocations.NO_BUILDING == set()
     assert LpgLocations.RESIDENTIAL & LpgLocations.NONRES_BUILDING == set()
     assert LpgLocations.NO_BUILDING & LpgLocations.NONRES_BUILDING == set()

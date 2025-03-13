@@ -345,7 +345,7 @@ class LPGConfigCreator:
         Checks if there is at least one POI for every LPG location. If locations are missing,
         households that require them cannot be simulated.
         """
-        locations = LpgLocations.ALL
+        locations = LpgLocations.NON_RESIDENTIAL
         available = self.poi_ids_by_type.keys()
         missing = locations - available
         if missing:
