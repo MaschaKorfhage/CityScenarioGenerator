@@ -304,8 +304,7 @@ class LPGConfigCreator:
         coordinates: lpgdata.Coordinates,
     ) -> dict[str, float]:
         poi_weights: dict[str, float] = {}
-        # TODO: treat locations friends house, childrens house, parents house, and home as special cases
-
+        # select POIs of every available type
         for location, poi_ids in self.poi_ids_by_type.items():
             if location in LpgLocations.RESIDENTIAL:
                 continue  # residential POIs are added separately below

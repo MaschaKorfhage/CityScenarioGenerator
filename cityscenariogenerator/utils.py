@@ -1,3 +1,7 @@
+"""
+Various utility functions
+"""
+
 import logging
 from pathlib import Path
 import shutil

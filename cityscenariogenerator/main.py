@@ -3,69 +3,11 @@
 import logging
 from pathlib import Path
 import random
-import sys
 
 from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates  # type: ignore
 
-import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
-import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
 from cityscenariogenerator import builda_client_import, utils, create_lpg_configs
 from cityscenariogenerator.household_data import BuildingData
-from cityscenariogenerator.utils import clear_directory, init_logging
-
-
-def import_residential_buildings_from_builda_file(
-    number_of_buildings: int,
-) -> dict[str, BuildingData]:
-    # get building data from builda csv file
-    (
-        building_ids,
-        tabula_building_codes,
-        conditioned_floor_areas_in_m2,
-        number_of_dwellings,
-        norm_heating_load_in_kw,
-        postal_code,
-        pv_capacities_in_kw,
-        pv_generations_in_kwh,
-        commodities,
-        supply_levels,
-        building_data_list,
-    ) = builda_file_sampler.get_buildings_from_builda(
-        number_of_random_samples=number_of_buildings
-    )
-
-    # get lpg profiles based on builda data
-    buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
-        building_data_list
-    )
-    return buildings
-
-
-def import_residential_buildings_from_builda(
-    builda_query: dict,
-) -> list[BuildingData]:
-    # load residential buildings from BUILDA
-    raw_buildings = builda_client_import.get_residential_buildings(builda_query)
-    # parse the household data into data objects
-    building_data_list = builda_file_sampler.convert_residential_buildings_from_builda(
-        raw_buildings
-    )
-
-    # determine LPG households for each building
-    buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
-        building_data_list
-    )
-
-    # check if there are buildings IDs that only differ in case
-    building_ids = {building.id.lower() for building in buildings}
-    if len(building_ids) != len(buildings):
-        message = "Some building IDs only differ in case."
-        if sys.platform == "win32":
-            # windows is case-insensitive regarding file names, so this will not work
-            raise Exception(message)
-        else:
-            logging.warning(message)
-    return buildings
 
 
 def create_configs_from_buildings(
@@ -134,11 +76,11 @@ def create_city_scenario(
     result_dir_path = scenario_directory / result_dir_name
     lpg_result_path = lpg_result_dir / result_dir_name
 
-    # clear_directory(result_dir_path)
+    utils.clear_directory(result_dir_path)
     if result_dir_path.exists() and any(result_dir_path.iterdir()):
         raise Exception(f"Target directory was not empty: {result_dir_path}")
 
-    init_logging(scenario_directory)
+    utils.init_logging(scenario_directory)
 
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)

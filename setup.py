@@ -15,7 +15,7 @@ setuptools.setup(
     description="A city scenario generator for the LoadProfileGenerator",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="TODO",
+    url="",  # TODO: add a URL once published
     include_package_data=True,
     packages=setuptools.find_packages(),
     install_requires=required_packages,
