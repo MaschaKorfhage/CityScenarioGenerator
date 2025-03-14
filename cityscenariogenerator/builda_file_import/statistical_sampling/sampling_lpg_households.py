@@ -1,5 +1,8 @@
 """Module for generating random samples for LPG households in Germany."""
 
+from collections import defaultdict
+from enum import StrEnum
+import logging
 import os
 import pandas as pd
 from typing import Dict, List
@@ -231,72 +234,99 @@ def get_random_distribution_of_lpg_households_per_building(
     )
 
 
-def get_lpg_household_based_on_builda_household_information(
-    household_data: HouseholdRawData,
-) -> HouseholdData:
-    """Get lpg household based on builda household information."""
-    # get lpg households
-    lpg_household_data = get_lpg_households()
-    lpg_household_data = lpg_household_data.loc[
-        lpg_household_data["number of residents"] == household_data.num_persons
-    ]
+class HHSamplingType(StrEnum):
+    """Indicates which criteria were used to limit the eligible households
+    during sampling. The number of residents is always used (if available in the LPG),
+    but all additionaly criteria might be dropped if no matching households are found.
+    """
 
-    lpg_household_data_working = lpg_household_data.loc[
-        lpg_household_data["working status"] == household_data.working_ratio
-    ]
-    lpg_household_data_female = lpg_household_data_working.loc[
-        lpg_household_data_working["female status"] == household_data.female_ratio
-    ]
-    lpg_household_data_senior = lpg_household_data_female.loc[
-        lpg_household_data_female["senior status float"] == household_data.senior_ratio
-    ]
-    # at the end, if dataframe is not empty take random choice and get the final random lpg household
-    if lpg_household_data_senior.empty is False:
-        lpg_household_name = random.choice(
-            list(lpg_household_data_senior[HH_KEY_COLUMN])
-        )
+    NONE = "census distribution"
+    WORK = "work status"
+    WORK_SEX = "work status, gender"
+    WORK_SEX_SENIOR = "work status, gender, senior"
 
-    # or if dataframe was empty and no lpg household was found with this working status, take a random sample out of precedent dataframe
-    else:
-        if lpg_household_data_female.empty is False:
-            lpg_household_name = random.choice(
-                list(lpg_household_data_female[HH_KEY_COLUMN])
-            )
+
+class HouseholdSampler:
+    def __init__(self):
+        self.sampling_types = defaultdict(int)
+
+    def get_lpg_household_based_on_builda_household_information(
+        self,
+        household_data: HouseholdRawData,
+    ) -> HouseholdData:
+        """Get lpg household based on builda household information."""
+        # get lpg households
+        lpg_household_data = get_lpg_households()
+        lpg_household_data = lpg_household_data.loc[
+            lpg_household_data["number of residents"] == household_data.num_persons
+        ]
+
+        # collect all LPG households with matching characteristics
+        lpg_household_data_working = lpg_household_data.loc[
+            lpg_household_data["working status"] == household_data.working_ratio
+        ]
+        lpg_household_data_female = lpg_household_data_working.loc[
+            lpg_household_data_working["female status"] == household_data.female_ratio
+        ]
+        lpg_household_data_senior = lpg_household_data_female.loc[
+            lpg_household_data_female["senior status float"]
+            == household_data.senior_ratio
+        ]
+
+        household_set_to_use = None
+        sampling_type = HHSamplingType.NONE
+        # check if there are households that fulfill all criteria, or else drop some conditions
+        if lpg_household_data_senior.empty is False:
+            # there are households that fulfill all criteria
+            household_set_to_use = lpg_household_data_senior
+            sampling_type = HHSamplingType.WORK_SEX_SENIOR
+        elif lpg_household_data_female.empty is False:
+            # ignore the share of seniors
+            household_set_to_use = lpg_household_data_female
+            sampling_type = HHSamplingType.WORK_SEX
+        elif lpg_household_data_working.empty is False:
+            # ignore the share of females
+            household_set_to_use = lpg_household_data_working
+            sampling_type = HHSamplingType.WORK
+        # store how the household was sampled, for statistics
+        self.sampling_types[sampling_type] += 1
+
+        # randomly select one household out of the matching ones
+        if household_set_to_use is not None:
+            hh_names = list(household_set_to_use[HH_KEY_COLUMN])
+            lpg_household_name = random.choice(hh_names)
         else:
-            if lpg_household_data_working.empty is False:
-                lpg_household_name = random.choice(
-                    list(lpg_household_data_working[HH_KEY_COLUMN])
-                )
-            else:
-                # if no lpg household is compatible with builda household, choose randomly based on census 2011
-                (
-                    list_of_random_lpg_households,
-                    list_of_random_household_types,
-                    list_of_random_number_of_residents,
-                    list_of_random_working_status,
-                ) = get_random_distribution_of_lpg_households_per_building(
-                    household_data.num_persons
-                )
-                lpg_household_name = list_of_random_lpg_households[0]
-    return HouseholdData(lpg_household_name, household_data.num_cars)
+            # if no LPG household is compatible even when dropping most conditions, choose randomly based on census 2011
+            (
+                list_of_random_lpg_households,
+                list_of_random_household_types,
+                list_of_random_number_of_residents,
+                list_of_random_working_status,
+            ) = get_random_distribution_of_lpg_households_per_building(
+                household_data.num_persons
+            )
+            lpg_household_name = list_of_random_lpg_households[0]
+        return HouseholdData(lpg_household_name, household_data.num_cars)
 
 
-def get_lpg_households_based_on_builda_data(building_data_list: list[BuildingRawData]):
+def get_lpg_households_based_on_builda_data(
+    building_data_list: list[BuildingRawData],
+) -> list[BuildingData]:
     """Get lpg households based on builda data."""
-
+    sampler = HouseholdSampler()
     buildings: list[BuildingData] = []
     # iterate over buildings
-    for building_data in building_data_list:
-
+    for building_raw in building_data_list:
         households = []
         # iterate over dwellings in building
-        for household_data in building_data.households:
-            final_lpg_household = (
-                get_lpg_household_based_on_builda_household_information(household_data)
+        for household_raw in building_raw.households:
+            household = sampler.get_lpg_household_based_on_builda_household_information(
+                household_raw
             )
-            households.append(final_lpg_household)
-        buildings.append(
-            BuildingData(building_data.id, households, building_data.coordinates)
-        )
-
+            households.append(household)
+        building = BuildingData(building_raw.id, households, building_raw.coordinates)
+        buildings.append(building)
+    # log the sampling statistics
+    sampling_stats = ", ".join(f"{k}: {v}" for k, v in sampler.sampling_types.items())
+    logging.info(f"Household sampling statistics: {sampling_stats}")
     return buildings

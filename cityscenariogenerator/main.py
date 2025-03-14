@@ -4,7 +4,7 @@ import logging
 from pathlib import Path
 import random
 
-from builda_client.client import NonResidentialBuildingWithSourceDto, Coordinates  # type: ignore
+from builda_client.client import NonResidentialBuildingWithSourceDto  # type: ignore
 
 from cityscenariogenerator import builda_client_import, utils, create_lpg_configs
 from cityscenariogenerator.household_data import BuildingData

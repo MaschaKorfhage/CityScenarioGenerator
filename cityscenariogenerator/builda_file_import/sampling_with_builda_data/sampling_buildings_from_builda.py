@@ -66,17 +66,13 @@ def get_senior_status(retire_status_list_per_household: List[str]) -> float:
     return senior_status_per_household / len(retire_status_list_per_household)
 
 
-def get_buildings_from_builda(
+def get_buildings_from_builda_file(
     number_of_random_samples: int | None = None,
 ) -> tuple[
     List, List, List, List, List, List, List, List, List, List, List[BuildingRawData]
 ]:
     """Read German buildings and their properties from Builda."""
-    # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_mass_simulations_paper/samples_builda_1.xlsx"
-    # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_winterberg/buildings_winterberg_only_residential.xlsx"
-    # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_winterberg_with_heating_systems/buildings_winterberg_only_residential.xlsx"
-    # path_to_builda_data = "/fast/home/k-rieck/builda_data/samples_for_waage_germany_new_census/ethos_builda_v8_random_buildings.xlsx"
-    path_to_builda_data = r"D:\Home\OneDrive - Forschungszentrum Jülich GmbH\Promotion\builda_data\ethos_builda_v8_random_buildings.xlsx"
+    path_to_builda_data = "builda_data/ethos_builda_v8_random_buildings.xlsx"
     logging.info(f"Read builda data from {path_to_builda_data}")
 
     d_f = pd.read_excel(path_to_builda_data, header=0)

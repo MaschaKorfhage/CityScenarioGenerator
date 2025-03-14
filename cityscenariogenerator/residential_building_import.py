@@ -26,7 +26,7 @@ def import_residential_buildings_from_builda_file(
         commodities,
         supply_levels,
         building_data_list,
-    ) = builda_file_sampler.get_buildings_from_builda(
+    ) = builda_file_sampler.get_buildings_from_builda_file(
         number_of_random_samples=number_of_buildings
     )
 
