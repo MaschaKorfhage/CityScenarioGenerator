@@ -262,11 +262,11 @@ class LPGConfigCreator:
         return [calc_distance(coordinates, p.Coordinates) for p in poi_list]
 
     def _determine_poi_num_for_person(self) -> int:
-        # TODO: different limits per POI type (one work, multiple supermarkets, ...)
-        size = random.randint(
+        # TODO: use appropriate distributions to determine the number for each POI type
+        number = random.randint(
             LPGConfigCreator.MIN_POIS_PER_TYPE, LPGConfigCreator.MAX_POIS_PER_TYPE
         )
-        return size
+        return number
 
     def select_residential_poi_for_person(
         self, person: lpgdata.PersonData
