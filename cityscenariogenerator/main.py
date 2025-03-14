@@ -42,28 +42,6 @@ def create_configs_from_buildings(
     config_creator.create_config_files(path)
 
 
-def overwrite_residential_coordinates(
-    nonres_buildings: list[NonResidentialBuildingWithSourceDto],
-    res_buildings: dict[str, BuildingData],
-):
-    """This is for testing with buildings from the Builda dump file with
-    buildings all over Germany"""
-    # determine latitude/longitude ranges from nonresidential buildings
-    allcoordinates = [b.coordinates for b in nonres_buildings]
-    latitudes = [c.latitude for c in allcoordinates]
-    latmin = min(latitudes)
-    latrange = max(latitudes) - latmin
-    longitudes = [c.longitude for c in allcoordinates]
-    longmin = min(longitudes)
-    longrange = max(longitudes) - longmin
-
-    # replace coordinates of residential buildings with random fitting values
-    for building in res_buildings.values():
-        lat = random.random() * latrange + latmin
-        long = random.random() * longrange + longmin
-        building.coordinates = Coordinates(lat, long)
-
-
 def create_city_scenario(
     builda_query: dict,
     scenario_directory: Path,
