@@ -12,7 +12,7 @@ from cityscenariogenerator.household_data import BuildingData
 
 def import_residential_buildings_from_builda_file(
     number_of_buildings: int,
-) -> dict[str, BuildingData]:
+) -> list[BuildingData]:
     # get building data from builda csv file
     (
         building_ids,
@@ -37,6 +37,16 @@ def import_residential_buildings_from_builda_file(
     return buildings
 
 
+def add_counter_to_ids(buildings: list[BuildingData]) -> None:
+    """
+    Adds a counter to the IDs of the buildings to make them unique.
+
+    :param buildings: list of buildings
+    """
+    for i, b in enumerate(buildings):
+        b.id = f"{b.id}-{i}"
+
+
 def import_residential_buildings_from_builda(
     builda_query: dict,
 ) -> list[BuildingData]:
@@ -57,8 +67,8 @@ def import_residential_buildings_from_builda(
     if len(building_ids) != len(buildings):
         message = "Some building IDs only differ in case."
         if sys.platform == "win32":
-            # windows is case-insensitive regarding file names, so this will not work
-            raise Exception(message)
+            # windows is case-insensitive regarding file names, so make the IDs unique
+            add_counter_to_ids(buildings)
         else:
             logging.warning(message)
     return buildings
