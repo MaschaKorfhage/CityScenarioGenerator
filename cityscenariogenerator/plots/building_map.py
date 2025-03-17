@@ -21,6 +21,21 @@ class PointWithCategory:
         return Point(self.coordinates.Longitude, self.coordinates.Latitude)
 
 
+def pointlist_to_geodf(data: list[PointWithCategory]) -> gpd.GeoDataFrame:
+    """
+    Converts a list of points with a category to a GeoDataFrame
+
+    :param data: the points to convert
+    :return: the resulting GeoDataFrame
+    """
+    df: gpd.GeoDataFrame = gpd.GeoDataFrame(geometry=[d.get_point() for d in data])
+    category_col = "category"
+    df[category_col] = [d.category for d in data]
+    # set the coordinate reference system to WGS 84 (EPSG:4326)
+    df.set_crs("EPSG:4326", inplace=True)
+    return df
+
+
 def map_locations_plot(data: list[PointWithCategory], path: Path | None):
     """
     Plots each building or relevant point on a map, indicating its category by color.
@@ -28,15 +43,11 @@ def map_locations_plot(data: list[PointWithCategory], path: Path | None):
     :param data: list of buildings/POIs with coordinates and a category
     :param path: directory where to save the image file, or None
     """
-    # Convert to GeoDataFrame
-    df: gpd.GeoDataFrame = gpd.GeoDataFrame(geometry=[d.get_point() for d in data])
     category_col = "category"
-    df[category_col] = [d.category for d in data]
+    df = pointlist_to_geodf(data)
 
-    # Set coordinate reference system (CRS) to WGS 84 (EPSG:4326)
-    df = df.set_crs("EPSG:4326").to_crs(
-        "EPSG:3857"
-    )  # Convert to Web Mercator for basemap
+    # convert to Web Mercator
+    df.to_crs("EPSG:3857", inplace=True)
 
     # Plot
     fig, ax = plt.subplots(figsize=(10, 8))
