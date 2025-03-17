@@ -4,6 +4,9 @@ scenarios
 # .env file
 .env
 
+# cached BUILDA results
+cache/
+
 # scripts and logs
 slurm_scripts
 logs
