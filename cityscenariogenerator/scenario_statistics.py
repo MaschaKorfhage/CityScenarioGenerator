@@ -8,6 +8,36 @@ from typing import Iterable
 from pylpg import lpgdata  # type: ignore
 
 
+def write_general_info(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob],
+    pois: Iterable[lpgdata.PointOfInterestData],
+    path: Path,
+):
+    """
+    Collect some general information about the generated scenario
+
+    :param house_jobs: list of created house jobs
+    :param pois: list of created POIs
+    :param path: path for the result file
+    """
+    houselist = list(house_jobs)
+    num_hh = sum(len(hj.House.Households) for hj in houselist)
+    num_persons = sum(
+        len(hh.PointOfInterestPreferences)
+        for hj in houselist
+        for hh in hj.House.Households
+    )
+    info = {
+        "houses": len(houselist),
+        "households": num_hh,
+        "persons": num_persons,
+        "POIs": len(list(pois)),
+    }
+    info["houses"]
+    with open(path / "general_info.json", "w+") as f:
+        json.dump(info, f, indent=4)
+
+
 def write_household_statistics(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
 ):

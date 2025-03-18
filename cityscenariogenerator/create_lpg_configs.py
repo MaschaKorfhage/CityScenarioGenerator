@@ -534,6 +534,9 @@ class LPGConfigCreator:
         logging.info(f"Generated {len(self.pois)} POIs.")
 
         path.mkdir(parents=True, exist_ok=True)
+        scenario_statistics.write_general_info(
+            self.houses.values(), self.pois.values(), path
+        )
         scenario_statistics.write_household_statistics(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(
             self.global_city_definition.PointsOfInterest.values(),
