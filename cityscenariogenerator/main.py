@@ -58,7 +58,7 @@ def create_city_scenario(
     if result_dir_path.exists() and any(result_dir_path.iterdir()):
         raise Exception(f"Target directory was not empty: {result_dir_path}")
 
-    utils.init_logging(scenario_directory)
+    utils.init_logging(result_dir_path)
 
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)

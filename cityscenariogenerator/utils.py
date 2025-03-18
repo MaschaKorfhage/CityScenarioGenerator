@@ -10,6 +10,10 @@ import unicodedata
 import re
 
 
+#: name of the logfile produced in each scenario generation
+LOGFILENAME = "log.txt"
+
+
 def slugify(value, allow_unicode=False):
     """
     Taken from https://github.com/django/django/blob/master/django/utils/text.py
@@ -72,7 +76,7 @@ def init_logging(directory: Path | None = None):
     if directory:
         # add a handler writing to a log file in the specified directory
         directory.mkdir(parents=True, exist_ok=True)
-        logfile_handler = logging.FileHandler(directory / "log.txt", "w", "utf-8")
+        logfile_handler = logging.FileHandler(directory / LOGFILENAME, "w", "utf-8")
         configure_log_handler(logfile_handler)
         logger.addHandler(logfile_handler)
 

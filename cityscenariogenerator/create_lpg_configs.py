@@ -14,7 +14,12 @@ from pylpg import lpgdata  # type: ignore
 from builda_client import dev_client as builda  # type: ignore
 
 from cityscenariogenerator.lpg_locations import LpgLocations
-from cityscenariogenerator import poi_type_mapping, scenario_statistics, household_data
+from cityscenariogenerator import (
+    poi_type_mapping,
+    scenario_statistics,
+    household_data,
+    utils,
+)
 from cityscenariogenerator.plots import building_map, building_map_interactive
 
 
@@ -473,7 +478,9 @@ class LPGConfigCreator:
     def create_config_files(self, path: Path):
         # make sure the directory exists
         path.mkdir(parents=True, exist_ok=True)
-        if any(path.iterdir()):
+        files = list(path.iterdir())
+        # check if the directory is empty (besides the logfile)
+        if len(files) == 0 or (len(files) == 1 and files[0] == utils.LOGFILENAME):
             raise Exception(f"Target directory was not empty: {path}")
         self.create_house_config_files(path / "houses")
         self.create_global_city_config_file(path)
