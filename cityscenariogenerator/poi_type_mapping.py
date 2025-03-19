@@ -1,9 +1,11 @@
 import abc
 from dataclasses import dataclass
 import json
+import random
 from typing import Any
-from builda_client import dev_client as builda  # type: ignore
+
 from dataclasses_json import dataclass_json  # type: ignore
+from builda_client import dev_client as builda  # type: ignore
 
 from cityscenariogenerator.lpg_locations import LpgLocations
 
@@ -18,6 +20,44 @@ class LocationType:
 
     non_work_locations: set[str]
     work_locations: set[str]
+
+
+@dataclass
+class BuildingWithLocationType:
+    """
+    Stores a nonresidential building, together with the LPG locations assigned
+    to it.
+    """
+
+    building: builda.NonResidentialBuilding
+    location_type: LocationType | None
+
+    def collect_lpg_locations(self) -> list[str]:
+        """
+        Collects a list of all LPG locations (work and non-work) that
+        this building provides. If multiple non-work locations are
+        possible, one of them is sampled randomly.
+
+        :return: list of locations for this building
+        """
+        if not self.location_type:
+            # no locations fit this building
+            return []
+
+        if (
+            not self.location_type.non_work_locations
+            and not self.location_type.work_locations
+        ):
+            # no locations assigned yet
+            return []
+
+        # select all locations that will be available in this building
+        # for that, select ALL matching work locations and ONE non-work location
+        locations = list(self.location_type.work_locations)
+        if len(self.location_type.non_work_locations) > 0:
+            nonwork = random.choice(list(self.location_type.non_work_locations))
+            locations.append(nonwork)
+        return locations
 
 
 class PoiLocationMapper(abc.ABC):
@@ -38,6 +78,14 @@ class PoiLocationMapper(abc.ABC):
         self, building: builda.NonResidentialBuilding
     ) -> LocationType | None:
         pass
+
+    def get_locations_for_buildings(
+        self, buildings: list[builda.NonResidentialBuilding]
+    ) -> list[BuildingWithLocationType]:
+        return [
+            BuildingWithLocationType(b, self.get_matching_locations(b))
+            for b in buildings
+        ]
 
 
 class NaceCodeMapper(PoiLocationMapper):

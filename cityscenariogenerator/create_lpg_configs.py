@@ -118,7 +118,6 @@ class LPGConfigCreator:
         logging.info(f"Using numpy RNG seed {numpy_seed}")
         numpy.random.seed(numpy_seed)
 
-        self.poi_mapper = poi_type_mapping.AlkisMapper()
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
         self.pois: dict[str, lpgdata.PointOfInterestData] = {}
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
@@ -193,26 +192,6 @@ class LPGConfigCreator:
         self.houses[building.id] = hcj
         return house
 
-    def select_lpg_locations_for_nonresidential_building(
-        self, building: builda.NonResidentialBuilding
-    ) -> Iterable[str]:
-        location_type = self.poi_mapper.get_matching_locations(building)
-        if not location_type:
-            # no locations fit this building
-            return []
-
-        if not location_type.non_work_locations and not location_type.work_locations:
-            # no locations assigned yet
-            return []
-
-        # select all locations that will be available in this building
-        # for that, select ALL matching work locations and ONE non-work location
-        locations = list(location_type.work_locations)
-        if len(location_type.non_work_locations) > 0:
-            nonwork = random.choice(list(location_type.non_work_locations))
-            locations.append(nonwork)
-        return locations
-
     def _add_poi_object(self, poi_id: str, poi: lpgdata.PointOfInterestData) -> None:
         """
         Adds a new POI object to the internal dicts, checking for duplicate IDs.
@@ -237,14 +216,17 @@ class LPGConfigCreator:
         poi_id = f"{location} {building.id}"
         self._add_poi_object(poi_id, poi)
 
-    def add_poi(self, building: builda.NonResidentialBuilding) -> None:
+    def add_poi(
+        self, building_with_type: poi_type_mapping.BuildingWithLocationType
+    ) -> None:
+        building = building_with_type.building
         if building.id in self.pois:
             raise Exception(
                 f"Encountered a duplicate non-residential building ID: {building.id}"
             )
         self.nonresidential_buildings += 1
 
-        locations = self.select_lpg_locations_for_nonresidential_building(building)
+        locations = building_with_type.collect_lpg_locations()
         if not locations:
             # this building is not relevant for the simulation
             self.excluded_nonres_buildings += 1

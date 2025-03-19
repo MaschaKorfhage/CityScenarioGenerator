@@ -4,16 +4,21 @@ import logging
 from pathlib import Path
 import random
 
-from builda_client.client import NonResidentialBuildingWithSourceDto  # type: ignore
-
-from cityscenariogenerator import builda_client_import, utils, create_lpg_configs
+from cityscenariogenerator import utils, create_lpg_configs
+from cityscenariogenerator.nonresidential_building_import import (
+    import_nonresidential_buildings_from_builda,
+)
+from cityscenariogenerator.poi_type_mapping import BuildingWithLocationType
+from cityscenariogenerator.residential_building_import import (
+    import_residential_buildings_from_builda,
+)
 from cityscenariogenerator.household_data import BuildingData
 
 
 def create_configs_from_buildings(
     path: Path,
     res_buildings: list[BuildingData],
-    nonres_buildings: list[NonResidentialBuildingWithSourceDto],
+    nonres_buildings: list[BuildingWithLocationType],
 ):
     config_creator = create_lpg_configs.LPGConfigCreator()
     # create a POI config for each nonresidential building
@@ -65,11 +70,9 @@ def create_city_scenario(
     random.seed(seed)
     logging.info(f"Using RNG seed {seed}")
 
-    # collect residential buildings
+    # collect residential and non-residential buildings
     res_buildings = import_residential_buildings_from_builda(builda_query)
-
-    # collect non-residential buildings
-    nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
+    nonres_buildings = import_nonresidential_buildings_from_builda(builda_query)
 
     # create config files for the collected buildings
     create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)

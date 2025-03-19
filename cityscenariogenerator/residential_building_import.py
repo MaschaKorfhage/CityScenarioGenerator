@@ -1,5 +1,5 @@
 """
-Contains functions to import residential buildings from BUILDA, and map then to the data required for the LoadProfileGenerator.
+Contains functions to import residential buildings from BUILDA, and map them to the data required for the LoadProfileGenerator.
 """
 
 import logging
