@@ -47,6 +47,11 @@ def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
     return dist.m
 
 
+def convert_coordinates(coordinates: builda.Coordinates) -> lpgdata.Coordinates:
+    """Convert coordinates from BUILDA format to LPG format"""
+    return lpgdata.Coordinates(coordinates.latitude, coordinates.longitude)
+
+
 def copy_calcspec_file(
     result_directory: Path,
     template_path: str = "Calcspec.json",
@@ -122,7 +127,7 @@ class LPGConfigCreator:
         self.nonresidential_buildings = 0
         self.excluded_nonres_buildings = 0
 
-    def select_transportation_device_set(
+    def _select_transportation_device_set(
         self, household_data: household_data.HouseholdData
     ) -> lpgdata.JsonReference:
         possible_devices = []
@@ -137,7 +142,7 @@ class LPGConfigCreator:
                 possible_devices = LPGConfigCreator.MORE_CAR_TRANSPORT_DEVICE_SETS
         return random.choice(possible_devices)
 
-    def select_charging_station_set(
+    def _select_charging_station_set(
         self, transport_device_set: lpgdata.TransportationDeviceSets
     ) -> lpgdata.JsonReference:
         # select a filling station for the gasoline car
@@ -155,8 +160,8 @@ class LPGConfigCreator:
         hh_template_spec = lpgdata.HouseholdTemplateSpecification(
             HouseholdTemplateName=household_data.household_name
         )
-        transport_device_set = self.select_transportation_device_set(household_data)
-        charging_station_set = self.select_charging_station_set(transport_device_set)
+        transport_device_set = self._select_transportation_device_set(household_data)
+        charging_station_set = self._select_charging_station_set(transport_device_set)
         return lpgdata.HouseholdData(
             None,
             hh_template_spec,
@@ -170,12 +175,6 @@ class LPGConfigCreator:
             lpgdata.HouseholdDataSpecificationType.ByTemplateName,
         )
 
-    def convert_coordinates(
-        self, coordinates: builda.Coordinates
-    ) -> lpgdata.Coordinates:
-        """Convert coordinates from BUILDA format to LPG format"""
-        return lpgdata.Coordinates(coordinates.latitude, coordinates.longitude)
-
     def add_lpg_house(self, building: household_data.BuildingData) -> lpgdata.HouseData:
         if building.id in self.houses:
             raise Exception(f"Encountered a duplicate building ID: {building.id}")
@@ -186,7 +185,7 @@ class LPGConfigCreator:
         house = lpgdata.HouseData(
             building.id,
             None,
-            self.convert_coordinates(building.coordinates),
+            convert_coordinates(building.coordinates),
             households,
             lpgdata.HouseTypes.HT23_No_Infrastructure_at_all,
         )
@@ -232,7 +231,7 @@ class LPGConfigCreator:
     ) -> lpgdata.PointOfInterestData:
         timelimit = None
         poi = lpgdata.PointOfInterestData(
-            location, self.convert_coordinates(building.coordinates), timelimit
+            location, convert_coordinates(building.coordinates), timelimit
         )
         # determine the ID of the POI
         poi_id = f"{location} {building.id}"
@@ -254,17 +253,10 @@ class LPGConfigCreator:
         for location in locations:
             self._add_poi_instance(building, location)
 
-    def determine_person_in_hh(
+    def _determine_person_in_hh(
         self, hh: lpgdata.HouseholdData
     ) -> list[lpgdata.PersonData]:
         return self.persons_in_each_hh[hh.HouseholdTemplateSpec.HouseholdTemplateName]
-
-    def get_poi_distances(
-        self,
-        coordinates: lpgdata.Coordinates,
-        poi_list: list[lpgdata.PointOfInterestData],
-    ):
-        return [calc_distance(coordinates, p.Coordinates) for p in poi_list]
 
     def _determine_poi_num_for_person(self) -> int:
         # TODO: use appropriate distributions to determine the number for each POI type
@@ -341,11 +333,11 @@ class LPGConfigCreator:
         return poi_weights
 
     def _get_site_coordinates(
-        self, site_name: str, house_coordinates: lpgdata.Coordinates, house_id: str
+        self, poi_id: str, house_coordinates: lpgdata.Coordinates, house_id: str
     ) -> lpgdata.Coordinates:
-        if site_name == lpgdata.Sites.Home.Name or site_name == house_id:
+        if poi_id == lpgdata.Sites.Home.Name or poi_id == house_id:
             return house_coordinates
-        return self.pois[site_name].Coordinates
+        return self.pois[poi_id].Coordinates
 
     def check_location_availability(self) -> None:
         """
@@ -393,7 +385,7 @@ class LPGConfigCreator:
             relevant_pois: dict[str, lpgdata.PointOfInterestData] = {}
             for hh in hcj.House.Households:
                 hh_poi_preferences: dict[str, lpgdata.PersonPoiPreferences] = {}
-                persons = self.determine_person_in_hh(hh)
+                persons = self._determine_person_in_hh(hh)
                 for person in persons:
                     poi_weights = self.select_pois_for_person(
                         person, hcj.House.Coordinates
@@ -491,11 +483,6 @@ class LPGConfigCreator:
         path.mkdir(parents=True, exist_ok=True)
         for id, hcj in self.houses.items():
             self.create_lpg_object_config_file(path, id, hcj)
-
-    def create_poi_config_files(self, path: Path):
-        path.mkdir(parents=True, exist_ok=True)
-        for id, poi in self.pois.items():
-            self.create_lpg_object_config_file(path, id, poi)
 
     def create_lpg_object_config_file(self, path: Path, id: str, house: Any):
         filename = path / f"{id}.json"
