@@ -1,4 +1,6 @@
+import logging
 from pathlib import Path
+from typing import Iterable
 import folium
 import geopandas as gpd  # type: ignore
 
@@ -8,14 +10,36 @@ from shapely import Point  # type: ignore
 from cityscenariogenerator import builda_client_import
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
 import cityscenariogenerator.plots.unmapped_building_map as buil_map
+from cityscenariogenerator.poi_type_mapping import (
+    BuildingWithLocationType,
+    LocationType,
+)
+from cityscenariogenerator.overpass_import import overpass_query
+
+#: directory with input OSM data from overpass
+OVERPASS_DATA_DIR = Path("data/osm_input_data")
 
 
-def builda_to_geodf(buildings: list[Building]) -> gpd.GeoDataFrame:
+class DFColumns:
+    BUILDA_ID = "id_builda"
+    OSM_ID = "id"
+
+
+def load_overpass_data(city: str):
+    filepath = OVERPASS_DATA_DIR / "{location}.geojson"
+    overpass_df = gpd.read_file(filepath)
+    print(overpass_df.head())
+    return overpass_df
+
+
+def builda_to_geodf(buildings: Iterable[Building]) -> gpd.GeoDataFrame:
+    # store in list to allow iterating multiple times
+    building_list = list(buildings)
     # Convert to GeoDataFrame
     geometry = [
-        Point(b.coordinates.longitude, b.coordinates.latitude) for b in buildings
+        Point(b.coordinates.longitude, b.coordinates.latitude) for b in building_list
     ]
-    data = {"id": [b.id for b in buildings]}
+    data = {DFColumns.BUILDA_ID: [b.id for b in building_list]}
     df = gpd.GeoDataFrame(data, geometry=geometry)
     df.set_crs("EPSG:4326", inplace=True)
     return df
@@ -82,11 +106,71 @@ def plot_map(dataframes: list[gpd.GeoDataFrame], name: str, geometry_col: str):
     map_1.show_in_browser()
 
 
+def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> LocationType:
+    for key, mapping in mappings.items():
+        # check if the key for this mapping (e.g. 'amenity') is given for this node
+        if val := row.get(key):
+            # check if the value for the key has a mapping entry
+            if loc := mapping.get(val):
+                return loc
+        # otherwhise continue trying with the remaining mappings
+    # If no mapping has an entry, a suitable location cannot be determined for this node.
+    # This should not happen, as only relevant nodes are queried from overpass.
+    raise Exception(f"Could not match an OSM node: {row}")
+
+
+def map_osm_node(mappings: dict[str, dict], row) -> LocationType:
+    nonwork_location = get_nonwork_location_for_node(mappings, row)
+    work_locations = []  # TODO
+    return LocationType([nonwork_location], work_locations)
+
+
+def map_osm_tags_to_locations(
+    data: gpd.GeoDataFrame, keys: list[str]
+) -> dict[str, LocationType]:
+    mappings = {key: overpass_query.load_osm_mapping(key) for key in keys}
+    # TODO: load mapping for work locations
+    osm_node_location_types = {
+        row[DFColumns.OSM_ID]: map_osm_node(
+            mappings,
+        )
+        for row in data.iterrows()
+    }
+    return osm_node_location_types
+
+
+def add_osm_location_types(buildings: dict[str, BuildingWithLocationType]) -> None:
+    overpass_df = load_overpass_data("Aachen")
+    # convert BUILDA objects to GeoDataFrame
+    builda_df = builda_to_geodf(b.building for b in buildings.values())
+
+    overpass_df.to_crs("EPSG:3857", inplace=True)
+    builda_df.to_crs("EPSG:3857", inplace=True)
+
+    # spatial join
+    joined_df = gpd.sjoin_nearest(
+        overpass_df,
+        builda_df,
+        distance_col="distance",
+        exclusive=False,
+        max_distance=20,
+    )
+    joined_df = remove_duplicate_matches(joined_df)
+    logging.info(f"Matched {len(joined_df)} non-residential buildings to OSM nodes.")
+    keys = ["amenity", "healthcare", "office"]
+    osm_node_locations = map_osm_tags_to_locations(joined_df, keys)
+
+    # assign OSM locations to BUILDA buildings
+    for row in joined_df.iterrows():
+        # get the matching location type for the OSM node
+        osm_loc_type = osm_node_locations[row[DFColumns.OSM_ID]]
+        # assign this location type to the corresponding BUILDA building
+        buildings[row[DFColumns.BUILDA_ID]].location_type = osm_loc_type
+
+
 def main():
     # load overpass building data
-    filepath = Path("data/osm_input_data/aachen.geojson")
-    overpass_df = gpd.read_file(filepath)
-    print(overpass_df.head())
+    overpass_df = load_overpass_data("Aachen")
 
     # collect non-residential buildings
     builda_query = {
