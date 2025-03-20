@@ -18,11 +18,11 @@ from cityscenariogenerator.household_data import BuildingData
 def create_configs_from_buildings(
     path: Path,
     res_buildings: list[BuildingData],
-    nonres_buildings: list[BuildingWithLocationType],
+    nonres_buildings: dict[str, BuildingWithLocationType],
 ):
     config_creator = create_lpg_configs.LPGConfigCreator()
     # create a POI config for each nonresidential building
-    for nonres_building in nonres_buildings:
+    for nonres_building in nonres_buildings.values():
         config_creator.add_poi(nonres_building)
 
     # create an LPG house config for each residential building

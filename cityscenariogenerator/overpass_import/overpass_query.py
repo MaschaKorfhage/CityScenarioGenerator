@@ -8,12 +8,27 @@ OSM_MAPPING_PATH = Path("data/osm_mapping")
 
 def load_osm_mapping(key_name: str) -> dict[str, list[str]]:
     with open(OSM_MAPPING_PATH / f"{key_name}.json", "r") as f:
-        return json.load(f)
+        mapping = json.load(f)  # TODO: invert dictionary
+    # mapping file is from LPG location to OSM key value --> invert it
+    inverted = {val: loc for loc, vals in mapping.items() for val in vals}
+    assert set(itertools.chain.from_iterable(mapping.values())) == set(
+        inverted.keys()
+    ), f"Invalid OSM mapping for key {key_name}"
+    return inverted
+
+
+def get_osm_keys_for_mapping() -> list[str]:
+    """
+    Returns a list of all OSM keys for which a mapping file exist.
+
+    :return: list of relevant OSM keys
+    """
+    return [p.stem for p in OSM_MAPPING_PATH.iterdir()]
 
 
 def generate_key_value_list(key_name: str) -> str:
     data = load_osm_mapping(key_name)
-    values = set(itertools.chain.from_iterable(data.values()))
+    values = set(data.keys())
     assert len(values) > 0, f"No values found for key {key_name}"
     value_str = "|".join(values)
     return f'"{key_name}"~"{value_str}"'
@@ -27,8 +42,7 @@ def generate_single_key_query(key_name: str) -> str:
 def generate_query(city: str) -> str:
     # collect all relevant values for each relevant key
     key_queries = []
-    OSM_KEYS = ["amenity", "healthcare", "office"]
-    for key in OSM_KEYS:
+    for key in get_osm_keys_for_mapping():
         key_query = generate_single_key_query(key)
         key_queries.append(key_query)
     key_query_str = "\n  ".join(key_queries)

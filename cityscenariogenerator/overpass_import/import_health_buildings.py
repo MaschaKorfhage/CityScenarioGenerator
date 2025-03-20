@@ -1,3 +1,8 @@
+"""
+Loads OpenStreetMap (OSM) node data from overpass turbo to add better location
+types to non-residential buildings
+"""
+
 import logging
 from pathlib import Path
 from typing import Iterable
@@ -26,7 +31,7 @@ class DFColumns:
 
 
 def load_overpass_data(city: str):
-    filepath = OVERPASS_DATA_DIR / "{location}.geojson"
+    filepath = OVERPASS_DATA_DIR / f"{city}.geojson"
     overpass_df = gpd.read_file(filepath)
     print(overpass_df.head())
     return overpass_df
@@ -48,9 +53,9 @@ def builda_to_geodf(buildings: Iterable[Building]) -> gpd.GeoDataFrame:
 def adapt_joined_df(joined_df, geometry_col: str):
     joined_df[geometry_col] = joined_df.geometry.to_crs("EPSG:4326")
     joined_df["popup"] = (
-        joined_df["id_left"]
+        joined_df[DFColumns.OSM_ID]
         + " - "
-        + joined_df["id_right"]
+        + joined_df[DFColumns.BUILDA_ID]
         + "\n"
         + joined_df["amenity"]
         + "\n"
@@ -70,7 +75,7 @@ def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     """
     # filter duplicate matches
     filtered = df.sort_values(by="distance").drop_duplicates(
-        subset=["id_right"], keep="first"
+        subset=[DFColumns.BUILDA_ID], keep="first"
     )
     print(f"Removed {len(df) - len(filtered)} duplicate matches")
     return filtered
@@ -106,7 +111,7 @@ def plot_map(dataframes: list[gpd.GeoDataFrame], name: str, geometry_col: str):
     map_1.show_in_browser()
 
 
-def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> LocationType:
+def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
     for key, mapping in mappings.items():
         # check if the key for this mapping (e.g. 'amenity') is given for this node
         if val := row.get(key):
@@ -121,20 +126,18 @@ def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> LocationTyp
 
 def map_osm_node(mappings: dict[str, dict], row) -> LocationType:
     nonwork_location = get_nonwork_location_for_node(mappings, row)
-    work_locations = []  # TODO
-    return LocationType([nonwork_location], work_locations)
+    work_locations = set("Office Workplace")  # TODO
+    return LocationType({nonwork_location}, work_locations)
 
 
-def map_osm_tags_to_locations(
+def map_osm_nodes_to_locations(
     data: gpd.GeoDataFrame, keys: list[str]
 ) -> dict[str, LocationType]:
+    # load all mappings to use, one per OSM key
     mappings = {key: overpass_query.load_osm_mapping(key) for key in keys}
     # TODO: load mapping for work locations
     osm_node_location_types = {
-        row[DFColumns.OSM_ID]: map_osm_node(
-            mappings,
-        )
-        for row in data.iterrows()
+        row[DFColumns.OSM_ID]: map_osm_node(mappings, row) for _, row in data.iterrows()
     }
     return osm_node_location_types
 
@@ -157,11 +160,11 @@ def add_osm_location_types(buildings: dict[str, BuildingWithLocationType]) -> No
     )
     joined_df = remove_duplicate_matches(joined_df)
     logging.info(f"Matched {len(joined_df)} non-residential buildings to OSM nodes.")
-    keys = ["amenity", "healthcare", "office"]
-    osm_node_locations = map_osm_tags_to_locations(joined_df, keys)
+    keys = overpass_query.get_osm_keys_for_mapping()
+    osm_node_locations = map_osm_nodes_to_locations(joined_df, keys)
 
     # assign OSM locations to BUILDA buildings
-    for row in joined_df.iterrows():
+    for _, row in joined_df.iterrows():
         # get the matching location type for the OSM node
         osm_loc_type = osm_node_locations[row[DFColumns.OSM_ID]]
         # assign this location type to the corresponding BUILDA building
@@ -194,8 +197,8 @@ def main():
     builda_df.to_crs("EPSG:3857", inplace=True)
 
     # add a column for the popup text
-    builda_df["popup"] = builda_df["id"] + "\n" + builda_df["category"]
-    overpass_df["popup"] = overpass_df["id"] + "\n" + overpass_df["amenity"]
+    builda_df["popup"] = builda_df[DFColumns.BUILDA_ID] + "\n" + builda_df["category"]
+    overpass_df["popup"] = overpass_df[DFColumns.OSM_ID] + "\n" + overpass_df["amenity"]
 
     # spatial join
     joined_df = gpd.sjoin_nearest(
