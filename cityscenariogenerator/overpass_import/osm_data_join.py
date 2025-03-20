@@ -1,6 +1,6 @@
 """
-Loads OpenStreetMap (OSM) node data from overpass turbo to add better location
-types to non-residential buildings
+Loads OpenStreetMap (OSM) node data from overpass turbo and does a spatial join
+with BUILDA buildings to add better location types to non-residential buildings.
 """
 
 import logging
