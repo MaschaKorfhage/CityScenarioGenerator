@@ -1,0 +1,12 @@
+{
+    "Doctors Office": [
+        "doctor",
+        "dentist",
+        "physiotherapist",
+        "psychotherapist",
+        "occupational_therapist",
+        "optometrist",
+        "podiatrist",
+        "speech_therapist"
+    ]
+}
