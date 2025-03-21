@@ -5,6 +5,7 @@ with BUILDA buildings to add better location types to non-residential buildings.
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+import json
 import logging
 from pathlib import Path
 from typing import Iterable
@@ -25,7 +26,8 @@ from cityscenariogenerator.poi_type_mapping import (
 from cityscenariogenerator.overpass_import import overpass_query
 
 #: directory with input OSM data from overpass
-OVERPASS_DATA_DIR = Path("data/osm_input_data")
+DATA_DIR = Path("data")
+OVERPASS_DATA_DIR = DATA_DIR / "osm_input_data"
 
 
 class DFColumns:
@@ -89,6 +91,19 @@ def load_overpass_data(city: str):
     filepath = OVERPASS_DATA_DIR / f"{city}.geojson"
     overpass_df = gpd.read_file(filepath)
     return overpass_df
+
+
+def load_location_work_mapping() -> dict[str, list[str]]:
+    """
+    Load the mapping of LPG non-work location types to work location types from a file.
+    This mapping can be used to determine which type of employment can be carried out in
+    a non-residential building, based on its non-work location.
+
+    :return: the mapping as a dictionary
+    """
+    mapping_file = DATA_DIR / "location_work_mapping.json"
+    with open(mapping_file, "r", encoding="utf8") as f:
+        return json.load(f)
 
 
 def builda_to_geodf(buildings: Iterable[Building]) -> gpd.GeoDataFrame:
@@ -178,9 +193,11 @@ def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
     raise Exception(f"Could not match an OSM node: {row}")
 
 
-def map_osm_node(mappings: dict[str, dict], row) -> LocationType:
+def map_osm_node(
+    mappings: dict[str, dict], row, work_mapping: dict[str, list[str]]
+) -> LocationType:
     nonwork_location = get_nonwork_location_for_node(mappings, row)
-    work_locations = {"Office Workplace"}  # TODO
+    work_locations = set(work_mapping[nonwork_location])
     return LocationType({nonwork_location}, work_locations)
 
 
@@ -189,9 +206,10 @@ def map_osm_nodes_to_locations(
 ) -> dict[str, LocationType]:
     # load all mappings to use, one per OSM key
     mappings = {key: overpass_query.load_osm_mapping(key) for key in keys}
-    # TODO: load mapping for work locations
+    work_mapping = load_location_work_mapping()
     osm_node_location_types = {
-        row[DFColumns.OSM_ID]: map_osm_node(mappings, row) for _, row in data.iterrows()
+        row[DFColumns.OSM_ID]: map_osm_node(mappings, row, work_mapping)
+        for _, row in data.iterrows()
     }
     return osm_node_location_types
 

@@ -1,0 +1,104 @@
+{
+    "Singing School": [
+        "Office Workplace"
+    ],
+    "Food Market": [
+        "Office Workplace"
+    ],
+    "Kindergarden": [
+        "Office Workplace"
+    ],
+    "Car Wash": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Indoor Swimming Pool": [
+        "Office Workplace"
+    ],
+    "Fitness Studio": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "School": [
+        "Office Workplace"
+    ],
+    "Cinema Location": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Bar Location": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Opera": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Dance Club": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Concert House": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Supermarket": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Doctors Office": [
+        "Office Workplace"
+    ],
+    "Horse Stable": [
+        "Office Workplace"
+    ],
+    "Summer Camp": [
+        "Volunteer Workplace"
+    ],
+    "Yoga Studio": [
+        "Office Workplace"
+    ],
+    "Musical Society": [
+        "Office Workplace"
+    ],
+    "University": [
+        "Office Workplace"
+    ],
+    "Theater": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Dance Studio": [
+        "Office Workplace"
+    ],
+    "Shopping Mall": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Community College": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Outdoor Swimming Pool": [
+        "Office Workplace"
+    ],
+    "Golf Club": [
+        "Office Workplace"
+    ],
+    "Local Recreational Area": [],
+    "Museum": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ],
+    "Bow Range": [
+        "Office Workplace"
+    ],
+    "Soccer Practice Location": [
+        "Office Workplace",
+        "Volunteer Workplace"
+    ],
+    "Cafe": [
+        "Office Workplace",
+        "Workplace (shift worker)"
+    ]
+}
