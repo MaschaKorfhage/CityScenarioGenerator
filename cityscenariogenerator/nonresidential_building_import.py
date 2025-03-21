@@ -1,10 +1,12 @@
+from pathlib import Path
 from cityscenariogenerator import builda_client_import
-from cityscenariogenerator.overpass_import import import_health_buildings
+from cityscenariogenerator.overpass_import import osm_data_join
 from cityscenariogenerator.poi_type_mapping import AlkisMapper, BuildingWithLocationType
 
 
 def import_nonresidential_buildings_from_builda(
     builda_query: dict,
+    result_dir: Path,
 ) -> dict[str, BuildingWithLocationType]:
 
     # collect non-residential buildings
@@ -15,6 +17,6 @@ def import_nonresidential_buildings_from_builda(
     buildings_by_id = {b.building.id: b for b in buildings}
 
     # use OSM data to get more accurate building types
-    import_health_buildings.add_osm_location_types(buildings_by_id)
+    osm_data_join.add_osm_location_types(buildings_by_id, result_dir)
 
     return buildings_by_id

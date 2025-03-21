@@ -1,5 +1,5 @@
 import abc
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 import random
 from typing import Any
@@ -11,15 +11,15 @@ from cityscenariogenerator.lpg_locations import LpgLocations
 
 
 @dataclass_json
-@dataclass
+@dataclass(frozen=True)
 class LocationType:
     """
     Stores all LPG locations that apply for a certain type of POI.
     One object is used for one building code (e.g., ALKIS).
     """
 
-    non_work_locations: set[str]
-    work_locations: set[str]
+    non_work_locations: set[str] = field(default_factory=set)
+    work_locations: set[str] = field(default_factory=set)
 
 
 @dataclass
@@ -30,7 +30,7 @@ class BuildingWithLocationType:
     """
 
     building: builda.NonResidentialBuilding
-    location_type: LocationType | None
+    location_type: LocationType
 
     def collect_lpg_locations(self) -> list[str]:
         """
@@ -74,9 +74,13 @@ class PoiLocationMapper(abc.ABC):
         return {key: mapping2[val] for key, val in mapping1.items() if val in mapping2}
 
     @abc.abstractmethod
+    def get_orig_category(self, building: builda.NonResidentialBuilding) -> str | None:
+        pass
+
+    @abc.abstractmethod
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
-    ) -> LocationType | None:
+    ) -> LocationType:
         pass
 
     def get_locations_for_buildings(
@@ -110,9 +114,14 @@ class NaceCodeMapper(PoiLocationMapper):
         )
         return combined
 
+    def get_orig_category(self, building):
+        if not building.use:
+            return None
+        return building.use.get("nace_code", None)
+
     def get_matching_locations(
         self, building: builda.NonResidentialBuilding
-    ) -> LocationType | None:
+    ) -> LocationType:
         raise NotImplementedError(
             "The interface changed, the Nace mapping has not been updated yet"
         )
@@ -147,15 +156,23 @@ class AlkisMapper(PoiLocationMapper):
             )
         )
 
-    def get_matching_locations(
-        self, building: builda.NonResidentialBuilding
-    ) -> LocationType | None:
+    def get_orig_category(
+        self, building: builda.NonResidentialBuilding, as_text: bool = True
+    ) -> str | None:
         category = (
             building.use.get("raw", {}).get("alkis", {}).get("function_type", None)
         )
+        if not as_text:
+            return category
+        return self.code_descriptions.get(category, None)
+
+    def get_matching_locations(
+        self, building: builda.NonResidentialBuilding
+    ) -> LocationType:
+        category = self.get_orig_category(building, False)
         if not category:
-            return None
-        return self.location_mapping.get(category, None)
+            return LocationType()
+        return self.location_mapping.get(category, LocationType())
 
 
 def check_nace_to_location_mapping():

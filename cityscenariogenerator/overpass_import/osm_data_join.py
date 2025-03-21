@@ -3,6 +3,8 @@ Loads OpenStreetMap (OSM) node data from overpass turbo and does a spatial join
 with BUILDA buildings to add better location types to non-residential buildings.
 """
 
+from collections import Counter, defaultdict
+from dataclasses import dataclass
 import logging
 from pathlib import Path
 from typing import Iterable
@@ -16,6 +18,7 @@ from cityscenariogenerator import builda_client_import
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
 import cityscenariogenerator.plots.unmapped_building_map as buil_map
 from cityscenariogenerator.poi_type_mapping import (
+    AlkisMapper,
     BuildingWithLocationType,
     LocationType,
 )
@@ -28,12 +31,63 @@ OVERPASS_DATA_DIR = Path("data/osm_input_data")
 class DFColumns:
     BUILDA_ID = "id_builda"
     OSM_ID = "id"
+    DISTANCE = "distance"
+
+
+@dataclass(frozen=True)
+class LocReplacement:
+    """
+    Stores a replacement of the location type of a single building, e.g., when adding
+    data from OpenStreetMap to BUILDA buildings.
+    """
+
+    old: LocationType | None
+    new: LocationType
+
+    def is_identical(self) -> bool:
+        """
+        Whether the old and new location types are identical, meaning that the OSM
+        data matches the location type determined from BUILDA data (ALKIS).
+
+        :return: True if identical, otherwise False
+        """
+        return (
+            self.old is not None
+            and self.old.non_work_locations == self.new.non_work_locations
+        )
+
+    def is_added(self) -> bool:
+        """
+        Whether the building was assigned a new location type when it did not
+        have any type before.
+
+        :return: True if the building did not have a location type before, otherwise False
+        """
+        return not self.old or not self.old.non_work_locations
+
+    def is_replaced(self) -> bool:
+        """
+        Whether the building was assigned a new, different location type.
+
+        :return: True if the new location type is different from the original one, otherwise False
+        """
+        return not self.is_identical() and not self.is_added()
+
+    def __str__(self):
+        old_str = ", ".join(self.old.non_work_locations) if self.old else ""
+        new_str = ", ".join(self.new.non_work_locations)
+        return f"{old_str} -> {new_str}"
 
 
 def load_overpass_data(city: str):
+    """
+    Loads an overpass data file for a city from the overpass data directory.
+
+    :param city: the name of the city; requires a matching .geojson file in the directory
+    :return: the GeoDataFrame with the data
+    """
     filepath = OVERPASS_DATA_DIR / f"{city}.geojson"
     overpass_df = gpd.read_file(filepath)
-    print(overpass_df.head())
     return overpass_df
 
 
@@ -59,7 +113,7 @@ def adapt_joined_df(joined_df, geometry_col: str):
         + "\n"
         + joined_df["amenity"]
         + "\n"
-        + joined_df["distance"].round(1).astype(str)
+        + joined_df[DFColumns.DISTANCE].round(1).astype(str)
         + " m"
     )
 
@@ -74,10 +128,10 @@ def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     :return: filtered dataframe
     """
     # filter duplicate matches
-    filtered = df.sort_values(by="distance").drop_duplicates(
+    filtered = df.sort_values(by=DFColumns.DISTANCE).drop_duplicates(
         subset=[DFColumns.BUILDA_ID], keep="first"
     )
-    print(f"Removed {len(df) - len(filtered)} duplicate matches")
+    logging.info(f"Removed {len(df) - len(filtered)} duplicate matches")
     return filtered
 
 
@@ -126,7 +180,7 @@ def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
 
 def map_osm_node(mappings: dict[str, dict], row) -> LocationType:
     nonwork_location = get_nonwork_location_for_node(mappings, row)
-    work_locations = set("Office Workplace")  # TODO
+    work_locations = {"Office Workplace"}  # TODO
     return LocationType({nonwork_location}, work_locations)
 
 
@@ -142,7 +196,9 @@ def map_osm_nodes_to_locations(
     return osm_node_location_types
 
 
-def add_osm_location_types(buildings: dict[str, BuildingWithLocationType]) -> None:
+def add_osm_location_types(
+    buildings: dict[str, BuildingWithLocationType], result_dir: Path
+) -> set[str]:
     overpass_df = load_overpass_data("Aachen")
     # convert BUILDA objects to GeoDataFrame
     builda_df = builda_to_geodf(b.building for b in buildings.values())
@@ -151,27 +207,102 @@ def add_osm_location_types(buildings: dict[str, BuildingWithLocationType]) -> No
     builda_df.to_crs("EPSG:3857", inplace=True)
 
     # spatial join
+    distance = 20
     joined_df = gpd.sjoin_nearest(
         overpass_df,
         builda_df,
-        distance_col="distance",
+        distance_col=DFColumns.DISTANCE,
         exclusive=False,
-        max_distance=20,
+        max_distance=distance,
     )
     joined_df = remove_duplicate_matches(joined_df)
-    logging.info(f"Matched {len(joined_df)} non-residential buildings to OSM nodes.")
+    logtext = f"Matched {len(joined_df)} of {len(overpass_df)} OSM nodes to "
+    logtext += f"non-residential buildings. Max distance: {distance} m."
+    logging.info(logtext)
+
+    # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
     osm_node_locations = map_osm_nodes_to_locations(joined_df, keys)
 
     # assign OSM locations to BUILDA buildings
+    return assign_osm_location_type_to_buildings(
+        buildings, joined_df, osm_node_locations, result_dir
+    )
+
+
+def assign_osm_location_type_to_buildings(
+    buildings: dict[str, BuildingWithLocationType],
+    joined_df: gpd.GeoDataFrame,
+    osm_node_locations: dict[str, LocationType],
+    result_dir: Path,
+) -> set[str]:
+    assignments: list[LocReplacement] = []
+    changed = set()
     for _, row in joined_df.iterrows():
         # get the matching location type for the OSM node
         osm_loc_type = osm_node_locations[row[DFColumns.OSM_ID]]
+        matched_building = buildings[row[DFColumns.BUILDA_ID]]
+        # collect which location types were changed due to the assignment
+        replacement = LocReplacement(matched_building.location_type, osm_loc_type)
+        assignments.append(replacement)
+        if not replacement.is_identical():
+            changed.add(matched_building.building.id)
+
         # assign this location type to the corresponding BUILDA building
-        buildings[row[DFColumns.BUILDA_ID]].location_type = osm_loc_type
+        matched_building.location_type = osm_loc_type
+
+    log_changes_in_assigned_location(assignments)
+
+    # for all changed buildings, calculat statistics on building types and new locations
+    changed_buildings = {k: v for k, v in buildings.items() if k in changed}
+    check_building_category_location_connection(changed_buildings, result_dir)
+    return changed
 
 
-def main():
+def log_changes_in_assigned_location(assignments: list[LocReplacement]):
+    """
+    Logs how many buildings were assigned the same location type they already had,
+    and how many received a new location types.
+
+    :param assignments: list of location type replacements
+    """
+    identical = [str(x) for x in assignments if x.is_identical()]
+    added = [str(x) for x in assignments if x.is_added()]
+    replaced = [str(x) for x in assignments if x.is_replaced()]
+    logging.info(f"Identical location types: {Counter(identical).most_common()}")
+    logging.info(f"Added location types: {Counter(added).most_common()}")
+    logging.info(f"Changed location types: {Counter(replaced).most_common()}")
+
+
+def check_building_category_location_connection(
+    buildings: dict[str, BuildingWithLocationType],
+    result_dir: Path,
+) -> None:
+    # group all buildings by their new non-work location type
+    buildings_by_loc = defaultdict(list)
+    for b in buildings.values():
+        locs = b.location_type.non_work_locations
+        assert len(locs) == 1, "When replacing locations, only one should be given"
+        buildings_by_loc[next(iter(locs))].append(b.building)
+
+    # check how many buildings of each category were assigned the same location type
+    poi_mapper = AlkisMapper()
+    text = "The following shows all BUILDA building categories that were assigned "
+    text += "a new location type using OpenStreetMap data.\n===\n"
+    for location, group in buildings_by_loc.items():
+        pairs = [poi_mapper.get_orig_category(b) for b in group]
+        c = Counter(pairs)
+        text += f"\nBuildings with new location type {location}:\n"
+        text += "\n".join(f"{count:3d}: {key}" for key, count in c.most_common())
+
+    # write the results to a text file
+    directory = result_dir / "poi_mapping"
+    directory.mkdir(parents=True, exist_ok=True)
+    with open(directory / "categories_with_new_osm_tag.txt", "w", encoding="utf8") as f:
+        f.write(text)
+
+
+def show_osm_builda_join_on_map():
     # load overpass building data
     overpass_df = load_overpass_data("Aachen")
 
@@ -204,7 +335,7 @@ def main():
     joined_df = gpd.sjoin_nearest(
         overpass_df,
         builda_df,
-        distance_col="distance",
+        distance_col=DFColumns.DISTANCE,
         exclusive=False,
         max_distance=20,
     )
@@ -227,4 +358,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    show_osm_builda_join_on_map()
