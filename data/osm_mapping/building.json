@@ -1,0 +1,21 @@
+{
+    "Supermarket": [
+        "supermarket"
+    ],
+    "Kindergarden": [
+        "kindergarten"
+    ],
+    "School": [
+        "school"
+    ],
+    "University": [
+        "university"
+    ],
+    "Horse Stable": [
+        "stable",
+        "riding_hall"
+    ],
+    "Museum": [
+        "museum"
+    ]
+}

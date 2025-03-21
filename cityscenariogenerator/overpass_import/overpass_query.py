@@ -4,10 +4,13 @@ from pathlib import Path
 
 
 OSM_MAPPING_PATH = Path("data/osm_mapping")
+#: character used as an alternative ot a colon in OSM keys for filenames
+OSM_COLON_ALT = "#"
 
 
 def load_osm_mapping(key_name: str) -> dict[str, list[str]]:
-    with open(OSM_MAPPING_PATH / f"{key_name}.json", "r") as f:
+    key_filename = key_name.replace(":", OSM_COLON_ALT)
+    with open(OSM_MAPPING_PATH / f"{key_filename}.json", "r") as f:
         mapping = json.load(f)  # TODO: invert dictionary
     # mapping file is from LPG location to OSM key value --> invert it
     inverted = {val: loc for loc, vals in mapping.items() for val in vals}
@@ -23,7 +26,7 @@ def get_osm_keys_for_mapping() -> list[str]:
 
     :return: list of relevant OSM keys
     """
-    return [p.stem for p in OSM_MAPPING_PATH.iterdir()]
+    return [p.stem.replace(OSM_COLON_ALT, ":") for p in OSM_MAPPING_PATH.iterdir()]
 
 
 def generate_key_value_list(key_name: str) -> str:
@@ -31,7 +34,7 @@ def generate_key_value_list(key_name: str) -> str:
     values = set(data.keys())
     assert len(values) > 0, f"No values found for key {key_name}"
     value_str = "|".join(values)
-    return f'"{key_name}"~"{value_str}"'
+    return f'"{key_name}"~"^({value_str})$"'
 
 
 def generate_single_key_query(key_name: str) -> str:

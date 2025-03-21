@@ -3,5 +3,35 @@
         "doctors",
         "dentist",
         "clinic"
+    ],
+    "Cafe": [
+        "cafe",
+        "ice_cream"
+    ],
+    "Bar Location": [
+        "bar",
+        "pub",
+        "biergarten"
+    ],
+    "Dance Studio": [
+        "dancing_school"
+    ],
+    "Musical Society": [
+        "music_school"
+    ],
+    "School": [
+        "school"
+    ],
+    "Cinema Location": [
+        "cinema"
+    ],
+    "Dance Club": [
+        "nightclub"
+    ],
+    "Theater": [
+        "theatre"
+    ],
+    "Food Market": [
+        "marketplace"
     ]
 }

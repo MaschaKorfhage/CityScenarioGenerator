@@ -190,7 +190,7 @@ def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
         # otherwhise continue trying with the remaining mappings
     # If no mapping has an entry, a suitable location cannot be determined for this node.
     # This should not happen, as only relevant nodes are queried from overpass.
-    raise Exception(f"Could not match an OSM node: {row}")
+    raise Exception(f"Could not match an OSM node:\n{row}")
 
 
 def map_osm_node(
