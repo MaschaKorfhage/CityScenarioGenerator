@@ -1,6 +1,7 @@
 """Creates configuration files for the LPG out of BuildingData objects generated from BUILDA"""
 
 from collections import defaultdict
+import functools
 import itertools
 import json
 import logging
@@ -39,6 +40,7 @@ def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
     return {k: list(g) for k, g in itertools.groupby(persons, lambda p: p.TemplateName)}
 
 
+@functools.lru_cache
 def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
     """Calculates the distance between two sets of coordinates in m"""
     p1 = (c1.Latitude, c1.Longitude)
