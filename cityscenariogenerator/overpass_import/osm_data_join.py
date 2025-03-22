@@ -49,14 +49,20 @@ class LocReplacement:
     def is_identical(self) -> bool:
         """
         Whether the old and new location types are identical, meaning that the OSM
-        data matches the location type determined from BUILDA data (ALKIS).
+        data matches the location type determined from BUILDA data (ALKIS). Also returns
+        True if multiple possible location types where determined from BUILDA, and the one
+        determined from OSM is one of them.
 
         :return: True if identical, otherwise False
         """
-        return (
-            self.old is not None
-            and self.old.non_work_locations == self.new.non_work_locations
-        )
+        if self.old is None:
+            return False
+        if self.old.non_work_locations == self.new.non_work_locations:
+            return True
+        if len(self.new.non_work_locations) == 1:
+            loc = next(iter(self.new.non_work_locations))
+            return loc in self.old.non_work_locations
+        return False
 
     def is_added(self) -> bool:
         """
@@ -287,9 +293,14 @@ def log_changes_in_assigned_location(assignments: list[LocReplacement]):
     identical = [str(x) for x in assignments if x.is_identical()]
     added = [str(x) for x in assignments if x.is_added()]
     replaced = [str(x) for x in assignments if x.is_replaced()]
-    logging.info(f"Identical location types: {Counter(identical).most_common()}")
-    logging.info(f"Added location types: {Counter(added).most_common()}")
-    logging.info(f"Changed location types: {Counter(replaced).most_common()}")
+    c_ident = Counter(identical)
+    c_added = Counter(added)
+    c_repl = Counter(replaced)
+    logging.info(
+        f"Identical location types ({c_ident.total()}): {c_ident.most_common()}"
+    )
+    logging.info(f"Added location types ({c_added.total()}): {c_added.most_common()}")
+    logging.info(f"Changed location types ({c_repl.total()}): {c_repl.most_common()}")
 
 
 def check_building_category_location_connection(
@@ -310,7 +321,7 @@ def check_building_category_location_connection(
     for location, group in buildings_by_loc.items():
         pairs = [poi_mapper.get_orig_category(b) for b in group]
         c = Counter(pairs)
-        text += f"\nBuildings with new location type {location}:\n"
+        text += f"\nBuildings with new location type {location}: {len(group)}\n"
         text += "\n".join(f"{count:3d}: {key}" for key, count in c.most_common())
 
     # write the results to a text file
