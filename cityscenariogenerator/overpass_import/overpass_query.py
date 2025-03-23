@@ -2,7 +2,7 @@ import itertools
 import json
 from pathlib import Path
 
-
+#: path to the directory containing the OSM mapping files, one per OSM key
 OSM_MAPPING_PATH = Path("data/osm_mapping")
 #: character used as an alternative ot a colon in OSM keys for filenames
 OSM_COLON_ALT = "#"
@@ -11,7 +11,7 @@ OSM_COLON_ALT = "#"
 def load_osm_mapping(key_name: str) -> dict[str, list[str]]:
     key_filename = key_name.replace(":", OSM_COLON_ALT)
     with open(OSM_MAPPING_PATH / f"{key_filename}.json", "r") as f:
-        mapping = json.load(f)  # TODO: invert dictionary
+        mapping = json.load(f)
     # mapping file is from LPG location to OSM key value --> invert it
     inverted = {val: loc for loc, vals in mapping.items() for val in vals}
     assert set(itertools.chain.from_iterable(mapping.values())) == set(

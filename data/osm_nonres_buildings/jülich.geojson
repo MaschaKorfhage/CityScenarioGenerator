@@ -1,0 +1,1639 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-03-23T18:08:55Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/49320461",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "6a",
+        "addr:postcode": "52428",
+        "addr:street": "Marktplatz",
+        "amenity": "doctors",
+        "contact:fax": "+49-2461-58702",
+        "contact:phone": "+49 2461 56161",
+        "contact:website": "http://www.zimjuelich.de/",
+        "healthcare": "doctor",
+        "name": "ZIM Jülich",
+        "opening_hours": "Mo-Fr 08:00-10:00 open \"Akutspechstunde\" || Mo-Fr 07:30-13:00 open \"Sprechstunde\", Mo,Tu,Th 14:30-17:00 open \"Sprechstunde\" || \"Nach Vereinbarung\"; Sa-Su, PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3580566,
+          50.9216459
+        ]
+      },
+      "id": "node/49320461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/57224720",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "12",
+        "addr:postcode": "52428",
+        "addr:street": "Margaretenstraße",
+        "brand": "REWE",
+        "brand:wikidata": "Q16968817",
+        "brand:wikipedia": "de:Rewe",
+        "check_date:opening_hours": "2022-12-15",
+        "name": "REWE",
+        "opening_hours": "Mo-Sa 07:00-22:00",
+        "self_checkout": "yes",
+        "shop": "supermarket",
+        "website": "https://www.rewe.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3613591,
+          50.9078086
+        ]
+      },
+      "id": "node/57224720"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/60027730",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "78-82",
+        "addr:postcode": "52428",
+        "addr:street": "Große Rurstraße",
+        "brand": "Netto Marken-Discount",
+        "brand:wikidata": "Q879858",
+        "brand:wikipedia": "de:Netto Marken-Discount",
+        "name": "Netto Marken-Discount",
+        "opening_hours": "Mo-Sa 07:00-22:00",
+        "self_checkout": "no",
+        "shop": "supermarket",
+        "website": "https://www.netto-online.de/filialen/Juelich/Grosse-Rurstr-78/9022/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3572225,
+          50.920999
+        ]
+      },
+      "id": "node/60027730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/60570879",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:postcode": "52428",
+        "addr:street": "In der Zitadelle",
+        "amenity": "school",
+        "check_date": "2024-03-23",
+        "description": "Hauptgebäude",
+        "isced:level": "2;3",
+        "name": "Gymnasium Zitadelle",
+        "operator": "Stadt Jülich",
+        "website": "https://www.gymnasium-zitadelle.de/",
+        "wheelchair": "limited",
+        "wikidata": "Q1558272",
+        "wikipedia": "de:Gymnasium Zitadelle Jülich"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3600616,
+          50.9255698
+        ]
+      },
+      "id": "node/60570879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/114129771",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "50",
+        "addr:postcode": "52428",
+        "addr:street": "Theodor-Heuss-Straße",
+        "addr:suburb": "Koslar",
+        "amenity": "cafe",
+        "name": "Cafe Molli",
+        "opening_hours": "We-Su 09:30-17:00",
+        "website": "https://landhaus-blumenthal.metro.bar/?lang=de",
+        "wifi": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3211847,
+          50.923922
+        ]
+      },
+      "id": "node/114129771"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/126127803",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "38",
+        "addr:postcode": "52428",
+        "addr:street": "Kölnstraße",
+        "amenity": "ice_cream",
+        "contact:phone": "+49 2461 50302",
+        "indoor_seating": "yes",
+        "name": "Panciera",
+        "opening_hours": "Mo-Sa 09:30-22:00;Su 09:30-22:00",
+        "outdoor_seating": "yes",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.362334,
+          50.9227205
+        ]
+      },
+      "id": "node/126127803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/126127811",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "27",
+        "addr:postcode": "52428",
+        "addr:street": "Kölnstraße",
+        "amenity": "cafe",
+        "contact:phone": "+49-2461-7999",
+        "indoor_seating": "yes",
+        "name": "Eiscafé Valentino",
+        "opening_hours": "Mo-Sa 09:00-19:00; Su,PH 10:00-19:00",
+        "outdoor_seating": "yes",
+        "shop": "ice_cream",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3629566,
+          50.9230688
+        ]
+      },
+      "id": "node/126127811"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/126127821",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "52428",
+        "addr:street": "Marktstraße",
+        "amenity": "ice_cream",
+        "indoor_seating": "yes",
+        "name": "Eiscafé Cristallo",
+        "opening_hours": "Tu-Sa 10:00-20:00; Su 11:00-20:00",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3580294,
+          50.9208458
+        ]
+      },
+      "id": "node/126127821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/220882308",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52428",
+        "addr:street": "Kölnstraße",
+        "amenity": "cafe",
+        "check_date": "2024-05-27",
+        "check_date:diet:vegetarian": "2021-08-12",
+        "diet:vegan": "no",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Liebevoll",
+        "opening_hours": "Mo-Su,PH 10:00-22:00+",
+        "outdoor_seating": "yes",
+        "smoking": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3587156,
+          50.922304
+        ]
+      },
+      "id": "node/220882308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/220884142",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "4-6",
+        "addr:postcode": "52428",
+        "addr:street": "Marktstraße",
+        "amenity": "cafe",
+        "contact:email": "info@mainz-weitz.de",
+        "contact:phone": "+49 2461 58651",
+        "indoor_seating": "yes",
+        "name": "CAFÉ Mainz-Weitz",
+        "opening_hours": "Mo-Fr 06:00-18:00; Sa 06:00-15:00; Su 10:00-18:00",
+        "outdoor_seating": "yes",
+        "toilets:wheelchair": "no",
+        "website": "https://www.mainz-weitz.de/cafe/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3578918,
+          50.9213023
+        ]
+      },
+      "id": "node/220884142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/223102812",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52428",
+        "addr:street": "Kleine Kölnstraße",
+        "amenity": "cafe",
+        "name": "Cafe Fleur",
+        "opening_hours": "Mo,We 09:00-22:00, Tu 09:00-16:00, Th 09:00-23:00, Fr 09:00-01:00, Sa 08:30-01:00",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3616267,
+          50.9220229
+        ]
+      },
+      "id": "node/223102812"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/278766291",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "72",
+        "addr:postcode": "52428",
+        "addr:street": "Römerstraße",
+        "brand": "Netto Marken-Discount",
+        "brand:wikidata": "Q879858",
+        "brand:wikipedia": "en:Netto Marken-Discount",
+        "name": "Netto Marken-Discount",
+        "opening_hours": "Mo-Sa 07:00-22:00; PH off",
+        "self_checkout": "no",
+        "shop": "supermarket",
+        "website": "https://www.netto-online.de/filialen/Juelich/Roemerstr-72/6727/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3759932,
+          50.9240706
+        ]
+      },
+      "id": "node/278766291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/386182088",
+        "amenity": "doctors",
+        "name": "Betriebsarzt",
+        "opening_hours": "24/7"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4051285,
+          50.9082588
+        ]
+      },
+      "id": "node/386182088"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/392640118",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "52428",
+        "addr:street": "Adolf-Fischer-Straße",
+        "contact:phone": "+49 2461 939362",
+        "healthcare": "physiotherapist",
+        "name": "Ergotherapie Praxis Twardowski"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3623178,
+          50.9175458
+        ]
+      },
+      "id": "node/392640118"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/429631730",
+        "amenity": "pub",
+        "check_date": "2024-06-22",
+        "name": "Walram Schänke bei Tim",
+        "opening_hours": "Mo,Tu,Th,Fr 14:00-22:00+; Sa,Su,PH 10:00-22:00+",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3544567,
+          50.9207586
+        ]
+      },
+      "id": "node/429631730"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440699751",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "52428",
+        "addr:street": "Bongardstraße",
+        "amenity": "pub",
+        "name": "Zum Fäßchen",
+        "opening_hours": "Tu-Th 18:00-23:00, Fr 17:00-03:00, Sa 18:00-03:00, Su 17:00-23:00; Mo off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3584859,
+          50.9203263
+        ]
+      },
+      "id": "node/440699751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/440699767",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "19",
+        "addr:postcode": "52428",
+        "addr:street": "Kuhlstraße",
+        "amenity": "pub",
+        "contact:phone": "+49-2461-7273",
+        "name": "Pulvermühle",
+        "website": "http://www.pulvermuehle.com/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3546657,
+          50.924085
+        ]
+      },
+      "id": "node/440699767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/568345138",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "11a",
+        "addr:postcode": "52428",
+        "addr:street": "Brockmüllerstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 2461 7000",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal",
+        "name": "Jürgen Elsen",
+        "opening_hours": "Mo 08:00-12:30,15:00-18:00; Tu-We 08:00-12:30; Th 08:00-12:30,15:00-18:00; Fr 08:00-12:30; PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.359234,
+          50.9163111
+        ]
+      },
+      "id": "node/568345138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/581993878",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "21",
+        "addr:postcode": "52428",
+        "addr:street": "Linnicher Straße",
+        "amenity": "pub",
+        "contact:fax": "+49-2461-50271",
+        "contact:phone": "+49-2461-2235",
+        "name": "Alt Jülicher Stuben",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3551159,
+          50.9283654
+        ]
+      },
+      "id": "node/581993878"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/581993899",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "52428",
+        "addr:street": "Münchener Straße",
+        "amenity": "doctors",
+        "contact:phone": "+49-2461-7150",
+        "healthcare": "doctor",
+        "healthcare:speciality": "otolaryngology",
+        "name": "HNO Dres. Schütz",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3638681,
+          50.9279164
+        ]
+      },
+      "id": "node/581993899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/588613940",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "52428",
+        "addr:street": "Adenauerstraße",
+        "addr:suburb": "Bourheim",
+        "amenity": "pub",
+        "contact:phone": "+49-2461-4236",
+        "name": "Bourheimer Stuben"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3315913,
+          50.903574
+        ]
+      },
+      "id": "node/588613940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/614840972",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "48",
+        "addr:postcode": "52428",
+        "addr:street": "Große Rurstraße",
+        "amenity": "dentist",
+        "contact:phone": "+49-2461-2690",
+        "healthcare": "dentist",
+        "name": "Drs. Anton Gielen",
+        "opening_hours": "\"Termine nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3613688,
+          50.9214298
+        ]
+      },
+      "id": "node/614840972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/614840975",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "52428",
+        "addr:street": "Poststraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Frohen & Quitmann",
+        "opening_hours": "Mo-Fr 08:00-11:30, Mo,Tu,Th 13:30-17:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3603808,
+          50.9221124
+        ]
+      },
+      "id": "node/614840975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/616356654",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "52428",
+        "addr:street": "Düsseldorfer Straße",
+        "amenity": "cafe",
+        "check_date": "2024-09-10",
+        "name": "Mi & Do Bubble Tea",
+        "old_name": "Warsteiner Bistro",
+        "opening_hours": "Mo-Tu 11:00-20:00; We-Th 13:00-20:00; Fr-Sa 11:00-20:00; Su 13:00-20:00",
+        "website": "https://miunddo.business.site/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3574351,
+          50.9235016
+        ]
+      },
+      "id": "node/616356654"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/616356700",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "38",
+        "addr:postcode": "52428",
+        "addr:street": "Alte Dorfstraße",
+        "addr:suburb": "Broich",
+        "amenity": "pub",
+        "contact:phone": "+49-2461-343643",
+        "name": "Zur Schlossmauer",
+        "tourism": "motel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3401448,
+          50.9469
+        ]
+      },
+      "id": "node/616356700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/631935775",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "29",
+        "addr:postcode": "52428",
+        "addr:street": "Kirchstraße",
+        "addr:suburb": "Barmen",
+        "name": "DORV Zentrum GmbH",
+        "opening_hours": "Mo 06:30-12:30;Tu 06:30-12:30, 15:00-18:00;We-Th 06:30-12:30;Fr 06:30-12:30, 15:00-18:00;Sa 06:30-12:30;Su 08:00-11:00",
+        "shop": "supermarket",
+        "website": "https://www.dorv.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3034212,
+          50.9422915
+        ]
+      },
+      "id": "node/631935775"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/631950185",
+        "amenity": "pub",
+        "name": "Wirtz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.2925578,
+          50.9350152
+        ]
+      },
+      "id": "node/631950185"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/747068971",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "52428",
+        "addr:street": "Kleine Rurstraße",
+        "amenity": "bar",
+        "check_date": "2024-06-22",
+        "name": "Sky-Zone",
+        "opening_hours": "Su-Th 08:00-01:00, Fr,Sa 08:00-03:00",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3561247,
+          50.9210822
+        ]
+      },
+      "id": "node/747068971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/747069012",
+        "amenity": "pub",
+        "name": "Bretterbud' Bei Detlef Freizeittreff",
+        "opening_hours": "Mo,We,Fr 17:00-22:00; Th,Sa,Su 18:00-24:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3558457,
+          50.9231455
+        ]
+      },
+      "id": "node/747069012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/759524101",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52428",
+        "addr:street": "Theodor-Körner-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "name": "Kinderarzt Guido Klughardt",
+        "opening_hours": "Mo-Fr 08:00-13:00; Mo, Tu, Th 14:30-17:00",
+        "phone": "+49 2461 8899",
+        "website": "http://www.kinderarzt-juelich.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3612051,
+          50.9205292
+        ]
+      },
+      "id": "node/759524101"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/759524103",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "52428",
+        "addr:street": "Bongardstraße",
+        "amenity": "pub",
+        "check_date": "2024-10-31",
+        "name": "Top Ten",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3581771,
+          50.9203709
+        ]
+      },
+      "id": "node/759524103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/831151735",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "3-7",
+        "addr:postcode": "52428",
+        "addr:street": "Aachener Straße",
+        "amenity": "cafe",
+        "name": "Tuana Frühstücksalon und Cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3548882,
+          50.9250382
+        ]
+      },
+      "id": "node/831151735"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/840547688",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "52428",
+        "addr:street": "Van-Gils-Straße",
+        "addr:suburb": "Altenburg",
+        "amenity": "biergarten",
+        "contact:fax": "+49-2461-3012872",
+        "contact:phone": "+49-2461-3012871",
+        "name": "Gut Alte Burg",
+        "tourism": "hotel",
+        "website": "https://www.gut-alte-burg.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3888212,
+          50.8917335
+        ]
+      },
+      "id": "node/840547688"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/935494026",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "52428",
+        "addr:street": "Marktstraße",
+        "name": "Minimarkt u Feinkost",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3579511,
+          50.9211054
+        ]
+      },
+      "id": "node/935494026"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/944440269",
+        "amenity": "biergarten",
+        "name": "Biergarten am Sportplatz",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3096375,
+          50.9459267
+        ]
+      },
+      "id": "node/944440269"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/955313283",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "52428",
+        "addr:street": "Kurfürstenstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "neurology",
+        "name": "augenzentrum jülich",
+        "opening_hours": "Mo-Fr 08:30-13:00; Mo,Tu,Th 15:00-18:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3633366,
+          50.9276101
+        ]
+      },
+      "id": "node/955313283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1011811827",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "28",
+        "addr:postcode": "52428",
+        "addr:street": "Neusser Straße",
+        "amenity": "doctors",
+        "contact:fax": "+49 2461 52014",
+        "contact:phone": "+49 2461 52013",
+        "contact:website": "http://www.drkrieger.de",
+        "healthcare": "generalist",
+        "healthcare:speciality:emergency": "yes",
+        "healthcare:speciality:internal": "yes",
+        "healthcare:speciality:sports": "yes",
+        "name": "Dr. med. Michael Krieger",
+        "opening_hours": "Mo-Fr 08:00-11:30; Mo 17:00-18:30; Th 17:00-18:30",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.365216,
+          50.925632
+        ]
+      },
+      "id": "node/1011811827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1226452526",
+        "amenity": "marketplace",
+        "check_date:opening_hours": "2022-09-28",
+        "name": "Jülicher Wochenmarkt",
+        "opening_hours": "Tu,Th,Sa 07:00-13:00",
+        "website": "https://www.juelich.de/wochenmarkt/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3578823,
+          50.9219868
+        ]
+      },
+      "id": "node/1226452526"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1460092008",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "52428",
+        "addr:street": "Robert-Koch-Straße",
+        "amenity": "pub",
+        "name": "Nordschänke",
+        "sport": "9pin"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3616828,
+          50.9309202
+        ]
+      },
+      "id": "node/1460092008"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1552162077",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "52428",
+        "addr:street": "Berliner Straße",
+        "brand": "PENNY",
+        "brand:wikidata": "Q284688",
+        "brand:wikipedia": "en:Penny (supermarket)",
+        "name": "PENNY",
+        "opening_hours": "Mo-Sa 08:00-20:00",
+        "self_checkout": "no",
+        "shop": "supermarket",
+        "website": "https://www.penny.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3559153,
+          50.9291545
+        ]
+      },
+      "id": "node/1552162077"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1725130679",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "52428",
+        "addr:street": "Nordstraße",
+        "amenity": "dentist",
+        "contact:phone": "+49-2461-56544",
+        "healthcare": "dentist",
+        "name": "Manfred Nathan"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3591945,
+          50.9308153
+        ]
+      },
+      "id": "node/1725130679"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2338018036",
+        "addr:city": "Jülich",
+        "addr:housenumber": "16",
+        "addr:postcode": "52428",
+        "addr:street": "Kurfürstenstraße",
+        "amenity": "dentist",
+        "check_date:opening_hours": "2021-06-14",
+        "healthcare": "dentist",
+        "name": "Dr. Klement Reinartz",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo,Tu,Th 14:00-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3626106,
+          50.9240968
+        ]
+      },
+      "id": "node/2338018036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2980029719",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52428",
+        "addr:street": "Theodor-Körner-Straße",
+        "amenity": "doctors",
+        "check_date": "2024-05-27",
+        "email": "info@radiologie-team-rur.de",
+        "fax": "+49 2461 56573",
+        "healthcare": "doctor",
+        "healthcare:speciality": "radiology",
+        "name": "Radiologie team rur",
+        "opening_hours": "Mo-Fr 07:45-13:00, 13:45-17:00; We,Fr 07:45-13:00",
+        "phone": "+49 2461 97390",
+        "website": "https://www.radiologie-team-rur.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3611749,
+          50.9205654
+        ]
+      },
+      "id": "node/2980029719"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3740771643",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "11a",
+        "addr:postcode": "52428",
+        "addr:street": "Brockmüllerstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 2461 7000",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;naturopathy",
+        "name": "Undine Fuchs",
+        "opening_hours": "Mo 08:00-12:30,15:00-18:00; Tu-We 08:00-12:30; Th 08:00-12:30,15:00-18:00; Fr 08:00-12:30; PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3592826,
+          50.9163282
+        ]
+      },
+      "id": "node/3740771643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4144081508",
+        "addr:city": "Jülich",
+        "addr:housenumber": "67",
+        "addr:postcode": "52428",
+        "addr:street": "Linnicher Straße",
+        "amenity": "music_school",
+        "description": "Musikschule der Stadt Jülich im Schulzentrum",
+        "name": "Musikschule Jülich",
+        "phone": "+49 2461 93650",
+        "website": "https://www.juelich.de/musikschule"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3508657,
+          50.9318226
+        ]
+      },
+      "id": "node/4144081508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5595041760",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "67",
+        "addr:postcode": "52428",
+        "addr:street": "Linnicher Straße",
+        "amenity": "school",
+        "isced:level": "2",
+        "name": "Sekundarschule Jülich",
+        "operator": "Stadt Jülich",
+        "website": "https://www.sekundarschule-juelich.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3506826,
+          50.9321184
+        ]
+      },
+      "id": "node/5595041760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5599995745",
+        "amenity": "ice_cream",
+        "name": "Frozen Joghurt",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.361014,
+          50.9221283
+        ]
+      },
+      "id": "node/5599995745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5669718949",
+        "addr:city": "Jülich",
+        "addr:housenumber": "21",
+        "addr:postcode": "52428",
+        "addr:street": "Antoniusstraße",
+        "check_date": "2024-05-02",
+        "contact:mobile": "+49 178 8852427",
+        "contact:phone": "+49 2461 9966369",
+        "contact:website": "https://www.physiotherapie-hufmann.de/",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "name": "Physiotherapie „PTH“"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3582676,
+          50.9150654
+        ]
+      },
+      "id": "node/5669718949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6006928477",
+        "addr:city": "Jülich",
+        "addr:housenumber": "11",
+        "addr:postcode": "52428",
+        "addr:street": "Marktplatz",
+        "amenity": "cafe",
+        "brand:wikidata": "Q1025505",
+        "cuisine": "burger;pizza;coffee_shop;ice_cream;american",
+        "email": "juelich@cafe-extrablatt.de",
+        "indoor_seating": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Cafe Extrablatt",
+        "opening_hours": "Mo-Sa 08:00-24:00; Su,PH 09:30-24:00",
+        "operator": "AC Gastro GmbH",
+        "outdoor_seating": "yes",
+        "phone": "+49 2461 9395840",
+        "smoking": "outside",
+        "toilets:wheelchair": "yes",
+        "website": "https://cafe-extrablatt.de/standorte/details/cafe-extrablatt-juelich",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3574237,
+          50.922245
+        ]
+      },
+      "id": "node/6006928477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8714573332",
+        "addr:city": "Jülich",
+        "addr:housenumber": "35",
+        "addr:postcode": "52428",
+        "addr:street": "Kreisbahnstraße",
+        "addr:suburb": "Koslar",
+        "amenity": "doctors",
+        "description": "Facharzt für Innere Medizin, Internistische Hausarztpraxis",
+        "healthcare": "doctor",
+        "name": "Internisrische Hausarztpraxis Dr med Yihune",
+        "opening_hours": "Mo, Tu, Th 07:30-19:00; We, Fr 07:30-13:00",
+        "phone": "+49 2461 2774",
+        "website": "https://www.yihune.net/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3248799,
+          50.9259454
+        ]
+      },
+      "id": "node/8714573332"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8802032181",
+        "amenity": "cafe",
+        "name": "da Valentina",
+        "opening_hours": "Mo-Th 11:00-19:00; Fr 11:00-18:00; Su 12:00-19:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3631441,
+          50.9223302
+        ]
+      },
+      "id": "node/8802032181"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8895392240",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Bülow",
+        "opening_hours": "\"Termine bitte nach Absprache\"",
+        "website": "zahnaerztin-juelich.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3626149,
+          50.9231904
+        ]
+      },
+      "id": "node/8895392240"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8895642793",
+        "name": "Orient Oase",
+        "opening_hours": "Mo-Th 10:00-18:30; Fr 10:00-13:00,14:00-18:30; Sa 10:00-17:30",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3602914,
+          50.9207377
+        ]
+      },
+      "id": "node/8895642793"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9024560144",
+        "amenity": "cafe",
+        "check_date": "2023-08-28",
+        "indoor_seating": "yes",
+        "name": "Gustoso Bistro Cafe",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3582573,
+          50.9219952
+        ]
+      },
+      "id": "node/9024560144"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9024561604",
+        "amenity": "cafe",
+        "indoor_seating": "no",
+        "name": "Beans and Friends",
+        "outdoor_seating": "no",
+        "takeaway": "only"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.357509,
+          50.9215913
+        ]
+      },
+      "id": "node/9024561604"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9032744709",
+        "amenity": "doctors",
+        "check_date": "2024-05-27",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "level": "0",
+        "name": "Kinderpraxis Jülich",
+        "office": "physician",
+        "opening_hours": "Mo-Fr 08:00-12:30;Mo,Tu,Th,Fr 14:30-17:00",
+        "operator": "Banning, Janas-Schroeteler, Klein",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.35981,
+          50.9229071
+        ]
+      },
+      "id": "node/9032744709"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9032788400",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2024-08-23",
+        "healthcare": "doctor",
+        "level": "1",
+        "name": "Dr Behrens",
+        "opening_hours": "Mo-Fr 08:30-13:00, Mo,We,Th 15:00-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3598458,
+          50.9228704
+        ]
+      },
+      "id": "node/9032788400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9032839159",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "urology",
+        "level": "3",
+        "name": "Dr Necvolod",
+        "opening_hours": "Mo-Fr 09:00-12:00, Mo,Tu,Th 15:00-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3599055,
+          50.9227997
+        ]
+      },
+      "id": "node/9032839159"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9032842617",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Praxis f Allgemeinmedizin Dr. Hensel",
+        "opening_hours": "Mo-Fr 07:30-11:30, Mo,Tu,Th 15:00-17:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3598785,
+          50.9228346
+        ]
+      },
+      "id": "node/9032842617"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9032846107",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "psychiatry",
+        "name": "Dr Tayyebian",
+        "opening_hours": "Mo,Tu,Th,Fr 07:30-12:30,14:30-16:00; We 07:30-11:30,13:30-15:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3599095,
+          50.9227657
+        ]
+      },
+      "id": "node/9032846107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9229880281",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "12",
+        "addr:postcode": "52428",
+        "addr:street": "Margaretenstraße",
+        "branch": "Getränkemarkt",
+        "brand": "REWE",
+        "brand:wikidata": "Q16968817",
+        "brand:wikipedia": "de:Rewe",
+        "check_date:opening_hours": "2022-12-15",
+        "name": "REWE",
+        "opening_hours": "Mo-Sa 07:00-22:00",
+        "shop": "supermarket",
+        "website": "https://www.rewe.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3611641,
+          50.907678
+        ]
+      },
+      "id": "node/9229880281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11151171248",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "podiatry",
+        "name": "Praxis fuer Podologie Maricela Nikas",
+        "opening_hours": "Mo,Tu,Th 08:00-13:00,14:00-17:00; We,Fr 08:00-13:00,14:00-15:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3580022,
+          50.9230545
+        ]
+      },
+      "id": "node/11151171248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11151232141",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Quitmann und Seef"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3602767,
+          50.9220781
+        ]
+      },
+      "id": "node/11151232141"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11151273145",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Heil"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3602877,
+          50.9222642
+        ]
+      },
+      "id": "node/11151273145"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11205761760",
+        "addr:city": "Jülich",
+        "addr:housenumber": "8",
+        "addr:postcode": "52428",
+        "addr:street": "Marktplatz",
+        "amenity": "cafe",
+        "contact:email": "info@schwan.nrw",
+        "contact:phone": "+49 2461 9840039",
+        "indoor_seating": "yes",
+        "name": "Schwan Bauernhofcafé",
+        "opening_hours": "Mo, We-Sa 09:00-17:00; Tu off; Su, PH 10:00-17:00",
+        "outdoor_seating": "yes",
+        "website": "https://schwan-bauernhofcafe.nrw/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3574201,
+          50.9219026
+        ]
+      },
+      "id": "node/11205761760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11212099736",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "dermatology",
+        "name": "Katarzyna Weidgang",
+        "opening_hours": "Mo 08:00-10:00,14:00-15:00, Tu-Th 08:00-12:00, Fr 08:00-14:00, Tu,Th 15:00-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3606631,
+          50.9211084
+        ]
+      },
+      "id": "node/11212099736"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11212111677",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Ondadent Zahnzentrum Cremer / Rupp / Beutler"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3550426,
+          50.9241361
+        ]
+      },
+      "id": "node/11212111677"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11212119116",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Zahnzentrum Juelich Dres. Classen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3609177,
+          50.9211819
+        ]
+      },
+      "id": "node/11212119116"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11212128243",
+        "healthcare": "physiotherapist",
+        "name": "Frans Bergsma und Juergen Langer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3607258,
+          50.921082
+        ]
+      },
+      "id": "node/11212128243"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11439282683",
+        "amenity": "doctors",
+        "contact:email": "praxis@yihune.de",
+        "contact:facebook": "https://www.facebook.com/dr.yihune/",
+        "contact:fax": "+49 2461 52324",
+        "contact:instagram": "https://www.instagram.com/gabrielyihune/",
+        "contact:mobile": "+49 157 85409055",
+        "contact:phone": "+49 2461 2774",
+        "contact:website": "https://www.yihune.net/",
+        "contact:whatsapp": "https://wa.me/4915161612333",
+        "healthcare": "doctor",
+        "name": "Ärzte-Allianz Koslar Dr. Yihune",
+        "opening_hours": "\"Termine nur nach telefonischer Voranmeldung\"",
+        "operator": "Dr. med. Gabriel Yihune"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3255227,
+          50.924433
+        ]
+      },
+      "id": "node/11439282683"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11861795795",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "Dr med dent Stephanie Apel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3041757,
+          50.9422412
+        ]
+      },
+      "id": "node/11861795795"
+    }
+  ]
+}
