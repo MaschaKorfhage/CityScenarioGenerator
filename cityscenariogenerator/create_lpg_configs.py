@@ -11,7 +11,7 @@ from typing import Any, Iterable
 import geopy.distance  # type: ignore
 import numpy
 from tqdm import tqdm  # type: ignore
-from pylpg import lpgdata  # type: ignore
+from pylpg import lpgdata
 from builda_client import dev_client as builda  # type: ignore
 
 from cityscenariogenerator.lpg_locations import LpgLocations
@@ -76,8 +76,11 @@ def copy_calcspec_file(
         filtered_lines = [s for s in lines if not s.strip().startswith("//")]
         json_str = "\n".join(filtered_lines)
     house_job: lpgdata.HouseCreationAndCalculationJob = (
-        lpgdata.HouseCreationAndCalculationJob.from_json(json_str)
+        lpgdata.HouseCreationAndCalculationJob.from_json(json_str)  # type: ignore
     )
+    assert (
+        house_job.CalcSpec is not None
+    ), f"No CalcSpec set in the template file: {template_path}"
     # change some settings if necessary
     if db_file_path:
         house_job.PathToDatabase = db_file_path
@@ -86,7 +89,7 @@ def copy_calcspec_file(
     # TODO: choose an appropriate GeographicLocation and TemperatureProfile
 
     # save the adjusted settings to the result directory
-    result_json_str: str = house_job.to_json(indent=4)
+    result_json_str: str = house_job.to_json(indent=4)  # type: ignore
     result_file_path = result_directory / "Calcspec.json"
     logging.info(f"Saving simulation settings to {result_file_path}")
     with open(result_file_path, "w+") as f:
@@ -144,7 +147,7 @@ class LPGConfigCreator:
         return random.choice(possible_devices)
 
     def _select_charging_station_set(
-        self, transport_device_set: lpgdata.TransportationDeviceSets
+        self, transport_device_set: lpgdata.JsonReference
     ) -> lpgdata.JsonReference:
         # select a filling station for the gasoline car
         if (
@@ -204,6 +207,7 @@ class LPGConfigCreator:
         """
         if poi_id in self.pois:
             raise Exception(f"Encountered a duplicate POI ID: {poi_id}")
+        assert isinstance(poi.LocationType, str), "Unexpected location type format"
         self.pois[poi_id] = poi
         self.poi_ids_by_type[poi.LocationType].append(poi_id)
 
@@ -217,6 +221,7 @@ class LPGConfigCreator:
         # determine the ID of the POI
         poi_id = f"{location} {building.id}"
         self._add_poi_object(poi_id, poi)
+        return poi
 
     def add_poi(
         self, building_with_type: poi_type_mapping.BuildingWithLocationType
@@ -240,7 +245,7 @@ class LPGConfigCreator:
     def _determine_person_in_hh(
         self, hh: lpgdata.HouseholdData
     ) -> list[lpgdata.PersonData]:
-        return self.persons_in_each_hh[hh.HouseholdTemplateSpec.HouseholdTemplateName]
+        return self.persons_in_each_hh[hh.HouseholdTemplateSpec.HouseholdTemplateName]  # type: ignore
 
     def _determine_poi_num_for_person(self) -> int:
         # TODO: use appropriate distributions to determine the number for each POI type
@@ -271,7 +276,7 @@ class LPGConfigCreator:
                 if poi_id not in self.pois:
                     # create the POI
                     poi = lpgdata.PointOfInterestData(
-                        location, self.houses[house_id].House.Coordinates, None
+                        location, self.houses[house_id].House.Coordinates, None  # type: ignore
                     )
                     self._add_poi_object(poi_id, poi)
 
@@ -317,11 +322,21 @@ class LPGConfigCreator:
         return poi_weights
 
     def _get_site_coordinates(
-        self, poi_id: str, house_coordinates: lpgdata.Coordinates, house_id: str
+        self, building_id: str, house_coordinates: lpgdata.Coordinates, house_id: str
     ) -> lpgdata.Coordinates:
-        if poi_id == lpgdata.Sites.Home.Name or poi_id == house_id:
+        """
+        Returns the coordinates of a building depending on its type. Either looks up
+        the corresponding POI, or, if the building is the home of the person, returns
+        the house coordinates.
+
+        :param building_id: ID of the building to get coordinates for (POI or house)
+        :param house_coordinates: coordinates of the house to use
+        :param house_id: ID of the house the person lives in
+        :return: coordinates of the specified building
+        """
+        if building_id == lpgdata.Sites.Home.Name or building_id == house_id:
             return house_coordinates
-        return self.pois[poi_id].Coordinates
+        return self.pois[building_id].Coordinates  # type: ignore
 
     def check_location_availability(self) -> None:
         """
@@ -348,7 +363,7 @@ class LPGConfigCreator:
         # load the custom POIs from file
         with open(custom_poi_path, "r") as f:
             json_str = f.read()
-            poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest
+            poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
         # add them to the POIs stored in the attributes
         self.pois.update(poi_dict)
         for id, poi in poi_dict.items():
@@ -374,7 +389,7 @@ class LPGConfigCreator:
                     poi_weights = self.select_pois_for_person(
                         person, hcj.House.Coordinates
                     )
-                    hh_poi_preferences[person.PersonName] = (
+                    hh_poi_preferences[person.PersonName] = (  # type: ignore
                         lpgdata.PersonPoiPreferences(poi_weights)
                     )
                     # add selected POIs to the list of used POIs for the house
@@ -479,15 +494,15 @@ class LPGConfigCreator:
         if self.global_city_definition.Routes:
             # extract routes into a separate file
             self.create_routes_config_file(path)
-            self.global_city_definition.Routes = None
-        city_data = self.global_city_definition.to_json(indent=4)
+            self.global_city_definition.Routes = []
+        city_data = self.global_city_definition.to_json(indent=4)  # type: ignore
         with open(filename, "w+") as f:
             f.write(city_data)
 
     def create_routes_config_file(self, path: Path):
         filename = path / "routes.json"
         route_dict = {
-            f"{i}": r.to_dict()
+            f"{i}": r.to_dict()  # type: ignore
             for i, r in enumerate(self.global_city_definition.Routes)
         }
         with open(filename, "w+") as f:

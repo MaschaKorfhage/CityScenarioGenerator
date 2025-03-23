@@ -7,7 +7,7 @@ import folium
 import folium.plugins
 import matplotlib.colors as mcolors
 
-from pylpg.lpgpythonbindings import Coordinates  # type: ignore
+from pylpg.lpgpythonbindings import Coordinates
 
 from cityscenariogenerator.plots.building_map import (
     PointWithCategory,

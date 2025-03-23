@@ -1,7 +1,7 @@
 from typing import Iterable
 
 from builda_client.dev_client import NonResidentialBuilding  # type: ignore
-import pylpg.lpgpythonbindings  # type: ignore
+import pylpg.lpgpythonbindings
 
 from cityscenariogenerator.plots import building_map_interactive
 

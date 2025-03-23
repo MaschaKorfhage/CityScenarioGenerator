@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import contextily as ctx  # type: ignore
 from shapely.geometry import Point  # type: ignore
 
-from pylpg.lpgpythonbindings import Coordinates  # type: ignore
+from pylpg.lpgpythonbindings import Coordinates
 
 
 @dataclass

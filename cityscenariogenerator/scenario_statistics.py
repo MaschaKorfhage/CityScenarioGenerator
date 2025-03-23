@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 from typing import Iterable
 
-from pylpg import lpgdata  # type: ignore
+from pylpg import lpgdata
 
 
 def write_general_info(
@@ -21,11 +21,11 @@ def write_general_info(
     :param path: path for the result file
     """
     houselist = list(house_jobs)
-    num_hh = sum(len(hj.House.Households) for hj in houselist)
+    num_hh = sum(len(hj.House.Households) for hj in houselist)  # type: ignore
     num_persons = sum(
-        len(hh.PointOfInterestPreferences)
+        len(hh.PointOfInterestPreferences)  # type: ignore
         for hj in houselist
-        for hh in hj.House.Households
+        for hh in hj.House.Households  # type: ignore
     )
     info = {
         "houses": len(houselist),
@@ -52,10 +52,10 @@ def write_household_statistics(
     hh_per_house = []
     all_households: list[str] = []
     for house_job in house_jobs:
-        hh_per_house.append(len(house_job.House.Households))
+        hh_per_house.append(len(house_job.House.Households))  # type: ignore
         all_households.extend(
-            hh.HouseholdTemplateSpec.HouseholdTemplateName
-            for hh in house_job.House.Households
+            hh.HouseholdTemplateSpec.HouseholdTemplateName  # type: ignore
+            for hh in house_job.House.Households  # type: ignore
         )
 
     hh_counter = Counter(hh_per_house)
