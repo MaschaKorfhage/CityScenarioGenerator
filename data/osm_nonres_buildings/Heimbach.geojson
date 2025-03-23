@@ -1,0 +1,296 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-03-23T18:22:01Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1202044180",
+        "air_conditioning": "no",
+        "amenity": "cafe",
+        "indoor_seating": "yes",
+        "name": "Camping Bistro",
+        "note": "01.April - 30.September Open",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4755193,
+          50.646946
+        ]
+      },
+      "id": "node/1202044180"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2359317413",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "39",
+        "addr:postcode": "52396",
+        "addr:street": "Hengebachstraße",
+        "amenity": "cafe",
+        "cuisine": "ice_cream",
+        "indoor_seating": "yes",
+        "name": "Eiscafé Wergen",
+        "outdoor_seating": "yes",
+        "takeaway": "yes",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4773367,
+          50.633673
+        ]
+      },
+      "id": "node/2359317413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2460753055",
+        "amenity": "cafe",
+        "indoor_seating": "yes",
+        "name": "Cafe Krupp",
+        "opening_hours": "Tu-Su,PH 10:00-18:00",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4766567,
+          50.633547
+        ]
+      },
+      "id": "node/2460753055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2539970980",
+        "addr:city": "Heimbach",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "52396",
+        "addr:street": "Hausener Straße",
+        "addr:suburb": "Hausen",
+        "amenity": "cafe",
+        "name": "Hausener Kaffeestübchen",
+        "opening_hours": "Th-Su 12:00-18:00",
+        "operator": "Eleonore Gilles",
+        "phone": "+49 2446 3507"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4929739,
+          50.6518737
+        ]
+      },
+      "id": "node/2539970980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2621307241",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "6",
+        "addr:street": "Schwammenauel",
+        "name": "Park Shop",
+        "opening_hours": "Mo-We 08:00-11:00,15:00-18:00; Th-Sa 08:00-12:00,14:00-18:00; Su 08:00-12:00,14:00-17:00",
+        "operator": "Dormio Resorts & Hotels B.V.",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:notes": "yes",
+        "shop": "supermarket",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4453593,
+          50.6329239
+        ]
+      },
+      "id": "node/2621307241"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3263705147",
+        "amenity": "biergarten",
+        "contact:phone": "+49 171 2874310",
+        "name:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4763609,
+          50.6284584
+        ]
+      },
+      "id": "node/3263705147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4075359632",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "1",
+        "addr:postcode": "52396",
+        "addr:street": "Am Giebel",
+        "alt_name": "Café Am Giebel Bäckerei und Konditorei",
+        "amenity": "cafe",
+        "cuisine": "cake",
+        "name": "Bäckerei Schmitz",
+        "opening_hours": "Mo-Su 7:00-18:00",
+        "shop": "bakery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.481099,
+          50.6330675
+        ]
+      },
+      "id": "node/4075359632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4378435789",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "4",
+        "addr:postcode": "52396",
+        "addr:street": "Schönblick",
+        "amenity": "doctors",
+        "name": "Gemeinschaftspraxis Schmitz / Bidaui",
+        "name:de": "Gemeinschaftspraxis Schmitz / Bidaui"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4699238,
+          50.6363846
+        ]
+      },
+      "id": "node/4378435789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4973073340",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "26",
+        "addr:postcode": "52396",
+        "addr:street": "Hengebachstraße",
+        "amenity": "cafe",
+        "check_date": "2023-07-16",
+        "contact:email": "cafe.stilbruch@gmx.de",
+        "description": "Cafe mit zusätzlich warmer Küche und Apartements.",
+        "indoor_seating": "yes",
+        "name": "Café Stilbruch",
+        "opening_hours": "Mo,We-Sa 09:30-17:30; Sa 09:00-17:30",
+        "outdoor_seating": "yes",
+        "phone": "+49 2446 8052050",
+        "website": "https://cafe-stilbruch.webnode.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4788278,
+          50.633701
+        ]
+      },
+      "id": "node/4973073340"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4985240309",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "55",
+        "addr:postcode": "52396",
+        "addr:street": "Hengebachstraße",
+        "amenity": "cafe",
+        "contact:email": "info@stadtcafe-heimbach.de",
+        "contact:phone": "+49 2446 8099842",
+        "diet:vegan": "no",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Stadt-Café Heimbach",
+        "opening_hours": "Mo-We,Fr 09:30-17:00; Sa,Su,PH 09:00-18:00",
+        "outdoor_seating": "yes",
+        "website": "http://www.stadtcafe-heimbach.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.478444,
+          50.6338233
+        ]
+      },
+      "id": "node/4985240309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5674943903",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "8",
+        "addr:postcode": "55779",
+        "addr:street": "In der Au",
+        "amenity": "pub",
+        "name": "Hinterm Fels",
+        "opening_hours": "Do + So ab 17 Uhr"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2478974,
+          49.6130466
+        ]
+      },
+      "id": "node/5674943903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5782373454",
+        "amenity": "cafe",
+        "name": "Zur Försterstube"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4747243,
+          50.6342608
+        ]
+      },
+      "id": "node/5782373454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10883625365",
+        "addr:city": "Heimbach",
+        "addr:postcode": "55779",
+        "addr:street": "Kiefersheck",
+        "amenity": "pub",
+        "name": "Anjas Pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.2528608,
+          49.6129319
+        ]
+      },
+      "id": "node/10883625365"
+    }
+  ]
+}
