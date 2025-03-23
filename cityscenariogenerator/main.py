@@ -1,5 +1,6 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
+from datetime import datetime
 import logging
 from pathlib import Path
 import random
@@ -53,6 +54,7 @@ def create_city_scenario(
     lpg_result_dir: Path,
     db_file_path: str = "",
 ):
+    start = datetime.now()
     # determine the output directory
     query_str = utils.descriptive_query_text(builda_query)
     result_dir_name = f"scenario_{query_str}"
@@ -71,11 +73,10 @@ def create_city_scenario(
     logging.info(f"Using RNG seed {seed}")
 
     # collect residential and non-residential buildings
-    # res_buildings = import_residential_buildings_from_builda(builda_query)
     nonres_buildings = import_nonresidential_buildings_from_builda(
         builda_query, result_dir_path
     )
-    return
+    res_buildings = import_residential_buildings_from_builda(builda_query)
 
     # create config files for the collected buildings
     create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)
@@ -86,6 +87,7 @@ def create_city_scenario(
     create_lpg_configs.copy_calcspec_file(
         result_dir_path, template_filename, db_file_path, str(lpg_result_path)
     )
+    logging.info(f"Finished scenario creation in {datetime.now() - start}")
 
 
 if __name__ == "__main__":
