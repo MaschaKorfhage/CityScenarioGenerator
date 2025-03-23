@@ -27,7 +27,7 @@ from cityscenariogenerator.overpass_import import overpass_query
 
 #: directory with input OSM data from overpass
 DATA_DIR = Path("data")
-OVERPASS_DATA_DIR = DATA_DIR / "osm_input_data"
+OVERPASS_DATA_DIR = DATA_DIR / "osm_nonres_buildings"
 
 
 class DFColumns:
@@ -221,9 +221,11 @@ def map_osm_nodes_to_locations(
 
 
 def add_osm_location_types(
-    buildings: dict[str, BuildingWithLocationType], result_dir: Path
+    builda_query: dict, buildings: dict[str, BuildingWithLocationType], result_dir: Path
 ) -> set[str]:
-    overpass_df = load_overpass_data("Aachen")
+    if not (city := builda_query.get("city")):
+        raise Exception("City must be given to load matching OpenStreetMap data")
+    overpass_df = load_overpass_data(city)
     # convert BUILDA objects to GeoDataFrame
     builda_df = builda_to_geodf(b.building for b in buildings.values())
 

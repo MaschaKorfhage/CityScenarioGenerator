@@ -17,6 +17,6 @@ def import_nonresidential_buildings_from_builda(
     buildings_by_id = {b.building.id: b for b in buildings}
 
     # use OSM data to get more accurate building types
-    osm_data_join.add_osm_location_types(buildings_by_id, result_dir)
+    osm_data_join.add_osm_location_types(builda_query, buildings_by_id, result_dir)
 
     return buildings_by_id
