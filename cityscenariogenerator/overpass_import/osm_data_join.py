@@ -13,6 +13,7 @@ import folium
 import geopandas as gpd  # type: ignore
 
 from builda_client.dev_client import Building  # type: ignore
+import pandas as pd
 from shapely import Point  # type: ignore
 
 from cityscenariogenerator import builda_client_import
@@ -186,7 +187,7 @@ def plot_map(dataframes: list[gpd.GeoDataFrame], name: str, geometry_col: str):
     map_1.show_in_browser()
 
 
-def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
+def get_nonwork_location_for_node(mappings: dict[str, dict], row: pd.Series) -> str:
     for key, mapping in mappings.items():
         # check if the key for this mapping (e.g. 'amenity') is given for this node
         if val := row.get(key):
@@ -200,7 +201,7 @@ def get_nonwork_location_for_node(mappings: dict[str, dict], row) -> str:
 
 
 def map_osm_node(
-    mappings: dict[str, dict], row, work_mapping: dict[str, list[str]]
+    mappings: dict[str, dict], row: pd.Series, work_mapping: dict[str, list[str]]
 ) -> LocationType:
     nonwork_location = get_nonwork_location_for_node(mappings, row)
     work_locations = set(work_mapping[nonwork_location])
@@ -248,12 +249,47 @@ def add_osm_location_types(
 
     # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
-    osm_node_locations = map_osm_nodes_to_locations(joined_df, keys)
+    osm_node_locations = map_osm_nodes_to_locations(overpass_df, keys)
+
+    # create a directory for statistics on the OSM mapping
+    directory = result_dir / "poi_mapping"
+    directory.mkdir(parents=True, exist_ok=True)
+
+    # write statistics on ignored OSM nodes
+    ignored_df = overpass_df[
+        ~overpass_df[DFColumns.OSM_ID].isin(joined_df[DFColumns.OSM_ID])
+    ]
+    write_osm_ignored_nodes_statistics(ignored_df, osm_node_locations, directory)
 
     # assign OSM locations to BUILDA buildings
-    return assign_osm_location_type_to_buildings(
-        buildings, joined_df, osm_node_locations, result_dir
+    changed = assign_osm_location_type_to_buildings(
+        buildings, joined_df, osm_node_locations, directory
     )
+    return changed
+
+
+def write_osm_ignored_nodes_statistics(
+    ignored_df: gpd.GeoDataFrame,
+    osm_node_locations: dict[str, LocationType],
+    result_dir: Path,
+) -> None:
+    """
+    Writes a json file with statistics on the OSM nodes that were ignored
+    because they could not be matched to any building in BUILDA due to the
+    maximum distance or another node that was closer.
+
+    :param ignored_df: the GeoDataFrame with the ignored nodes
+    :param result_dir: the directory to store the result file in
+    """
+    ignored_loc_types = [
+        next(iter(osm_node_locations[id].non_work_locations))
+        for id in ignored_df[DFColumns.OSM_ID]
+    ]
+    counter = Counter(ignored_loc_types)
+    ignored_counts = dict(counter.most_common())
+    ignored_counts["total"] = counter.total()
+    with open(result_dir / "ignored_osm_node_types.json", "w", encoding="utf8") as f:
+        json.dump(ignored_counts, f, indent=4)
 
 
 def assign_osm_location_type_to_buildings(
@@ -277,18 +313,18 @@ def assign_osm_location_type_to_buildings(
         # assign this location type to the corresponding BUILDA building
         matched_building.location_type = osm_loc_type
 
-    log_changes_in_assigned_location(assignments)
+    log_changes_in_location_type(assignments)
 
     # for all changed buildings, calculat statistics on building types and new locations
     changed_buildings = {k: v for k, v in buildings.items() if k in changed}
-    check_building_category_location_connection(changed_buildings, result_dir)
+    create_building_category_location_statistics(changed_buildings, result_dir)
     return changed
 
 
-def log_changes_in_assigned_location(assignments: list[LocReplacement]):
+def log_changes_in_location_type(assignments: list[LocReplacement]):
     """
-    Logs how many buildings were assigned the same location type they already had,
-    and how many received a new location types.
+    Logs an overview on how many buildings of each type were assigned
+    a new location type, and whether the new type is identical to the old one.
 
     :param assignments: list of location type replacements
     """
@@ -305,10 +341,17 @@ def log_changes_in_assigned_location(assignments: list[LocReplacement]):
     logging.info(f"Changed location types ({c_repl.total()}): {c_repl.most_common()}")
 
 
-def check_building_category_location_connection(
+def create_building_category_location_statistics(
     buildings: dict[str, BuildingWithLocationType],
     result_dir: Path,
 ) -> None:
+    """
+    Checks how many buildings of each category were assigned the same location type,
+    and creates a text file with the results.
+
+    :param buildings: the buildings to examine
+    :param result_dir: the directory to store the result file in
+    """
     # group all buildings by their new non-work location type
     buildings_by_loc = defaultdict(list)
     for b in buildings.values():
@@ -327,9 +370,9 @@ def check_building_category_location_connection(
         text += "\n".join(f"{count:3d}: {key}" for key, count in c.most_common())
 
     # write the results to a text file
-    directory = result_dir / "poi_mapping"
-    directory.mkdir(parents=True, exist_ok=True)
-    with open(directory / "categories_with_new_osm_tag.txt", "w", encoding="utf8") as f:
+    with open(
+        result_dir / "categories_with_new_osm_tag.txt", "w", encoding="utf8"
+    ) as f:
         f.write(text)
 
 
