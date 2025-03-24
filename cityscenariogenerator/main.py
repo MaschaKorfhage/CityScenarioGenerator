@@ -76,7 +76,7 @@ def create_city_scenario(
 
     # collect residential and non-residential buildings
     nonres_buildings = import_nonresidential_buildings_from_builda(params)
-    res_buildings = import_residential_buildings_from_builda(builda_query)
+    res_buildings = import_residential_buildings_from_builda(params)
 
     # create config files for the collected buildings
     create_configs_from_buildings(params, res_buildings, nonres_buildings)
