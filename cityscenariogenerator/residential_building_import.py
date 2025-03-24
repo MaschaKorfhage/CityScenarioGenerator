@@ -8,6 +8,7 @@ from cityscenariogenerator import builda_client_import
 import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
 from cityscenariogenerator.household_data import BuildingData
+from cityscenariogenerator.scenario_params import ScenarioParams
 
 
 def import_residential_buildings_from_builda_file(
@@ -48,10 +49,10 @@ def add_counter_to_ids(buildings: list[BuildingData]) -> None:
 
 
 def import_residential_buildings_from_builda(
-    builda_query: dict,
+    params: ScenarioParams,
 ) -> list[BuildingData]:
     # load residential buildings from BUILDA
-    raw_buildings = builda_client_import.get_residential_buildings(builda_query)
+    raw_buildings = builda_client_import.get_residential_buildings(params.builda_query)
     # parse the household data into data objects
     building_data_list = builda_file_sampler.convert_residential_buildings_from_builda(
         raw_buildings

@@ -25,6 +25,7 @@ from cityscenariogenerator.poi_type_mapping import (
     LocationType,
 )
 from cityscenariogenerator.overpass_import import overpass_query
+from cityscenariogenerator.scenario_params import ScenarioParams
 
 #: directory with input OSM data from overpass
 DATA_DIR = Path("data")
@@ -88,14 +89,14 @@ class LocReplacement:
         return f"{old_str} -> {new_str}"
 
 
-def load_overpass_data(city: str):
+def load_overpass_data(params: ScenarioParams) -> gpd.GeoDataFrame:
     """
     Loads an overpass data file for a city from the overpass data directory.
 
-    :param city: the name of the city; requires a matching .geojson file in the directory
+    :param params: the parameters for the scenario to get the OSM file path
     :return: the GeoDataFrame with the data
     """
-    filepath = OVERPASS_DATA_DIR / f"{city}.geojson"
+    filepath = params.osm_input_path()
     overpass_df = gpd.read_file(filepath)
     return overpass_df
 
@@ -222,14 +223,13 @@ def map_osm_nodes_to_locations(
 
 
 def add_osm_location_types(
-    builda_query: dict, buildings: dict[str, BuildingWithLocationType], result_dir: Path
+    params: ScenarioParams, buildings: dict[str, BuildingWithLocationType]
 ) -> set[str]:
-    if not (city := builda_query.get("city")):
-        raise Exception("City must be given to load matching OpenStreetMap data")
-    overpass_df = load_overpass_data(city)
+    overpass_df = load_overpass_data(params)
     # convert BUILDA objects to GeoDataFrame
     builda_df = builda_to_geodf(b.building for b in buildings.values())
 
+    # convert to Web Mercator projection to get correct distances
     overpass_df.to_crs("EPSG:3857", inplace=True)
     builda_df.to_crs("EPSG:3857", inplace=True)
 
@@ -252,7 +252,7 @@ def add_osm_location_types(
     osm_node_locations = map_osm_nodes_to_locations(overpass_df, keys)
 
     # create a directory for statistics on the OSM mapping
-    directory = result_dir / "poi_mapping"
+    directory = params.result_directory / "poi_mapping"
     directory.mkdir(parents=True, exist_ok=True)
 
     # write statistics on ignored OSM nodes
@@ -378,7 +378,7 @@ def create_building_category_location_statistics(
 
 def show_osm_builda_join_on_map():
     # load overpass building data
-    overpass_df = load_overpass_data("Aachen")
+    overpass_df = gpd.read_file("data/custom_input/Aachen/osm_nonres_nodes.geojson")
 
     # collect non-residential buildings
     builda_query = {
@@ -420,15 +420,8 @@ def show_osm_builda_join_on_map():
     print(
         f"Builda: {len(builda_df)}, Overpass: {len(overpass_df)}, Joined: {len(joined_df)}, "
     )
-    # unique_ids_left = len(joined_df["id_left"].unique())
-    # unique_ids_right = len(joined_df["id_right"].unique())
-    # print(f"Unique IDs left: {unique_ids_left}, right: {unique_ids_right}")
 
     plot_map([builda_df, overpass_df, joined_df], "health_map.html", geometry_4326)
-
-    # TODO: compare OSM tags in overpass with ALKIS codes in Builda (use raw unmapped builda data, mapping happens later with OSM tags)
-
-    pass
 
 
 if __name__ == "__main__":

@@ -1,11 +1,12 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
-from datetime import datetime
 import logging
-from pathlib import Path
 import random
+from datetime import datetime
+from pathlib import Path
 
-from cityscenariogenerator import utils, create_lpg_configs
+from cityscenariogenerator import create_lpg_configs, utils
+from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.nonresidential_building_import import (
     import_nonresidential_buildings_from_builda,
 )
@@ -13,7 +14,6 @@ from cityscenariogenerator.poi_type_mapping import BuildingWithLocationType
 from cityscenariogenerator.residential_building_import import (
     import_residential_buildings_from_builda,
 )
-from cityscenariogenerator.household_data import BuildingData
 
 
 def create_configs_from_buildings(

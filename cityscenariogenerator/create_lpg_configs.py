@@ -22,6 +22,7 @@ from cityscenariogenerator import (
     utils,
 )
 from cityscenariogenerator.plots import building_map, building_map_interactive
+from cityscenariogenerator.scenario_params import ScenarioParams
 
 
 def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
@@ -56,9 +57,9 @@ def convert_coordinates(coordinates: builda.Coordinates) -> lpgdata.Coordinates:
 
 def copy_calcspec_file(
     result_directory: Path,
-    template_path: str = "Calcspec.json",
-    db_file_path: str = "",
+    template_path: Path,
     lpg_result_path: str = "",
+    db_file_path: str = "",
 ):
     """
     Reads the house job template file (which only contains the database path and the
@@ -67,9 +68,10 @@ def copy_calcspec_file(
 
     :param result_directory: output directory to save the settings file to
     :param template_path: path to the settings template file, defaults to "Calcspec.json"
-    :param db_file_path: database path to specify in the settings
     :param lpg_result_path: LPG output path to specifiy in the settings
+    :param db_file_path: database path to specify in the settings
     """
+    # load the template Calcspec.json
     with open(template_path, "r") as f:
         lines = f.readlines()
         # remove line comments (which are no valid JSON)
@@ -81,11 +83,12 @@ def copy_calcspec_file(
     assert (
         house_job.CalcSpec is not None
     ), f"No CalcSpec set in the template file: {template_path}"
+
     # change some settings if necessary
-    if db_file_path:
-        house_job.PathToDatabase = db_file_path
     if lpg_result_path:
         house_job.CalcSpec.OutputDirectory = lpg_result_path
+    if db_file_path:
+        house_job.PathToDatabase = db_file_path
     # TODO: choose an appropriate GeographicLocation and TemperatureProfile
 
     # save the adjusted settings to the result directory
@@ -117,7 +120,9 @@ class LPGConfigCreator:
     MIN_POIS_PER_TYPE = 1
     MAX_POIS_PER_TYPE = 1
 
-    def __init__(self) -> None:
+    def __init__(self, params: ScenarioParams) -> None:
+        self.params = params
+
         # set numpy random seed
         numpy_seed = random.randrange(2**32)
         logging.info(f"Using numpy RNG seed {numpy_seed}")
@@ -351,17 +356,15 @@ class LPGConfigCreator:
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
             )
 
-    def load_and_add_custom_pois(self, custom_poi_path: Path) -> None:
+    def load_and_add_custom_pois(self) -> None:
         """
         Loads additional custom POIs from a file and adds them to the
         list of available POIs. This can be helpful if the target city does
         not contain certain POI types and people need to go to specific POIs in
         the surrounding area for the corresponding activities.
-
-        :param custom_poi_path: path to the POI file to load
         """
         # load the custom POIs from file
-        with open(custom_poi_path, "r") as f:
+        with open(self.params.custom_poi_path(), "r") as f:
             json_str = f.read()
             poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
         # add them to the POIs stored in the attributes
@@ -466,8 +469,9 @@ class LPGConfigCreator:
         self.global_city_definition.Routes = list(all_routes.values())
         self.global_city_definition.MirrorRoutes = True
 
-    def create_config_files(self, path: Path):
+    def create_config_files(self):
         # make sure the directory exists
+        path = self.params.result_directory
         path.mkdir(parents=True, exist_ok=True)
         files = list(path.iterdir())
         # check if the directory is empty (besides the logfile)
