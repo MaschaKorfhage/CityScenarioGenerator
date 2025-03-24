@@ -199,13 +199,14 @@ def convert_residential_buildings_from_builda(
         household_list: list = building.households
         for household_dict in household_list:
             # get number of persons per household
-            number_of_persons_per_households.append(len(household_dict["persons"]))
+            persons = household_dict["persons"]
+            number_of_persons_per_households.append(len(persons))
             num_cars = household_dict["cars"]
 
             # get employment for each person per household
             employment_list_per_household = []
             gender_list_per_household = []
-            for person_dict in household_dict["persons"]:
+            for person_dict in persons:
                 # get employment for each person per household
                 employment_list_per_household.append(person_dict["employment"])
                 # get gender for each person per household
@@ -219,7 +220,7 @@ def convert_residential_buildings_from_builda(
             senior_status = get_senior_status(employment_list_per_household)
             raw_households.append(
                 HouseholdRawData(
-                    len(person_dict),
+                    len(persons),
                     num_cars,
                     working_status,
                     female_status,
