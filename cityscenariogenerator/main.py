@@ -7,6 +7,7 @@ from pathlib import Path
 
 from cityscenariogenerator import create_lpg_configs, utils
 from cityscenariogenerator.household_data import BuildingData
+from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.nonresidential_building_import import (
     import_nonresidential_buildings_from_builda,
 )
@@ -17,11 +18,11 @@ from cityscenariogenerator.residential_building_import import (
 
 
 def create_configs_from_buildings(
-    path: Path,
+    params: ScenarioParams,
     res_buildings: list[BuildingData],
     nonres_buildings: dict[str, BuildingWithLocationType],
 ):
-    config_creator = create_lpg_configs.LPGConfigCreator()
+    config_creator = create_lpg_configs.LPGConfigCreator(params)
     # create a POI config for each nonresidential building
     for nonres_building in nonres_buildings.values():
         config_creator.add_poi(nonres_building)
@@ -30,10 +31,8 @@ def create_configs_from_buildings(
     for building in res_buildings:
         config_creator.add_lpg_house(building)
 
-    # TODO: workaround for missing POI types; define the custom
-    #       POIs properly or remove them
-    custom_poi_path = Path("data/custom_pois_all.json")
-    config_creator.load_and_add_custom_pois(custom_poi_path)
+    # load custom POIs for this scenario
+    config_creator.load_and_add_custom_pois()
 
     # determine which POIs each person visits
     config_creator.create_poi_preferences()
@@ -45,7 +44,7 @@ def create_configs_from_buildings(
     config_creator.global_city_definition.MinimumDrivingAge = 18
 
     # create config files for all created objects
-    config_creator.create_config_files(path)
+    config_creator.create_config_files()
 
 
 def create_city_scenario(
@@ -67,30 +66,31 @@ def create_city_scenario(
 
     utils.init_logging(result_dir_path)
 
+    # setup the scenario parameters object
+    params = ScenarioParams(builda_query, result_dir_path, lpg_result_path)
+
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)
     random.seed(seed)
     logging.info(f"Using RNG seed {seed}")
 
     # collect residential and non-residential buildings
-    nonres_buildings = import_nonresidential_buildings_from_builda(
-        builda_query, result_dir_path
-    )
+    nonres_buildings = import_nonresidential_buildings_from_builda(params)
     res_buildings = import_residential_buildings_from_builda(builda_query)
 
     # create config files for the collected buildings
-    create_configs_from_buildings(result_dir_path, res_buildings, nonres_buildings)
+    create_configs_from_buildings(params, res_buildings, nonres_buildings)
     logging.info(f"Finished writing city scenario to {result_dir_path}")
 
     # copy the Calcspec.json into the scenario directory
-    template_filename = "Calcspec.json"
+    template_path = Path("data/calcspec_template.json")
     create_lpg_configs.copy_calcspec_file(
-        result_dir_path, template_filename, db_file_path, str(lpg_result_path)
+        result_dir_path, template_path, str(lpg_result_path), db_file_path
     )
     logging.info(f"Finished scenario creation in {datetime.now() - start}")
 
 
-if __name__ == "__main__":
+def main():
     builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
     scenario_dir = Path("./scenarios")
     lpg_result_dir = Path("D:/LPG/Results")
@@ -101,4 +101,8 @@ if __name__ == "__main__":
     )
     lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
 
-    create_city_scenario(builda_query, scenario_dir, lpg_result_dir, "")
+    create_city_scenario(builda_query, scenario_dir, lpg_result_dir)
+
+
+if __name__ == "__main__":
+    main()
