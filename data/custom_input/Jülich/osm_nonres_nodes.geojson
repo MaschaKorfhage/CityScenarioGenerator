@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-03-23T18:08:55Z",
+  "timestamp": "2025-03-26T11:11:30Z",
   "features": [
     {
       "type": "Feature",
@@ -432,6 +432,24 @@
         ]
       },
       "id": "node/440699767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/450136480",
+        "fee": "no",
+        "name": "Jagd- und Forstausstellung",
+        "tourism": "museum",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3491219,
+          50.9194293
+        ]
+      },
+      "id": "node/450136480"
     },
     {
       "type": "Feature",
@@ -1163,6 +1181,34 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/5758624899",
+        "after_school": "yes",
+        "amenity": "kindergarten",
+        "capacity": "125",
+        "check_date": "2023-09-19",
+        "fee": "yes",
+        "int_name": "Day Care Center Kleine Fuechse",
+        "isced:level": "0",
+        "max_age": "12",
+        "min_age": "0",
+        "name": "Kindertagesstätte Kleine Füchse",
+        "nursery": "yes",
+        "operator": "Kleine Füchse e.V.",
+        "preschool": "yes",
+        "website": "https://kleine-fuechse.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4007539,
+          50.9080546
+        ]
+      },
+      "id": "node/5758624899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/6006928477",
         "addr:city": "Jülich",
         "addr:housenumber": "11",
@@ -1634,6 +1680,103 @@
         ]
       },
       "id": "node/11861795795"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11915638695",
+        "addr:city": "Jülich",
+        "addr:housenumber": "20",
+        "addr:postcode": "52428",
+        "addr:street": "Kleine Rurstraße",
+        "email": "museum@juelich.de",
+        "museum": "art",
+        "name": "Museum im Kulturhaus",
+        "opening_hours": "Sa-Su 11:00-18:00",
+        "operator": "Stadt Jülich",
+        "operator:type": "government",
+        "phone": "+49 2461 63 510",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3558536,
+          50.9210107
+        ]
+      },
+      "id": "node/11915638695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12124036190",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "52428",
+        "addr:street": "Heinrich-Mußmann-Straße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kinderkrippe Wolkennest",
+        "operator": "Studierendenwerk Aachen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3733336,
+          50.9356343
+        ]
+      },
+      "id": "node/12124036190"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12145737788",
+        "access": "private",
+        "leisure": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3457672,
+          50.9174235
+        ]
+      },
+      "id": "node/12145737788"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12145737789",
+        "access": "private",
+        "leisure": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3468066,
+          50.9177744
+        ]
+      },
+      "id": "node/12145737789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12145737790",
+        "access": "private",
+        "leisure": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3468991,
+          50.9178497
+        ]
+      },
+      "id": "node/12145737790"
     }
   ]
 }

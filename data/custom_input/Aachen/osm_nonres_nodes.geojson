@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-03-21T19:09:29Z",
+  "timestamp": "2025-03-26T11:11:30Z",
   "features": [
     {
       "type": "Feature",
@@ -53,6 +53,33 @@
         ]
       },
       "id": "node/35137295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/160079640",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "497",
+        "addr:postcode": "52072",
+        "addr:street": "Horbacher Straße",
+        "addr:suburb": "Horbach",
+        "contact:phone": "+49-241-9970615",
+        "fee": "no",
+        "name": "Zollmuseum",
+        "tourism": "museum",
+        "website": "http://www.zollmuseum-friedrichs.de/",
+        "wikidata": "Q16858227",
+        "wikimedia_commons": "Category:Zollmuseum Friedrichs"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0201736,
+          50.8450995
+        ]
+      },
+      "id": "node/160079640"
     },
     {
       "type": "Feature",
@@ -152,6 +179,31 @@
         ]
       },
       "id": "node/282828304"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/299640182",
+        "fee": "yes",
+        "name": "Domschatzkammer",
+        "opening_hours": "Mo 10:00-14:00; Mo 10:00-18:00 \"Adventszeit/Advent Season\"; Jan-Mar Tu-Su 10:00-17:00; Apr-Dec Tu-Su 10:00-18:00",
+        "phone": "+49 241 47709 140",
+        "toilets:wheelchair": "yes",
+        "tourism": "museum",
+        "website": "https://www.aachener-domschatz.de/",
+        "wheelchair": "yes",
+        "wikidata": "Q15106167",
+        "wikimedia_commons": "Category:Domschatz, Aachen",
+        "wikipedia": "de:Aachener Domschatzkammer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0828206,
+          50.7750373
+        ]
+      },
+      "id": "node/299640182"
     },
     {
       "type": "Feature",
@@ -569,6 +621,7 @@
         "addr:street": "Bismarckstraße",
         "entrance": "yes",
         "name": "Groszek Supermarket",
+        "opening_hours": "Mo-Sa 09:00-21:00",
         "shop": "supermarket",
         "wheelchair": "yes"
       },
@@ -1006,6 +1059,34 @@
         ]
       },
       "id": "node/703605056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/713959994",
+        "addr:city": "Aachen",
+        "addr:housenumber": "6",
+        "addr:postcode": "52076",
+        "addr:street": "Abteigarten",
+        "addr:suburb": "Kornelimünster",
+        "fee": "no",
+        "name": "kunsthaus nrw",
+        "opening_hours": "Th-Sa 12:00-17:00; Su,PH 11:00-17:00",
+        "tourism": "museum",
+        "website": "https://www.kunsthaus.nrw/",
+        "wheelchair": "no",
+        "wikidata": "Q1792314",
+        "wikimedia_commons": "File:Kornelimuenster Ehrenhof Eingang 7318.jpg",
+        "wikipedia": "de:Kunsthaus Nordrhein-Westfalen Kornelimünster"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1819381,
+          50.7290846
+        ]
+      },
+      "id": "node/713959994"
     },
     {
       "type": "Feature",
@@ -1823,6 +1904,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1207131545",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "83",
+        "addr:postcode": "52070",
+        "addr:street": "Lothringerstraße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Seemöwe",
+        "opening_hours": "Mo-Fr 07:00-18:00",
+        "operator": "Kindertagesstätte Seemöwe gemeinnützige GmbH",
+        "phone": "+49 241 9010626",
+        "website": "https://www.kita-seemoewe.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0984075,
+          50.7703213
+        ]
+      },
+      "id": "node/1207131545"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1212377313",
         "brand": "Netto Marken-Discount",
         "brand:wikidata": "Q879858",
@@ -2148,6 +2255,35 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1253009209",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "52066",
+        "addr:street": "Goerdelerstraße",
+        "amenity": "kindergarten",
+        "brand": "Arbeiterwohlfahrt",
+        "brand:short": "AWO",
+        "brand:wikidata": "Q627256",
+        "entrance": "yes",
+        "isced:level": "0",
+        "name": "Familienzentrum \"Mittendrin\"",
+        "operator": "Arbeiterwohlfahrt Kreisverband Aachen-Stadt e.V.",
+        "website": "https://www.awo-aachen.de/kita-gordelerstrasse",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1126416,
+          50.7708073
+        ]
+      },
+      "id": "node/1253009209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1267235829",
         "amenity": "pub",
         "name": "Sturmfrei!",
@@ -2258,6 +2394,30 @@
         ]
       },
       "id": "node/1300073305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1318577653",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "7-9",
+        "addr:postcode": "52066",
+        "addr:street": "Abteistraße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Bärenstark",
+        "operator": "Kita Bärenstark e. V.",
+        "website": "https://www.kita-baerenstark.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0964972,
+          50.761192
+        ]
+      },
+      "id": "node/1318577653"
     },
     {
       "type": "Feature",
@@ -2707,6 +2867,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1636493323",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "52068",
+        "addr:street": "Schleswigstraße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Katholisches Montessori-Kinderhaus St. Fronleichnam",
+        "operator": "pro futura",
+        "operator:type": "religious",
+        "operator:wikidata": "Q129978730",
+        "website": "https://www.pro-futura-aachen.de/einrichtungen/aachen-osteilendorf/st-fronleichnam/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1137728,
+          50.7739803
+        ]
+      },
+      "id": "node/1636493323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1638861420",
         "amenity": "pub",
         "indoor_seating": "yes",
@@ -2797,6 +2983,33 @@
         ]
       },
       "id": "node/1674390551"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1676657721",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "11",
+        "addr:postcode": "52070",
+        "addr:street": "Scheibenstraße",
+        "amenity": "kindergarten",
+        "brand": "Caritas",
+        "brand:wikidata": "Q29508174",
+        "check_date": "2024-10-15",
+        "isced:level": "0",
+        "name": "Inklusive Kindertagesstätte \"Schikita\"",
+        "operator": "Caritas Lebenswelten GmbH",
+        "website": "https://www.caritas-lebenswelten.de/kindertagesstaetten/schikita.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1013281,
+          50.775211
+        ]
+      },
+      "id": "node/1676657721"
     },
     {
       "type": "Feature",
@@ -3024,6 +3237,30 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1992957080",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "12",
+        "addr:postcode": "52062",
+        "addr:street": "Jesuitenstraße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Zwergenland",
+        "operator": "Kita Zwergenland gemeinnützige GmbH",
+        "website": "https://www.kinderbetreuung-zwergenland.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0826912,
+          50.7732594
+        ]
+      },
+      "id": "node/1992957080"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1997871028",
         "amenity": "pub",
         "name": "Bauernstube"
@@ -3150,6 +3387,30 @@
         ]
       },
       "id": "node/2147017602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2158065276",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "52074",
+        "addr:street": "Händelstraße",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Händelstraße",
+        "old_name": "Kindertagesstätte Boxgraben",
+        "operator": "Stadt Aachen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0598985,
+          50.7676689
+        ]
+      },
+      "id": "node/2158065276"
     },
     {
       "type": "Feature",
@@ -3605,6 +3866,31 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/2394477733",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "52078",
+        "addr:street": "Nordstraße",
+        "amenity": "kindergarten",
+        "check_date": "2025-01-17",
+        "isced:level": "0",
+        "name": "Kinderladen 7 e.V.",
+        "operator": "Kinderladen 7 e.V.",
+        "website": "https://www.kinderladen7.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1599362,
+          50.7521773
+        ]
+      },
+      "id": "node/2394477733"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/2418310292",
         "amenity": "ice_cream",
         "email": "info@zammatteoeis.de",
@@ -3746,6 +4032,23 @@
         ]
       },
       "id": "node/2474372156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2475597968",
+        "amenity": "kindergarten",
+        "name": "Kita Hahn Zweigstelle Kitzenhausweg \"Bauwagen\"",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1990632,
+          50.7015025
+        ]
+      },
+      "id": "node/2475597968"
     },
     {
       "type": "Feature",
@@ -4162,10 +4465,14 @@
         "addr:postcode": "52062",
         "addr:street": "Katschhof",
         "amenity": "cafe",
-        "check_date": "2023-05-17",
+        "check_date": "2025-03-23",
+        "check_date:smoking": "2025-03-23",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Karls",
         "opening_hours": "Tu-Su,PH 10:00-18:00",
+        "outdoor_seating": "yes",
+        "smoking": "outside",
         "website": "https://karls-aachen.de/",
         "wheelchair": "limited"
       },
@@ -4836,6 +5143,36 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/3731118530",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "199",
+        "addr:postcode": "52070",
+        "addr:street": "Krefelder Straße",
+        "amenity": "kindergarten",
+        "brand": "Lebenshilfe",
+        "brand:wikidata": "Q20533",
+        "check_date": "2024-08-27",
+        "contact:phone": "+49 241 151288",
+        "isced:level": "0",
+        "name": "Inklusive Kindertagesstätte Tivolino",
+        "opening_hours": "Mo-Fr 07:30-16:30; Sa,Su,PH off",
+        "operator": "Lebenshilfe Aachen e.V.",
+        "website": "https://www.lebenshilfe-aachen.de/de/kinder/kindertagesstaetten/kita-tivolino.php",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0954152,
+          50.790526
+        ]
+      },
+      "id": "node/3731118530"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/3735308454",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -4885,6 +5222,31 @@
         ]
       },
       "id": "node/3739935372"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3741099217",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "52062",
+        "addr:street": "Martinstraße",
+        "amenity": "kindergarten",
+        "check_date": "2023-05-17",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Kleine Sonne",
+        "operator": "Kita \"Kleine Sonne\" e.V.",
+        "website": "http://www.kita-kleine-sonne.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0864948,
+          50.7797431
+        ]
+      },
+      "id": "node/3741099217"
     },
     {
       "type": "Feature",
@@ -6009,6 +6371,35 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/4883868495",
+        "addr:city": "Aachen",
+        "addr:housenumber": "9a",
+        "addr:postcode": "52070",
+        "addr:street": "Am Gut Wolf",
+        "description": "Die Besichtigung findet immer im Rahmen einer Führung statt.\nEin Besuch ohne Ankündigung ist immer am Montag (sofern kein Feiertag) um 11:00 Uhr möglich.\nWeitere Termine sind nach Absprache möglich.\nDer Eintritt ist frei.",
+        "email": "info@fernmeldemuseum-aachen.de",
+        "fee": "no",
+        "name": "Fernmeldemuseum Aachen",
+        "opening_hours": "Mo 11:00+ || \"nach Vereinbarung\"",
+        "operator": "Verein der Förderer des Fernmeldemuseums Aachen e.V.",
+        "phone": "+49 241 9191148",
+        "tourism": "museum",
+        "website": "https://www.fernmeldemuseum-aachen.de/",
+        "wikidata": "Q16831351",
+        "wikimedia_commons": "Category:Fernmeldemuseum Aachen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1030625,
+          50.7910336
+        ]
+      },
+      "id": "node/4883868495"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/4907848958",
         "addr:city": "Aachen",
         "addr:housenumber": "6",
@@ -6601,7 +6992,7 @@
         "addr:street": "Heißbergstraße",
         "addr:suburb": "Burtscheid",
         "amenity": "doctors",
-        "check_date": "2024-02-20",
+        "check_date": "2025-03-22",
         "contact:fax": "+49241 445 0052",
         "contact:phone": "+49241 66765",
         "contact:website": "http://www.praxis-lohmeyer.de/",
@@ -6664,7 +7055,7 @@
         "healthcare": "doctor",
         "healthcare:speciality": "paediatrics;homeopathy",
         "name": "Kinderarztpraxis Dr. med. Ulrike Forster",
-        "opening_hours": "Mo-Fr 07:45-12:00, Mo,Tu,Th 15:00-17:00, Th 17:00-18:00"
+        "opening_hours": "Mo-Fr 07:45-12:30, Mo,Tu,Th 15:00-17:30"
       },
       "geometry": {
         "type": "Point",
@@ -7155,6 +7546,34 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/5738656321",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "52066",
+        "addr:street": "Weißhausstraße",
+        "amenity": "kindergarten",
+        "check_date": "2024-10-07",
+        "email": "elternservice@villaluna.de",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Villa Luna",
+        "note": "In der Villa Luna Aachen betreuen wir 85 Kinder in drei Kindergartengruppen und zwei U3-Gruppen.",
+        "operator": "Villa Luna Kindertagesstätten GmbH",
+        "phone": "+49 241 9436848",
+        "website": "https://villaluna.de/aachen/kindergarten-aachen/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0812996,
+          50.7576977
+        ]
+      },
+      "id": "node/5738656321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/5744614685",
         "addr:city": "Aachen",
         "addr:housenumber": "56",
@@ -7260,6 +7679,7 @@
         "addr:postcode": "52066",
         "addr:street": "Kapellenstraße",
         "amenity": "music_school",
+        "check_date": "2025-03-22",
         "check_date:opening_hours": "2024-02-20",
         "description": "Gesangsunterricht, Atemtechnik, Rhythmik",
         "name": "Monika Schmitz - Professionelle Gesangslehrerin",
@@ -7361,6 +7781,35 @@
         ]
       },
       "id": "node/5837278417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5901129859",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "52068",
+        "addr:street": "An der Birk",
+        "amenity": "kindergarten",
+        "brand": "Arbeiterwohlfahrt",
+        "brand:short": "AWO",
+        "brand:wikidata": "Q627256",
+        "isced:level": "0",
+        "name": "Kindertagesstätte \"Bunte Erde\"",
+        "old_name": "AWO Kindertagesstätte Guter Freund",
+        "operator": "Arbeiterwohlfahrt Kreisverband Aachen-Stadt e.V.",
+        "phone": "+49 241 90052351",
+        "website": "https://www.awo-aachen.de/kita-bunte-erde"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1220881,
+          50.771449
+        ]
+      },
+      "id": "node/5901129859"
     },
     {
       "type": "Feature",
@@ -7572,6 +8021,33 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/6239863363",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52066",
+        "addr:street": "Bergische Gasse",
+        "amenity": "kindergarten",
+        "description": "Gründung durch Studenten der RWTH Aachen um 1968. Nach vier Jahrzehnten in der Schlossstrasse, zog die Kita im September 2005 in die Bergische Gasse.",
+        "email": "leitung@kita-zauberschloss.de",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Zauberschloss",
+        "operator": "Kindertagesstätte an der RWTH e.V.",
+        "phone": "+49 241 9003173",
+        "website": "https://www.kita-zauberschloss.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1012242,
+          50.767429
+        ]
+      },
+      "id": "node/6239863363"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/6367501357",
         "healthcare": "psychotherapist",
         "name": "Haghnazarian, Talin"
@@ -7695,6 +8171,32 @@
         ]
       },
       "id": "node/6535152642"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6583641279",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "50",
+        "addr:postcode": "52070",
+        "addr:street": "Albert-Servais-Allee",
+        "fee": "no",
+        "name": "CHIO Aachen-Museum",
+        "opening_hours": "We,Fr 12:00-17:00; Mo,Tu,Th,Sa,Su,PH off",
+        "toilets:wheelchair": "yes",
+        "tourism": "museum",
+        "website": "https://www.chioaachen.de/de/chio-co/mehr-chio-aachen/chio-aachen-museum/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0951874,
+          50.795272
+        ]
+      },
+      "id": "node/6583641279"
     },
     {
       "type": "Feature",
@@ -8120,6 +8622,56 @@
         ]
       },
       "id": "node/7035885025"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7090623423",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "71",
+        "addr:postcode": "52076",
+        "addr:street": "Pascalstraße",
+        "addr:suburb": "Oberforstbach",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Pascals Zwerge",
+        "operator": "Pascals Zwerge - Verein zur betrieblich unterstützten Betreuung von Kindern von Berufstätgien e. V.",
+        "website": "http://www.pascalszwerge.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1455904,
+          50.7148921
+        ]
+      },
+      "id": "node/7090623423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7091824614",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "60",
+        "addr:postcode": "52078",
+        "addr:street": "Freunder Landstraße",
+        "amenity": "kindergarten",
+        "check_date": "2023-11-20",
+        "isced:level": "0",
+        "name": "Familienzentrum Regenbogen",
+        "operator": "Evangelische Kinder- und Jugendhilfe Brand",
+        "website": "https://kinderundjugendhilfebrand.net/familienzentrum-regenbogen/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.17135,
+          50.7517573
+        ]
+      },
+      "id": "node/7091824614"
     },
     {
       "type": "Feature",
@@ -8747,6 +9299,31 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/8111583360",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "11",
+        "addr:postcode": "52072",
+        "addr:street": "Am Guten Hirten",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Kita Campus Wohnen",
+        "opening_hours": "Mo-Fr 07:30-16:30",
+        "operator": "educcare",
+        "website": "https://educcare.de/kita-standorte/aachen-campus-wohnen/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0607103,
+          50.7863583
+        ]
+      },
+      "id": "node/8111583360"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/8170213087",
         "addr:city": "Aachen",
         "addr:housenumber": "16",
@@ -9239,6 +9816,34 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/8746437582",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "52062",
+        "addr:street": "Bergdriesch",
+        "amenity": "kindergarten",
+        "check_date": "2024-04-13",
+        "contact:email": "erstervorsitz@kinderladen-spielen-und-lernen.de",
+        "contact:phone": "+49 241 22291",
+        "contact:website": "http://www.kinderladen-spielen-und-lernen.de/",
+        "isced:level": "0",
+        "name": "Kinderladen Spielen+Lernen 72 e.V.",
+        "operator": "Kinderladen Spielen+Lernen 72 e.V.",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0846731,
+          50.779682
+        ]
+      },
+      "id": "node/8746437582"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/8746437585",
         "addr:city": "Aachen",
         "addr:housenumber": "14",
@@ -9293,6 +9898,30 @@
         ]
       },
       "id": "node/8838915828"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8867531245",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "52",
+        "addr:postcode": "52064",
+        "addr:street": "Reumontstraße",
+        "amenity": "kindergarten",
+        "check_date": "2023-10-20",
+        "isced:level": "0",
+        "name": "Montessori-Kinderhaus Reumontstraße",
+        "operator": "Stadt Aachen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0794359,
+          50.7664775
+        ]
+      },
+      "id": "node/8867531245"
     },
     {
       "type": "Feature",
@@ -9635,6 +10264,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/9271456591",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "52",
+        "addr:postcode": "52064",
+        "addr:street": "Reumontstraße",
+        "amenity": "kindergarten",
+        "email": "kita-reumontstr@mail.aachen.de",
+        "isced:level": "0",
+        "name": "Kindertagesstätte Reumontstraße",
+        "opening_hours": "Mo-Fr 07:15-16:15",
+        "operator": "Stadt Aachen",
+        "phone": "+49 241 30819"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0790028,
+          50.7666729
+        ]
+      },
+      "id": "node/9271456591"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/9320207052",
         "addr:city": "Aachen",
         "addr:housenumber": "17",
@@ -9768,6 +10423,30 @@
         ]
       },
       "id": "node/9429601114"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9501069244",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "52078",
+        "addr:street": "An der alten Tuchfabrik",
+        "amenity": "kindergarten",
+        "isced:level": "0",
+        "name": "Villa Luna",
+        "operator": "Villa Luna Kindertagesstätten GmbH",
+        "website": "https://villaluna.de/aachen-tuchmacherviertel/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1588624,
+          50.7417955
+        ]
+      },
+      "id": "node/9501069244"
     },
     {
       "type": "Feature",
@@ -10379,6 +11058,38 @@
         ]
       },
       "id": "node/9718501991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9724183507",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "4-6",
+        "addr:postcode": "52062",
+        "addr:street": "Wespienstraße",
+        "amenity": "kindergarten",
+        "brand": "Lebenshilfe",
+        "brand:wikidata": "Q20533",
+        "email": "kita-elise@lebenshilfe-aachen.de",
+        "isced:level": "0",
+        "max_age": "6",
+        "min_age": "1",
+        "name": "Montessori Kindertagesstätte Elise",
+        "old_name": "Montessori Kindertagesstätte Wespienstraße",
+        "operator": "Lebenshilfe Aachen e.V.",
+        "phone": "+49 241 604281",
+        "start_date": "2022-11",
+        "website": "https://www.lebenshilfe-aachen.de/de/kinder/kindertagesstaetten/kita-elise.php"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0892803,
+          50.7732502
+        ]
+      },
+      "id": "node/9724183507"
     },
     {
       "type": "Feature",
@@ -11575,6 +12286,35 @@
         ]
       },
       "id": "node/10181197991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10230352937",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "143",
+        "addr:postcode": "52066",
+        "addr:street": "Bismarckstraße",
+        "amenity": "kindergarten",
+        "brand": "Arbeiterwohlfahrt",
+        "brand:short": "AWO",
+        "brand:wikidata": "Q627256",
+        "isced:level": "0",
+        "name": "Kindertagesstätte \"Viktoria\"",
+        "opening_hours": "Mo-Fr 07:30-16:30",
+        "operator": "Arbeiterwohlfahrt Kreisverband Aachen-Stadt e.V.",
+        "operator:type": "public",
+        "website": "https://www.awo-aachen.de/viktoria"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1095302,
+          50.7695051
+        ]
+      },
+      "id": "node/10230352937"
     },
     {
       "type": "Feature",
@@ -13027,6 +13767,7 @@
         "addr:street": "Bismarckstraße",
         "brand": "Alnatura",
         "brand:wikidata": "Q876811",
+        "check_date:opening_hours": "2025-03-22",
         "name": "Alnatura Super Natur Markt",
         "opening_hours": "Mo-Sa 07:00-20:00",
         "organic": "only",
@@ -13298,6 +14039,33 @@
         ]
       },
       "id": "node/11753233149"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11773216416",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "60",
+        "addr:postcode": "52074",
+        "addr:street": "Campus-Boulevard",
+        "amenity": "kindergarten",
+        "check_date": "2024-10-14",
+        "email": "info@vincerola.de",
+        "isced:level": "0",
+        "name": "Vincerola - Montessori Kindergarten",
+        "operator": "Vincerola GmbH",
+        "phone": "+49 241 99039200",
+        "website": "https://www.vincerola.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0445473,
+          50.784562
+        ]
+      },
+      "id": "node/11773216416"
     },
     {
       "type": "Feature",
