@@ -82,7 +82,7 @@ def create_city_scenario(
     create_configs_from_buildings(params, res_buildings, nonres_buildings)
     logging.info(f"Finished writing city scenario to {result_dir_path}")
 
-    # copy the Calcspec.json into the scenario directory
+    # copy the calcspec.json into the scenario directory
     template_path = Path("data/calcspec_template.json")
     create_lpg_configs.copy_calcspec_file(
         result_dir_path, template_path, str(lpg_result_path), db_file_path

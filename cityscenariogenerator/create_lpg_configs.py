@@ -67,11 +67,11 @@ def copy_calcspec_file(
     output directory.
 
     :param result_directory: output directory to save the settings file to
-    :param template_path: path to the settings template file, defaults to "Calcspec.json"
+    :param template_path: path to the settings template file, defaults to "calcspec.json"
     :param lpg_result_path: LPG output path to specifiy in the settings
     :param db_file_path: database path to specify in the settings
     """
-    # load the template Calcspec.json
+    # load the template calcspec.json
     with open(template_path, "r") as f:
         lines = f.readlines()
         # remove line comments (which are no valid JSON)
@@ -93,7 +93,7 @@ def copy_calcspec_file(
 
     # save the adjusted settings to the result directory
     result_json_str: str = house_job.to_json(indent=4)  # type: ignore
-    result_file_path = result_directory / "Calcspec.json"
+    result_file_path = result_directory / "calcspec.json"
     logging.info(f"Saving simulation settings to {result_file_path}")
     with open(result_file_path, "w+") as f:
         f.write(result_json_str)
