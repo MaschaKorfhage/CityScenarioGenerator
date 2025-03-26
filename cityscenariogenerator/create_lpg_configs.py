@@ -479,6 +479,7 @@ class LPGConfigCreator:
             raise Exception(f"Target directory was not empty: {path}")
         self.create_house_config_files(path / "houses")
         self.create_global_city_config_file(path)
+        # create statistics and plots describing the scenario
         self.create_scenario_statistics(path / "statistics")
         self.create_plots(path / "plots")
 
@@ -495,11 +496,13 @@ class LPGConfigCreator:
 
     def create_global_city_config_file(self, path: Path):
         filename = path / "city.json"
-        if self.global_city_definition.Routes:
+        city = self.global_city_definition
+        if city.Routes:
             # extract routes into a separate file
             self.create_routes_config_file(path)
-            self.global_city_definition.Routes = []
-        city_data = self.global_city_definition.to_json(indent=4)  # type: ignore
+            # create a copy of the city data, but without the routes
+            city = lpgdata.CityData(city.PointsOfInterest, [], city.MirrorRoutes)
+        city_data = city.to_json(indent=4)  # type: ignore
         with open(filename, "w+") as f:
             f.write(city_data)
 
@@ -535,6 +538,9 @@ class LPGConfigCreator:
         )
         scenario_statistics.write_poi_statistics(
             self.pois.values(), path, "poi_types_all"
+        )
+        scenario_statistics.write_route_statistics(
+            self.global_city_definition.Routes, path
         )
 
     def create_plots(self, path: Path):

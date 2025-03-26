@@ -1,8 +1,9 @@
 """calculate statistics about the distribution of households etc. in a generated scenario"""
 
-from collections import Counter
+from collections import Counter, defaultdict
 import json
 from pathlib import Path
+from statistics import mean, median
 from typing import Iterable
 
 from pylpg import lpgdata
@@ -84,3 +85,31 @@ def write_poi_statistics(
     poi_types_ordered = dict(sorted(poi_types.items()))
     with open(path / f"{name}.json", "w+") as f:
         json.dump(dict(poi_types_ordered), f, indent=4)
+
+
+def write_route_statistics(routes: Iterable[lpgdata.RouteData], path: Path):
+    """
+    Create statistics on route distances per mode.
+
+    :param routes: list of route
+    :param path: the directory to save the statistics file to
+    """
+    # group all route distances by mode
+    mode_distances = [r.mode_distances for r in routes]
+    distances_by_mode = defaultdict(list)
+    for dist_dict in mode_distances:
+        for mode, distance in dist_dict.items():
+            distances_by_mode[mode].append(distance)
+
+    # calculate statistics for each mode separately
+    statistics = {}
+    for mode, distances in distances_by_mode.items():
+        statistics[mode] = {
+            "mean": mean(distances),
+            "min": min(distances),
+            "max": max(distances),
+            "median": median(distances),
+        }
+    filepath = path / "route_distances.json"
+    with open(filepath, "w+", encoding="utf8") as f:
+        json.dump(statistics, f, indent=4)
