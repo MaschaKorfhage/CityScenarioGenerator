@@ -2,24 +2,17 @@
 Can plot maps of various spatial joins of OSM data, BUILDA data, and custom POIs.
 """
 
+import geopandas as gpd  # type: ignore
+import pandas as pd
+from pylpg import lpgdata
 import folium
+
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
 import cityscenariogenerator.plots.unmapped_building_map as buil_map
 from cityscenariogenerator import builda_client_import
 from cityscenariogenerator.overpass_import import overpass_query
-from cityscenariogenerator.overpass_import.osm_data_join import (
-    DFColumns,
-    builda_to_geodf,
-    filter_matched,
-    map_osm_nodes_to_locations,
-    pois_to_geodf,
-    remove_duplicate_matches,
-)
-
-
-import geopandas as gpd  # type: ignore
-import pandas as pd
-from pylpg import lpgdata
+from cityscenariogenerator.overpass_import import osm_data_join
+from cityscenariogenerator.overpass_import.osm_data_join import DFColumns
 
 
 def add_popup_column(df: pd.DataFrame, id: str = DFColumns.BUILDA_ID):
@@ -71,7 +64,7 @@ def show_osm_builda_join_on_map():
     overpass_df = gpd.read_file(f"data/custom_input/{city}/osm_nonres_nodes.geojson")
     # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
-    osm_node_locations = map_osm_nodes_to_locations(overpass_df, keys)
+    osm_node_locations = osm_data_join.map_osm_nodes_to_locations(overpass_df, keys)
     overpass_df[DFColumns.CATEGORY] = overpass_df[DFColumns.OSM_ID].map(
         lambda id: next(iter(osm_node_locations[id].non_work_locations))
     )
@@ -82,7 +75,7 @@ def show_osm_builda_join_on_map():
     with open(poi_path, "r") as f:
         json_str = f.read()
         city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
-    poi_df = pois_to_geodf(city_data.PointsOfInterest)
+    poi_df = osm_data_join.pois_to_geodf(city_data.PointsOfInterest)
 
     # collect non-residential buildings
     builda_query = {
@@ -94,11 +87,11 @@ def show_osm_builda_join_on_map():
     res_buildings = builda_client_import.get_residential_buildings(builda_query)
 
     # convert BUILDA objects to GeoDataFrame
-    builda_nonres_df = builda_to_geodf(nonres_buildings)
+    builda_nonres_df = osm_data_join.builda_to_geodf(nonres_buildings)
     builda_nonres_df[DFColumns.CATEGORY] = [
         buil_map.get_building_category_alkis(b) for b in nonres_buildings
     ]
-    builda_res_df = builda_to_geodf(res_buildings)
+    builda_res_df = osm_data_join.builda_to_geodf(res_buildings)
     builda_res_df.loc[:, DFColumns.CATEGORY] = ["residential"] * len(builda_res_df)
     builda_res_df = builda_res_df[
         ~builda_res_df[DFColumns.BUILDA_ID].isin(builda_nonres_df[DFColumns.BUILDA_ID])
@@ -128,7 +121,7 @@ def show_osm_builda_join_on_map():
         exclusive=False,
         max_distance=30,
     )
-    joined_df = remove_duplicate_matches(joined_df)
+    joined_df = osm_data_join.remove_duplicate_matches(joined_df)
     # set popup column for the map plot
     joined_df["popup"] = (
         joined_df[DFColumns.OSM_ID]
@@ -141,8 +134,8 @@ def show_osm_builda_join_on_map():
         + " m"
     )
 
-    matched_res = filter_matched(builda_res_df, joined_df)
-    matched_nonres = filter_matched(builda_nonres_df, joined_df)
+    matched_res = osm_data_join.filter_matched(builda_res_df, joined_df)
+    matched_nonres = osm_data_join.filter_matched(builda_nonres_df, joined_df)
     # joined_df = joined_df[joined_df[DFColumns.DISTANCE] > 20]
 
     print(f"OSM POIs: {len(overpass_df)}, custom POIS: {len(poi_df)}")
