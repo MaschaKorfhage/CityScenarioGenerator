@@ -11,6 +11,9 @@ from dataclasses_json import dataclass_json
 from geopy.geocoders import Nominatim  # type: ignore
 from pylpg import lpgdata
 
+#: the geolocating service to use
+GEOLOCATOR = Nominatim(user_agent="address-lookup-citysim")
+
 
 @dataclass_json
 @dataclass
@@ -27,8 +30,7 @@ class Entry:
         return f"{self.street} {self.number}, {self.postal_code} {self.city}"
 
     def lookup_coordinates(self) -> lpgdata.Coordinates:
-        geolocator = Nominatim(user_agent="address-lookup-city")
-        loc = geolocator.geocode(self.address())
+        loc = GEOLOCATOR.geocode(self.address())
         return lpgdata.Coordinates(loc.latitude, loc.longitude)
 
     def create_poi(self) -> lpgdata.PointOfInterestData:

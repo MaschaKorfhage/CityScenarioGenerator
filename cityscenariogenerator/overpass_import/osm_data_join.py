@@ -15,6 +15,7 @@ import geopandas as gpd  # type: ignore
 from builda_client.dev_client import Building  # type: ignore
 import pandas as pd
 from shapely import Point  # type: ignore
+from pylpg import lpgdata
 
 from cityscenariogenerator import builda_client_import
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
@@ -36,6 +37,8 @@ class DFColumns:
     BUILDA_ID = "id_builda"
     OSM_ID = "id"
     DISTANCE = "distance"
+
+    CATEGORY = "category"
 
 
 @dataclass(frozen=True)
@@ -127,18 +130,18 @@ def builda_to_geodf(buildings: Iterable[Building]) -> gpd.GeoDataFrame:
     return df
 
 
-def adapt_joined_df(joined_df, geometry_col: str):
-    joined_df[geometry_col] = joined_df.geometry.to_crs("EPSG:4326")
-    joined_df["popup"] = (
-        joined_df[DFColumns.OSM_ID]
-        + " - "
-        + joined_df[DFColumns.BUILDA_ID]
-        + "\n"
-        + joined_df["amenity"]
-        + "\n"
-        + joined_df[DFColumns.DISTANCE].round(1).astype(str)
-        + " m"
-    )
+def pois_to_geodf(pois: dict[str, lpgdata.PointOfInterestData]) -> gpd.GeoDataFrame:
+    geometry = [
+        Point(poi.Coordinates.Longitude, poi.Coordinates.Latitude)  # type: ignore
+        for poi in pois.values()
+    ]
+    data = {
+        DFColumns.BUILDA_ID: list(pois.keys()),
+        DFColumns.CATEGORY: [p.LocationType for p in pois.values()],
+    }
+    df = gpd.GeoDataFrame(data, geometry=geometry)
+    df.set_crs("EPSG:4326", inplace=True)
+    return df
 
 
 def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
@@ -154,12 +157,12 @@ def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     filtered = df.sort_values(by=DFColumns.DISTANCE).drop_duplicates(
         subset=[DFColumns.BUILDA_ID], keep="first"
     )
-    logging.info(f"Removed {len(df) - len(filtered)} duplicate matches")
+    logging.info(f"Removed {len(df) - len(filtered)} duplicate OSM matches")
     return filtered
 
 
-def add_markers_for_df(joined_df, m, color: str, geometry_col: str):
-    for _, row in joined_df.iterrows():
+def add_markers_for_df(df: pd.DataFrame, m, color: str, geometry_col: str):
+    for _, row in df.iterrows():
         folium.Marker(
             location=[row[geometry_col].y, row[geometry_col].x],
             popup=row.get("popup"),
@@ -167,25 +170,52 @@ def add_markers_for_df(joined_df, m, color: str, geometry_col: str):
         ).add_to(m)
 
 
-def plot_map(dataframes: list[gpd.GeoDataFrame], name: str, geometry_col: str):
-    first_df = dataframes[0]
+def plot_map(dataframes: list[gpd.GeoDataFrame], name: str):
+    # create a new column with coordinates in the correct format
+    geo_col = "geometry_4326"
+    for df in dataframes:
+        df.loc[:, geo_col] = df.geometry.to_crs("EPSG:4326")
+    # use the first non-empty dataframe to determine centre coordinates
+    map_center = next(
+        [
+            df[geo_col].y.mean(),
+            df[geo_col].x.mean(),
+        ]
+        for df in dataframes
+        if len(df) > 0
+    )
     # create a Folium map centered on the average coordinates
     map_1 = folium.Map(
-        location=[
-            first_df[geometry_col].y.mean(),
-            first_df[geometry_col].x.mean(),
-        ],
+        location=map_center,
         zoom_start=12,
     )
-    marker_cluster = folium.plugins.MarkerCluster().add_to(map_1)
+    # marker_cluster = folium.plugins.MarkerCluster().add_to(map_1)
     # create markers for each dataframe
     for i, df in enumerate(dataframes):
         color = MARKER_COLORS[i % len(MARKER_COLORS)]
-        add_markers_for_df(df, marker_cluster, color, geometry_col)
+        add_markers_for_df(df, map_1, color, geo_col)
 
     # Save map to an HTML file and display
     map_1.save(name)
     map_1.show_in_browser()
+
+
+def add_popup_column(df: pd.DataFrame, id: str = DFColumns.BUILDA_ID):
+    df["popup"] = df[id] + "\n" + df[DFColumns.CATEGORY]
+
+
+def filter_matched(df: pd.DataFrame, df2: pd.DataFrame, col: str = DFColumns.BUILDA_ID):
+    """
+    Extracts only those entries from the first dataframe whose ID is also
+    contained in the second dataframe. Uses the specified columns as ID.
+
+    :param df: the dataframe to extract rows from
+    :param df2: the dataframe to check which rows shall be kept
+    :param col: the ID column to check if a row is contained
+    :return: the entries from df that are also present in df2
+    """
+    assert col in df.columns and col in df2.columns, f"Invalid column: {col}"
+    return df[df[col].isin(df2[col])]
 
 
 def get_nonwork_location_for_node(mappings: dict[str, dict], row: pd.Series) -> str:
@@ -377,33 +407,59 @@ def create_building_category_location_statistics(
 
 
 def show_osm_builda_join_on_map():
+    city = "Jülich"
     # load overpass building data
-    overpass_df = gpd.read_file("data/custom_input/Aachen/osm_nonres_nodes.geojson")
+    overpass_df = gpd.read_file(f"data/custom_input/{city}/osm_nonres_nodes.geojson")
+    # determine the LPG location type for each OSM node ID
+    keys = overpass_query.get_osm_keys_for_mapping()
+    osm_node_locations = map_osm_nodes_to_locations(overpass_df, keys)
+    overpass_df[DFColumns.CATEGORY] = overpass_df[DFColumns.OSM_ID].map(
+        lambda id: next(iter(osm_node_locations[id].non_work_locations))
+    )
+
+    # load custom POIs
+    poi_path = f"data/custom_input/{city}/custom_pois_dasörtliche.json"
+    # load the custom POIs from file
+    with open(poi_path, "r") as f:
+        json_str = f.read()
+        city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
+    poi_df = pois_to_geodf(city_data.PointsOfInterest)
 
     # collect non-residential buildings
     builda_query = {
-        "city": "Aachen",
+        "city": city,
         # "postcode": "52066",
         # "street": "Eupener Straße",
     }
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
+    res_buildings = builda_client_import.get_residential_buildings(builda_query)
 
     # convert BUILDA objects to GeoDataFrame
-    builda_df = builda_to_geodf(nonres_buildings)
-    builda_df["category"] = [
+    builda_nonres_df = builda_to_geodf(nonres_buildings)
+    builda_nonres_df[DFColumns.CATEGORY] = [
         buil_map.get_building_category_alkis(b) for b in nonres_buildings
     ]
-
-    # convert to Web Mercator projection to get correct distances, but save old geometry first
-    geometry_4326 = "geometry_4326"
-    overpass_df[geometry_4326] = overpass_df.geometry
-    builda_df[geometry_4326] = builda_df.geometry
-    overpass_df.to_crs("EPSG:3857", inplace=True)
-    builda_df.to_crs("EPSG:3857", inplace=True)
+    builda_res_df = builda_to_geodf(res_buildings)
+    builda_res_df.loc[:, DFColumns.CATEGORY] = ["residential"] * len(builda_res_df)
+    builda_res_df = builda_res_df[
+        ~builda_res_df[DFColumns.BUILDA_ID].isin(builda_nonres_df[DFColumns.BUILDA_ID])
+    ]
+    builda_df = pd.concat([builda_nonres_df, builda_res_df], axis="index")
 
     # add a column for the popup text
-    builda_df["popup"] = builda_df[DFColumns.BUILDA_ID] + "\n" + builda_df["category"]
-    overpass_df["popup"] = overpass_df[DFColumns.OSM_ID] + "\n" + overpass_df["amenity"]
+    add_popup_column(builda_res_df)
+    add_popup_column(builda_nonres_df)
+    add_popup_column(poi_df)
+    add_popup_column(builda_df)
+    add_popup_column(overpass_df, DFColumns.OSM_ID)
+
+    # convert to Web Mercator projection to get correct distances
+    overpass_df.to_crs("EPSG:3857", inplace=True)
+    builda_df.to_crs("EPSG:3857", inplace=True)
+    poi_df.to_crs("EPSG:3857", inplace=True)
+
+    # filter for testing
+    overpass_df = overpass_df[overpass_df[DFColumns.CATEGORY] == "Doctors Office"]
 
     # spatial join
     joined_df = gpd.sjoin_nearest(
@@ -411,17 +467,35 @@ def show_osm_builda_join_on_map():
         builda_df,
         distance_col=DFColumns.DISTANCE,
         exclusive=False,
-        max_distance=20,
+        max_distance=30,
     )
-    adapt_joined_df(joined_df, geometry_4326)
-
     joined_df = remove_duplicate_matches(joined_df)
-
-    print(
-        f"Builda: {len(builda_df)}, Overpass: {len(overpass_df)}, Joined: {len(joined_df)}, "
+    # set popup column for the map plot
+    joined_df["popup"] = (
+        joined_df[DFColumns.OSM_ID]
+        + " - "
+        + joined_df[DFColumns.BUILDA_ID]
+        + "\n"
+        + joined_df["category_left"]
+        + "\n"
+        + joined_df[DFColumns.DISTANCE].round(1).astype(str)
+        + " m"
     )
 
-    plot_map([builda_df, overpass_df, joined_df], "health_map.html", geometry_4326)
+    matched_res = filter_matched(builda_res_df, joined_df)
+    matched_nonres = filter_matched(builda_nonres_df, joined_df)
+    # joined_df = joined_df[joined_df[DFColumns.DISTANCE] > 20]
+
+    print(f"OSM POIs: {len(overpass_df)}, custom POIS: {len(poi_df)}")
+    print(
+        f"Matches: {len(joined_df)}, {len(matched_res)} residential, {len(matched_nonres)} non-residential"
+    )
+
+    # plot_map([overpass_df, poi_df, joined_df], "health_map.html")
+    plot_map([matched_res, matched_nonres, overpass_df, joined_df], "health_map.html")
+    # plot_map(
+    #     [builda_res_df, builda_nonres_df, overpass_df, joined_df], "health_map.html"
+    # )
 
 
 if __name__ == "__main__":
