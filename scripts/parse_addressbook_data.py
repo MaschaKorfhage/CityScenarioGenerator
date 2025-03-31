@@ -10,9 +10,37 @@ from pathlib import Path
 from dataclasses_json import dataclass_json
 from geopy.geocoders import Nominatim  # type: ignore
 from pylpg import lpgdata
+import requests
 
 #: the geolocating service to use
 GEOLOCATOR = Nominatim(user_agent="address-lookup-citysim")
+
+
+def lookup_coordinates_nominatim(address: str) -> lpgdata.Coordinates:
+    loc = GEOLOCATOR.geocode(address)
+    return lpgdata.Coordinates(loc.latitude, loc.longitude)
+
+
+def lookup_coordinates_geoapify(address: str) -> lpgdata.Coordinates:
+    API_KEY = "bdbbdacf3a344299ae6556b621dd69f0"
+    # Build the API URL
+    url = f"https://api.geoapify.com/v1/geocode/search?text={address}&limit=1&apiKey={API_KEY}"
+
+    # Send the API request and get the response
+    response = requests.get(url)
+
+    # Check the response status code
+    if response.status_code == 200:
+        # Parse the JSON data from the response
+        data = response.json()
+        # Extract the first result from the data
+        result = data["features"][0]
+        # Extract the latitude and longitude of the result
+        latitude = result["geometry"]["coordinates"][1]
+        longitude = result["geometry"]["coordinates"][0]
+        return lpgdata.Coordinates(latitude, longitude)
+    else:
+        raise Exception(f"Request failed with status code {response.status_code}")
 
 
 @dataclass_json
@@ -30,8 +58,7 @@ class Entry:
         return f"{self.street} {self.number}, {self.postal_code} {self.city}"
 
     def lookup_coordinates(self) -> lpgdata.Coordinates:
-        loc = GEOLOCATOR.geocode(self.address())
-        return lpgdata.Coordinates(loc.latitude, loc.longitude)
+        return lookup_coordinates_geoapify(self.address())
 
     def create_poi(self) -> lpgdata.PointOfInterestData:
         location = self.category
