@@ -307,9 +307,8 @@ class LPGConfigCreator:
                 p: calc_distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
             }
             # randomly select some POIs, using the inverted distances as weights
-            if len(distances) > 1:
+            if len(distances) > 1 and (distmax := max(distances.values())) > 0:
                 # norm the distances to [0, 1] to avoid double precision issues
-                distmax: float = max(distances.values())
                 distances = {p: d / distmax for p, d in distances.items()}
 
             weights = {poi: 1 / (d + 0.1) for poi, d in distances.items()}

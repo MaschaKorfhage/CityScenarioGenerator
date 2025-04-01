@@ -75,8 +75,10 @@ def create_city_scenario(
     logging.info(f"Using RNG seed {seed}")
 
     # collect residential and non-residential buildings
-    nonres_buildings = import_nonresidential_buildings_from_builda(params)
     res_buildings = import_residential_buildings_from_builda(params)
+    nonres_buildings = import_nonresidential_buildings_from_builda(
+        params, res_buildings
+    )
 
     # create config files for the collected buildings
     create_configs_from_buildings(params, res_buildings, nonres_buildings)
@@ -91,7 +93,7 @@ def create_city_scenario(
 
 
 def main():
-    builda_query = {"city": "Heimbach", "postcode": "52396", "street": ""}
+    builda_query = {"city": "Jülich", "postcode": "", "street": ""}
     scenario_dir = Path("./scenarios")
     lpg_result_dir = Path("D:/LPG/Results")
 

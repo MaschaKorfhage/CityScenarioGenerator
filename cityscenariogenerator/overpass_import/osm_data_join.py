@@ -4,6 +4,7 @@ with BUILDA buildings to add better location types to non-residential buildings.
 """
 
 from collections import Counter, defaultdict
+import copy
 from dataclasses import dataclass
 import json
 import logging
@@ -11,11 +12,12 @@ from pathlib import Path
 from typing import Iterable
 import geopandas as gpd  # type: ignore
 
-from builda_client.dev_client import Building  # type: ignore
+from builda_client.dev_client import Building, NonResidentialBuilding  # type: ignore
 import pandas as pd
 from shapely import Point  # type: ignore
 from pylpg import lpgdata
 
+from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.poi_type_mapping import (
     AlkisMapper,
     BuildingWithLocationType,
@@ -113,7 +115,7 @@ def load_location_work_mapping() -> dict[str, list[str]]:
         return json.load(f)
 
 
-def builda_to_geodf(buildings: Iterable[Building]) -> gpd.GeoDataFrame:
+def builda_to_geodf(buildings: Iterable[Building | BuildingData]) -> gpd.GeoDataFrame:
     # store in list to allow iterating multiple times
     building_list = list(buildings)
     # Convert to GeoDataFrame
@@ -215,11 +217,15 @@ def map_osm_nodes_to_locations(
 
 
 def add_osm_location_types(
-    params: ScenarioParams, buildings: dict[str, BuildingWithLocationType]
+    params: ScenarioParams,
+    nonres_buildings: dict[str, BuildingWithLocationType],
+    res_buildings: list[BuildingData],
 ) -> set[str]:
     overpass_df = load_overpass_data(params)
     # convert BUILDA objects to GeoDataFrame
-    builda_df = builda_to_geodf(b.building for b in buildings.values())
+    builda_nonres_df = builda_to_geodf(b.building for b in nonres_buildings.values())
+    builda_res_df = builda_to_geodf(res_buildings)
+    builda_df = concat_builda_dfs(builda_nonres_df, builda_res_df)
 
     # convert to Web Mercator projection to get correct distances
     overpass_df.to_crs("EPSG:3857", inplace=True)
@@ -234,9 +240,9 @@ def add_osm_location_types(
         exclusive=False,
         max_distance=distance,
     )
-    joined_df = remove_duplicate_matches(joined_df)
+    # joined_df = remove_duplicate_matches(joined_df)
     logtext = f"Matched {len(joined_df)} of {len(overpass_df)} OSM nodes to "
-    logtext += f"non-residential buildings. Max distance: {distance} m."
+    logtext += f"BUILDA buildings. Max distance: {distance} m."
     logging.info(logtext)
 
     # determine the LPG location type for each OSM node ID
@@ -252,12 +258,28 @@ def add_osm_location_types(
         ~overpass_df[DFColumns.OSM_ID].isin(joined_df[DFColumns.OSM_ID])
     ]
     write_osm_ignored_nodes_statistics(ignored_df, osm_node_locations, directory)
+    # TODO: create new building objects for these POIs to use them as well?
 
     # assign OSM locations to BUILDA buildings
+    res_building_dict = {b.id: b for b in res_buildings}
     changed = assign_osm_location_type_to_buildings(
-        buildings, joined_df, osm_node_locations, directory
+        nonres_buildings, res_building_dict, joined_df, osm_node_locations, directory
     )
     return changed
+
+
+def concat_builda_dfs(df1, df2):
+    """
+    Combines two BUILDA GeoDataFrames, e.g. residential and nonresidential
+    buildings. Uses the BUILDA_ID column to check for duplicates to only
+    include them once.
+
+    :param df1: first dataframe
+    :param df2: second dataframe
+    :return: combined dataframe with all entries
+    """
+    df2 = df2[~df2[DFColumns.BUILDA_ID].isin(df1[DFColumns.BUILDA_ID])]
+    return pd.concat([df1, df2], axis="index")
 
 
 def write_osm_ignored_nodes_statistics(
@@ -285,17 +307,44 @@ def write_osm_ignored_nodes_statistics(
 
 
 def assign_osm_location_type_to_buildings(
-    buildings: dict[str, BuildingWithLocationType],
+    nonres_buildings: dict[str, BuildingWithLocationType],
+    res_buildings: dict[str, BuildingData],
     joined_df: gpd.GeoDataFrame,
     osm_node_locations: dict[str, LocationType],
     result_dir: Path,
 ) -> set[str]:
     assignments: list[LocReplacement] = []
     changed = set()
+    handled: dict[str, int] = {}
+    new_buildings: dict[str, BuildingWithLocationType] = {}
     for _, row in joined_df.iterrows():
         # get the matching location type for the OSM node
         osm_loc_type = osm_node_locations[row[DFColumns.OSM_ID]]
-        matched_building = buildings[row[DFColumns.BUILDA_ID]]
+        original_id = row[DFColumns.BUILDA_ID]
+        if original_id in nonres_buildings:
+            # assign the corresponding location type to the non-residential building
+            matched_building = nonres_buildings[original_id]
+        else:
+            # matched to a residential building -> create a non-residential building out of it
+            matched_building = res_to_nonres_building(res_buildings[original_id])
+
+        # check if the building has been matched before
+        if original_id in handled:
+            # building has already been assigned to another OSM node
+            if original_id in nonres_buildings:
+                # non-residential buildings need to be copied to get independent objects
+                matched_building = copy.deepcopy(matched_building)
+            # assign a new unique ID
+            index = handled[original_id] + 1
+            matched_building.building.id += f"_copy_{index}"
+            handled[original_id] = index
+        else:
+            # mark the building as already assigned to an OSM node
+            handled[original_id] = 0
+
+        if matched_building.building.id not in nonres_buildings:
+            new_buildings[matched_building.building.id] = matched_building
+
         # collect which location types were changed due to the assignment
         replacement = LocReplacement(matched_building.location_type, osm_loc_type)
         assignments.append(replacement)
@@ -307,10 +356,41 @@ def assign_osm_location_type_to_buildings(
 
     log_changes_in_location_type(assignments)
 
+    # add the created building copies
+    nonres_buildings.update(new_buildings)
+
     # for all changed buildings, calculat statistics on building types and new locations
-    changed_buildings = {k: v for k, v in buildings.items() if k in changed}
+    changed_buildings = {k: v for k, v in nonres_buildings.items() if k in changed}
     create_building_category_location_statistics(changed_buildings, result_dir)
     return changed
+
+
+def res_to_nonres_building(res_build: BuildingData):
+    """
+    Create a non-residential building object from a residential BUILDA building.
+    This can be used when a building falsely categorized as purely residential
+    should be used for non-residential purposes as well.
+
+    :param res_build: the residential building
+    :return: a newly created non-residential building object with matching properties
+    """
+    # TODO: fill in the correct values from the residential building BUILDA object
+    building = NonResidentialBuilding(
+        res_build.id + "_nonres",
+        res_build.coordinates,
+        {},
+        -1,
+        -1,
+        -1,
+        -1,
+        "",
+        "",
+        None,
+        "",
+        {},
+        -1,
+    )
+    return BuildingWithLocationType(building, LocationType())
 
 
 def log_changes_in_location_type(assignments: list[LocReplacement]):

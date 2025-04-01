@@ -77,7 +77,7 @@ def show_osm_builda_join_on_map():
         city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
     poi_df = osm_data_join.pois_to_geodf(city_data.PointsOfInterest)
 
-    # collect non-residential buildings
+    # load BUILDA data
     builda_query = {
         "city": city,
         # "postcode": "52066",
@@ -85,18 +85,14 @@ def show_osm_builda_join_on_map():
     }
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     res_buildings = builda_client_import.get_residential_buildings(builda_query)
-
-    # convert BUILDA objects to GeoDataFrame
+    # convert BUILDA objects to GeoDataFrames and add a category column
     builda_nonres_df = osm_data_join.builda_to_geodf(nonres_buildings)
     builda_nonres_df[DFColumns.CATEGORY] = [
         buil_map.get_building_category_alkis(b) for b in nonres_buildings
     ]
     builda_res_df = osm_data_join.builda_to_geodf(res_buildings)
     builda_res_df.loc[:, DFColumns.CATEGORY] = ["residential"] * len(builda_res_df)
-    builda_res_df = builda_res_df[
-        ~builda_res_df[DFColumns.BUILDA_ID].isin(builda_nonres_df[DFColumns.BUILDA_ID])
-    ]
-    builda_df = pd.concat([builda_nonres_df, builda_res_df], axis="index")
+    builda_df = osm_data_join.concat_builda_dfs(builda_nonres_df, builda_res_df)
 
     # add a column for the popup text
     add_popup_column(builda_res_df)
