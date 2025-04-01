@@ -70,6 +70,6 @@ def import_residential_buildings_from_builda(
         if sys.platform == "win32":
             # windows is case-insensitive regarding file names, so make the IDs unique
             add_counter_to_ids(buildings)
-        else:
-            logging.warning(message)
+            message += " Added a counter to make IDs unique without case."
+        logging.info(message)
     return buildings
