@@ -6,6 +6,7 @@ Also looks up coordinates by address and creates a custom POI file that can be i
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Callable
 
 from dataclasses_json import dataclass_json
 from geopy.geocoders import Nominatim  # type: ignore
@@ -58,7 +59,7 @@ class Entry:
         return f"{self.street} {self.number}, {self.postal_code} {self.city}"
 
     def lookup_coordinates(self) -> lpgdata.Coordinates:
-        return lookup_coordinates_geoapify(self.address())
+        return lookup_coordinates_nominatim(self.address())
 
     def create_poi(self) -> lpgdata.PointOfInterestData:
         location = self.category
@@ -126,15 +127,26 @@ def write_to_poi_file(path: Path, entries: list[Entry]):
         f.write(json_str)
 
 
-def filter_for_city(entries: list[Entry], city: str) -> tuple[list[Entry], list[Entry]]:
-    in_city = []
-    not_in_city = []
+def filter_entries(
+    entries: list[Entry], condition: Callable[[Entry], bool]
+) -> tuple[list[Entry], list[Entry]]:
+    """
+    Separates entries into two lists, depending on whether they fulfill
+    a condition or not.
+
+    :param entries: the full list of entries
+    :param condition: the condition to group by
+    :return: the list of entries that fulfill the condition, and the list of
+             the remaining entries
+    """
+    fulfilled = []
+    not_fulfilled = []
     for entry in entries:
-        if entry.city == city:
-            in_city.append(entry)
+        if condition(entry):
+            fulfilled.append(entry)
         else:
-            not_in_city.append(entry)
-    return in_city, not_in_city
+            not_fulfilled.append(entry)
+    return fulfilled, not_fulfilled
 
 
 def parse_dasoertliche(lines) -> list[Entry]:
@@ -151,9 +163,9 @@ def parse_dasoertliche(lines) -> list[Entry]:
 
 
 def main():
-    path = Path(r"D:\Git-Repositories\CityScenarioGenerator\dasörtliche_raw.txt")
-    # path = Path(r"D:\Git-Repositories\CityScenarioGenerator\dastelefonbuch_raw.txt")
-    # path = Path(r"D:\Git-Repositories\CityScenarioGenerator\gelbeseiten_raw.txt")
+    path = Path("data/raw/address_book_texts_jülich/dasörtliche.txt")
+    # path = Path("data/raw/address_book_texts_jülich/dastelefonbuch.txt")
+    # path = Path("data/raw/address_book_texts_jülich/gelbeseiten.txt")
 
     with open(path, "r", encoding="utf8") as f:
         lines = f.readlines()
@@ -161,17 +173,25 @@ def main():
     lines = lines[1:]
 
     all_entries = parse_dasoertliche(lines)
+    print(f"Found {len(all_entries)} suitable entries.")
 
-    entries, wrong_city = filter_for_city(all_entries, "Jülich")
-    print(f"Found {len(entries)} suitable entries, ignored {len(wrong_city)} entries")
+    # filter out unsuitable entries
+    entries, wrong_city = filter_entries(all_entries, lambda e: e.city == "Jülich")
+    entries, vets = filter_entries(
+        entries, lambda e: "Tier" not in e.name and "Tier" not in e.category
+    )
+    print(
+        f"Ignored: {len(wrong_city)} entries (wrong city), {len(vets)} entries (vets).\n"
+        f"{len(entries)} suitable entries remain."
+    )
 
     # find locations with the same address
     print_duplicate_addresses(entries)
 
     resultpath = path.parent / (f"custom_pois_{path.stem}.json")
     write_to_poi_file(resultpath, entries)
-    resultpath = path.parent / (f"{resultpath.stem}_wrong_city.json")
-    write_to_poi_file(resultpath, wrong_city)
+    # resultpath = path.parent / (f"{resultpath.stem}_wrong_city.json")
+    # write_to_poi_file(resultpath, wrong_city)
 
 
 if __name__ == "__main__":

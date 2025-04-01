@@ -2,8 +2,6 @@
 Contains functions to import residential buildings from BUILDA, and map them to the data required for the LoadProfileGenerator.
 """
 
-import logging
-import sys
 from cityscenariogenerator import builda_client_import
 import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
