@@ -7,6 +7,9 @@ scenarios
 # cached BUILDA results
 cache/
 
+# unprocessed data files
+data/raw
+
 # scripts and logs
 slurm_scripts
 logs
