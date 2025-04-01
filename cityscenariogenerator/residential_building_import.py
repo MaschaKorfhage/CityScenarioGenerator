@@ -38,16 +38,6 @@ def import_residential_buildings_from_builda_file(
     return buildings
 
 
-def add_counter_to_ids(buildings: list[BuildingData]) -> None:
-    """
-    Adds a counter to the IDs of the buildings to make them unique.
-
-    :param buildings: list of buildings
-    """
-    for i, b in enumerate(buildings):
-        b.id = f"{b.id}-{i}"
-
-
 def import_residential_buildings_from_builda(
     params: ScenarioParams,
 ) -> list[BuildingData]:
@@ -62,14 +52,4 @@ def import_residential_buildings_from_builda(
     buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
         building_data_list
     )
-
-    # check if there are buildings IDs that only differ in case
-    building_ids = {building.id.lower() for building in buildings}
-    if len(building_ids) != len(buildings):
-        message = "Some building IDs only differ in case."
-        if sys.platform == "win32":
-            # windows is case-insensitive regarding file names, so make the IDs unique
-            add_counter_to_ids(buildings)
-            message += " Added a counter to make IDs unique without case."
-        logging.info(message)
     return buildings

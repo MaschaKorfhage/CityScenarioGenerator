@@ -5,7 +5,7 @@ import logging
 import os
 from pathlib import Path
 import pickle
-from dotenv import load_dotenv
+import dotenv
 
 from builda_client.dev_client import (  # type: ignore
     BuildaDevClient,
@@ -15,11 +15,11 @@ from builda_client.dev_client import (  # type: ignore
     NonResidentialBuilding,
 )
 
-from cityscenariogenerator import utils
+from cityscenariogenerator import builda_id_check, utils
 
 
 # load credentials for the BuildaDevClient
-load_dotenv()
+dotenv.load_dotenv()
 
 
 def get_builda_devclient():
@@ -94,6 +94,7 @@ def get_nonresidential_buildings(
         **search_args, exclude_auxiliary=True
     )
     logging.info(f"Non-residential buildings in {search_args}: {len(nonres_buildings)}")
+    builda_id_check.check_building_ids(nonres_buildings)
     if use_cache:
         # cache the result
         cache_builda_result(search_args, "nonres", nonres_buildings)
@@ -109,6 +110,7 @@ def get_residential_buildings(
     client = get_builda_devclient()
     res_buildings = client.get_residential_buildings(**search_args)
     logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
+    builda_id_check.check_building_ids(res_buildings)
     if use_cache:
         # cache the result
         cache_builda_result(search_args, "res", res_buildings)
