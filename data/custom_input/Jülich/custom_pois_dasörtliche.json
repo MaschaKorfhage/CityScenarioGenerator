@@ -3,8 +3,8 @@
         "Augenzentrum J\u00fclich MVZ Augenzentrum J\u00fclich GmbH": {
             "LocationType": "\u00c4rzte: Augenheilkunde (Fach\u00e4rzte)",
             "Coordinates": {
-                "Latitude": 50.9276242,
-                "Longitude": 6.363218349999999
+                "Latitude": 50.9276101,
+                "Longitude": 6.3633366
             },
             "TimeLimit": null
         },
@@ -19,8 +19,8 @@
         "Becker-Ewert Maike Dr. Zahn\u00e4rztin": {
             "LocationType": "Zahn\u00e4rzte",
             "Coordinates": {
-                "Latitude": 50.9308153,
-                "Longitude": 6.3591945
+                "Latitude": 50.9307285,
+                "Longitude": 6.3592493
             },
             "TimeLimit": null
         },
@@ -51,8 +51,8 @@
         "Elsen J\u00fcrgen Dr. med. & Fuchs Undine": {
             "LocationType": "\u00c4rzte: Allgemeinmedizin (Fach\u00e4rzte)",
             "Coordinates": {
-                "Latitude": 50.9163282,
-                "Longitude": 6.3592826
+                "Latitude": 50.9163111,
+                "Longitude": 6.359234
             },
             "TimeLimit": null
         },
@@ -152,14 +152,6 @@
             },
             "TimeLimit": null
         },
-        "Tierarztpraxis A. N\u00fcrnberg": {
-            "LocationType": "Tier\u00e4rzte",
-            "Coordinates": {
-                "Latitude": 50.92934325,
-                "Longitude": 6.382271170975353
-            },
-            "TimeLimit": null
-        },
         "Virnich-Langanke Natascha Dr. med. Internistin": {
             "LocationType": "\u00c4rzte: Innere Medizin (Fach\u00e4rzte)",
             "Coordinates": {
@@ -243,8 +235,8 @@
         "Gemeinschaftspraxis H. Schmidt, D. Schmidt und M. Alefeld Orthop\u00e4dische Unfallpraxis": {
             "LocationType": "\u00c4rzte: Allgemeinmedizin (Fach\u00e4rzte)",
             "Coordinates": {
-                "Latitude": 50.9205654,
-                "Longitude": 6.3611749
+                "Latitude": 50.9205292,
+                "Longitude": 6.3612051
             },
             "TimeLimit": null
         },
@@ -259,8 +251,8 @@
         "Heil Thomas Dr.med.dent. Zahnarzt": {
             "LocationType": "Zahn\u00e4rzte",
             "Coordinates": {
-                "Latitude": 50.92221004072159,
-                "Longitude": 6.358766201609564
+                "Latitude": 50.922369,
+                "Longitude": 6.360202
             },
             "TimeLimit": null
         },
@@ -269,14 +261,6 @@
             "Coordinates": {
                 "Latitude": 50.88810995,
                 "Longitude": 6.4054831660019715
-            },
-            "TimeLimit": null
-        },
-        "Knorre M. Tier\u00e4rztin": {
-            "LocationType": "Tier\u00e4rzte",
-            "Coordinates": {
-                "Latitude": 50.9088101,
-                "Longitude": 6.357369581375845
             },
             "TimeLimit": null
         },
@@ -299,8 +283,8 @@
         "radiologie team rur": {
             "LocationType": "\u00c4rzte: Radiologie (Fach\u00e4rzte)",
             "Coordinates": {
-                "Latitude": 50.9205654,
-                "Longitude": 6.3611749
+                "Latitude": 50.9205292,
+                "Longitude": 6.3612051
             },
             "TimeLimit": null
         },
@@ -317,30 +301,6 @@
             "Coordinates": {
                 "Latitude": 50.921437,
                 "Longitude": 6.357007133054642
-            },
-            "TimeLimit": null
-        },
-        "Tierarzt J\u00fclich, Tier\u00e4rztliche Praxis f\u00fcr Kleintiere am Br\u00fcckenkopfpark": {
-            "LocationType": "Tier\u00e4rzte",
-            "Coordinates": {
-                "Latitude": 50.9250678,
-                "Longitude": 6.3535559
-            },
-            "TimeLimit": null
-        },
-        "Tierarztpraxis J. Wieczorek - Riewe": {
-            "LocationType": "Tier\u00e4rzte",
-            "Coordinates": {
-                "Latitude": 50.9181539,
-                "Longitude": 6.374770784262308
-            },
-            "TimeLimit": null
-        },
-        "Tierarztpraxis Monika Fa\u00dfbender": {
-            "LocationType": "Tier\u00e4rzte",
-            "Coordinates": {
-                "Latitude": 50.95402645,
-                "Longitude": 6.432710567337285
             },
             "TimeLimit": null
         },

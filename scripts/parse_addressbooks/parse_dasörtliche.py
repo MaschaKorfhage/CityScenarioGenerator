@@ -68,6 +68,7 @@ class Entry:
 
 
 def get_street_number(s: str) -> tuple[str, str]:
+    "string in format 'Kurfürstenstr. 15', sometimes without number"
     parts = s.split(" ")
     if len(parts) == 1:
         return s, ""
@@ -77,6 +78,7 @@ def get_street_number(s: str) -> tuple[str, str]:
 
 
 def get_postal_and_city(s: str) -> tuple[int, str]:
+    "string in format '52351 Düren', sometimes followed by a city area"
     if ", " in s:
         i = s.find(",")
         s = s[:i]
