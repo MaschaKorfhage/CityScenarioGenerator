@@ -232,7 +232,7 @@ def add_osm_location_types(
     builda_df.to_crs("EPSG:3857", inplace=True)
 
     # spatial join
-    distance = 20
+    distance = 30
     joined_df = gpd.sjoin_nearest(
         overpass_df,
         builda_df,
@@ -240,6 +240,7 @@ def add_osm_location_types(
         exclusive=False,
         max_distance=distance,
     )
+    assert joined_df[DFColumns.OSM_ID].is_unique, "Matched a node to multiple buildings"
     # joined_df = remove_duplicate_matches(joined_df)
     logtext = f"Matched {len(joined_df)} of {len(overpass_df)} OSM nodes to "
     logtext += f"BUILDA buildings. Max distance: {distance} m."
@@ -313,10 +314,16 @@ def assign_osm_location_type_to_buildings(
     osm_node_locations: dict[str, LocationType],
     result_dir: Path,
 ) -> set[str]:
+    # collect which location types were replaced with which new ones based on OSM
     assignments: list[LocReplacement] = []
+    # store all buildings for which OSM provided a new or different type
     changed = set()
-    handled: dict[str, int] = {}
+    # store how many copies of each building were already already created
+    copy_counts: dict[str, int] = {}
+    # store newly created non-residential building objects, with their modified ID
     new_buildings: dict[str, BuildingWithLocationType] = {}
+    created_from_res = 0
+    # handle each OSM node individually
     for _, row in joined_df.iterrows():
         # get the matching location type for the OSM node
         osm_loc_type = osm_node_locations[row[DFColumns.OSM_ID]]
@@ -327,20 +334,23 @@ def assign_osm_location_type_to_buildings(
         else:
             # matched to a residential building -> create a non-residential building out of it
             matched_building = res_to_nonres_building(res_buildings[original_id])
+            created_from_res += 1
 
         # check if the building has been matched before
-        if original_id in handled:
+        if original_id in copy_counts:
             # building has already been assigned to another OSM node
             if original_id in nonres_buildings:
                 # non-residential buildings need to be copied to get independent objects
                 matched_building = copy.deepcopy(matched_building)
+                # TODO: don't add the same work locations for copied buildings
+                # matched_building.location_type.work_locations = set() # this is overwritten below
             # assign a new unique ID
-            index = handled[original_id] + 1
+            index = copy_counts[original_id] + 1
             matched_building.building.id += f"_copy_{index}"
-            handled[original_id] = index
+            copy_counts[original_id] = index
         else:
-            # mark the building as already assigned to an OSM node
-            handled[original_id] = 0
+            # this building was assigned to an OSM node for the first time
+            copy_counts[original_id] = 0
 
         if matched_building.building.id not in nonres_buildings:
             new_buildings[matched_building.building.id] = matched_building
@@ -358,6 +368,12 @@ def assign_osm_location_type_to_buildings(
 
     # add the created building copies
     nonres_buildings.update(new_buildings)
+
+    # write log entries about the newly created building objects
+    logging.info(f"Matched {created_from_res} OSM nodes to residential buildings.")
+    logging.info(f"Created {len(new_buildings)} new non-residential building objects.")
+    num_copies = len(joined_df) - len(copy_counts)
+    logging.info(f"Created in total {num_copies} copies of building objects.")
 
     # for all changed buildings, calculat statistics on building types and new locations
     changed_buildings = {k: v for k, v in nonres_buildings.items() if k in changed}
