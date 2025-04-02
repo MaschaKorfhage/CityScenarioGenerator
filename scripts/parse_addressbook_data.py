@@ -18,7 +18,7 @@ GEOLOCATOR = Nominatim(user_agent="address-lookup-citysim")
 
 
 def lookup_coordinates_nominatim(address: str) -> lpgdata.Coordinates:
-    loc = GEOLOCATOR.geocode(address)
+    loc = GEOLOCATOR.geocode(address, timeout=30)
     return lpgdata.Coordinates(loc.latitude, loc.longitude)
 
 
