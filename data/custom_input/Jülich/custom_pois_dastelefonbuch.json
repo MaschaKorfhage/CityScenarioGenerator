@@ -147,8 +147,8 @@
         "Heil Thomas Dr.med.dent. Zahnarzt": {
             "LocationType": "Zahn\u00e4rzte",
             "Coordinates": {
-                "Latitude": 50.92294992150052,
-                "Longitude": 6.362939184691179
+                "Latitude": 50.922369,
+                "Longitude": 6.360202
             },
             "TimeLimit": null
         },
@@ -240,14 +240,6 @@
             },
             "TimeLimit": null
         },
-        "Sch\u00fctz Wilhelm Dr.": {
-            "LocationType": "\u00c4rzte: Phoniatrie und P\u00e4daudiologie (Fach\u00e4rzte)",
-            "Coordinates": {
-                "Latitude": 50.9279164,
-                "Longitude": 6.3638681
-            },
-            "TimeLimit": null
-        },
         "Sch\u00fctz Wilhelm u. Stephanie Dres. HNO-\u00c4rzte, Allergologie": {
             "LocationType": "\u00c4rzte: Hals-Nasen-Ohrenheilkunde (Fach\u00e4rzte), \u00c4rzte: Phoniatrie und P\u00e4daudiologie (Fach\u00e4rzte)",
             "Coordinates": {
@@ -293,14 +285,6 @@
             "Coordinates": {
                 "Latitude": 50.9225557,
                 "Longitude": 6.3601236
-            },
-            "TimeLimit": null
-        },
-        "Zahnarztpraxis Dr. Stephanie Dahl": {
-            "LocationType": "Zahn\u00e4rzte: Kieferorthop\u00e4die (Schwerpunkt)",
-            "Coordinates": {
-                "Latitude": 50.9218827,
-                "Longitude": 6.36236437692965
             },
             "TimeLimit": null
         },
