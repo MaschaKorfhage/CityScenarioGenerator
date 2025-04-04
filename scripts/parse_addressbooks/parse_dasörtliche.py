@@ -3,7 +3,7 @@ Simple script for parsing POIs from text copied out of address book sites such a
 Also looks up coordinates by address and creates a custom POI file that can be imported.
 """
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Callable
@@ -67,6 +67,27 @@ class Entry:
         return lpgdata.PointOfInterestData(location, coordinates)
 
 
+CATEGORY_MAP = {
+    "Ärzte: Allgemeinmedizin (Fachärzte)": "Physician",
+    "Praktische Ärzte": "Physician",
+    "Ärzte: Augenheilkunde (Fachärzte)": "Ophthalmologist",
+    "Zahnärzte: Kieferorthopädie (Schwerpunkt)": "Orthodontist",
+    "Ärzte: Mund-Kiefer-Gesichtschirurgie (Fachärzte)": "Orthodontist",
+    "Zahnärzte: Oralchirurgie (Fachzahnärzte), Zahnärzte": "Orthodontist",
+    "Zahnärzte": "Dentist",
+    "Ärzte: Urologie (Fachärzte)": "Urologist",
+    "Ärzte: Neurologie (Fachärzte)": "Neurologist",
+    "Ärzte: Kinder- und Jugendmedizin (Fachärzte)": "Pediatrician",
+    "Ärzte: Frauenheilkunde und Geburtshilfe (Fachärzte)": "Gynecologist",
+    "Ärzte: Hals-Nasen-Ohrenheilkunde (Fachärzte)": "Ear-Nose-Throat specialist",
+    "Ärzte: Innere Medizin (Fachärzte)": "Internist",
+    "Ärzte: Innere Medizin und Gastroenterologie (Fachärzte), Ärzte: Innere Medizin (Fachärzte)": "Internist",
+    "Ärzte: Kinder- und Jugendpsychiatrie und -psychotherapie (Fachärzte)": "Psychiatrist",
+    "Krankenhäuser und Kliniken": "Hospital",
+}
+UNMAPPED_CATEGORIES = []
+
+
 def get_street_number(s: str) -> tuple[str, str]:
     "string in format 'Kurfürstenstr. 15', sometimes without number"
     parts = s.split(" ")
@@ -89,10 +110,19 @@ def get_postal_and_city(s: str) -> tuple[int, str]:
     return postal, city
 
 
+def map_category(category: str):
+    "maps POI category using the defined map"
+    if category in CATEGORY_MAP:
+        category = CATEGORY_MAP[category]
+    else:
+        UNMAPPED_CATEGORIES.append(category)
+    return category
+
+
 def create_entry(lines: list[str]) -> Entry:
     assert len(lines) > 4
     name = lines[0]
-    category = lines[1]
+    category = map_category(lines[1])
     street, number = get_street_number(lines[2])
     postal, city = get_postal_and_city(lines[3])
     return Entry(name, category, street, number, city, postal)
@@ -176,6 +206,8 @@ def main():
 
     all_entries = parse_dasoertliche(lines)
     print(f"Found {len(all_entries)} suitable entries.")
+
+    print(f"Unmapped categories: {Counter(UNMAPPED_CATEGORIES).most_common()}")
 
     # filter out unsuitable entries
     entries, wrong_city = filter_entries(all_entries, lambda e: e.city == "Jülich")

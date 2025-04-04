@@ -1,7 +1,7 @@
 {
     "PointsOfInterest": {
         "Zahnarztpraxis DentHarmonie": {
-            "LocationType": "Zahn\u00e4rzte: Oralchirurgie (Fachzahn\u00e4rzte), Zahn\u00e4rzte",
+            "LocationType": "Orthodontist",
             "Coordinates": {
                 "Latitude": 50.9307285,
                 "Longitude": 6.3592493
@@ -17,7 +17,7 @@
             "TimeLimit": null
         },
         "Banning Stefanie, Klein Stefanie Dr., Janas-Schroeteler Ewa Kinderarztpraxis": {
-            "LocationType": "\u00c4rzte: Kinder- und Jugendmedizin (Fach\u00e4rzte)",
+            "LocationType": "Pediatrician",
             "Coordinates": {
                 "Latitude": 50.9228652,
                 "Longitude": 6.3599543
@@ -25,7 +25,7 @@
             "TimeLimit": null
         },
         "Baum Ulrike Praxis f\u00fcr Kinder- und Jugendlichenpsychotherapie": {
-            "LocationType": "\u00c4rzte: Kinder- und Jugendpsychiatrie und -psychotherapie (Fach\u00e4rzte)",
+            "LocationType": "Psychiatrist",
             "Coordinates": {
                 "Latitude": 50.9207372,
                 "Longitude": 6.356639
@@ -33,7 +33,7 @@
             "TimeLimit": null
         },
         "Behrens Stephan Dr.med. Arztpraxis f\u00fcr Neurologie": {
-            "LocationType": "\u00c4rzte: Neurologie (Fach\u00e4rzte)",
+            "LocationType": "Neurologist",
             "Coordinates": {
                 "Latitude": 50.9228652,
                 "Longitude": 6.3599543
@@ -41,7 +41,7 @@
             "TimeLimit": null
         },
         "Benken von den Gabriele u. Benken Raymund Dr.med.dent. Zahn\u00e4rzte": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.9205688,
                 "Longitude": 6.3581154
@@ -49,7 +49,7 @@
             "TimeLimit": null
         },
         "Bertram Sabine Zahnarztpraxis": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.9214298,
                 "Longitude": 6.3613688
@@ -57,7 +57,7 @@
             "TimeLimit": null
         },
         "B\u00fclow Inge Dr. Zahn\u00e4rztin": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.923185,
                 "Longitude": 6.3625514
@@ -65,7 +65,7 @@
             "TimeLimit": null
         },
         "Busse Anne Dr.med. Galeria Juliacum, Frauen\u00e4rztin-Naturheilverfahren": {
-            "LocationType": "\u00c4rzte: Frauenheilkunde und Geburtshilfe (Fach\u00e4rzte)",
+            "LocationType": "Gynecologist",
             "Coordinates": {
                 "Latitude": 50.9213684,
                 "Longitude": 6.3611935
@@ -73,7 +73,7 @@
             "TimeLimit": null
         },
         "Carta-M\u00fcller Julia Zahnarztpraxis": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.9304817,
                 "Longitude": 6.378134668639455
@@ -81,7 +81,7 @@
             "TimeLimit": null
         },
         "Dohr A. Dr.med. Urologe, Dohr E. Dr.med. Allergologie Praxis": {
-            "LocationType": "\u00c4rzte: Urologie (Fach\u00e4rzte)",
+            "LocationType": "Urologist",
             "Coordinates": {
                 "Latitude": 50.921384,
                 "Longitude": 6.3607733586263215
@@ -89,7 +89,7 @@
             "TimeLimit": null
         },
         "Dr. med. dent. Andreas Mei\u00df Zahnarztpraxis": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.9517522,
                 "Longitude": 6.425539804576903
@@ -97,7 +97,7 @@
             "TimeLimit": null
         },
         "Elsen J\u00fcrgen Dr. Praxis f\u00fcr Allgemeinmedizin u. Fuchs Undine": {
-            "LocationType": "Praktische \u00c4rzte",
+            "LocationType": "Physician",
             "Coordinates": {
                 "Latitude": 50.9163111,
                 "Longitude": 6.359234
@@ -113,7 +113,7 @@
             "TimeLimit": null
         },
         "Hackhausen Franz-Josef, Gronholz Jan Praktischer Arzt-Internist": {
-            "LocationType": "\u00c4rzte: Innere Medizin und Gastroenterologie (Fach\u00e4rzte), \u00c4rzte: Innere Medizin (Fach\u00e4rzte)",
+            "LocationType": "Internist",
             "Coordinates": {
                 "Latitude": 50.92539875,
                 "Longitude": 6.407305399200153
@@ -121,15 +121,7 @@
             "TimeLimit": null
         },
         "Halboni-Neisius Petra Dr., Huang Yu Jun Gemeinschaftspraxis f\u00fcr Neurologie": {
-            "LocationType": "\u00c4rzte: Neurologie (Fach\u00e4rzte)",
-            "Coordinates": {
-                "Latitude": 50.9218807,
-                "Longitude": 6.3626659
-            },
-            "TimeLimit": null
-        },
-        "Halboni Zeiad Dr.med. Psychotherapie und Elektrophysiologisches Labor, Elke Dr.med. \u00c4rzte f\u00fcr Neurologie und Psychiatrie": {
-            "LocationType": "Elektrotechnik, Laboratorien, \u00c4rzte: Neurologie (Fach\u00e4rzte), \u00c4rzte: Psychiatrie und Psychotherapie (Fach\u00e4rzte), Psychotherapie",
+            "LocationType": "Neurologist",
             "Coordinates": {
                 "Latitude": 50.9218807,
                 "Longitude": 6.3626659
@@ -137,7 +129,7 @@
             "TimeLimit": null
         },
         "Hausarztpraxis Dr. Krieger": {
-            "LocationType": "\u00c4rzte: Allgemeinmedizin (Fach\u00e4rzte)",
+            "LocationType": "Physician",
             "Coordinates": {
                 "Latitude": 50.9219789,
                 "Longitude": 6.365857860342252
@@ -145,7 +137,7 @@
             "TimeLimit": null
         },
         "Heil Thomas Dr.med.dent. Zahnarzt": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.922369,
                 "Longitude": 6.360202
@@ -169,7 +161,7 @@
             "TimeLimit": null
         },
         "Klostermann Michael Dr. Internist, Jebens Claus Dr.med.": {
-            "LocationType": "\u00c4rzte: Innere Medizin und Gastroenterologie (Fach\u00e4rzte), \u00c4rzte: Innere Medizin (Fach\u00e4rzte)",
+            "LocationType": "Internist",
             "Coordinates": {
                 "Latitude": 50.9215957,
                 "Longitude": 6.3580771
@@ -177,7 +169,7 @@
             "TimeLimit": null
         },
         "Klughardt Guido Kinderarztpraxis": {
-            "LocationType": "\u00c4rzte: Kinder- und Jugendmedizin (Fach\u00e4rzte)",
+            "LocationType": "Pediatrician",
             "Coordinates": {
                 "Latitude": 50.9205292,
                 "Longitude": 6.3612051
@@ -201,7 +193,7 @@
             "TimeLimit": null
         },
         "Massmann Richard Dr. Arzt f\u00fcr Mund- Kiefer- und Gesichtschirurgie": {
-            "LocationType": "\u00c4rzte: Mund-Kiefer-Gesichtschirurgie (Fach\u00e4rzte)",
+            "LocationType": "Orthodontist",
             "Coordinates": {
                 "Latitude": 50.920633800000004,
                 "Longitude": 6.414770168458137
@@ -209,7 +201,7 @@
             "TimeLimit": null
         },
         "Meurs G\u00fcnter Dr.med. Dr.med.dent. Zahnarzt": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.92425275,
                 "Longitude": 6.365735461904762
@@ -233,7 +225,7 @@
             "TimeLimit": null
         },
         "Reinartz Klement Dr.med.dent. Zahnarzt": {
-            "LocationType": "Zahn\u00e4rzte",
+            "LocationType": "Dentist",
             "Coordinates": {
                 "Latitude": 50.9240968,
                 "Longitude": 6.3626106
@@ -257,7 +249,7 @@
             "TimeLimit": null
         },
         "Th\u00f6ne Susanne u. Wienecke Barbara Frauen\u00e4rztin": {
-            "LocationType": "\u00c4rzte: Frauenheilkunde und Geburtshilfe (Fach\u00e4rzte)",
+            "LocationType": "Gynecologist",
             "Coordinates": {
                 "Latitude": 50.921437,
                 "Longitude": 6.357007133054642
@@ -265,7 +257,7 @@
             "TimeLimit": null
         },
         "Tichlers Heinz Dr., Theinert Christoph Dr. \u00c4rzte f\u00fcr Inn.Med.": {
-            "LocationType": "\u00c4rzte: Innere Medizin und Gastroenterologie (Fach\u00e4rzte), \u00c4rzte: Innere Medizin (Fach\u00e4rzte)",
+            "LocationType": "Internist",
             "Coordinates": {
                 "Latitude": 50.921384,
                 "Longitude": 6.3607733586263215
@@ -273,7 +265,7 @@
             "TimeLimit": null
         },
         "Virnich-Langanke Natascha Dr.med. Internistin": {
-            "LocationType": "\u00c4rzte: Innere Medizin (Fach\u00e4rzte)",
+            "LocationType": "Internist",
             "Coordinates": {
                 "Latitude": 50.9176896,
                 "Longitude": 6.3628457
@@ -281,7 +273,7 @@
             "TimeLimit": null
         },
         "Wolfram Dr. Facharzt f\u00fcr Frauenheilkunde und Geburtshilfe, Rahmaty-Taheri Dr. Fach\u00e4rztin f\u00fcr Frauenheilkunde und Geburtshilfe": {
-            "LocationType": "\u00c4rzte: Frauenheilkunde und Geburtshilfe (Fach\u00e4rzte)",
+            "LocationType": "Gynecologist",
             "Coordinates": {
                 "Latitude": 50.9225557,
                 "Longitude": 6.3601236
@@ -289,7 +281,7 @@
             "TimeLimit": null
         },
         "Zimmermann-Picht Susanne Dr.med. Frauen\u00e4rztin": {
-            "LocationType": "\u00c4rzte: Frauenheilkunde und Geburtshilfe (Fach\u00e4rzte)",
+            "LocationType": "Gynecologist",
             "Coordinates": {
                 "Latitude": 50.9218807,
                 "Longitude": 6.3626659
@@ -297,7 +289,7 @@
             "TimeLimit": null
         },
         "Necvolod Sergej Dr. med. Arzt f\u00fcr Urologie": {
-            "LocationType": "\u00c4rzte: Urologie (Fach\u00e4rzte)",
+            "LocationType": "Urologist",
             "Coordinates": {
                 "Latitude": 50.9228652,
                 "Longitude": 6.3599543

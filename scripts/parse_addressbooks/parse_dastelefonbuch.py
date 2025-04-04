@@ -3,6 +3,7 @@ Simple script for parsing POIs from text copied out of address book sites such a
 Also looks up coordinates by address and creates a custom POI file that can be imported.
 """
 
+from collections import Counter
 from pathlib import Path
 
 import parse_dasörtliche as parse_do
@@ -20,6 +21,7 @@ def create_entry(lines: list[str]) -> parse_do.Entry:
     for line in lines[2:]:
         if line.startswith("Branche: "):
             category = line.replace("Branche: ", "")
+    category = parse_do.map_category(category)
     assert category, f"Could not determine category for {name}"
     return parse_do.Entry(name, category, street, number, city, postal)
 
@@ -50,6 +52,8 @@ def main():
 
     all_entries = parse_dastelefonbuch(lines)
     print(f"Found {len(all_entries)} suitable entries.")
+
+    print(f"Unmapped categories: {Counter(parse_do.UNMAPPED_CATEGORIES).most_common()}")
 
     # filter out unsuitable entries
     entries, wrong_city = parse_do.filter_entries(
