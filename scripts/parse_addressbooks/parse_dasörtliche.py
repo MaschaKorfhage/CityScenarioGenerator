@@ -59,7 +59,7 @@ class Entry:
         return f"{self.street} {self.number}, {self.postal_code} {self.city}"
 
     def lookup_coordinates(self) -> lpgdata.Coordinates:
-        return lookup_coordinates_nominatim(self.address())
+        return lookup_coordinates_geoapify(self.address())
 
     def create_poi(self) -> lpgdata.PointOfInterestData:
         location = self.category
