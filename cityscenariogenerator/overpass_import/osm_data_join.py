@@ -17,6 +17,7 @@ import pandas as pd
 from shapely import Point  # type: ignore
 from pylpg import lpgdata
 
+from cityscenariogenerator import utils
 from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.poi_type_mapping import (
     AlkisMapper,
@@ -433,7 +434,7 @@ def create_new_poi_buildings(
     # for every unmatched POI, create a new building object
     for _, row in unmatched_df.iterrows():
         id = row[DFColumns.EXT_ID]
-        building_id = f"Generated POI {id}"
+        building_id = f"Generated {utils.slugify(id)}"
         building = NonResidentialBuilding(
             building_id,
             Coordinates(row.geometry.y, row.geometry.x),
