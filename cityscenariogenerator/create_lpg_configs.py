@@ -120,6 +120,14 @@ class LPGConfigCreator:
     MIN_POIS_PER_TYPE = 1
     MAX_POIS_PER_TYPE = 1
 
+    # maps the correct transportation device category names for the Routes definition
+    TRANS_DEVICE_CATEGORY_MAP = {
+        lpgdata.TransportationDeviceCategories.Bus_Category.Name: "pt",
+        lpgdata.TransportationDeviceCategories.Car_Category.Name: "car",
+        lpgdata.TransportationDeviceCategories.Bicycle_Category.Name: "bicycle",
+        lpgdata.TransportationDeviceCategories.Walking_Category.Name: "walk",
+    }
+
     def __init__(self, params: ScenarioParams) -> None:
         self.params = params
 
@@ -420,6 +428,7 @@ class LPGConfigCreator:
         house_id: str,
         house_coordinates: lpgdata.Coordinates,
         existing_routes: dict[tuple, lpgdata.RouteData],
+        transportation_device: lpgdata.JsonReference = lpgdata.TransportationDeviceCategories.Bus_Category,
     ) -> None:
         """Creates simple dummy routes from every POI to every other one, if they don't exist yet"""
         # relevant sites for this person are all of their POIs and their home
@@ -428,8 +437,7 @@ class LPGConfigCreator:
             for poi_id_end in sites[i + 1 :]:
                 if poi_id_start == poi_id_end:
                     continue
-                device = lpgdata.TransportationDeviceCategories.Bus_Category
-                key = (poi_id_start, poi_id_end, device.Name)
+                key = (poi_id_start, poi_id_end, transportation_device.Name)
                 if key in existing_routes:
                     continue  # there is already a matching route
                 start = self._get_site_coordinates(
@@ -440,13 +448,16 @@ class LPGConfigCreator:
                 )
                 # calculate the distance of the route
                 dist = calc_distance(start, end)
+                category_key = LPGConfigCreator.TRANS_DEVICE_CATEGORY_MAP[
+                    transportation_device.Name
+                ]
                 existing_routes[key] = lpgdata.RouteData(
                     poi_id_start,
                     poi_id_end,
                     {},
-                    {"pt": dist},
-                    prob_with_car_hh={"pt": 1},
-                    prob_no_car_hh={"pt": 1},
+                    {category_key: dist},
+                    prob_with_car_hh={category_key: 1},
+                    prob_no_car_hh={category_key: 1},
                 )
 
     def create_routes_for_testing(self):
@@ -461,6 +472,7 @@ class LPGConfigCreator:
                         id,
                         hcj.House.Coordinates,
                         all_routes,
+                        lpgdata.TransportationDeviceCategories.Car_Category,
                     )
         # set MirrorRoutes to True for all houses
         for house in self.houses.values():
