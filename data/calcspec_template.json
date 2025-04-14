@@ -8,7 +8,8 @@
             "ActionEntries",
             "LocationsEntries",
             "HouseholdContents",
-            "TransportationDefinitions"
+            "TransportationDefinitions",
+            "TransportationDeviceChoices"
         ],
         "DeleteAllButPDF": false,
         "DeleteDAT": true,
