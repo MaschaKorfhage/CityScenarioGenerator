@@ -41,7 +41,10 @@ def create_configs_from_buildings(
     config_creator.create_routes_for_testing()
 
     # set additional parameters
-    config_creator.global_city_definition.MinimumDrivingAge = 18
+    assert (
+        config_creator.global_city_definition.TravelDefinition
+    ), "TravelDefinition not set"
+    config_creator.global_city_definition.TravelDefinition.MinimumDrivingAge = 18
 
     # create config files for all created objects
     config_creator.create_config_files()

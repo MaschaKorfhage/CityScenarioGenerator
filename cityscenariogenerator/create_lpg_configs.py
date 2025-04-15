@@ -141,6 +141,7 @@ class LPGConfigCreator:
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)
         self.persons_in_each_hh = build_household_person_map()
         self.global_city_definition = lpgdata.CityData()
+        self.global_city_definition.TravelDefinition = lpgdata.TravelDefinition()
         self.nonresidential_buildings = 0
         self.excluded_nonres_buildings = 0
 
@@ -474,11 +475,15 @@ class LPGConfigCreator:
                         all_routes,
                         lpgdata.TransportationDeviceCategories.Car_Category,
                     )
-        # set MirrorRoutes to True for all houses
-        for house in self.houses.values():
-            house.City.MirrorRoutes = True
-        self.global_city_definition.Routes = list(all_routes.values())
-        self.global_city_definition.MirrorRoutes = True
+        travel_definition = self.global_city_definition.TravelDefinition
+        assert travel_definition is not None, "TravelDefinition is not set"
+
+        # use a single timeslot that is always active
+        time_slot_always = lpgdata.TimeSlot(0, 24 * 60 * 60, lpgdata.DayType.EveryDay)
+        travel_definition.TimeSlotRouteLists = [
+            lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
+        ]
+        travel_definition.MirrorRoutes = True
 
     def create_config_files(self):
         # make sure the directory exists
@@ -508,20 +513,24 @@ class LPGConfigCreator:
     def create_global_city_config_file(self, path: Path):
         filename = path / "city.json"
         city = self.global_city_definition
-        if city.Routes:
-            # extract routes into a separate file
-            self.create_routes_config_file(path)
-            # create a copy of the city data, but without the routes
-            city = lpgdata.CityData(city.PointsOfInterest, [], city.MirrorRoutes)
+        assert city.TravelDefinition is not None, "TravelDefinition is not set"
+        # if city.TravelDefinition.TimeSlotRouteLists:
+        #     # extract routes into a separate file
+        #     self.create_routes_config_subdir(path)
+        #     # create a copy of the city data, but without the routes
+        #     city.TravelDefinition.TimeSlotRouteLists = None
         city_data = city.to_json(indent=4)  # type: ignore
         with open(filename, "w+") as f:
             f.write(city_data)
 
-    def create_routes_config_file(self, path: Path):
+    def create_routes_config_subdir(
+        self, path: Path, travel_def: lpgdata.TravelDefinition
+    ):
         filename = path / "routes.json"
+        assert False, "Not yet adapted to the new route input format"
         route_dict = {
             f"{i}": r.to_dict()  # type: ignore
-            for i, r in enumerate(self.global_city_definition.Routes)
+            for i, r in enumerate(travel_def.TimeSlotRouteLists)
         }
         with open(filename, "w+") as f:
             json.dump(route_dict, f, indent=4)
@@ -550,15 +559,17 @@ class LPGConfigCreator:
         scenario_statistics.write_poi_statistics(
             self.pois.values(), path, "poi_types_all"
         )
-        scenario_statistics.write_route_statistics(
-            self.global_city_definition.Routes, path
+        all_routes = itertools.chain.from_iterable(
+            r.Routes
+            for r in self.global_city_definition.TravelDefinition.TimeSlotRouteLists  # type: ignore
         )
+        scenario_statistics.write_route_statistics(all_routes, path)
 
     def create_plots(self, path: Path):
         path.mkdir(parents=True, exist_ok=True)
 
         all_pois = [
-            building_map.PointWithCategory(poi.Coordinates, poi.LocationType)
+            building_map.PointWithCategory(poi.Coordinates, poi.LocationType)  # type: ignore
             for id, poi in self.pois.items()
         ]
         building_map.map_locations_plot(all_pois, path)
