@@ -473,7 +473,7 @@ class LPGConfigCreator:
                         id,
                         hcj.House.Coordinates,
                         all_routes,
-                        lpgdata.TransportationDeviceCategories.Car_Category,
+                        lpgdata.TransportationDeviceCategories.Bus_Category,
                     )
         travel_definition = self.global_city_definition.TravelDefinition
         assert travel_definition is not None, "TravelDefinition is not set"
