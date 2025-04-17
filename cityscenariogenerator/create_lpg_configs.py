@@ -453,9 +453,18 @@ class LPGConfigCreator:
                 category_key = LPGConfigCreator.TRANS_DEVICE_CATEGORY_MAP[
                     transportation_device.Name
                 ]
+                # create routes in both directions
                 existing_routes[key] = lpgdata.RouteData(
                     poi_id_start,
                     poi_id_end,
+                    {},
+                    {category_key: dist},
+                    prob_with_car_hh={category_key: 1},
+                    prob_no_car_hh={category_key: 1},
+                )
+                existing_routes[key] = lpgdata.RouteData(
+                    poi_id_end,
+                    poi_id_start,
                     {},
                     {category_key: dist},
                     prob_with_car_hh={category_key: 1},
@@ -485,7 +494,6 @@ class LPGConfigCreator:
         travel_definition.TimeSlotRouteLists = [
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
         ]
-        travel_definition.MirrorRoutes = True
 
     def create_config_files(self):
         # make sure the directory exists
