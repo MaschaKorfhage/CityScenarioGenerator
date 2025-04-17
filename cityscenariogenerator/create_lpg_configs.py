@@ -47,7 +47,7 @@ def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
     p1 = (c1.Latitude, c1.Longitude)
     p2 = (c2.Latitude, c2.Longitude)
     dist = geopy.distance.distance(p1, p2)
-    return dist.m
+    return dist.m / 1000  # convert to km
 
 
 def convert_coordinates(coordinates: builda.Coordinates) -> lpgdata.Coordinates:
@@ -313,7 +313,8 @@ class LPGConfigCreator:
             size = min(size, len(poi_ids))
             # calculate distances to all POIs of this type
             distances = {
-                p: calc_distance(coordinates, self.pois[p].Coordinates) for p in poi_ids
+                p: calc_distance_in_km(coordinates, self.pois[p].Coordinates)
+                for p in poi_ids
             }
             # randomly select some POIs, using the inverted distances as weights
             if len(distances) > 1 and (distmax := max(distances.values())) > 0:
@@ -448,7 +449,7 @@ class LPGConfigCreator:
                     poi_id_end, house_coordinates, house_id
                 )
                 # calculate the distance of the route
-                dist = calc_distance(start, end)
+                dist = calc_distance_in_km(start, end)
                 category_key = LPGConfigCreator.TRANS_DEVICE_CATEGORY_MAP[
                     transportation_device.Name
                 ]
