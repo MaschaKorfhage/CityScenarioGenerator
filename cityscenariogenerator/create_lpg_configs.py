@@ -42,8 +42,8 @@ def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
 
 
 @functools.lru_cache
-def calc_distance(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
-    """Calculates the distance between two sets of coordinates in m"""
+def calc_distance_in_km(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
+    """Calculates the distance between two sets of coordinates in km"""
     p1 = (c1.Latitude, c1.Longitude)
     p2 = (c2.Latitude, c2.Longitude)
     dist = geopy.distance.distance(p1, p2)
