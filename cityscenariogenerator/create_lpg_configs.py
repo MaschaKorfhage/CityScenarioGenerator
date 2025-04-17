@@ -480,7 +480,8 @@ class LPGConfigCreator:
         assert travel_definition is not None, "TravelDefinition is not set"
 
         # use a single timeslot that is always active
-        time_slot_always = lpgdata.TimeSlot(0, 24 * 60 * 60, lpgdata.DayType.EveryDay)
+        weekdays = [e.value for e in lpgdata.DayOfWeek]
+        time_slot_always = lpgdata.TimeSlot(0, 24 * 60 * 60, weekdays)
         travel_definition.TimeSlotRouteLists = [
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
         ]
@@ -515,11 +516,11 @@ class LPGConfigCreator:
         filename = path / "city.json"
         city = self.global_city_definition
         assert city.TravelDefinition is not None, "TravelDefinition is not set"
-        # if city.TravelDefinition.TimeSlotRouteLists:
-        #     # extract routes into a separate file
-        #     self.create_routes_config_subdir(path)
-        #     # create a copy of the city data, but without the routes
-        #     city.TravelDefinition.TimeSlotRouteLists = None
+        if city.TravelDefinition.TimeSlotRouteLists:
+            # extract routes into a separate file
+            self.create_routes_config_subdir(path, city.TravelDefinition)
+            # create a copy of the city data, but without the routes
+            city.TravelDefinition.TimeSlotRouteLists = []
         city_data = city.to_json(indent=4)  # type: ignore
         with open(filename, "w+") as f:
             f.write(city_data)
@@ -527,12 +528,13 @@ class LPGConfigCreator:
     def create_routes_config_subdir(
         self, path: Path, travel_def: lpgdata.TravelDefinition
     ):
-        filename = path / "routes.json"
-        assert False, "Not yet adapted to the new route input format"
-        route_dict = {
-            f"{i}": r.to_dict()  # type: ignore
-            for i, r in enumerate(travel_def.TimeSlotRouteLists)
-        }
+        filename = path / "routes/generated_All_0to86400.json"
+        filename.parent.mkdir(parents=True, exist_ok=True)
+        assert (
+            len(travel_def.TimeSlotRouteLists) == 1
+        ), "Saving more than one timeslot route is not implemented yet"
+        routes = travel_def.TimeSlotRouteLists[0].Routes
+        route_dict = {f"{i}": r.to_dict() for i, r in enumerate(routes)}  # type: ignore
         with open(filename, "w+") as f:
             json.dump(route_dict, f, indent=4)
 
