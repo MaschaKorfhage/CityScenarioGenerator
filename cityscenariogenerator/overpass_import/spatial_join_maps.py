@@ -4,7 +4,6 @@ Can plot maps of various spatial joins of OSM data, BUILDA data, and custom POIs
 
 import geopandas as gpd  # type: ignore
 import pandas as pd
-from pylpg import lpgdata
 import folium
 
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
@@ -65,17 +64,15 @@ def show_osm_builda_join_on_map():
     # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
     osm_node_locations = osm_data_join.map_osm_nodes_to_locations(overpass_df, keys)
-    overpass_df[DFColumns.CATEGORY] = overpass_df[DFColumns.OSM_ID].map(
+    overpass_df[DFColumns.CATEGORY] = overpass_df[DFColumns.EXT_ID].map(
         lambda id: next(iter(osm_node_locations[id].non_work_locations))
     )
 
     # load custom POIs
     poi_path = f"data/custom_input/{city}/custom_pois_dasörtliche.json"
-    # load the custom POIs from file
-    with open(poi_path, "r") as f:
-        json_str = f.read()
-        city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
-    poi_df = osm_data_join.pois_to_geodf(city_data.PointsOfInterest)
+    poi_df_oe = osm_data_join.load_custom_poi_geodf(poi_path)
+    poi_path = f"data/custom_input/{city}/custom_pois_dastelefonbuch.json"
+    poi_df_tb = osm_data_join.load_custom_poi_geodf(poi_path)
 
     # load BUILDA data
     builda_query = {
@@ -97,30 +94,35 @@ def show_osm_builda_join_on_map():
     # add a column for the popup text
     add_popup_column(builda_res_df)
     add_popup_column(builda_nonres_df)
-    add_popup_column(poi_df)
     add_popup_column(builda_df)
-    add_popup_column(overpass_df, DFColumns.OSM_ID)
+    add_popup_column(poi_df_oe, DFColumns.EXT_ID)
+    add_popup_column(poi_df_tb, DFColumns.EXT_ID)
+    add_popup_column(overpass_df, DFColumns.EXT_ID)
 
     # convert to Web Mercator projection to get correct distances
     overpass_df.to_crs("EPSG:3857", inplace=True)
     builda_df.to_crs("EPSG:3857", inplace=True)
-    poi_df.to_crs("EPSG:3857", inplace=True)
+    poi_df_oe.to_crs("EPSG:3857", inplace=True)
+    poi_df_tb.to_crs("EPSG:3857", inplace=True)
 
     # filter for testing
     overpass_df = overpass_df[overpass_df[DFColumns.CATEGORY] == "Doctors Office"]
 
+    poi_dfs = [overpass_df, poi_df_oe, poi_df_tb]
+    combined_df = osm_data_join.combine_poi_dfs(poi_dfs, 30)
+
     # spatial join
     joined_df = gpd.sjoin_nearest(
-        overpass_df,
+        combined_df,
         builda_df,
         distance_col=DFColumns.DISTANCE,
         exclusive=False,
         max_distance=30,
     )
-    joined_df = osm_data_join.remove_duplicate_matches(joined_df)
+    # joined_df = osm_data_join.remove_duplicate_matches(joined_df)
     # set popup column for the map plot
     joined_df["popup"] = (
-        joined_df[DFColumns.OSM_ID]
+        joined_df[DFColumns.EXT_ID]
         + " - "
         + joined_df[DFColumns.BUILDA_ID]
         + "\n"
@@ -130,17 +132,19 @@ def show_osm_builda_join_on_map():
         + " m"
     )
 
-    matched_res = osm_data_join.filter_matched(builda_res_df, joined_df)
-    matched_nonres = osm_data_join.filter_matched(builda_nonres_df, joined_df)
-    # joined_df = joined_df[joined_df[DFColumns.DISTANCE] > 20]
-
-    print(f"OSM POIs: {len(overpass_df)}, custom POIS: {len(poi_df)}")
     print(
-        f"Matches: {len(joined_df)}, {len(matched_res)} residential, {len(matched_nonres)} non-residential"
+        f"OSM: {len(overpass_df)}, DasÖrtliche POIs: {len(poi_df_oe)}, DasTelefonbuch POIS: {len(poi_df_tb)}"
     )
+    print(f"Matches: {len(joined_df)}")
 
-    # plot_map([overpass_df, poi_df, joined_df], "health_map.html")
-    plot_map([matched_res, matched_nonres, overpass_df, joined_df], "health_map.html")
+    # determine the BUILDA buildings that were matched
+    builda_res_matched = osm_data_join.filter_matched(builda_res_df, joined_df)
+    builda_nonres_matched = osm_data_join.filter_matched(builda_nonres_df, joined_df)
+
+    plot_map(
+        [builda_res_matched, builda_nonres_matched, combined_df, joined_df],
+        "health_map.html",
+    )
 
 
 if __name__ == "__main__":
