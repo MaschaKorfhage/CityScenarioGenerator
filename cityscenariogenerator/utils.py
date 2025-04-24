@@ -40,7 +40,7 @@ def slugify(value, allow_unicode=False):
 
 def descriptive_query_text(query: dict) -> str:
     """returns a text describing a builda query in a format suitable for filenames"""
-    filtered_query = {k: v for k, v in query.items() if v}
+    filtered_query = [v for k, v in query.items() if v]
     return slugify(str(filtered_query))
 
 
