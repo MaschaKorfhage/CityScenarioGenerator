@@ -26,8 +26,8 @@ def get_builda_devclient():
     # init the Builda API client
     return BuildaDevClient(
         proxy=False,
-        username=os.getenv("username"),
-        password=os.getenv("password"),
+        username=os.getenv("builda_username"),
+        password=os.getenv("builda_password"),
         phase=Phase.PRODUCTION,
         version="v8_20240916",
     )
