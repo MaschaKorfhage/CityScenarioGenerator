@@ -435,8 +435,8 @@ class LPGConfigCreator:
         """Creates simple dummy routes from every POI to every other one, if they don't exist yet"""
         # relevant sites for this person are all of their POIs and their home
         sites = list(pois) + [house_id]
-        for i, poi_id_start in enumerate(sites):
-            for poi_id_end in sites[i + 1 :]:
+        for poi_id_start in sites:
+            for poi_id_end in sites:
                 if poi_id_start == poi_id_end:
                     continue
                 key = (poi_id_start, poi_id_end, transportation_device.Name)
