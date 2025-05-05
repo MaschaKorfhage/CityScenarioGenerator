@@ -377,9 +377,18 @@ class LPGConfigCreator:
             json_str = f.read()
             poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
         # add them to the POIs stored in the attributes
-        self.pois.update(poi_dict)
         for id, poi in poi_dict.items():
-            self.poi_ids_by_type[poi.LocationType].append(id)
+            if id in self.pois:
+                if self.pois[id].LocationType != poi.LocationType:
+                    raise Exception(
+                        f"Custom POI with duplicate ID and different type: {id}"
+                    )
+                logging.warning(
+                    f"Loaded a custom POI with the same ID as an existing POI: {id}"
+                )
+            else:
+                self.poi_ids_by_type[poi.LocationType].append(id)
+        self.pois.update(poi_dict)
         logging.info(f"Loaded {len(poi_dict)} custom POIs")
 
     def create_poi_preferences(self, include_unused_pois: bool = False) -> None:
