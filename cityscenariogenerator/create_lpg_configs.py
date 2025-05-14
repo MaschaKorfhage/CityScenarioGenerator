@@ -3,11 +3,10 @@
 from collections import defaultdict
 import functools
 import itertools
-import json
 import logging
 from pathlib import Path
 import random
-from typing import Any, Iterable
+from typing import Iterable
 import geopy.distance  # type: ignore
 import numpy
 from tqdm import tqdm  # type: ignore
@@ -19,10 +18,11 @@ from cityscenariogenerator import (
     poi_type_mapping,
     scenario_statistics,
     household_data,
-    utils,
 )
 from cityscenariogenerator.plots import building_map, building_map_interactive
 from cityscenariogenerator.scenario_params import ScenarioParams
+
+from cityscenariogenerator.city_config import LPGCityConfig
 
 
 def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
@@ -504,56 +504,15 @@ class LPGConfigCreator:
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
         ]
 
-    def create_config_files(self):
-        # make sure the directory exists
+    def create_config_files(self) -> LPGCityConfig:
         path = self.params.result_directory
-        path.mkdir(parents=True, exist_ok=True)
-        files = list(path.iterdir())
-        # check if the directory is empty (besides the logfile)
-        if len(files) == 0 or (len(files) == 1 and files[0] == utils.LOGFILENAME):
-            raise Exception(f"Target directory was not empty: {path}")
-        self.create_house_config_files(path / "houses")
-        self.create_global_city_config_file(path)
+        city_config = LPGCityConfig(self.houses, self.global_city_definition)
+        city_config.save(path)
+
         # create statistics and plots describing the scenario
         self.create_scenario_statistics(path / "statistics")
         self.create_plots(path / "plots")
-
-    def create_house_config_files(self, path: Path):
-        path.mkdir(parents=True, exist_ok=True)
-        for id, hcj in self.houses.items():
-            self.create_lpg_object_config_file(path, id, hcj)
-
-    def create_lpg_object_config_file(self, path: Path, id: str, house: Any):
-        filename = path / f"{id}.json"
-        house_json = house.to_json(indent=4)
-        with open(filename, "w+") as f:
-            f.write(house_json)
-
-    def create_global_city_config_file(self, path: Path):
-        filename = path / "city.json"
-        city = self.global_city_definition
-        assert city.TravelDefinition is not None, "TravelDefinition is not set"
-        if city.TravelDefinition.TimeSlotRouteLists:
-            # extract routes into a separate file
-            self.create_routes_config_subdir(path, city.TravelDefinition)
-            # create a copy of the city data, but without the routes
-            city.TravelDefinition.TimeSlotRouteLists = []
-        city_data = city.to_json(indent=4)  # type: ignore
-        with open(filename, "w+") as f:
-            f.write(city_data)
-
-    def create_routes_config_subdir(
-        self, path: Path, travel_def: lpgdata.TravelDefinition
-    ):
-        filename = path / "routes/generated_All_0to86400.json"
-        filename.parent.mkdir(parents=True, exist_ok=True)
-        assert (
-            len(travel_def.TimeSlotRouteLists) == 1
-        ), "Saving more than one timeslot route is not implemented yet"
-        routes = travel_def.TimeSlotRouteLists[0].Routes
-        route_dict = {f"{i}": r.to_dict() for i, r in enumerate(routes)}  # type: ignore
-        with open(filename, "w+") as f:
-            json.dump(route_dict, f, indent=4)
+        return city_config
 
     def create_scenario_statistics(self, path: Path):
         """
