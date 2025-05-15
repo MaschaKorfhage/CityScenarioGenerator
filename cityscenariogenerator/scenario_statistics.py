@@ -8,6 +8,9 @@ from typing import Iterable
 
 from pylpg import lpgdata
 
+#: path to a file providing characteristic information for each LPG person (from ETHOS.ActivityAssure)
+PERSON_CHARACTERISTICS_PATH = Path("data/person_characteristics.json")
+
 
 def write_general_info(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob],
@@ -19,7 +22,7 @@ def write_general_info(
 
     :param house_jobs: list of created house jobs
     :param pois: list of created POIs
-    :param path: path for the result file
+    :param path: directory for the result file
     """
     houselist = list(house_jobs)
     num_hh = sum(len(hj.House.Households) for hj in houselist)  # type: ignore
@@ -69,6 +72,63 @@ def write_household_statistics(
     hh_types_ordered = dict(sorted(household_types.items()))
     with open(path / "household_types.json", "w+") as f:
         json.dump(dict(hh_types_ordered), f, indent=4)
+
+
+def write_person_statistics(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
+):
+    """
+    Creates a file with statistics about age, gender and employment of all
+    persons in the city scenario
+
+    :param house_jobs: house configs containing the persons to analyze
+    :param path: directory for the result file
+    """
+    # load the person characteristics file
+    with open(PERSON_CHARACTERISTICS_PATH, "r") as f:
+        person_characteristics = json.load(f)
+
+    # collect the information from each person
+    all_infos: list[dict] = []
+    for house in house_jobs:
+        assert house.House is not None
+        for hh in house.House.Households:
+            for person in hh.PointOfInterestPreferences.keys():
+                all_infos.append(person_characteristics[person])
+
+    # count the distribution of all charactististics
+    counters = {}
+    for info_name in all_infos[0].keys():
+        counter = Counter(x[info_name] for x in all_infos)
+        counters[info_name] = dict(sorted(counter.items()))
+
+    # special case: aggreagate ages to age categories
+    if "age" in counters:
+        age_category_counts = defaultdict(int)
+        AGE_CATEGORIES = {
+            "<18": (0, 18),
+            "18-66": (18, 66),
+            ">66": (66, 200),
+        }
+        for age, frequency in counters["age"].items():
+            for catkey, catlimits in AGE_CATEGORIES.items():
+                if catlimits[0] <= age < catlimits[1]:
+                    age_category_counts[catkey] += frequency
+        counters["age_categories"] = age_category_counts
+
+    filename = path / "person_statistics.json"
+    with open(filename, "w+", encoding="utf8") as f:
+        json.dump(counters, f, indent=4)
+
+    # additionally create the same statistics file with relative values
+    rel_counts = {}
+    personcount = len(all_infos)
+    for key, counter in counters.values():
+        rel_counts[key] = {k: v / personcount for k, v in counter.items()}
+
+    filename = path / "person_statistics_relative.json"
+    with open(filename, "w+", encoding="utf8") as f:
+        json.dump(rel_counts, f, indent=4)
 
 
 def write_poi_statistics(

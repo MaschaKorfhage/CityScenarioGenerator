@@ -1,0 +1,1101 @@
+{
+    "CHR01 Rubi": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 23
+    },
+    "CHR01 Sami": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 25
+    },
+    "CHR02 Katee": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 37
+    },
+    "CHR02 Tomi": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR03 Ava": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR03 Fin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR03 Luka": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 10
+    },
+    "CHR04 Amy": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR04 Jim": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 50
+    },
+    "CHR05 Liz": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 35
+    },
+    "CHR05 Mark": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 13
+    },
+    "CHR05 Nate": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR05 Will": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 6
+    },
+    "CHR05 Zoe": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 4
+    },
+    "CHR06 Jak": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 30
+    },
+    "CHR07 Christian": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 23
+    },
+    "CHR08 Adrian": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 11
+    },
+    "CHR08 Ben": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR08 Erin": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 30
+    },
+    "CHR09 Lilly": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 34
+    },
+    "CHR10 Alvin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR11 Maddy": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 23
+    },
+    "CHR12 Chris": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 22
+    },
+    "CHR13 Iris": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 22
+    },
+    "CHR14 Hanna": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR14 Michael": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 46
+    },
+    "CHR14 Wilma": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 80
+    },
+    "CHR15 Abby": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 15
+    },
+    "CHR15 Adam": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 4
+    },
+    "CHR15 Eddie": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 70
+    },
+    "CHR15 Myra": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR15 Nick": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR15 Rebekah": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 32
+    },
+    "CHR16 Cordelia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 75
+    },
+    "CHR16 Edgar": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 80
+    },
+    "CHR17 Joachim": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 31
+    },
+    "CHR17 Maya": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 29
+    },
+    "CHR18 Dan": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 37
+    },
+    "CHR18 Rachel": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 35
+    },
+    "CHR18 Simon": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 8
+    },
+    "CHR18 Sora": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 12
+    },
+    "CHR19 Jenny": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 50
+    },
+    "CHR19 Molly": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR19 Richard": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 42
+    },
+    "CHR20 Arthur": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR20 Cassie": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "part time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR20 Garreth": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 8
+    },
+    "CHR20 George": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 12
+    },
+    "CHR20 Gregor": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 4
+    },
+    "CHR21 Emily": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 36
+    },
+    "CHR21 John": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR22 Anja": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR22 Fiona": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 28
+    },
+    "CHR23 James": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR24 Martha": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR25 Marlene": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 28
+    },
+    "CHR26 Florence": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 27
+    },
+    "CHR27 Emil": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR27 Laura": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 9
+    },
+    "CHR27 Melanie": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 39
+    },
+    "CHR27 Tobias": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 13
+    },
+    "CHR28 Patrick": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 24
+    },
+    "CHR29 Benjamin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 26
+    },
+    "CHR30 Horsti": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 70
+    },
+    "CHR31 Monika": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR32 Christin": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 23
+    },
+    "CHR32 Jona": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 25
+    },
+    "CHR33 Florian": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 28
+    },
+    "CHR33 Vicky": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 27
+    },
+    "CHR34 Julia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 25
+    },
+    "CHR34 Romeo": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 26
+    },
+    "CHR35 Heike": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 42
+    },
+    "CHR36 Anne": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 51
+    },
+    "CHR37 Johannes": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 48
+    },
+    "CHR38 David": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 55
+    },
+    "CHR39 Normen": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 44
+    },
+    "CHR39 Tina": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR40 Antje": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 48
+    },
+    "CHR40 Marcus": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 51
+    },
+    "CHR41 Felix": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 9
+    },
+    "CHR41 Justin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR41 Lucy": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 12
+    },
+    "CHR41 Maria": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR41 Peter": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 42
+    },
+    "CHR42 Jessica": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR42 Max": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 42
+    },
+    "CHR42 Moritz": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 10
+    },
+    "CHR43 Lutz": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR43 Maik": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 16
+    },
+    "CHR44 Barbara": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR44 Christopher": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 16
+    },
+    "CHR44 Rainer": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR44 Sandy": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 14
+    },
+    "CHR45 Alexander": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 48
+    },
+    "CHR45 Claudia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 16
+    },
+    "CHR45 Susann": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR46 Kevin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 8
+    },
+    "CHR46 Marita": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR47 Diana": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 39
+    },
+    "CHR47 Katrin": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR47 Sven": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 10
+    },
+    "CHR48 Lisa": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 51
+    },
+    "CHR48 Maggie": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 13
+    },
+    "CHR48 Martin": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 7
+    },
+    "CHR48 Stefan": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 51
+    },
+    "CHR49 March": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 37
+    },
+    "CHR49 Michelle": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 13
+    },
+    "CHR49 Wilhelm": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR50 Hans": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 5
+    },
+    "CHR50 Isabella": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 13
+    },
+    "CHR50 Pascal": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 9
+    },
+    "CHR50 Rita": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 38
+    },
+    "CHR51 Gustav": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 69
+    },
+    "CHR51 Maren": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 67
+    },
+    "CHR52 Ashley": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 22
+    },
+    "CHR52 Matthew": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 22
+    },
+    "CHR52 Mia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 23
+    },
+    "CHR53 Franz": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR53 Linda": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 11
+    },
+    "CHR53 Robert": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 15
+    },
+    "CHR53 Rosemarie": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR54 Emma": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR54 Nils": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 71
+    },
+    "CHR55 Nicole": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR55 Stephan": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR56 Andreas": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 50
+    },
+    "CHR56 Anton": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 16
+    },
+    "CHR56 Sabine": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR56 Sandi": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 14
+    },
+    "CHR57 Babs": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR57 Christoph": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 20
+    },
+    "CHR57 Reiner": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHR57 Sarah": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 14
+    },
+    "CHR58 Ema": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHR58 Nil": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 71
+    },
+    "CHR59 Dani": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 37
+    },
+    "CHR59 Rachela": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 35
+    },
+    "CHR59 Simo": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 8
+    },
+    "CHR59 Sonea": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 12
+    },
+    "CHR59 Sorra": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 12
+    },
+    "CHR60 Amelia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 30
+    },
+    "CHR60 Lea": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 2
+    },
+    "CHR60 Oliver": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 32
+    },
+    "CHR61 Avva": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 40
+    },
+    "CHR61 Fina": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 43
+    },
+    "CHR61 Lukas": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 10
+    },
+    "CHR62 Lucas": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 25
+    },
+    "CHR62 Sophie": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 23
+    },
+    "CHS01 Egon": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 45
+    },
+    "CHS01 Hella": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "unemployed",
+        "day_type": null,
+        "age": 40
+    },
+    "CHS01 Justus": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "student",
+        "day_type": null,
+        "age": 15
+    },
+    "CHS01 Lucia": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "student",
+        "day_type": null,
+        "age": 11
+    },
+    "CHS04 August": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 71
+    },
+    "CHS04 Margot": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "retired",
+        "day_type": null,
+        "age": 68
+    },
+    "CHS12 Falk": {
+        "country": "DE",
+        "sex": "male",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 31
+    },
+    "CHS12 Regina": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 29
+    },
+    "OR01 Ellen": {
+        "country": "DE",
+        "sex": "female",
+        "work_status": "full time",
+        "day_type": null,
+        "age": 26
+    }
+}

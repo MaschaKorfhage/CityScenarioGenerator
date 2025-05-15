@@ -401,6 +401,7 @@ class LPGConfigCreator:
         logging.info("Creating POI preferences for all persons")
         all_relevant_pois = {}
         for id, hcj in tqdm(self.houses.items()):
+            assert hcj.House is not None and hcj.House.Coordinates is not None
             # store all POI that are used by persons in this house
             relevant_pois: dict[str, lpgdata.PointOfInterestData] = {}
             for hh in hcj.House.Households:
@@ -485,6 +486,7 @@ class LPGConfigCreator:
         logging.info("Creating routes for all persons")
         all_routes = {}
         for id, hcj in tqdm(self.houses.items()):
+            assert hcj.House is not None and hcj.House.Coordinates is not None
             for hh in hcj.House.Households:
                 for person, poi_preferences in hh.PointOfInterestPreferences.items():
                     self.add_routes_for_one_person(
@@ -498,7 +500,7 @@ class LPGConfigCreator:
         assert travel_definition is not None, "TravelDefinition is not set"
 
         # use a single timeslot that is always active
-        weekdays = [e.value for e in lpgdata.DayOfWeek]
+        weekdays = {e for e in lpgdata.DayOfWeek}
         time_slot_always = lpgdata.TimeSlot(0, 24 * 60 * 60, weekdays)
         travel_definition.TimeSlotRouteLists = [
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
@@ -530,6 +532,7 @@ class LPGConfigCreator:
             self.houses.values(), self.pois.values(), path
         )
         scenario_statistics.write_household_statistics(self.houses.values(), path)
+        scenario_statistics.write_person_statistics(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(
             self.global_city_definition.PointsOfInterest.values(),
             path,

@@ -7,7 +7,6 @@ from pathlib import Path
 from typing import Any
 from pylpg import lpgdata
 
-
 from cityscenariogenerator import utils
 
 
@@ -15,7 +14,7 @@ from cityscenariogenerator import utils
 class LPGCityConfig:
     """A city configuration for the LoadProfileGenerator"""
 
-    houses: dict[str,]
+    houses: dict[str, lpgdata.HouseCreationAndCalculationJob]
     city: lpgdata.CityData
 
     def save(self, path: Path):
@@ -88,14 +87,14 @@ class LPGCityConfig:
             # filepath = houses_subdir / filename
             with open(file, "r") as f:
                 filetext = f.read()
-            houses[file.stem] = lpgdata.HouseCreationAndCalculationJob.from_json(
+            houses[file.stem] = lpgdata.HouseCreationAndCalculationJob.from_json(  # type: ignore
                 filetext
             )
 
         # load city definition with POIs
         with open(path / "city.json", "r") as f:
             filetext = f.read()
-        city = lpgdata.CityData.from_json(filetext)
+        city = lpgdata.CityData.from_json(filetext)  # type: ignore
 
         # load additional routes from separate files
         routes_subdir = path / "routes"
