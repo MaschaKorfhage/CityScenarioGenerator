@@ -2,19 +2,30 @@
 
 from dataclasses import dataclass
 import json
+import logging
 from pathlib import Path
 from typing import Any
 from pylpg import lpgdata
+
 
 from cityscenariogenerator import utils
 
 
 @dataclass
 class LPGCityConfig:
+    """A city configuration for the LoadProfileGenerator"""
+
     houses: dict[str,]
     city: lpgdata.CityData
 
     def save(self, path: Path):
+        """
+        Save the LPGCityConfig as a directory, containing files for
+        houses, routes, and the city definition.
+
+        :param path: the directory to save the config to
+        :raises Exception: if the target directory was not empty
+        """
         # make sure the directory exists
         path.mkdir(parents=True, exist_ok=True)
         files = list(path.iterdir())
@@ -59,3 +70,37 @@ class LPGCityConfig:
         route_dict = {f"{i}": r.to_dict() for i, r in enumerate(routes)}  # type: ignore
         with open(filename, "w+") as f:
             json.dump(route_dict, f, indent=4)
+
+    @staticmethod
+    def load(path: Path):
+        """
+        Loads an LPGCityConfig from the specified directory
+
+        :param path: the directory including the config files
+        :return: the loaded LPGCityConfig
+        """
+        assert path.is_dir(), f"{path} is no directory, cannot load city config"
+
+        # load houses
+        houses_subdir = path / "houses"
+        houses = {}
+        for file in houses_subdir.iterdir():
+            # filepath = houses_subdir / filename
+            with open(file, "r") as f:
+                filetext = f.read()
+            houses[file.stem] = lpgdata.HouseCreationAndCalculationJob.from_json(
+                filetext
+            )
+
+        # load city definition with POIs
+        with open(path / "city.json", "r") as f:
+            filetext = f.read()
+        city = lpgdata.CityData.from_json(filetext)
+
+        # load additional routes from separate files
+        routes_subdir = path / "routes"
+        if routes_subdir.is_dir():
+            logging.warning("Loading city config routes not implemented yet.")
+            # TODO: include routes and location clustering file if present
+
+        return LPGCityConfig(houses, city)
