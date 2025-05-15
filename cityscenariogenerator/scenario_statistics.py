@@ -123,7 +123,7 @@ def write_person_statistics(
     # additionally create the same statistics file with relative values
     rel_counts = {}
     personcount = len(all_infos)
-    for key, counter in counters.values():
+    for key, counter in counters.items():
         rel_counts[key] = {k: v / personcount for k, v in counter.items()}
 
     filename = path / "person_statistics_relative.json"
