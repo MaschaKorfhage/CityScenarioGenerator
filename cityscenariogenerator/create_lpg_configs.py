@@ -506,6 +506,18 @@ class LPGConfigCreator:
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
         ]
 
+    def limit_scenario(self, houses: int = 1, households: int = 1):
+        """
+        Truncates the scenario to only include the specified number of houses and
+        households.
+
+        :param houses: max. number of houses, defaults to 1
+        :param households: max. number of households per house, defaults to 1
+        """
+        self.houses = dict(list(self.houses.items())[:houses])
+        for house in self.houses.values():
+            house.House.Households = house.House.Households[:households]  # type: ignore
+
     def create_config_files(self) -> LPGCityConfig:
         path = self.params.result_directory
         city_config = LPGCityConfig(self.houses, self.global_city_definition)
