@@ -102,7 +102,7 @@ def write_person_statistics(
         counter = Counter(x[info_name] for x in all_infos)
         counters[info_name] = dict(sorted(counter.items()))
 
-    # special case: aggreagate ages to age categories
+    # special case: aggregate ages to age categories
     if "age" in counters:
         age_category_counts = defaultdict(int)
         AGE_CATEGORIES = {

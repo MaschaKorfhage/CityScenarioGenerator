@@ -8,6 +8,7 @@ from typing import Any
 from pylpg import lpgdata
 
 from cityscenariogenerator import utils
+from tqdm import tqdm
 
 
 @dataclass
@@ -79,11 +80,13 @@ class LPGCityConfig:
         :return: the loaded LPGCityConfig
         """
         assert path.is_dir(), f"{path} is no directory, cannot load city config"
+        logging.info(f"Loading a city scenario from {path}. This might take a while.")
 
-        # load houses
+        # load all houses
         houses_subdir = path / "houses"
+        house_files = list(houses_subdir.iterdir())
         houses = {}
-        for file in houses_subdir.iterdir():
+        for file in tqdm(house_files):
             # filepath = houses_subdir / filename
             with open(file, "r") as f:
                 filetext = f.read()
