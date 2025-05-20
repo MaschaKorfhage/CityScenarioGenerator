@@ -5,6 +5,7 @@
         "DefaultForOutputFiles": "NoFiles",
         "CalcOptions": [
             "OverallSum",
+            "SumProfileExternalIndividualHouseholds",
             "ActionEntries",
             "LocationsEntries",
             "HouseholdContents",
