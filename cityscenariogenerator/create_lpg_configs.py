@@ -361,7 +361,7 @@ class LPGConfigCreator:
         available = self.poi_ids_by_type.keys()
         missing = locations - available
         if missing:
-            logging.warning(
+            raise Exception(
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
             )
 

@@ -5,7 +5,7 @@ import random
 from datetime import datetime
 from pathlib import Path
 
-from cityscenariogenerator import create_lpg_configs, utils
+from cityscenariogenerator import create_lpg_configs, scenario_params, utils
 from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.nonresidential_building_import import (
@@ -60,17 +60,17 @@ def create_city_scenario(
     # determine the output directory
     query_str = utils.descriptive_query_text(builda_query)
     result_dir_name = f"scenario_{query_str}"
-    result_dir_path = scenario_directory / result_dir_name
+    result_dir = scenario_directory / result_dir_name
     lpg_result_path = lpg_result_dir / result_dir_name
 
-    utils.clear_directory(result_dir_path)
-    if result_dir_path.exists() and any(result_dir_path.iterdir()):
-        raise Exception(f"Target directory was not empty: {result_dir_path}")
+    utils.clear_directory(result_dir)
+    if result_dir.exists() and any(result_dir.iterdir()):
+        raise Exception(f"Target directory was not empty: {result_dir}")
 
-    utils.init_logging(result_dir_path)
+    utils.init_logging(result_dir)
 
     # setup the scenario parameters object
-    params = ScenarioParams(builda_query, result_dir_path, lpg_result_path)
+    params = scenario_params.get_params(builda_query, result_dir, lpg_result_path)
 
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)
@@ -85,12 +85,12 @@ def create_city_scenario(
 
     # create config files for the collected buildings
     create_configs_from_buildings(params, res_buildings, nonres_buildings)
-    logging.info(f"Finished writing city scenario to {result_dir_path}")
+    logging.info(f"Finished writing city scenario to {result_dir}")
 
     # copy the calcspec.json into the scenario directory
     template_path = Path("data/calcspec_template.json")
     create_lpg_configs.copy_calcspec_file(
-        result_dir_path, template_path, str(lpg_result_path), db_file_path
+        result_dir, template_path, str(lpg_result_path), db_file_path
     )
     logging.info(f"Finished scenario creation in {datetime.now() - start}")
 

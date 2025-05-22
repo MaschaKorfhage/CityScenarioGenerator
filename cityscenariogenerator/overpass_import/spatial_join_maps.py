@@ -60,7 +60,7 @@ def plot_map(dataframes: list[gpd.GeoDataFrame], name: str):
 def show_osm_builda_join_on_map():
     city = "Jülich"
     # load overpass building data
-    overpass_df = gpd.read_file(f"data/custom_input/{city}/osm_nonres_nodes.geojson")
+    overpass_df = gpd.read_file(f"scenario_inputs/{city}/osm_nonres_nodes.geojson")
     # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
     osm_node_locations = osm_data_join.map_osm_nodes_to_locations(overpass_df, keys)
@@ -69,9 +69,9 @@ def show_osm_builda_join_on_map():
     )
 
     # load custom POIs
-    poi_path = f"data/custom_input/{city}/custom_pois_dasörtliche.json"
+    poi_path = f"scenario_inputs/{city}/custom_pois_dasörtliche.json"
     poi_df_oe = osm_data_join.load_custom_poi_geodf(poi_path)
-    poi_path = f"data/custom_input/{city}/custom_pois_dastelefonbuch.json"
+    poi_path = f"scenario_inputs/{city}/custom_pois_dastelefonbuch.json"
     poi_df_tb = osm_data_join.load_custom_poi_geodf(poi_path)
 
     # load BUILDA data

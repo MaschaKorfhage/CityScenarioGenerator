@@ -544,6 +544,10 @@ def add_osm_location_types(
     nonres_buildings: dict[str, BuildingWithLocationType],
     res_buildings: list[BuildingData],
 ) -> set[str]:
+    if not params.osm_input_path().is_file():
+        logging.info("No OSM data file found, skipping OSM mapping.")
+        return set()
+
     # load additional POI data from OSM and address books
     overpass_df = load_overpass_data(params)
     custom_poi_type = "Doctors Office"
