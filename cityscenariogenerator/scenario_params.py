@@ -30,16 +30,16 @@ class ScenarioParams:
                 f"Scenario input directory not found: {self.input_data_dir()}"
             )
             return False
-        if not self.custom_poi_path().is_dir():
+        if not self.custom_poi_path().is_file():
             logging.warning(f"Custom POI file not found: {self.custom_poi_path()} ")
             return False
-        if not self.osm_input_path().is_dir():
+        if not self.osm_input_path().is_file():
             logging.warning(f"OSM input file not found: {self.input_data_dir()}")
             return False
         return True
 
     def input_data_dir(self) -> Path:
-        return SCENARIO_INPUTS_DIR / self.get_city()
+        return SCENARIO_INPUTS_DIR / self.query_str
 
     def custom_poi_path(self) -> Path:
         return self.input_data_dir() / "custom_pois.json"
@@ -85,6 +85,6 @@ def get_params(
     if params.check_input_data():
         return params
     logging.warning(
-        "No valid scenario input data for query '{params.query_str}' found. Using dummy data."
+        f"No valid scenario input data for query '{params.query_str}' found. Using dummy data."
     )
     return DummyParams(builda_query, result_directory, lpg_result_path)
