@@ -9,11 +9,6 @@
         "female": 17015,
         "male": 17194
     },
-    "work_status": {
-        "full time": 2,
-        "student": 3,
-        "unemployed": 2
-    },
     "employment_categories": {
         "employed": 16690,
         "employed_male": 9050,
