@@ -49,7 +49,11 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
         fig = plt.figure()
         ax = fig.add_subplot(1, 1, 1)
         data.reset_index(names=measure, inplace=True)
-        df_long = data.melt(id_vars=measure, var_name="Dataset", value_name="Value")
+        y_title = "Number of persons"
+        df_long = data.melt(id_vars=measure, var_name="Dataset", value_name=y_title)
 
-        sns.barplot(x=measure, ax=ax, y="Value", hue="Dataset", data=df_long)
+        sns.barplot(x=measure, ax=ax, y=y_title, hue="Dataset", data=df_long)
+        ax.tick_params(axis='x', labelrotation=90)
+        fig.align_labels()
+        fig.tight_layout()
         fig.savefig(result_dir / f"population_validation_{measure}.svg")

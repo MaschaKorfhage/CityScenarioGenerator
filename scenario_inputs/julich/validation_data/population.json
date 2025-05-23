@@ -13,9 +13,9 @@
         "employed": 16690,
         "employed_male": 9050,
         "employed_female": 7640,
-        "students": 1850,
-        "students_male": 1190,
-        "students_female": 670,
+        "student": 1850,
+        "student_male": 1190,
+        "student_female": 670,
         "unemployed": 1150,
         "unemployed_male": 570,
         "unemployed_female": 580
