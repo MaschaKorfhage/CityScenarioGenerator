@@ -21,7 +21,6 @@ from cityscenariogenerator import (
 )
 from cityscenariogenerator.plots import building_map, building_map_interactive, population_comparison
 from cityscenariogenerator.scenario_params import ScenarioParams
-
 from cityscenariogenerator.city_config import LPGCityConfig
 
 
