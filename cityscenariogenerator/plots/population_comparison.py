@@ -48,8 +48,8 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
 
         fig = plt.figure()
         ax = fig.add_subplot(1, 1, 1)
-        df_long = data.melt(var_name="Dataset", value_name="Value")
-        df_long.reset_index(inplace=True)
+        data.reset_index(names=measure, inplace=True)
+        df_long = data.melt(id_vars=measure, var_name="Dataset", value_name="Value")
 
-        sns.barplot(x="index", ax=ax, y="Value", hue="Dataset", data=df_long)
+        sns.barplot(x=measure, ax=ax, y="Value", hue="Dataset", data=df_long)
         fig.savefig(result_dir / f"population_validation_{measure}.svg")

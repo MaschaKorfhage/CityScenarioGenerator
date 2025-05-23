@@ -1,0 +1,41 @@
+{
+    "city": "Dummy",
+    "date": "2022-05-15",
+    "source": "Copy of Jülich data",
+    "country": {
+        "DE": 34208
+    },
+    "sex": {
+        "female": 17015,
+        "male": 17194
+    },
+    "work_status": {
+        "full time": 2,
+        "student": 3,
+        "unemployed": 2
+    },
+    "employment_categories": {
+        "employed": 16690,
+        "employed_male": 9050,
+        "employed_female": 7640,
+        "students": 1850,
+        "students_male": 1190,
+        "students_female": 670,
+        "unemployed": 1150,
+        "unemployed_male": 570,
+        "unemployed_female": 580
+    },
+    "age_categories": {
+        "<3": 865,
+        "3-5": 847,
+        "6-9": 1183,
+        "10-15": 1768,
+        "16-18": 978,
+        "19-24": 2669,
+        "25-39": 6663,
+        "40-59": 9110,
+        "60-66": 3352,
+        "67-74": 3045,
+        ">74": 3735
+    }
+}
