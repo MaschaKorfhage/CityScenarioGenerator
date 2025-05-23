@@ -11,3 +11,4 @@ python-dotenv
 geopandas
 contextily
 folium
+seaborn

@@ -106,15 +106,41 @@ def write_person_statistics(
     if "age" in counters:
         age_category_counts = defaultdict(int)
         AGE_CATEGORIES = {
-            "<18": (0, 18),
-            "18-66": (18, 67),
-            ">66": (67, 200),
+            "<3": (0, 2),
+            "3-5": (3, 5),
+            "6-9": (6,9),
+            "10-15": (10,15),
+            "16-18": (16,18),
+            "19-24": (19,24),
+            "25-39": (25,39),
+            "40-59": (40,59),
+            "60-66": (60,66),
+            "67-74": (67,74),
+            ">74": (75, 200),
         }
         for age, frequency in counters["age"].items():
             for catkey, catlimits in AGE_CATEGORIES.items():
-                if catlimits[0] <= age < catlimits[1]:
+                if catlimits[0] <= age <= catlimits[1]:
                     age_category_counts[catkey] += frequency
         counters["age_categories"] = age_category_counts
+    # special case: aggregate work status to categories
+    if "work_status" in counters:
+        work_counter = counters["work_status"]
+        employment_categories = {}
+        WORK_CATEGORIES = {
+            "employed": ["full time", "part time"],
+            "student": ["student"],
+            "unemployed": ["unemployed"],
+        }
+        for cat, values in WORK_CATEGORIES.items():
+            employment_categories[cat] = sum(work_counter.get(v, 0) for v in values)
+        # special case: combine sex and employment
+        if "sex" in counters:
+            combined_count = Counter((d["work_status"], d["sex"]) for d in all_infos)
+            for sex in counters["sex"].keys():
+                for cat, values in WORK_CATEGORIES.items():
+                    employment_categories[f"{cat}_{sex}"] = sum(combined_count.get((v, sex), 0) for v in values)
+        counters["employment_categories"] = employment_categories
 
     filename = path / "person_statistics.json"
     with open(filename, "w+", encoding="utf8") as f:
