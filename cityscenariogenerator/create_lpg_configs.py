@@ -19,7 +19,11 @@ from cityscenariogenerator import (
     scenario_statistics,
     household_data,
 )
-from cityscenariogenerator.plots import building_map, building_map_interactive, population_comparison
+from cityscenariogenerator.plots import (
+    building_map,
+    building_map_interactive,
+    population_comparison,
+)
 from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.city_config import LPGCityConfig
 
@@ -271,7 +275,7 @@ class LPGConfigCreator:
         self, person: lpgdata.PersonData
     ) -> dict[str, float]:
         """
-        Select residentil buildings for locations such as friend's house and turn them into
+        Select residential buildings for locations such as friend's house and turn them into
         POIs. This is a simple workaround as an accurate implementation would require significant
         changes to the LPG city simulation.
 
