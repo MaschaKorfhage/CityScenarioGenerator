@@ -74,6 +74,25 @@ def write_household_statistics(
         json.dump(dict(hh_types_ordered), f, indent=4)
 
 
+def write_persons_per_house(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
+):
+    """
+    Creats a file specifying the number of person in each house.
+
+    :param house_jobs: house configs to analyze
+    :param path: path for the result file
+    """
+    personcounts = {}
+    for house in house_jobs:
+        assert house.House is not None
+        id = house.House.Name
+        count = sum(len(hh.PointOfInterestPreferences) for hh in house.House.Households)
+        personcounts[id] = count
+    with open(path / "persons_per_house.json", "w+") as f:
+        json.dump(dict(personcounts), f, indent=4)
+
+
 def write_person_statistics(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
 ):
@@ -108,14 +127,14 @@ def write_person_statistics(
         AGE_CATEGORIES = {
             "<3": (0, 2),
             "3-5": (3, 5),
-            "6-9": (6,9),
-            "10-15": (10,15),
-            "16-18": (16,18),
-            "19-24": (19,24),
-            "25-39": (25,39),
-            "40-59": (40,59),
-            "60-66": (60,66),
-            "67-74": (67,74),
+            "6-9": (6, 9),
+            "10-15": (10, 15),
+            "16-18": (16, 18),
+            "19-24": (19, 24),
+            "25-39": (25, 39),
+            "40-59": (40, 59),
+            "60-66": (60, 66),
+            "67-74": (67, 74),
             ">74": (75, 200),
         }
         for age, frequency in counters["age"].items():
@@ -139,7 +158,9 @@ def write_person_statistics(
             combined_count = Counter((d["work_status"], d["sex"]) for d in all_infos)
             for sex in counters["sex"].keys():
                 for cat, values in WORK_CATEGORIES.items():
-                    employment_categories[f"{cat}_{sex}"] = sum(combined_count.get((v, sex), 0) for v in values)
+                    employment_categories[f"{cat}_{sex}"] = sum(
+                        combined_count.get((v, sex), 0) for v in values
+                    )
         counters["employment_categories"] = employment_categories
 
     filename = path / "person_statistics.json"
