@@ -248,14 +248,34 @@ class HHSamplingType(StrEnum):
 
 
 class HouseholdSampler:
+    """Helper class to sample LPG households based on the raw data from BUILDA, and to keep
+    track of some population statistics."""
+
     def __init__(self):
         self.sampling_types = defaultdict(int)
         self.household_characteristics = defaultdict(lambda: defaultdict(int))
 
+        # keep track of the total number of households, persons etc.
+        self.persons_source = 0
+        self.female_source = 0
+        self.working_source = 0
+        self.senior_source = 0
+        self.households_source = 0
+
     def _add_hh_data_to_statistics(self, household_data: HouseholdRawData) -> None:
+        """
+        Add the specified household to the statistics counters of this sampler object.
+
+        :param household_data: the household data to add
+        """
         for field in dataclasses.fields(household_data):
             value = getattr(household_data, field.name)
             self.household_characteristics[field.name][value] += 1
+        self.households_source += 1
+        self.persons_source += household_data.num_persons
+        self.female_source += household_data.num_persons * household_data.female_ratio
+        self.working_source += household_data.num_persons * household_data.working_ratio
+        self.senior_source += household_data.num_persons * household_data.senior_ratio
 
     def get_lpg_household_based_on_builda_household_information(
         self,
@@ -339,8 +359,13 @@ def get_lpg_households_based_on_builda_data(
     # log the household sampling statistics
     sampling_stats = ", ".join(f"{k}: {v}" for k, v in sampler.sampling_types.items())
     logging.info(f"Household sampling statistics: {sampling_stats}")
+    logging.info(
+        f"Population statistics in source data: {sampler.households_source} households, "
+        f"{sampler.persons_source} persons in total, {sampler.female_source} female, "
+        f"{sampler.working_source} working, {sampler.senior_source} senior"
+    )
     # log statistics about the household characteristics
     for field, value_dist in sampler.household_characteristics.items():
-        field_stats = ", ".join(f"{k}: {v}" for k, v in value_dist.items())
+        field_stats = ", ".join(f"{k}: {v:.2f}" for k, v in value_dist.items())
         logging.info(f"Household characteristic {field}: {field_stats}")
     return buildings
