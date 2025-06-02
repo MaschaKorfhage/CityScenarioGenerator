@@ -23,11 +23,15 @@ dotenv.load_dotenv()
 
 
 def get_builda_devclient():
+    username = os.getenv("builda_username")
+    password = os.getenv("builda_password")
+    if not username or not password:
+        raise Exception("'builda_username' or 'builda_password' not set correctly.")
     # init the Builda API client
     return BuildaDevClient(
         proxy=False,
-        username=os.getenv("builda_username"),
-        password=os.getenv("builda_password"),
+        username=username,
+        password=password,
         phase=Phase.PRODUCTION,
         version="v8_20240916",
     )
@@ -72,6 +76,7 @@ def load_builda_cache(search_args: dict, query_type: str) -> list[Building] | No
     :param query_type: type of the query
     :return: the cached result objects
     """
+    check_matching_cache_file(search_args)
     cache_file = get_cache_filename(search_args, query_type)
     try:
         with open(cache_file, "rb") as f:
@@ -82,12 +87,34 @@ def load_builda_cache(search_args: dict, query_type: str) -> list[Building] | No
         return None
 
 
+def check_matching_cache_file(search_args: dict) -> None:
+    """
+    Whenever a cache file is loaded, check whether both matching cache files
+    (residential/non-residential) for this BUILDA query exist. If not, raise
+    an exception to avoid problems with building IDs.
+
+    :param search_args: BUILDA query
+    :raises Exception: if the corresponding cache file does not exist
+    """
+    query_types = ["res", "nonres"]
+    cache_files_found = [
+        get_cache_filename(search_args, query_type).exists()
+        for query_type in query_types
+    ]
+    if any(cache_files_found) and not all(cache_files_found):
+        raise Exception(
+            f"For the BUILDA query {search_args}, one of the cache files exists, but not the other. "
+            "This can lead to inconsistencies in case building IDs were adapted for case-insensitivity. "
+            f"Please delete the unmatched cache file."
+        )
+
+
 def get_nonresidential_buildings(
     search_args: dict, use_cache: bool = True
 ) -> list[NonResidentialBuilding]:
     # check whether the result is already cached
     if use_cache and (cached := load_builda_cache(search_args, "nonres")):
-        return cached
+        return cached  # type: ignore[return-value]
     client = get_builda_devclient()
 
     nonres_buildings = client.get_non_residential_buildings(
@@ -106,7 +133,7 @@ def get_residential_buildings(
 ) -> list[ResidentialBuilding]:
     # check whether the result is already cached
     if use_cache and (cached := load_builda_cache(search_args, "res")):
-        return cached
+        return cached  # type: ignore[return-value]
     client = get_builda_devclient()
     res_buildings = client.get_residential_buildings(**search_args)
     logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
