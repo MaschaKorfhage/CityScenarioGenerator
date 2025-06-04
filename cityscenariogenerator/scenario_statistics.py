@@ -151,17 +151,14 @@ def write_person_statistics(
     if "age" in counters:
         age_category_counts = defaultdict(int)
         AGE_CATEGORIES = {
-            "<3": (0, 2),
-            "3-5": (3, 5),
+            "<6": (2, 5),
             "6-9": (6, 9),
             "10-15": (10, 15),
             "16-18": (16, 18),
             "19-24": (19, 24),
             "25-39": (25, 39),
             "40-59": (40, 59),
-            "60-66": (60, 66),
-            "67-74": (67, 74),
-            ">74": (75, 200),
+            ">59": (60, 200),
         }
         for age, frequency in counters["age"].items():
             for catkey, catlimits in AGE_CATEGORIES.items():
