@@ -93,6 +93,28 @@ def write_persons_per_house(
         json.dump(dict(personcounts), f, indent=4)
 
 
+def write_household_sizes(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
+):
+    """
+    Creates a file showing the distribution of different household sizes.
+
+    :param house_jobs: house configs to analyze
+    :param path: path for the result file
+    """
+    household_sizes = defaultdict(int)
+    for house in house_jobs:
+        assert house.House is not None
+        for household in house.House.Households:
+            size = len(household.PointOfInterestPreferences)
+            household_sizes[size] += 1
+
+    # sort by size
+    household_sizes = dict(sorted(household_sizes.items(), key=lambda item: item[0]))
+    with open(path / "household_sizes.json", "w+") as f:
+        json.dump(dict(household_sizes), f, indent=4)
+
+
 def write_person_statistics(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
 ):

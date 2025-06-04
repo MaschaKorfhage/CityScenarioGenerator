@@ -549,6 +549,7 @@ class LPGConfigCreator:
         scenario_statistics.write_household_statistics(self.houses.values(), path)
         scenario_statistics.write_person_statistics(self.houses.values(), path)
         scenario_statistics.write_persons_per_house(self.houses.values(), path)
+        scenario_statistics.write_household_sizes(self.houses.values(), path)
         scenario_statistics.write_poi_statistics(
             self.global_city_definition.PointsOfInterest.values(),
             path,
