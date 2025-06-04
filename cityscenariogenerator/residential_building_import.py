@@ -48,6 +48,6 @@ def import_residential_buildings_from_builda(
 
     # determine LPG households for each building
     buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
-        building_data_list
+        building_data_list, params.result_directory / "statistics/builda"
     )
     return buildings

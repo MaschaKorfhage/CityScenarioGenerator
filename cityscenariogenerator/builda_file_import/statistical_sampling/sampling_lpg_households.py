@@ -3,8 +3,9 @@
 from collections import defaultdict
 import dataclasses
 from enum import StrEnum
-import logging
+import json
 import os
+from pathlib import Path
 import pandas as pd
 from typing import Dict, List
 
@@ -343,8 +344,13 @@ class HouseholdSampler:
         return HouseholdData(lpg_household_name, household_data.num_cars)
 
 
+def create_stat_file(path: Path, data: dict):
+    with open(path, "w", encoding="utf8") as f:
+        json.dump(data, f, indent=4)
+
+
 def get_lpg_households_based_on_builda_data(
-    building_data_list: list[BuildingRawData],
+    building_data_list: list[BuildingRawData], stats_path: Path | None = None
 ) -> list[BuildingData]:
     """Get lpg households based on builda data."""
     sampler = HouseholdSampler()
@@ -360,16 +366,21 @@ def get_lpg_households_based_on_builda_data(
             households.append(household)
         building = BuildingData(building_raw.id, households, building_raw.coordinates)
         buildings.append(building)
-    # log the household sampling statistics
-    sampling_stats = ", ".join(f"{k}: {v}" for k, v in sampler.sampling_types.items())
-    logging.info(f"Household sampling statistics: {sampling_stats}")
-    logging.info(
-        f"Population statistics in source data: {sampler.households_source} households, "
-        f"{sampler.persons_source} persons in total, {sampler.female_source} female, "
-        f"{sampler.working_source} working, {sampler.senior_source} senior"
-    )
-    # log statistics about the household characteristics
-    for field, value_dist in sampler.household_characteristics.items():
-        field_stats = ", ".join(f"{k}: {v:.2f}" for k, v in value_dist.items())
-        logging.info(f"Household characteristic {field}: {field_stats}")
+    if stats_path:
+        # write statistics on original BUILDA data and the household sampling
+        stats_path.mkdir(parents=True, exist_ok=True)
+        general_info = {
+            "houses": len(building_data_list),
+            "households": sampler.households_source,
+            "persons": sampler.persons_source,
+            "female": sampler.female_source,
+            "working": sampler.working_source,
+            "senior": sampler.senior_source,
+        }
+        create_stat_file(stats_path / "general_info.json", general_info)
+        create_stat_file(stats_path / "household_sampling.json", sampler.sampling_types)
+        create_stat_file(
+            stats_path / "household_characteristics.json",
+            sampler.household_characteristics,
+        )
     return buildings
