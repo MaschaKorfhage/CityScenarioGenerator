@@ -237,14 +237,16 @@ def get_random_distribution_of_lpg_households_per_building(
 
 class HHSamplingType(StrEnum):
     """Indicates which criteria were used to limit the eligible households
-    during sampling. The number of residents is always used (if available in the LPG),
-    but all additionaly criteria might be dropped if no matching households are found.
+    during sampling. All criteria might be dropped if no matching households
+    are found, ultimately falling back to random sampling with the census
+    distribution.
     """
 
     NONE = "census distribution"
-    WORK = "work status"
-    WORK_SEX = "work status, gender"
-    WORK_SEX_SENIOR = "work status, gender, senior"
+    SIZE = "size"
+    WORK = "size, work status"
+    WORK_SEX = "size, work status, gender"
+    WORK_SEX_SENIOR = "size, work status, gender, senior"
 
 
 class HouseholdSampler:
@@ -318,6 +320,10 @@ class HouseholdSampler:
             # ignore the share of females
             household_set_to_use = lpg_household_data_working
             sampling_type = HHSamplingType.WORK
+        elif lpg_household_data.empty is False:
+            # ignore the share of working people
+            household_set_to_use = lpg_household_data
+            sampling_type = HHSamplingType.SIZE
         # store how the household was sampled, for statistics
         self.sampling_types[sampling_type] += 1
 
@@ -332,9 +338,7 @@ class HouseholdSampler:
                 list_of_random_household_types,
                 list_of_random_number_of_residents,
                 list_of_random_working_status,
-            ) = get_random_distribution_of_lpg_households_per_building(
-                household_data.num_persons
-            )
+            ) = get_random_distribution_of_lpg_households_per_building(1)
             lpg_household_name = list_of_random_lpg_households[0]
         return HouseholdData(lpg_household_name, household_data.num_cars)
 
