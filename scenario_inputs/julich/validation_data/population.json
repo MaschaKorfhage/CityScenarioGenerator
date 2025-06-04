@@ -43,6 +43,13 @@
             "male": 15663
         },
         {
+            "source": "Stadt Jülich Online https://web.archive.org/web/20120116053633/http://www.juelich.de:80/zahlen",
+            "date": "2011-12-31",
+            "population_size": 33132,
+            "female": 16796,
+            "male": 16336
+        },
+        {
             "source": "Kommunalprofil Jülich, https://statistik.nrw/sites/default/files/municipalprofiles/l05358024.pdf",
             "date": "2022-12-31",
             "population_size": 33158,
