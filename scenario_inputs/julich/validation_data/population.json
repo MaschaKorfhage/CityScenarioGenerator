@@ -35,6 +35,14 @@
     },
     "alternative_data": [
         {
+            "source": "Zensus Gemeindeverzeichnis https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/zensus-gemeinden.html",
+            "comment": "Contains data from Zensus 2011 (used here), and data from previous counts",
+            "date": "2011-12-31",
+            "population_size": 31909,
+            "female": 16246,
+            "male": 15663
+        },
+        {
             "source": "Kommunalprofil Jülich, https://statistik.nrw/sites/default/files/municipalprofiles/l05358024.pdf",
             "date": "2022-12-31",
             "population_size": 33158,
