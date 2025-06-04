@@ -76,7 +76,6 @@ def load_builda_cache(search_args: dict, query_type: str) -> list[Building] | No
     :param query_type: type of the query
     :return: the cached result objects
     """
-    check_matching_cache_file(search_args)
     cache_file = get_cache_filename(search_args, query_type)
     try:
         with open(cache_file, "rb") as f:
@@ -87,11 +86,11 @@ def load_builda_cache(search_args: dict, query_type: str) -> list[Building] | No
         return None
 
 
-def check_matching_cache_file(search_args: dict) -> None:
+def check_matching_cache_files(search_args: dict) -> None:
     """
-    Whenever a cache file is loaded, check whether both matching cache files
-    (residential/non-residential) for this BUILDA query exist. If not, raise
-    an exception to avoid problems with building IDs.
+    Check whether both matching cache files (residential/non-residential) for
+    this BUILDA query exist. If not, raise an exception to avoid problems with
+    building IDs.
 
     :param search_args: BUILDA query
     :raises Exception: if the corresponding cache file does not exist
