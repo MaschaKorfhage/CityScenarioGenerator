@@ -2,6 +2,7 @@
 
 from collections import Counter, defaultdict
 import json
+import logging
 from pathlib import Path
 from statistics import mean, median
 from typing import Iterable
@@ -136,6 +137,9 @@ def write_person_statistics(
         for hh in house.House.Households:
             for person in hh.PointOfInterestPreferences.keys():
                 all_infos.append(person_characteristics[person])
+    if not all_infos:
+        logging.warning("Did not find any PointOfinterestPreferences")
+        return
 
     # count the distribution of all charactististics
     counters = {}

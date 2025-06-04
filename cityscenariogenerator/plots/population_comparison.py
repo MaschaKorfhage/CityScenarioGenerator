@@ -27,6 +27,9 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
 
     # load the population statistics of the generated scenario
     scenario_file = params.result_directory / "statistics/person_statistics.json"
+    if not scenario_file.is_file():
+        logging.warning(f"Person statistics file not found: {scenario_file}")
+        return
     with open(scenario_file, "r") as f:
         scenario_stats: dict[str, dict[str, int]] = json.load(f)
 
