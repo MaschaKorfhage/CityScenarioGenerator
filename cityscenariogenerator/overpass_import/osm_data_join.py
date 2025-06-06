@@ -597,7 +597,7 @@ def add_osm_location_types(
     logging.info(logtext)
 
     # create a directory for statistics on the OSM mapping
-    directory = params.result_directory / "poi_mapping"
+    directory = params.result_directory / "statistics/poi_mapping"
     directory.mkdir(parents=True, exist_ok=True)
 
     # assign OSM locations to BUILDA buildings
