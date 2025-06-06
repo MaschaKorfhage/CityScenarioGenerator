@@ -54,6 +54,7 @@
         },
         {
             "source": "Stadt Jülich Online https://web.archive.org/web/20120116053633/http://www.juelich.de:80/zahlen",
+            "comment": "Values are similar to the values from 'older counts' that are also contained in the census source above, so these values are probably more outdated",
             "date": "2011-12-31",
             "population_size": 33132,
             "female": 16796,
