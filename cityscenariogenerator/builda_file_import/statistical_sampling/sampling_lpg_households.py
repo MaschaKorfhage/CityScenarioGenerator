@@ -1,6 +1,6 @@
 """Module for generating random samples for LPG households in Germany."""
 
-from collections import defaultdict
+from collections import Counter, defaultdict
 import dataclasses
 from enum import StrEnum
 import json
@@ -383,4 +383,7 @@ def get_lpg_households_based_on_builda_data(
             stats_path / "household_characteristics.json",
             sampler.household_characteristics,
         )
+        car_numbers = Counter(h.num_cars for b in buildings for h in b.households)
+        cars_sorted = dict(sorted(car_numbers.items()))
+        create_stat_file(stats_path / "cars_per_household.json", cars_sorted)
     return buildings
