@@ -78,6 +78,7 @@ def create_city_scenario(
     logging.info(f"Using RNG seed {seed}")
 
     # collect residential and non-residential buildings
+    builda_client_import.check_matching_cache_files(params.builda_query)
     res_buildings = import_residential_buildings_from_builda(params)
     nonres_buildings = import_nonresidential_buildings_from_builda(
         params, res_buildings
