@@ -108,7 +108,7 @@ def check_matching_cache_files(search_args: dict) -> None:
         )
 
 
-def get_nonresidential_buildings(
+def _get_nonresidential_buildings(
     search_args: dict, use_cache: bool = True
 ) -> list[NonResidentialBuilding]:
     # check whether the result is already cached
@@ -120,14 +120,31 @@ def get_nonresidential_buildings(
         **search_args, exclude_auxiliary=True
     )
     logging.info(f"Non-residential buildings in {search_args}: {len(nonres_buildings)}")
-    builda_id_check.check_building_ids(nonres_buildings)
     if use_cache:
         # cache the result
         cache_builda_result(search_args, "nonres", nonres_buildings)
     return nonres_buildings
 
 
-def get_residential_buildings(
+def get_nonresidential_buildings(
+    search_args: dict, safe_ids: bool = True, use_cache: bool = True
+) -> list[NonResidentialBuilding]:
+    """
+    Gets non-residential buildings from BUILDA for a specific query.
+
+    :param search_args: the BUILDA query
+    :param safe_ids: if True, adapts buildings IDs to make sure they are
+                     case-insensitive, defaults to True
+    :param use_cache: whether to use cached BUILDA results, if available, defaults to True
+    :return: the non-residential buildings retrieved from BUILDA
+    """
+    nonres_buildings = _get_nonresidential_buildings(search_args, use_cache)
+    if safe_ids:
+        builda_id_check.check_building_ids(nonres_buildings)
+    return nonres_buildings
+
+
+def _get_residential_buildings(
     search_args: dict, use_cache: bool = True
 ) -> list[ResidentialBuilding]:
     # check whether the result is already cached
@@ -140,6 +157,24 @@ def get_residential_buildings(
     if use_cache:
         # cache the result
         cache_builda_result(search_args, "res", res_buildings)
+    return res_buildings
+
+
+def get_residential_buildings(
+    search_args: dict, safe_ids: bool = True, use_cache: bool = True
+) -> list[ResidentialBuilding]:
+    """
+    Gets residential buildings from BUILDA for a specific query.
+
+    :param search_args: the BUILDA query
+    :param safe_ids: if True, adapts buildings IDs to make sure they are
+                     case-insensitive, defaults to True
+    :param use_cache: whether to use cached BUILDA results, if available, defaults to True
+    :return: the residential buildings retrieved from BUILDA
+    """
+    res_buildings = _get_residential_buildings(search_args, use_cache)
+    if safe_ids:
+        builda_id_check.check_building_ids(res_buildings)
     return res_buildings
 
 

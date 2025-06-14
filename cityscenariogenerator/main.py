@@ -5,7 +5,12 @@ import random
 from datetime import datetime
 from pathlib import Path
 
-from cityscenariogenerator import create_lpg_configs, scenario_params, utils
+from cityscenariogenerator import (
+    builda_client_import,
+    create_lpg_configs,
+    scenario_params,
+    utils,
+)
 from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.nonresidential_building_import import (
