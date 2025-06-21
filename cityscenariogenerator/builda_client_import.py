@@ -140,7 +140,7 @@ def get_nonresidential_buildings(
     """
     nonres_buildings = _get_nonresidential_buildings(search_args, use_cache)
     if safe_ids:
-        builda_id_check.check_building_ids(nonres_buildings)
+        builda_id_check.check_building_ids(nonres_buildings, True)
     return nonres_buildings
 
 
@@ -153,7 +153,6 @@ def _get_residential_buildings(
     client = get_builda_devclient()
     res_buildings = client.get_residential_buildings(**search_args)
     logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
-    builda_id_check.check_building_ids(res_buildings)
     if use_cache:
         # cache the result
         cache_builda_result(search_args, "res", res_buildings)
@@ -174,7 +173,7 @@ def get_residential_buildings(
     """
     res_buildings = _get_residential_buildings(search_args, use_cache)
     if safe_ids:
-        builda_id_check.check_building_ids(res_buildings)
+        builda_id_check.check_building_ids(res_buildings, True)
     return res_buildings
 
 
