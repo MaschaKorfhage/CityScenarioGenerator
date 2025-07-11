@@ -5,6 +5,7 @@ import logging
 import os
 from pathlib import Path
 import pickle
+from typing import Sequence
 import dotenv
 
 from builda_client.dev_client import (  # type: ignore
@@ -51,7 +52,7 @@ def get_cache_filename(search_args, query_type) -> Path:
 
 
 def cache_builda_result(
-    search_args: dict, query_type: str, data: list[Building]
+    search_args: dict, query_type: str, data: Sequence[Building]
 ) -> None:
     """
     Caches the result of a BUILDA query in a local pickle file.
