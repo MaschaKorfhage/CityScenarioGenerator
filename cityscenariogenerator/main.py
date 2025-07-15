@@ -46,9 +46,9 @@ def create_configs_from_buildings(
     config_creator.create_routes_for_testing()
 
     # set additional parameters
-    assert (
-        config_creator.global_city_definition.TravelDefinition
-    ), "TravelDefinition not set"
+    assert config_creator.global_city_definition.TravelDefinition, (
+        "TravelDefinition not set"
+    )
     config_creator.global_city_definition.TravelDefinition.MinimumDrivingAge = 18
 
     # create config files for all created objects
@@ -104,12 +104,10 @@ def create_city_scenario(
 def main():
     builda_query = {"city": "Jülich", "postcode": "", "street": ""}
     scenario_dir = Path("./scenarios")
-    lpg_result_dir = Path("D:/LPG/Results")
+    lpg_result_dir = Path("C:/LPG/Results")
 
     # for the cluster
-    scenario_dir = Path(
-        "/fast/central/projects/2022-d-neuroth-phd/city_scenarios"
-    )
+    scenario_dir = Path("/fast/central/projects/2022-d-neuroth-phd/city_scenarios")
     lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
 
     create_city_scenario(builda_query, scenario_dir, lpg_result_dir)
