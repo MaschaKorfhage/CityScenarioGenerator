@@ -108,7 +108,7 @@ def main():
 
     # for the cluster
     scenario_dir = Path(
-        "/storage_cluster/projects/2022-d-neuroth-phd/data/city_scenarios/"
+        "/fast/central/projects/2022-d-neuroth-phd/city_scenarios"
     )
     lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
 
