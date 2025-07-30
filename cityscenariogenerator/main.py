@@ -108,7 +108,7 @@ def main():
 
     # for the cluster
     scenario_dir = Path("/fast/central/projects/2022-d-neuroth-phd/city_scenarios")
-    lpg_result_dir = Path("/fast/home/d-neuroth/city_simulation_results/")
+    lpg_result_dir = Path("/fast/central/projects/2022-d-neuroth-phd/results/")
 
     create_city_scenario(builda_query, scenario_dir, lpg_result_dir)
 
