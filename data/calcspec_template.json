@@ -10,7 +10,8 @@
             "LocationsEntries",
             "HouseholdContents",
             "TransportationDefinitions",
-            "TransportationDeviceChoices"
+            "TransportationDeviceChoices",
+            "DeleteDatFiles"
         ],
         "DeleteAllButPDF": false,
         "DeleteDAT": true,
