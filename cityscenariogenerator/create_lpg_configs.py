@@ -83,9 +83,9 @@ def copy_calcspec_file(
     house_job: lpgdata.HouseCreationAndCalculationJob = (
         lpgdata.HouseCreationAndCalculationJob.from_json(json_str)  # type: ignore
     )
-    assert (
-        house_job.CalcSpec is not None
-    ), f"No CalcSpec set in the template file: {template_path}"
+    assert house_job.CalcSpec is not None, (
+        f"No CalcSpec set in the template file: {template_path}"
+    )
 
     # change some settings if necessary
     if lpg_result_path:
@@ -106,7 +106,7 @@ class LPGConfigCreator:
     ONE_CAR_TRANSPORT_DEVICE_SETS = [
         lpgdata.TransportationDeviceSets.Bus_and_one_30_km_h_Car,
         lpgdata.TransportationDeviceSets.Bus_and_one_60_km_h_Car,
-        lpgdata.TransportationDeviceSets.Bus_and_one_30_km_h_Gasoline_Car,
+        # lpgdata.TransportationDeviceSets.Bus_and_one_30_km_h_Gasoline_Car,
     ]
     TWO_CAR_TRANSPORT_DEVICE_SETS = [
         lpgdata.TransportationDeviceSets.Bus_and_two_30_km_h_Cars,
@@ -293,7 +293,9 @@ class LPGConfigCreator:
                 if poi_id not in self.pois:
                     # create the POI
                     poi = lpgdata.PointOfInterestData(
-                        location, self.houses[house_id].House.Coordinates, None  # type: ignore
+                        location,
+                        self.houses[house_id].House.Coordinates,
+                        None,  # type: ignore
                     )
                     self._add_poi_object(poi_id, poi)
 
