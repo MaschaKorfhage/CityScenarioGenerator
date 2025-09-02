@@ -47,6 +47,21 @@ class ScenarioParams:
     def osm_input_path(self) -> Path:
         return self.input_data_dir() / "osm_nonres_nodes.geojson"
 
+    def custom_adaptations_dir(self) -> Path:
+        return self.input_data_dir() / "custom_scenario_adaptations"
+
+    def custom_residentials_path(self) -> Path:
+        return self.custom_adaptations_dir() / "residential_buildings.geojson"
+
+    def custom_nonresidentials_path(self) -> Path:
+        return self.custom_adaptations_dir() / "nonresidential_buildings.geojson"
+
+    def custom_residentials_deletions_path(self) -> Path:
+        return self.custom_adaptations_dir() / "residential_deletions.geojson"
+
+    def custom_nonresidentials_deletions_path(self) -> Path:
+        return self.custom_adaptations_dir() / "nonresidential_deletions.geojson"
+
     def get_city(self) -> str:
         """
         Returns the name of the city of this scenario.
