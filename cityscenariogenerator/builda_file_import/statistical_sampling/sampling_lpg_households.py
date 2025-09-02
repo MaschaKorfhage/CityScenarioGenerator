@@ -26,23 +26,6 @@ DATA_PATH = os.path.join(
 HH_KEY_COLUMN = "lpg household name"
 
 
-def get_lpg_households():
-    """Read lpg households."""
-    hh_data_path = os.path.join(DATA_PATH, "Tabelle_LPG_Households.csv")
-    lpg_household_data = pd.read_csv(hh_data_path, delimiter=";")
-
-    return lpg_household_data
-
-
-def get_zensus_household_data():
-    """Get zensus data for households and people in Germany."""
-    zensus_data = pd.read_excel(
-        os.path.join(DATA_PATH, "Tabelle_Zensus_Households.xlsx")
-    )
-
-    return zensus_data
-
-
 def get_zensus_data_and_weights(zensus_dataframe: pd.DataFrame):
     """Get zensus household types and weights."""
 
@@ -107,9 +90,7 @@ def get_representative_lpg_household_for_each_household_type(
     list_of_random_number_of_residents = []
     list_of_randomw_working_status = []
     for household_type in list_of_random_household_type_samples:
-
         if household_type in ["single woman and kids", "single man and kids"]:
-
             # for these household types number of residents can be either 2 or 3 (based on LPG households)
             filtered_dict: dict = {
                 key: dict_zensus_number_of_residents_and_weights[key] for key in [2, 3]
@@ -142,6 +123,9 @@ def get_representative_lpg_household_for_each_household_type(
 
         elif household_type == "single":
             number_of_residents = 1
+
+        else:
+            raise Exception(f"Unhandled household type: {household_type}")
 
         if number_of_residents == "more than 5":
             # translate for lpg households (max numer of residents in lpg households is 6)
@@ -176,7 +160,6 @@ def get_representative_lpg_household_for_each_household_type(
 
         # at the end, if dataframe is not empty take random choice and get the final random lpg household
         if lpg_household_working.empty is False:
-
             final_random_lpg_household = random.choice(
                 list(lpg_household_working[HH_KEY_COLUMN])
             )
@@ -197,15 +180,12 @@ def get_representative_lpg_household_for_each_household_type(
 
 
 def get_random_distribution_of_lpg_households_per_building(
-    number_of_dwellings_per_building: int,
+    number_of_dwellings_per_building: int, lpg_household_data, zensus_data
 ):
     """Get a random realistic distribution of lpg households based on zensus data.
 
     Get also household types, number of residents and working status of distribution.
     """
-    lpg_household_data = get_lpg_households()
-    zensus_data = get_zensus_household_data()
-
     (
         dict_zensus_household_types_and_weights,
         dict_zensus_number_of_residents_and_weights,
@@ -265,6 +245,23 @@ class HouseholdSampler:
         self.senior_source = 0
         self.households_source = 0
 
+        # load available LPG households and Zensus data once
+        self.lpg_households = self.get_lpg_households()
+        self.zensus_data = self.get_zensus_household_data()
+
+    def get_lpg_households(self):
+        """Read lpg households."""
+        hh_data_path = os.path.join(DATA_PATH, "Tabelle_LPG_Households.csv")
+        lpg_household_data = pd.read_csv(hh_data_path, delimiter=";")
+        return lpg_household_data
+
+    def get_zensus_household_data(self):
+        """Get zensus data for households and people in Germany."""
+        zensus_data = pd.read_excel(
+            os.path.join(DATA_PATH, "Tabelle_Zensus_Households.xlsx")
+        )
+        return zensus_data
+
     def _add_hh_data_to_statistics(self, household_data: HouseholdRawData) -> None:
         """
         Add the specified household to the statistics counters of this sampler object.
@@ -288,15 +285,15 @@ class HouseholdSampler:
         self._add_hh_data_to_statistics(household_data)
 
         # get lpg households
-        lpg_household_data = get_lpg_households()
+        all_lpg_households = self.lpg_households
 
-        lpg_household_data = lpg_household_data.loc[
-            lpg_household_data["number of residents"] == household_data.num_persons
+        lpg_household_data_size = all_lpg_households.loc[
+            all_lpg_households["number of residents"] == household_data.num_persons
         ]
 
         # collect all LPG households with matching characteristics
-        lpg_household_data_working = lpg_household_data.loc[
-            lpg_household_data["working status"] == household_data.working_ratio
+        lpg_household_data_working = lpg_household_data_size.loc[
+            lpg_household_data_size["working status"] == household_data.working_ratio
         ]
         lpg_household_data_female = lpg_household_data_working.loc[
             lpg_household_data_working["female status"] == household_data.female_ratio
@@ -321,9 +318,9 @@ class HouseholdSampler:
             # ignore the share of females
             household_set_to_use = lpg_household_data_working
             sampling_type = HHSamplingType.WORK
-        elif lpg_household_data.empty is False:
+        elif lpg_household_data_size.empty is False:
             # ignore the share of working people
-            household_set_to_use = lpg_household_data
+            household_set_to_use = lpg_household_data_size
             sampling_type = HHSamplingType.SIZE
         # store how the household was sampled, for statistics
         self.sampling_types[sampling_type] += 1
@@ -339,7 +336,9 @@ class HouseholdSampler:
                 list_of_random_household_types,
                 list_of_random_number_of_residents,
                 list_of_random_working_status,
-            ) = get_random_distribution_of_lpg_households_per_building(1)
+            ) = get_random_distribution_of_lpg_households_per_building(
+                1, self.lpg_households, self.zensus_data
+            )
             lpg_household_name = list_of_random_lpg_households[0]
         return HouseholdData(lpg_household_name, household_data.num_cars)
 
