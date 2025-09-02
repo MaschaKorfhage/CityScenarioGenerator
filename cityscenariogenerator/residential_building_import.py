@@ -2,10 +2,19 @@
 Contains functions to import residential buildings from BUILDA, and map them to the data required for the LoadProfileGenerator.
 """
 
+import logging
+from pathlib import Path
+import geopandas as gpd
+from builda_client.dev_model import Coordinates  # type: ignore
+
 from cityscenariogenerator import builda_client_import
 import cityscenariogenerator.builda_file_import.sampling_with_builda_data.sampling_buildings_from_builda as builda_file_sampler
 import cityscenariogenerator.builda_file_import.statistical_sampling.sampling_lpg_households as lpg_household_sampler
-from cityscenariogenerator.household_data import BuildingData
+from cityscenariogenerator.household_data import (
+    BuildingData,
+    BuildingRawData,
+    HouseholdRawData,
+)
 from cityscenariogenerator.scenario_params import ScenarioParams
 
 
@@ -35,6 +44,42 @@ def import_residential_buildings_from_builda_file(
     )
     return buildings
 
+def load_custom_residential_buildings(params: ScenarioParams) -> list[BuildingRawData]:
+    """Parses additional custom residential buildings from a geojson file.
+
+    :param params: the simulation parameter object
+    :raises Exception: if the file had an invalid format
+    :return: the parsed buildings, if any
+    """
+    # check if a file with additional custom buildings exists
+    path = params.custom_residentials_path()
+    if not path.is_file():
+        logging.info("No custom building specified")
+        return []
+
+    buildings = []
+    building_info = gpd.read_file(path).set_crs(4326)
+    for i, row in building_info.iterrows():
+        src_id = row.get("id")
+        id = f"CustomRes_{src_id}{i}"
+        num_hh = int(row.get("num_hh") or 1)
+        num_cars: int = row["num_cars"]
+        # TODO: determine number of cars per household properly
+        cars_per_hh = num_cars // num_hh
+        try:
+            # create dummy households without any data; LPG templates will then be sampled from Zensus
+            hh = [HouseholdRawData(-1, cars_per_hh, -1, -1, -1) for _ in range(num_hh)]
+            point = row["geometry"]
+            coordinates = Coordinates(point.y, point.x)
+            building = BuildingRawData(id, hh, coordinates)
+            buildings.append(building)
+        except ValueError as e:
+            raise Exception(
+                f"Could not parse custom residential building {id} from file {path}: {e}"
+            )
+    logging.info(f"Parsed {len(buildings)} custom residential buildings from {path}")
+    return buildings
+
 
 def import_residential_buildings_from_builda(
     params: ScenarioParams,
@@ -45,6 +90,10 @@ def import_residential_buildings_from_builda(
     building_data_list = builda_file_sampler.convert_residential_buildings_from_builda(
         raw_buildings
     )
+
+    # optionally parse custom buildings from file and add them
+    custom_buildings = load_custom_residential_buildings(params)
+    building_data_list.extend(custom_buildings)
 
     # determine LPG households for each building
     buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(
