@@ -48,7 +48,7 @@ class ScenarioParams:
         return self.input_data_dir() / "osm_nonres_nodes.geojson"
 
     def custom_adaptations_dir(self) -> Path:
-        return self.input_data_dir() / "custom_scenario_adaptations"
+        return self.input_data_dir() / "custom_adaptations"
 
     def custom_residentials_path(self) -> Path:
         return self.custom_adaptations_dir() / "residential_buildings.geojson"
