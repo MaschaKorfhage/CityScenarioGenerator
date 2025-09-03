@@ -96,7 +96,8 @@ def apply_custom_residential_deletions(
             logging.info(f"No houses in deletion area {i}; skipping")
             continue
         # shuffle for a random order
-        buildings_in_area = buildings_in_area.sample(frac=1)
+        seed = random.randrange(2**32)
+        buildings_in_area = buildings_in_area.sample(frac=1, random_state=seed)
         # mark houses for deletion until enough households are removed
         for _, building in buildings_in_area.iterrows():
             # don't delete buildings twice if areas overlap
