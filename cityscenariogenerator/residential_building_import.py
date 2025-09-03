@@ -3,7 +3,7 @@ Contains functions to import residential buildings from BUILDA, and map them to 
 """
 
 import logging
-from pathlib import Path
+import random
 import geopandas as gpd
 from builda_client.dev_model import Coordinates
 from shapely import Point  # type: ignore
@@ -46,7 +46,7 @@ def import_residential_buildings_from_builda_file(
     return buildings
 
 def building_list_to_geodf(buildings: list[BuildingRawData]) -> gpd.GeoDataFrame:
-    """Creates a GeoDataFrame out of a list of households. The GeoDataFrame
+    """Creates a GeoDataFrame out of a list of residential buildings. The GeoDataFrame
     contains the building IDs, coordinates, and the number of households.
 
     :param buildings: the list of building raw data objects
