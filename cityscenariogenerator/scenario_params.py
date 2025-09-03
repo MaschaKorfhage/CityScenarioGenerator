@@ -44,8 +44,14 @@ class ScenarioParams:
     def custom_poi_path(self) -> Path:
         return self.input_data_dir() / "custom_pois.json"
 
+    def additional_poi_data_dir(self) -> Path:
+        return self.input_data_dir() / "additional_poi_type_data"
+
     def osm_input_path(self) -> Path:
-        return self.input_data_dir() / "osm_nonres_nodes.geojson"
+        return self.additional_poi_data_dir() / "osm_nonres_nodes.geojson"
+
+    def specific_poi_sources_dir(self) -> Path:
+        return self.additional_poi_data_dir() / "specific_poi_types"
 
     def custom_adaptations_dir(self) -> Path:
         return self.input_data_dir() / "custom_adaptations"

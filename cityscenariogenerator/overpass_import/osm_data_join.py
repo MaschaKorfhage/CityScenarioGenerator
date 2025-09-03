@@ -275,7 +275,7 @@ def map_custom_pois_to_locations(
     return custom_poi_locations
 
 
-def concat_builda_dfs(df1, df2):
+def concat_builda_dfs(df1, df2) -> gpd.GeoDataFrame:
     """
     Combines two BUILDA GeoDataFrames, e.g. residential and nonresidential
     buildings. Uses the BUILDA_ID column to check for duplicates to only
@@ -286,7 +286,7 @@ def concat_builda_dfs(df1, df2):
     :return: combined dataframe with all entries
     """
     df2 = df2[~df2[DFColumns.BUILDA_ID].isin(df1[DFColumns.BUILDA_ID])]
-    return pd.concat([df1, df2], axis="index")
+    return pd.concat([df1, df2], axis="index")  # type: ignore
 
 
 def write_osm_ignored_nodes_statistics(
@@ -517,7 +517,7 @@ def create_building_category_location_statistics(
 def combine_poi_dfs(
     poi_dfs: list[gpd.GeoDataFrame], distance: float
 ) -> gpd.GeoDataFrame:
-    combined_df = poi_dfs[0]
+    combined_df: gpd.GeoDataFrame = poi_dfs[0]
     for df in poi_dfs[1:]:
         # join with the next dataset to find duplicates
         duplicates = gpd.sjoin_nearest(
@@ -533,7 +533,7 @@ def combine_poi_dfs(
         )
         logging.info(f"Found {len(not_matched)} new POIs in dataframe")
         # add the new POIs to the combined dataframe
-        combined_df = pd.concat([combined_df, not_matched], axis="index")
+        combined_df = pd.concat([combined_df, not_matched], axis="index")  # type: ignore
     assert combined_df[DFColumns.EXT_ID].is_unique, "A POI ID was not unique"
     logging.info(f"Collected {len(combined_df)} POIs from {len(poi_dfs)} dataframes.")
     return combined_df
@@ -550,14 +550,12 @@ def add_osm_location_types(
 
     # load additional POI data from OSM and address books
     overpass_df = load_overpass_data(params)
+
+    # for now, only consider Doctors Offices here
     custom_poi_type = "Doctors Office"
-    custom_poi_files = [
-        "custom_pois_dasörtliche.json",
-        "custom_pois_dastelefonbuch.json",
-    ]
-    custom_poi_dfs = [
-        load_custom_poi_geodf(params.input_data_dir() / f) for f in custom_poi_files
-    ]
+    custom_poi_dir = params.specific_poi_sources_dir() / custom_poi_type
+    assert custom_poi_dir.is_dir(), f"Missing additional POI data: {custom_poi_dir}"
+    custom_poi_dfs = [load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()]
     poi_dfs = [overpass_df] + custom_poi_dfs
 
     # determine the LPG location type for each OSM node and custom POI ID
