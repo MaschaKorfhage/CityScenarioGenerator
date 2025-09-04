@@ -9,10 +9,15 @@ from dataclasses import dataclass
 import json
 import logging
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, TypeVar
 import geopandas as gpd  # type: ignore
 
-from builda_client.dev_client import Building, NonResidentialBuilding, Coordinates  # type: ignore
+from builda_client.dev_model import (
+    Building,
+    NonResidentialBuilding,
+    Address,
+    Coordinates,
+)  # type: ignore
 import pandas as pd
 from shapely import Point  # type: ignore
 from pylpg import lpgdata
@@ -30,6 +35,9 @@ from cityscenariogenerator.scenario_params import ScenarioParams
 #: directory with input OSM data from overpass
 DATA_DIR = Path("data")
 OVERPASS_DATA_DIR = DATA_DIR / "osm_nonres_buildings"
+
+#: type annotation for DataFrame or GeoDataFrame
+DF = TypeVar("DF", pd.DataFrame, gpd.GeoDataFrame)
 
 
 class DFColumns:
@@ -186,11 +194,8 @@ def filter_matched(df: pd.DataFrame, df2: pd.DataFrame, col: str = DFColumns.BUI
 
 
 def filter_not_matched(
-    df1: pd.DataFrame,
-    df2: pd.DataFrame,
-    col1: str = DFColumns.BUILDA_ID,
-    col2: str = "",
-):
+    df1: DF, df2: DF, col1: str = DFColumns.BUILDA_ID, col2: str = ""
+) -> DF:
     """
     Extracts all entries from the first dataframe whose ID is not
     contained in the second dataframe. Uses the specified columns as ID.
@@ -402,7 +407,7 @@ def res_to_nonres_building(res_build: BuildingData):
     building = NonResidentialBuilding(
         res_build.id + "_nonres",
         res_build.coordinates,
-        {},
+        Address("", "", "", ""),
         -1,
         -1,
         -1,
@@ -411,7 +416,7 @@ def res_to_nonres_building(res_build: BuildingData):
         "",
         None,
         "",
-        {},
+        "",
         -1,
     )
     return BuildingWithLocationType(building, LocationType())
@@ -438,7 +443,7 @@ def create_new_poi_buildings(
         building = NonResidentialBuilding(
             building_id,
             Coordinates(row.geometry.y, row.geometry.x),
-            {},
+            Address("", "", "", ""),
             -1,
             -1,
             -1,
@@ -447,7 +452,7 @@ def create_new_poi_buildings(
             "",
             None,
             "",
-            {},
+            "",
             -1,
         )
         new_buildings[building_id] = BuildingWithLocationType(
