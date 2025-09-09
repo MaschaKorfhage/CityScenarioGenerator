@@ -89,7 +89,9 @@
         ]
     },
     "Gebäude für Handel und Dienstleistungen": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Workplace (shift worker)",
             "Office Workplace"
@@ -102,13 +104,17 @@
         ]
     },
     "Kreditinstitut": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
     },
     "Versicherung": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
@@ -163,7 +169,9 @@
         ]
     },
     "Apotheke": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Workplace (shift worker)"
         ]
@@ -315,7 +323,9 @@
         ]
     },
     "Tankstelle": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Workplace (shift worker)"
         ]
@@ -423,7 +433,9 @@
         ]
     },
     "Gebäude für Handel und Dienstleistung mit Wohnen": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Workplace (shift worker)",
             "Office Workplace"
@@ -708,7 +720,9 @@
         "work_locations": []
     },
     "Verwaltungsgebäude": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
@@ -726,19 +740,25 @@
         ]
     },
     "Post": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
     },
     "Zollamt": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
     },
     "Gericht": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
@@ -750,7 +770,9 @@
         ]
     },
     "Kreisverwaltung": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
@@ -849,7 +871,9 @@
         ]
     },
     "Bibliothek, Bücherei": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace"
         ]
@@ -859,52 +883,70 @@
         "work_locations": []
     },
     "Gebäude für religiöse Zwecke": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": []
     },
     "Kirche": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Volunteer Workplace"
         ]
     },
     "Synagoge": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Volunteer Workplace"
         ]
     },
     "Kapelle": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Volunteer Workplace"
         ]
     },
     "Gemeindehaus": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Office Workplace",
             "Volunteer Workplace"
         ]
     },
     "Gotteshaus": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Volunteer Workplace"
         ]
     },
     "Moschee": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": [
             "Volunteer Workplace"
         ]
     },
     "Tempel": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": []
     },
     "Kloster": {
-        "non_work_locations": [],
+        "non_work_locations": [
+            "Generic Errand Location"
+        ],
         "work_locations": []
     },
     "Gebäude für Gesundheitswesen": {

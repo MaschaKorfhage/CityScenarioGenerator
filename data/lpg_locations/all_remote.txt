@@ -44,3 +44,4 @@ Office Workplace
 Workplace (shift worker)
 Volunteer Workplace
 Home
+Generic Errand Location
