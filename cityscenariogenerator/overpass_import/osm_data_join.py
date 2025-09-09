@@ -9,10 +9,15 @@ from dataclasses import dataclass
 import json
 import logging
 from pathlib import Path
-from typing import Iterable
+from typing import Iterable, TypeVar
 import geopandas as gpd  # type: ignore
 
-from builda_client.dev_client import Building, NonResidentialBuilding, Coordinates  # type: ignore
+from builda_client.dev_model import (
+    Building,
+    NonResidentialBuilding,
+    Address,
+    Coordinates,
+)  # type: ignore
 import pandas as pd
 from shapely import Point  # type: ignore
 from pylpg import lpgdata
@@ -30,6 +35,9 @@ from cityscenariogenerator.scenario_params import ScenarioParams
 #: directory with input OSM data from overpass
 DATA_DIR = Path("data")
 OVERPASS_DATA_DIR = DATA_DIR / "osm_nonres_buildings"
+
+#: type annotation for DataFrame or GeoDataFrame
+DF = TypeVar("DF", pd.DataFrame, gpd.GeoDataFrame)
 
 
 class DFColumns:
@@ -186,11 +194,8 @@ def filter_matched(df: pd.DataFrame, df2: pd.DataFrame, col: str = DFColumns.BUI
 
 
 def filter_not_matched(
-    df1: pd.DataFrame,
-    df2: pd.DataFrame,
-    col1: str = DFColumns.BUILDA_ID,
-    col2: str = "",
-):
+    df1: DF, df2: DF, col1: str = DFColumns.BUILDA_ID, col2: str = ""
+) -> DF:
     """
     Extracts all entries from the first dataframe whose ID is not
     contained in the second dataframe. Uses the specified columns as ID.
@@ -275,7 +280,7 @@ def map_custom_pois_to_locations(
     return custom_poi_locations
 
 
-def concat_builda_dfs(df1, df2):
+def concat_builda_dfs(df1, df2) -> gpd.GeoDataFrame:
     """
     Combines two BUILDA GeoDataFrames, e.g. residential and nonresidential
     buildings. Uses the BUILDA_ID column to check for duplicates to only
@@ -286,7 +291,7 @@ def concat_builda_dfs(df1, df2):
     :return: combined dataframe with all entries
     """
     df2 = df2[~df2[DFColumns.BUILDA_ID].isin(df1[DFColumns.BUILDA_ID])]
-    return pd.concat([df1, df2], axis="index")
+    return pd.concat([df1, df2], axis="index")  # type: ignore
 
 
 def write_osm_ignored_nodes_statistics(
@@ -402,7 +407,7 @@ def res_to_nonres_building(res_build: BuildingData):
     building = NonResidentialBuilding(
         res_build.id + "_nonres",
         res_build.coordinates,
-        {},
+        Address("", "", "", ""),
         -1,
         -1,
         -1,
@@ -411,7 +416,7 @@ def res_to_nonres_building(res_build: BuildingData):
         "",
         None,
         "",
-        {},
+        {},  # type: ignore
         -1,
     )
     return BuildingWithLocationType(building, LocationType())
@@ -438,7 +443,7 @@ def create_new_poi_buildings(
         building = NonResidentialBuilding(
             building_id,
             Coordinates(row.geometry.y, row.geometry.x),
-            {},
+            Address("", "", "", ""),
             -1,
             -1,
             -1,
@@ -447,7 +452,7 @@ def create_new_poi_buildings(
             "",
             None,
             "",
-            {},
+            {},  # type: ignore
             -1,
         )
         new_buildings[building_id] = BuildingWithLocationType(
@@ -517,7 +522,7 @@ def create_building_category_location_statistics(
 def combine_poi_dfs(
     poi_dfs: list[gpd.GeoDataFrame], distance: float
 ) -> gpd.GeoDataFrame:
-    combined_df = poi_dfs[0]
+    combined_df: gpd.GeoDataFrame = poi_dfs[0]
     for df in poi_dfs[1:]:
         # join with the next dataset to find duplicates
         duplicates = gpd.sjoin_nearest(
@@ -533,7 +538,7 @@ def combine_poi_dfs(
         )
         logging.info(f"Found {len(not_matched)} new POIs in dataframe")
         # add the new POIs to the combined dataframe
-        combined_df = pd.concat([combined_df, not_matched], axis="index")
+        combined_df = pd.concat([combined_df, not_matched], axis="index")  # type: ignore
     assert combined_df[DFColumns.EXT_ID].is_unique, "A POI ID was not unique"
     logging.info(f"Collected {len(combined_df)} POIs from {len(poi_dfs)} dataframes.")
     return combined_df
@@ -550,14 +555,12 @@ def add_osm_location_types(
 
     # load additional POI data from OSM and address books
     overpass_df = load_overpass_data(params)
+
+    # for now, only consider Doctors Offices here
     custom_poi_type = "Doctors Office"
-    custom_poi_files = [
-        "custom_pois_dasörtliche.json",
-        "custom_pois_dastelefonbuch.json",
-    ]
-    custom_poi_dfs = [
-        load_custom_poi_geodf(params.input_data_dir() / f) for f in custom_poi_files
-    ]
+    custom_poi_dir = params.specific_poi_sources_dir() / custom_poi_type
+    assert custom_poi_dir.is_dir(), f"Missing additional POI data: {custom_poi_dir}"
+    custom_poi_dfs = [load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()]
     poi_dfs = [overpass_df] + custom_poi_dfs
 
     # determine the LPG location type for each OSM node and custom POI ID
