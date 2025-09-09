@@ -416,7 +416,7 @@ def res_to_nonres_building(res_build: BuildingData):
         "",
         None,
         "",
-        "",
+        {},  # type: ignore
         -1,
     )
     return BuildingWithLocationType(building, LocationType())
@@ -452,7 +452,7 @@ def create_new_poi_buildings(
             "",
             None,
             "",
-            "",
+            {},  # type: ignore
             -1,
         )
         new_buildings[building_id] = BuildingWithLocationType(
