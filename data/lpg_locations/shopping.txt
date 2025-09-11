@@ -1,0 +1,5 @@
+# Locations used for shopping activities
+Flea Market Location
+Food Market
+Supermarket
+Shopping Mall

@@ -4,6 +4,8 @@ A module for loading the locations used in the LoadProfileGenerator.
 
 from pathlib import Path
 
+from cityscenariogenerator.deterrence import ActivityType
+
 #: directory containing the location files
 LOCATION_DIR = Path("data/lpg_locations")
 
@@ -35,3 +37,22 @@ class LpgLocations:
     NO_BUILDING = load_location_set(LOCATION_DIR / "no_building.txt")
     NONRES_BUILDING = ALL - RESIDENTIAL - NO_BUILDING
     NONRES_BUILD_NO_WORK = NONRES_BUILDING & NO_WORK
+
+    SHOPPING = load_location_set(LOCATION_DIR / "shopping.txt")
+    SCHOOL = load_location_set(LOCATION_DIR / "school.txt")
+
+
+def location_to_omod_activity_type(location: str) -> ActivityType:
+    """Determines the matching OMOD activity type for an LPG location.
+    Can be used in the OMOD deterrence function.
+
+    :param location: the LPG location
+    :return: the matching activity type
+    """
+    if location in LpgLocations.WORK:
+        return ActivityType.work
+    if location in LpgLocations.SCHOOL:
+        return ActivityType.school
+    if location in LpgLocations.SHOPPING:
+        return ActivityType.shopping
+    return ActivityType.other

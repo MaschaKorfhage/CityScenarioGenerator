@@ -13,8 +13,12 @@ from tqdm import tqdm  # type: ignore
 from pylpg import lpgdata
 from builda_client import dev_client as builda  # type: ignore
 
-from cityscenariogenerator.lpg_locations import LpgLocations
+from cityscenariogenerator.lpg_locations import (
+    LpgLocations,
+    location_to_omod_activity_type,
+)
 from cityscenariogenerator import (
+    deterrence,
     poi_type_mapping,
     scenario_statistics,
     household_data,
@@ -321,12 +325,19 @@ class LPGConfigCreator:
                 p: calc_distance_in_km(coordinates, self.pois[p].Coordinates)
                 for p in poi_ids
             }
-            # randomly select some POIs, using the inverted distances as weights
-            if len(distances) > 1 and (distmax := max(distances.values())) > 0:
-                # norm the distances to [0, 1] to avoid double precision issues
-                distances = {p: d / distmax for p, d in distances.items()}
 
-            weights = {poi: 1 / (d + 0.1) for poi, d in distances.items()}
+            activity_type = location_to_omod_activity_type(location)
+            # use a minimum distance, as the deterrence function cannot work with distance 0
+            MIN_DISTANCE_IN_KM = 0.05
+            # calculate destination weights using the OMOD deterrence function
+            weights = {
+                p: deterrence.omod_deterrence(
+                    max(d, MIN_DISTANCE_IN_KM),
+                    activity_type,
+                )
+                for p, d in distances.items()
+            }
+
             weightsum: float = sum(weights.values())
             probabilities = [w / weightsum for w in weights.values()]
             selected_pois: Iterable[str] = numpy.random.choice(

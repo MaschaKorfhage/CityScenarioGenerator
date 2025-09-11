@@ -13,6 +13,18 @@ def test_lpg_locations_exclusive_sets():
     assert LpgLocations.RESIDENTIAL & LpgLocations.NONRES_BUILDING == set()
     assert LpgLocations.NO_BUILDING & LpgLocations.NONRES_BUILDING == set()
 
+    # check whether the location sets defined in additional files only include
+    # locations that are also included in ALL
+    loc_sets_from_file = [
+        LpgLocations.WORK,
+        LpgLocations.NO_BUILDING,
+        LpgLocations.RESIDENTIAL,
+        LpgLocations.SCHOOL,
+        LpgLocations.SHOPPING,
+    ]
+    for loc_set in loc_sets_from_file:
+        assert (loc_set & LpgLocations.ALL) == loc_set, f"Invalid entry in {loc_set}"
+
 
 def test_lpg_locations_not_empty():
     """
