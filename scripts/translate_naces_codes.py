@@ -18,11 +18,11 @@ print(data)
 
 # create a JSON file mapping each nace to its description
 d = dict(zip(data["Code"], data["Description"]))
-with open("data/nace_mapping/code_descriptions.json", "w+") as f:
+with open("data/nace_mapping/code_descriptions.json", "w", encoding="utf8") as f:
     json.dump(d, f, indent=4)
 
 d2: dict[str, list] = {v: [] for k, v in d.items() if k.isdigit()}
-with open("data/nace_mapping/location_mapping.json", "w+") as f:
+with open("data/nace_mapping/location_mapping.json", "w", encoding="utf8") as f:
     json.dump(d2, f, indent=4)
 
 # data.to_csv("nace_codes_filtered.txt", index=False)

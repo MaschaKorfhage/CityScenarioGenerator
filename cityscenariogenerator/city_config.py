@@ -49,26 +49,26 @@ class LPGCityConfig:
             # create a copy of the city data, but without the routes
             self.city.TravelDefinition.TimeSlotRouteLists = []
         city_data = self.city.to_json(indent=4)  # type: ignore
-        with open(filename, "w+") as f:
+        with open(filename, "w", encoding="utf8") as f:
             f.write(city_data)
 
     @staticmethod
     def create_lpg_object_config_file(path: Path, id: str, house: Any):
         filename = path / f"{id}.json"
         house_json = house.to_json(indent=4)
-        with open(filename, "w+") as f:
+        with open(filename, "w", encoding="utf8") as f:
             f.write(house_json)
 
     @staticmethod
     def create_routes_config_subdir(path: Path, travel_def: lpgdata.TravelDefinition):
         filename = path / "routes/generated_All_0to86400.json"
         filename.parent.mkdir(parents=True, exist_ok=True)
-        assert (
-            len(travel_def.TimeSlotRouteLists) == 1
-        ), "Saving more than one timeslot route is not implemented yet"
+        assert len(travel_def.TimeSlotRouteLists) == 1, (
+            "Saving more than one timeslot route is not implemented yet"
+        )
         routes = travel_def.TimeSlotRouteLists[0].Routes
         route_dict = {f"{i}": r.to_dict() for i, r in enumerate(routes)}  # type: ignore
-        with open(filename, "w+") as f:
+        with open(filename, "w", encoding="utf8") as f:
             json.dump(route_dict, f, indent=4)
 
     @staticmethod
@@ -88,14 +88,14 @@ class LPGCityConfig:
         houses = {}
         for file in tqdm(house_files):
             # filepath = houses_subdir / filename
-            with open(file, "r") as f:
+            with open(file, "r", encoding="utf8") as f:
                 filetext = f.read()
             houses[file.stem] = lpgdata.HouseCreationAndCalculationJob.from_json(  # type: ignore
                 filetext
             )
 
         # load city definition with POIs
-        with open(path / "city.json", "r") as f:
+        with open(path / "city.json", "r", encoding="utf8") as f:
             filetext = f.read()
         city = lpgdata.CityData.from_json(filetext)  # type: ignore
 

@@ -5,7 +5,7 @@ from collections import defaultdict
 
 # Load the JSON data from the file
 filepath = r"C:\Users\David-Arbeit\Downloads\Routen Ruben\output_reachability.json"
-with open(filepath, "r") as file:
+with open(filepath, "r", encoding="utf8") as file:
     data = json.load(file)
 
 # Initialize dictionaries to count routes to and from each location

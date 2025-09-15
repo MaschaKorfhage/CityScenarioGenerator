@@ -26,7 +26,7 @@ def generate_random_pois():
 
 def select_pois_from_citydata(city_path: Path):
     """Selects the first POI of each type from the city file."""
-    with open(city_path, "r") as file:
+    with open(city_path, "r", encoding="utf8") as file:
         citydata: CityData = CityData.from_json(file.read())
     print(f"Loaded city data with {len(citydata.PointsOfInterest)} POIs")
     pois = {}
@@ -48,5 +48,5 @@ all_pois = select_pois_from_citydata(cityfile)
 
 # write the pois to a json file
 data = {"PointsOfInterest": all_pois}
-with open("data/custom_pois_all.json", "w") as file:
+with open("data/custom_pois_all.json", "w", encoding="utf8") as file:
     json.dump(data, file, indent=4)

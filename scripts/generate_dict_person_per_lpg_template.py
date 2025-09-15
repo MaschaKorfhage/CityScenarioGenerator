@@ -30,9 +30,9 @@ print(f"Number of templates: {len(persons_by_template)}")
 template_sizes = {k: len(v) for k, v in persons_by_template.items()}
 
 # create mapping files
-with open("persons_per_template.json", "w") as f:
+with open("persons_per_template.json", "w", encoding="utf8") as f:
     json.dump(template_sizes, f, indent=4)
-with open("personnames_by_template.json", "w") as f:
+with open("personnames_by_template.json", "w", encoding="utf8") as f:
     json.dump(persons_by_template, f, indent=4)
 
 # load a scenario statistics file specifying how often each LPG template occurs
@@ -52,5 +52,5 @@ for template, freq in template_frequencies.items():
 # sort by household size
 household_sizes = dict(sorted(household_sizes.items(), key=lambda item: item[0]))
 
-with open(scenario_dir / "statistics/household_sizes.json", "w") as f:
+with open(scenario_dir / "statistics/household_sizes.json", "w", encoding="utf8") as f:
     json.dump(household_sizes, f, indent=4)

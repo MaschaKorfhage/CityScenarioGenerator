@@ -22,7 +22,7 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
     if not validation_file.is_file():
         logging.info("No population validation data found.")
         return
-    with open(validation_file, "r") as f:
+    with open(validation_file, "r", encoding="utf8") as f:
         validation_stats: dict[str, dict[str, int]] = json.load(f)
 
     # load the population statistics of the generated scenario
@@ -30,7 +30,7 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
     if not scenario_file.is_file():
         logging.warning(f"Person statistics file not found: {scenario_file}")
         return
-    with open(scenario_file, "r") as f:
+    with open(scenario_file, "r", encoding="utf8") as f:
         scenario_stats: dict[str, dict[str, int]] = json.load(f)
 
     for measure, validation in validation_stats.items():

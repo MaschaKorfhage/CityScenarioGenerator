@@ -155,7 +155,7 @@ def pois_to_geodf(pois: dict[str, lpgdata.PointOfInterestData]) -> gpd.GeoDataFr
 
 
 def load_custom_poi_geodf(poi_path: Path | str):
-    with open(poi_path, "r") as f:
+    with open(poi_path, "r", encoding="utf8") as f:
         json_str = f.read()
         city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
     poi_df_oe = pois_to_geodf(city_data.PointsOfInterest)

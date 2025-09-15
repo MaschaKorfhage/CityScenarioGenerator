@@ -158,7 +158,7 @@ def write_person_statistics(
     :param path: directory for the result file
     """
     # load the person characteristics file
-    with open(PERSON_CHARACTERISTICS_PATH, "r") as f:
+    with open(PERSON_CHARACTERISTICS_PATH, "r", encoding="utf8") as f:
         person_characteristics = json.load(f)
 
     # collect the information from each person

@@ -4,7 +4,7 @@ import setuptools
 dir_path = os.path.dirname(os.path.realpath(__file__))
 with open(os.path.join(dir_path, "requirements.txt")) as f:
     required_packages = f.read().splitlines()
-with open(os.path.join(dir_path, "README.md"), "r") as fh:
+with open(os.path.join(dir_path, "README.md"), "r", encoding="utf8") as fh:
     long_description = fh.read()
 
 setuptools.setup(

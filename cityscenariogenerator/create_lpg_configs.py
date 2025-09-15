@@ -79,7 +79,7 @@ def copy_calcspec_file(
     :param db_file_path: database path to specify in the settings
     """
     # load the template calcspec.json
-    with open(template_path, "r") as f:
+    with open(template_path, "r", encoding="utf8") as f:
         lines = f.readlines()
         # remove line comments (which are no valid JSON)
         filtered_lines = [s for s in lines if not s.strip().startswith("//")]
@@ -102,7 +102,7 @@ def copy_calcspec_file(
     result_json_str: str = house_job.to_json(indent=4)  # type: ignore
     result_file_path = result_directory / "calcspec.json"
     logging.info(f"Saving simulation settings to {result_file_path}")
-    with open(result_file_path, "w+") as f:
+    with open(result_file_path, "w", encoding="utf8") as f:
         f.write(result_json_str)
 
 
@@ -389,7 +389,7 @@ class LPGConfigCreator:
         the surrounding area for the corresponding activities.
         """
         # load the custom POIs from file
-        with open(self.params.custom_poi_path(), "r") as f:
+        with open(self.params.custom_poi_path(), "r", encoding="utf8") as f:
             json_str = f.read()
             poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
         # add them to the POIs stored in the attributes

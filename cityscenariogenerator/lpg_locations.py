@@ -17,7 +17,7 @@ def load_location_set(path: Path) -> set[str]:
     :param path: path to the file
     :return: set of location names
     """
-    with open(path, "r") as f:
+    with open(path, "r", encoding="utf8") as f:
         all_locations = f.read()
 
     return set(line for line in all_locations.splitlines() if not line.startswith("#"))

@@ -10,7 +10,7 @@ OSM_COLON_ALT = "#"
 
 def load_osm_mapping(key_name: str) -> dict[str, list[str]]:
     key_filename = key_name.replace(":", OSM_COLON_ALT)
-    with open(OSM_MAPPING_PATH / f"{key_filename}.json", "r") as f:
+    with open(OSM_MAPPING_PATH / f"{key_filename}.json", "r", encoding="utf8") as f:
         mapping = json.load(f)
     # mapping file is from LPG location to OSM key value --> invert it
     inverted = {val: loc for loc, vals in mapping.items() for val in vals}
