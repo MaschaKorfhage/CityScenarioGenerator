@@ -214,7 +214,7 @@ class LPGConfigCreator:
             households,
             lpgdata.HouseTypes.HT23_No_Infrastructure_at_all,
         )
-        hcj = lpgdata.HouseCreationAndCalculationJob(house)
+        hcj = lpgdata.HouseCreationAndCalculationJob(House=house)
         self.houses[building.id] = hcj
         return house
 
@@ -298,8 +298,8 @@ class LPGConfigCreator:
                     # create the POI
                     poi = lpgdata.PointOfInterestData(
                         location,
-                        self.houses[house_id].House.Coordinates,
-                        None,  # type: ignore
+                        self.houses[house_id].House.Coordinates,  # type: ignore
+                        None,
                     )
                     self._add_poi_object(poi_id, poi)
 
