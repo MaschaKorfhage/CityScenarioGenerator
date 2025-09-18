@@ -165,11 +165,14 @@ def import_residential_buildings_from_builda(
         raw_buildings
     )
 
-    building_data_list = apply_custom_residential_deletions(params, building_data_list)
+    if params.has_custom_adaptations():
+        building_data_list = apply_custom_residential_deletions(
+            params, building_data_list
+        )
 
-    # optionally parse custom buildings from file and add them
-    custom_buildings = load_custom_residential_buildings(params)
-    building_data_list.extend(custom_buildings)
+        # optionally parse custom buildings from file and add them
+        custom_buildings = load_custom_residential_buildings(params)
+        building_data_list.extend(custom_buildings)
 
     # determine LPG households for each building
     buildings = lpg_household_sampler.get_lpg_households_based_on_builda_data(

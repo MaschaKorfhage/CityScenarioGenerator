@@ -15,6 +15,7 @@ class ScenarioParams:
     builda_query: dict[str, str]
     result_directory: Path
     lpg_result_path: Path
+    scenario_adapt_dir: Path | None = None
 
     def __post_init__(self):
         self.query_str = utils.descriptive_query_text(self.builda_query)
@@ -53,8 +54,12 @@ class ScenarioParams:
     def specific_poi_sources_dir(self) -> Path:
         return self.additional_poi_data_dir() / "specific_poi_types"
 
+    def has_custom_adaptations(self) -> bool:
+        return self.scenario_adapt_dir is not None
+
     def custom_adaptations_dir(self) -> Path:
-        return self.input_data_dir() / "custom_adaptations"
+        assert self.has_custom_adaptations(), "No custom adaptations defined"
+        return self.scenario_adapt_dir  # type: ignore
 
     def custom_residentials_path(self) -> Path:
         return self.custom_adaptations_dir() / "residential_buildings.geojson"
@@ -92,7 +97,10 @@ class DummyParams(ScenarioParams):
 
 
 def get_params(
-    builda_query: dict[str, str], result_directory: Path, lpg_result_path: Path
+    builda_query: dict[str, str],
+    result_directory: Path,
+    lpg_result_path: Path,
+    scenario_adapt_dir: Path | None = None,
 ) -> ScenarioParams:
     """
     Returns a scenario parameters object for the given query and directories.
@@ -100,12 +108,17 @@ def get_params(
     :param builda_query: the builda query for the scenario
     :param result_directory: the directory to save the scenario to
     :param lpg_result_path: the output path for the LPG
+    :param scenario_adapt_dir: optional directory with custom scenario adaptations
     :return: the scenario parameters
     """
-    params = ScenarioParams(builda_query, result_directory, lpg_result_path)
+    params = ScenarioParams(
+        builda_query, result_directory, lpg_result_path, scenario_adapt_dir
+    )
     if params.check_input_data():
         return params
     logging.warning(
         f"No valid scenario input data for query '{params.query_str}' found. Using dummy data."
     )
-    return DummyParams(builda_query, result_directory, lpg_result_path)
+    return DummyParams(
+        builda_query, result_directory, lpg_result_path, scenario_adapt_dir
+    )

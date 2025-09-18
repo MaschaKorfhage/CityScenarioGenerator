@@ -59,6 +59,7 @@ def create_city_scenario(
     builda_query: dict,
     scenario_directory: Path,
     lpg_result_dir: Path,
+    scenario_adapt_dir: Path | None = None,
     db_file_path: str = "",
 ):
     start = datetime.now()
@@ -75,7 +76,13 @@ def create_city_scenario(
     utils.init_logging(result_dir)
 
     # setup the scenario parameters object
-    params = scenario_params.get_params(builda_query, result_dir, lpg_result_path)
+    params = scenario_params.get_params(
+        builda_query, result_dir, lpg_result_path, scenario_adapt_dir
+    )
+    if params.has_custom_adaptations():
+        logging.info(f"Applying custom adaptations: {params.custom_adaptations_dir()}")
+    else:
+        logging.info("Applying no custom adaptations")
 
     # init RNG
     seed = 0  # random.randrange(sys.maxsize)
@@ -105,12 +112,13 @@ def main():
     builda_query = {"city": "Jülich", "postcode": "", "street": ""}
     scenario_dir = Path("./scenarios")
     lpg_result_dir = Path("C:/LPG/Results")
+    scenario_adapt_dir = Path("scenario_adaptations/rhivas")
 
     # for the cluster
     scenario_dir = Path("/fast/central/projects/2022-d-neuroth-phd/city_scenarios")
     lpg_result_dir = Path("/fast/central/projects/2022-d-neuroth-phd/results/")
 
-    create_city_scenario(builda_query, scenario_dir, lpg_result_dir)
+    create_city_scenario(builda_query, scenario_dir, lpg_result_dir, scenario_adapt_dir)
 
 
 if __name__ == "__main__":

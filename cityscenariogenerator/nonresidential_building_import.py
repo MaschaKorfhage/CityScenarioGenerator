@@ -169,12 +169,13 @@ def import_nonresidential_buildings_from_builda(
     buildings = poi_mapper.get_locations_for_buildings(nonres_buildings)
     buildings_by_id = {b.building.id: b for b in buildings}
 
-    # optionally delete some buildings
-    # buildings_by_id = apply_custom_nonresidential_deletions(params, buildings_by_id)
+    if params.has_custom_adaptations():
+        # optionally delete some buildings
+        # buildings_by_id = apply_custom_nonresidential_deletions(params, buildings_by_id)
 
-    # optionally load additional custom buildings and add them
-    custom_nonres_buildings = load_custom_nonres_buildings(params)
-    buildings_by_id.update(custom_nonres_buildings)
+        # optionally load additional custom buildings and add them
+        custom_nonres_buildings = load_custom_nonres_buildings(params)
+        buildings_by_id.update(custom_nonres_buildings)
 
     # use OSM data to get more accurate building types
     osm_data_join.add_osm_location_types(params, buildings_by_id, residential_buildings)
