@@ -138,11 +138,14 @@ def load_custom_residential_buildings(params: ScenarioParams) -> list[BuildingRa
         id = f"CustomRes_{src_id}{i}"
         num_hh = int(row.get("num_hh") or 1)
         num_cars: int = row["num_cars"]
-        # TODO: determine number of cars per household properly
-        cars_per_hh = num_cars // num_hh
+        # randomly distribute the cars across the households in the house
+        cars_per_hh = [0] * num_hh
+        for car in range(num_cars):
+            hh = random.randint(0, num_hh - 1)
+            cars_per_hh[hh] += 1
         try:
             # create dummy households without any data; LPG templates will then be sampled from Zensus
-            hh = [HouseholdRawData(-1, cars_per_hh, -1, -1, -1) for _ in range(num_hh)]
+            hh = [HouseholdRawData(-1, car, -1, -1, -1) for car in cars_per_hh]
             point = row["geometry"]
             coordinates = Coordinates(point.y, point.x)
             building = BuildingRawData(id, hh, coordinates)
