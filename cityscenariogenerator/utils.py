@@ -2,10 +2,12 @@
 Various utility functions
 """
 
+import json
 import logging
 from pathlib import Path
 import shutil
 import sys
+from typing import Any
 import unicodedata
 import re
 
@@ -90,3 +92,33 @@ def clear_directory(path: Path):
     if path.is_dir():
         logging.info(f"Clearing directory: {path}")
         shutil.rmtree(path)
+
+
+def create_json_file(filepath: Path, data: Any) -> None:
+    """Saves data, e.g. a dict, to a json file.
+
+    :param filepath: path for the json file
+    :param data: the data to save
+    """
+    if not filepath.suffix == ".json":
+        filepath = Path(f"{filepath}.json")
+    with open(filepath, "w", encoding="utf8") as f:
+        json.dump(data, f, indent=4)
+
+
+def sort_by_key(data: dict) -> dict:
+    """Sort a dict by its keys.
+
+    :param data: the dict to sort
+    :return: the new, sorted dict
+    """
+    return dict(sorted(data.items(), key=lambda item: item[0]))
+
+
+def sort_by_val(data: dict) -> dict:
+    """Sort a dict by its values.
+
+    :param data: the dict to sort
+    :return: the new, sorted dict
+    """
+    return dict(sorted(data.items(), key=lambda item: item[1]))

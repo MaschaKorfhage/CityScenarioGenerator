@@ -112,7 +112,7 @@ def main():
     builda_query = {"city": "Jülich", "postcode": "", "street": ""}
     scenario_dir = Path("./scenarios")
     lpg_result_dir = Path("C:/LPG/Results")
-    scenario_adapt_dir = Path("scenario_adaptations/rhivas")
+    scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
 
     # for the cluster
     scenario_dir = Path("/fast/central/projects/2022-d-neuroth-phd/city_scenarios")

@@ -3,7 +3,6 @@
 from collections import Counter, defaultdict
 import dataclasses
 from enum import StrEnum
-import json
 import os
 from pathlib import Path
 import pandas as pd
@@ -17,6 +16,7 @@ from cityscenariogenerator.household_data import (
     HouseholdData,
     HouseholdRawData,
 )
+from cityscenariogenerator.utils import create_json_file, sort_by_key
 
 DATA_PATH = os.path.join(
     "cityscenariogenerator", "builda_file_import", "data_used_for_config_generation"
@@ -238,7 +238,7 @@ def _calc_hh_template_deviation(
     distance += abs(working_ratio - household_data.working_ratio) * 100
     distance += abs(female_ratio - household_data.female_ratio) * 10
     distance += abs(senior_ratio - household_data.senior_ratio)
-    return distance
+    return round(distance, 1)
 
 
 class HHSamplingType(StrEnum):
@@ -334,11 +334,6 @@ class HouseholdSampler:
         return HouseholdData(lpg_household_name, household_data.num_cars)
 
 
-def create_stat_file(path: Path, data):
-    with open(path, "w", encoding="utf8") as f:
-        json.dump(data, f, indent=4)
-
-
 def get_lpg_households_based_on_builda_data(
     building_data_list: list[BuildingRawData], stats_path: Path | None = None
 ) -> list[BuildingData]:
@@ -367,14 +362,14 @@ def get_lpg_households_based_on_builda_data(
             "working": sampler.working_source,
             "senior": sampler.senior_source,
         }
-        create_stat_file(stats_path / "general_info.json", general_info)
-        sampling_counts = Counter(sampler.selected_template_distances)
-        create_stat_file(stats_path / "household_sampling.json", sampling_counts)
-        create_stat_file(
+        create_json_file(stats_path / "general_info.json", general_info)
+        sampling_counts = sort_by_key(Counter(sampler.selected_template_distances))
+        create_json_file(stats_path / "household_sampling.json", sampling_counts)
+        create_json_file(
             stats_path / "household_characteristics.json",
             sampler.household_characteristics,
         )
         car_numbers = Counter(h.num_cars for b in buildings for h in b.households)
         cars_sorted = dict(sorted(car_numbers.items()))
-        create_stat_file(stats_path / "cars_per_household.json", cars_sorted)
+        create_json_file(stats_path / "cars_per_household.json", cars_sorted)
     return buildings

@@ -5,42 +5,14 @@ import json
 import logging
 from pathlib import Path
 from statistics import mean, median
-from typing import Any, Iterable
+from typing import Iterable
 
 from pylpg import lpgdata
 
+from cityscenariogenerator.utils import create_json_file, sort_by_key
+
 #: path to a file providing characteristic information for each LPG person (from ETHOS.ActivityAssure)
 PERSON_CHARACTERISTICS_PATH = Path("data/person_characteristics.json")
-
-
-def sort_by_key(data: dict) -> dict:
-    """Sort a dict by its keys.
-
-    :param data: the dict to sort
-    :return: the new, sorted dict
-    """
-    return dict(sorted(data.items(), key=lambda item: item[0]))
-
-
-def write_to_json_file(filepath: Path, data: Any) -> None:
-    """Saves data, e.g. a dict, to a json file.
-
-    :param filepath: path for the json file
-    :param data: the data to save
-    """
-    if not filepath.suffix == ".json":
-        filepath = Path(f"{filepath}.json")
-    with open(filepath, "w+", encoding="utf8") as f:
-        json.dump(data, f, indent=4)
-
-
-def sort_by_val(data: dict) -> dict:
-    """Sort a dict by its values.
-
-    :param data: the dict to sort
-    :return: the new, sorted dict
-    """
-    return dict(sorted(data.items(), key=lambda item: item[1]))
 
 
 def write_general_info(
@@ -69,7 +41,7 @@ def write_general_info(
         "POIs": len(list(pois)),
     }
     info["houses"]
-    write_to_json_file(path / "general_info.json", info)
+    create_json_file(path / "general_info.json", info)
 
 
 def write_household_statistics(
@@ -95,11 +67,11 @@ def write_household_statistics(
     hh_counter = Counter(hh_per_house)
     hh_numbers: dict = dict(sorted(hh_counter.items()))
     hh_numbers["total"] = hh_counter.total()
-    write_to_json_file(path / "households_per_house.json", hh_numbers)
+    create_json_file(path / "households_per_house.json", hh_numbers)
 
     household_types = Counter(all_households)
     hh_types_ordered = dict(sorted(household_types.items()))
-    write_to_json_file(path / "household_types.json", dict(hh_types_ordered))
+    create_json_file(path / "household_types.json", dict(hh_types_ordered))
 
 
 def write_persons_per_house(
@@ -118,12 +90,12 @@ def write_persons_per_house(
         count = sum(len(hh.PointOfInterestPreferences) for hh in house.House.Households)
         personcounts[id] = count
     # store person count for each individual house ID
-    write_to_json_file(path / "persons_per_house.json", dict(personcounts))
+    create_json_file(path / "persons_per_house.json", dict(personcounts))
 
     # additionally store frequency of all house sizes
     house_sizes = Counter(personcounts.values())
     house_sizes = sort_by_key(house_sizes)
-    write_to_json_file(path / "house_sizes.json", house_sizes)
+    create_json_file(path / "house_sizes.json", house_sizes)
 
 
 def write_household_sizes(
@@ -144,7 +116,7 @@ def write_household_sizes(
 
     # sort by size
     household_sizes = sort_by_key(household_sizes)
-    write_to_json_file(path / "household_sizes.json", dict(household_sizes))
+    create_json_file(path / "household_sizes.json", dict(household_sizes))
 
 
 def write_person_statistics(
@@ -218,7 +190,7 @@ def write_person_statistics(
         counters["employment_categories"] = employment_categories
 
     filename = path / "person_statistics.json"
-    write_to_json_file(filename, counters)
+    create_json_file(filename, counters)
 
     # additionally create the same statistics file with relative values
     rel_counts = {}
@@ -227,7 +199,7 @@ def write_person_statistics(
         rel_counts[key] = {k: v / personcount for k, v in counter.items()}
 
     filename = path / "person_statistics_relative.json"
-    write_to_json_file(filename, rel_counts)
+    create_json_file(filename, rel_counts)
 
 
 def write_poi_statistics(
@@ -242,7 +214,7 @@ def write_poi_statistics(
     """
     poi_types = Counter(poi.LocationType for poi in pois)
     poi_types_ordered = dict(sorted(poi_types.items()))
-    write_to_json_file(path / f"{name}.json", dict(poi_types_ordered))
+    create_json_file(path / f"{name}.json", dict(poi_types_ordered))
 
 
 def write_route_statistics(routes: Iterable[lpgdata.RouteData], path: Path):
@@ -269,4 +241,4 @@ def write_route_statistics(routes: Iterable[lpgdata.RouteData], path: Path):
             "median": median(distances),
         }
     filepath = path / "route_distances.json"
-    write_to_json_file(filepath, statistics)
+    create_json_file(filepath, statistics)
