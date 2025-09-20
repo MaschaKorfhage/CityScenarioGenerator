@@ -216,6 +216,31 @@ def get_random_distribution_of_lpg_households_per_building(
     )
 
 
+def _calc_hh_template_deviation(
+    size: int,
+    working_ratio: float,
+    female_ratio: float,
+    senior_ratio: float,
+    household_data: HouseholdRawData,
+) -> float:
+    """Calculate how much a household template deviates from a given
+    household specification. The lower the distance, the better the
+    template fits.
+
+    :param size: person count of the template
+    :param working_ratio: working ration of the template
+    :param female_ratio: female ratio of the template
+    :param senior_ratio: senior ratio of the template
+    :param household_data: the household specifiation to compare to
+    :return: the calculated distance
+    """
+    distance = abs(size - household_data.num_persons) * 1000
+    distance += abs(working_ratio - household_data.working_ratio) * 100
+    distance += abs(female_ratio - household_data.female_ratio) * 10
+    distance += abs(senior_ratio - household_data.senior_ratio)
+    return distance
+
+
 class HHSamplingType(StrEnum):
     """Indicates which criteria were used to limit the eligible households
     during sampling. All criteria might be dropped if no matching households
@@ -235,7 +260,7 @@ class HouseholdSampler:
     track of some population statistics."""
 
     def __init__(self):
-        self.sampling_types = defaultdict(int)
+        self.selected_template_distances = []
         self.household_characteristics = defaultdict(lambda: defaultdict(int))
 
         # keep track of the total number of households, persons etc.
@@ -284,66 +309,32 @@ class HouseholdSampler:
         """Get lpg household based on builda household information."""
         self._add_hh_data_to_statistics(household_data)
 
-        # get lpg households
-        all_lpg_households = self.lpg_households
-
-        lpg_household_data_size = all_lpg_households.loc[
-            all_lpg_households["number of residents"] == household_data.num_persons
+        # rate how much each template deviates from the household description
+        self.lpg_households["distance"] = self.lpg_households.apply(
+            lambda row: _calc_hh_template_deviation(
+                row["number of residents"],
+                row["working status"],
+                row["female status"],
+                row["senior status float"],
+                household_data,
+            ),
+            axis="columns",
+        )
+        # get the templates that fit best
+        min_distance = self.lpg_households["distance"].min()
+        candidates = self.lpg_households[
+            self.lpg_households["distance"] == min_distance
         ]
+        # randomly select one of the best fitting templates
+        hh_names = list(candidates[HH_KEY_COLUMN])
+        lpg_household_name = random.choice(hh_names)
 
-        # collect all LPG households with matching characteristics
-        lpg_household_data_working = lpg_household_data_size.loc[
-            lpg_household_data_size["working status"] == household_data.working_ratio
-        ]
-        lpg_household_data_female = lpg_household_data_working.loc[
-            lpg_household_data_working["female status"] == household_data.female_ratio
-        ]
-        lpg_household_data_senior = lpg_household_data_female.loc[
-            lpg_household_data_female["senior status float"]
-            == household_data.senior_ratio
-        ]
-
-        household_set_to_use = None
-        sampling_type = HHSamplingType.NONE
-        # check if there are households that fulfill all criteria, or else drop some conditions
-        if lpg_household_data_senior.empty is False:
-            # take all criteria into account
-            household_set_to_use = lpg_household_data_senior
-            sampling_type = HHSamplingType.WORK_SEX_SENIOR
-        elif lpg_household_data_female.empty is False:
-            # ignore the share of seniors
-            household_set_to_use = lpg_household_data_female
-            sampling_type = HHSamplingType.WORK_SEX
-        elif lpg_household_data_working.empty is False:
-            # ignore the share of females
-            household_set_to_use = lpg_household_data_working
-            sampling_type = HHSamplingType.WORK
-        elif lpg_household_data_size.empty is False:
-            # ignore the share of working people
-            household_set_to_use = lpg_household_data_size
-            sampling_type = HHSamplingType.SIZE
-        # store how the household was sampled, for statistics
-        self.sampling_types[sampling_type] += 1
-
-        # randomly select one household out of the matching ones
-        if household_set_to_use is not None:
-            hh_names = list(household_set_to_use[HH_KEY_COLUMN])
-            lpg_household_name = random.choice(hh_names)
-        else:
-            # if no LPG household is compatible even when dropping most conditions, choose randomly based on census 2011
-            (
-                list_of_random_lpg_households,
-                list_of_random_household_types,
-                list_of_random_number_of_residents,
-                list_of_random_working_status,
-            ) = get_random_distribution_of_lpg_households_per_building(
-                1, self.lpg_households, self.zensus_data
-            )
-            lpg_household_name = list_of_random_lpg_households[0]
+        # store how well the selected template fits
+        self.selected_template_distances.append(min_distance)
         return HouseholdData(lpg_household_name, household_data.num_cars)
 
 
-def create_stat_file(path: Path, data: dict):
+def create_stat_file(path: Path, data):
     with open(path, "w", encoding="utf8") as f:
         json.dump(data, f, indent=4)
 
@@ -377,7 +368,8 @@ def get_lpg_households_based_on_builda_data(
             "senior": sampler.senior_source,
         }
         create_stat_file(stats_path / "general_info.json", general_info)
-        create_stat_file(stats_path / "household_sampling.json", sampler.sampling_types)
+        sampling_counts = Counter(sampler.selected_template_distances)
+        create_stat_file(stats_path / "household_sampling.json", sampling_counts)
         create_stat_file(
             stats_path / "household_characteristics.json",
             sampler.household_characteristics,
