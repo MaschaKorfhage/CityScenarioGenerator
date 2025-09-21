@@ -136,7 +136,7 @@ def load_custom_residential_buildings(params: ScenarioParams) -> list[BuildingRa
     for i, row in building_info.iterrows():
         src_id = row.get("id")
         id = f"CustomRes_{src_id}{i}"
-        num_hh = int(row.get("num_hh") or 1)
+        num_hh = int(row.get("num_hh") or 1)  # TODO: make num_hh column mandatory
         num_cars: int = row["num_cars"]
         # randomly distribute the cars across the households in the house
         cars_per_hh = [0] * num_hh
