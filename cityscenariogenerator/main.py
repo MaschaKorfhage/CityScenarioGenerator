@@ -1,9 +1,9 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
 import logging
-import random
 from datetime import datetime
 from pathlib import Path
+
 
 from cityscenariogenerator import (
     builda_client_import,
@@ -85,9 +85,7 @@ def create_city_scenario(
         logging.info("Applying no custom adaptations")
 
     # init RNG
-    seed = 0  # random.randrange(sys.maxsize)
-    random.seed(seed)
-    logging.info(f"Using RNG seed {seed}")
+    utils.set_rng_seed(0)
 
     # collect residential and non-residential buildings
     builda_client_import.check_matching_cache_files(params.builda_query)

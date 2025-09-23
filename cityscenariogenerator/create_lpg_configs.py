@@ -137,12 +137,6 @@ class LPGConfigCreator:
 
     def __init__(self, params: ScenarioParams) -> None:
         self.params = params
-
-        # set numpy random seed
-        numpy_seed = random.randrange(2**32)
-        logging.info(f"Using numpy RNG seed {numpy_seed}")
-        numpy.random.seed(numpy_seed)
-
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
         self.pois: dict[str, lpgdata.PointOfInterestData] = {}
         self.poi_ids_by_type: defaultdict[str, list[str]] = defaultdict(list)

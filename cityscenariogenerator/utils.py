@@ -5,11 +5,14 @@ Various utility functions
 import json
 import logging
 from pathlib import Path
+import random
 import shutil
 import sys
 from typing import Any
 import unicodedata
 import re
+
+import numpy
 
 
 #: name of the logfile produced in each scenario generation
@@ -122,3 +125,22 @@ def sort_by_val(data: dict) -> dict:
     :return: the new, sorted dict
     """
     return dict(sorted(data.items(), key=lambda item: item[1]))
+
+
+def set_rng_seed(seed=None):
+    """Sets the specified random seed. Also sets a random
+    numpy seed that depends on the given seed.
+
+    :param seed: the seed to set; if None, chooses a random seed
+    """
+    if seed is None:
+        # no seed given, choose a random one
+        seed = random.randrange(sys.maxsize)
+
+    random.seed(seed)
+    logging.info(f"Using RNG seed {seed}")
+
+    # set numpy random seed depending on the main seed
+    numpy_seed = random.randrange(2**32)
+    logging.info(f"Using numpy RNG seed {numpy_seed}")
+    numpy.random.seed(numpy_seed)
