@@ -535,17 +535,30 @@ class LPGConfigCreator:
             lpgdata.RoutesForTimeSlot(time_slot_always, list(all_routes.values()))
         ]
 
-    def limit_scenario(self, houses: int = 1, households: int = 1):
-        """
-        Truncates the scenario to only include the specified number of houses and
-        households.
+    def limit_scenario(
+        self,
+        houses: int | None = None,
+        households: int | None = None,
+        pois_per_type: int | None = None,
+    ):
+        """Truncates the scenario to only include the specified number of houses,
+        households, and POIs per type.
 
-        :param houses: max. number of houses, defaults to 1
-        :param households: max. number of households per house, defaults to 1
+        :param houses: max. number of houses, unlimited by default
+        :param households: max. number of households per house, unlimited by default
+        :param pois_per_type: max. number of POIs per type, unlimited by default
         """
         self.houses = dict(list(self.houses.items())[:houses])
         for house in self.houses.values():
             house.House.Households = house.House.Households[:households]  # type: ignore
+
+        # limit the POIs
+        for poi_type in self.poi_ids_by_type.keys():
+            self.poi_ids_by_type[poi_type] = self.poi_ids_by_type[poi_type][
+                :pois_per_type
+            ]
+        all_poi_ids = {id for idlist in self.poi_ids_by_type.values() for id in idlist}
+        self.pois = {id: poi for id, poi in self.pois.items() if id in all_poi_ids}
 
     def create_config_files(self) -> LPGCityConfig:
         path = self.params.result_directory
