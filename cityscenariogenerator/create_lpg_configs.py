@@ -518,12 +518,23 @@ class LPGConfigCreator:
             assert hcj.House is not None and hcj.House.Coordinates is not None
             for hh in hcj.House.Households:
                 for person, poi_preferences in hh.PointOfInterestPreferences.items():
+                    # check if the household has a car or not
+                    no_car = (
+                        hh.TransportationDeviceSet
+                        in LPGConfigCreator.NO_CAR_TRANSPORT_DEVICE_SETS
+                    )
+                    # create car routes for households with a car and bus routes for those without
+                    device_cat = (
+                        lpgdata.TransportationDeviceCategories.Bus_Category
+                        if no_car
+                        else lpgdata.TransportationDeviceCategories.Car_Category
+                    )
                     self.add_routes_for_one_person(
                         poi_preferences.PoiWeights.keys(),
                         id,
                         hcj.House.Coordinates,
                         all_routes,
-                        lpgdata.TransportationDeviceCategories.Bus_Category,
+                        device_cat,
                     )
         travel_definition = self.global_city_definition.TravelDefinition
         assert travel_definition is not None, "TravelDefinition is not set"
