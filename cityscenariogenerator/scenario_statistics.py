@@ -9,10 +9,24 @@ from typing import Iterable
 
 from pylpg import lpgdata
 
-from cityscenariogenerator.utils import create_json_file, sort_by_key
+from cityscenariogenerator.utils import create_json_file, sort_by_key, sort_by_val
 
 #: path to a file providing characteristic information for each LPG person (from ETHOS.ActivityAssure)
 PERSON_CHARACTERISTICS_PATH = Path("data/person_characteristics.json")
+
+def get_jsonref_name(json_ref: str | lpgdata.JsonReference) -> str:
+    """Returns a JsonReference as a str. Returns the name, or if that
+    is empty, the Guid.
+
+    :param json_ref: the JsonReference
+    :return: the str representing the JsonReference
+    """
+    if isinstance(json_ref, str):
+        return json_ref
+    if json_ref.Name:
+        return json_ref.Name
+    assert json_ref.Guid and json_ref.Guid.StrVal
+    return json_ref.Guid.StrVal
 
 
 def write_general_info(
@@ -117,6 +131,28 @@ def write_household_sizes(
     # sort by size
     household_sizes = sort_by_key(household_sizes)
     create_json_file(path / "household_sizes.json", dict(household_sizes))
+
+
+def write_car_numbers(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
+):
+    """
+    Creates a file showing the number of cars per household, and the total number
+    of cars.
+
+    :param house_jobs: house configs to analyze
+    :param path: path for the result file
+    """
+    transport_device_sets = defaultdict(int)
+    for house in house_jobs:
+        assert house.House is not None
+        for household in house.House.Households:
+            assert household.TransportationDeviceSet is not None
+            trans_set = get_jsonref_name(household.TransportationDeviceSet)
+            transport_device_sets[trans_set] += 1
+
+    transport_device_sets = sort_by_val(transport_device_sets)
+    create_json_file(path / "cars_per_household.json", dict(transport_device_sets))
 
 
 def write_person_statistics(
