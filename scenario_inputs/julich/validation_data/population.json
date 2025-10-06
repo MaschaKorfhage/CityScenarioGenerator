@@ -3,6 +3,7 @@
     "date": "2022-05-15",
     "source": "Regionale Profile, https://statistik.nrw/regionale-profile, there 'Jülich, Stadt'->'Bevölkerung' https://statistik.nrw/sites/default/files/municipalinformation/05358024_GRUNDINFO_BEVOELKERUNG.XLSX",
     "comment": "Numbers don't add up (sex is 34209 in total, age_categories is 34215); this error is from the source",
+    "label": "Kommunalprofil 2022",
     "country": {
         "DE": 34208
     },
@@ -44,22 +45,6 @@
         ">74": 3735
     },
     "alternative_data": [
-        {
-            "source": "Zensus Gemeindeverzeichnis https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/zensus-gemeinden.html",
-            "comment": "Contains data from Zensus 2011 (used here), and data from previous counts",
-            "date": "2011-12-31",
-            "population_size": 31909,
-            "female": 16246,
-            "male": 15663
-        },
-        {
-            "source": "Stadt Jülich Online https://web.archive.org/web/20120116053633/http://www.juelich.de:80/zahlen",
-            "comment": "Values are similar to the values from 'older counts' that are also contained in the census source above, so these values are probably more outdated",
-            "date": "2011-12-31",
-            "population_size": 33132,
-            "female": 16796,
-            "male": 16336
-        },
         {
             "source": "Kommunalprofil Jülich, https://statistik.nrw/sites/default/files/municipalprofiles/l05358024.pdf",
             "date": "2022-12-31",

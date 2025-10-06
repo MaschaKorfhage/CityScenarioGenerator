@@ -1,0 +1,30 @@
+{
+    "city": "Jülich",
+    "date": "2011-12-31",
+    "source": "Zensus Gemeindeverzeichnis https://www.destatis.de/DE/Themen/Laender-Regionen/Regionales/Gemeindeverzeichnis/Administrativ/zensus-gemeinden.html",
+    "comment": "Contains data from Zensus 2011 (used here), and data from previous counts; only differentiated for sex, no data for age/employment",
+    "label": "Zensus 2011",
+    "country": {
+        "DE": 31909
+    },
+    "sex": {
+        "female": 16246,
+        "male": 15663
+    },
+    "age_categories": {
+        "total": 31909
+    },
+    "employment_categories": {
+        "total": 31909
+    },
+    "alternative_data": [
+        {
+            "source": "Stadt Jülich Online https://web.archive.org/web/20120116053633/http://www.juelich.de:80/zahlen",
+            "comment": "Values are similar to the values from 'older counts' that are also contained in the census source above, so these values are probably more outdated",
+            "date": "2011-12-31",
+            "population_size": 33132,
+            "female": 16796,
+            "male": 16336
+        }
+    ]
+}
