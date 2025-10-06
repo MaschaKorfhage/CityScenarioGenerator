@@ -11,6 +11,27 @@ import seaborn as sns
 from cityscenariogenerator.scenario_params import ScenarioParams
 
 
+def plot_population_measure_bars(
+    plot_result_dir: Path, measure, scenario_stats: dict[str, int], validation
+):
+    data = pd.DataFrame({"Validation": validation, "Scenario": scenario_stats})
+    # data_subdir = plot_result_dir / "data"
+    # data_subdir.mkdir(parents=True, exist_ok=True)
+    # data.to_csv(data_subdir / f"{measure}.csv")
+
+    fig = plt.figure()
+    ax = fig.add_subplot(1, 1, 1)
+    data.reset_index(names=measure, inplace=True)
+    y_title = "Number of persons"
+    df_long = data.melt(id_vars=measure, var_name="Dataset", value_name=y_title)
+
+    sns.barplot(x=measure, ax=ax, y=y_title, hue="Dataset", data=df_long)
+    ax.tick_params(axis="x", labelrotation=90)
+    fig.align_labels()
+    fig.tight_layout()
+    fig.savefig(plot_result_dir / f"{measure}.svg")
+
+
 def population_statistics(params: ScenarioParams, result_dir: Path):
     """Compares population statistics of the generated scenario to validation data
 
@@ -33,6 +54,9 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
     with open(scenario_file, "r", encoding="utf8") as f:
         scenario_stats: dict[str, dict[str, int]] = json.load(f)
 
+    plot_result_dir = result_dir / "population_validation"
+    plot_result_dir.mkdir(parents=True, exist_ok=True)
+
     for measure, validation in validation_stats.items():
         if not isinstance(validation, dict):
             continue  # this is metadata, skip this
@@ -41,26 +65,9 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
             logging.warning(f"Missing population statistics measure: {measure}")
             continue
 
-        data = pd.DataFrame(
-            {"Validation": validation, "Scenario": scenario_stats[measure]}
+        plot_population_measure_bars(
+            plot_result_dir, measure, scenario_stats[measure], validation
         )
-        plot_result_dir = result_dir / "population_validation"
-        plot_result_dir.mkdir(parents=True, exist_ok=True)
-        # data_subdir = plot_result_dir / "data"
-        # data_subdir.mkdir(parents=True, exist_ok=True)
-        # data.to_csv(data_subdir / f"{measure}.csv")
-
-        fig = plt.figure()
-        ax = fig.add_subplot(1, 1, 1)
-        data.reset_index(names=measure, inplace=True)
-        y_title = "Number of persons"
-        df_long = data.melt(id_vars=measure, var_name="Dataset", value_name=y_title)
-
-        sns.barplot(x=measure, ax=ax, y=y_title, hue="Dataset", data=df_long)
-        ax.tick_params(axis="x", labelrotation=90)
-        fig.align_labels()
-        fig.tight_layout()
-        fig.savefig(plot_result_dir / f"{measure}.svg")
 
 
 if __name__ == "__main__":
