@@ -5,20 +5,20 @@ from dataclasses import dataclass
 from builda_client.dev_model import Coordinates  # type: ignore
 
 
-@dataclass
+@dataclass(frozen=True)
 class HouseholdData:
     household_name: str
     num_cars: int
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuildingData:
     id: str
     households: list[HouseholdData]
     coordinates: Coordinates
 
 
-@dataclass
+@dataclass(frozen=True)
 class HouseholdRawData:
     num_persons: int
     num_cars: int
@@ -27,7 +27,7 @@ class HouseholdRawData:
     senior_ratio: float
 
 
-@dataclass
+@dataclass(frozen=True)
 class BuildingRawData:
     id: str
     households: list[HouseholdRawData]
