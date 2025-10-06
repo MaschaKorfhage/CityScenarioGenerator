@@ -109,22 +109,22 @@ def create_json_file(filepath: Path, data: Any) -> None:
         json.dump(data, f, indent=4)
 
 
-def sort_by_key(data: dict) -> dict:
+def sort_by_key(data: dict, reverse: bool = False) -> dict:
     """Sort a dict by its keys.
 
     :param data: the dict to sort
     :return: the new, sorted dict
     """
-    return dict(sorted(data.items(), key=lambda item: item[0]))
+    return dict(sorted(data.items(), key=lambda item: item[0], reverse=reverse))
 
 
-def sort_by_val(data: dict) -> dict:
+def sort_by_val(data: dict, reverse: bool = False) -> dict:
     """Sort a dict by its values.
 
     :param data: the dict to sort
     :return: the new, sorted dict
     """
-    return dict(sorted(data.items(), key=lambda item: item[1]))
+    return dict(sorted(data.items(), key=lambda item: item[1], reverse=reverse))
 
 
 def set_rng_seed(seed=None):

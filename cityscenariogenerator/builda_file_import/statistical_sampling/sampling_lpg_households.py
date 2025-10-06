@@ -16,7 +16,7 @@ from cityscenariogenerator.household_data import (
     HouseholdData,
     HouseholdRawData,
 )
-from cityscenariogenerator.utils import create_json_file, sort_by_key
+from cityscenariogenerator.utils import create_json_file, sort_by_key, sort_by_val
 
 DATA_PATH = os.path.join(
     "cityscenariogenerator", "builda_file_import", "data_used_for_config_generation"
@@ -365,21 +365,31 @@ def get_lpg_households_based_on_builda_data(
         create_json_file(stats_path / "general_info.json", general_info)
         sampling_counts = sort_by_key(Counter(sampler.selected_template_distances))
         create_json_file(stats_path / "household_sampling.json", sampling_counts)
+        # store collected information about household attributes, e.g., senior_ratio
+        characteristics_by_key = {
+            k: sort_by_key(d) for k, d in sampler.household_characteristics.items()
+        }
         create_json_file(
-            stats_path / "household_characteristics.json",
-            sampler.household_characteristics,
+            stats_path / "household_characteristics_by_value.json",
+            characteristics_by_key,
         )
-        car_numbers = Counter(h.num_cars for b in buildings for h in b.households)
-        cars_sorted = dict(sorted(car_numbers.items()))
-        create_json_file(stats_path / "cars_per_household.json", cars_sorted)
+        # store the same characteristics again, but sorted by frequency of the values
+        characteristics_by_frequency = {
+            k: sort_by_val(d, True)
+            for k, d in sampler.household_characteristics.items()
+        }
+        create_json_file(
+            stats_path / "household_characteristics_by_frequency.json",
+            characteristics_by_frequency,
+        )
 
         # collect counts for all unique household configurations
         counts_raw = Counter(str(hh) for b in building_data_list for hh in b.households)
         create_json_file(
-            stats_path / "builda_hh_types.json", dict(counts_raw.most_common())
+            stats_path / "builda_hh_types.json", sort_by_val(counts_raw, True)
         )
         counts_matched = Counter(str(hh) for b in buildings for hh in b.households)
         create_json_file(
-            stats_path / "matched_hh_types.json", dict(counts_matched.most_common())
+            stats_path / "matched_hh_types.json", sort_by_val(counts_matched, True)
         )
     return buildings
