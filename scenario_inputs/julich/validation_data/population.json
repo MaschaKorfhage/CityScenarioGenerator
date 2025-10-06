@@ -2,6 +2,7 @@
     "city": "Jülich",
     "date": "2022-05-15",
     "source": "Regionale Profile, https://statistik.nrw/regionale-profile, there 'Jülich, Stadt'->'Bevölkerung' https://statistik.nrw/sites/default/files/municipalinformation/05358024_GRUNDINFO_BEVOELKERUNG.XLSX",
+    "comment": "Numbers don't add up (sex is 34209 in total, age_categories is 34215); this error is from the source",
     "country": {
         "DE": 34208
     },
