@@ -372,4 +372,14 @@ def get_lpg_households_based_on_builda_data(
         car_numbers = Counter(h.num_cars for b in buildings for h in b.households)
         cars_sorted = dict(sorted(car_numbers.items()))
         create_json_file(stats_path / "cars_per_household.json", cars_sorted)
+
+        # collect counts for all unique household configurations
+        counts_raw = Counter(str(hh) for b in building_data_list for hh in b.households)
+        create_json_file(
+            stats_path / "builda_hh_types.json", dict(counts_raw.most_common())
+        )
+        counts_matched = Counter(str(hh) for b in buildings for hh in b.households)
+        create_json_file(
+            stats_path / "matched_hh_types.json", dict(counts_matched.most_common())
+        )
     return buildings
