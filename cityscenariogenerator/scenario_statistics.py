@@ -9,10 +9,12 @@ from typing import Any, Iterable
 
 from pylpg import lpgdata
 
+from cityscenariogenerator.lpg_locations import LpgLocations
 from cityscenariogenerator.utils import create_json_file, sort_by_key, sort_by_val
 
 #: path to a file providing characteristic information for each LPG person (from ETHOS.ActivityAssure)
 PERSON_CHARACTERISTICS_PATH = Path("data/person_characteristics.json")
+
 
 def get_jsonref_name(json_ref: str | lpgdata.JsonReference) -> str:
     """Returns a JsonReference as a str. Returns the name, or if that
@@ -264,7 +266,7 @@ def write_poi_statistics(
     pois: Iterable[lpgdata.PointOfInterestData], path: Path, name: str = "poi_types"
 ):
     """
-    Writes a JSON file containing the number of each type of PIO in the scenario.
+    Writes a JSON file containing the number of each type of POI in the scenario.
 
     :param pois: the POIs to analyze
     :param path: the directory to save the JSON file to
@@ -273,6 +275,20 @@ def write_poi_statistics(
     poi_types = Counter(poi.LocationType for poi in pois)
     poi_types_ordered = dict(sorted(poi_types.items()))
     create_json_file(path / f"{name}.json", dict(poi_types_ordered))
+
+    # also count the number of POIs per category
+    poi_categories = {
+        "Nichtwohngebäude": LpgLocations.NONRES_BUILD_NO_WORK,
+        "Wohngebäude": LpgLocations.RESIDENTIAL,
+        "Arbeitsplatz": LpgLocations.WORK,
+        "Kein Gebäude": LpgLocations.NO_BUILDING,
+    }
+    category_counts: dict[str, int] = {}
+    for category, location_set in poi_categories.items():
+        category_counts[category] = sum(
+            n for p, n in poi_types.items() if p in location_set
+        )
+    create_json_file(path / f"{name}_categories.json", category_counts)
 
 
 def write_route_statistics(routes: Iterable[lpgdata.RouteData], path: Path):
