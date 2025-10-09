@@ -26,6 +26,7 @@ from cityscenariogenerator import (
 from cityscenariogenerator.plots import (
     building_map,
     building_map_interactive,
+    poi_numbers,
     population_comparison,
 )
 from cityscenariogenerator.scenario_params import ScenarioParams
@@ -625,3 +626,4 @@ class LPGConfigCreator:
         building_map.map_locations_plot(all_pois, path)
         building_map_interactive.map_locations_plot_html(all_pois, path)
         population_comparison.population_statistics(self.params, path)
+        poi_numbers.plot_poi_numbers(self.params, path)
