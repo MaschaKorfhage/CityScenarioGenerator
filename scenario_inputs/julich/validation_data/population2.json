@@ -17,6 +17,9 @@
     "employment_categories": {
         "total": 31909
     },
+    "employment_sex": {
+        "total": 31909
+    },
     "alternative_data": [
         {
             "source": "Stadt Jülich Online https://web.archive.org/web/20120116053633/http://www.juelich.de:80/zahlen",

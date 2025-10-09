@@ -2,6 +2,7 @@
     "city": "Dummy",
     "date": "2022-05-15",
     "source": "Copy of Jülich data",
+    "label": "Test data",
     "country": {
         "DE": 34208
     },

@@ -5,7 +5,7 @@ import json
 import logging
 from pathlib import Path
 from statistics import mean, median
-from typing import Iterable
+from typing import Any, Iterable
 
 from pylpg import lpgdata
 
@@ -170,7 +170,7 @@ def write_person_statistics(
         person_characteristics = json.load(f)
 
     # collect the information from each person
-    all_infos: list[dict] = []
+    all_infos: list[dict[str, Any]] = []
     for house in house_jobs:
         assert house.House is not None
         for hh in house.House.Households:
@@ -181,6 +181,35 @@ def write_person_statistics(
         return
 
     # count the distribution of all charactististics
+    counters = generate_person_statistics(all_infos)
+
+    # special addition for Zensus validation: get statistics for persons older than 14 years
+    persons_over_14 = [d for d in all_infos if d["age"] > 14]
+    counters_over_14 = generate_person_statistics(persons_over_14)
+    counters.update({f"{k}_15+": v for k, v in counters_over_14.items()})
+
+    filename = path / "person_statistics.json"
+    create_json_file(filename, counters)
+
+    # additionally create the same statistics file with relative values
+    rel_counts = {}
+    personcount = len(all_infos)
+    for key, counter in counters.items():
+        rel_counts[key] = {k: v / personcount for k, v in counter.items()}
+
+    filename = path / "person_statistics_relative.json"
+    create_json_file(filename, rel_counts)
+
+
+def generate_person_statistics(
+    all_infos: list[dict[str, Any]],
+) -> dict[str, dict[str, int]]:
+    """Generate a nested person statistics dict form a list of
+    person characteristics.
+
+    :param all_infos: list of person characteristics as dicts
+    :return: nested dict containing statistics for all person attributes
+    """
     counters = {}
     for info_name in all_infos[0].keys():
         counter = Counter(x[info_name] for x in all_infos)
@@ -203,6 +232,7 @@ def write_person_statistics(
                 if catlimits[0] <= age <= catlimits[1]:
                     age_category_counts[catkey] += frequency
         counters["age_categories"] = age_category_counts
+
     # special case: aggregate work status to categories
     if "work_status" in counters:
         work_counter = counters["work_status"]
@@ -211,30 +241,23 @@ def write_person_statistics(
             "employed": ["full time", "part time"],
             "student": ["student"],
             "unemployed": ["unemployed"],
+            "retired": ["retired"],
         }
         for cat, values in WORK_CATEGORIES.items():
             employment_categories[cat] = sum(work_counter.get(v, 0) for v in values)
+        counters["employment_categories"] = employment_categories
+
         # special case: combine sex and employment
         if "sex" in counters:
+            employment_sex = {}
             combined_count = Counter((d["work_status"], d["sex"]) for d in all_infos)
             for sex in counters["sex"].keys():
                 for cat, values in WORK_CATEGORIES.items():
-                    employment_categories[f"{cat}_{sex}"] = sum(
+                    employment_sex[f"{cat}_{sex}"] = sum(
                         combined_count.get((v, sex), 0) for v in values
                     )
-        counters["employment_categories"] = employment_categories
-
-    filename = path / "person_statistics.json"
-    create_json_file(filename, counters)
-
-    # additionally create the same statistics file with relative values
-    rel_counts = {}
-    personcount = len(all_infos)
-    for key, counter in counters.items():
-        rel_counts[key] = {k: v / personcount for k, v in counter.items()}
-
-    filename = path / "person_statistics_relative.json"
-    create_json_file(filename, rel_counts)
+            counters["employment_sex"] = sort_by_key(employment_sex)
+    return counters
 
 
 def write_poi_statistics(
