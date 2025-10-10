@@ -1,0 +1,380 @@
+{
+    "PointsOfInterest": {
+        "School Custom": {
+            "LocationType": "School",
+            "Coordinates": {
+                "Latitude": 50.792,
+                "Longitude": 6.083
+            },
+            "TimeLimit": null
+        },
+        "Bow Range Custom": {
+            "LocationType": "Bow Range",
+            "Coordinates": {
+                "Latitude": 50.798,
+                "Longitude": 6.083
+            },
+            "TimeLimit": null
+        },
+        "Volunteer Workplace Custom": {
+            "LocationType": "Volunteer Workplace",
+            "Coordinates": {
+                "Latitude": 50.78,
+                "Longitude": 6.115
+            },
+            "TimeLimit": null
+        },
+        "Food Market Custom": {
+            "LocationType": "Food Market",
+            "Coordinates": {
+                "Latitude": 50.789,
+                "Longitude": 6.09
+            },
+            "TimeLimit": null
+        },
+        "Bar Location Custom": {
+            "LocationType": "Bar Location",
+            "Coordinates": {
+                "Latitude": 50.758,
+                "Longitude": 6.11
+            },
+            "TimeLimit": null
+        },
+        "Mountain Road Custom": {
+            "LocationType": "Mountain Road",
+            "Coordinates": {
+                "Latitude": 50.76,
+                "Longitude": 6.101
+            },
+            "TimeLimit": null
+        },
+        "Kindergarden Custom": {
+            "LocationType": "Kindergarden",
+            "Coordinates": {
+                "Latitude": 50.792,
+                "Longitude": 6.098
+            },
+            "TimeLimit": null
+        },
+        "Friend's House Custom": {
+            "LocationType": "Friend's House",
+            "Coordinates": {
+                "Latitude": 50.771,
+                "Longitude": 6.088
+            },
+            "TimeLimit": null
+        },
+        "Doctors Office Custom": {
+            "LocationType": "Doctors Office",
+            "Coordinates": {
+                "Latitude": 50.793,
+                "Longitude": 6.081
+            },
+            "TimeLimit": null
+        },
+        "Dance Club Custom": {
+            "LocationType": "Dance Club",
+            "Coordinates": {
+                "Latitude": 50.799,
+                "Longitude": 6.108
+            },
+            "TimeLimit": null
+        },
+        "Concert House Custom": {
+            "LocationType": "Concert House",
+            "Coordinates": {
+                "Latitude": 50.799,
+                "Longitude": 6.117
+            },
+            "TimeLimit": null
+        },
+        "Childrens House Custom": {
+            "LocationType": "Childrens House",
+            "Coordinates": {
+                "Latitude": 50.756,
+                "Longitude": 6.085
+            },
+            "TimeLimit": null
+        },
+        "Fishing Location Custom": {
+            "LocationType": "Fishing Location",
+            "Coordinates": {
+                "Latitude": 50.775,
+                "Longitude": 6.115
+            },
+            "TimeLimit": null
+        },
+        "Car Wash Custom": {
+            "LocationType": "Car Wash",
+            "Coordinates": {
+                "Latitude": 50.778,
+                "Longitude": 6.1
+            },
+            "TimeLimit": null
+        },
+        "Musical Society Custom": {
+            "LocationType": "Musical Society",
+            "Coordinates": {
+                "Latitude": 50.792,
+                "Longitude": 6.081
+            },
+            "TimeLimit": null
+        },
+        "Summer Camp Custom": {
+            "LocationType": "Summer Camp",
+            "Coordinates": {
+                "Latitude": 50.784,
+                "Longitude": 6.098
+            },
+            "TimeLimit": null
+        },
+        "Workplace (shift worker) Custom": {
+            "LocationType": "Workplace (shift worker)",
+            "Coordinates": {
+                "Latitude": 50.788,
+                "Longitude": 6.096
+            },
+            "TimeLimit": null
+        },
+        "Fitness Studio Custom": {
+            "LocationType": "Fitness Studio",
+            "Coordinates": {
+                "Latitude": 50.758,
+                "Longitude": 6.114
+            },
+            "TimeLimit": null
+        },
+        "Walking Location Custom": {
+            "LocationType": "Walking Location",
+            "Coordinates": {
+                "Latitude": 50.796,
+                "Longitude": 6.094
+            },
+            "TimeLimit": null
+        },
+        "Generic Errand Location Custom": {
+            "LocationType": "Generic Errand Location",
+            "Coordinates": {
+                "Latitude": 50.788,
+                "Longitude": 6.113
+            },
+            "TimeLimit": null
+        },
+        "Dance Studio Custom": {
+            "LocationType": "Dance Studio",
+            "Coordinates": {
+                "Latitude": 50.766,
+                "Longitude": 6.091
+            },
+            "TimeLimit": null
+        },
+        "Running Path Custom": {
+            "LocationType": "Running Path",
+            "Coordinates": {
+                "Latitude": 50.764,
+                "Longitude": 6.097
+            },
+            "TimeLimit": null
+        },
+        "Horse Stable Custom": {
+            "LocationType": "Horse Stable",
+            "Coordinates": {
+                "Latitude": 50.754,
+                "Longitude": 6.11
+            },
+            "TimeLimit": null
+        },
+        "Festival Location Custom": {
+            "LocationType": "Festival Location",
+            "Coordinates": {
+                "Latitude": 50.761,
+                "Longitude": 6.106
+            },
+            "TimeLimit": null
+        },
+        "Theater Custom": {
+            "LocationType": "Theater",
+            "Coordinates": {
+                "Latitude": 50.769,
+                "Longitude": 6.08
+            },
+            "TimeLimit": null
+        },
+        "Home Custom": {
+            "LocationType": "Home",
+            "Coordinates": {
+                "Latitude": 50.779,
+                "Longitude": 6.103
+            },
+            "TimeLimit": null
+        },
+        "Parents House Custom": {
+            "LocationType": "Parents House",
+            "Coordinates": {
+                "Latitude": 50.758,
+                "Longitude": 6.087
+            },
+            "TimeLimit": null
+        },
+        "Office Workplace Custom": {
+            "LocationType": "Office Workplace",
+            "Coordinates": {
+                "Latitude": 50.796,
+                "Longitude": 6.085
+            },
+            "TimeLimit": null
+        },
+        "Shopping Mall Custom": {
+            "LocationType": "Shopping Mall",
+            "Coordinates": {
+                "Latitude": 50.758,
+                "Longitude": 6.081
+            },
+            "TimeLimit": null
+        },
+        "Cinema Location Custom": {
+            "LocationType": "Cinema Location",
+            "Coordinates": {
+                "Latitude": 50.771,
+                "Longitude": 6.117
+            },
+            "TimeLimit": null
+        },
+        "Yoga Studio Custom": {
+            "LocationType": "Yoga Studio",
+            "Coordinates": {
+                "Latitude": 50.767,
+                "Longitude": 6.118
+            },
+            "TimeLimit": null
+        },
+        "Golf Club Custom": {
+            "LocationType": "Golf Club",
+            "Coordinates": {
+                "Latitude": 50.778,
+                "Longitude": 6.112
+            },
+            "TimeLimit": null
+        },
+        "Singing School Custom": {
+            "LocationType": "Singing School",
+            "Coordinates": {
+                "Latitude": 50.78,
+                "Longitude": 6.095
+            },
+            "TimeLimit": null
+        },
+        "Hiking Location Custom": {
+            "LocationType": "Hiking Location",
+            "Coordinates": {
+                "Latitude": 50.782,
+                "Longitude": 6.116
+            },
+            "TimeLimit": null
+        },
+        "Community College Custom": {
+            "LocationType": "Community College",
+            "Coordinates": {
+                "Latitude": 50.76,
+                "Longitude": 6.102
+            },
+            "TimeLimit": null
+        },
+        "Outdoor Swimming Pool Custom": {
+            "LocationType": "Outdoor Swimming Pool",
+            "Coordinates": {
+                "Latitude": 50.786,
+                "Longitude": 6.113
+            },
+            "TimeLimit": null
+        },
+        "Flea Market Location Custom": {
+            "LocationType": "Flea Market Location",
+            "Coordinates": {
+                "Latitude": 50.75,
+                "Longitude": 6.088
+            },
+            "TimeLimit": null
+        },
+        "Cafe Custom": {
+            "LocationType": "Cafe",
+            "Coordinates": {
+                "Latitude": 50.763,
+                "Longitude": 6.116
+            },
+            "TimeLimit": null
+        },
+        "Opera Custom": {
+            "LocationType": "Opera",
+            "Coordinates": {
+                "Latitude": 50.756,
+                "Longitude": 6.092
+            },
+            "TimeLimit": null
+        },
+        "Hunting Forest Custom": {
+            "LocationType": "Hunting Forest",
+            "Coordinates": {
+                "Latitude": 50.777,
+                "Longitude": 6.082
+            },
+            "TimeLimit": null
+        },
+        "Soccer Practice Location Custom": {
+            "LocationType": "Soccer Practice Location",
+            "Coordinates": {
+                "Latitude": 50.791,
+                "Longitude": 6.112
+            },
+            "TimeLimit": null
+        },
+        "University Custom": {
+            "LocationType": "University",
+            "Coordinates": {
+                "Latitude": 50.79,
+                "Longitude": 6.118
+            },
+            "TimeLimit": null
+        },
+        "Bicycle Route Custom": {
+            "LocationType": "Bicycle Route",
+            "Coordinates": {
+                "Latitude": 50.795,
+                "Longitude": 6.112
+            },
+            "TimeLimit": null
+        },
+        "Museum Custom": {
+            "LocationType": "Museum",
+            "Coordinates": {
+                "Latitude": 50.771,
+                "Longitude": 6.084
+            },
+            "TimeLimit": null
+        },
+        "Indoor Swimming Pool Custom": {
+            "LocationType": "Indoor Swimming Pool",
+            "Coordinates": {
+                "Latitude": 50.767,
+                "Longitude": 6.087
+            },
+            "TimeLimit": null
+        },
+        "Supermarket Custom": {
+            "LocationType": "Supermarket",
+            "Coordinates": {
+                "Latitude": 50.773,
+                "Longitude": 6.114
+            },
+            "TimeLimit": null
+        },
+        "Local Recreational Area Custom": {
+            "LocationType": "Local Recreational Area",
+            "Coordinates": {
+                "Latitude": 50.751,
+                "Longitude": 6.082
+            },
+            "TimeLimit": null
+        }
+    }
+}

@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-03-26T11:11:30Z",
+  "timestamp": "2025-10-10T09:01:30Z",
   "features": [
     {
       "type": "Feature",
@@ -119,6 +119,7 @@
         "level": "0",
         "name": "Grenzlandtheater Aachen",
         "phone": "+49 241 4746111",
+        "toilets:wheelchair": "yes",
         "website": "https://www.grenzlandtheater.de/",
         "wheelchair": "yes",
         "wikidata": "Q1362339",
@@ -143,9 +144,12 @@
         "addr:postcode": "52064",
         "addr:street": "Anton-Kurze-Allee",
         "amenity": "cafe",
+        "diet:vegan": "no",
         "diet:vegetarian": "yes",
         "name": "Café Liège",
         "opening_hours": "Tu-Su,PH 09:30-18:30; Mo off",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
         "website": "https://www.cafe-liege.de/",
         "wheelchair": "limited"
       },
@@ -184,6 +188,7 @@
       "type": "Feature",
       "properties": {
         "@id": "node/299640182",
+        "check_date": "2025-09-03",
         "fee": "yes",
         "name": "Domschatzkammer",
         "opening_hours": "Mo 10:00-14:00; Mo 10:00-18:00 \"Adventszeit/Advent Season\"; Jan-Mar Tu-Su 10:00-17:00; Apr-Dec Tu-Su 10:00-18:00",
@@ -263,9 +268,11 @@
         "@id": "node/317468851",
         "amenity": "cinema",
         "level": "-1",
+        "lgbtq": "welcome",
         "name": "Apollo Kino",
         "note": "im Keller",
         "smoking": "separated",
+        "source:lgbtq": "https://www.rainbow-aachen.de/diva/auslagestellen/",
         "website": "https://www.apollo-aachen.de/",
         "wheelchair": "no"
       },
@@ -308,12 +315,15 @@
         "@id": "node/337938603",
         "alt_name": "Zu Hause",
         "amenity": "pub",
+        "check_date": "2025-04-29",
         "drinking_water:refill": "yes",
         "drinking_water:refill:network": "Refill Deutschland",
         "indoor_seating": "yes",
+        "lgbtq": "welcome",
         "name": "zuhause",
         "opening_hours": "Mo off; Su off \"außer Veranstaltungen\"; Tu-Th 18:00-01:00, Fr,Sa 18:00-03:00",
         "outdoor_seating": "yes",
+        "source:lgbtq": "https://www.rainbow-aachen.de/diva/auslagestellen/",
         "sport": "9pin;table_soccer",
         "toilets:wheelchair": "limited",
         "website": "https://zuhause-aachen.de/",
@@ -362,7 +372,7 @@
         "addr:postcode": "52066",
         "addr:street": "Kurbrunnenstraße",
         "amenity": "dentist",
-        "check_date:opening_hours": "2024-07-06",
+        "check_date:opening_hours": "2025-09-27",
         "healthcare": "dentist",
         "name": "Memisi",
         "opening_hours": "Mo-Fr 08:00-20:00",
@@ -405,14 +415,33 @@
       "type": "Feature",
       "properties": {
         "@id": "node/364557454",
+        "air_conditioning": "no",
         "amenity": "cafe",
-        "check_date": "2024-03-01",
+        "bar": "yes",
+        "breakfast": "yes",
+        "changing_table": "no",
+        "check_date": "2025-08-24",
+        "cuisine": "soup",
+        "delivery": "no",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "internet_access:fee": "no",
         "internet_access:operator": "Freifunk",
+        "kids_area": "no",
+        "kids_area:fee": "no",
+        "kids_area:indoor": "no",
+        "kids_area:outdoor": "no",
+        "kids_area:supervised": "no",
         "name": "Chico Mendes",
-        "opening_hours": "Mo-Fr 09:00+; Sa-Su 18:00+",
+        "opening_hours": "Mo-Fr 09:00+; Sa 18:00+; Aug-Sep Mo-Sa 09:00-20:00",
+        "operator": "Studentenwerk der KHG Aachen e.V.",
+        "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:cryptocurrencies": "no",
         "smoking": "no",
+        "takeaway": "no",
+        "toilets": "yes",
+        "toilets:access": "permissive",
         "toilets:wheelchair": "no",
         "website": "https://www.chico-mendes.de/",
         "wheelchair": "no"
@@ -476,14 +505,15 @@
         "addr:postcode": "52064",
         "addr:street": "Jakobstraße",
         "amenity": "ice_cream",
-        "check_date": "2024-03-03",
+        "check_date": "2025-06-01",
+        "check_date:opening_hours": "2025-06-01",
         "contact:facebook": "https://www.facebook.com/eiscafedelnegro",
         "cuisine": "ice_cream",
         "diet:vegan": "yes",
         "email": "info@eiscafedelnegro.de",
         "indoor_seating": "yes",
         "name": "Eiscafé Del Negro",
-        "opening_hours": "Jan-Feb Mo-Sa 10:00-21:00; Su 12:00-21:00; Mar-Aug Mo-Sa 10:00-22:00; Su 12:00-22:00; Sep-Nov Mo-Sa 10:00-21:00; Su 12:00-21:00; Dec off",
+        "opening_hours": "Mo-Su,PH 12:00-20:30",
         "outdoor_seating": "no",
         "phone": "+49 241 29724",
         "smoking": "no",
@@ -505,6 +535,7 @@
       "properties": {
         "@id": "node/388113316",
         "amenity": "theatre",
+        "check_date": "2025-07-01",
         "name": "Franz",
         "website": "http://www.franz-aachen.de/",
         "wheelchair": "limited"
@@ -598,7 +629,7 @@
         "brand:wikidata": "Q701755",
         "brand:wikipedia": "de:Edeka",
         "name": "Edeka",
-        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-16:00",
+        "opening_hours": "Mo-Fr 07:00-19:00; Sa 07:00-16:00",
         "shop": "supermarket",
         "wheelchair": "limited"
       },
@@ -642,7 +673,7 @@
         "brand:wikidata": "Q450180",
         "brand:wikipedia": "de:Norma (Handelskette)",
         "name": "NORMA",
-        "opening_hours": "Mo-Sa 7:00-22:00",
+        "opening_hours": "Mo-Sa 07:00-22:00",
         "shop": "supermarket",
         "wheelchair": "limited"
       },
@@ -659,9 +690,14 @@
       "type": "Feature",
       "properties": {
         "@id": "node/495560692",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "52074",
+        "addr:street": "Hasselholzer Weg",
         "amenity": "cafe",
         "name": "Bäckerei Mannebach",
-        "opening_hours": "Mo-Fr 06:30-18:30; Sa 06:30-14:00; Su 08:00-12:00",
+        "opening_hours": "Tu-Fr 06:30-18:30; Sa 06:30-14:00; Su 08:00-12:00; Mo,PH off",
         "phone": "+49 241 78179",
         "shop": "bakery",
         "website": "https://www.baeckerei-mannebach.de/",
@@ -727,11 +763,11 @@
         "amenity": "pub",
         "contact:facebook": "https://de-de.facebook.com/pages/category/Gastropub/ZeppelinEck-821965134563806/",
         "description": "Alt-Öcher Kneipe mit Sport-TV",
+        "image": "https://movieaachen.de/wp-content/uploads/2020/02/IMG_2406_zeppelineck_franchy.jpg",
         "internet_access": "wlan",
         "name": "Zeppelin Eck",
         "note": "Es gibt keine deutsch-polnische Küche mehr.",
         "phone": "+49 241 5791958",
-        "picture": "https://movieaachen.de/wp-content/uploads/2020/02/IMG_2406_zeppelineck_franchy.jpg",
         "smoking": "outside"
       },
       "geometry": {
@@ -772,11 +808,16 @@
       "type": "Feature",
       "properties": {
         "@id": "node/567066142",
+        "addr:city": "Aachen",
+        "addr:postcode": "52062",
+        "addr:street": "Peterstraße",
         "brand": "Netto Marken-Discount",
         "brand:wikidata": "Q879858",
         "brand:wikipedia": "de:Netto Marken-Discount",
         "name": "Netto Marken-Discount",
-        "opening_hours": "Mo-Sa 07:00-21:00; Su,PH off",
+        "nickname": "Ghetto-Netto",
+        "note": "Dieser Netto wird von den Aachenern sehr oft und von Polizei, Ordnungsamt (beide 3 Häuser nebenan) und verschiedenen Rettungskräften fast ausschließlich Ghetto-Netto genannt.",
+        "opening_hours": "Mo-Sa 07:00-22:00",
         "shop": "supermarket",
         "website": "https://www.netto-online.de/filialen/Aachen/Peterstr-50/6896/",
         "wheelchair": "yes"
@@ -866,11 +907,38 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/603149903",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "83",
+        "addr:postcode": "52080",
+        "addr:street": "Karlstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Taslima Raquib",
+        "website": "https://www.praxisraquib.de/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.152093,
+          50.7818451
+        ]
+      },
+      "id": "node/603149903"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/612421524",
         "addr:city": "Aachen",
         "addr:housenumber": "5",
         "addr:street": "Hackländerstraße",
         "amenity": "nightclub",
+        "check_date:opening_hours": "2025-07-04",
+        "lgbtq": "welcome",
         "name": "Autonomes Zentrum Aachen",
         "opening_hours:signed": "no",
         "website": "https://az-aachen.de/",
@@ -893,7 +961,7 @@
         "addr:housenumber": "39",
         "addr:postcode": "52062",
         "addr:street": "Stiftstraße",
-        "check_date:opening_hours": "2023-10-26",
+        "check_date:opening_hours": "2025-08-29",
         "description": "Handel mit und der Vertrieb von Lebensmitteln, orientalischen Spezialitäten und Haushaltswaren.",
         "name": "Palmyra Supermarkt",
         "opening_hours": "Mo-Sa 09:00-20:00",
@@ -1026,8 +1094,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.0637028,
-          50.7967768
+          6.0636602,
+          50.7967503
         ]
       },
       "id": "node/674289493"
@@ -1042,10 +1110,10 @@
         "addr:postcode": "52076",
         "addr:street": "Schleidener Straße",
         "addr:suburb": "Walheim",
-        "brand": "PENNY",
+        "brand": "Penny",
         "brand:wikidata": "Q284688",
         "brand:wikipedia": "en:Penny (supermarket)",
-        "name": "PENNY",
+        "name": "Penny",
         "opening_hours": "Mo-Sa 08:00-21:00",
         "shop": "supermarket",
         "toilets:wheelchair": "no",
@@ -1219,7 +1287,7 @@
         "addr:housenumber": "139",
         "addr:postcode": "52068",
         "addr:street": "Elsassstraße",
-        "brand": "EDEKA",
+        "brand": "Edeka",
         "brand:wikidata": "Q701755",
         "brand:wikipedia": "de:Edeka",
         "check_date:opening_hours": "2023-03-07",
@@ -1255,7 +1323,7 @@
         "addr:postcode": "52076",
         "addr:street": "Dorfstraße",
         "amenity": "pub",
-        "brewery": "various",
+        "brewery": "bitburger_pils;eifeler_zwickel;wechselndes_bier_des_monats",
         "name": "Dorfstübchen",
         "opening_hours": "Mo 18:00-22:00; We 18:00-21:00; Fr 18:00-24:00; Su 11:00-13:00",
         "real_fire": "no",
@@ -1279,6 +1347,7 @@
         "amenity": "pub",
         "indoor_seating": "yes",
         "name": "City Pub",
+        "opening_hours": "Mo-Fr 16:00+; Sa 11:00+; PH off",
         "outdoor_seating": "no"
       },
       "geometry": {
@@ -1514,7 +1583,7 @@
         "brand": "Denns BioMarkt",
         "brand:wikidata": "Q48883773",
         "brand:wikipedia": "de:Dennree",
-        "check_date:opening_hours": "2024-04-23",
+        "check_date:opening_hours": "2025-06-02",
         "name": "Denns BioMarkt",
         "opening_hours": "Mo-Sa 08:00-20:00; Su,PH off",
         "operator": "Dennree GmbH",
@@ -1568,14 +1637,17 @@
       "properties": {
         "@id": "node/1037447409",
         "amenity": "pub",
-        "check_date": "2024-04-25",
+        "check_date": "2025-07-01",
+        "check_date:opening_hours": "2025-07-01",
         "contact:phone": "+49 241 47584273",
         "contact:website": "http://www.meisenfrei-aachen.de",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "internet_access:operator": "freifunk",
         "name": "Meisenfrei",
-        "opening_hours": "Mo-Fr 12:00-15:00,17:00+; Sa-Su 16:30+",
+        "opening_hours": "Tu-Fr 17:00+; Sa,Su,PH 15:00+",
         "operator": "Thomas Jonas",
+        "outdoor_seating": "yes",
         "wheelchair": "no",
         "wifi": "no"
       },
@@ -1622,7 +1694,6 @@
         "check_date:opening_hours": "2021-01-17",
         "entrance": "yes",
         "name": "KaWo Bar",
-        "opening_hours": "Th 22:00-24:00",
         "website": "https://www.kawo1.rwth-aachen.de/~bar/",
         "wheelchair": "no"
       },
@@ -1646,7 +1717,7 @@
         "brand": "EDEKA",
         "brand:wikidata": "Q701755",
         "brand:wikipedia": "de:Edeka",
-        "check_date:opening_hours": "2025-01-24",
+        "check_date:opening_hours": "2025-08-28",
         "drink:club-mate": "yes",
         "name": "Edeka Geldermann",
         "opening_hours": "Mo-Sa 07:00-21:00",
@@ -1668,16 +1739,35 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1139240611",
+        "healthcare": "speech_therapist",
+        "name": "Klangstimme",
+        "opening_hours": "\"Termine nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0815089,
+          50.767354
+        ]
+      },
+      "id": "node/1139240611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1139240667",
         "amenity": "bar",
         "check_date:opening_hours": "2023-10-20",
         "contact:website": "http://deinhoteleuropa.de/",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "internet_access:operator": "freifunk",
         "name": "Hotel Europa",
         "opening_hours": "Fr,Sa 20:00-05:00+, We,Th 20:00-04:00+",
         "opening_hours:signed": "no",
         "operator": "Udo Mays",
+        "outdoor_seating": "yes",
         "toilets:wheelchair": "no",
         "wheelchair": "limited"
       },
@@ -1798,9 +1888,9 @@
         "healthcare": "doctor",
         "healthcare:speciality": "internal;general;allergology;acupuncture;naturopathy;gelbfieber-impfstelle",
         "name": "Praxis Dr. Henne & Dr. Ries",
-        "note": "Telefonische Erreichbarkeit:\nMontag bis Freitag vormittags von 8:30 – 12:00 Uhr\nMontag, Dienstag und Donnerstag nachmittags von 15:00 – 18:00 Uhr\nPraxisöffnungszeiten siehe Webseite.",
+        "note": "Telefonische Erreichbarkeit: Montag bis Freitag vormittags von 8:30 – 12:00 Uhr Montag, Dienstag und Donnerstag nachmittags von 15:00 – 18:00 Uhr Praxisöffnungszeiten siehe Webseite.",
         "phone": "+49 241 82623",
-        "website": "www.praxis-ries-henne.de"
+        "website": "http://www.praxis-ries-henne.de/"
       },
       "geometry": {
         "type": "Point",
@@ -1821,7 +1911,8 @@
         "healthcare": "doctor",
         "name": "Gertrud Ginsbach",
         "opening_hours": "Mo-Th 14:00-17:00",
-        "opening_hours:signed": "no"
+        "opening_hours:signed": "no",
+        "wheelchair": "no"
       },
       "geometry": {
         "type": "Point",
@@ -2057,8 +2148,10 @@
         "addr:postcode": "52070",
         "addr:street": "Wilhelmstraße",
         "amenity": "pub",
-        "check_date": "2023-05-17",
+        "check_date": "2025-07-14",
+        "indoor_seating": "yes",
         "name": "Die Kanzlei",
+        "outdoor_seating": "no",
         "wheelchair": "limited"
       },
       "geometry": {
@@ -2112,25 +2205,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/1242416024",
-        "amenity": "pub",
-        "entrance": "yes",
-        "name": "Cafe Akdeniz",
-        "smoking": "dedicated",
-        "wheelchair": "yes"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.1108904,
-          50.7729831
-        ]
-      },
-      "id": "node/1242416024"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/1242416070",
         "addr:housenumber": "232b",
         "addr:street": "Adalbertsteinweg",
@@ -2179,8 +2253,10 @@
         "contact:website": "https://www.eis-treff.de",
         "diet:vegan": "yes",
         "entrance": "yes",
+        "indoor_seating": "yes",
         "name": "Oecher Eis-Treff",
         "opening_hours": "Mo-Su,PH 12:00-18:30",
+        "outdoor_seating": "yes",
         "wheelchair": "no"
       },
       "geometry": {
@@ -2237,24 +2313,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/1251022251",
-        "amenity": "ice_cream",
-        "entrance": "yes",
-        "name": "Eiscafe Lourenco",
-        "opening_hours": "10:00-22:00"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.1136629,
-          50.7717524
-        ]
-      },
-      "id": "node/1251022251"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/1253009209",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -2285,9 +2343,14 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1267235829",
+        "addr:city": "Aachen",
+        "addr:housenumber": "38",
+        "addr:postcode": "52062",
+        "addr:street": "Promenadenstraße",
         "amenity": "pub",
         "name": "Sturmfrei!",
-        "opening_hours": "Su-Th 19:00-02:00, Fr,Sa 19:00-04:00; Mo off"
+        "opening_hours": "Su-Th 19:00-02:00, Fr,Sa 19:00-04:00; Mo off",
+        "website": "https://wgsturmfreikiezkini.de/"
       },
       "geometry": {
         "type": "Point",
@@ -2302,10 +2365,14 @@
       "type": "Feature",
       "properties": {
         "@id": "node/1267235834",
+        "addr:city": "Aachen",
+        "addr:housenumber": "40",
+        "addr:postcode": "52062",
+        "addr:street": "Promenadenstraße",
         "amenity": "bar",
         "name": "Die WG",
         "opening_hours": "Mo-Th 19:00-01:00, Fr,Sa 19:00-03:00; Su off",
-        "website": "http://www.diewg-aachen.de",
+        "website": "https://wgsturmfreikiezkini.de/",
         "wheelchair": "limited"
       },
       "geometry": {
@@ -2322,11 +2389,14 @@
       "properties": {
         "@id": "node/1280730714",
         "amenity": "pub",
-        "check_date:opening_hours": "2023-01-02",
+        "check_date:opening_hours": "2025-05-24",
         "entrance": "yes",
+        "indoor_seating": "yes",
         "name": "Pink-Panther",
         "opening_hours": "Tu-Fr 17:00+; Sa-Su,PH 19:00+",
-        "smoking": "yes"
+        "outdoor_seating": "no",
+        "smoking": "yes",
+        "wheelchair": "no"
       },
       "geometry": {
         "type": "Point",
@@ -2346,7 +2416,8 @@
         "addr:postcode": "52066",
         "addr:street": "Dammstraße",
         "amenity": "cafe",
-        "check_date": "2024-08-31",
+        "check_date": "2025-09-27",
+        "check_date:opening_hours": "2025-09-27",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
         "indoor_seating": "yes",
@@ -2405,6 +2476,7 @@
         "addr:postcode": "52066",
         "addr:street": "Abteistraße",
         "amenity": "kindergarten",
+        "check_date": "2025-09-28",
         "isced:level": "0",
         "name": "Kindertagesstätte Bärenstark",
         "operator": "Kita Bärenstark e. V.",
@@ -2513,9 +2585,13 @@
         "addr:postcode": "52074",
         "addr:street": "Pauwelsstraße",
         "amenity": "cafe",
-        "check_date:opening_hours": "2024-04-23",
+        "check_date:opening_hours": "2025-06-08",
+        "indoor_seating": "no",
         "name": "nano",
         "opening_hours": "Mo-Fr 09:30-14:00; Sa,Su,PH off",
+        "outdoor_seating": "no",
+        "smoking": "no",
+        "takeaway": "only",
         "website": "https://nano-bistro.de/",
         "wheelchair": "no"
       },
@@ -2583,8 +2659,10 @@
         "internet_access": "wlan",
         "internet_access:fee": "no",
         "internet_access:operator": "Freifunk",
+        "lgbtq": "welcome",
         "name": "Café Kittel",
         "opening_hours": "Mo-Su,PH 10:00-02:00",
+        "source:lgbtq": "https://www.rainbow-aachen.de/diva/auslagestellen/",
         "toilets:wheelchair": "no",
         "website": "http://www.cafekittel.de/",
         "wheelchair": "limited"
@@ -2635,7 +2713,11 @@
       "properties": {
         "@id": "node/1455085246",
         "amenity": "pub",
+        "check_date:opening_hours": "2025-04-01",
+        "indoor_seating": "yes",
         "name": "Zum Adalbert",
+        "opening_hours:signed": "no",
+        "outdoor_seating": "yes",
         "wheelchair": "no"
       },
       "geometry": {
@@ -2686,10 +2768,11 @@
         "brand:wikipedia": "en:Aldi",
         "check_date": "2024-03-26",
         "name": "Aldi Süd",
-        "opening_hours": "Mo-Sa 08:00-21:00; Su,PH off",
+        "opening_hours": "Mo-Sa 08:00-21:00",
         "payment:cash": "yes",
         "payment:debit_cards": "yes",
         "shop": "supermarket",
+        "website": "https://filialen.aldi-sued.de/nordrhein-westfalen/aachen/franzstrasse-2",
         "wheelchair": "yes"
       },
       "geometry": {
@@ -2728,8 +2811,8 @@
         "addr:housenumber": "275-277",
         "addr:street": "Adalbertsteinweg",
         "amenity": "pub",
-        "check_date": "2023-05-11",
-        "name": "Cafe Dost",
+        "check_date": "2025-06-30",
+        "name": "Dayı'nın Yeri",
         "operator": "Tanja Sichwort",
         "outdoor_seating": "no"
       },
@@ -2850,23 +2933,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/1632479156",
-        "amenity": "marketplace",
-        "name": "Elsassplatz",
-        "opening_hours": "We 07:00-13:00"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.1159001,
-          50.7737485
-        ]
-      },
-      "id": "node/1632479156"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/1636493323",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -2957,7 +3023,8 @@
         "addr:street": "Sanatoriumstraße",
         "amenity": "doctors",
         "healthcare": "doctor",
-        "name": "Praxisklinik Franziskushospital"
+        "name": "Praxisklinik Franziskushospital",
+        "opening_hours": "Mo,Tu,Th 07:00-18:00; We,Fr 07:00-16:00"
       },
       "geometry": {
         "type": "Point",
@@ -3132,10 +3199,12 @@
       "properties": {
         "@id": "node/1845212823",
         "amenity": "ice_cream",
+        "check_date:opening_hours": "2025-07-27",
         "indoor_seating": "yes",
         "name": "Eis Cafe San Remo",
         "opening_hours": "Mo-Fr 11:30-18:00; Sa,Su 13:30-18:00",
         "outdoor_seating": "no",
+        "smoking": "no",
         "wheelchair": "no"
       },
       "geometry": {
@@ -3322,8 +3391,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.083258,
-          50.7768708
+          6.0832554,
+          50.776864
         ]
       },
       "id": "node/2003044166"
@@ -3374,6 +3443,7 @@
         "check_date": "2025-03-02",
         "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/%C3%96cher_Sch%C3%A4ngchen.jpg",
         "name": "Öcher Schängche",
+        "toilets:wheelchair": "yes",
         "website": "https://www.oecher-schaengche.de/",
         "wheelchair": "limited",
         "wikidata": "Q293894",
@@ -3382,8 +3452,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.0793286,
-          50.7728531
+          6.0793344,
+          50.7728535
         ]
       },
       "id": "node/2147017602"
@@ -3423,6 +3493,7 @@
         "addr:street": "Weberstraße",
         "amenity": "doctors",
         "healthcare": "doctor",
+        "healthcare:speciality": "oncology",
         "name": "MVZ W8 Onkologie Aachen",
         "note": "Der Bereich der niedergelassenen Ärzte sind #8, der Rest 10",
         "opening_hours": "\"Nach Vereinbarung\""
@@ -3834,7 +3905,9 @@
       "properties": {
         "@id": "node/2377392590",
         "amenity": "pub",
+        "indoor_seating": "yes",
         "name": "Chrystall Pub",
+        "outdoor_seating": "no",
         "smoking": "yes",
         "wheelchair": "no"
       },
@@ -3986,7 +4059,7 @@
         "healthcare:speciality": "general",
         "level": "0",
         "name": "Ursula Steffen",
-        "opening_hours": "Mo-Fr 08:00-11:30, Mo 16:00-20:00, Tu 14:00-16:00, Th 16:00-18:00; Sa,Su,PH off",
+        "opening_hours": "Mo-Fr 08:00-11:30, Mo 16:00-20:00, Tu 14:00-16:00, Th 16:00-18:00, Th 07:00-11:30; Sa,Su,PH off",
         "phone": "+49 24 08 18 44",
         "toilets:wheelchair": "no",
         "website": "http://www.steffen-praxis.de/",
@@ -4088,6 +4161,7 @@
         "addr:postcode": "52066",
         "addr:street": "Viehhofstraße",
         "amenity": "doctors",
+        "check_date": "2025-08-04",
         "healthcare": "doctor",
         "name": "MVZ RNR GmbH",
         "website": "http://www.rnr-net.de/standorte/aachen"
@@ -4135,7 +4209,9 @@
         "addr:street": "Steinkaulplatz",
         "addr:suburb": "Kornelimünster",
         "amenity": "ice_cream",
-        "name": "Il Gelato"
+        "name": "Il Gelato",
+        "opening_hours": "Mo-Su 12:00-20:00",
+        "outdoor_seating": "no"
       },
       "geometry": {
         "type": "Point",
@@ -4156,9 +4232,13 @@
         "addr:street": "Christian-Quix-Straße",
         "amenity": "doctors",
         "check_date:opening_hours": "2024-09-28",
+        "fax": "+49 241 50 90 73",
         "healthcare": "doctor",
+        "healthcare:speciality": "general",
         "name": "Praxis Frankenberg - Dr. med. Joachim Dupont",
-        "opening_hours": "Mo-Fr 09:00-12:00,16:00-18:00, Tu 09:00-12:00, We 09:00-12:00, Th 09:00-12:00,16:00-18:00, Fr 09:00-12:00",
+        "note": "Rezepttelefon +49 241 50 90 70",
+        "opening_hours": "Mo-Fr 08:00-12:00; Mo,Fr 16:00-18:00",
+        "phone": "+49 241 50 90 79",
         "source": "http://www.hausarzt-dupont-aachen.de/index.html",
         "website": "http://www.hausarzt-dupont-aachen.de/"
       },
@@ -4277,8 +4357,10 @@
         "addr:street": "Kapuzinergraben",
         "amenity": "pub",
         "check_date": "2024-06-04",
+        "indoor_seating": "yes",
         "name": "Poststübchen",
         "opening_hours": "Mo-Th 15:30-24:00, Fr 15:30+, Sa 14:00+",
+        "outdoor_seating": "yes",
         "phone": "+49 241 94316044",
         "toilets:wheelchair": "no",
         "wheelchair": "limited"
@@ -4326,7 +4408,8 @@
         "contact:instagram": "cafestopover.aachen",
         "cuisine": "coffee_shop",
         "name": "Café Stopover",
-        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-18:00; Su 10:00-18:00",
+        "opening_hours": "Mo-Fr 08:15-18:30; Sa 09:00-18:00; Su 10:00-18:00",
+        "panoramax": "82c48e64-59f9-4630-9d7b-dcc72afdf3d5",
         "payment:cash": "no",
         "payment:credit_cards": "yes",
         "payment:debit_cards": "yes"
@@ -4344,7 +4427,9 @@
       "type": "Feature",
       "properties": {
         "@id": "node/2721934644",
+        "addr:housenumber": "199",
         "addr:postcode": "52070",
+        "addr:street": "Krefelder Straße",
         "brand": "HIT",
         "brand:wikidata": "Q1548713",
         "brand:wikipedia": "de:HIT Handelsgruppe",
@@ -4353,7 +4438,7 @@
         "contact:website": "https://www.hit.de/aachen-tivoli.html",
         "drink:club-mate": "yes",
         "name": "HIT",
-        "opening_hours": "Mo-Sa 07:00-22:00; Su 00:00-24:00",
+        "opening_hours": "Mo-Sa 07:00-22:00",
         "operator": "HIT Handelsgruppe GmbH & Co. KG",
         "outdoor_seating": "no",
         "shop": "supermarket",
@@ -4406,6 +4491,7 @@
         "healthcare:speciality": "podiatry",
         "name": "NK",
         "note": "Medizinische Fußpflege",
+        "opening_hours": "Mo-Fr 10:00-13:00",
         "phone": "+49 178-69 03 164"
       },
       "geometry": {
@@ -4488,40 +4574,13 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/3165580661",
-        "addr:city": "Aachen",
-        "addr:housenumber": "19",
-        "addr:postcode": "52062",
-        "addr:street": "Kapuzinergraben",
-        "amenity": "doctors",
-        "description": "Das Zentrum für Neurologie und seelische Gesundheit im Kapuzinerkarree ist ein Zusammenschluss von Fachärzten für Neurologie und Fachärzten für Psychiatrie und Psychotherapie.",
-        "email": "info@zns-kapuzinerkarree.de",
-        "healthcare": "doctor",
-        "healthcare:speciality": "neurology;psychiatry;psychology",
-        "name": "Zentrum für Neurologie und Seelische Gesundheit",
-        "opening_hours": "Mo,Th 08:00-17:00, Tu 08:00-19:00, We 08:00-13:00, Fr 08:00-14:00",
-        "phone": "+49 241 55 70 27 0",
-        "website": "https://www.zns-kapuzinerkarree.de/",
-        "wheelchair": "yes"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0858355,
-          50.7721327
-        ]
-      },
-      "id": "node/3165580661"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/3165594861",
         "addr:city": "Aachen",
         "addr:housenumber": "14",
         "addr:postcode": "52062",
         "addr:street": "Alter Posthof",
         "amenity": "doctors",
+        "check_date": "2025-06-01",
         "description": "Vielfach spezialisiertes Ärzteteam http://radiologie-aachen.de/aerzte-team/#aerzte-intro",
         "healthcare": "doctor",
         "healthcare:speciality": "radiology",
@@ -4630,11 +4689,15 @@
         "air_conditioning": "no",
         "amenity": "bar",
         "check_date": "2023-05-17",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
+        "lgbtq": "welcome",
         "name": "Grotesque Absinth-Bar",
         "opening_hours": "17:00+; Tu off",
+        "outdoor_seating": "yes",
         "phone": "+49 241 47586835",
         "smoking": "outside",
+        "source:lgbtq": "https://www.rainbow-aachen.de/diva/auslagestellen/",
         "wheelchair": "limited"
       },
       "geometry": {
@@ -4877,12 +4940,14 @@
         "diet:vegan": "only",
         "diet:vegetarian": "yes",
         "email": "info@road-food.mobi",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "internet_access:fee": "no",
         "level": "0",
         "name": "Lolaparoli",
         "note": "Nach Diskussion wurde der Typ von \"Fast Food\" nach \"Cafe\" geändert, da dies in der Selbstbeschreibung auf der Webseite zuerst genannt wird. Das Lokal ist schwer in eine Schublade zu stecken. Siehe Beschreibung!",
         "opening_hours": "Su 17:00-24:00, We,Th 17:00-01:00, Fr,Sa 17:00-02:00",
+        "outdoor_seating": "yes",
         "phone": "+49 241 56520754",
         "takeaway": "yes",
         "website": "https://www.road-food.mobi/wordpress/212-2/",
@@ -4906,13 +4971,17 @@
         "addr:postcode": "52062",
         "addr:street": "Promenadenstraße",
         "amenity": "pub",
-        "name": "Kiez Kini"
+        "check_date": "2025-07-31",
+        "name": "Kiez Kini",
+        "note": "https://wgsturmfreikiezkini.de/mieten/",
+        "opening_hours": "Mo off; Tu off; We-Th 19:00-02:00; Fr-Sa 19:00-03:00; Su off",
+        "website": "https://wgsturmfreikiezkini.de"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.094213,
-          50.7763238
+          6.0941933,
+          50.7763258
         ]
       },
       "id": "node/3533909088"
@@ -5064,11 +5133,40 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/3679995923",
+        "addr:city": "Aachen",
+        "addr:housenumber": "1",
+        "addr:postcode": "52064",
+        "addr:street": "Löhergraben",
+        "amenity": "pub",
+        "brewery": "Guinness;Bitburger;various;Killkenny",
+        "instagram": "https://www.instagram.com/queenspubac/?utm_source=qr",
+        "name": "Queens Pub",
+        "note": "Öffnungszeiten bitte selber raus finden!",
+        "opening_hours": "Th 17:00-23:30, Fr-Sa 18:00-01:00",
+        "phone": "+49 176 83459066",
+        "smoking": "outside",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0801024,
+          50.772327
+        ]
+      },
+      "id": "node/3679995923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/3686804591",
         "amenity": "doctors",
+        "check_date:opening_hours": "2025-05-17",
         "healthcare": "doctor",
         "healthcare:speciality": "ophthalmology",
         "name": "Augenarzt Dr. Schmitz",
+        "opening_hours:signed": "no",
         "website": "https://www.augenarzt-schmitz.de"
       },
       "geometry": {
@@ -5089,6 +5187,7 @@
         "addr:postcode": "52062",
         "addr:street": "Harscampstraße",
         "amenity": "doctors",
+        "check_date": "2025-07-15",
         "healthcare": "doctor",
         "healthcare:speciality": "dermatology",
         "name": "Hautärztin Dr. med. Britta Heindl",
@@ -5115,7 +5214,7 @@
         "addr:postcode": "52062",
         "addr:street": "Alexanderstraße",
         "amenity": "cafe",
-        "check_date:opening_hours": "2024-08-27",
+        "check_date:opening_hours": "2025-09-14",
         "cuisine": "coffee_shop",
         "diet:lactose_free": "yes",
         "diet:vegan": "yes",
@@ -5208,8 +5307,10 @@
         "addr:street": "Rathausplatz",
         "addr:suburb": "Richterich",
         "amenity": "cafe",
+        "check_date:opening_hours": "2025-08-09",
         "email": "richterich@pausenbrot.de",
         "name": "Café Pausenbrot",
+        "opening_hours:signed": "no",
         "phone": "+49 241 955 16 800",
         "website": "https://www.pausenbrot.de/pausenbrot-richterich.html",
         "wheelchair": "limited"
@@ -5294,7 +5395,7 @@
       "properties": {
         "@id": "node/3819469585",
         "amenity": "dentist",
-        "check_date": "2023-05-10",
+        "check_date": "2025-08-16",
         "healthcare": "dentist",
         "name": "Zahnarztpraxis Belladent",
         "opening_hours": "Mo-Tu 09:00-13:00,14:00-18:00; We,Fr 09:00-13:00; Th 09:00-13:00,14:00-19:00",
@@ -5324,7 +5425,7 @@
         "indoor_seating": "yes",
         "level": "0",
         "name": "Champa Elysées",
-        "opening_hours": "Mo-Sa 11:00-20:00; PH,Su off",
+        "opening_hours": "Mo-Sa 11:00-20:00; Su,PH off",
         "outdoor_seating": "no",
         "phone": "+49 241 401 9001",
         "smoking": "no",
@@ -5395,7 +5496,9 @@
       "properties": {
         "@id": "node/3875105263",
         "amenity": "pub",
-        "name": "King's Pub"
+        "check_date:opening_hours": "2025-09-08",
+        "name": "King's Pub",
+        "opening_hours:signed": "no"
       },
       "geometry": {
         "type": "Point",
@@ -5597,11 +5700,11 @@
         "addr:postcode": "52066",
         "addr:street": "Erzbergerallee",
         "amenity": "doctors",
-        "check_date:opening_hours": "2023-04-25",
+        "check_date:opening_hours": "2025-09-26",
         "description": "Dr. Martin Nellessen | Dr. med. Jochen Kühn | Dr. med. Elke Adhami",
         "healthcare": "doctor",
         "name": "Gemeinschaftspraxis Beverau",
-        "opening_hours": "Mo-Fr 07:30-12:00, Mo,Tu,Th 16:00-18:00",
+        "opening_hours": "Mo 08:00-12:00; Tu,Th 07:30-12:00,16:00-18:00; We,Fr 07:30-12:00",
         "phone": "+49 241 66926",
         "website": "https://www.praxis-beverau.de/",
         "wheelchair": "no"
@@ -5671,6 +5774,29 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/4172726489",
+        "addr:city": "Aachen",
+        "addr:housenumber": "73",
+        "addr:postcode": "52062",
+        "addr:street": "Großkölnstraße",
+        "amenity": "cafe",
+        "indoor_seating": "yes",
+        "name": "Aix-le-cafe",
+        "opening_hours": "Mo-Fr 10:00-18:00; Sa 10:00-18:00",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0876636,
+          50.7778444
+        ]
+      },
+      "id": "node/4172726489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/4179587974",
         "addr:city": "Aachen",
         "addr:housenumber": "45",
@@ -5682,8 +5808,10 @@
         "cuisine": "tunisian",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Leyla´s | Café & Kultur",
-        "opening_hours": "We 18:00-22:00; Fr 18:00-23:00",
+        "opening_hours": "Fr 18:00-23:00",
+        "outdoor_seating": "yes",
         "smoking": "no"
       },
       "geometry": {
@@ -5768,6 +5896,7 @@
         "addr:housenumber": "42",
         "addr:street": "Annastraße",
         "amenity": "doctors",
+        "check_date": "2025-07-27",
         "healthcare": "doctor",
         "healthcare:speciality": "orthopaedics",
         "name": "Orthopädie & Unfallchirurgie Dr. med. Jens Krug, Meike Hutzenlaub",
@@ -5783,29 +5912,6 @@
         ]
       },
       "id": "node/4352730510"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/4369295792",
-        "addr:city": "Aachen",
-        "addr:country": "DE",
-        "addr:housenumber": "102",
-        "addr:postcode": "52066",
-        "addr:street": "Bismarckstraße",
-        "amenity": "ice_cream",
-        "diet:vegan": "yes",
-        "name": "Gelato e Cioccolato",
-        "opening_hours": "PH,Mo-Su 12:00-18:00+"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.107364,
-          50.7689619
-        ]
-      },
-      "id": "node/4369295792"
     },
     {
       "type": "Feature",
@@ -5840,10 +5946,10 @@
         "addr:housenumber": "100",
         "addr:postcode": "52062",
         "addr:street": "Adalbertstraße",
-        "brand": "REWE",
+        "brand": "Rewe",
         "brand:wikidata": "Q16968817",
         "brand:wikipedia": "de:Rewe",
-        "check_date:opening_hours": "2023-08-19",
+        "check_date:opening_hours": "2025-08-29",
         "contact:phone": "+49 241 90053298",
         "contact:website": "https://www.rewe.de/marktseite/rewe-markt-aachen-kaiserplatz",
         "level": "-1",
@@ -5971,6 +6077,7 @@
         "@id": "node/4464826254",
         "amenity": "biergarten",
         "horse": "yes",
+        "name": "Forsthaus Weiden",
         "note": "Biergarten mit Anbindebalken"
       },
       "geometry": {
@@ -5991,7 +6098,7 @@
         "addr:postcode": "52064",
         "addr:street": "Boxgraben",
         "amenity": "doctors",
-        "check_date:opening_hours": "2023-05-17",
+        "check_date:opening_hours": "2025-06-05",
         "healthcare": "doctor",
         "healthcare:speciality": "gynaecology",
         "name": "Frauenarztpraxis Dr. Eva Wagner",
@@ -6018,7 +6125,7 @@
         "addr:postcode": "52066",
         "addr:street": "Krugenofen",
         "amenity": "doctors",
-        "check_date:opening_hours": "2024-03-10",
+        "check_date:opening_hours": "2025-06-05",
         "healthcare": "doctor",
         "name": "Galina Kurz",
         "opening_hours": "Mo,Th 08:30-12:30,16:00-18:00; Tu,We,Fr 08:30-12:30; Sa,Su,PH off",
@@ -6155,7 +6262,7 @@
         "addr:postcode": "52062",
         "addr:street": "Pontstraße",
         "amenity": "bar",
-        "check_date": "2023-05-09",
+        "check_date": "2025-07-05",
         "description": "Shisha - Nightlife - Events",
         "name": "LAVA Lounge",
         "opening_hours": "Su-Th 15:00-02:00, Fr,Sa 15:00-05:00",
@@ -6209,7 +6316,8 @@
         "name": "Dr. Kerstin Tharau",
         "opening_hours": "Mo, Tu, Th 08:00-12:00, 16:00-18:00; We, Fr 08:00-11:30",
         "phone": "+49 241 562015",
-        "website": "https://www.praxis-tharau.de/"
+        "website": "https://www.praxis-tharau.de/",
+        "wheelchair": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -6308,8 +6416,10 @@
         "addr:postcode": "52062",
         "addr:street": "Büchel",
         "amenity": "cafe",
+        "indoor_seating": "yes",
         "name": "Mehlwölkchen",
         "opening_hours": "Mo-Su 09:30-19:00",
+        "outdoor_seating": "yes",
         "website": "https://www.mehlwoelkchen.com/",
         "wheelchair": "limited"
       },
@@ -6406,6 +6516,7 @@
         "addr:postcode": "52062",
         "addr:street": "Buchkremerstraße",
         "amenity": "cafe",
+        "branch": "Leni liebt Kaffee",
         "contact:facebook": "leniliebtkaffee",
         "contact:phone": "+49 241 57600195",
         "contact:website": "http://leniliebtkaffee.de",
@@ -6454,7 +6565,8 @@
         "outdoor_seating": "yes",
         "phone": "+49 241 99033193",
         "smoking": "no",
-        "website": "https://www.cafe-juli-aachen.de/"
+        "website": "https://www.cafe-juli-aachen.de/",
+        "wheelchair": "no"
       },
       "geometry": {
         "type": "Point",
@@ -6473,12 +6585,15 @@
         "brand": "WonderWaffel",
         "brand:wikidata": "Q105051786",
         "brand:wikipedia": "nl:WonderWaffel",
-        "check_date": "2024-03-26",
+        "check_date": "2025-06-02",
+        "check_date:opening_hours": "2025-06-02",
         "cuisine": "waffle",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "name": "WonderWaffel",
-        "opening_hours": "Mo-Su 12:00-21:00",
+        "opening_hours": "Mo-Th 12:00-20:00; Fr-Sa 12:00-21:00; Su 13:00-20:00",
+        "outdoor_seating": "yes",
         "takeaway": "yes",
         "website": "https://www.wonderwaffel.de/",
         "wheelchair": "limited"
@@ -6525,6 +6640,7 @@
         "addr:postcode": "52064",
         "addr:street": "Am Lavenstein",
         "amenity": "dentist",
+        "check_date": "2025-06-18",
         "healthcare": "dentist",
         "name": "Andreas Vinkeloe",
         "opening_hours": "\"Termine nach Vereinbarung\"",
@@ -6581,7 +6697,7 @@
         "level": "0",
         "name": "Gemeinschaftspraxis Dr. Hartmut Becher",
         "note": "Dr. med. Bernhard Grundmann Arzt für Innere Medizin, Diabetologe DDG hat nur noch 2 mal die Woche Sprechstunde. - http://www.praxis-dr-becher.ac/praxisspektrum.html",
-        "opening_hours": "Mo-Fr 09:00-12:00, Mo 15:00-17:00, Th 16:00-18:00",
+        "opening_hours": "Mo-Fr 08:00-13:00, Mo,Tu,Th 15:00-17:00",
         "operator": "Dr. Hartmut Becher",
         "phone": "+49 241 21202",
         "website": "http://www.praxis-dr-becher.ac/",
@@ -6718,6 +6834,7 @@
       "properties": {
         "@id": "node/5188151821",
         "amenity": "doctors",
+        "check_date": "2025-08-04",
         "healthcare": "doctor",
         "healthcare:speciality": "urology",
         "name": "Dr. Braune",
@@ -6741,7 +6858,7 @@
         "addr:postcode": "52072",
         "addr:street": "Schlossparkstraße",
         "amenity": "dentist",
-        "check_date": "2023-05-16",
+        "check_date": "2025-05-26",
         "email": "info@dr-rafai.de",
         "fax": "+49 241 171464",
         "healthcare": "dentist",
@@ -6770,7 +6887,7 @@
         "addr:postcode": "52072",
         "addr:street": "Claßenstraße",
         "amenity": "cafe",
-        "check_date": "2023-05-09",
+        "check_date": "2025-05-12",
         "cuisine": "breakfast;coffee_shop;donut",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
@@ -6809,9 +6926,10 @@
         "description": "Ein Café mit irgendwas mit Musik dabei. Aktualisierung! Es ist eine Kaffeerösterei mit Ausschank und Kuchen.",
         "diet:vegetarian": "yes",
         "email": "info@kaffee-erhard.de",
+        "indoor_seating": "yes",
         "internet_access": "wlan",
         "name": "Kaffee Erhard",
-        "opening_hours": "Mo-Fr 10:00-18:00; Sa 10:00-16:00",
+        "opening_hours": "Mo-Fr 10:00-18:00, Sa 10:00-16:00",
         "outdoor_seating": "yes",
         "phone": "+49 241 57108900",
         "website": "https://kaffee-erhard.de"
@@ -6854,7 +6972,7 @@
       "properties": {
         "@id": "node/5272219131",
         "amenity": "bar",
-        "check_date:opening_hours": "2024-04-21",
+        "check_date:opening_hours": "2025-05-14",
         "name": "K2-Bar",
         "opening_hours": "Tu 22:00+",
         "website": "https://www.kawo2.rwth-aachen.de/k2bar/",
@@ -6969,8 +7087,10 @@
         "addr:street": "Theaterplatz",
         "amenity": "cafe",
         "cuisine": "coffee_shop",
+        "indoor_seating": "yes",
         "name": "Nela's Coffee & Kitchen",
         "opening_hours": "Mo-Fr 09:00-18:00; Sa 10:00-19:00; Su off",
+        "outdoor_seating": "yes",
         "smoking": "no"
       },
       "geometry": {
@@ -7076,6 +7196,7 @@
         "addr:street": "Viehhofstraße",
         "addr:suburb": "Burtscheid",
         "amenity": "doctors",
+        "check_date": "2025-08-04",
         "healthcare": "doctor",
         "healthcare:speciality": "allergology;otolaryngology",
         "name": "Gemeinschaftspraxis für Hals-, Nasen-, Ohrenheilkunde, Allergologie und Naturheilverfahren",
@@ -7198,8 +7319,10 @@
       "properties": {
         "@id": "node/5536605932",
         "amenity": "cafe",
+        "check_date:opening_hours": "2025-06-29",
         "indoor_seating": "no",
         "name": "Cinnamood",
+        "opening_hours:signed": "no",
         "outdoor_seating": "no",
         "takeaway": "only"
       },
@@ -7211,28 +7334,6 @@
         ]
       },
       "id": "node/5536605932"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/5541031165",
-        "addr:city": "Aachen",
-        "addr:housenumber": "109",
-        "addr:postcode": "52062",
-        "addr:street": "Alexanderstraße",
-        "amenity": "bar",
-        "check_date:opening_hours": "2024-07-10",
-        "name": "La Cata - Café Bar Event",
-        "opening_hours:signed": "no"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0928395,
-          50.7784846
-        ]
-      },
-      "id": "node/5541031165"
     },
     {
       "type": "Feature",
@@ -7256,8 +7357,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.079227,
-          50.772903
+          6.079246,
+          50.7728925
         ]
       },
       "id": "node/5593002676"
@@ -7322,6 +7423,7 @@
         "addr:postcode": "52066",
         "addr:street": "Viehhofstraße",
         "amenity": "doctors",
+        "check_date": "2025-08-04",
         "healthcare": "doctor",
         "healthcare:speciality": "internal;general",
         "name": "Diabetologische Schwerpunktpraxis F. Meißner / Dr. D. Wolter",
@@ -7605,11 +7707,14 @@
         "addr:street": "Münsterplatz",
         "amenity": "cafe",
         "breakfast": "yes",
-        "check_date": "2023-05-14",
-        "check_date:opening_hours": "2024-04-12",
+        "check_date": "2025-07-02",
+        "check_date:diet:vegetarian": "2025-07-02",
+        "check_date:opening_hours": "2025-07-02",
         "diet:gluten_free": "only",
         "diet:lactose_free": "yes",
         "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Isabella Glutenfreie Patisserie",
         "opening_hours": "Mo-Sa 09:30-18:00; Su 10:00-18:00",
         "outdoor_seating": "yes",
@@ -7624,6 +7729,31 @@
         ]
       },
       "id": "node/5753944044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5758639060",
+        "addr:city": "Aachen",
+        "addr:housenumber": "117",
+        "addr:postcode": "52066",
+        "addr:street": "Oppenhoffallee",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Dr. Irina Cernaianu",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo,Th 15:00-18:00, Tu 17:00-20:00",
+        "website": "https://www.praxisaachen.com/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1079012,
+          50.7705141
+        ]
+      },
+      "id": "node/5758639060"
     },
     {
       "type": "Feature",
@@ -7652,7 +7782,7 @@
         "addr:postcode": "52062",
         "addr:street": "Mariahilfstraße",
         "amenity": "dentist",
-        "check_date": "2023-08-01",
+        "check_date": "2025-08-16",
         "email": "dres.heinen@t-online.de",
         "fax": "+49 241 88747816",
         "healthcare": "dentist",
@@ -7847,10 +7977,10 @@
         "addr:postcode": "52076",
         "addr:street": "Schleidener Straße",
         "addr:suburb": "Walheim",
-        "brand": "REWE",
+        "brand": "Rewe",
         "brand:wikidata": "Q16968817",
         "brand:wikipedia": "de:Rewe",
-        "name": "REWE",
+        "name": "Rewe",
         "opening_hours": "Mo-Sa 08:00-22:00",
         "operator": "Nepomuck",
         "shop": "supermarket",
@@ -7998,10 +8128,10 @@
       "properties": {
         "@id": "node/6086557912",
         "amenity": "cafe",
-        "check_date:opening_hours": "2024-02-27",
+        "check_date:opening_hours": "2025-09-10",
         "indoor_seating": "yes",
         "name": "Haus Eulenspiegel",
-        "opening_hours": "Mo-Sa 09:30-18:00; PH,Su off",
+        "opening_hours": "Mo-Sa 09:30-18:00; Su,PH off",
         "outdoor_seating": "no",
         "phone": "+49 241 23897",
         "shop": "tea",
@@ -8128,6 +8258,7 @@
         "contact:facebook": "https://www.facebook.com/leanaundluise",
         "contact:phone": "+49 1717 868339",
         "contact:website": "http://leanaundluise.de",
+        "diet:vegan": "yes",
         "image": "https://scontent-amt2-1.xx.fbcdn.net/v/t1.0-9/57604355_10219596845215810_8697398517741649920_n.jpg?_nc_ht=scontent-amt2-1.xx&oh=28b00dabe2b64c6806eff13009951702&oe=5D86BE97",
         "indoor_seating": "yes",
         "name": "Leana und Luise",
@@ -8156,7 +8287,7 @@
         "addr:postcode": "52064",
         "addr:street": "Boxgraben",
         "amenity": "bar",
-        "check_date:opening_hours": "2022-01-10",
+        "check_date:opening_hours": "2025-07-01",
         "contact:facebook": "https://www.facebook.com/schluessellochrockkneipe",
         "name": "Schlüsselloch",
         "opening_hours": "Tu-Sa 20:00+",
@@ -8187,7 +8318,7 @@
         "toilets:wheelchair": "yes",
         "tourism": "museum",
         "website": "https://www.chioaachen.de/de/chio-co/mehr-chio-aachen/chio-aachen-museum/",
-        "wheelchair": "no"
+        "wheelchair": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -8209,9 +8340,12 @@
         "amenity": "cafe",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Café Didier",
         "opening_hours": "Mo-Su,PH 08:30-22:00",
+        "outdoor_seating": "yes",
         "smoking": "outside",
+        "toilets:wheelchair": "no",
         "website": "https://cafedidier.com/",
         "wheelchair": "limited"
       },
@@ -8268,7 +8402,7 @@
         "brand": "REWE",
         "brand:wikidata": "Q16968817",
         "brand:wikipedia": "en:REWE",
-        "check_date:opening_hours": "2024-08-10",
+        "check_date:opening_hours": "2025-09-29",
         "contact:phone": "+49 241 1684258",
         "contact:website": "https://www.rewe.de/marktseite/rewe-city-markt-aachen-pontdriesch-10-12",
         "drink:club-mate": "yes",
@@ -8299,6 +8433,7 @@
         "addr:postcode": "52066",
         "addr:street": "Oppenhoffallee",
         "amenity": "doctors",
+        "check_date": "2025-07-23",
         "check_date:opening_hours": "2023-04-04",
         "healthcare": "alternative",
         "name": "Heilpraktiker Decker, Praxis \"Point of Balance\"",
@@ -8326,7 +8461,7 @@
         "addr:postcode": "52064",
         "addr:street": "Bahnhofplatz",
         "amenity": "cafe",
-        "check_date": "2023-05-14",
+        "check_date": "2025-05-18",
         "contact:facebook": "https://www.facebook.com/Sweets-Empire-112123987284808",
         "diet:vegetarian": "yes",
         "indoor_seating": "yes",
@@ -8425,7 +8560,7 @@
         "healthcare:speciality": "general;internal",
         "level": "0",
         "name": "Gemeinschaftspraxis Dr. Kloft/Dr. Neuss",
-        "opening_hours": "Mo-Tu,Th 08:00-12:00,16:00-18:00; We 07:30-12:00; Fr 08:00-13:00",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo 13:30-18:00, Tu 15:30-17:00, Th 13:30-16:00",
         "wheelchair": "no"
       },
       "geometry": {
@@ -8445,14 +8580,15 @@
         "brand": "Starbucks",
         "brand:wikidata": "Q37158",
         "brand:wikipedia": "en:Starbucks",
-        "check_date": "2024-07-31",
+        "check_date": "2025-08-29",
+        "check_date:opening_hours": "2025-08-29",
         "cuisine": "coffee_shop",
         "diet:vegetarian": "yes",
         "indoor_seating": "yes",
         "level": "0",
         "name": "Starbucks",
         "official_name": "Starbucks Coffee",
-        "opening_hours": "Mo-Sa 09:00-20:30",
+        "opening_hours": "Mo-Sa 08:30-21:00; Su 10:00-18:30",
         "outdoor_seating": "yes",
         "smoking": "outside",
         "takeaway": "yes",
@@ -8507,6 +8643,7 @@
         "addr:postcode": "52062",
         "addr:street": "Komphausbadstraße",
         "amenity": "doctors",
+        "check_date:opening_hours": "2025-08-20",
         "email": "info@grebe-hemmerich.de",
         "healthcare": "doctor",
         "name": "MVZ Aachen Innere Medizin und Rheumatologie",
@@ -8535,8 +8672,10 @@
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
         "email": "hello@fuchsnaturalfood.de",
+        "indoor_seating": "yes",
         "name": "Café Fuchs",
         "opening_hours": "PH,Mo-Su 09:30-17:00",
+        "outdoor_seating": "yes",
         "toilets:wheelchair": "yes",
         "website": "https://www.fuchsnaturalfood.de/pages/cafe",
         "wheelchair": "yes"
@@ -8558,6 +8697,7 @@
         "addr:housenumber": "57",
         "addr:postcode": "52062",
         "addr:street": "Theaterstraße",
+        "check_date": "2025-08-16",
         "email": "info@tekoonam.de",
         "healthcare": "physiotherapist",
         "healthcare:speciality": "physiotherapy;physiotherapie",
@@ -8607,11 +8747,12 @@
         "diet:lactose_free": "yes",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
+        "image": "https://up.picr.de/49360505dn.jpg",
         "name": "Biomarkt Vital",
+        "note": "Hier werden auch Produkte von Krautopia | Gemüsegärtnerei verkauft. https://krautopia-gemuese.de\n\nhttps://www.openstreetmap.org/way/158751306#map=17/50.726323/6.087880&layers=N",
         "opening_hours": "Mo-Sa 08:00-20:00",
         "operator": "Biomarkt Vital GmbH",
         "organic": "only",
-        "picture": "https://up.picr.de/49360505dn.jpg",
         "shop": "supermarket"
       },
       "geometry": {
@@ -8702,13 +8843,15 @@
       "properties": {
         "@id": "node/7115490801",
         "amenity": "doctors",
+        "check_date": "2025-08-27",
         "fax": "+49 241 96109601",
         "healthcare": "doctor",
         "healthcare:speciality": "ophthalmology",
         "name": "Augen Zentrum Dreiländereck",
         "operator": "Dr. med. Stephan Kohnen",
         "phone": "+49 241 96109600",
-        "website": "https://www.augen-acd.de"
+        "website": "https://www.augen-acd.de",
+        "wheelchair": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -8871,7 +9014,8 @@
         "amenity": "doctors",
         "healthcare": "doctor",
         "healthcare:speciality": "ophthalmology",
-        "name": "Dr. med. Kottek"
+        "name": "Dr. med. Kottek",
+        "opening_hours": "Mo-Fr 08:00-12:30, Mo,Tu,Th 15:00-17:30"
       },
       "geometry": {
         "type": "Point",
@@ -8915,6 +9059,7 @@
       "properties": {
         "@id": "node/7515297590",
         "amenity": "ice_cream",
+        "check_date:opening_hours": "2025-07-14",
         "description": "Mobiler Eiswagen. Aktuell 1,60 € die Kugel.",
         "name": "Eismännchen",
         "note": "Verkauf April bis September. Winterpause Oktober bis März. https://aachennews.org/2022/09/29/das-eismannchen-dann-mal-weg-kommt-im-april-aber-wieder/",
@@ -8942,7 +9087,7 @@
         "indoor_seating": "yes",
         "name": "Eiscafé Goethe",
         "note": "Zur Zeit keine weiteren Daten bekannt.",
-        "opening_hours": "Mo-Fr 13:00-20:00; Sa, Su 12:00-20:00",
+        "opening_hours": "Mo-Su 13:00-18:00",
         "outdoor_seating": "no",
         "wheelchair": "limited"
       },
@@ -9187,10 +9332,14 @@
         "addr:housenumber": "18",
         "addr:postcode": "52064",
         "addr:street": "Bahnhofstraße",
+        "check_date:opening_hours": "2025-03-30",
         "name": "Zhang Asia Supermarket",
         "opening_hours": "Mo-Sa 10:00-19:00; Su,PH off",
+        "payment:credit_cards": "no",
+        "payment:debit_cards": "no",
         "phone": "+49 241 51596518",
-        "shop": "supermarket"
+        "shop": "supermarket",
+        "wheelchair": "no"
       },
       "geometry": {
         "type": "Point",
@@ -9210,6 +9359,7 @@
         "addr:postcode": "52062",
         "addr:street": "Synagogenplatz",
         "amenity": "cafe",
+        "check_date:opening_hours": "2025-03-29",
         "indoor_seating": "yes",
         "name": "Bistro Maras",
         "opening_hours": "Mo-Sa 10:00-21:00; Su 10:00-18:00",
@@ -9256,8 +9406,10 @@
         "contact:email": "theginlibrary@web.de",
         "contact:phone": "+49 160 94454665",
         "description": "Cocktail-Bar",
+        "indoor_seating": "yes",
         "name": "The Gin Library",
         "opening_hours": "Mo-Th 18:00-01:00; Fr-Sa 18:00-02:00; Su off",
+        "outdoor_seating": "yes",
         "wheelchair": "limited"
       },
       "geometry": {
@@ -9306,6 +9458,7 @@
         "addr:postcode": "52072",
         "addr:street": "Am Guten Hirten",
         "amenity": "kindergarten",
+        "check_date": "2025-07-05",
         "isced:level": "0",
         "name": "Kita Campus Wohnen",
         "opening_hours": "Mo-Fr 07:30-16:30",
@@ -9345,37 +9498,6 @@
         ]
       },
       "id": "node/8170213087"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/8171473392",
-        "addr:city": "Aachen",
-        "addr:housenumber": "45",
-        "addr:postcode": "52074",
-        "addr:street": "Gemmenicher Weg",
-        "amenity": "cafe",
-        "cuisine": "sandwich;coffee_shop",
-        "description": "Das Restaurant mit dem Mittagstisch für die Öffentlichkeit hat sich nicht halten können. Das Café ist zu den genannten Zeiten geöffnet. Es gibt Kuchen und kleine Speisen.",
-        "internet_access": "yes",
-        "internet_access:fee": "no",
-        "internet_access:ssid": "Freifunk Aachen",
-        "name": "Mariahaus Café & Bistro",
-        "note": "Fotografieren ist auf dem gesamten Gelände wegen des Persönlichkeitschutzes der Klienten verboten.",
-        "opening_hours": "Mo-Fr 09:00-15:00",
-        "outdoor_seating": "yes",
-        "phone": "+49 241 47701 16056",
-        "smoking": "outside",
-        "website": "https://www.alexianer-aachen.de/leistungen/besondere-angebote/bio-bauernhof-maria-haus/"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0482957,
-          50.7654004
-        ]
-      },
-      "id": "node/8171473392"
     },
     {
       "type": "Feature",
@@ -9572,8 +9694,9 @@
         "description": "Facharzt für Allgemeinmedizin",
         "health_facility:type": "office",
         "healthcare": "doctor",
-        "name": "Johannes Hüpgens Allgemeinmedizin",
-        "phone": "+49 241 77468"
+        "name": "Dr. Med. Agnieszka Markert Innere Medizin, Arbeitsmedizin, Gelbfieberimpfstelle",
+        "phone": "+49 241 77468",
+        "website": "https://praxis-dr-markert.de/"
       },
       "geometry": {
         "type": "Point",
@@ -9712,8 +9835,11 @@
         "addr:postcode": "52062",
         "addr:street": "Schmiedstraße",
         "amenity": "cafe",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Café Mundus",
-        "opening_hours": "Mo-Sa 10:00-18:00; Su 10:00-16:00"
+        "opening_hours": "Mo-Su 10:00-18:00",
+        "outdoor_seating": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -9983,12 +10109,13 @@
         "@id": "node/8914105614",
         "alt_name": "Café Ferbers am Elisenbrunnen",
         "amenity": "cafe",
-        "check_date:opening_hours": "2023-10-26",
+        "check_date:opening_hours": "2025-07-08",
         "contact:instagram": "https://www.instagram.com/ferbers_elisengarten/?hl=de",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Café Ferbers am Elisengarten",
-        "opening_hours": "PH,Mo-Su 09:00-20:00",
+        "opening_hours": "Mo-Sa 10:00-18:00; Su 10:00-15:00",
         "outdoor_seating": "yes"
       },
       "geometry": {
@@ -10009,7 +10136,7 @@
         "addr:postcode": "52062",
         "addr:street": "Kleinmarschierstraße",
         "amenity": "cafe",
-        "check_date": "2023-05-14",
+        "check_date": "2025-07-26",
         "contact:facebook": "https://www.facebook.com/baristinhoac/",
         "contact:phone": "+49 241 99034065",
         "contact:website": "https://baristinho.de/",
@@ -10017,9 +10144,11 @@
         "description": "Es gibt wohl auch Kuchen und leichte Gerichte.",
         "diet:vegan": "yes",
         "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "level": "0",
         "name": "Baristinho Café",
         "opening_hours": "Mo-Fr 08:30-18:00; Sa,Su 09:00-18:00",
+        "outdoor_seating": "yes",
         "smoking": "no",
         "wheelchair": "yes"
       },
@@ -10117,13 +10246,13 @@
         "addr:postcode": "52066",
         "addr:street": "Eupener Straße",
         "amenity": "doctors",
-        "check_date": "2024-02-03",
+        "check_date": "2025-09-02",
         "email": "praxissteffens@web.de",
         "fax": "+49 241 6083586",
         "healthcare": "doctor",
         "healthcare:speciality": "internal;general",
         "name": "Dr. med. Angelika Steffens",
-        "opening_hours": "Mo-Fr 08:30-12:30; Mo 16:00-18:00; Th 16:00-18:00",
+        "opening_hours": "Mo-Fr 08:00-12:45; Mo 14:00-15:00",
         "phone": "+49 241 6083583",
         "website": "https://www.internisten-im-netz.de/aerzte/aachen/steffens/startseite.html"
       },
@@ -10271,6 +10400,7 @@
         "addr:postcode": "52064",
         "addr:street": "Reumontstraße",
         "amenity": "kindergarten",
+        "check_date": "2025-04-24",
         "email": "kita-reumontstr@mail.aachen.de",
         "isced:level": "0",
         "name": "Kindertagesstätte Reumontstraße",
@@ -10329,6 +10459,7 @@
         "note": "UPS Access Point",
         "opening_hours": "Mo-Sa 10:00-22:00",
         "opening_hours:signed": "no",
+        "panoramax": "92d84114-a94e-4539-8953-963aa1a6a42b",
         "shop": "supermarket",
         "website": "https://www.instagram.com/asiaexpressmarkt/",
         "wheelchair": "no"
@@ -10509,6 +10640,7 @@
         "addr:street": "Leydelstraße",
         "amenity": "music_school",
         "musical_instrument": "piano",
+        "name": "Siidra",
         "opening_hours": "\"by appointment\"",
         "operator": "Siidra",
         "operator:type": "private",
@@ -10612,7 +10744,7 @@
         "addr:housenumber": "16",
         "addr:postcode": "52062",
         "addr:street": "Saarstraße",
-        "amenity": "doctors",
+        "disused:amenity": "doctors",
         "healthcare": "doctor",
         "name": "Lothar Bohnenkamp Allgemeinmedizin",
         "opening_hours": "Mo-Su 08:30-12:00,16:00-18:00"
@@ -10634,8 +10766,10 @@
         "addr:housenumber": "139",
         "addr:postcode": "52072",
         "addr:street": "Roermonder Straße",
+        "check_date:opening_hours": "2025-07-05",
         "healthcare": "physiotherapist",
         "name": "Breuer Physio",
+        "opening_hours:signed": "no",
         "phone": "+49 241 87 11 10",
         "website": "https://breuer-physio.com/"
       },
@@ -10657,8 +10791,11 @@
         "addr:postcode": "52064",
         "addr:street": "Leydelstraße",
         "amenity": "dentist",
+        "check_date": "2025-06-17",
+        "check_date:opening_hours": "2025-06-17",
         "healthcare": "dentist",
         "name": "Aixdent",
+        "opening_hours": "\"Nach Vereinbarung\"",
         "phone": "+49 241 342 90",
         "website": "https://aixdent.com/"
       },
@@ -10702,7 +10839,7 @@
       "properties": {
         "@id": "node/9693175943",
         "addr:city": "Aachen",
-        "addr:housenumber": "18 - 20",
+        "addr:housenumber": "18-20",
         "addr:postcode": "52070",
         "addr:street": "Adalbertsteinweg",
         "amenity": "dentist",
@@ -10721,6 +10858,28 @@
         ]
       },
       "id": "node/9693175943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9701362991",
+        "addr:city": "Aachen",
+        "addr:housenumber": "55-59",
+        "addr:postcode": "52062",
+        "addr:street": "Heinrichsallee",
+        "amenity": "bar",
+        "indoor_seating": "yes",
+        "name": "Moruq Lounge",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0940427,
+          50.7779007
+        ]
+      },
+      "id": "node/9701362991"
     },
     {
       "type": "Feature",
@@ -10804,7 +10963,7 @@
         "healthcare:speciality": "dermatology;allergology",
         "level": "2",
         "name": "Dr. med. Anita Harst",
-        "opening_hours": "Mo-Fr 08:00-12:00",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo,Tu,Th 14:00-17:00",
         "operator": "Praxis für Dermatologie und Allergologie Dr. Anita Harst",
         "phone": "+49 241 9 29 14 00",
         "website": "https://www.hautaerztin-dr-harst.de/"
@@ -10942,34 +11101,6 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/9714246003",
-        "addr:city": "Aachen",
-        "addr:housenumber": "5",
-        "addr:postcode": "52062",
-        "addr:street": "Pontstraße",
-        "amenity": "cafe",
-        "check_date:opening_hours": "2024-03-05",
-        "diet:vegetarian": "yes",
-        "indoor_seating": "yes",
-        "name": "Pausenbrot",
-        "opening_hours": "We-Su 10:00-18:00",
-        "outdoor_seating": "yes",
-        "phone": "+49 241 53 10 29 02",
-        "smoking": "outside",
-        "website": "https://pausenbrot.de/standort-pontstrasse/"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.083123,
-          50.776988
-        ]
-      },
-      "id": "node/9714246003"
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "@id": "node/9714246004",
         "addr:city": "Aachen",
         "addr:housenumber": "2",
@@ -10998,9 +11129,13 @@
         "addr:postcode": "52062",
         "addr:street": "Kapuzinergraben",
         "amenity": "cafe",
-        "check_date": "2024-03-26",
+        "check_date": "2025-07-16",
+        "check_date:diet:vegetarian": "2025-07-16",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
         "name": "Espresso Perfetto",
         "opening_hours": "Mo-Th 09:30-18:00; Fr-Sa 9:30-22:00",
+        "outdoor_seating": "yes",
         "phone": "+49 241 475 990 22",
         "website": "https://espressoperfetto.de/aachen/"
       },
@@ -11110,6 +11245,26 @@
         ]
       },
       "id": "node/9731139599"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9737032624",
+        "addr:city": "Aachen",
+        "addr:housenumber": "184",
+        "addr:postcode": "52062",
+        "addr:street": "Pontstraße",
+        "amenity": "bar",
+        "name": "Sweedbar Ponttor"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0787499,
+          50.7813022
+        ]
+      },
+      "id": "node/9737032624"
     },
     {
       "type": "Feature",
@@ -11342,6 +11497,7 @@
         "addr:postcode": "52066",
         "addr:street": "Eupener Straße",
         "amenity": "clinic",
+        "check_date": "2025-07-20",
         "healthcare": "clinic",
         "healthcare:speciality": "ophthalmology",
         "name": "Ambulantes Augen-OP-Zentrum Bodenhof",
@@ -11392,7 +11548,8 @@
         "addr:postcode": "52062",
         "addr:street": "Marienbongard",
         "amenity": "ice_cream",
-        "name": "Amando Dattelbombe Yogurt"
+        "name": "Amando Dattelbombe Yogurt",
+        "opening_hours": "\"nur nach Vereinbarung\""
       },
       "geometry": {
         "type": "Point",
@@ -11408,8 +11565,12 @@
       "properties": {
         "@id": "node/9828403042",
         "amenity": "cafe",
+        "indoor_seating": "no",
         "name": "Büdchen",
-        "opening_hours": "Mo,We,Th 08:00-16:00"
+        "opening_hours": "Mo,We,Th 08:00-16:00",
+        "outdoor_seating": "yes",
+        "smoking": "yes",
+        "wheelchair": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -11479,6 +11640,7 @@
         "addr:postcode": "52070",
         "addr:street": "Herzogstraße",
         "amenity": "dentist",
+        "check_date": "2025-09-27",
         "email": "info@zahnarztpraxis-ok.de",
         "healthcare": "dentist",
         "name": "Zahnärztin Dilara Ok",
@@ -11551,7 +11713,8 @@
         "addr:housenumber": "8a",
         "addr:street": "Karmeliterstraße",
         "amenity": "doctors",
-        "check_date": "2024-03-03",
+        "check_date": "2025-06-05",
+        "check_date:opening_hours": "2025-06-05",
         "email": "info@augencentrum-aachen.de",
         "healthcare": "doctor",
         "healthcare:speciality": "ophthalmology",
@@ -11573,6 +11736,7 @@
       "type": "Feature",
       "properties": {
         "@id": "node/9866225842",
+        "check_date:opening_hours": "2025-07-01",
         "healthcare": "physiotherapist",
         "name": "Physiotherapie Praxis Isabella Clever",
         "opening_hours": "Mo-Fr 09:00-13:00, Mo,Tu,Th 14:00-19:00, Fr 14:00-18:00",
@@ -11650,7 +11814,7 @@
         "email": "info@praxiszentrum-aachen.de",
         "healthcare": "dentist",
         "name": "Zahnärztliches Praxiszentrum für Implantologie, Parodontologie und Prothetik",
-        "opening_hours": "Mo-Th 08:00-20:00; Fr 08:00-16:00",
+        "opening_hours": "Mo-Th 08:00-20:00; Fr 08:00-16:00|| \"nach Vereinbarung\"",
         "phone": "+49 241 51 888 500",
         "website": "https://www.praxiszentrum-aachen.de/"
       },
@@ -12127,6 +12291,7 @@
         "check_date:opening_hours": "2024-10-24",
         "name": "Netto Marken-Discount",
         "opening_hours": "Mo-Sa 07:00-22:00",
+        "panoramax": "df3085d1-a17c-4fc2-8db3-6bc3b5a63d46",
         "payment:cash": "yes",
         "payment:contactless": "yes",
         "payment:credit_cards": "yes",
@@ -12273,6 +12438,7 @@
         "@id": "node/10181197991",
         "amenity": "bar",
         "check_date": "2024-03-05",
+        "indoor_seating": "yes",
         "name": "Masuto",
         "opening_hours": "Mo-Th,Su 12:00-23:00; Fr-Sa 12:00-01:00",
         "outdoor_seating": "yes",
@@ -12588,7 +12754,7 @@
         "@id": "node/10692937236",
         "amenity": "cafe",
         "bar": "yes",
-        "cuisine": "coffee_shop;regional;cocktails;wein;american;international",
+        "cuisine": "coffee_shop;regional;cocktails;wine;american;international",
         "diet:vegetarian": "only",
         "indoor_seating": "yes",
         "level": "3",
@@ -12665,7 +12831,7 @@
         "addr:postcode": "52066",
         "addr:street": "Eupener Straße",
         "amenity": "doctors",
-        "check_date": "2023-08-05",
+        "check_date": "2025-08-16",
         "email": "info@augenzentrum-euregio.de",
         "fax": "48 241 9430176",
         "healthcare": "doctor",
@@ -12693,6 +12859,7 @@
         "addr:city": "Aachen",
         "addr:postcode": "52066",
         "addr:street": "Eupener Straße",
+        "check_date": "2025-08-16",
         "email": "info@physio-schiller.de",
         "healthcare": "physiotherapist",
         "name": "Physiotherapie Karin Schiller-Moll & Team",
@@ -12770,6 +12937,7 @@
         "addr:postcode": "52066",
         "addr:street": "Altdorfstraße",
         "amenity": "pub",
+        "check_date": "2025-07-30",
         "name": "Im Backhaus",
         "opening_hours": "Mo,We-Sa 10:00-24:00; Su 11:00-24:00"
       },
@@ -12792,7 +12960,9 @@
         "addr:postcode": "52064",
         "addr:street": "Reumontstraße",
         "amenity": "cafe",
-        "name": "Caritas Café Plattform",
+        "brand": "Caritas",
+        "brand:wikidata": "Q29508174",
+        "name": "Café Plattform",
         "note": "https://www.openstreetmap.org/note/3948418#map=19/50.76636/6.08673&layers=N",
         "opening_hours": "Mo-Sa 07:30-22:00; Su 15:00-22:00 \"Cafébetrieb\"",
         "operator": "Caritasverband für die Regionen Aachen-Stadt und Aachen-Land e.V.",
@@ -12862,10 +13032,12 @@
         "addr:floor": "3",
         "addr:housenumber": "31",
         "addr:street": "Borngasse",
-        "check_date": "2023-05-10",
+        "check_date": "2025-06-05",
+        "check_date:opening_hours": "2025-06-05",
         "email": "info@ergotherapie-mueller-klussmann.de",
         "healthcare": "occupational_therapist",
         "name": "Praxis für Ergotherapie Almut Müller-Klusmann",
+        "opening_hours": "\"Nach Vereinbarung\"",
         "phone": "+49 241 99797350",
         "website": "https://www.ergotherapie-mueller-klussmann.de"
       },
@@ -12971,7 +13143,7 @@
         "@id": "node/10883604415",
         "addr:housenumber": "21",
         "addr:street": "Schützenstraße",
-        "check_date": "2023-05-10",
+        "check_date": "2025-05-24",
         "healthcare": "psychotherapist",
         "name": "Psychodynamische Psychotherapie",
         "opening_hours": "\"by appointment\"",
@@ -13215,8 +13387,10 @@
         "addr:housenumber": "230",
         "addr:street": "Adalbertsteinweg",
         "amenity": "cafe",
-        "check_date": "2023-05-12",
-        "name": "Agora"
+        "check_date": "2025-04-01",
+        "check_date:opening_hours": "2025-04-01",
+        "name": "Agora",
+        "opening_hours:signed": "no"
       },
       "geometry": {
         "type": "Point",
@@ -13362,7 +13536,7 @@
         "@id": "node/10891448626",
         "addr:housenumber": "1",
         "addr:street": "Oppenhoffallee",
-        "check_date": "2023-05-12",
+        "check_date": "2025-07-23",
         "healthcare": "psychotherapist",
         "name": "Psychologische Psychotherapie",
         "opening_hours": "\"Termine nur nach telefonischer Vereinbarung\"",
@@ -13407,7 +13581,7 @@
         "addr:housenumber": "2",
         "addr:street": "Hartmannstraße",
         "amenity": "music_school",
-        "check_date": "2023-05-14",
+        "check_date": "2025-08-07",
         "check_date:opening_hours": "2024-04-12",
         "email": "info@musikakademie-aachen.de",
         "name": "Musik & Kunst Akademie",
@@ -13431,10 +13605,12 @@
         "addr:housenumber": "3",
         "addr:street": "Lagerhausstraße",
         "amenity": "music_school",
-        "check_date": "2023-05-14",
+        "check_date": "2025-05-24",
+        "check_date:opening_hours": "2025-05-24",
         "description": "Violin & Piano; Education, Coaching, Composition, Entertainment",
         "email": "office@music-dreams.de",
         "name": "Music-Dreams",
+        "opening_hours": "\"by appointment\"",
         "operator": "Ira Darsa",
         "phone": "+49 179 5055218",
         "source": "survey",
@@ -13476,7 +13652,7 @@
         "@id": "node/10896929695",
         "addr:housenumber": "81",
         "addr:street": "Franzstraße",
-        "check_date": "2023-05-17",
+        "check_date": "2025-07-22",
         "healthcare": "psychotherapist",
         "name": "Psychotherapeutische Praxisgemeinschaft",
         "operator": "Julia Baron;Sinika Ellendt-Moonen",
@@ -13601,7 +13777,9 @@
         "addr:postcode": "52062",
         "addr:street": "Peterstraße",
         "amenity": "cafe",
+        "indoor_seating": "yes",
         "name": "Eiscafè Del Mondo",
+        "outdoor_seating": "yes",
         "wheelchair": "limited"
       },
       "geometry": {
@@ -13653,7 +13831,7 @@
         "amenity": "bar",
         "indoor_seating": "yes",
         "name": "Nika's Bar",
-        "opening_hours": "Su-Th 19:00-02:00; Fr-Sa 19:00-04:00",
+        "opening_hours": "Tu-Th 18:00-01:00, Fr,Sa 18:00-04:00",
         "outdoor_seating": "no",
         "website": "http://www.nikas-bar.com/"
       },
@@ -13665,28 +13843,6 @@
         ]
       },
       "id": "node/11203208437"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/11220477543",
-        "addr:city": "Aachen",
-        "addr:postcode": "52064",
-        "addr:street": "Löhergraben",
-        "amenity": "cafe",
-        "name": "Vers - Literaturcafé",
-        "note": "Ab 4. Mai 2024 hat das Café an vier Tagen die Woche im Regulärbetrieb geöffnet. https://cafe-vers.com/event/grand-opening-cafe-vers/",
-        "opening_hours": "Tu-Sa 10:00-22:00",
-        "website": "https://www.barockfabrik-aachen.de/aktuelles.html"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.079304,
-          50.7726681
-        ]
-      },
-      "id": "node/11220477543"
     },
     {
       "type": "Feature",
@@ -13740,7 +13896,7 @@
         "addr:postcode": "52064",
         "addr:street": "Jakobstraße",
         "name": "Biomarkt Vital",
-        "opening_hours": "Mo-Fr 10:00-18:00; Sa 09:00-14:00; Su,PH off",
+        "opening_hours": "Mo-Fr 10:00-18:00; Sa 09:00-14:00",
         "operator": "Felix Matterne",
         "organic": "only",
         "phone": "+49 241 5687890",
@@ -13851,8 +14007,10 @@
         "addr:postcode": "52062",
         "addr:street": "Kleinmarschierstraße",
         "amenity": "pub",
+        "indoor_seating": "yes",
         "name": "Cafe & Bistro Vis à Vis",
         "opening_hours": "Mo-Su 00:00-05:00,16:00-24:00; Tu-Fr 00:00-03:00,16:00-24:00",
+        "outdoor_seating": "yes",
         "smoking": "dedicated",
         "wheelchair": "limited"
       },
@@ -14146,12 +14304,14 @@
         "brand:wikidata": "Q37158",
         "brand:wikipedia": "en:Starbucks",
         "cuisine": "coffee_shop",
+        "indoor_seating": "yes",
         "int_name": "Starbucks",
         "internet_access": "wlan",
         "internet_access:fee": "no",
         "name": "Starbucks",
         "official_name": "Starbucks Coffee",
         "opening_hours": "Mo-Th 07:30-21:00; Fr 07:30-22:00; Sa 08:30-22:00; Su 09:00-21:00",
+        "outdoor_seating": "yes",
         "takeaway": "yes",
         "toilets:wheelchair": "no",
         "website": "https://www.starbucks.com/store-locator/store/1018873/aachen-markt-markt-35-aachen-nw-52062-de",
@@ -14320,8 +14480,10 @@
       "properties": {
         "@id": "node/12069462765",
         "amenity": "dentist",
+        "check_date:opening_hours": "2025-09-13",
         "healthcare": "dentist",
-        "name": "Dr. Mihaela Joana-Rullmann"
+        "name": "Dr. Mihaela Joana-Rullmann",
+        "opening_hours:signed": "no"
       },
       "geometry": {
         "type": "Point",
@@ -14403,10 +14565,18 @@
       "type": "Feature",
       "properties": {
         "@id": "node/12069927151",
+        "addr:city": "Aachen",
+        "addr:housenumber": "15",
+        "addr:postcode": "52062",
+        "addr:street": "Münsterplatz",
         "amenity": "ice_cream",
+        "check_date": "2025-07-14",
+        "coffee:brand": "Dersut",
+        "indoor_seating": "no",
         "name": "Eiscafé Tasin",
         "note": "Italienisches Eis | Betreiber Mauro Tasin",
-        "opening_hours": "Mo-Sa 10:00-20:00, Su,PH 13:00-20:00"
+        "opening_hours": "Mo-Sa 10:00-20:00, Su,PH 13:00-20:00",
+        "outdoor_seating": "yes"
       },
       "geometry": {
         "type": "Point",
@@ -14443,12 +14613,18 @@
       "properties": {
         "@id": "node/12090667501",
         "addr:city": "Aachen",
+        "addr:housenumber": "61",
         "addr:postcode": "52064",
         "addr:street": "Rosstraße",
         "amenity": "cafe",
+        "branch": "Leni liebt Kaffee",
         "cuisine": "coffee_shop;cake",
-        "name": "LENI LIEBT KAFFEE",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Leni liebt Kaffee",
         "opening_hours": "Mo-Fr 10:00-19:00; Sa-Su 09:00-20:00",
+        "outdoor_seating": "yes",
         "phone": "+49 241 51003620",
         "website": "https://leniliebtkaffee.de",
         "website:menu": "https://leniliebtkaffee.de/karte/"
@@ -14540,9 +14716,11 @@
         "addr:postcode": "52064",
         "addr:street": "Reumontstraße",
         "amenity": "doctors",
+        "brand": "Caritas",
+        "brand:wikidata": "Q29508174",
         "check_date": "2024-08-26",
         "healthcare": "doctor",
-        "name": "Caritas Medizinische Ambulanz",
+        "name": "Medizinische Ambulanz",
         "opening_hours": "Mo-Fr 09:30-12:30; Sa,Su,PH off",
         "operator": "Caritasverband für die Regionen Aachen-Stadt und Aachen-Land e.V.",
         "website": "https://caritas-aachen.de/angebote/wohnen-existenz/cafe-plattform/medizinische-ambulanz/"
@@ -14702,9 +14880,15 @@
         "addr:postcode": "52066",
         "addr:street": "Krugenofen",
         "amenity": "cafe",
+        "contact:instagram": "contact:instagram=https://www.instagram.com/danastassio/",
+        "cuisine": "coffee_shop",
+        "description": "Lokale Kaffeerösterei mit Café, Abholstation, und Werksverkauf.",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
         "name": "d‘Anastassio Kaffeerösterei",
-        "opening_hours": "We-Fr 12:00-18:00",
-        "website": "https://www.danastassio.coffee/"
+        "opening_hours": "Fr-Sa 12:00-18:00",
+        "outdoor_seating": "no",
+        "website": "https://danastassio-aachen.de/"
       },
       "geometry": {
         "type": "Point",
@@ -14874,28 +15058,6 @@
         ]
       },
       "id": "node/12480385404"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/12487407203",
-        "addr:city": "Aachen",
-        "addr:housenumber": "10",
-        "addr:postcode": "52062",
-        "addr:street": "Büchel",
-        "amenity": "bar",
-        "email": "BraucheTisch@LaKaschemme.de",
-        "mobile": "+49 175 4186493",
-        "name": "La Kaschemme - Die Pop Up Bar"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0849624,
-          50.776181
-        ]
-      },
-      "id": "node/12487407203"
     },
     {
       "type": "Feature",
@@ -15167,7 +15329,7 @@
         "healthcare:speciality": "orthopaedics",
         "level": "1",
         "name": "Dr. med. A. Kochs und Dr. med. H. Rode",
-        "opening_hours": "Mo-Fr 09:00-11:00; Mo,Di,Do 15:00-16:00",
+        "opening_hours": "Mo,Tu,Th 09:00-11:00, 15:00-16:00; We,Fr 09:00-11:00; Sa,Su,PH off",
         "phone": "+49 241 17029"
       },
       "geometry": {
@@ -15190,7 +15352,7 @@
         "amenity": "doctors",
         "healthcare": "doctor",
         "name": "Mansureh Rezaeitabar",
-        "opening_hours": "nach Vereinbarung",
+        "opening_hours": "\"nach Vereinbarung\"",
         "phone": "+49 241 91615015",
         "website": "https://www.privatpraxis-laurensberg.de/"
       },
@@ -15214,6 +15376,7 @@
         "healthcare": "psychotherapist",
         "healthcare:speciality": "psychotherapist",
         "name": "Thomas Kleinen-Bassy, Julia Schmidt, Christina Baum",
+        "opening_hours": "\"nach Vereinbarung\"",
         "phone": "+49 241 95498719",
         "website": "https://www.kleinen-bassy.de/"
       },
@@ -15237,7 +15400,7 @@
         "healthcare": "physiotherapist",
         "level": "2",
         "name": "Roeb",
-        "opening_hours": "nach Vereinbarung",
+        "opening_hours": "\"nach Vereinbarung\"",
         "phone": "+49 241 1893999"
       },
       "geometry": {
@@ -15306,6 +15469,362 @@
         ]
       },
       "id": "node/12666391281"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12728168815",
+        "addr:city": "Aachen",
+        "addr:postcode": "52062",
+        "addr:street": "Dahmengraben",
+        "amenity": "cafe",
+        "image": "https://archive.ph/vLK57/b27a435c756120d7e8c24437239ddaac34eb01c0.jpg",
+        "name": "Crossy & Cream",
+        "note": "https://archive.ph/vLK57",
+        "opening_hours": "Mo-Su 12:00-20:00",
+        "website": "https://crossyandcream.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0881759,
+          50.7764424
+        ]
+      },
+      "id": "node/12728168815"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12729497041",
+        "amenity": "doctors",
+        "contact:website": "https://hausaerztinnen-im-zentrum.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Hausärztliche Gemeinschaftspraxis Dr. med. Christina Fritz & Dr. med. Britta Smets"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0760847,
+          50.7728808
+        ]
+      },
+      "id": "node/12729497041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12733275706",
+        "addr:city": "Aachen",
+        "addr:housenumber": "80",
+        "addr:postcode": "52062",
+        "addr:street": "Theaterstraße",
+        "alt_name": "Cafe Sinn",
+        "amenity": "cafe",
+        "name": "Cafésinn",
+        "opening_hours": "Mo-Fr 09:00-15:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0927089,
+          50.770278
+        ]
+      },
+      "id": "node/12733275706"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12747619057",
+        "addr:city": "Aachen",
+        "addr:housenumber": "34",
+        "addr:postcode": "52066",
+        "addr:street": "Martelenberger Weg",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "image": "https://www.kinderaerztin-steinau.de/wp-content/uploads/2022/10/steinau-praxis.jpg",
+        "name": "Brit Steinau",
+        "website": "https://www.kinderaerztin-steinau.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0787643,
+          50.7489842
+        ]
+      },
+      "id": "node/12747619057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12857183847",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Praxis Kattan",
+        "opening_hours": "Mo-Fr 08:30-12:00, Mo,Th 15:00-18:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0996899,
+          50.7793812
+        ]
+      },
+      "id": "node/12857183847"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12957223695",
+        "addr:city": "Aachen",
+        "addr:housenumber": "45",
+        "addr:postcode": "52064",
+        "addr:street": "Römerstraße",
+        "check_date": "2025-06-20",
+        "healthcare": "podiatrist",
+        "name": "Podologie Praxis Podo-X by Baxevanis Elena",
+        "phone": "+49241 99771088"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0939789,
+          50.7688542
+        ]
+      },
+      "id": "node/12957223695"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12994133945",
+        "amenity": "marketplace",
+        "name": "Wochenmarkt Frankenberger Viertel",
+        "opening_hours": "Sa 07:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1062741,
+          50.7684411
+        ]
+      },
+      "id": "node/12994133945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13004566097",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "52072",
+        "addr:street": "Grünenthal",
+        "amenity": "cafe",
+        "contact:phone": "+49 241 9571617",
+        "name": "naturverbunden",
+        "opening_hours": "Fr-Su 11:00-17:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0492964,
+          50.8109732
+        ]
+      },
+      "id": "node/13004566097"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13058655307",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "36",
+        "addr:postcode": "52062",
+        "addr:street": "Büchel",
+        "amenity": "pub",
+        "name": "Die Kiste",
+        "opening_hours": "Fr-Sa 20:00-02:00; Mo-Th 20:00-01:00",
+        "phone": "+49 241 401 1079",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0867175,
+          50.7757706
+        ]
+      },
+      "id": "node/13058655307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13058655308",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "52062",
+        "addr:street": "Holzgraben",
+        "amenity": "pub",
+        "check_date:opening_hours": "2023-08-06",
+        "indoor_seating": "yes",
+        "name": "König City",
+        "opening_hours": "Mo-Fr,Su 09:00-06:00, Sa,PH 09:00-07:00",
+        "outdoor_seating": "yes",
+        "smoking": "outside",
+        "website": "https://koenig-city.com/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0872056,
+          50.7751299
+        ]
+      },
+      "id": "node/13058655308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13094380576",
+        "addr:city": "Aachen",
+        "addr:housenumber": "191",
+        "addr:street": "Eupener Straße",
+        "amenity": "ice_cream",
+        "contact:email": "kontakt@tiana-eis.de",
+        "contact:phone": "+49 241 91992342",
+        "name": "Eismanufaktur Tiana",
+        "opening_hours": "10:00-21:00",
+        "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0865159,
+          50.7512108
+        ]
+      },
+      "id": "node/13094380576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13158401890",
+        "addr:city": "Aachen",
+        "addr:postcode": "52064",
+        "addr:street": "Löhergraben",
+        "amenity": "cafe",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Vers - Literaturcafé",
+        "note": "Ab 4. Mai 2024 hat das Café an vier Tagen die Woche im Regulärbetrieb geöffnet. https://cafe-vers.com/event/grand-opening-cafe-vers/",
+        "opening_hours": "Tu-Sa 10:00-22:00",
+        "outdoor_seating": "yes",
+        "type": "multipolygon",
+        "website": "https://cafe-vers.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0793132,
+          50.7726315
+        ]
+      },
+      "id": "node/13158401890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13175207110",
+        "brand": "Rewe",
+        "brand:wikidata": "Q16968817",
+        "name": "Rewe Express",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1047072,
+          50.7796661
+        ]
+      },
+      "id": "node/13175207110"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13177457502",
+        "addr:housenumber": "56",
+        "addr:postcode": "52066",
+        "addr:street": "Viktoriastraße",
+        "amenity": "cafe",
+        "contact:instagram": "cafe.soleil.aachen",
+        "name": "Café Soleil",
+        "opening_hours": "Tu-Sa 10:00-19:30; Su 10:00-16:30",
+        "website": "https://www.instagram.com/cafe.soleil.aachen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1070946,
+          50.772168
+        ]
+      },
+      "id": "node/13177457502"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13185024601",
+        "addr:housenumber": "1-3",
+        "addr:street": "Löhergraben",
+        "amenity": "bar",
+        "contact:instagram": "queenspubac",
+        "name": "Queens Pub"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0801108,
+          50.7723675
+        ]
+      },
+      "id": "node/13185024601"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13198084911",
+        "addr:city": "Aachen",
+        "addr:postcode": "52062",
+        "addr:street": "Büchel",
+        "amenity": "cafe",
+        "check_date": "2025-10-06",
+        "cuisine": "cake;tea;pancake;pastry;bistro;milchshakes;softeis",
+        "description": "Im Stil eines US-Diners der 50er Jahre öffnet Antons Milchbar.\nhttps://archive.ph/ickqw",
+        "name": "Antons Milchbar",
+        "opening_hours": "Tu-Sa 12:00-20:00",
+        "phone": "+49 241 88808082"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0866183,
+          50.7757249
+        ]
+      },
+      "id": "node/13198084911"
     }
   ]
 }
