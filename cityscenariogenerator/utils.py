@@ -19,6 +19,27 @@ import numpy
 LOGFILENAME = "log.txt"
 
 
+def replace_umlauts(s: str) -> str:
+    """Replaces any German umlauts in the passed str
+    with their common replacements.
+
+    :param s: the str to adapt
+    :return: the adapted str without umlauts
+    """
+    umlaut_map = {
+        "ä": "ae",
+        "ö": "oe",
+        "ü": "ue",
+        "Ä": "Ae",
+        "Ö": "Oe",
+        "Ü": "Ue",
+        "ß": "ss",
+    }
+    for k, v in umlaut_map.items():
+        s = s.replace(k, v)
+    return s
+
+
 def slugify(value, allow_unicode=False):
     """
     Taken from https://github.com/django/django/blob/master/django/utils/text.py
@@ -31,8 +52,8 @@ def slugify(value, allow_unicode=False):
     if allow_unicode:
         value = unicodedata.normalize("NFKC", value)
     else:
-        # custom replacement for street names
-        value = value.replace("ß", "ss")
+        # custom replacement for umlauts
+        value = replace_umlauts(value)
 
         value = (
             unicodedata.normalize("NFKD", value)
