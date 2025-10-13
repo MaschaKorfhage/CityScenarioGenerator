@@ -11,7 +11,7 @@
         "female": 17015,
         "male": 17194
     },
-    "comment to employment": "the values are only for people of 15 years and older, therefore only 29360 in total",
+    "comment to employment 15+": "the values are only for people of 15 years and older, therefore only 29370 in total",
     "employment_categories_15+": {
         "employed": 16690,
         "student": 1850,
@@ -24,6 +24,27 @@
         "employed_female": 7640,
         "student_male": 1190,
         "student_female": 670,
+        "unemployed_male": 570,
+        "unemployed_female": 580,
+        "retired_male": 3280,
+        "retired_female": 4100,
+        "other_male": 650,
+        "other_female": 1650
+    },
+    "comment to employment": "as the original data is only for people of 15 years and older, the missing 4838 persons were added to the student category",
+    "employment_categories": {
+        "employed": 16690,
+        "student": 6688,
+        "unemployed": 1150,
+        "retired": 7380,
+        "other": 2300
+    },
+    "comment to employment_sex": "the gender distribution for <16 from the age categories was used to split the missing persons into male/female students",
+    "employment_sex": {
+        "employed_male": 9050,
+        "employed_female": 7640,
+        "student_male": 3785,
+        "student_female": 2903,
         "unemployed_male": 570,
         "unemployed_female": 580,
         "retired_male": 3280,
