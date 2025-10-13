@@ -13,6 +13,9 @@ from cityscenariogenerator.scenario_params import ScenarioParams
 #: key for the label string in the validation data JSON files
 LABEL_KEY = "label"
 
+#: label for the generated scenario data
+SCENARIO_LABEL = "Generiertes Szenario"
+
 
 def plot_population_measure_stacked_bars(
     plot_result_dir: Path, measure: str, data: pd.DataFrame
@@ -22,6 +25,7 @@ def plot_population_measure_stacked_bars(
     ax.set_ylabel("Number of persons")
     data.T.plot(kind="bar", stacked=True, ax=ax)
     ax.tick_params(axis="x", labelrotation=0)
+    ax.legend(loc="lower right")
     fig.tight_layout()
     fig.savefig(plot_result_dir / f"{measure}.svg")
 
@@ -90,7 +94,7 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
         extra_data = extra_validation_stats.get(measure)
 
         # build a dataframe out of the available validation and scenario data
-        data_dict = {label_val: validation, "Scenario": scenario_stats[measure]}
+        data_dict = {label_val: validation, SCENARIO_LABEL: scenario_stats[measure]}
         if extra_data:
             data_dict[label_val2] = extra_data
         data = pd.DataFrame(data_dict)
