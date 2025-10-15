@@ -34,13 +34,23 @@ class LPGCityConfig:
             raise Exception(f"Target directory was not empty: {path}")
         self.create_house_config_files(path / "houses")
         self.create_global_city_config_file(path)
+        self.create_house_coordinates_dict(path)
 
     def create_house_config_files(self, path: Path):
+        """Creates all house config files for the LoadProfileGenerator.
+
+        :param path: the directory to store the house files in
+        """
         path.mkdir(parents=True, exist_ok=True)
         for id, hcj in self.houses.items():
             LPGCityConfig.create_lpg_object_config_file(path, id, hcj)
 
     def create_global_city_config_file(self, path: Path):
+        """Creates the city config file containing all POIs and optionally
+        travel data.
+
+        :param path: the directory to save the file to
+        """
         filename = path / "city.json"
         assert self.city.TravelDefinition is not None, "TravelDefinition is not set"
         if self.city.TravelDefinition.TimeSlotRouteLists:
@@ -51,6 +61,18 @@ class LPGCityConfig:
         city_data = self.city.to_json(indent=4)  # type: ignore
         with open(filename, "w", encoding="utf8") as f:
             f.write(city_data)
+
+    def create_house_coordinates_dict(self, path: Path):
+        """Creates a JSON file containing every house and its coordinates.
+
+        :param path: path of the scenario directory
+        """
+        house_coordinates = {
+            id: house.House.Coordinates.to_dict()  # type: ignore
+            for id, house in self.houses.items()
+        }
+        with open(path / "house_coordinates.json", "w", encoding="utf8") as f:
+            json.dump(house_coordinates, f, indent=4)
 
     @staticmethod
     def create_lpg_object_config_file(path: Path, id: str, house: Any):
