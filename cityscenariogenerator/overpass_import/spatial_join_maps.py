@@ -70,9 +70,9 @@ def show_osm_builda_join_on_map():
 
     # load custom POIs
     poi_path = f"scenario_inputs/{city}/custom_pois_dasörtliche.json"
-    poi_df_oe = osm_data_join.load_custom_poi_geodf(poi_path)
+    poi_df_oe = geoutils.load_custom_poi_geodf(poi_path)
     poi_path = f"scenario_inputs/{city}/custom_pois_dastelefonbuch.json"
-    poi_df_tb = osm_data_join.load_custom_poi_geodf(poi_path)
+    poi_df_tb = geoutils.load_custom_poi_geodf(poi_path)
 
     # load BUILDA data
     builda_query = {

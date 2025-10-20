@@ -1,14 +1,28 @@
 """Distance calculations for city scenario generation"""
 
+import functools
+
 import geopy.distance
 from pylpg import lpgdata
 
-import functools
+from cityscenariogenerator import geoutils
+
+
+def calc_distances(
+    houses: dict[str, lpgdata.HouseCreationAndCalculationJob],
+    pois: dict[str, lpgdata.PointOfInterestData],
+):
+    house_df = geoutils.housejob_to_geodf(houses)
+    poi_df = geoutils.pois_to_geodf(pois)
 
 
 class DistanceCalculator:
-    def __init__(self) -> None:
-        pass
+    def __init__(
+        self,
+        houses: dict[str, lpgdata.HouseCreationAndCalculationJob],
+        pois: dict[str, lpgdata.PointOfInterestData],
+    ) -> None:
+        self.distances = calc_distances(houses, pois)
 
     @functools.lru_cache
     def calc_distance_in_km(

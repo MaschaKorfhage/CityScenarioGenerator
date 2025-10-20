@@ -154,9 +154,10 @@ class LPGConfigCreator:
         self.global_city_definition.TravelDefinition = lpgdata.TravelDefinition()
         self.nonresidential_buildings = 0
         self.excluded_nonres_buildings = 0
+
         #: # probabilities for residential POIs; are initialized during POI choice
         self.residential_buildings: ResidentialBuildingList | None = None
-        self.distcalc = distances.DistanceCalculator()
+        self.distcalc: distances.DistanceCalculator | None = None
 
     def _select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -338,6 +339,7 @@ class LPGConfigCreator:
         person: lpgdata.PersonData,
         coordinates: lpgdata.Coordinates,
     ) -> dict[str, float]:
+        assert self.distcalc is not None
         poi_weights: dict[str, float] = {}
         # select POIs of every available type
         for location, poi_ids in self.poi_ids_by_type.items():
@@ -460,8 +462,9 @@ class LPGConfigCreator:
             raise Exception("No POIs have been added yet.")
         self.check_location_availability()
         self._calc_residential_poi_probabilities()
+        self.distcalc = distances.DistanceCalculator(self.houses, self.pois)
 
-        logging.info("Creating POI preferences for all persons")
+        logging.info("Creating POI preferences for all persons.")
         all_relevant_pois = {}
         for id, hcj in tqdm(self.houses.items()):
             assert hcj.House is not None and hcj.House.Coordinates is not None
@@ -506,6 +509,7 @@ class LPGConfigCreator:
         transportation_device: lpgdata.JsonReference = lpgdata.TransportationDeviceCategories.Bus_Category,
     ) -> None:
         """Creates simple dummy routes from every POI to every other one, if they don't exist yet"""
+        assert self.distcalc is not None
         # relevant sites for this person are all of their POIs and their home
         sites = list(pois) + [house_id]
         for poi_id_start in sites:

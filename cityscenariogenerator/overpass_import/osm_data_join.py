@@ -18,7 +18,6 @@ from builda_client.dev_model import (
     Coordinates,
 )  # type: ignore
 import pandas as pd
-from pylpg import lpgdata
 
 from cityscenariogenerator import utils
 from cityscenariogenerator import geoutils
@@ -114,14 +113,6 @@ def load_location_work_mapping() -> dict[str, list[str]]:
     mapping_file = DATA_DIR / "location_work_mapping.json"
     with open(mapping_file, "r", encoding="utf8") as f:
         return json.load(f)
-
-
-def load_custom_poi_geodf(poi_path: Path | str):
-    with open(poi_path, "r", encoding="utf8") as f:
-        json_str = f.read()
-        city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
-    poi_df_oe = geoutils.pois_to_geodf(city_data.PointsOfInterest)
-    return poi_df_oe
 
 
 def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
@@ -524,7 +515,9 @@ def add_osm_location_types(
     custom_poi_type = "Doctors Office"
     custom_poi_dir = params.specific_poi_sources_dir() / custom_poi_type
     assert custom_poi_dir.is_dir(), f"Missing additional POI data: {custom_poi_dir}"
-    custom_poi_dfs = [load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()]
+    custom_poi_dfs = [
+        geoutils.load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()
+    ]
     poi_dfs = [overpass_df] + custom_poi_dfs
 
     # determine the LPG location type for each OSM node and custom POI ID
