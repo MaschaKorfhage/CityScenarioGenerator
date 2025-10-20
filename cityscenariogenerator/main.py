@@ -1,5 +1,6 @@
 """Generates a city scenario for the LPG from BUILDA data"""
 
+import argparse
 import logging
 from datetime import datetime
 from pathlib import Path
@@ -43,7 +44,7 @@ def create_configs_from_buildings(
     config_creator.create_poi_preferences()
 
     # create random routes for testing
-    config_creator.create_routes_for_testing()
+    # config_creator.create_routes_for_testing()
 
     # set additional parameters
     assert config_creator.global_city_definition.TravelDefinition, (
@@ -107,14 +108,58 @@ def create_city_scenario(
 
 
 def main():
-    builda_query = {"city": "Jülich", "postcode": "", "street": ""}
-    scenario_dir = Path("./scenarios")
-    lpg_result_dir = Path("C:/LPG/Results")
-    scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
+    # define CLI arguments
+    parser = argparse.ArgumentParser(
+        description="Generates city scenarios for the LoadProfileGenerator city simulation.\n"
+        'Usage example: python cityscenariogenerator/main.py -city "Jülich" -street "Große Rurstr."'
+    )
+    parser.add_argument(
+        "-o",
+        "--output",
+        type=str,
+        help="Root path for the created scenario directory",
+        default="scenarios",
+        required=False,
+    )
+    parser.add_argument(
+        "-l",
+        "--lpg",
+        type=str,
+        help="Result path for the city simulation (can be adapted in calcspec.json)",
+        default="city_simulation_results",
+        required=False,
+    )
+    parser.add_argument(
+        "-c",
+        "--city",
+        type=str,
+        help="City name for the BUILDA query",
+        default="",
+        required=False,
+    )
+    parser.add_argument(
+        "-p",
+        "--postcode",
+        type=str,
+        help="Postcode for the BUILDA query",
+        default="",
+        required=False,
+    )
+    parser.add_argument(
+        "-s",
+        "--street",
+        type=str,
+        help="Street name for the BUILDA query (abbreviate 'Straße' as 'Str.')",
+        default="",
+        required=False,
+    )
+    args = parser.parse_args()
 
-    # for the cluster
-    scenario_dir = Path("/fast/central/projects/2022-d-neuroth-phd/city_scenarios")
-    lpg_result_dir = Path("/fast/central/projects/2022-d-neuroth-phd/results/")
+    # collect parameters
+    builda_query = {"city": args.city, "postcode": args.postcode, "street": args.street}
+    scenario_dir = Path(args.output)
+    lpg_result_dir = Path(args.lpg)
+    scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
 
     create_city_scenario(builda_query, scenario_dir, lpg_result_dir, scenario_adapt_dir)
 
