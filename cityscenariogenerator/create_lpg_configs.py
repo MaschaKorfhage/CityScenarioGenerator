@@ -2,13 +2,11 @@
 
 from collections import defaultdict
 from dataclasses import dataclass
-import functools
 import itertools
 import logging
 from pathlib import Path
 import random
 from typing import Iterable
-import geopy.distance  # type: ignore
 import numpy
 from tqdm import tqdm  # type: ignore
 from pylpg import lpgdata
@@ -22,6 +20,7 @@ from cityscenariogenerator.lpg_locations import (
 from cityscenariogenerator import (
     create_lpg_configs,
     deterrence,
+    distances,
     poi_type_mapping,
     scenario_statistics,
     household_data,
@@ -51,15 +50,6 @@ def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
     ]
     # adapt the household template names to fit to the usual
     return {k: list(g) for k, g in itertools.groupby(persons, lambda p: p.TemplateName)}
-
-
-@functools.lru_cache
-def calc_distance_in_km(c1: lpgdata.Coordinates, c2: lpgdata.Coordinates) -> float:
-    """Calculates the distance between two sets of coordinates in km"""
-    p1 = (c1.Latitude, c1.Longitude)
-    p2 = (c2.Latitude, c2.Longitude)
-    dist = geopy.distance.distance(p1, p2)
-    return dist.m / 1000  # convert to km
 
 
 def convert_coordinates(coordinates: builda.Coordinates) -> lpgdata.Coordinates:
@@ -166,6 +156,7 @@ class LPGConfigCreator:
         self.excluded_nonres_buildings = 0
         #: # probabilities for residential POIs; are initialized during POI choice
         self.residential_buildings: ResidentialBuildingList | None = None
+        self.distcalc = distances.DistanceCalculator()
 
     def _select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -216,6 +207,9 @@ class LPGConfigCreator:
         )
 
     def add_lpg_house(self, building: household_data.BuildingData) -> lpgdata.HouseData:
+        assert self.residential_buildings is None, (
+            "Cannot add more houses after setting POI preferences"
+        )
         if building.id in self.houses:
             raise Exception(f"Encountered a duplicate building ID: {building.id}")
 
@@ -262,6 +256,9 @@ class LPGConfigCreator:
     def add_poi(
         self, building_with_type: poi_type_mapping.BuildingWithLocationType
     ) -> None:
+        assert self.residential_buildings is None, (
+            "Cannot add more POIs after setting POI preferences"
+        )
         building = building_with_type.building
         if building.id in self.pois:
             raise Exception(
@@ -351,7 +348,9 @@ class LPGConfigCreator:
             size = min(size, len(poi_ids))
             # calculate distances to all POIs of this type
             distances = {
-                p: calc_distance_in_km(coordinates, self.pois[p].Coordinates)
+                p: self.distcalc.calc_distance_in_km(
+                    coordinates, self.pois[p].Coordinates
+                )
                 for p in poi_ids
             }
 
@@ -523,7 +522,7 @@ class LPGConfigCreator:
                     poi_id_end, house_coordinates, house_id
                 )
                 # calculate the distance of the route
-                dist = calc_distance_in_km(start, end)
+                dist = self.distcalc.calc_distance_in_km(start, end)
                 category_key = LPGConfigCreator.TRANS_DEVICE_CATEGORY_MAP[
                     transportation_device.Name
                 ]
