@@ -1,10 +1,9 @@
-"""Generates a city scenario for the LPG from BUILDA data"""
+"""Generates a city scenario for the LoadProfileGenerator from ETHOS.BUILDA data."""
 
 import argparse
 import logging
 from datetime import datetime
 from pathlib import Path
-
 
 from cityscenariogenerator import (
     builda_client_import,
@@ -12,48 +11,13 @@ from cityscenariogenerator import (
     scenario_params,
     utils,
 )
-from cityscenariogenerator.household_data import BuildingData
-from cityscenariogenerator.scenario_params import ScenarioParams
+from cityscenariogenerator.create_lpg_configs import create_configs_from_buildings
 from cityscenariogenerator.nonresidential_building_import import (
     import_nonresidential_buildings_from_builda,
 )
-from cityscenariogenerator.poi_type_mapping import BuildingWithLocationType
 from cityscenariogenerator.residential_building_import import (
     import_residential_buildings_from_builda,
 )
-
-
-def create_configs_from_buildings(
-    params: ScenarioParams,
-    res_buildings: list[BuildingData],
-    nonres_buildings: dict[str, BuildingWithLocationType],
-):
-    config_creator = create_lpg_configs.LPGConfigCreator(params)
-    # create a POI config for each nonresidential building
-    for nonres_building in nonres_buildings.values():
-        config_creator.add_poi(nonres_building)
-
-    # create an LPG house config for each residential building
-    for building in res_buildings:
-        config_creator.add_lpg_house(building)
-
-    # load custom POIs for this scenario
-    config_creator.load_and_add_custom_pois()
-
-    # determine which POIs each person visits
-    config_creator.create_poi_preferences()
-
-    # create random routes for testing
-    # config_creator.create_routes_for_testing()
-
-    # set additional parameters
-    assert config_creator.global_city_definition.TravelDefinition, (
-        "TravelDefinition not set"
-    )
-    config_creator.global_city_definition.TravelDefinition.MinimumDrivingAge = 18
-
-    # create config files for all created objects
-    config_creator.create_config_files()
 
 
 def create_city_scenario(
@@ -63,6 +27,15 @@ def create_city_scenario(
     scenario_adapt_dir: Path | None = None,
     db_file_path: str = "",
 ):
+    """Generates a city scenario for the LoadProfileGenerator.
+
+    :param builda_query: buidling query for ETHOS.BUILDA
+    :param scenario_directory: output directory to save the scenario in
+    :param lpg_result_dir: result directory to configure for the city simulation
+    :param scenario_adapt_dir: optional building scenario directory, defaults to None
+    :param db_file_path: custom LPG database path, if requried; defaults to ""
+    :raises Exception: if the scenario generation failed for any reason
+    """
     start = datetime.now()
     # determine the output directory
     query_str = utils.descriptive_query_text(builda_query)

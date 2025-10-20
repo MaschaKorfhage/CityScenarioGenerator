@@ -14,11 +14,13 @@ from tqdm import tqdm  # type: ignore
 from pylpg import lpgdata
 from builda_client import dev_client as builda  # type: ignore
 
+from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.lpg_locations import (
     LpgLocations,
     location_to_omod_activity_type,
 )
 from cityscenariogenerator import (
+    create_lpg_configs,
     deterrence,
     poi_type_mapping,
     scenario_statistics,
@@ -30,6 +32,7 @@ from cityscenariogenerator.plots import (
     poi_numbers,
     population_comparison,
 )
+from cityscenariogenerator.poi_type_mapping import BuildingWithLocationType
 from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.city_config import LPGCityConfig
 
@@ -658,3 +661,42 @@ class LPGConfigCreator:
         building_map_interactive.map_locations_plot_html(all_pois, path)
         population_comparison.population_statistics(self.params, path)
         poi_numbers.plot_poi_numbers(self.params, path)
+
+
+def create_configs_from_buildings(
+    params: ScenarioParams,
+    res_buildings: list[BuildingData],
+    nonres_buildings: dict[str, BuildingWithLocationType],
+):
+    """Main function for creating an LPG scenario with the LPGConfigCreator.
+
+    :param params: scenario parameter object
+    :param res_buildings: list of residential buildings to configure for the LPG
+    :param nonres_buildings: list of non-residential buildings to use as POIs
+    """
+    config_creator = create_lpg_configs.LPGConfigCreator(params)
+    # create a POI config for each nonresidential building
+    for nonres_building in nonres_buildings.values():
+        config_creator.add_poi(nonres_building)
+
+    # create an LPG house config for each residential building
+    for building in res_buildings:
+        config_creator.add_lpg_house(building)
+
+    # load custom POIs for this scenario
+    config_creator.load_and_add_custom_pois()
+
+    # determine which POIs each person visits
+    config_creator.create_poi_preferences()
+
+    # create random routes for testing
+    config_creator.create_routes_for_testing()
+
+    # set additional parameters
+    assert config_creator.global_city_definition.TravelDefinition, (
+        "TravelDefinition not set"
+    )
+    config_creator.global_city_definition.TravelDefinition.MinimumDrivingAge = 18
+
+    # create config files for all created objects
+    config_creator.create_config_files()
