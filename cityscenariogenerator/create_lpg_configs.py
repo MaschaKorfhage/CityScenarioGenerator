@@ -1,6 +1,7 @@
 """Creates configuration files for the LPG out of BuildingData objects generated from BUILDA"""
 
 from collections import defaultdict
+from dataclasses import dataclass
 import functools
 import itertools
 import logging
@@ -107,6 +108,15 @@ def copy_calcspec_file(
         f.write(result_json_str)
 
 
+@dataclass
+class ResidentialBuildingList:
+    """Simple class to store IDs and corresponding weights
+    for sampling residential POIs"""
+
+    ids: list[str]
+    weights: list[float]
+
+
 class LPGConfigCreator:
     ONE_CAR_TRANSPORT_DEVICE_SETS = [
         lpgdata.TransportationDeviceSets.Bus_and_one_30_km_h_Car,
@@ -152,7 +162,7 @@ class LPGConfigCreator:
         self.nonresidential_buildings = 0
         self.excluded_nonres_buildings = 0
         #: # probabilities for residential POIs; are initialized during POI choice
-        self.residential_poi_probs = []
+        self.residential_buildings: ResidentialBuildingList | None = None
 
     def _select_transportation_device_set(
         self, household_data: household_data.HouseholdData
@@ -289,9 +299,11 @@ class LPGConfigCreator:
         """
         # assign POIs of every residential type to the person
         poi_weights = {}
-        all_house_ids = list(self.houses.keys())
-        residential_pois = LpgLocations.RESIDENTIAL.copy()
+        assert self.residential_buildings is not None, (
+            "Residential POIs not initialized yet"
+        )
 
+        residential_pois = LpgLocations.RESIDENTIAL.copy()
         # custom behavior for maids: add the Home location
         if person.PersonName in LPGConfigCreator.MAID_PERSONS:
             residential_pois |= LPGConfigCreator.MAID_LOCATIONS
@@ -300,7 +312,9 @@ class LPGConfigCreator:
             # select a random residential building using a uniform distribution
             num_houses = self._determine_poi_num_for_person()
             selected_houses = numpy.random.choice(
-                all_house_ids, num_houses, p=self.residential_poi_probs
+                self.residential_buildings.ids,
+                num_houses,
+                p=self.residential_buildings.weights,
             )
             for house_id in selected_houses:
                 poi_id = f"{location} {house_id}"
@@ -424,13 +438,18 @@ class LPGConfigCreator:
         """Calculates probabilities for choosing a house as a residential POI
         for activities like visiting a friend.
         """
+        house_ids = list(self.houses.keys())
+        # simplification for better performance: only use part of the houses for residential POIs
+        # house_ids = house_ids[::10]
+
         # weight houses depending on the number of households
-        self.residential_poi_probs = [
-            len(v.House.Households)  # type: ignore
-            for v in self.houses.values()
+        hhs_per_house = [
+            len(self.houses[id].House.Households)  # type: ignore
+            for id in house_ids
         ]
-        total_hh = sum(self.residential_poi_probs)
-        self.residential_poi_probs = [i / total_hh for i in self.residential_poi_probs]
+        total_hh = sum(hhs_per_house)
+        weights = [i / total_hh for i in hhs_per_house]
+        self.residential_buildings = ResidentialBuildingList(house_ids, weights)
 
     def create_poi_preferences(self, include_unused_pois: bool = False) -> None:
         if not self.houses:
