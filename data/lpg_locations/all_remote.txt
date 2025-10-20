@@ -9,9 +9,7 @@ Dance Club
 Cafe
 Singing School
 Walking Location
-Friend's House
 Doctors Office
-Childrens House
 Indoor Swimming Pool
 Local Recreational Area
 Mountain Road
@@ -27,7 +25,6 @@ Soccer Practice Location
 Horse Stable
 Summer Camp
 Musical Society
-Parents House
 Flea Market Location
 Fitness Studio
 Festival Location
@@ -45,3 +42,4 @@ Workplace (shift worker)
 Volunteer Workplace
 Home
 Generic Errand Location
+House of friends or relatives

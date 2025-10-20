@@ -136,6 +136,11 @@ class LPGConfigCreator:
         lpgdata.TransportationDeviceCategories.Walking_Category.Name: "walk",
     }
 
+    # persons that are maids in the LPG and require a special location
+    MAID_PERSONS = {"CHR19 Jenny"}
+    # additional location only for maids
+    MAID_LOCATIONS = {"Home"}
+
     def __init__(self, params: ScenarioParams) -> None:
         self.params = params
         self.houses: dict[str, lpgdata.HouseCreationAndCalculationJob] = {}
@@ -285,7 +290,13 @@ class LPGConfigCreator:
         # assign POIs of every residential type to the person
         poi_weights = {}
         all_house_ids = list(self.houses.keys())
-        for location in LpgLocations.RESIDENTIAL:
+        residential_pois = LpgLocations.RESIDENTIAL.copy()
+
+        # custom behavior for maids: add the Home location
+        if person.PersonName in LPGConfigCreator.MAID_PERSONS:
+            residential_pois |= LPGConfigCreator.MAID_LOCATIONS
+
+        for location in residential_pois:
             # select a random residential building using a uniform distribution
             num_houses = self._determine_poi_num_for_person()
             selected_houses = numpy.random.choice(
@@ -376,7 +387,8 @@ class LPGConfigCreator:
         """
         locations = LpgLocations.NON_RESIDENTIAL
         available = self.poi_ids_by_type.keys()
-        missing = locations - available
+        # special locations are not required for every household
+        missing = locations - available - LpgLocations.SPECIAL
         if missing:
             raise Exception(
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
@@ -452,7 +464,7 @@ class LPGConfigCreator:
                 hh.PointOfInterestPreferences = hh_poi_preferences
 
             # save the relevant POIs for this building in a CityData object
-            hcj.City = lpgdata.CityData(relevant_pois)
+            hcj.City = lpgdata.CityData(PointsOfInterest=relevant_pois)
             all_relevant_pois.update(relevant_pois)
         logging.info(
             f"{len(self.pois) - len(all_relevant_pois)} POIs are not visited by anyone."
