@@ -9,20 +9,20 @@ from dataclasses import dataclass
 import json
 import logging
 from pathlib import Path
-from typing import Iterable, TypeVar
+from typing import TypeVar
 import geopandas as gpd  # type: ignore
 
 from builda_client.dev_model import (
-    Building,
     NonResidentialBuilding,
     Address,
     Coordinates,
 )  # type: ignore
 import pandas as pd
-from shapely import Point  # type: ignore
 from pylpg import lpgdata
 
 from cityscenariogenerator import utils
+from cityscenariogenerator import geoutils
+from cityscenariogenerator.geoutils import GeoDFColumns
 from cityscenariogenerator.household_data import BuildingData
 from cityscenariogenerator.poi_type_mapping import (
     AlkisMapper,
@@ -38,17 +38,6 @@ OVERPASS_DATA_DIR = DATA_DIR / "osm_nonres_buildings"
 
 #: type annotation for DataFrame or GeoDataFrame
 DF = TypeVar("DF", pd.DataFrame, gpd.GeoDataFrame)
-
-
-class DFColumns:
-    """Column names used in GeoDataFrames for handling
-    POI data from different sources."""
-
-    BUILDA_ID = "id_builda"
-    EXT_ID = "id"
-
-    DISTANCE = "distance"
-    CATEGORY = "category"
 
 
 @dataclass(frozen=True)
@@ -127,38 +116,11 @@ def load_location_work_mapping() -> dict[str, list[str]]:
         return json.load(f)
 
 
-def builda_to_geodf(buildings: Iterable[Building | BuildingData]) -> gpd.GeoDataFrame:
-    # store in list to allow iterating multiple times
-    building_list = list(buildings)
-    # Convert to GeoDataFrame
-    geometry = [
-        Point(b.coordinates.longitude, b.coordinates.latitude) for b in building_list
-    ]
-    data = {DFColumns.BUILDA_ID: [b.id for b in building_list]}
-    df = gpd.GeoDataFrame(data, geometry=geometry)
-    df.set_crs("EPSG:4326", inplace=True)
-    return df
-
-
-def pois_to_geodf(pois: dict[str, lpgdata.PointOfInterestData]) -> gpd.GeoDataFrame:
-    geometry = [
-        Point(poi.Coordinates.Longitude, poi.Coordinates.Latitude)  # type: ignore
-        for poi in pois.values()
-    ]
-    data = {
-        DFColumns.EXT_ID: list(pois.keys()),
-        DFColumns.CATEGORY: [str(p.LocationType) for p in pois.values()],
-    }
-    df = gpd.GeoDataFrame(data, geometry=geometry)
-    df.set_crs("EPSG:4326", inplace=True)
-    return df
-
-
 def load_custom_poi_geodf(poi_path: Path | str):
     with open(poi_path, "r", encoding="utf8") as f:
         json_str = f.read()
         city_data: lpgdata.CityData = lpgdata.CityData.from_json(json_str)  # type: ignore
-    poi_df_oe = pois_to_geodf(city_data.PointsOfInterest)
+    poi_df_oe = geoutils.pois_to_geodf(city_data.PointsOfInterest)
     return poi_df_oe
 
 
@@ -172,14 +134,16 @@ def remove_duplicate_matches(df: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
     :return: filtered dataframe
     """
     # filter duplicate matches
-    filtered = df.sort_values(by=DFColumns.DISTANCE).drop_duplicates(
-        subset=[DFColumns.BUILDA_ID], keep="first"
+    filtered = df.sort_values(by=GeoDFColumns.DISTANCE).drop_duplicates(
+        subset=[GeoDFColumns.BUILDA_ID], keep="first"
     )
     logging.info(f"Removed {len(df) - len(filtered)} duplicate OSM matches")
     return filtered
 
 
-def filter_matched(df: pd.DataFrame, df2: pd.DataFrame, col: str = DFColumns.BUILDA_ID):
+def filter_matched(
+    df: pd.DataFrame, df2: pd.DataFrame, col: str = GeoDFColumns.BUILDA_ID
+):
     """
     Extracts only those entries from the first dataframe whose ID is also
     contained in the second dataframe. Uses the specified columns as ID.
@@ -194,7 +158,7 @@ def filter_matched(df: pd.DataFrame, df2: pd.DataFrame, col: str = DFColumns.BUI
 
 
 def filter_not_matched(
-    df1: DF, df2: DF, col1: str = DFColumns.BUILDA_ID, col2: str = ""
+    df1: DF, df2: DF, col1: str = GeoDFColumns.BUILDA_ID, col2: str = ""
 ) -> DF:
     """
     Extracts all entries from the first dataframe whose ID is not
@@ -251,7 +215,7 @@ def map_osm_nodes_to_locations(
     mappings = {key: overpass_query.load_osm_mapping(key) for key in keys}
     work_mapping = load_location_work_mapping()
     osm_node_location_types = {
-        row[DFColumns.EXT_ID]: map_osm_node(mappings, row, work_mapping)
+        row[GeoDFColumns.EXT_ID]: map_osm_node(mappings, row, work_mapping)
         for _, row in data.iterrows()
     }
     return osm_node_location_types
@@ -273,8 +237,8 @@ def map_custom_pois_to_locations(
     work_mapping = load_location_work_mapping()
     for data in custom_poi_dfs:
         for _, row in data.iterrows():
-            nonwork_location = location or row[DFColumns.CATEGORY]
-            custom_poi_locations[row[DFColumns.EXT_ID]] = LocationType(
+            nonwork_location = location or row[GeoDFColumns.CATEGORY]
+            custom_poi_locations[row[GeoDFColumns.EXT_ID]] = LocationType(
                 {nonwork_location}, set(work_mapping[nonwork_location])
             )
     return custom_poi_locations
@@ -290,7 +254,7 @@ def concat_builda_dfs(df1, df2) -> gpd.GeoDataFrame:
     :param df2: second dataframe
     :return: combined dataframe with all entries
     """
-    df2 = df2[~df2[DFColumns.BUILDA_ID].isin(df1[DFColumns.BUILDA_ID])]
+    df2 = df2[~df2[GeoDFColumns.BUILDA_ID].isin(df1[GeoDFColumns.BUILDA_ID])]
     return pd.concat([df1, df2], axis="index")  # type: ignore
 
 
@@ -309,7 +273,7 @@ def write_osm_ignored_nodes_statistics(
     """
     ignored_loc_types = [
         next(iter(osm_node_locations[id].non_work_locations))
-        for id in ignored_df[DFColumns.EXT_ID]
+        for id in ignored_df[GeoDFColumns.EXT_ID]
     ]
     counter = Counter(ignored_loc_types)
     ignored_counts = dict(counter.most_common())
@@ -337,8 +301,8 @@ def assign_poi_location_type_to_buildings(
     # handle each OSM node individually
     for _, row in joined_df.iterrows():
         # get the matching location type for the OSM node
-        osm_loc_type = osm_node_locations[row[DFColumns.EXT_ID]]
-        original_id = row[DFColumns.BUILDA_ID]
+        osm_loc_type = osm_node_locations[row[GeoDFColumns.EXT_ID]]
+        original_id = row[GeoDFColumns.BUILDA_ID]
         if original_id in nonres_buildings:
             # assign the corresponding location type to the non-residential building
             matched_building = nonres_buildings[original_id]
@@ -438,7 +402,7 @@ def create_new_poi_buildings(
     new_buildings = {}
     # for every unmatched POI, create a new building object
     for _, row in unmatched_df.iterrows():
-        id = row[DFColumns.EXT_ID]
+        id = row[GeoDFColumns.EXT_ID]
         building_id = f"Generated {utils.slugify(id)}"
         building = NonResidentialBuilding(
             building_id,
@@ -528,18 +492,18 @@ def combine_poi_dfs(
         duplicates = gpd.sjoin_nearest(
             combined_df,
             df,
-            distance_col=DFColumns.DISTANCE,
+            distance_col=GeoDFColumns.DISTANCE,
             exclusive=False,
             max_distance=distance,
         )
         # determine new POIs that are not already contained in the combined dataframe
         not_matched = filter_not_matched(
-            df, duplicates, DFColumns.EXT_ID, f"{DFColumns.EXT_ID}_right"
+            df, duplicates, GeoDFColumns.EXT_ID, f"{GeoDFColumns.EXT_ID}_right"
         )
         logging.info(f"Found {len(not_matched)} new POIs in dataframe")
         # add the new POIs to the combined dataframe
         combined_df = pd.concat([combined_df, not_matched], axis="index")  # type: ignore
-    assert combined_df[DFColumns.EXT_ID].is_unique, "A POI ID was not unique"
+    assert combined_df[GeoDFColumns.EXT_ID].is_unique, "A POI ID was not unique"
     logging.info(f"Collected {len(combined_df)} POIs from {len(poi_dfs)} dataframes.")
     return combined_df
 
@@ -570,8 +534,10 @@ def add_osm_location_types(
     poi_locations = osm_node_locations | custom_poi_locations
 
     # convert BUILDA objects to GeoDataFrame
-    builda_nonres_df = builda_to_geodf(b.building for b in nonres_buildings.values())
-    builda_res_df = builda_to_geodf(res_buildings)
+    builda_nonres_df = geoutils.builda_to_geodf(
+        b.building for b in nonres_buildings.values()
+    )
+    builda_res_df = geoutils.builda_to_geodf(res_buildings)
     builda_df = concat_builda_dfs(builda_nonres_df, builda_res_df)
 
     # convert to Web Mercator projection to get correct distances
@@ -589,11 +555,13 @@ def add_osm_location_types(
     joined_df = gpd.sjoin_nearest(
         combined_df,
         builda_df,
-        distance_col=DFColumns.DISTANCE,
+        distance_col=GeoDFColumns.DISTANCE,
         exclusive=False,
         max_distance=distance,
     )
-    assert joined_df[DFColumns.EXT_ID].is_unique, "Matched a node to multiple buildings"
+    assert joined_df[GeoDFColumns.EXT_ID].is_unique, (
+        "Matched a node to multiple buildings"
+    )
     # joined_df = remove_duplicate_matches(joined_df)
     logtext = f"Matched {len(joined_df)} of {len(combined_df)} OSM nodes to "
     logtext += f"BUILDA buildings. Max distance: {distance} m."
@@ -610,7 +578,7 @@ def add_osm_location_types(
     )
 
     # write statistics on unmatched OSM nodes and create additional buildings for them
-    unmatched_df = filter_not_matched(combined_df, joined_df, DFColumns.EXT_ID)
+    unmatched_df = filter_not_matched(combined_df, joined_df, GeoDFColumns.EXT_ID)
     write_osm_ignored_nodes_statistics(unmatched_df, poi_locations, directory)
     new_buildings = create_new_poi_buildings(unmatched_df, poi_locations)
     nonres_buildings.update(new_buildings)

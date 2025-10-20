@@ -8,14 +8,14 @@ import folium
 
 from cityscenariogenerator.plots.building_map_interactive import MARKER_COLORS
 import cityscenariogenerator.plots.unmapped_building_map as buil_map
-from cityscenariogenerator import builda_client_import
+from cityscenariogenerator import builda_client_import, geoutils
 from cityscenariogenerator.overpass_import import overpass_query
 from cityscenariogenerator.overpass_import import osm_data_join
-from cityscenariogenerator.overpass_import.osm_data_join import DFColumns
+from cityscenariogenerator.geoutils import GeoDFColumns
 
 
-def add_popup_column(df: pd.DataFrame, id: str = DFColumns.BUILDA_ID):
-    df["popup"] = df[id] + "\n" + df[DFColumns.CATEGORY]
+def add_popup_column(df: pd.DataFrame, id: str = GeoDFColumns.BUILDA_ID):
+    df["popup"] = df[id] + "\n" + df[GeoDFColumns.CATEGORY]
 
 
 def add_markers_for_df(df: pd.DataFrame, m, color: str, geometry_col: str):
@@ -64,7 +64,7 @@ def show_osm_builda_join_on_map():
     # determine the LPG location type for each OSM node ID
     keys = overpass_query.get_osm_keys_for_mapping()
     osm_node_locations = osm_data_join.map_osm_nodes_to_locations(overpass_df, keys)
-    overpass_df[DFColumns.CATEGORY] = overpass_df[DFColumns.EXT_ID].map(
+    overpass_df[GeoDFColumns.CATEGORY] = overpass_df[GeoDFColumns.EXT_ID].map(
         lambda id: next(iter(osm_node_locations[id].non_work_locations))
     )
 
@@ -83,21 +83,21 @@ def show_osm_builda_join_on_map():
     nonres_buildings = builda_client_import.get_nonresidential_buildings(builda_query)
     res_buildings = builda_client_import.get_residential_buildings(builda_query)
     # convert BUILDA objects to GeoDataFrames and add a category column
-    builda_nonres_df = osm_data_join.builda_to_geodf(nonres_buildings)
-    builda_nonres_df[DFColumns.CATEGORY] = [
+    builda_nonres_df = geoutils.builda_to_geodf(nonres_buildings)
+    builda_nonres_df[GeoDFColumns.CATEGORY] = [
         buil_map.get_building_category_alkis(b) for b in nonres_buildings
     ]
-    builda_res_df = osm_data_join.builda_to_geodf(res_buildings)
-    builda_res_df.loc[:, DFColumns.CATEGORY] = ["residential"] * len(builda_res_df)
+    builda_res_df = geoutils.builda_to_geodf(res_buildings)
+    builda_res_df.loc[:, GeoDFColumns.CATEGORY] = ["residential"] * len(builda_res_df)
     builda_df = osm_data_join.concat_builda_dfs(builda_nonres_df, builda_res_df)
 
     # add a column for the popup text
     add_popup_column(builda_res_df)
     add_popup_column(builda_nonres_df)
     add_popup_column(builda_df)
-    add_popup_column(poi_df_oe, DFColumns.EXT_ID)
-    add_popup_column(poi_df_tb, DFColumns.EXT_ID)
-    add_popup_column(overpass_df, DFColumns.EXT_ID)
+    add_popup_column(poi_df_oe, GeoDFColumns.EXT_ID)
+    add_popup_column(poi_df_tb, GeoDFColumns.EXT_ID)
+    add_popup_column(overpass_df, GeoDFColumns.EXT_ID)
 
     # convert to Web Mercator projection to get correct distances
     overpass_df.to_crs("EPSG:3857", inplace=True)
@@ -106,7 +106,7 @@ def show_osm_builda_join_on_map():
     poi_df_tb.to_crs("EPSG:3857", inplace=True)
 
     # filter for testing
-    overpass_df = overpass_df[overpass_df[DFColumns.CATEGORY] == "Doctors Office"]
+    overpass_df = overpass_df[overpass_df[GeoDFColumns.CATEGORY] == "Doctors Office"]
 
     poi_dfs = [overpass_df, poi_df_oe, poi_df_tb]
     combined_df = osm_data_join.combine_poi_dfs(poi_dfs, 30)
@@ -115,20 +115,20 @@ def show_osm_builda_join_on_map():
     joined_df = gpd.sjoin_nearest(
         combined_df,
         builda_df,
-        distance_col=DFColumns.DISTANCE,
+        distance_col=GeoDFColumns.DISTANCE,
         exclusive=False,
         max_distance=30,
     )
     # joined_df = osm_data_join.remove_duplicate_matches(joined_df)
     # set popup column for the map plot
     joined_df["popup"] = (
-        joined_df[DFColumns.EXT_ID]
+        joined_df[GeoDFColumns.EXT_ID]
         + " - "
-        + joined_df[DFColumns.BUILDA_ID]
+        + joined_df[GeoDFColumns.BUILDA_ID]
         + "\n"
         + joined_df["category_left"]
         + "\n"
-        + joined_df[DFColumns.DISTANCE].round(1).astype(str)
+        + joined_df[GeoDFColumns.DISTANCE].round(1).astype(str)
         + " m"
     )
 
