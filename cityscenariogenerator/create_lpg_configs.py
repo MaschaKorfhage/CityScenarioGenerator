@@ -24,6 +24,7 @@ from cityscenariogenerator import (
     poi_type_mapping,
     scenario_statistics,
     household_data,
+    utils,
 )
 from cityscenariogenerator.plots import (
     building_map,
@@ -250,7 +251,7 @@ class LPGConfigCreator:
             location, convert_coordinates(building.coordinates), timelimit
         )
         # determine the ID of the POI
-        poi_id = f"{location} {building.id}"
+        poi_id = utils.create_poi_id(building.id, location)
         self._add_poi_object(poi_id, poi)
         return poi
 
@@ -301,7 +302,7 @@ class LPGConfigCreator:
         # assign POIs of every residential type to the person
         poi_weights = {}
         assert self.residential_buildings is not None, (
-            "Residential POIs not initialized yet"
+            "Residential POI weights not initialized yet"
         )
 
         residential_pois = LpgLocations.RESIDENTIAL.copy()
@@ -318,7 +319,7 @@ class LPGConfigCreator:
                 p=self.residential_buildings.weights,
             )
             for house_id in selected_houses:
-                poi_id = f"{location} {house_id}"
+                poi_id = utils.create_poi_id(house_id, location)
 
                 # check if there already exist a POI for this building-location combination
                 if poi_id not in self.pois:
@@ -337,7 +338,7 @@ class LPGConfigCreator:
     def select_pois_for_person(
         self,
         person: lpgdata.PersonData,
-        coordinates: lpgdata.Coordinates,
+        house_id: str,
     ) -> dict[str, float]:
         assert self.distcalc is not None
         poi_weights: dict[str, float] = {}
@@ -350,10 +351,7 @@ class LPGConfigCreator:
             size = min(size, len(poi_ids))
             # calculate distances to all POIs of this type
             distances = {
-                p: self.distcalc.calc_distance_in_km(
-                    coordinates, self.pois[p].Coordinates
-                )
-                for p in poi_ids
+                p: self.distcalc.get_distance_in_km(house_id, p) for p in poi_ids
             }
 
             activity_type = location_to_omod_activity_type(location)
@@ -462,7 +460,7 @@ class LPGConfigCreator:
             raise Exception("No POIs have been added yet.")
         self.check_location_availability()
         self._calc_residential_poi_probabilities()
-        self.distcalc = distances.DistanceCalculator(self.houses, self.pois)
+        self.distcalc = distances.DistanceCalculator(self.houses, self.pois, False)
 
         logging.info("Creating POI preferences for all persons.")
         all_relevant_pois = {}
@@ -474,9 +472,7 @@ class LPGConfigCreator:
                 hh_poi_preferences: dict[str, lpgdata.PersonPoiPreferences] = {}
                 persons = self._determine_person_in_hh(hh)
                 for person in persons:
-                    poi_weights = self.select_pois_for_person(
-                        person, hcj.House.Coordinates
-                    )
+                    poi_weights = self.select_pois_for_person(person, id)
                     hh_poi_preferences[person.PersonName] = (  # type: ignore
                         lpgdata.PersonPoiPreferences(poi_weights)
                     )
@@ -512,36 +508,31 @@ class LPGConfigCreator:
         assert self.distcalc is not None
         # relevant sites for this person are all of their POIs and their home
         sites = list(pois) + [house_id]
-        for poi_id_start in sites:
-            for poi_id_end in sites:
-                if poi_id_start == poi_id_end:
+        for id_start in sites:
+            for id_end in sites:
+                if id_start == id_end:
                     continue
-                key = (poi_id_start, poi_id_end, transportation_device.Name)
+                key = (id_start, id_end, transportation_device.Name)
                 if key in existing_routes:
                     continue  # there is already a matching route
-                start = self._get_site_coordinates(
-                    poi_id_start, house_coordinates, house_id
-                )
-                end = self._get_site_coordinates(
-                    poi_id_end, house_coordinates, house_id
-                )
+
                 # calculate the distance of the route
-                dist = self.distcalc.calc_distance_in_km(start, end)
+                dist = self.distcalc.get_distance_in_km(id_start, id_end)
                 category_key = LPGConfigCreator.TRANS_DEVICE_CATEGORY_MAP[
                     transportation_device.Name
                 ]
                 # create routes in both directions
                 existing_routes[key] = lpgdata.RouteData(
-                    poi_id_start,
-                    poi_id_end,
+                    id_start,
+                    id_end,
                     {},
                     {category_key: dist},
                     prob_with_car_hh={category_key: 1},
                     prob_no_car_hh={category_key: 1},
                 )
                 existing_routes[key] = lpgdata.RouteData(
-                    poi_id_end,
-                    poi_id_start,
+                    id_end,
+                    id_start,
                     {},
                     {category_key: dist},
                     prob_with_car_hh={category_key: 1},
@@ -549,8 +540,13 @@ class LPGConfigCreator:
                 )
 
     def create_routes_for_testing(self):
-        """Creates a set of simple bus routes so that each person can reach all of their POIs. All persons share the same routes."""
+        """Creates a set of simple bus routes so that each person can reach all of their
+        POIs. All persons share the same routes."""
         logging.info("Creating routes for all persons")
+        assert self.distcalc and self.distcalc.all_distances, (
+            "In order to create testing routes, the DistanceCalculator must be configured"
+            " to create the full matrix with all_distances=True"
+        )
         all_routes = {}
         for id, hcj in tqdm(self.houses.items()):
             assert hcj.House is not None and hcj.House.Coordinates is not None

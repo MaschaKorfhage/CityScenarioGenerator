@@ -394,7 +394,7 @@ def create_new_poi_buildings(
     # for every unmatched POI, create a new building object
     for _, row in unmatched_df.iterrows():
         id = row[GeoDFColumns.EXT_ID]
-        building_id = f"Generated {utils.slugify(id)}"
+        building_id = f"Generated_{utils.slugify(id)}"
         building = NonResidentialBuilding(
             building_id,
             Coordinates(row.geometry.y, row.geometry.x),

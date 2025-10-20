@@ -165,3 +165,27 @@ def set_rng_seed(seed=None):
     numpy_seed = random.randrange(2**32)
     logging.info(f"Using numpy RNG seed {numpy_seed}")
     numpy.random.seed(numpy_seed)
+
+
+def create_poi_id(building_id: str, location: str) -> str:
+    """Creates a new POI ID out of a building ID and an LPG location.
+
+    :param building_id: the building ID
+    :param location: the location name of the POI
+    :return: the new POI ID
+    """
+    # if there are spaces in building IDs, the below function might produce errors
+    assert " " not in building_id, (
+        "CityScenarioGenerator relies on there not being any spaces in building IDs"
+    )
+    return f"{location} {building_id}"
+
+
+def get_building_id_from_poi(poi_id: str) -> str:
+    """Extracts the building ID out of a POI ID. This
+    assumes that no building ID ever includes a space.
+
+    :param poi_id: the full POI ID
+    :return: the contained building ID
+    """
+    return poi_id.split(" ")[-1]
