@@ -343,7 +343,7 @@ class LPGConfigCreator:
         poi_weights: dict[str, float] = {}
         # select POIs of every available type
         for location, poi_ids in self.poi_ids_by_type.items():
-            if location in LpgLocations.RESIDENTIAL:
+            if location in LpgLocations.RES_AND_SPECIAL:
                 continue  # residential POIs are added separately below
             # determine how many POIs of this type the person will select
             size = self._determine_poi_num_for_person()

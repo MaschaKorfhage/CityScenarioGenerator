@@ -38,6 +38,7 @@ class LpgLocations:
     NONRES_BUILDING = ALL - RESIDENTIAL - NO_BUILDING
     NONRES_BUILD_NO_WORK = NONRES_BUILDING & NO_WORK
     SPECIAL = load_location_set(LOCATION_DIR / "special.txt")
+    RES_AND_SPECIAL = RESIDENTIAL | SPECIAL
 
     SHOPPING = load_location_set(LOCATION_DIR / "shopping.txt")
     SCHOOL = load_location_set(LOCATION_DIR / "school.txt")
