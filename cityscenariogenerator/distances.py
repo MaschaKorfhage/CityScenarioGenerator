@@ -81,6 +81,7 @@ class DistanceCalculator:
                               residential buildings to POIs; defaults to False
         """
         matrix_df = calc_distances(houses, pois, all_distances)
+        logging.info("Converting distance matrix into a dict")
         self.distances: dict[tuple[str, str], float] = matrix_df.stack().to_dict()  # type: ignore
         self.places = {p for pair in self.distances.keys() for p in pair}
         self.all_distances = all_distances
