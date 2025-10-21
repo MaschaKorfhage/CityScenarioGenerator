@@ -80,10 +80,7 @@ class DistanceCalculator:
                               buildings; otherwise, only calculates distances from
                               residential buildings to POIs; defaults to False
         """
-        matrix_df = calc_distances(houses, pois, all_distances)
-        logging.info("Converting distance matrix into a dict")
-        self.distances: dict[tuple[str, str], float] = matrix_df.stack().to_dict()  # type: ignore
-        self.places = {p for pair in self.distances.keys() for p in pair}
+        self.distances = calc_distances(houses, pois, all_distances)
         self.all_distances = all_distances
 
     def get_distance_in_km(self, point_a: str, point_b: str) -> float:
@@ -99,24 +96,24 @@ class DistanceCalculator:
         :raises KeyError: if no distance for building pair was found in the matrix
         """
         try:
-            return self.distances[point_a, point_b]
+            return self.distances.at[point_a, point_b]  # type: ignore
         except KeyError:
             # residential POIs are not in the distance matrix, instead the building ID
             # is requried for them
             point_a_build = (
                 point_a
-                if point_a in self.places
+                if point_a in self.distances.index
                 else utils.get_building_id_from_poi(point_a)
             )
             point_b_build = (
                 point_b
-                if point_b in self.places
+                if point_b in self.distances.columns
                 else utils.get_building_id_from_poi(point_b)
             )
 
             # If this also does not work, something is wrong.
             # Perhaps all_distances=True was not set for calc_distances.
-            return self.distances[point_a_build, point_b_build]  # type: ignore
+            return self.distances.at[point_a_build, point_b_build]  # type: ignore
 
     @functools.lru_cache
     def calc_coordinate_distance_in_km(
