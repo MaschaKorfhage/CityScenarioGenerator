@@ -151,6 +151,7 @@ def _get_residential_buildings(
     # check whether the result is already cached
     if use_cache and (cached := load_builda_cache(search_args, "res")):
         return cached  # type: ignore[return-value]
+    logging.info(f"Sending query to ETHOS.BUILDA: {search_args}")
     client = get_builda_devclient()
     res_buildings = client.get_residential_buildings(**search_args)
     logging.info(f"Residential buildings in {search_args}: {len(res_buildings)}")
