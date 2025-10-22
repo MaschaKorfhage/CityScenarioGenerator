@@ -35,6 +35,9 @@ from cityscenariogenerator.scenario_params import ScenarioParams
 DATA_DIR = Path("data")
 OVERPASS_DATA_DIR = DATA_DIR / "osm_nonres_buildings"
 
+#: file to specify default work locations for every non-work location type
+LOCATION_WORK_MAPPING_FILE = DATA_DIR / "location_work_mapping.json"
+
 #: type annotation for DataFrame or GeoDataFrame
 DF = TypeVar("DF", pd.DataFrame, gpd.GeoDataFrame)
 
@@ -110,7 +113,7 @@ def load_location_work_mapping() -> dict[str, list[str]]:
 
     :return: the mapping as a dictionary
     """
-    mapping_file = DATA_DIR / "location_work_mapping.json"
+    mapping_file = LOCATION_WORK_MAPPING_FILE
     with open(mapping_file, "r", encoding="utf8") as f:
         return json.load(f)
 
@@ -186,6 +189,10 @@ def map_osm_node(
     mappings: dict[str, dict], row: pd.Series, work_mapping: dict[str, list[str]]
 ) -> LocationType:
     nonwork_location = get_nonwork_location_for_node(mappings, row)
+    assert nonwork_location in work_mapping, (
+        f"Location '{nonwork_location}' missing in location work mapping: "
+        f"{LOCATION_WORK_MAPPING_FILE}\nPlease add it."
+    )
     work_locations = set(work_mapping[nonwork_location])
     return LocationType({nonwork_location}, work_locations)
 

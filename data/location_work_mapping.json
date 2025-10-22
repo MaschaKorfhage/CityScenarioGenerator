@@ -100,5 +100,9 @@
     "Cafe": [
         "Office Workplace",
         "Workplace (shift worker)"
+    ],
+    "Pharmacy": [
+        "Office Workplace",
+        "Workplace (shift worker)"
     ]
 }
