@@ -335,6 +335,14 @@
                 "Longitude": 6.424
             },
             "TimeLimit": null
+        },
+        "Pharmacy Custom": {
+            "LocationType": "Pharmacy",
+            "Coordinates": {
+                "Latitude": 50.631,
+                "Longitude": 6.437
+            },
+            "TimeLimit": null
         }
     }
 }
