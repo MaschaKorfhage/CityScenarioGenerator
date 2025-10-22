@@ -31,13 +31,13 @@ class LpgLocations:
 
     ALL = load_location_set(LOCATION_DIR / "all_remote.txt")
     WORK = load_location_set(LOCATION_DIR / "work.txt")
-    NO_WORK = ALL - WORK
-    RESIDENTIAL = load_location_set(LOCATION_DIR / "residential.txt")
-    NON_RESIDENTIAL = ALL - RESIDENTIAL
-    NO_BUILDING = load_location_set(LOCATION_DIR / "no_building.txt")
-    NONRES_BUILDING = ALL - RESIDENTIAL - NO_BUILDING
-    NONRES_BUILD_NO_WORK = NONRES_BUILDING & NO_WORK
     SPECIAL = load_location_set(LOCATION_DIR / "special.txt")
+    NO_WORK = ALL - WORK - SPECIAL
+    RESIDENTIAL = load_location_set(LOCATION_DIR / "residential.txt")
+    NON_RESIDENTIAL = ALL - RESIDENTIAL - SPECIAL
+    NO_BUILDING = load_location_set(LOCATION_DIR / "no_building.txt")
+    NONRES_BUILDING = ALL - RESIDENTIAL - NO_BUILDING - SPECIAL
+    NONRES_BUILD_NO_WORK = NONRES_BUILDING & NO_WORK
     RES_AND_SPECIAL = RESIDENTIAL | SPECIAL
 
     SHOPPING = load_location_set(LOCATION_DIR / "shopping.txt")
