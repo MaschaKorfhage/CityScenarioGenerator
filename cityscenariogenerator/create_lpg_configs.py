@@ -24,6 +24,7 @@ from cityscenariogenerator import (
     poi_type_mapping,
     scenario_statistics,
     household_data,
+    site_export,
     utils,
 )
 from cityscenariogenerator.plots import (
@@ -199,7 +200,7 @@ class LPGConfigCreator:
             None,
             hh_template_spec,
             None,
-            str(index),
+            str(index + 1),  # id matches the HH key number assigned by the LPG
             f"Generated {household_data.household_name} - {index}",
             charging_station_set,
             transport_device_set,
@@ -694,6 +695,9 @@ def create_configs_from_buildings(
 
     # determine which POIs each person visits
     config_creator.create_poi_preferences(generate_test_routes)
+
+    # optional custom exports
+    site_export.custom_export(params, config_creator)
 
     if generate_test_routes:
         # create random routes for testing
