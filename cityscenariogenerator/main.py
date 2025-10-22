@@ -145,14 +145,14 @@ def main():
     scenario_dir = Path(args.output)
     lpg_result_dir = Path(args.lpg)
     scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
-    generate_test_routes = args.generate_test_routes
+    generate_test_routes = args.routes
 
     create_city_scenario(
         builda_query,
         scenario_dir,
         lpg_result_dir,
         scenario_adapt_dir,
-        generate_test_routes,
+        generate_test_routes=generate_test_routes,
     )
 
 
