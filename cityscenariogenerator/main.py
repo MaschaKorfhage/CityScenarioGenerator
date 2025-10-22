@@ -26,6 +26,7 @@ def create_city_scenario(
     lpg_result_dir: Path,
     scenario_adapt_dir: Path | None = None,
     db_file_path: str = "",
+    generate_test_routes: bool = False,
 ):
     """Generates a city scenario for the LoadProfileGenerator.
 
@@ -34,6 +35,8 @@ def create_city_scenario(
     :param lpg_result_dir: result directory to configure for the city simulation
     :param scenario_adapt_dir: optional building scenario directory, defaults to None
     :param db_file_path: custom LPG database path, if requried; defaults to ""
+    :param generate_test_routes: if True, also generates additional test routes with
+                                 distance as the crow flies
     :raises Exception: if the scenario generation failed for any reason
     """
     start = datetime.now()
@@ -69,7 +72,9 @@ def create_city_scenario(
     )
 
     # create config files for the collected buildings
-    create_configs_from_buildings(params, res_buildings, nonres_buildings)
+    create_configs_from_buildings(
+        params, res_buildings, nonres_buildings, generate_test_routes
+    )
     logging.info(f"Finished writing city scenario to {result_dir}")
 
     # copy the calcspec.json into the scenario directory
@@ -126,6 +131,13 @@ def main():
         default="",
         required=False,
     )
+    parser.add_argument(
+        "-r",
+        "--routes",
+        action="store_true",
+        help="If set, also generates test routes with straigt line distances",
+        required=False,
+    )
     args = parser.parse_args()
 
     # collect parameters
@@ -133,8 +145,15 @@ def main():
     scenario_dir = Path(args.output)
     lpg_result_dir = Path(args.lpg)
     scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
+    generate_test_routes = args.generate_test_routes
 
-    create_city_scenario(builda_query, scenario_dir, lpg_result_dir, scenario_adapt_dir)
+    create_city_scenario(
+        builda_query,
+        scenario_dir,
+        lpg_result_dir,
+        scenario_adapt_dir,
+        generate_test_routes,
+    )
 
 
 if __name__ == "__main__":

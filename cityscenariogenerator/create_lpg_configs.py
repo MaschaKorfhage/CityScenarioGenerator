@@ -453,14 +453,18 @@ class LPGConfigCreator:
         weights = [i / total_hh for i in hhs_per_house]
         self.residential_buildings = ResidentialBuildingList(house_ids, weights)
 
-    def create_poi_preferences(self, include_unused_pois: bool = False) -> None:
+    def create_poi_preferences(
+        self, generate_test_routes: bool = False, include_unused_pois: bool = False
+    ) -> None:
         if not self.houses:
             raise Exception("No houses have been added yet.")
         if not self.pois:
             raise Exception("No POIs have been added yet.")
         self.check_location_availability()
         self._calc_residential_poi_probabilities()
-        self.distcalc = distances.DistanceCalculator(self.houses, self.pois, False)
+        self.distcalc = distances.DistanceCalculator(
+            self.houses, self.pois, generate_test_routes
+        )
 
         logging.info("Creating POI preferences for all persons.")
         all_relevant_pois = {}
@@ -666,12 +670,15 @@ def create_configs_from_buildings(
     params: ScenarioParams,
     res_buildings: list[BuildingData],
     nonres_buildings: dict[str, BuildingWithLocationType],
+    generate_test_routes: bool = False,
 ):
     """Main function for creating an LPG scenario with the LPGConfigCreator.
 
     :param params: scenario parameter object
     :param res_buildings: list of residential buildings to configure for the LPG
     :param nonres_buildings: list of non-residential buildings to use as POIs
+    :param generate_test_routes: if True, also generates additional test routes with
+                                 distance as the crow flies
     """
     config_creator = create_lpg_configs.LPGConfigCreator(params)
     # create a POI config for each nonresidential building
@@ -686,10 +693,11 @@ def create_configs_from_buildings(
     config_creator.load_and_add_custom_pois()
 
     # determine which POIs each person visits
-    config_creator.create_poi_preferences()
+    config_creator.create_poi_preferences(generate_test_routes)
 
-    # create random routes for testing
-    config_creator.create_routes_for_testing()
+    if generate_test_routes:
+        # create random routes for testing
+        config_creator.create_routes_for_testing()
 
     # set additional parameters
     assert config_creator.global_city_definition.TravelDefinition, (
