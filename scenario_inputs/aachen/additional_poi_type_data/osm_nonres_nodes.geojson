@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-10-10T09:01:30Z",
+  "timestamp": "2025-10-22T08:37:00Z",
   "features": [
     {
       "type": "Feature",
@@ -53,6 +53,34 @@
         ]
       },
       "id": "node/35137295"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/76051405",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "44",
+        "addr:postcode": "52066",
+        "addr:street": "Kurbrunnenstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-05-17",
+        "check_date:opening_hours": "2025-05-17",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Kurbrunnen Apotheke",
+        "opening_hours": "Mo,Tu 08:30-18:00; We 08:30-14:00; Th,Fr 08:30-18:00",
+        "phone": "+49 241 503484",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0953269,
+          50.7684401
+        ]
+      },
+      "id": "node/76051405"
     },
     {
       "type": "Feature",
@@ -137,6 +165,114 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/246844781",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "20-24",
+        "addr:postcode": "52062",
+        "addr:street": "Peterstraße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2025-06-02",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "St. Georg-Apotheke",
+        "opening_hours": "Su,PH off; Mo-Fr 08:00-18:30; Sa 09:00-16:00",
+        "phone": "+49 241 28100",
+        "website": "https://www.st-georg-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0887841,
+          50.775593
+        ]
+      },
+      "id": "node/246844781"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/255596529",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "52080",
+        "addr:street": "Von-Coels-Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2022-04-13",
+        "healthcare": "pharmacy",
+        "name": "Alstedt's Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-13:00,15:00-18:30; We,Sa 08:30-13:00; Su,PH off",
+        "phone": "+49 241 533100",
+        "website": "https://www.alstedts-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1419288,
+          50.7775262
+        ]
+      },
+      "id": "node/255596529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/268495155",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "121",
+        "addr:postcode": "52076",
+        "addr:street": "Aachener Straße",
+        "addr:suburb": "Oberforstbach",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "St. Rochus-Apotheke Oberforstbach",
+        "opening_hours": "Mo-Fr 08:00-13:00, Mo,Tu,Th,Fr 15:00-18:30",
+        "phone": "+49 2408 4244",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1462824,
+          50.7245994
+        ]
+      },
+      "id": "node/268495155"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/278139573",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "52072",
+        "addr:street": "Rathausplatz",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Rats-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30",
+        "website": "https://www.rats-apotheke-aachen.de",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0606733,
+          50.8115401
+        ]
+      },
+      "id": "node/278139573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/279149584",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -183,6 +319,30 @@
         ]
       },
       "id": "node/282828304"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/289527576",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "22",
+        "addr:postcode": "52062",
+        "addr:street": "Heinrichsallee",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Kaiser Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-14:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0958681,
+          50.7758234
+        ]
+      },
+      "id": "node/289527576"
     },
     {
       "type": "Feature",
@@ -261,6 +421,67 @@
         ]
       },
       "id": "node/317435877"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317462618",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "319",
+        "addr:postcode": "52072",
+        "addr:street": "Roermonder Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "laurentius-apotheke-aachen@t-online.de",
+        "fax": "+49 241 17 39 89",
+        "healthcare": "pharmacy",
+        "name": "Laurentius-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-14:00",
+        "operator": "Herbert Pichler",
+        "phone": "+49 241 12809",
+        "website": "https://www.laurentius-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0632515,
+          50.7966433
+        ]
+      },
+      "id": "node/317462618"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/317462620",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "326",
+        "addr:postcode": "52072",
+        "addr:street": "Roermonder Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2025-01-29",
+        "dispensing": "yes",
+        "email": "info@park-apotheke-aachen.de",
+        "fax": "+49 241 17 57 73",
+        "healthcare": "pharmacy",
+        "name": "Park-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "operator": "Carmen Herbst",
+        "phone": "+49 241 17 46 46",
+        "website": "https://www.park-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0638189,
+          50.7965779
+        ]
+      },
+      "id": "node/317462620"
     },
     {
       "type": "Feature",
@@ -601,6 +822,29 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/433825978",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Kullen-Apotheke",
+        "note": "Hat Eingänge von beiden Seiten des Gebäudes",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00; Su,PH off",
+        "operator": "Susanne Falke-Olk",
+        "phone": "+49 241 870333",
+        "website": "https://www.kullen-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0399485,
+          50.7701521
+        ]
+      },
+      "id": "node/433825978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/436657697",
         "check_date:opening_hours": "2024-08-07",
         "healthcare": "physiotherapist",
@@ -711,6 +955,56 @@
         ]
       },
       "id": "node/495560692"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/496282427",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2024-08-24",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Barbarossa Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-18:00",
+        "phone": "+49 241 32201",
+        "website": "http://www.barbarossa-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0842262,
+          50.7719012
+        ]
+      },
+      "id": "node/496282427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/513679057",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "73-75",
+        "addr:postcode": "52066",
+        "addr:street": "Eupener Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Granus Apotheke",
+        "opening_hours": "Mo-Tu 08:30-13:00,15:00-18:30; We 08:30-13:00; Th-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 241 62063",
+        "website": "https://www.granus-apotheke.de/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0857295,
+          50.7588349
+        ]
+      },
+      "id": "node/513679057"
     },
     {
       "type": "Feature",
@@ -834,6 +1128,33 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/567343767",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "67",
+        "addr:postcode": "52078",
+        "addr:street": "Trierer Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im alten Bürgermeisteramt",
+        "opening_hours": "Mo-Tu 08:00-13:00, 15:00-18:30; We 08:00-13:00; Th 08:00-13:00, 15:00-19:00; Fr 08:00-13:00, 15:00-18:00",
+        "phone": "+49 (0) 241 5791310",
+        "website": "https://www.apotheke-im-alten-buergermeisteramt-aachen.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1218285,
+          50.7685333
+        ]
+      },
+      "id": "node/567343767"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/571525713",
         "addr:city": "Aachen",
         "addr:housenumber": "321a",
@@ -903,6 +1224,74 @@
         ]
       },
       "id": "node/598560660"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/600437519",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Barbara-Apotheke",
+        "opening_hours": "Mo- Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00; Su,PH off",
+        "phone": "+49 241 553100",
+        "website": "http://www.barbara-apotheke-online.com/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1605228,
+          50.7781459
+        ]
+      },
+      "id": "node/600437519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/600437522",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Linden-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00,15:00-18:30; Sa 08:00-13:00; PH off",
+        "phone": "+49 (0)241 9512000",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1550858,
+          50.7813314
+        ]
+      },
+      "id": "node/600437522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/600437579",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "57",
+        "addr:postcode": "52080",
+        "addr:street": "Von-Coels-Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2022-04-01",
+        "healthcare": "pharmacy",
+        "name": "Severin-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00,15:00-18:30; Sa 08:30-13:00; Su,PH off",
+        "phone": "+49 241 557859",
+        "website": "https://www.severin-apo-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1487002,
+          50.776547
+        ]
+      },
+      "id": "node/600437579"
     },
     {
       "type": "Feature",
@@ -1131,6 +1520,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/712683152",
+        "addr:city": "Aachen",
+        "addr:housenumber": "25",
+        "addr:postcode": "52076",
+        "addr:street": "Prämienstraße",
+        "addr:suburb": "Walheim",
+        "amenity": "pharmacy",
+        "email": "spitzweg-apotheke-aachen@t-online.de",
+        "fax": "+49 2408 80274",
+        "healthcare": "pharmacy",
+        "name": "Spitzweg-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:00, 15:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 2408 80555"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1797361,
+          50.7053535
+        ]
+      },
+      "id": "node/712683152"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/713959994",
         "addr:city": "Aachen",
         "addr:housenumber": "6",
@@ -1262,6 +1677,28 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/798423613",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2023-06-10",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Hirsch-Center",
+        "note": "heißt so",
+        "opening_hours": "Mo-Sa 08:00-20:00; Su,PH off",
+        "website": "https://www.apotheke-hirschcenter.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1212299,
+          50.7789024
+        ]
+      },
+      "id": "node/798423613"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/804178602",
         "amenity": "pub",
         "indoor_seating": "yes",
@@ -1278,6 +1715,37 @@
         ]
       },
       "id": "node/804178602"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/812337144",
+        "addr:city": "Aachen",
+        "addr:postcode": "52062",
+        "addr:street": "Friedrich-Wilhelm-Platz",
+        "amenity": "pharmacy",
+        "check_date": "2025-06-02",
+        "check_date:opening_hours": "2025-06-02",
+        "description": "Diese Apotheke bietet den üblichen Voll-Service an.",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "ElisenGalerie Apotheke",
+        "note": "Email-Adresse und Telefon bitte dem Internet-Auftritt entnehmen.",
+        "opening_hours": "Mo-Fr 08:00-19:00, Su 09:00-18:00",
+        "operator": "Farieba Rahmaty e. K.",
+        "source": "local knowledge;survey",
+        "website": "https://www.elisengalerie-apotheke-aachen.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.087717,
+          50.7741046
+        ]
+      },
+      "id": "node/812337144"
     },
     {
       "type": "Feature",
@@ -1317,6 +1785,89 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/821293747",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "52066",
+        "addr:street": "Jahnplatz",
+        "amenity": "pharmacy",
+        "check_date": "2025-07-28",
+        "email": "info@gregoriusapotheke.de",
+        "healthcare": "pharmacy",
+        "name": "Gregorius-Apotheke",
+        "opening_hours": "Mo-Tu, Th-Fr 08:30-18:30; We 08:30-13:00; Sa 09:00-13:30",
+        "phone": "+4924161123",
+        "website": "http://www.gregoriusapotheke.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0875091,
+          50.7499685
+        ]
+      },
+      "id": "node/821293747"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/829479473",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "43",
+        "addr:postcode": "52066",
+        "addr:street": "Viehhofstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-08-04",
+        "healthcare": "pharmacy",
+        "name": "Marienhospital-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:30",
+        "phone": "+49 241 5592400",
+        "website": "https://www.apo-marienhospital.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.095882,
+          50.7622003
+        ]
+      },
+      "id": "node/829479473"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/829479519",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "19",
+        "addr:postcode": "52064",
+        "addr:street": "Hohenstaufenallee",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2023-10-11",
+        "entrance": "yes",
+        "fax": "+49 241 70 18 666",
+        "name": "Habsburger-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:30",
+        "phone": "+49 241 76 74 6",
+        "website": "https://www.habsburger-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0780142,
+          50.7643722
+        ]
+      },
+      "id": "node/829479519"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/835795643",
         "addr:city": "Aachen",
         "addr:housenumber": "10",
@@ -1339,6 +1890,62 @@
         ]
       },
       "id": "node/835795643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/835846810",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Apotheke am Driescher Hof",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1435776,
+          50.7543724
+        ]
+      },
+      "id": "node/835846810"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/850017700",
+        "amenity": "pharmacy",
+        "check_date": "2024-03-19",
+        "name": "Industrie-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-13:00,15:00-18:30;Sa 08:00-13:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1256279,
+          50.7947176
+        ]
+      },
+      "id": "node/850017700"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/850017880",
+        "amenity": "pharmacy",
+        "check_date": "2024-07-01",
+        "name": "Apotheke am Denkmal",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1269407,
+          50.7987123
+        ]
+      },
+      "id": "node/850017880"
     },
     {
       "type": "Feature",
@@ -1400,6 +2007,40 @@
         ]
       },
       "id": "node/854802531"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/856619490",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "52068",
+        "addr:street": "Elsassstraße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2024-10-04",
+        "dispensing": "yes",
+        "email": "kontakt@elsass-apotheke.de",
+        "healthcare": "pharmacy",
+        "name": "Elsass-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-18:30; We,Sa 08:30-13:00",
+        "operator": "Coda Apotheken",
+        "payment:cash": "yes",
+        "payment:girocard": "yes",
+        "payment:mastercard": "yes",
+        "payment:visa": "yes",
+        "phone": "+49 241 160580",
+        "website": "https://www.elsass-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.114378,
+          50.7727074
+        ]
+      },
+      "id": "node/856619490"
     },
     {
       "type": "Feature",
@@ -1659,6 +2300,31 @@
         ]
       },
       "id": "node/1037447409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1038272729",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2025-01-22",
+        "dispensing": "yes",
+        "entrance": "yes",
+        "fax": "+49 241 89 44 99 11",
+        "name": "Ahorn-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-13:00,14:30-18:30; We 08:30-13:00; Sa 09:00-13:00; Su,PH off",
+        "operator": "Linda Krolop",
+        "phone": "+49 241 81 57 3",
+        "website": "https://www.ahorn-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0606556,
+          50.780197
+        ]
+      },
+      "id": "node/1038272729"
     },
     {
       "type": "Feature",
@@ -1995,6 +2661,34 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1204819887",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "52070",
+        "addr:street": "Augustastraße",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 241 902030",
+        "contact:phone": "+49 241 506268",
+        "contact:website": "http://www.falkenapotheke.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Falken-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0960699,
+          50.7728244
+        ]
+      },
+      "id": "node/1204819887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1207131545",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -2271,6 +2965,28 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1242428919",
+        "amenity": "pharmacy",
+        "entrance": "yes",
+        "healthcare": "pharmacy",
+        "name": "Bismarck-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-13:00",
+        "phone": "+49 241 512564",
+        "website": "http://www.bismarck-apotheke-aachen.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1057705,
+          50.7687616
+        ]
+      },
+      "id": "node/1242428919"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1250396374",
         "amenity": "pub",
         "entrance": "yes",
@@ -2338,6 +3054,33 @@
         ]
       },
       "id": "node/1253009209"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1253009231",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "112",
+        "addr:postcode": "52066",
+        "addr:street": "Bismarckstraße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2025-03-22",
+        "entrance": "yes",
+        "healthcare": "pharmacy",
+        "name": "Baur Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 08:30-13:00",
+        "website": "https://baur-apotheken.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1084734,
+          50.7691178
+        ]
+      },
+      "id": "node/1253009231"
     },
     {
       "type": "Feature",
@@ -2696,6 +3439,27 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1444453561",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Marien-Apotheke",
+        "phone": "+49 2408 8733",
+        "toilets:wheelchair": "no",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1805751,
+          50.7058162
+        ]
+      },
+      "id": "node/1444453561"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1448027456",
         "amenity": "biergarten"
       },
@@ -2728,6 +3492,31 @@
         ]
       },
       "id": "node/1455085246"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1467620564",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "335",
+        "addr:postcode": "52078",
+        "addr:street": "Trierer Straße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Paracelsus-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; PH,Sa,Su off",
+        "website": "https://paracelsus-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1384939,
+          50.7610859
+        ]
+      },
+      "id": "node/1467620564"
     },
     {
       "type": "Feature",
@@ -2803,6 +3592,30 @@
         ]
       },
       "id": "node/1567237024"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1574469434",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "38",
+        "addr:postcode": "52076",
+        "addr:street": "Schleckheimer Straße",
+        "addr:suburb": "Kornelimünster",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Inda-Apotheke",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1749282,
+          50.7275344
+        ]
+      },
+      "id": "node/1574469434"
     },
     {
       "type": "Feature",
@@ -3246,6 +4059,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/1956888939",
+        "addr:city": "Aachen",
+        "addr:housenumber": "16",
+        "addr:postcode": "52070",
+        "addr:street": "Adalbertsteinweg",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Steffens Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:00; Sa 10:00-14:00; Su,PH off",
+        "operator": "Dr. Sangyong Lee e.k.",
+        "website": "https://apotheke-steffensplatz.de/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0978929,
+          50.7744265
+        ]
+      },
+      "id": "node/1956888939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/1956888949",
         "amenity": "pub",
         "check_date": "2024-03-08",
@@ -3625,7 +4464,8 @@
         "check_date:opening_hours": "2025-01-29",
         "name": "Armand Otto",
         "opening_hours": "Mo-Fr 08:00-12:00, Mo,Tu,Th,Fr 14:30-18:00",
-        "website": "https://www.zahnarzt-otto-aachen.de/"
+        "website": "https://www.zahnarzt-otto-aachen.de/",
+        "wheelchair": "no"
       },
       "geometry": {
         "type": "Point",
@@ -3665,7 +4505,8 @@
         "healthcare": "doctor",
         "name": "Dr. Schwarze",
         "opening_hours": "Mo-Fr 08:00-12:00, Mo,Tu,Th 16:00-18:00",
-        "website": "http://www.praxis-laurensberg.de/"
+        "website": "http://www.praxis-laurensberg.de/",
+        "wheelchair": "limited"
       },
       "geometry": {
         "type": "Point",
@@ -3701,6 +4542,62 @@
         ]
       },
       "id": "node/2208966573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2213501251",
+        "addr:city": "Aachen",
+        "addr:housenumber": "4",
+        "addr:postcode": "52078",
+        "addr:street": "Marktplatz",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Roland-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:00-13:00,14:30-18:30; We,Sa 08:00-13:00; Su,PH off",
+        "phone": "+49 241 526189",
+        "website": "https://www.brander-apotheken.com/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1643855,
+          50.7491202
+        ]
+      },
+      "id": "node/2213501251"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2213510992",
+        "addr:city": "Aachen",
+        "addr:housenumber": "33",
+        "addr:postcode": "52062",
+        "addr:street": "Theaterstraße",
+        "amenity": "pharmacy",
+        "check_date": "2024-08-14",
+        "check_date:opening_hours": "2024-08-14",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "email": "info@aquisapo.de",
+        "healthcare": "pharmacy",
+        "name": "Aquis-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:30-13:30",
+        "operator": "Udo Kremer",
+        "phone": "+49 241 31421",
+        "website": "https://www.aquisapo.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0910895,
+          50.7712424
+        ]
+      },
+      "id": "node/2213510992"
     },
     {
       "type": "Feature",
@@ -3935,6 +4832,32 @@
         ]
       },
       "id": "node/2387925717"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2388900459",
+        "addr:city": "Aachen",
+        "addr:housenumber": "668",
+        "addr:postcode": "52078",
+        "addr:street": "Trierer Straße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Vennbahn-Apotheke",
+        "opening_hours": "Mo,Tu,Th 08:30-13:00,14:00-18:30; We 08:30-13:00; Fr 08:30-18:30; Sa 08:30-14:00",
+        "phone": "+49 241 955 98 00",
+        "website": "http://brander-apotheken.de.www160.your-server.de/apotheken/index.php",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1573831,
+          50.7523997
+        ]
+      },
+      "id": "node/2388900459"
     },
     {
       "type": "Feature",
@@ -4634,8 +5557,10 @@
         "addr:postcode": "52062",
         "addr:street": "Blondelstraße",
         "amenity": "nightclub",
+        "check_date:opening_hours": "2025-10-16",
         "contact:facebook": "https://www.facebook.com/NoxAachen",
         "name": "Club Nox",
+        "opening_hours:signed": "no",
         "operator": "2N8 Events UG",
         "phone": "+49 241 26304",
         "website": "https://nox.ac/"
@@ -4989,6 +5914,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/3536204549",
+        "addr:city": "Aachen",
+        "addr:housenumber": "1",
+        "addr:postcode": "52062",
+        "addr:street": "Theaterplatz",
+        "amenity": "pharmacy",
+        "check_date": "2025-07-08",
+        "check_date:opening_hours": "2025-07-08",
+        "healthcare": "pharmacy",
+        "name": "Hirsch Apotheke",
+        "opening_hours": "Mo-Fr 08:15-18:00; Sa 09:30-16:00; Su,PH off",
+        "website": "https://www.hirsch-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0867139,
+          50.7730573
+        ]
+      },
+      "id": "node/3536204549"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/3554731309",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -5035,6 +5986,33 @@
         ]
       },
       "id": "node/3576711922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3576711924",
+        "addr:housenumber": "1",
+        "addr:postcode": "52062",
+        "addr:street": "Kapuzinergraben",
+        "amenity": "pharmacy",
+        "check_date": "2025-07-08",
+        "check_date:opening_hours": "2025-07-08",
+        "contact:website": "http://www.elisenbrunnen-apotheke.de/",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Elisenbrunnen-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 10:00-18:00; Su off",
+        "phone": "+49 241 4757760",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.087126,
+          50.7734663
+        ]
+      },
+      "id": "node/3576711924"
     },
     {
       "type": "Feature",
@@ -5553,6 +6531,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/3893057681",
+        "addr:city": "Aachen",
+        "addr:housenumber": "100",
+        "addr:postcode": "52062",
+        "addr:street": "Adalbertstraße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2025-09-10",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Acnos Apotheke",
+        "opening_hours": "Mo-Fr 09:00-20:00; Sa 10:00-20:00; Su,PH off",
+        "website": "https://apotheke-aquisplaza.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0937793,
+          50.7748444
+        ]
+      },
+      "id": "node/3893057681"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/3900470956",
         "addr:city": "Aachen",
         "addr:housenumber": "5",
@@ -5912,6 +6916,32 @@
         ]
       },
       "id": "node/4352730510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4366646398",
+        "addr:city": "Aachen",
+        "addr:housenumber": "121",
+        "addr:postcode": "52070",
+        "addr:street": "Krefelder Straße",
+        "amenity": "pharmacy",
+        "check_date": "2023-08-09",
+        "fax": "+49 241 91993692",
+        "healthcare": "pharmacy",
+        "name": "Tivoli Apotheke",
+        "opening_hours": "Mo-Fr 08:30-19:00; Sa 09:00-16:00",
+        "phone": "+49 241 91993694",
+        "website": "http://tivoli-apotheke.info"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0933504,
+          50.7875307
+        ]
+      },
+      "id": "node/4366646398"
     },
     {
       "type": "Feature",
@@ -6832,6 +7862,36 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/5181825921",
+        "addr:city": "Aachen",
+        "addr:housenumber": "19",
+        "addr:postcode": "52064",
+        "addr:street": "Franzstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-07-08",
+        "check_date:opening_hours": "2025-07-08",
+        "email": "postapo-laven@arcor.de",
+        "healthcare": "pharmacy",
+        "name": "Post Apotheke",
+        "opening_hours": "Mo-Fr 08:15-18:30; Sa 09:00-14:00; Su,PH off",
+        "operator": "Peter Laven",
+        "phone": "+49 241 33868",
+        "toilets:wheelchair": "no",
+        "website": "https://www.post-apotheke-aachen.de/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0849276,
+          50.7710312
+        ]
+      },
+      "id": "node/5181825921"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/5188151821",
         "amenity": "doctors",
         "check_date": "2025-08-04",
@@ -7140,6 +8200,7 @@
         "addr:postcode": "52066",
         "addr:street": "Eupener Straße",
         "amenity": "doctors",
+        "check_date:opening_hours": "2025-10-19",
         "contact:fax": "+49241 23772",
         "contact:phone": "+49241 33104",
         "contact:website": "https://www.kleinbisgross.de/",
@@ -7313,6 +8374,27 @@
         ]
       },
       "id": "node/5459898766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5536605928",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Blondel-Apotheke",
+        "opening_hours": "Su,PH off; Mo,Tu,Th,Fr 08:30-19:00; We 08:30-15:00; Sa off",
+        "phone": "+49 241 40107150",
+        "website": "https://blondel-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0907093,
+          50.7758535
+        ]
+      },
+      "id": "node/5536605928"
     },
     {
       "type": "Feature",
@@ -8058,6 +9140,7 @@
         "healthcare": "doctor",
         "healthcare:speciality": "general;internal;clinic;laboratory;infektiologie",
         "name": "PZB.de - Praxenzentrum Blondelstraße",
+        "opening_hours": "Mo 08:30-12:00,15:00-18:00; Tu 08:30-12:00,15:00-17:00; Th 08:30-12:00,15:00-17:00; We,Fr 08:30-12:00",
         "operator": "Praxis Dr. Knechten, INSTO GmbH"
       },
       "geometry": {
@@ -8277,6 +9360,35 @@
         ]
       },
       "id": "node/6480516862"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6490625967",
+        "addr:city": "Aachen",
+        "addr:housenumber": "25",
+        "addr:postcode": "52078",
+        "addr:street": "Heussstraße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2021-07-04",
+        "dispensing": "yes",
+        "drive_through": "no",
+        "healthcare": "pharmacy",
+        "name": "Abraxas Apotheke",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:30-16:00; Su,PH off",
+        "operator": "Schartmann & Kolter OHG",
+        "phone": "+49 241 99743980",
+        "website": "https://abraxas-apotheke-aachen.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1564466,
+          50.7510287
+        ]
+      },
+      "id": "node/6490625967"
     },
     {
       "type": "Feature",
@@ -9656,6 +10768,31 @@
         ]
       },
       "id": "node/8323979874"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8323979878",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "52066",
+        "addr:street": "Kapellenstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Abtei-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-14:00; PH,Su off",
+        "website": "https://www.abtei-apotheke-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0923666,
+          50.7616552
+        ]
+      },
+      "id": "node/8323979878"
     },
     {
       "type": "Feature",
@@ -11830,6 +12967,36 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/9869648447",
+        "addr:city": "Aachen",
+        "addr:housenumber": "31",
+        "addr:postcode": "52064",
+        "addr:street": "Boxgraben",
+        "amenity": "pharmacy",
+        "check_date": "2025-06-05",
+        "check_date:opening_hours": "2025-06-05",
+        "dispensing": "yes",
+        "fax": "+49 241 2 70 04",
+        "healthcare": "pharmacy",
+        "name": "Mozart Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:30-13:30",
+        "operator": "Hofmann & Thumm OHG",
+        "phone": "+49 241 2 70 05",
+        "website": "https://www.mozart-apotheke-aachen.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0833965,
+          50.7684911
+        ]
+      },
+      "id": "node/9869648447"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/9869804236",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -11957,6 +13124,32 @@
         ]
       },
       "id": "node/9897433738"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9897470422",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "52064",
+        "addr:street": "Karlsgraben",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Karolinger Apotheke",
+        "opening_hours": "Mo-We;Fr 08:30-18:30; Sa 09:00-14:00; Th 08:30-19:00; PH off",
+        "website": "http://www.karolingerapo.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0764556,
+          50.7730262
+        ]
+      },
+      "id": "node/9897470422"
     },
     {
       "type": "Feature",
@@ -12159,6 +13352,36 @@
         ]
       },
       "id": "node/10080635055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10083461708",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "94",
+        "addr:postcode": "52062",
+        "addr:street": "Großkölnstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "hof-apo-aachen@t-online.de",
+        "fax": "+49 241 48723",
+        "healthcare": "pharmacy",
+        "name": "Hof-Apotheke",
+        "opening_hours": "Mo-Tu 08:00-18:00; We 08:00-14:00; Th 08:00-17:00; Fr 08:00-16:00; Sa 09:00-14:00",
+        "operator": "Burkhard Knoben",
+        "phone": "+49 241 39724",
+        "website": "https://www.hof-apo-aachen.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0879546,
+          50.777811
+        ]
+      },
+      "id": "node/10083461708"
     },
     {
       "type": "Feature",
@@ -12511,6 +13734,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/10240079800",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "12",
+        "addr:postcode": "52066",
+        "addr:street": "Burtscheider Markt",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "farma-plus Apotheke an der Thermalquelle",
+        "opening_hours": "Mo-Fr 08:30-18:30, Sa 09:00-13:00",
+        "website": "https://www.farma-plus-aachen.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0920822,
+          50.7631606
+        ]
+      },
+      "id": "node/10240079800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/10242197431",
         "addr:city": "Aachen",
         "addr:housenumber": "18",
@@ -12550,26 +13799,6 @@
         ]
       },
       "id": "node/10259455138"
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "@id": "node/10259455142",
-        "amenity": "cafe",
-        "contact:website": "https://petermachtpause.de/about_us",
-        "name": "Petermachtpause",
-        "opening_hours": "Mo-Fr 07:30-14:00; Sa,Su,PH off",
-        "operator": "Petermachtpause",
-        "takeaway": "yes"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          6.0477208,
-          50.7849631
-        ]
-      },
-      "id": "node/10259455142"
     },
     {
       "type": "Feature",
@@ -12707,6 +13936,8 @@
         "@id": "node/10692937233",
         "amenity": "cafe",
         "cuisine": "coffee_shop;sandwich;regional;cake;german;beer;wine;pancake",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
         "indoor_seating": "yes",
         "level": "0",
         "name": "J. A. Mayer Bistro",
@@ -13916,6 +15147,37 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/11243037022",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "24,26",
+        "addr:postcode": "52064",
+        "addr:street": "Lütticher Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2024-10-07",
+        "dispensing": "yes",
+        "drive_through": "yes",
+        "email": "bestellung@luisen-apotheke-aachen.de",
+        "healthcare": "pharmacy",
+        "name": "Luisen-Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-18:30; We,Sa 08:30-13:00; Su,PH off",
+        "operator": "Dr. Paul Brosthardt e. K.",
+        "phone": "+49 241 71304",
+        "website": "https://www.luisen-apotheke-aachen.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0731784,
+          50.7682918
+        ]
+      },
+      "id": "node/11243037022"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/11251622487",
         "addr:city": "Aachen",
         "addr:housenumber": "149",
@@ -14201,6 +15463,32 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/11767272550",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "4-6",
+        "addr:postcode": "52062",
+        "addr:street": "Kleinmarschierstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-07-02",
+        "check_date:opening_hours": "2025-07-02",
+        "healthcare": "pharmacy",
+        "name": "Münster-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-14:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.0834808,
+          50.774124
+        ]
+      },
+      "id": "node/11767272550"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/11773216416",
         "addr:city": "Aachen",
         "addr:country": "DE",
@@ -14346,6 +15634,34 @@
         ]
       },
       "id": "node/11804770480"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11804770485",
+        "addr:city": "Aachen",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "52064",
+        "addr:street": "Jakobstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-09-20",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "St. Pauls-Apotheke",
+        "opening_hours": "Mo-Fr 08:30-13:30,14:30-18:30; We 08:30-13:00,15:00-18:30; Sa 08:30-13:00",
+        "operator": "Reiner Bimmermann",
+        "website": "https://st-pauls-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.081552,
+          50.7753386
+        ]
+      },
+      "id": "node/11804770485"
     },
     {
       "type": "Feature",
@@ -15584,9 +16900,11 @@
         "addr:housenumber": "45",
         "addr:postcode": "52064",
         "addr:street": "Römerstraße",
-        "check_date": "2025-06-20",
+        "check_date": "2025-10-18",
+        "check_date:opening_hours": "2025-10-18",
         "healthcare": "podiatrist",
         "name": "Podologie Praxis Podo-X by Baxevanis Elena",
+        "opening_hours:signed": "no",
         "phone": "+49241 99771088"
       },
       "geometry": {
@@ -15700,6 +17018,7 @@
         "amenity": "ice_cream",
         "contact:email": "kontakt@tiana-eis.de",
         "contact:phone": "+49 241 91992342",
+        "indoor_seating": "yes",
         "name": "Eismanufaktur Tiana",
         "opening_hours": "10:00-21:00",
         "outdoor_seating": "yes",

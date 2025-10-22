@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-03-26T11:10:28Z",
+  "timestamp": "2025-10-22T08:40:04Z",
   "features": [
     {
       "type": "Feature",
@@ -140,7 +140,10 @@
         "@id": "node/3263705147",
         "amenity": "biergarten",
         "contact:phone": "+49 171 2874310",
-        "name:signed": "no"
+        "name": "Freizeitanlage Kanu und Tretbootverleih",
+        "name:signed": "no",
+        "opening_hours": "We-Su,PH 11:00-18:00",
+        "phone": "01512 1277557"
       },
       "geometry": {
         "type": "Point",
@@ -174,6 +177,28 @@
         ]
       },
       "id": "node/4075359632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4078176285",
+        "addr:city": "Heimbach",
+        "addr:housenumber": "37",
+        "addr:postcode": "52396",
+        "addr:street": "Hengebachstraße",
+        "amenity": "pharmacy",
+        "name": "Rurtal-Apotheke",
+        "phone": "+49 2446 453",
+        "website": "https://www.rurtal-apotheke.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.4772339,
+          50.6336167
+        ]
+      },
+      "id": "node/4078176285"
     },
     {
       "type": "Feature",

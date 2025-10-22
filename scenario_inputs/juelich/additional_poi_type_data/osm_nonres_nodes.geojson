@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2025-03-26T11:11:30Z",
+  "timestamp": "2025-10-22T08:34:00Z",
   "features": [
     {
       "type": "Feature",
@@ -14,6 +14,7 @@
         "addr:postcode": "52428",
         "addr:street": "Marktplatz",
         "amenity": "doctors",
+        "check_date": "2025-03-29",
         "contact:fax": "+49-2461-58702",
         "contact:phone": "+49 2461 56161",
         "contact:website": "http://www.zimjuelich.de/",
@@ -105,6 +106,7 @@
         "website": "https://www.gymnasium-zitadelle.de/",
         "wheelchair": "limited",
         "wikidata": "Q1558272",
+        "wikimedia_commons": "Category:Gymnasium Zitadelle Jülich",
         "wikipedia": "de:Gymnasium Zitadelle Jülich"
       },
       "geometry": {
@@ -128,8 +130,8 @@
         "addr:suburb": "Koslar",
         "amenity": "cafe",
         "name": "Cafe Molli",
-        "opening_hours": "We-Su 09:30-17:00",
-        "website": "https://landhaus-blumenthal.metro.bar/?lang=de",
+        "opening_hours": "We-Su 10:00-18:00",
+        "website": "https://www.cafe-molli.de/",
         "wifi": "no"
       },
       "geometry": {
@@ -221,6 +223,90 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/126136208",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "1 A",
+        "addr:postcode": "52428",
+        "addr:street": "Nordstraße",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 2461 59935",
+        "contact:phone": "+49 2461 8330",
+        "healthcare": "pharmacy",
+        "name": "Nord-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "operator": "Barbara Hoschützky",
+        "website": "https://www.nord-apotheke-juelich.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3594902,
+          50.9303738
+        ]
+      },
+      "id": "node/126136208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/126136217",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "52428",
+        "addr:street": "Kleine Kölnstraße",
+        "amenity": "pharmacy",
+        "contact:fax": "+49 2461 57656",
+        "contact:phone": "+49 2461 51152",
+        "healthcare": "pharmacy",
+        "name": "Rur-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3618303,
+          50.9216093
+        ]
+      },
+      "id": "node/126136217"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/220882289",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "52428",
+        "addr:street": "Marktplatz",
+        "amenity": "pharmacy",
+        "check_date": "2025-03-29",
+        "check_date:opening_hours": "2021-03-30",
+        "contact:fax": "+49-2461-58083",
+        "contact:phone": "+49-2461-2513;0800 -8002513",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Bacciocco-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-14:00",
+        "website": "https://www.apotheke-bacciocco.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.358251,
+          50.9216605
+        ]
+      },
+      "id": "node/220882289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/220882308",
         "addr:city": "Jülich",
         "addr:country": "DE",
@@ -247,6 +333,34 @@
         ]
       },
       "id": "node/220882308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/220882332",
+        "addr:city": "Jülich",
+        "addr:country": "DE",
+        "addr:housenumber": "19",
+        "addr:postcode": "52428",
+        "addr:street": "Kölnstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-03-29",
+        "contact:fax": "+49 2461 31402",
+        "contact:phone": "+49 2461 8868",
+        "healthcare": "pharmacy",
+        "name": "Post-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-15:00",
+        "website": "https://www.post-apotheke-juelich.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3601236,
+          50.9225557
+        ]
+      },
+      "id": "node/220882332"
     },
     {
       "type": "Feature",
@@ -528,25 +642,30 @@
     {
       "type": "Feature",
       "properties": {
-        "@id": "node/588613940",
+        "@id": "node/588653741",
         "addr:city": "Jülich",
         "addr:country": "DE",
-        "addr:housenumber": "16",
+        "addr:housenumber": "35",
         "addr:postcode": "52428",
-        "addr:street": "Adenauerstraße",
-        "addr:suburb": "Bourheim",
-        "amenity": "pub",
-        "contact:phone": "+49-2461-4236",
-        "name": "Bourheimer Stuben"
+        "addr:street": "Kreisbahnstraße",
+        "addr:suburb": "Koslar",
+        "amenity": "pharmacy",
+        "contact:fax": "+49-2461-58646",
+        "contact:phone": "+49-2461-345272",
+        "dispensing": "yes",
+        "name": "Apotheke Bacciocco",
+        "opening_hours": "Mo-Tu 08:30-12:30,14:30-18:30;We 08:30-13:00;Th-Fr 08:30-12:30,14:30-18:30;Sa 09:00-13:00",
+        "website": "https://www.apotheke-bacciocco.de/",
+        "wheelchair": "yes"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          6.3315913,
-          50.903574
+          6.3249689,
+          50.9258433
         ]
       },
-      "id": "node/588613940"
+      "id": "node/588653741"
     },
     {
       "type": "Feature",
@@ -1243,6 +1362,33 @@
     {
       "type": "Feature",
       "properties": {
+        "@id": "node/6853468488",
+        "addr:city": "Jülich",
+        "addr:housenumber": "7",
+        "addr:postcode": "52428",
+        "addr:street": "Römerstraße",
+        "amenity": "pharmacy",
+        "check_date": "2025-05-26",
+        "contact:fax": "+49-2461-58405",
+        "contact:phone": "+49-2461-50415",
+        "healthcare": "pharmacy",
+        "name": "Schlossplatz-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-13:00",
+        "website": "https://www.schlossplatzapotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3630491,
+          50.9239423
+        ]
+      },
+      "id": "node/6853468488"
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "@id": "node/8714573332",
         "addr:city": "Jülich",
         "addr:housenumber": "35",
@@ -1325,9 +1471,12 @@
         "@id": "node/9024560144",
         "amenity": "cafe",
         "check_date": "2023-08-28",
+        "email": "info@gustoso-juelich.de",
         "indoor_seating": "yes",
         "name": "Gustoso Bistro Cafe",
-        "outdoor_seating": "yes"
+        "outdoor_seating": "yes",
+        "phone": "+49 2461 9368501",
+        "website": "https://www.gustoso-juelich.de/"
       },
       "geometry": {
         "type": "Point",
@@ -1550,12 +1699,18 @@
         "addr:postcode": "52428",
         "addr:street": "Marktplatz",
         "amenity": "cafe",
+        "check_date": "2025-09-22",
         "contact:email": "info@schwan.nrw",
         "contact:phone": "+49 2461 9840039",
         "indoor_seating": "yes",
         "name": "Schwan Bauernhofcafé",
         "opening_hours": "Mo, We-Sa 09:00-17:00; Tu off; Su, PH 10:00-17:00",
         "outdoor_seating": "yes",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "reservation": "yes",
+        "toilets": "yes",
         "website": "https://schwan-bauernhofcafe.nrw/"
       },
       "geometry": {
@@ -1777,6 +1932,64 @@
         ]
       },
       "id": "node/12145737790"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12814862803",
+        "amenity": "doctors",
+        "contact:email": "info@zanker-juelich.de",
+        "contact:phone": "+49 2461 3169440",
+        "contact:website": "https://www.zanker-juelich.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "dermatology",
+        "name": "Zanker Dermatologie",
+        "opening_hours": "\"Termin nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3623862,
+          50.9218642
+        ]
+      },
+      "id": "node/12814862803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12814862804",
+        "amenity": "dentist",
+        "contact:phone": "+49 2461 4044",
+        "healthcare": "dentist",
+        "healthcare:speciality": "endodontics",
+        "name": "Stephanie Dahl",
+        "opening_hours": "\"Termin nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.362352,
+          50.9218934
+        ]
+      },
+      "id": "node/12814862804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12864894173",
+        "amenity": "cafe",
+        "name": "J&A Bubbel Tea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.3569933,
+          50.9216301
+        ]
+      },
+      "id": "node/12864894173"
     }
   ]
 }

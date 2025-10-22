@@ -43,3 +43,4 @@ Volunteer Workplace
 Home
 Generic Errand Location
 House of friends or relatives
+Pharmacy

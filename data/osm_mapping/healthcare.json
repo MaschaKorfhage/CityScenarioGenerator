@@ -9,5 +9,8 @@
         "audiologist",
         "podiatrist",
         "speech_therapist"
+    ],
+    "Pharmacy": [
+        "pharmacy"
     ]
 }
