@@ -170,7 +170,7 @@
     },
     "Apotheke": {
         "non_work_locations": [
-            "Generic Errand Location"
+            "Pharmacy"
         ],
         "work_locations": [
             "Workplace (shift worker)"
