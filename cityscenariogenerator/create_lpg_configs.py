@@ -149,7 +149,7 @@ class LPGConfigCreator:
         self.excluded_nonres_buildings = 0
 
         #: # probabilities for residential POIs; are initialized during POI choice
-        self.residential_buildings: ResidentialBuildingList | None = None
+        self.residential_building_weights: ResidentialBuildingList | None = None
         self.distcalc: distances.DistanceCalculator | None = None
 
     def _select_transportation_device_set(
@@ -201,7 +201,7 @@ class LPGConfigCreator:
         )
 
     def add_lpg_house(self, building: household_data.BuildingData) -> lpgdata.HouseData:
-        assert self.residential_buildings is None, (
+        assert self.residential_building_weights is None, (
             "Cannot add more houses after setting POI preferences"
         )
         if building.id in self.houses:
@@ -250,7 +250,7 @@ class LPGConfigCreator:
     def add_poi(
         self, building_with_type: poi_type_mapping.BuildingWithLocationType
     ) -> None:
-        assert self.residential_buildings is None, (
+        assert self.residential_building_weights is None, (
             "Cannot add more POIs after setting POI preferences"
         )
         building = building_with_type.building
@@ -293,7 +293,7 @@ class LPGConfigCreator:
         """
         # assign POIs of every residential type to the person
         poi_weights = {}
-        assert self.residential_buildings is not None, (
+        assert self.residential_building_weights is not None, (
             "Residential POI weights not initialized yet"
         )
 
@@ -306,9 +306,9 @@ class LPGConfigCreator:
             # select a random residential building using a uniform distribution
             num_houses = self._determine_poi_num_for_person()
             selected_houses = numpy.random.choice(
-                self.residential_buildings.ids,
+                self.residential_building_weights.ids,
                 num_houses,
-                p=self.residential_buildings.weights,
+                p=self.residential_building_weights.weights,
             )
             for house_id in selected_houses:
                 poi_id = utils.create_poi_id(house_id, location)
@@ -443,7 +443,7 @@ class LPGConfigCreator:
         ]
         total_hh = sum(hhs_per_house)
         weights = [i / total_hh for i in hhs_per_house]
-        self.residential_buildings = ResidentialBuildingList(house_ids, weights)
+        self.residential_building_weights = ResidentialBuildingList(house_ids, weights)
 
     def create_poi_preferences(
         self, generate_test_routes: bool = False, include_unused_pois: bool = False
@@ -592,6 +592,10 @@ class LPGConfigCreator:
         self.houses = dict(list(self.houses.items())[:houses])
         for house in self.houses.values():
             house.House.Households = house.House.Households[:households]  # type: ignore
+
+        if houses is not None and self.residential_building_weights:
+            # refresh the building weights
+            self._calc_residential_poi_probabilities()
 
         # limit the POIs
         for poi_type in self.poi_ids_by_type.keys():
