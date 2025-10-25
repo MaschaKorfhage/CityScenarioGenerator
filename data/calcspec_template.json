@@ -1,6 +1,8 @@
 {
     "CalcSpec": {
-        "LoadtypesForPostprocessing": [],
+        "LoadtypesForPostprocessing": [
+            "Electricity"
+        ],
         "CalculationName": "",
         "DefaultForOutputFiles": "NoFiles",
         "CalcOptions": [
