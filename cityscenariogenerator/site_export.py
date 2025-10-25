@@ -62,7 +62,7 @@ def create_site_planning_instance(
         for i, hh in enumerate(hcj.House.Households):
             for person, _ in hh.PointOfInterestPreferences.items():
                 num_persons += 1
-                person_id = f"{person}_{id}_HH{i}"
+                person_id = f"{person}_{id}_HH{i + 1}"
                 person_ids_in_order.append(person_id)
                 person_demand = demands[person_id]
                 person_lines.append(f"{person_demand}\n")
@@ -149,7 +149,7 @@ def site_planning_export(
     :param config_creator: complete config creator object, after assigning POI preferences
     """
     logging.info(f"Creating a site planning instance for {poi_type} POIs")
-    assert config_creator.residential_buildings and config_creator.distcalc
+    assert config_creator.residential_building_weights and config_creator.distcalc
 
     # filter existing POIs of the selected type
     pois_of_type = {
@@ -161,7 +161,7 @@ def site_planning_export(
     # select_random_residential_sites(
     #     config_creator.params,
     #     sizes,
-    #     config_creator.residential_buildings,
+    #     config_creator.residential_building_weights,
     #     config_creator.distcalc,
     # )
 
