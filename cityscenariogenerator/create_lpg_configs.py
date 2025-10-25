@@ -290,7 +290,7 @@ class LPGConfigCreator:
         )
         return number
 
-    def select_residential_poi_for_person(
+    def select_residential_pois_for_person(
         self, person: lpgdata.PersonData
     ) -> dict[str, float]:
         """
@@ -376,7 +376,7 @@ class LPGConfigCreator:
             poi_weights.update({poi_id: weights[poi_id] for poi_id in selected_pois})
 
         # add residential POIs separately
-        res_poi_weights = self.select_residential_poi_for_person(person)
+        res_poi_weights = self.select_residential_pois_for_person(person)
         poi_weights.update(res_poi_weights)
         return poi_weights
 
