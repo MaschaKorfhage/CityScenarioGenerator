@@ -1,7 +1,6 @@
 """Creates configuration files for the LPG out of BuildingData objects generated from BUILDA"""
 
 from collections import defaultdict
-from dataclasses import dataclass
 import itertools
 import logging
 from pathlib import Path
@@ -36,6 +35,7 @@ from cityscenariogenerator.plots import (
 from cityscenariogenerator.poi_type_mapping import BuildingWithLocationType
 from cityscenariogenerator.scenario_params import ScenarioParams
 from cityscenariogenerator.city_config import LPGCityConfig
+from cityscenariogenerator.site_export import ResidentialBuildingList
 
 
 def build_household_person_map() -> dict[str, list[lpgdata.PersonData]]:
@@ -101,15 +101,6 @@ def copy_calcspec_file(
     logging.info(f"Saving simulation settings to {result_file_path}")
     with open(result_file_path, "w", encoding="utf8") as f:
         f.write(result_json_str)
-
-
-@dataclass
-class ResidentialBuildingList:
-    """Simple class to store IDs and corresponding weights
-    for sampling residential POIs"""
-
-    ids: list[str]
-    weights: list[float]
 
 
 class LPGConfigCreator:
