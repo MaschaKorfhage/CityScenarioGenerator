@@ -216,3 +216,18 @@ def site_planning_export_multiple(
         site_planning_export(
             params, config_creator, poi_type, demands_file, candidate_file
         )
+
+
+def create_pharmacy_instances(params, config_creator):
+    """Example to create instances for pharmacy site planning"""
+    poi_type = "Pharmacy"
+    subdir = params.input_data_dir() / utils.slugify(poi_type)
+    demands_file = subdir / "demands.json"
+    candidate_file_dir = subdir / "site_candidates/random_residential_unweighted"
+    if not demands_file.is_file() or not candidate_file_dir.is_dir():
+        logging.warning(f"No data for {poi_type} instace generation.")
+        return
+
+    site_planning_export_multiple(
+        params, config_creator, poi_type, demands_file, candidate_file_dir
+    )

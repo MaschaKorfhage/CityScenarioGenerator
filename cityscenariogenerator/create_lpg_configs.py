@@ -691,8 +691,8 @@ def create_configs_from_buildings(
     # determine which POIs each person visits
     config_creator.create_poi_preferences(generate_test_routes)
 
-    # optional custom exports
-    site_export.custom_export(params, config_creator)
+    # optional custom instance export
+    site_export.create_pharmacy_instances(params, config_creator)
 
     if generate_test_routes:
         # create random routes for testing
