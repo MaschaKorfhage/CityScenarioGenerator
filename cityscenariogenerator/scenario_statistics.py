@@ -10,25 +10,15 @@ from typing import Any, Iterable
 from pylpg import lpgdata
 
 from cityscenariogenerator.lpg_locations import LpgLocations
-from cityscenariogenerator.utils import create_json_file, sort_by_key, sort_by_val
+from cityscenariogenerator.utils import (
+    create_json_file,
+    get_jsonref_name,
+    sort_by_key,
+    sort_by_val,
+)
 
 #: path to a file providing characteristic information for each LPG person (from ETHOS.ActivityAssure)
 PERSON_CHARACTERISTICS_PATH = Path("data/person_characteristics.json")
-
-
-def get_jsonref_name(json_ref: str | lpgdata.JsonReference) -> str:
-    """Returns a JsonReference as a str. Returns the name, or if that
-    is empty, the Guid.
-
-    :param json_ref: the JsonReference
-    :return: the str representing the JsonReference
-    """
-    if isinstance(json_ref, str):
-        return json_ref
-    if json_ref.Name:
-        return json_ref.Name
-    assert json_ref.Guid and json_ref.Guid.StrVal
-    return json_ref.Guid.StrVal
 
 
 def write_general_info(

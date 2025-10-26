@@ -13,6 +13,7 @@ import unicodedata
 import re
 
 import numpy
+from pylpg import lpgdata
 
 
 #: name of the logfile produced in each scenario generation
@@ -190,3 +191,18 @@ def get_building_id_from_poi(poi_id: str) -> str:
     :return: the contained building ID
     """
     return poi_id.split(" ")[-1]
+
+
+def get_jsonref_name(json_ref: str | lpgdata.JsonReference) -> str:
+    """Returns a JsonReference as a str. Returns the name, or if that
+    is empty, the Guid.
+
+    :param json_ref: the JsonReference
+    :return: the str representing the JsonReference
+    """
+    if isinstance(json_ref, str):
+        return json_ref
+    if json_ref.Name:
+        return json_ref.Name
+    assert json_ref.Guid and json_ref.Guid.StrVal
+    return json_ref.Guid.StrVal
