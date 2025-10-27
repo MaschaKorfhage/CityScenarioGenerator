@@ -392,7 +392,6 @@ def apply_eplpo_pharmacy_results(params: ScenarioParams, config_creator):
     name = "pharmacy_random_residential_sites_10"
     model_type = 0
     eplpo_data_dir = Path("/fast/home/d-neuroth/phd_dir/pharmacy_data")
-    eplpo_data_dir = Path("R:/phd_dir/pharmacy_data")
     instance_dir = eplpo_data_dir / "instances"
     result_file = eplpo_data_dir / "results" / f"{name}_{model_type}_IPsolution.json"
     # instance_file = instance_dir / f"{name}.txt"
