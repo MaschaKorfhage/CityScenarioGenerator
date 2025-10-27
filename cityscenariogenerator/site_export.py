@@ -343,7 +343,11 @@ def apply_site_planning_results(
         if poi_id not in results.selected_sites:
             config_creator.remove_poi(poi_id)
             # global city definition might not contain the POI, so use pop instead of del
-            config_creator.global_city_definition.PointsOfInterest.pop(poi_id, None)
+            x = config_creator.global_city_definition.PointsOfInterest.pop(poi_id, None)
+            if x is None:
+                logging.warning(
+                    f"Could not find unselected POI {poi_id} in global city definition"
+                )
 
     # store the POI ID corresponding to each site ID
     site_poi_map: dict[str, str] = {}
@@ -366,6 +370,8 @@ def apply_site_planning_results(
 
     # apply the person preferences
     for house_id, house in config_creator.houses.items():
+        # remove the subset of relevant POIs
+        house.City = None
         assert house.House
         for hh_index, hh in enumerate(house.House.Households):
             for person, prefs in hh.PointOfInterestPreferences.items():
