@@ -371,10 +371,7 @@ def apply_site_planning_results(config_creator, results: SitePlanningResult):
                 # remove all existing POI preferences for the affected POI type
                 existing_pref_ids = list(prefs.PoiWeights.keys())
                 for poi_id in existing_pref_ids:
-                    poi_type = utils.get_jsonref_name(
-                        config_creator.pois[poi_id].LocationType  # type: ignore
-                    )
-                    if poi_type == results.poi_type:
+                    if results.poi_type in poi_id:
                         del prefs.PoiWeights[poi_id]
 
                 # set the new POI preference
