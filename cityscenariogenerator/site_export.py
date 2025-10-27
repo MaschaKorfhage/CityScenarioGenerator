@@ -310,6 +310,7 @@ def get_selected_sites(
     # get the IDs of the sites selected by the model; the model provides the indices
     # of the selected sites in the original site candidate list
     selected_indices = results["solution"]["incumbent"]
+    assert selected_indices != "infeasible", "The instance was infeasible"
     selected_sites = [candidate_ids[i] for i in selected_indices]
 
     # get the person preferences; the model provides a list, each item specifying the
