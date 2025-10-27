@@ -401,7 +401,7 @@ def apply_eplpo_pharmacy_results(params: ScenarioParams, config_creator):
     results = get_selected_sites("Pharmacy", instance_info, result_file)
 
     # store the model results with proper IDs in a separate file
-    results_path = params.result_directory / "instances/results/results_{name}.json"
+    results_path = params.result_directory / f"instances/results/results_{name}.json"
     utils.create_json_file(results_path, results.to_dict())  # type: ignore
 
     logging.info(f"Site planning selected {len(results.selected_sites)} sites")
