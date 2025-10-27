@@ -10,16 +10,11 @@ import numpy as np
 from pylpg import lpgdata
 
 from cityscenariogenerator import distances, utils
+from cityscenariogenerator.lpg_config_creator import (
+    LPGConfigCreator,
+    ResidentialBuildingList,
+)
 from cityscenariogenerator.scenario_params import ScenarioParams
-
-
-@dataclass
-class ResidentialBuildingList:
-    """Simple class to store IDs and corresponding weights
-    for sampling residential POIs"""
-
-    ids: list[str]
-    weights: list[float]
 
 
 @dataclass
@@ -31,7 +26,7 @@ class PersonId:
     name: str
 
 
-def get_person_id_str(house_id, hh_index, person_name) -> str:
+def get_person_id_str(house_id: str, hh_index: int, person_name: str) -> str:
     """Returns a person ID str matching the style of ActivityAssure
     activity profile filenames, e.g., "CHR42 Jessica_DEA_DENW40AL10000B7u-0_HH1"
 
@@ -179,7 +174,11 @@ def select_random_residential_sites(
 
 
 def site_planning_export(
-    params, config_creator, poi_type: str, demands_file: Path, candidate_id_file: Path
+    params: ScenarioParams,
+    config_creator: LPGConfigCreator,
+    poi_type: str,
+    demands_file: Path,
+    candidate_id_file: Path,
 ):
     """Additional custom exports
 
@@ -243,8 +242,8 @@ def site_planning_export(
 
 
 def site_planning_export_multiple(
-    params,
-    config_creator,
+    params: ScenarioParams,
+    config_creator: LPGConfigCreator,
     poi_type: str,
     demands_file: Path,
     candidate_id_file_dir: Path,
@@ -256,7 +255,7 @@ def site_planning_export_multiple(
         )
 
 
-def create_pharmacy_instances(params, config_creator):
+def create_pharmacy_instances(params: ScenarioParams, config_creator: LPGConfigCreator):
     """Example to create instances for pharmacy site planning"""
     poi_type = "Pharmacy"
     subdir = params.input_data_dir() / utils.slugify(poi_type)
@@ -326,7 +325,9 @@ def get_selected_sites(
     return SitePlanningResult(poi_type, selected_sites, preferences)
 
 
-def apply_site_planning_results(config_creator, results: SitePlanningResult):
+def apply_site_planning_results(
+    config_creator: LPGConfigCreator, results: SitePlanningResult
+):
     """Applies the site planning resulst by removing not selected POIs
     and creating new custom POIs for any new selected sites.
     Must be called after config_creator.create_poi_preferences.
@@ -381,7 +382,9 @@ def apply_site_planning_results(config_creator, results: SitePlanningResult):
                 prefs.PoiWeights[new_pref_poi] = 1
 
 
-def apply_eplpo_pharmacy_results(params: ScenarioParams, config_creator):
+def apply_eplpo_pharmacy_results(
+    params: ScenarioParams, config_creator: LPGConfigCreator
+):
     """Applies pharmacy site planning results from the eplpo mode.
     Must be called after config_creator.create_poi_preferences()
 
