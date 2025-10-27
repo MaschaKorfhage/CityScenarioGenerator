@@ -269,6 +269,18 @@ class LPGConfigCreator:
         for location in locations:
             self._add_poi_instance(building, location)
 
+    def remove_poi(self, poi_id: str):
+        """Removes the POI from the internal POI lists
+
+        :param poi_id: ID of the POI to remove
+        """
+        assert poi_id in self.pois, f"No POI with the given ID found: {poi_id}"
+        poi = self.pois[poi_id]
+        assert poi.LocationType
+        poi_type = utils.get_jsonref_name(poi.LocationType)
+        self.poi_ids_by_type[poi_type].remove(poi_id)
+        del self.pois[poi_id]
+
     def _determine_person_in_hh(
         self, hh: lpgdata.HouseholdData
     ) -> list[lpgdata.PersonData]:
@@ -693,6 +705,9 @@ def create_configs_from_buildings(
 
     # optional custom instance export
     site_export.create_pharmacy_instances(params, config_creator)
+
+    # optional application of site planning results
+    # site_export.apply_eplpo_pharmacy_results(params, config_creator)
 
     if generate_test_routes:
         # create random routes for testing

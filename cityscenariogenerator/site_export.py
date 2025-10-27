@@ -5,6 +5,7 @@ from dataclasses import dataclass
 import json
 import logging
 from pathlib import Path
+from dataclasses_json import dataclass_json
 import numpy as np
 from pylpg import lpgdata
 
@@ -19,6 +20,43 @@ class ResidentialBuildingList:
 
     ids: list[str]
     weights: list[float]
+
+
+@dataclass
+class PersonId:
+    """Scenario-wide unique ID object for a person"""
+
+    house: str
+    hh_index: int
+    name: str
+
+
+def get_person_id_str(house_id, hh_index, person_name) -> str:
+    """Returns a person ID str matching the style of ActivityAssure
+    activity profile filenames, e.g., "CHR42 Jessica_DEA_DENW40AL10000B7u-0_HH1"
+
+    :param house_id: house id
+    :param hh_index: index of the household in the house, zero-based
+    :param person_name: person name
+    :return: person ID str
+    """
+    return f"{person_name}_{house_id}_HH{hh_index + 1}"
+
+
+def parse_person_id(person_id: str) -> PersonId:
+    """Parses person ID strs in the format "CHR42 Jessica_DEA_DENW40AL10000B7u-0_HH1".
+
+    :param person_id: the person ID str
+    :returns: the person ID object
+    """
+    # components are separated by an underscore; name is first, HH number last
+    parts = person_id.split("_")
+    name = parts[0]
+    hh = parts[-1]
+    hh_index = int(hh.removeprefix("HH"))
+    # the rest is the house ID
+    house = "_".join(parts[1:-1])
+    return PersonId(house, hh_index, name)
 
 
 def create_site_planning_instance(
@@ -62,7 +100,7 @@ def create_site_planning_instance(
         for i, hh in enumerate(hcj.House.Households):
             for person, _ in hh.PointOfInterestPreferences.items():
                 num_persons += 1
-                person_id = f"{person}_{id}_HH{i + 1}"
+                person_id = get_person_id_str(id, i, person)
                 person_ids_in_order.append(person_id)
                 person_demand = demands[person_id]
                 person_lines.append(f"{person_demand}\n")
@@ -157,7 +195,7 @@ def site_planning_export(
     }
 
     # generate POI candidate sites
-    sizes = [10, 20, 50, 100, 200, 500, 1000]
+    # sizes = [10, 20, 50, 100, 200, 500, 1000]
     # select_random_residential_sites(
     #     config_creator.params,
     #     sizes,
@@ -231,3 +269,140 @@ def create_pharmacy_instances(params, config_creator):
     site_planning_export_multiple(
         params, config_creator, poi_type, demands_file, candidate_file_dir
     )
+
+
+@dataclass_json
+@dataclass
+class SitePlanningResult:
+    """Stores result of a site planning model run. These results
+    must be taken into account when creating POIs of the affected type
+    for a scenario."""
+
+    #: the poi type the planning results affect
+    poi_type: str
+    #: the selected building/POI IDs for sites, can be residential or non-residential
+    selected_sites: list[str]
+    site_preferences: dict[str, str]
+
+
+def get_selected_sites(
+    poi_type: str, instance_info_file: Path, result_file: Path
+) -> SitePlanningResult:
+    """Loads and returns the results of a site planning model run.
+
+    :param poi_type: the affected POI type
+    :param instance_info_file: the path to the instance info file
+    :param result_file: the path to the model result file
+    :return: the model results with selected POIs and person preferences
+    """
+    with open(result_file, "r", encoding="utf8") as f:
+        results = json.load(f)
+    with open(instance_info_file, "r", encoding="utf8") as f:
+        info = json.load(f)
+
+    # get the list of site candidates
+    candidate_ids = info["poi_ids"]
+    person_ids = info["person_ids"]
+    assert isinstance(candidate_ids, list) and isinstance(person_ids, list), (
+        f"Unexpected instance info file format: {instance_info_file}"
+    )
+
+    # get the IDs of the sites selected by the model; the model provides the indices
+    # of the selected sites in the original site candidate list
+    selected_indices = results["solution"]["incumbent"]
+    selected_sites = [candidate_ids[i] for i in selected_indices]
+
+    # get the person preferences; the model provides a list, each item specifying the
+    # preference of the person at the same index in the original person list; the
+    # preference is again given as index of the site in the candidate list
+    preference_indices = results["solution"]["assignments"]
+    preferences = {
+        person_ids[i]: candidate_ids[i_pref]
+        for i, i_pref in enumerate(preference_indices)
+    }
+    assert set(preferences.values()) == set(selected_sites), "Model result format error"
+
+    return SitePlanningResult(poi_type, selected_sites, preferences)
+
+
+def apply_site_planning_results(config_creator, results: SitePlanningResult):
+    """Applies the site planning resulst by removing not selected POIs
+    and creating new custom POIs for any new selected sites.
+    Must be called after config_creator.create_poi_preferences.
+    Assumes no POI preferences have been set for the affected POI
+    type yet (and so does not delete any existing preferences, just adds
+    new ones).
+
+    :param config_creator: config creator object
+    :param results: site planning result object
+    """
+    # remove all POIs of the affected type that have not been selected
+    for poi_id in config_creator.poi_ids_by_type[results.poi_type]:
+        if poi_id not in results.selected_sites:
+            config_creator.remove_poi(poi_id)
+            # global city definition might not contain the POI, so use pop instead of del
+            config_creator.global_city_definition.PointsOfInterest.pop(poi_id, None)
+
+    # store the POI ID corresponding to each site ID
+    site_poi_map: dict[str, str] = {}
+    kept_pois = 0
+    # create custom POIs for all sites that are not contained as POIs yet
+    for site in results.selected_sites:
+        if site in config_creator.pois:
+            # site is an existing POI that was decided to keep
+            site_poi_map[site] = site
+            kept_pois += 1
+            continue
+        # the site is a residential building - create a custom POI
+        house = config_creator.houses[site]
+        new_poi = lpgdata.PointOfInterestData(results.poi_type, house.House.Coordinates)  # type: ignore
+        poi_id = utils.create_poi_id(site, results.poi_type)
+        config_creator._add_poi_object(poi_id, new_poi)
+        config_creator.global_city_definition.PointsOfInterest[poi_id] = new_poi
+        site_poi_map[site] = poi_id
+    logging.info(f"Kept {kept_pois} of the original {results.poi_type} POIs")
+
+    # apply the person preferences
+    for house_id, house in config_creator.houses.items():
+        assert house.House
+        for hh in house.House.Households:
+            for person, prefs in hh.PointOfInterestPreferences.items():
+                # remove all existing POI preferences for the affected POI type
+                existing_pref_ids = list(prefs.PoiWeights.keys())
+                for poi_id in existing_pref_ids:
+                    poi_type = utils.get_jsonref_name(
+                        config_creator.pois[poi_id].LocationType  # type: ignore
+                    )
+                    if poi_type == results.poi_type:
+                        del prefs.PoiWeights[poi_id]
+
+                # set the new POI preference
+                person_id = get_person_id_str(house_id, hh, person)
+                pref_site = results.site_preferences[person_id]
+                new_pref_poi = site_poi_map[pref_site]
+                prefs.PoiWeights[new_pref_poi] = 1
+
+
+def apply_eplpo_pharmacy_results(params: ScenarioParams, config_creator):
+    """Applies pharmacy site planning results from the eplpo mode.
+    Must be called after config_creator.create_poi_preferences()
+
+    :param config_creator: config creator object
+    """
+    name = "pharmacy_random_residential_sites_10"
+    model_type = 0
+    eplpo_data_dir = Path("/fast/home/d-neuroth/phd_dir/pharmacy_data")
+    eplpo_data_dir = Path("R:/phd_dir/pharmacy_data")
+    instance_dir = eplpo_data_dir / "instances"
+    result_file = eplpo_data_dir / "results" / f"{name}_{model_type}_IPsolution.json"
+    # instance_file = instance_dir / f"{name}.txt"
+    instance_info = instance_dir / f"{name}_info.json"
+    logging.info(f"Applying result of site planning: {name}")
+    results = get_selected_sites("Pharmacy", instance_info, result_file)
+
+    # store the model results with proper IDs in a separate file
+    results_path = params.result_directory / "instances/results/model_results.json"
+    utils.create_json_file(results_path, results.to_dict())  # type: ignore
+
+    logging.info(f"Site planning selected {len(results.selected_sites)} sites")
+    apply_site_planning_results(config_creator, results)
