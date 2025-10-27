@@ -579,6 +579,16 @@ class LPGConfigCreator:
         all_poi_ids = {id for idlist in self.poi_ids_by_type.values() for id in idlist}
         self.pois = {id: poi for id, poi in self.pois.items() if id in all_poi_ids}
 
+    def add_default_queuecapacity(self, poi_type: str, capacity: int):
+        """Sets QueueCapacity for all POIs of a certain type to the specified value.
+
+        :param poi_type: the POI type to adapt
+        :param capacity: the queue capacity to set
+        """
+        logging.info(f"Setting QueueCapacity for {poi_type} POIs to {capacity}")
+        for poi_id in self.poi_ids_by_type[poi_type]:
+            self.pois[poi_id].QueueCapacity = capacity
+
     def create_config_files(self) -> LPGCityConfig:
         path = self.params.result_directory
         city_config = LPGCityConfig(self.houses, self.global_city_definition)

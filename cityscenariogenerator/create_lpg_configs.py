@@ -86,6 +86,8 @@ def create_configs_from_buildings(
     # determine which POIs each person visits
     config_creator.create_poi_preferences(generate_test_routes)
 
+    config_creator.add_default_queuecapacity("Pharmacy", 2)
+
     # optional custom instance export
     site_export.create_pharmacy_instances(params, config_creator)
 
