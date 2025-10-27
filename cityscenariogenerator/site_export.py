@@ -366,7 +366,7 @@ def apply_site_planning_results(config_creator, results: SitePlanningResult):
     # apply the person preferences
     for house_id, house in config_creator.houses.items():
         assert house.House
-        for hh in house.House.Households:
+        for hh_index, hh in enumerate(house.House.Households):
             for person, prefs in hh.PointOfInterestPreferences.items():
                 # remove all existing POI preferences for the affected POI type
                 existing_pref_ids = list(prefs.PoiWeights.keys())
@@ -378,7 +378,7 @@ def apply_site_planning_results(config_creator, results: SitePlanningResult):
                         del prefs.PoiWeights[poi_id]
 
                 # set the new POI preference
-                person_id = get_person_id_str(house_id, hh, person)
+                person_id = get_person_id_str(house_id, hh_index, person)
                 pref_site = results.site_preferences[person_id]
                 new_pref_poi = site_poi_map[pref_site]
                 prefs.PoiWeights[new_pref_poi] = 1
