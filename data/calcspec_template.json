@@ -25,7 +25,7 @@
         "EnableTransportation": true,
         "DeviceSelection": null,
         "EnergyIntensityType": "Random",
-        "LoadTypePriority": "All",
+        "LoadTypePriority": "Mandatory",
         "ShowSettlingPeriod": false,
         "EnableFlexibility": false,
         "IgnorePreviousActivitiesWhenNeeded": false,
