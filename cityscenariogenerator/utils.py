@@ -77,7 +77,7 @@ def clean_builda_query(query: dict) -> dict:
 
 def descriptive_query_text(query: dict) -> str:
     """returns a text describing a builda query in a format suitable for filenames"""
-    filtered_query = [clean_builda_query(query).values()]
+    filtered_query = list(clean_builda_query(query).values())
     return slugify(str(filtered_query))
 
 
