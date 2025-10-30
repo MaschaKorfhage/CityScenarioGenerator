@@ -41,6 +41,7 @@ def create_city_scenario(
     """
     start = datetime.now()
     # determine the output directory
+    builda_query = utils.clean_builda_query(builda_query)
     query_str = utils.descriptive_query_text(builda_query)
     result_dir_name = f"scenario_{query_str}"
     result_dir = scenario_directory / result_dir_name

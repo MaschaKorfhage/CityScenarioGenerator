@@ -65,9 +65,19 @@ def slugify(value, allow_unicode=False):
     return re.sub(r"[-\s]+", "-", value).strip("-_")
 
 
+def clean_builda_query(query: dict) -> dict:
+    """Removes empty arguments from a BUILDA query.
+
+    :param query: the BUILDA query dict
+    :return: _description_
+    """
+    filtered_query = {k: v for k, v in query.items() if v}
+    return filtered_query
+
+
 def descriptive_query_text(query: dict) -> str:
     """returns a text describing a builda query in a format suitable for filenames"""
-    filtered_query = [v for k, v in query.items() if v]
+    filtered_query = [clean_builda_query(query).values()]
     return slugify(str(filtered_query))
 
 
