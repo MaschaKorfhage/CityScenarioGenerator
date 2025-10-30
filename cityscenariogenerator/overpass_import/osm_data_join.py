@@ -521,10 +521,13 @@ def add_osm_location_types(
     # for now, only consider Doctors Offices here
     custom_poi_type = "Doctors Office"
     custom_poi_dir = params.specific_poi_sources_dir() / custom_poi_type
-    assert custom_poi_dir.is_dir(), f"Missing additional POI data: {custom_poi_dir}"
-    custom_poi_dfs = [
-        geoutils.load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()
-    ]
+    custom_poi_dfs = []
+    if custom_poi_dir.is_dir():
+        logging.info(f"No additional POI data found: {custom_poi_dir}")
+        custom_poi_dfs = [
+            geoutils.load_custom_poi_geodf(f) for f in custom_poi_dir.iterdir()
+        ]
+
     poi_dfs = [overpass_df] + custom_poi_dfs
 
     # determine the LPG location type for each OSM node and custom POI ID
