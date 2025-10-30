@@ -108,6 +108,14 @@ def main():
         required=False,
     )
     parser.add_argument(
+        "-n",
+        "--nuts",
+        type=str,
+        help="NUTS code for the BUILDA query",
+        default="",
+        required=False,
+    )
+    parser.add_argument(
         "-c",
         "--city",
         type=str,
@@ -141,7 +149,12 @@ def main():
     args = parser.parse_args()
 
     # collect parameters
-    builda_query = {"city": args.city, "postcode": args.postcode, "street": args.street}
+    builda_query = {
+        "nuts_code": args.nuts,
+        "city": args.city,
+        "postcode": args.postcode,
+        "street": args.street,
+    }
     scenario_dir = Path(args.output)
     lpg_result_dir = Path(args.lpg)
     scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
