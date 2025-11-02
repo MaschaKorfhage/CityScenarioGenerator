@@ -56,14 +56,6 @@
             },
             "TimeLimit": null
         },
-        "Friend's House Custom": {
-            "LocationType": "Friend's House",
-            "Coordinates": {
-                "Latitude": 50.771,
-                "Longitude": 6.088
-            },
-            "TimeLimit": null
-        },
         "Doctors Office Custom": {
             "LocationType": "Doctors Office",
             "Coordinates": {
@@ -85,14 +77,6 @@
             "Coordinates": {
                 "Latitude": 50.799,
                 "Longitude": 6.117
-            },
-            "TimeLimit": null
-        },
-        "Childrens House Custom": {
-            "LocationType": "Childrens House",
-            "Coordinates": {
-                "Latitude": 50.756,
-                "Longitude": 6.085
             },
             "TimeLimit": null
         },
@@ -197,22 +181,6 @@
             "Coordinates": {
                 "Latitude": 50.769,
                 "Longitude": 6.08
-            },
-            "TimeLimit": null
-        },
-        "Home Custom": {
-            "LocationType": "Home",
-            "Coordinates": {
-                "Latitude": 50.779,
-                "Longitude": 6.103
-            },
-            "TimeLimit": null
-        },
-        "Parents House Custom": {
-            "LocationType": "Parents House",
-            "Coordinates": {
-                "Latitude": 50.758,
-                "Longitude": 6.087
             },
             "TimeLimit": null
         },
