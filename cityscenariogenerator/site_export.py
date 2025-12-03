@@ -262,7 +262,7 @@ def create_pharmacy_instances(params: ScenarioParams, config_creator: LPGConfigC
     demands_file = subdir / "demands.json"
     candidate_file_dir = subdir / "site_candidates/random_residential_unweighted"
     if not demands_file.is_file() or not candidate_file_dir.is_dir():
-        logging.warning(f"No data for {poi_type} instace generation.")
+        logging.warning(f"No data for {poi_type} instance generation.")
         return
 
     site_planning_export_multiple(
