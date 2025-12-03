@@ -9,6 +9,7 @@ from typing import Any, Iterable
 
 from pylpg import lpgdata
 
+from cityscenariogenerator import utils
 from cityscenariogenerator.lpg_locations import LpgLocations
 from cityscenariogenerator.utils import (
     create_json_file,
@@ -59,7 +60,7 @@ def write_household_statistics(
     The second lists the distribution of the different household types.
 
     :param house_jobs: house configs to analyze
-    :param path: path for the result files
+    :param path: directory for the result files
     """
     hh_per_house = []
     all_households: list[str] = []
@@ -87,7 +88,7 @@ def write_persons_per_house(
     Creats a file specifying the number of person in each house.
 
     :param house_jobs: house configs to analyze
-    :param path: path for the result file
+    :param path: directory for the result file
     """
     personcounts = {}
     for house in house_jobs:
@@ -104,6 +105,33 @@ def write_persons_per_house(
     create_json_file(path / "house_sizes.json", house_sizes)
 
 
+def write_info_for_each_hh(
+    house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
+):
+    """Create dictionaries providing special info for each household, such as
+    number of persons, or household type. Uses the resulting household IDs
+    that are constructed in the city simulation.
+
+    :param house_jobs: house configs to analyze
+    :param path: directory for the result files
+    """
+    hhsizes = {}
+    hhtypes = {}
+    # collect information for every household individually
+    for house in house_jobs:
+        assert house.House is not None
+        for i, hh in enumerate(house.House.Households):
+            hhid = utils.create_hh_id(house.House.Name, i)  # type: ignore
+            hhtypes[hhid] = hh.HouseholdTemplateSpec.HouseholdTemplateName  # type: ignore
+            hhsizes[hhid] = len(hh.PointOfInterestPreferences)
+    subdir = path / "households"
+    subdir.mkdir(parents=True, exist_ok=True)
+    with open(subdir / "type_of_each_hh.json", "w") as f:
+        json.dump(hhtypes, f, indent=4)
+    with open(subdir / "size_of_each_hh.json", "w") as f:
+        json.dump(hhsizes, f, indent=4)
+
+
 def write_household_sizes(
     house_jobs: Iterable[lpgdata.HouseCreationAndCalculationJob], path: Path
 ):
@@ -111,7 +139,7 @@ def write_household_sizes(
     Creates a file showing the distribution of different household sizes.
 
     :param house_jobs: house configs to analyze
-    :param path: path for the result file
+    :param path: directory for the result file
     """
     household_sizes = defaultdict(int)
     for house in house_jobs:

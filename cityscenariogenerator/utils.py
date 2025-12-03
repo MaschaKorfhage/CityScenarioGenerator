@@ -193,6 +193,16 @@ def create_poi_id(building_id: str, location: str) -> str:
     return f"{location} {building_id}"
 
 
+def create_hh_id(building_id: str, hh_index: int) -> str:
+    """Creates the household ID for a household.
+
+    :param building_id: ID of the house the household belongs to
+    :param hh_index: 0-based index of the household within the house
+    :return: the ID of the household, as used in the city simulation
+    """
+    return f"{building_id}_HH{hh_index + 1}"
+
+
 def get_building_id_from_poi(poi_id: str) -> str:
     """Extracts the building ID out of a POI ID. This
     assumes that no building ID ever includes a space.
