@@ -23,7 +23,20 @@ def plot_population_measure_stacked_bars(
     fig = plt.figure()
     ax = fig.add_subplot(1, 1, 1)
     ax.set_ylabel("Number of persons")
-    data.T.plot(kind="bar", stacked=True, ax=ax)
+    data.T.plot(
+        kind="bar",
+        stacked=True,
+        ax=ax,
+    )
+
+    if "total" in data.index:
+        # plot the "total"  bar in grey and hatched
+        pos_total = data.index.get_loc("total")
+        bars = ax.containers[pos_total]
+        for bar in bars:
+            bar.set_hatch("//")  # type: ignore
+            bar.set_facecolor("grey")  # type: ignore
+
     ax.tick_params(axis="x", labelrotation=0)
     ax.legend(loc="lower right")
     fig.tight_layout()
@@ -104,11 +117,12 @@ def population_statistics(params: ScenarioParams, result_dir: Path):
         # data_subdir.mkdir(parents=True, exist_ok=True)
         # data.to_csv(data_subdir / f"{measure}.csv")
 
+        sns.set_theme()
         plot_population_measure_stacked_bars(plot_result_dir, measure, data)
 
 
 if __name__ == "__main__":
-    result_dir = Path("R:/phd_dir/data/city_scenarios/scenario_julich")
+    result_dir = Path("R:/phd_dir/city_scenarios/scenario_juelich_04_baseline")
 
     params = ScenarioParams({"city": "Jülich"}, result_dir, Path())
     population_statistics(params, params.result_directory / "plots")
