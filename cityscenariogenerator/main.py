@@ -145,7 +145,7 @@ def main():
         "-r",
         "--routes",
         action="store_true",
-        help="If set, also generates test routes with straigt line distances",
+        help="If set, also generates test routes with straight line distances",
         required=False,
     )
     args = parser.parse_args()
