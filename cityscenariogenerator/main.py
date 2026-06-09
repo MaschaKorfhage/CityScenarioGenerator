@@ -162,6 +162,10 @@ def main():
     scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
     generate_test_routes = args.routes
 
+    #zum debuggen: hardcode a query
+    #ohne funktioniert der Aufruf nicht, da die Argumente nicht übergeben werden können, da builda_client nicht funktioniert
+    # builda_query = {"city": "Jülich", "street": "GroßeRurstr."}
+
     create_city_scenario(
         builda_query,
         scenario_dir,
