@@ -74,6 +74,7 @@ def create_configs_from_buildings(
     config_creator = lpg_config_creator.LPGConfigCreator(params)
     # create a POI config for each nonresidential building
     for nonres_building in nonres_buildings.values():
+    #if "Pharmacy" not in nonres_building.location_type.non_work_locations:
         config_creator.add_poi(nonres_building)
 
     # create an LPG house config for each residential building
