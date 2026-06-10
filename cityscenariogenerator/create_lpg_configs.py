@@ -73,9 +73,17 @@ def create_configs_from_buildings(
     """
     config_creator = lpg_config_creator.LPGConfigCreator(params)
     # create a POI config for each nonresidential building
+    skipped_pharmacies: list[str] = []
     for nonres_building in nonres_buildings.values():
-    #if "Pharmacy" not in nonres_building.location_type.non_work_locations:
-        config_creator.add_poi(nonres_building)
+        if "Pharmacy" not in nonres_building.location_type.non_work_locations:
+            config_creator.add_poi(nonres_building)
+        else:
+            skipped_pharmacies.append(nonres_building.building.id)
+
+    if skipped_pharmacies:
+        logging.info(
+            f"Skipped {len(skipped_pharmacies)} base pharmacies: {skipped_pharmacies}"
+        )
 
     # create an LPG house config for each residential building
     for building in res_buildings:
