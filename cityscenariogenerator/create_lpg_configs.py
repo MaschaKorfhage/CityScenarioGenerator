@@ -96,7 +96,7 @@ def create_configs_from_buildings(
     config_creator.create_poi_preferences(generate_test_routes)
 
     # optional custom instance export
-    site_export.create_pharmacy_instances(params, config_creator)
+    #site_export.create_pharmacy_instances(params, config_creator)
 
     # optional application of site planning results
     # site_export.apply_eplpo_pharmacy_results(params, config_creator)
