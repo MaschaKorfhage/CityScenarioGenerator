@@ -387,6 +387,13 @@ class LPGConfigCreator:
         with open(self.params.custom_poi_path(), "r", encoding="utf8") as f:
             json_str = f.read()
             poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
+        pharmacy_custom_ids = [
+            poi_id for poi_id, poi in poi_dict.items() if poi.LocationType == "Pharmacy"
+        ]
+        logging.info(
+            f"Custom POIs loaded from {self.params.custom_poi_path()}: "
+            f"{len(poi_dict)} total, {len(pharmacy_custom_ids)} pharmacies: {pharmacy_custom_ids}"
+        )
         # add them to the POIs stored in the attributes
         for id, poi in poi_dict.items():
             if id in self.pois:
@@ -401,6 +408,10 @@ class LPGConfigCreator:
                 self.poi_ids_by_type[poi.LocationType].append(id)
         self.pois.update(poi_dict)
         logging.info(f"Loaded {len(poi_dict)} custom POIs")
+        pharmacy_ids = self.poi_ids_by_type.get("Pharmacy", [])
+        logging.info(
+            f"Pharmacy POIs after loading customs ({len(pharmacy_ids)}): {pharmacy_ids}"
+        )
 
     def _calc_residential_poi_probabilities(self) -> None:
         """Calculates probabilities for choosing a house as a residential POI

@@ -164,7 +164,7 @@ def main():
 
     #zum debuggen: hardcode a query
     #ohne funktioniert der Aufruf nicht, da die Argumente nicht übergeben werden können, da builda_client nicht funktioniert
-    # builda_query = {"city": "Jülich", "street": "GroßeRurstr."}
+    #builda_query = {"city": "Jülich", "street": "GroßeRurstr."}
 
     create_city_scenario(
         builda_query,
