@@ -4,8 +4,8 @@ openpyxl
 geopy
 tqdm
 python-dotenv
-#--index-url https://test.pypi.org/simple/ pyloadprofilegenerator
-#git+https://github.com/FZJ-IEK3-VSA/ethos-builda-client.git
+--index-url https://test.pypi.org/simple/ pyloadprofilegenerator
+git+https://github.com/FZJ-IEK3-VSA/ethos-builda-client.git
 
 # plotting
 geopandas
