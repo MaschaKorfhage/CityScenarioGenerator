@@ -160,7 +160,7 @@ def main():
     scenario_dir = Path(args.output)
     lpg_result_dir = Path(args.lpg)
     scenario_adapt_dir = None  # Path("scenario_adaptations/rhivas")
-    generate_test_routes = args.routes
+    generate_test_routes = True
 
     #zum debuggen: hardcode a query
     #ohne funktioniert der Aufruf nicht, da die Argumente nicht übergeben werden können, da builda_client nicht funktioniert

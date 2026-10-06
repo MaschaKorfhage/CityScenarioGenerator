@@ -1,0 +1,27 @@
+2026-06-23 10:17:12 WARNING  Scenario input directory not found: scenario_inputs/juelich-grosse-rurstr
+2026-06-23 10:17:12 WARNING  No valid scenario input data for query 'juelich-grosse-rurstr' found. Using dummy data.
+2026-06-23 10:17:12 INFO     Applying no custom adaptations
+2026-06-23 10:17:12 INFO     Using RNG seed 0
+2026-06-23 10:17:12 INFO     Using numpy RNG seed 3626764237
+2026-06-23 10:17:12 INFO     Sending query to ETHOS.BUILDA: {'city': 'Jülich', 'street': 'Große Rurstr.'}
+2026-06-23 10:17:25 INFO     Residential buildings in {'city': 'Jülich', 'street': 'Große Rurstr.'}: 81
+2026-06-23 10:17:25 INFO     Added a counter to make IDs unique without case.
+2026-06-23 10:17:41 INFO     Non-residential buildings in {'city': 'Jülich', 'street': 'Große Rurstr.'}: 90
+2026-06-23 10:17:41 INFO     Added a counter to make IDs unique without case.
+2026-06-23 10:17:41 INFO     No OSM data file found, skipping OSM mapping.
+2026-06-23 10:17:41 INFO     Custom POIs loaded from scenario_inputs/testing/custom_pois.json: 43 total, 1 pharmacies: ['Pharmacy Custom']
+2026-06-23 10:17:41 INFO     Loaded 43 custom POIs
+2026-06-23 10:17:41 INFO     Pharmacy POIs after loading customs (1): ['Pharmacy Custom']
+2026-06-23 10:17:41 INFO     Calculating distance matrix for all buildings
+  0%|          | 0/231 [00:00<?, ?it/s]100%|██████████| 231/231 [00:00<00:00, 15681.04it/s]
+2026-06-23 10:17:41 INFO     Creating POI preferences for all persons.
+  0%|          | 0/81 [00:00<?, ?it/s]  9%|▊         | 7/81 [00:00<00:01, 52.58it/s] 19%|█▊        | 15/81 [00:00<00:01, 49.77it/s] 26%|██▌       | 21/81 [00:00<00:01, 42.08it/s] 32%|███▏      | 26/81 [00:00<00:01, 40.54it/s] 40%|███▉      | 32/81 [00:00<00:01, 43.73it/s] 49%|████▉     | 40/81 [00:00<00:00, 51.58it/s] 57%|█████▋    | 46/81 [00:00<00:00, 53.51it/s] 67%|██████▋   | 54/81 [00:01<00:00, 54.80it/s] 74%|███████▍  | 60/81 [00:01<00:00, 54.19it/s] 81%|████████▏ | 66/81 [00:01<00:00, 45.89it/s] 88%|████████▊ | 71/81 [00:01<00:00, 45.68it/s] 94%|█████████▍| 76/81 [00:01<00:00, 41.84it/s]100%|██████████| 81/81 [00:01<00:00, 42.68it/s]100%|██████████| 81/81 [00:01<00:00, 46.41it/s]
+2026-06-23 10:17:43 INFO     3 POIs are not visited by anyone.
+2026-06-23 10:17:43 INFO     Setting QueueCapacity for Pharmacy POIs to 2
+2026-06-23 10:17:43 INFO     Creating routes for all persons
+  0%|          | 0/81 [00:00<?, ?it/s]  1%|          | 1/81 [00:00<00:12,  6.55it/s]  6%|▌         | 5/81 [00:00<00:03, 22.58it/s] 14%|█▎        | 11/81 [00:00<00:01, 36.24it/s] 19%|█▊        | 15/81 [00:00<00:01, 36.75it/s] 28%|██▊       | 23/81 [00:00<00:01, 48.80it/s] 35%|███▍      | 28/81 [00:00<00:01, 41.83it/s] 51%|█████     | 41/81 [00:00<00:00, 65.17it/s] 68%|██████▊   | 55/81 [00:00<00:00, 85.33it/s] 88%|████████▊ | 71/81 [00:01<00:00, 103.16it/s]100%|██████████| 81/81 [00:01<00:00, 70.34it/s] 
+2026-06-23 10:17:49 INFO     Excluded 1 of 90 non-residential buildings.
+2026-06-23 10:17:49 INFO     Generated 233 POIs.
+2026-06-23 10:17:59 INFO     Finished writing city scenario to scenarios/scenario_juelich-grosse-rurstr
+2026-06-23 10:17:59 INFO     Saving simulation settings to scenarios/scenario_juelich-grosse-rurstr/calcspec.json
+2026-06-23 10:17:59 INFO     Finished scenario creation in 0:00:50.962730
