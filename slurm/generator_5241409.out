@@ -1,0 +1,27 @@
+2026-10-26 15:21:34 WARNING  Scenario input directory not found: scenario_inputs/bautzen
+2026-10-26 15:21:34 WARNING  No valid scenario input data for query 'bautzen' found. Using dummy data.
+2026-10-26 15:21:34 INFO     Applying no custom adaptations
+2026-10-26 15:21:34 INFO     Using RNG seed 0
+2026-10-26 15:21:34 INFO     Using numpy RNG seed 3626764237
+2026-10-26 15:21:34 INFO     Sending query to ETHOS.BUILDA: {'city': 'Bautzen'}
+2026-10-26 15:21:53 INFO     Residential buildings in {'city': 'Bautzen'}: 0
+2026-10-26 15:21:53 INFO     Added a counter to make IDs unique without case.
+2026-10-26 15:22:24 INFO     Non-residential buildings in {'city': 'Bautzen'}: 0
+2026-10-26 15:22:24 INFO     Added a counter to make IDs unique without case.
+2026-10-26 15:22:24 INFO     No OSM data file found, skipping OSM mapping.
+2026-10-26 15:22:24 INFO     Custom POIs loaded from scenario_inputs/testing/custom_pois.json: 43 total, 1 pharmacies: ['Pharmacy Custom']
+2026-10-26 15:22:24 INFO     Loaded 43 custom POIs
+2026-10-26 15:22:24 INFO     Pharmacy POIs after loading customs (1): ['Pharmacy Custom']
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 180, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 170, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 78, in create_city_scenario
+    create_configs_from_buildings(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/create_lpg_configs.py", line 96, in create_configs_from_buildings
+    config_creator.create_poi_preferences(generate_test_routes)
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 437, in create_poi_preferences
+    raise Exception("No houses have been added yet.")
+Exception: No houses have been added yet.
+srun: error: n23m0075: task 0: Exited with exit code 1

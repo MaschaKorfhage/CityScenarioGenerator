@@ -161,7 +161,23 @@
             "TimeLimit": null
         },
 
-        "P1_DEA_DENW40AL10003WMr-6424": {
+        "Pharmacy DEA_DENW40AL10003Xb8-14659": {
+            "LocationType": "Pharmacy",
+            "Coordinates": {
+                "Latitude": 50.92162782702517,
+                "Longitude": 6.361809104550725
+            },
+            "TimeLimit": null
+        },
+        "Pharmacy DEA_DENW40AL10003WTI-6719": {
+            "LocationType": "Pharmacy",
+            "Coordinates": {
+                "Latitude": 50.92264707643721,
+                "Longitude": 6.360069986806275
+            },
+            "TimeLimit": null
+        },
+        "Pharmacy DEA_DENW40AL10003WMr-6424": {
             "LocationType": "Pharmacy",
             "Coordinates": {
                 "Latitude": 50.92590226801264,
@@ -169,7 +185,15 @@
             },
             "TimeLimit": null
         },
-        "P2_DEA_DENW40AL10003XUq-8188": {
+        "Pharmacy DEA_DENW40AL10003SbX-430": {
+            "LocationType": "Pharmacy",
+            "Coordinates": {
+                "Latitude": 50.92160958729199,
+                "Longitude": 6.358294367395114
+            },
+            "TimeLimit": null
+        },
+        "Pharmacy DEA_DENW40AL10003XUq-8188": {
             "LocationType": "Pharmacy",
             "Coordinates": {
                 "Latitude": 50.924004048312575,
@@ -177,35 +201,11 @@
             },
             "TimeLimit": null
         },
-        "P3_DEA_DENW40AL10003SuC-1246": {
+        "Pharmacy DEA_DENW40AL10003WIC-6220": {
             "LocationType": "Pharmacy",
             "Coordinates": {
-                "Latitude": 50.93042779063992,
-                "Longitude": 6.378138739665498
-            },
-            "TimeLimit": null
-        },
-        "P4_DEA_DENW40AL10003SUj-1255": {
-            "LocationType": "Pharmacy",
-            "Coordinates": {
-                "Latitude": 50.91189673116172,
-                "Longitude": 6.359922694353543
-            },
-            "TimeLimit": null
-        },
-        "P5_DEA_DENW40AL10003XtK-8135": {
-            "LocationType": "Pharmacy",
-            "Coordinates": {
-                "Latitude": 50.9230583675599,
-                "Longitude": 6.406028014552679
-            },
-            "TimeLimit": null
-        },
-        "P6_DEA_DENW40AL1Kp000G6-9159": {
-            "LocationType": "Pharmacy",
-            "Coordinates": {
-                "Latitude": 50.913855093826825,
-                "Longitude": 6.380622580336749
+                "Latitude": 50.93038193193242,
+                "Longitude": 6.359308207342011
             },
             "TimeLimit": null
         }
