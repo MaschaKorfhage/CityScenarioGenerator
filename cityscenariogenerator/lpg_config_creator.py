@@ -376,7 +376,9 @@ class LPGConfigCreator:
                 f"The following {len(missing)} locations are not covered by any POI: {missing}"
             )
 
-    def load_and_add_custom_pois(self) -> None:
+    def load_and_add_custom_pois(
+        self, exclude_location_types: set[str] | None = None
+    ) -> None:
         """
         Loads additional custom POIs from a file and adds them to the
         list of available POIs. This can be helpful if the target city does
@@ -387,6 +389,12 @@ class LPGConfigCreator:
         with open(self.params.custom_poi_path(), "r", encoding="utf8") as f:
             json_str = f.read()
             poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
+        if exclude_location_types:
+            poi_dict = {
+                poi_id: poi
+                for poi_id, poi in poi_dict.items()
+                if poi.LocationType not in exclude_location_types
+            }
         pharmacy_custom_ids = [
             poi_id for poi_id, poi in poi_dict.items() if poi.LocationType == "Pharmacy"
         ]

@@ -13,6 +13,10 @@ To generate a scenario, run cityscenariogenerator/main.py, e.g. like this:
 
     python cityscenariogenerator/main.py --city "Jülich" --street "Große Rurstr."
 
+By default, pharmacies come from the city data. To use pharmacies defined in
+`scenario_inputs/<city>/custom_pois.json` instead, pass `--pharmacy-source custom`.
+The same option can be set on the `srun python ...` line in `slurm.sh`.
+
 This will generate a scenario directory in the output folder ("./scenario" by default). This scenario directory can then be used to start a city simulation with the LoadProfileGenerator.
 
 To get more information about the available parameters, run the following command:

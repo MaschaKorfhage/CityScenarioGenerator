@@ -62,6 +62,7 @@ def create_configs_from_buildings(
     res_buildings: list[BuildingData],
     nonres_buildings: dict[str, BuildingWithLocationType],
     generate_test_routes: bool = False,
+    pharmacy_source: str = "city",
 ):
     """Main function for creating an LPG scenario with the LPGConfigCreator.
 
@@ -70,27 +71,28 @@ def create_configs_from_buildings(
     :param nonres_buildings: list of non-residential buildings to use as POIs
     :param generate_test_routes: if True, also generates additional test routes with
                                  distance as the crow flies
+    :param pharmacy_source: use pharmacies from city data or custom POIs
     """
+    if pharmacy_source not in ("city", "custom"):
+        raise ValueError(f"Unknown pharmacy source: {pharmacy_source}")
     config_creator = lpg_config_creator.LPGConfigCreator(params)
     # create a POI config for each nonresidential building
-    skipped_pharmacies: list[str] = []
     for nonres_building in nonres_buildings.values():
-        if "Pharmacy" not in nonres_building.location_type.non_work_locations:
-            config_creator.add_poi(nonres_building)
-        else:
-            skipped_pharmacies.append(nonres_building.building.id)
-
-    if skipped_pharmacies:
-        logging.info(
-            f"Skipped {len(skipped_pharmacies)} base pharmacies: {skipped_pharmacies}"
-        )
+        if (
+            pharmacy_source == "custom"
+            and "Pharmacy" in nonres_building.location_type.non_work_locations
+        ):
+            continue
+        config_creator.add_poi(nonres_building)
 
     # create an LPG house config for each residential building
     for building in res_buildings:
         config_creator.add_lpg_house(building)
 
     # load custom POIs for this scenario
-    config_creator.load_and_add_custom_pois()
+    config_creator.load_and_add_custom_pois(
+        exclude_location_types={"Pharmacy"} if pharmacy_source == "city" else None
+    )
 
     # determine which POIs each person visits
     config_creator.create_poi_preferences(generate_test_routes)

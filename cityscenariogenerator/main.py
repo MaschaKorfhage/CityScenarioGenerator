@@ -27,6 +27,7 @@ def create_city_scenario(
     scenario_adapt_dir: Path | None = None,
     db_file_path: str = "",
     generate_test_routes: bool = False,
+    pharmacy_source: str = "city",
 ):
     """Generates a city scenario for the LoadProfileGenerator.
 
@@ -37,6 +38,7 @@ def create_city_scenario(
     :param db_file_path: custom LPG database path, if requried; defaults to ""
     :param generate_test_routes: if True, also generates additional test routes with
                                  distance as the crow flies
+    :param pharmacy_source: use pharmacies from city data or custom POIs
     :raises Exception: if the scenario generation failed for any reason
     """
     start = datetime.now()
@@ -44,8 +46,8 @@ def create_city_scenario(
     builda_query = utils.clean_builda_query(builda_query)
     query_str = utils.descriptive_query_text(builda_query)
     logging.info(f"Starting scenario generation with query {query_str}")
-    #result_dir_name = f"scenario_{query_str}"
-    result_dir_name = "scenario_jeulich_ist"
+    result_dir_name = f"scenario_{query_str}"
+    #result_dir_name = "scenario_jeulich_ist"
     result_dir = scenario_directory / result_dir_name
     lpg_result_path = lpg_result_dir / result_dir_name
 
@@ -76,7 +78,7 @@ def create_city_scenario(
 
     # create config files for the collected buildings
     create_configs_from_buildings(
-        params, res_buildings, nonres_buildings, generate_test_routes
+        params, res_buildings, nonres_buildings, generate_test_routes, pharmacy_source
     )
     logging.info(f"Finished writing city scenario to {result_dir}")
 
@@ -149,6 +151,12 @@ def main():
         help="If set, also generates test routes with straight line distances",
         required=False,
     )
+    parser.add_argument(
+        "--pharmacy-source",
+        choices=("city", "custom"),
+        default="city",
+        help="Use pharmacies from city data (default) or custom_pois.json",
+    )
     args = parser.parse_args()
 
     # collect parameters
@@ -173,6 +181,7 @@ def main():
         lpg_result_dir,
         scenario_adapt_dir,
         generate_test_routes=generate_test_routes,
+        pharmacy_source=args.pharmacy_source,
     )
 
 
