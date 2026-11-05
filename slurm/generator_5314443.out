@@ -1,0 +1,26 @@
+2026-10-29 11:42:52 WARNING  Scenario input directory not found: scenario_inputs/juelich-grosse-rurstr
+2026-10-29 11:42:52 WARNING  No valid scenario input data for query 'juelich-grosse-rurstr' found. Using dummy data.
+2026-10-29 11:42:52 INFO     Applying no custom adaptations
+2026-10-29 11:42:52 INFO     Using RNG seed 0
+2026-10-29 11:42:52 INFO     Using numpy RNG seed 3626764237
+2026-10-29 11:42:52 INFO     Added a counter to make IDs unique without case.
+2026-10-29 11:42:54 INFO     Added a counter to make IDs unique without case.
+2026-10-29 11:42:54 INFO     No OSM data file found, skipping OSM mapping.
+2026-10-29 11:42:54 INFO     Custom POIs loaded from scenario_inputs/testing/custom_pois.json: 42 total, 0 pharmacies: []
+2026-10-29 11:42:54 INFO     Loaded 42 custom POIs
+2026-10-29 11:42:54 INFO     Pharmacy POIs after loading customs (0): []
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 189, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 178, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 80, in create_city_scenario
+    create_configs_from_buildings(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/create_lpg_configs.py", line 98, in create_configs_from_buildings
+    config_creator.create_poi_preferences(generate_test_routes)
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 448, in create_poi_preferences
+    self.check_location_availability()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 375, in check_location_availability
+    raise Exception(
+Exception: The following 1 locations are not covered by any POI: {'Pharmacy'}
+srun: error: n23m0021: task 0: Exited with exit code 1

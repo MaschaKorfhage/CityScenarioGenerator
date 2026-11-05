@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 189, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 178, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 54, in create_city_scenario
+    utils.clear_directory(result_dir)
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/utils.py", line 129, in clear_directory
+    shutil.rmtree(path)
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/shutil.py", line 732, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/shutil.py", line 660, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/shutil.py", line 660, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/shutil.py", line 683, in _rmtree_safe_fd
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/shutil.py", line 681, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+FileNotFoundError: [Errno 2] No such file or directory: 'matched_hh_types.json'
+srun: error: n23m0024: task 0: Exited with exit code 1
