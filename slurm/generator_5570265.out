@@ -1,0 +1,39 @@
+2026-11-09 14:11:11 INFO     Applying no custom adaptations
+2026-11-09 14:11:11 INFO     Using RNG seed 0
+2026-11-09 14:11:11 INFO     Using numpy RNG seed 3626764237
+2026-11-09 14:11:11 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-09 14:11:31 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-09 14:11:33 INFO     Collected 173 POIs from 1 dataframes.
+2026-11-09 14:11:33 INFO     Matched 145 of 173 OSM nodes to BUILDA buildings. Max distance: 30 m.
+2026-11-09 14:11:33 INFO     Identical location types (5): [('Museum -> Museum', 2), ('Theater, Opera -> Theater', 1), ('Doctors Office -> Doctors Office', 1), ('Bar Location -> Bar Location', 1)]
+2026-11-09 14:11:33 INFO     Added location types (130): [(' -> Doctors Office', 81), (' -> Cafe', 20), (' -> Bar Location', 16), (' -> Pharmacy', 6), (' -> Supermarket', 3), (' -> School', 3), (' -> Dance Studio', 1)]
+2026-11-09 14:11:33 INFO     Changed location types (10): [('Pharmacy -> Doctors Office', 4), ('Generic Errand Location -> Shopping Mall', 1), ('Doctors Office -> Supermarket', 1), ('Pharmacy -> Cafe', 1), ('Dance Club -> Cinema Location', 1), ('Shopping Mall -> Cafe', 1), ('Museum -> Cafe', 1)]
+2026-11-09 14:11:33 INFO     Matched 75 POIs to residential buildings.
+2026-11-09 14:11:33 INFO     Created 83 new non-residential building objects from residential buildings.
+2026-11-09 14:11:33 INFO     Created in total 20 copies of building objects.
+2026-11-09 14:11:33 INFO     Created 28 new non-residential buildings for unmatched POIs.
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 189, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 178, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 80, in create_city_scenario
+    create_configs_from_buildings(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/create_lpg_configs.py", line 93, in create_configs_from_buildings
+    config_creator.load_and_add_custom_pois(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 391, in load_and_add_custom_pois
+    poi_dict = lpgdata.CityData.from_json(json_str).PointsOfInterest  # type: ignore
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/.cityvenv/lib/python3.11/site-packages/dataclasses_json/api.py", line 58, in from_json
+    kvs = json.loads(s,
+          ^^^^^^^^^^^^^
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/cvmfs/software.hpc.rwth.de/Linux/RH9/x86_64/intel/sapphirerapids/software/Python/3.11.5-GCCcore-13.3.0/lib/python3.11/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+srun: error: n23m0067: task 0: Exited with exit code 1

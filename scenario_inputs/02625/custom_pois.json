@@ -1,0 +1,3644 @@
+{
+  "PointsOfInterest": {
+    "OSM_bimmelbahn_way_1189606711": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1751385,
+        "Longitude": 14.4275532
+      },
+      "TimeLimit": null
+    },
+    "OSM_sankt_petri_way_1413832740": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1778058,
+        "Longitude": 14.4264147
+      },
+      "TimeLimit": null
+    },
+    "OSM_kita_spreewichtel_way_117161236": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1675824,
+        "Longitude": 14.41726
+      },
+      "TimeLimit": null
+    },
+    "OSM_gluckskafer_way_1413107961": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1868751,
+        "Longitude": 14.4331481
+      },
+      "TimeLimit": null
+    },
+    "OSM_knirpsenland_way_146723208": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1891802,
+        "Longitude": 14.4440745
+      },
+      "TimeLimit": null
+    },
+    "OSM_drk_kindertagesstatte_findikus_way_104001496": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1940318,
+        "Longitude": 14.4472407
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindertagesstatte_knirpsenland_way_146723200": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1889711,
+        "Longitude": 14.4438936
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarten_st_michael_auritz_way_543094517": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1722176,
+        "Longitude": 14.4677465
+      },
+      "TimeLimit": null
+    },
+    "OSM_jan_radyserb_wjela_way_1426881765": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1766344,
+        "Longitude": 14.4354237
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindertageseinrichtung_sebastian_kneipp_way_146727024": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1742733,
+        "Longitude": 14.4542023
+      },
+      "TimeLimit": null
+    },
+    "OSM_naturkindergarten_way_146779283": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1689052,
+        "Longitude": 14.4378108
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindertagesstatte_lowenzahn_way_104503334": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1773486,
+        "Longitude": 14.4165053
+      },
+      "TimeLimit": null
+    },
+    "OSM_kita_klettermaxe_way_104888329": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1783483,
+        "Longitude": 14.4586607
+      },
+      "TimeLimit": null
+    },
+    "OSM_katholisches_kinderhaus_way_1189616317": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1755206,
+        "Longitude": 14.425947
+      },
+      "TimeLimit": null
+    },
+    "OSM_oberlausitzer_lebens_und_familienhilfe_way_146717453": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1772933,
+        "Longitude": 14.4108478
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarden_way_59645497": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1778439,
+        "Longitude": 14.4264072
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarden_way_104676837": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1752146,
+        "Longitude": 14.4273185
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarden_way_77032860": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1772299,
+        "Longitude": 14.4110951
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarden_way_146779275": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1689658,
+        "Longitude": 14.4379541
+      },
+      "TimeLimit": null
+    },
+    "OSM_kindergarden_way_58662708": {
+      "LocationType": "Kindergarden",
+      "Coordinates": {
+        "Latitude": 51.1741567,
+        "Longitude": 14.4541907
+      },
+      "TimeLimit": null
+    },
+    "OSM_hochschule_der_sachsischen_polizei_fh_way_1414095964": {
+      "LocationType": "Community College",
+      "Coordinates": {
+        "Latitude": 51.1840677,
+        "Longitude": 14.4458686
+      },
+      "TimeLimit": null
+    },
+    "OSM_kreismusikschule_way_104590984": {
+      "LocationType": "Musical Society",
+      "Coordinates": {
+        "Latitude": 51.1766134,
+        "Longitude": 14.4263219
+      },
+      "TimeLimit": null
+    },
+    "OSM_esso_way_541313902": {
+      "LocationType": "Car Wash",
+      "Coordinates": {
+        "Latitude": 51.1800964,
+        "Longitude": 14.4029002
+      },
+      "TimeLimit": null
+    },
+    "OSM_aral_node_475902070": {
+      "LocationType": "Car Wash",
+      "Coordinates": {
+        "Latitude": 51.190047,
+        "Longitude": 14.4523612
+      },
+      "TimeLimit": null
+    },
+    "OSM_staatliche_studienakademie_bautzen_way_117961355": {
+      "LocationType": "Community College",
+      "Coordinates": {
+        "Latitude": 51.1821753,
+        "Longitude": 14.4362145
+      },
+      "TimeLimit": null
+    },
+    "OSM_saurierpark_kleinwelka_way_44677494": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.2083229,
+        "Longitude": 14.3857987
+      },
+      "TimeLimit": null
+    },
+    "OSM_sachsische_stadteroute_kamenzgorlitz_relation_2137041": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.1691439,
+        "Longitude": 14.5286336
+      },
+      "TimeLimit": null
+    },
+    "OSM_jakobsweg_via_regia_1_relation_76411": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1826003,
+        "Longitude": 14.7084329
+      },
+      "TimeLimit": null
+    },
+    "OSM_jakobsweg_via_regia_2_relation_76417": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.2442087,
+        "Longitude": 13.9770399
+      },
+      "TimeLimit": null
+    },
+    "OSM_spreeradweg_sn_quellezerre_relation_335272": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.260658,
+        "Longitude": 14.5183707
+      },
+      "TimeLimit": null
+    },
+    "OSM_jakobsweg_an_der_frankenstrae_bautzen_bischofswerda_relation_2211269": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1555795,
+        "Longitude": 14.3025057
+      },
+      "TimeLimit": null
+    },
+    "OSM_talsperre_bautzen_relation_409520": {
+      "LocationType": "Fishing Location",
+      "Coordinates": {
+        "Latitude": 51.214034,
+        "Longitude": 14.4541148
+      },
+      "TimeLimit": null
+    },
+    "OSM_protschenbergstufen_way_1051926759": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1848603,
+        "Longitude": 14.4186381
+      },
+      "TimeLimit": null
+    },
+    "OSM_strehlaer_weg_way_49846009": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1671338,
+        "Longitude": 14.4541629
+      },
+      "TimeLimit": null
+    },
+    "OSM_attaim_node_5973342985": {
+      "LocationType": "Fitness Studio",
+      "Coordinates": {
+        "Latitude": 51.1820791,
+        "Longitude": 14.4262856
+      },
+      "TimeLimit": null
+    },
+    "OSM_heide_bergland_gelber_strich_relation_1646231": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1995436,
+        "Longitude": 14.4138639
+      },
+      "TimeLimit": null
+    },
+    "OSM_bautzen_picho_gruner_strich_relation_17564466": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1007898,
+        "Longitude": 14.4324605
+      },
+      "TimeLimit": null
+    },
+    "OSM_lausitzer_schlange_3_valtenberg_groschonau_relation_2010365": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.0347584,
+        "Longitude": 14.4773532
+      },
+      "TimeLimit": null
+    },
+    "OSM_talbrucke_way_59531678": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1670043,
+        "Longitude": 14.4358129
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_ziegelscheune_bautzen_relation_1642212": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.2482733,
+        "Longitude": 14.3509498
+      },
+      "TimeLimit": null
+    },
+    "OSM_strehlaer_weg_way_32636911": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1681914,
+        "Longitude": 14.4580534
+      },
+      "TimeLimit": null
+    },
+    "OSM_strehlaer_weg_way_32816403": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1687134,
+        "Longitude": 14.461508
+      },
+      "TimeLimit": null
+    },
+    "OSM_strehlaer_weg_way_49846008": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1674265,
+        "Longitude": 14.4553244
+      },
+      "TimeLimit": null
+    },
+    "OSM_strehlaer_weg_way_59574932": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1671487,
+        "Longitude": 14.4523783
+      },
+      "TimeLimit": null
+    },
+    "OSM_abschnitt_bautzen_cottbus_alternativ_relation_14281922": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.2451765,
+        "Longitude": 14.4934838
+      },
+      "TimeLimit": null
+    },
+    "OSM_bautzener_geschichtspfad_gelbe_route_1h_relation_15681164": {
+      "LocationType": "Walking Location",
+      "Coordinates": {
+        "Latitude": 51.1817608,
+        "Longitude": 14.4227515
+      },
+      "TimeLimit": null
+    },
+    "OSM_rundweg_talsperre_bautzen_relation_1865481": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.2094709,
+        "Longitude": 14.4473346
+      },
+      "TimeLimit": null
+    },
+    "OSM_oberlausitzer_ringweg_3_relation_19095728": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.2193197,
+        "Longitude": 14.4700356
+      },
+      "TimeLimit": null
+    },
+    "OSM_oberguriger_rundwanderweg_relation_2346197": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1310177,
+        "Longitude": 14.398645
+      },
+      "TimeLimit": null
+    },
+    "OSM_sorbische_impressionen_sankt_marienstern_malschwitz_relation_2405077": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.264022,
+        "Longitude": 14.3598352
+      },
+      "TimeLimit": null
+    },
+    "OSM_protschenbergstufen_way_111794728": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1846763,
+        "Longitude": 14.4174095
+      },
+      "TimeLimit": null
+    },
+    "OSM_focus_privatfitness_lounge_node_11323120119": {
+      "LocationType": "Fitness Studio",
+      "Coordinates": {
+        "Latitude": 51.1776265,
+        "Longitude": 14.4235615
+      },
+      "TimeLimit": null
+    },
+    "OSM_clever_fit_node_731025529": {
+      "LocationType": "Fitness Studio",
+      "Coordinates": {
+        "Latitude": 51.1640419,
+        "Longitude": 14.4268851
+      },
+      "TimeLimit": null
+    },
+    "OSM_geologischer_lehrpfad_relation_2200641": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1618516,
+        "Longitude": 14.4614379
+      },
+      "TimeLimit": null
+    },
+    "OSM_archaologischer_radwanderweg_lausitz_nordroute_relation_2376989": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.2852317,
+        "Longitude": 14.2730677
+      },
+      "TimeLimit": null
+    },
+    "OSM_an_der_ziegelei_way_120066805": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1866935,
+        "Longitude": 14.4685251
+      },
+      "TimeLimit": null
+    },
+    "OSM_an_der_ziegelei_way_120066807": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1876596,
+        "Longitude": 14.4691056
+      },
+      "TimeLimit": null
+    },
+    "OSM_rattwitzer_strae_way_47262032": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1812274,
+        "Longitude": 14.3843891
+      },
+      "TimeLimit": null
+    },
+    "OSM_an_der_ziegelei_way_55463433": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1891322,
+        "Longitude": 14.4685996
+      },
+      "TimeLimit": null
+    },
+    "OSM_philipp_reis_strae_way_590956964": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1958335,
+        "Longitude": 14.3442535
+      },
+      "TimeLimit": null
+    },
+    "OSM_archaologischer_radwanderweg_lausitz_sudroute_relation_3914870": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.1410452,
+        "Longitude": 14.5049018
+      },
+      "TimeLimit": null
+    },
+    "OSM_archaologischer_radwanderweg_lausitz_verbindung_nord_sud_relation_3914871": {
+      "LocationType": "Bicycle Route",
+      "Coordinates": {
+        "Latitude": 51.1862334,
+        "Longitude": 14.4220886
+      },
+      "TimeLimit": null
+    },
+    "OSM_auritzer_weg_way_119488083": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1711504,
+        "Longitude": 14.4639426
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_strae_way_131476858": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1887136,
+        "Longitude": 14.37424
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_strae_way_1448704053": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1876173,
+        "Longitude": 14.3857039
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_strae_way_1448704054": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.189926,
+        "Longitude": 14.3610359
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_strae_way_1448704055": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1896625,
+        "Longitude": 14.3632757
+      },
+      "TimeLimit": null
+    },
+    "OSM_osterweg_way_18346001": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.182766,
+        "Longitude": 14.4201833
+      },
+      "TimeLimit": null
+    },
+    "OSM_auritzer_weg_way_32393124": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.170467,
+        "Longitude": 14.4662
+      },
+      "TimeLimit": null
+    },
+    "OSM_auritzer_weg_way_32393125": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.172021,
+        "Longitude": 14.4627559
+      },
+      "TimeLimit": null
+    },
+    "OSM_angelbereich_talsperre_bautzen_way_346338779": {
+      "LocationType": "Fishing Location",
+      "Coordinates": {
+        "Latitude": 51.2146168,
+        "Longitude": 14.4544352
+      },
+      "TimeLimit": null
+    },
+    "OSM_sauriergarten_way_350049460": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.2114129,
+        "Longitude": 14.3860991
+      },
+      "TimeLimit": null
+    },
+    "OSM_schulberg_way_487027266": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2094354,
+        "Longitude": 14.3853669
+      },
+      "TimeLimit": null
+    },
+    "OSM_auritzer_weg_way_50442771": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1724999,
+        "Longitude": 14.4625527
+      },
+      "TimeLimit": null
+    },
+    "OSM_alte_strae_way_717910622": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.186276,
+        "Longitude": 14.3881605
+      },
+      "TimeLimit": null
+    },
+    "OSM_irrgarten_relation_6185954": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.205377,
+        "Longitude": 14.3826469
+      },
+      "TimeLimit": null
+    },
+    "OSM_rundweg_way_120703554": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2028577,
+        "Longitude": 14.4594036
+      },
+      "TimeLimit": null
+    },
+    "OSM_gutsweg_way_183160521": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1942345,
+        "Longitude": 14.4130512
+      },
+      "TimeLimit": null
+    },
+    "OSM_windmuhlenweg_way_487027271": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2119189,
+        "Longitude": 14.3806506
+      },
+      "TimeLimit": null
+    },
+    "OSM_milkwitzer_weg_way_53672302": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2136299,
+        "Longitude": 14.3898738
+      },
+      "TimeLimit": null
+    },
+    "OSM_naturpark_lehrpfad_relation_17642138": {
+      "LocationType": "Hiking Location",
+      "Coordinates": {
+        "Latitude": 51.1629026,
+        "Longitude": 14.4550697
+      },
+      "TimeLimit": null
+    },
+    "OSM_rathenauplatz_way_104676754": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1739279,
+        "Longitude": 14.429666
+      },
+      "TimeLimit": null
+    },
+    "OSM_doberkitz_way_142534768": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1841801,
+        "Longitude": 14.3387217
+      },
+      "TimeLimit": null
+    },
+    "OSM_doberkitz_way_145951369": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1877157,
+        "Longitude": 14.3380427
+      },
+      "TimeLimit": null
+    },
+    "OSM_mullerwiese_way_47586574": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1738042,
+        "Longitude": 14.4200007
+      },
+      "TimeLimit": null
+    },
+    "OSM_doberkitz_way_644447397": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1873011,
+        "Longitude": 14.3391482
+      },
+      "TimeLimit": null
+    },
+    "OSM_spreepark_way_715418856": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1875718,
+        "Longitude": 14.4217033
+      },
+      "TimeLimit": null
+    },
+    "OSM_community_college_way_479618022": {
+      "LocationType": "Community College",
+      "Coordinates": {
+        "Latitude": 51.1760893,
+        "Longitude": 14.4270485
+      },
+      "TimeLimit": null
+    },
+    "OSM_horse_stable_way_117202162": {
+      "LocationType": "Horse Stable",
+      "Coordinates": {
+        "Latitude": 51.1671046,
+        "Longitude": 14.4420227
+      },
+      "TimeLimit": null
+    },
+    "OSM_horse_stable_way_505858844": {
+      "LocationType": "Horse Stable",
+      "Coordinates": {
+        "Latitude": 51.1680352,
+        "Longitude": 14.4419901
+      },
+      "TimeLimit": null
+    },
+    "OSM_car_wash_way_544309474": {
+      "LocationType": "Car Wash",
+      "Coordinates": {
+        "Latitude": 51.1727593,
+        "Longitude": 14.4715289
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_40667481": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1913652,
+        "Longitude": 14.4364061
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120783881": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2142252,
+        "Longitude": 14.4360834
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_138538129": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.208098,
+        "Longitude": 14.4373652
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_164854188": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1870383,
+        "Longitude": 14.4511124
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_257427323": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1612144,
+        "Longitude": 14.4092436
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37597421": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.210862,
+        "Longitude": 14.4387913
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_118036677": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2070834,
+        "Longitude": 14.4679797
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1312406913": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2131617,
+        "Longitude": 14.3586038
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1565490023": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1835856,
+        "Longitude": 14.3954726
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_32957363": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1685158,
+        "Longitude": 14.4759084
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_602741187": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.166837,
+        "Longitude": 14.4531106
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_629037750": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2056745,
+        "Longitude": 14.3982192
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_706605230": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1763424,
+        "Longitude": 14.3873984
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120783877": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2023529,
+        "Longitude": 14.4554849
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120783896": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2016607,
+        "Longitude": 14.4567188
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788935": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2043483,
+        "Longitude": 14.4604152
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1304834508": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2024676,
+        "Longitude": 14.454108
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1304834571": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2034185,
+        "Longitude": 14.4608179
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_144317383": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1962858,
+        "Longitude": 14.338817
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_191146382": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2048239,
+        "Longitude": 14.4909305
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_27423821": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.165316,
+        "Longitude": 14.436085
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_27424132": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1656251,
+        "Longitude": 14.4371649
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_32429479": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1717519,
+        "Longitude": 14.4628764
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_32816412": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1701973,
+        "Longitude": 14.4650875
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37602199": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2070076,
+        "Longitude": 14.3785295
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_40915788": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2087791,
+        "Longitude": 14.4396693
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48578393": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2058798,
+        "Longitude": 14.4865999
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_49845997": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1608516,
+        "Longitude": 14.4453799
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_505276547": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1852704,
+        "Longitude": 14.4181565
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_601716655": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2017248,
+        "Longitude": 14.374524
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_644451887": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1966704,
+        "Longitude": 14.3434057
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_644451888": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1979895,
+        "Longitude": 14.3417327
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66193052": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2296657,
+        "Longitude": 14.4533216
+      },
+      "TimeLimit": null
+    },
+    "OSM_running_path_relation_13133539": {
+      "LocationType": "Running Path",
+      "Coordinates": {
+        "Latitude": 51.1783415,
+        "Longitude": 14.4555336
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_104487421": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1780399,
+        "Longitude": 14.4070174
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_1161148948": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1663147,
+        "Longitude": 14.4038945
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120690717": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2291215,
+        "Longitude": 14.4519005
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788933": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2053159,
+        "Longitude": 14.4589968
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788938": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2023066,
+        "Longitude": 14.4589305
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788939": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2039999,
+        "Longitude": 14.4604981
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788940": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2048894,
+        "Longitude": 14.4596107
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120788941": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2033711,
+        "Longitude": 14.458289
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_127976840": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1671666,
+        "Longitude": 14.3978145
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1304834507": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2023555,
+        "Longitude": 14.4530313
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1304834570": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2037022,
+        "Longitude": 14.4606924
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1312616263": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2126233,
+        "Longitude": 14.3580327
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1322963942": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1516639,
+        "Longitude": 14.4206187
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1337323708": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1660482,
+        "Longitude": 14.395931
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1346148862": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1985018,
+        "Longitude": 14.4392053
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_146070795": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1914351,
+        "Longitude": 14.4431046
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1484167810": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2235996,
+        "Longitude": 14.3788982
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071743": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2150771,
+        "Longitude": 14.4242379
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071757": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2165649,
+        "Longitude": 14.421364
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071765": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2063184,
+        "Longitude": 14.4313685
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071787": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.217273,
+        "Longitude": 14.42336
+      },
+      "TimeLimit": null
+    },
+    "OSM_running_path_way_181094344": {
+      "LocationType": "Running Path",
+      "Coordinates": {
+        "Latitude": 51.174104,
+        "Longitude": 14.4503408
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_268269940": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1780301,
+        "Longitude": 14.3801777
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872969": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2027253,
+        "Longitude": 14.4603805
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_27424131": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1653141,
+        "Longitude": 14.4376572
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_287520960": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1770821,
+        "Longitude": 14.4120392
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_305881986": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1669039,
+        "Longitude": 14.4001674
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37007231": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2134578,
+        "Longitude": 14.3593924
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50133279": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1900201,
+        "Longitude": 14.3579648
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_54652780": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1971213,
+        "Longitude": 14.4386757
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_59861005": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1670411,
+        "Longitude": 14.4039246
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_60921837": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1380867,
+        "Longitude": 14.4166289
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_630291762": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.22199,
+        "Longitude": 14.4411452
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_813078424": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1736054,
+        "Longitude": 14.4814388
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86259240": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2169222,
+        "Longitude": 14.3768895
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875868621": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2208858,
+        "Longitude": 14.362584
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1041999452": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1860827,
+        "Longitude": 14.3491819
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_107900936": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.169096,
+        "Longitude": 14.4801585
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_1088914465": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1729704,
+        "Longitude": 14.41194
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_111794730": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.185248,
+        "Longitude": 14.4168869
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1128420311": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2158526,
+        "Longitude": 14.4200325
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120066804": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1839055,
+        "Longitude": 14.4702654
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120783884": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1985668,
+        "Longitude": 14.4483159
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_125333202": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1912471,
+        "Longitude": 14.354393
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1267490382": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1843655,
+        "Longitude": 14.4711245
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1267490383": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1841051,
+        "Longitude": 14.4706639
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_127955478": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2196757,
+        "Longitude": 14.4278971
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_128385667": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.186645,
+        "Longitude": 14.416578
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_130409442": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1823427,
+        "Longitude": 14.347812
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1307030206": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1523761,
+        "Longitude": 14.4206299
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_1307044035": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1871127,
+        "Longitude": 14.4152877
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_1307081536": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1960539,
+        "Longitude": 14.4761278
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1322963943": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1521053,
+        "Longitude": 14.420974
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_134582783": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1642544,
+        "Longitude": 14.3817388
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1412852907": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1777017,
+        "Longitude": 14.4013464
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_144448122": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1969637,
+        "Longitude": 14.3396137
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1448704051": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1880144,
+        "Longitude": 14.38338
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_146668486": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.177627,
+        "Longitude": 14.4407948
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_146807133": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1620614,
+        "Longitude": 14.4224455
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1565490022": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1829242,
+        "Longitude": 14.3952953
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_166915830": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2081542,
+        "Longitude": 14.3914589
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_166915832": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2085166,
+        "Longitude": 14.3908301
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_166919421": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2089135,
+        "Longitude": 14.390094
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_177808916": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1756923,
+        "Longitude": 14.388452
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071739": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2155842,
+        "Longitude": 14.4249334
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071741": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2115274,
+        "Longitude": 14.4222808
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071752": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2129906,
+        "Longitude": 14.4254361
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071755": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2055469,
+        "Longitude": 14.4315904
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071770": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2105342,
+        "Longitude": 14.4217918
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071785": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2130186,
+        "Longitude": 14.4233552
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_188660097": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1657813,
+        "Longitude": 14.3768942
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_191146380": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2051147,
+        "Longitude": 14.4934313
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_268269934": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1770475,
+        "Longitude": 14.3838389
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872961": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2021639,
+        "Longitude": 14.4601239
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872962": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2030716,
+        "Longitude": 14.4599977
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872963": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2029436,
+        "Longitude": 14.4593641
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872964": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2026548,
+        "Longitude": 14.4582657
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_270872972": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2030817,
+        "Longitude": 14.4586648
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_27423830": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1658627,
+        "Longitude": 14.4366888
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_27423833": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1637337,
+        "Longitude": 14.4380103
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_326933753": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.184271,
+        "Longitude": 14.4091213
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_326933756": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1852753,
+        "Longitude": 14.4036175
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_339391701": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1645063,
+        "Longitude": 14.4358013
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_365885024": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1949805,
+        "Longitude": 14.4588577
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_365885025": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1950769,
+        "Longitude": 14.4582234
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_365885026": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.195039,
+        "Longitude": 14.4608823
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37215475": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2138163,
+        "Longitude": 14.3525188
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_375442585": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1753982,
+        "Longitude": 14.4664446
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37597425": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2146117,
+        "Longitude": 14.4406776
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_392970798": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1883319,
+        "Longitude": 14.4132237
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_392970814": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1890623,
+        "Longitude": 14.4170131
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_40866798": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1996005,
+        "Longitude": 14.4589014
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_431603698": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2161172,
+        "Longitude": 14.4416367
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_447539003": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2069156,
+        "Longitude": 14.4691426
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_457632942": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1816556,
+        "Longitude": 14.4567718
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47263681": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1796602,
+        "Longitude": 14.3885668
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47443294": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1859326,
+        "Longitude": 14.4718002
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48393438": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.163646,
+        "Longitude": 14.4396256
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48598014": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1747992,
+        "Longitude": 14.3680499
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50005771": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1655343,
+        "Longitude": 14.3914199
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50058115": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1534785,
+        "Longitude": 14.4445216
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50133290": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1937692,
+        "Longitude": 14.3483635
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50148550": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1803353,
+        "Longitude": 14.396817
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_505920045": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1677175,
+        "Longitude": 14.449743
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_506027177": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1767146,
+        "Longitude": 14.4498119
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_51817851": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2178707,
+        "Longitude": 14.358607
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_57394054": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1609621,
+        "Longitude": 14.423171
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_58795923": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2066336,
+        "Longitude": 14.3431649
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_61732526": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.215712,
+        "Longitude": 14.3619105
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_629037752": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1970308,
+        "Longitude": 14.4079325
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_629037753": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1895541,
+        "Longitude": 14.4020755
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_629037754": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1917311,
+        "Longitude": 14.4035685
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_640025721": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2079229,
+        "Longitude": 14.3920027
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_64547311": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2120439,
+        "Longitude": 14.3614379
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_64577502": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2070299,
+        "Longitude": 14.3718841
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_659372144": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2156145,
+        "Longitude": 14.4272984
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66193030": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2311144,
+        "Longitude": 14.4503677
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_680785816": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2207074,
+        "Longitude": 14.4045443
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_709254218": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1826213,
+        "Longitude": 14.409274
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_744273472": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1699145,
+        "Longitude": 14.4592067
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_744558424": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1679761,
+        "Longitude": 14.4631065
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_744784909": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1662334,
+        "Longitude": 14.4451064
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_749056114": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2162518,
+        "Longitude": 14.3458989
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_749263132": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1761294,
+        "Longitude": 14.4753097
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_753742165": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1975697,
+        "Longitude": 14.4064699
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_753742167": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1929865,
+        "Longitude": 14.4034645
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_753748013": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1943412,
+        "Longitude": 14.4185079
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_758669003": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1868884,
+        "Longitude": 14.399275
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_758669009": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1840549,
+        "Longitude": 14.4000902
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_815897111": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1604185,
+        "Longitude": 14.4529077
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792361": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1819945,
+        "Longitude": 14.46195
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792364": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1826906,
+        "Longitude": 14.4617808
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792367": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1831869,
+        "Longitude": 14.4621118
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_84501700": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1505783,
+        "Longitude": 14.4199021
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_84501702": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1517564,
+        "Longitude": 14.4213396
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_84589638": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1490992,
+        "Longitude": 14.4378316
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86246848": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.189924,
+        "Longitude": 14.3823476
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86548633": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2028545,
+        "Longitude": 14.4869438
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_871993519": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2046512,
+        "Longitude": 14.3809866
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875850035": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2043,
+        "Longitude": 14.3380649
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861632": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2082231,
+        "Longitude": 14.3669696
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861634": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2083805,
+        "Longitude": 14.3648081
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861635": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2082436,
+        "Longitude": 14.3678414
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861636": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2066436,
+        "Longitude": 14.3694347
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861637": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2061966,
+        "Longitude": 14.3696107
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875861639": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2033924,
+        "Longitude": 14.3677415
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875865101": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2066903,
+        "Longitude": 14.3575779
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875868619": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2180147,
+        "Longitude": 14.3499913
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_875868620": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2196996,
+        "Longitude": 14.354862
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_relation_444092": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.2150359,
+        "Longitude": 14.3602766
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1128398079": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2009053,
+        "Longitude": 14.4422109
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_118239390": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1735824,
+        "Longitude": 14.4122164
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_118370194": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1724055,
+        "Longitude": 14.4818979
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_119917042": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1798497,
+        "Longitude": 14.4631908
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120783892": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1994809,
+        "Longitude": 14.4492608
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_120786215": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2018173,
+        "Longitude": 14.4416357
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_122031021": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1421456,
+        "Longitude": 14.4162977
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1259781760": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2004364,
+        "Longitude": 14.326136
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_1286366542": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1775104,
+        "Longitude": 14.4635651
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1305958456": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1651395,
+        "Longitude": 14.4511153
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1305958458": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1650907,
+        "Longitude": 14.4516118
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1305958460": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1647284,
+        "Longitude": 14.4501047
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_1306980993": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1785257,
+        "Longitude": 14.4394933
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_139306332": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1879806,
+        "Longitude": 14.4266514
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_1393571090": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1869329,
+        "Longitude": 14.4383577
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_139667300": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1916378,
+        "Longitude": 14.3775184
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_143496455": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1787492,
+        "Longitude": 14.4604548
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942906": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1478598,
+        "Longitude": 14.4268051
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942908": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1487869,
+        "Longitude": 14.4279023
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942909": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1485185,
+        "Longitude": 14.4280911
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942910": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1482311,
+        "Longitude": 14.4273833
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942915": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1468244,
+        "Longitude": 14.4229517
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942916": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1482857,
+        "Longitude": 14.4206607
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1450942918": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1475061,
+        "Longitude": 14.4255917
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1467830223": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1789814,
+        "Longitude": 14.4705997
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1532391678": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1812858,
+        "Longitude": 14.4728465
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_164701887": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1628128,
+        "Longitude": 14.4554899
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_164918959": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1767548,
+        "Longitude": 14.4144076
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_173139112": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1783312,
+        "Longitude": 14.4661187
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_173139113": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1783204,
+        "Longitude": 14.4649935
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_173139115": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1802857,
+        "Longitude": 14.4650172
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_173139117": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1791812,
+        "Longitude": 14.4645187
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181071749": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.207103,
+        "Longitude": 14.4236053
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_181643264": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2155584,
+        "Longitude": 14.3387218
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_183160524": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1985486,
+        "Longitude": 14.4422392
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_306715216": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1674485,
+        "Longitude": 14.4013409
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_306940062": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2124212,
+        "Longitude": 14.4396787
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_326933758": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1862225,
+        "Longitude": 14.4024837
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_361424640": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1828558,
+        "Longitude": 14.4485468
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_37602195": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.218379,
+        "Longitude": 14.3857106
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_392970801": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1886801,
+        "Longitude": 14.4164248
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_392970807": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1893621,
+        "Longitude": 14.416407
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_392970812": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1822631,
+        "Longitude": 14.4095122
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_410056582": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1823364,
+        "Longitude": 14.4483736
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_446878500": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1933832,
+        "Longitude": 14.40687
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692036": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1924845,
+        "Longitude": 14.4048273
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692038": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1924736,
+        "Longitude": 14.404198
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692040": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1938528,
+        "Longitude": 14.40581
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692041": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1939157,
+        "Longitude": 14.4052035
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692042": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1929226,
+        "Longitude": 14.4059959
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_452692043": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1938391,
+        "Longitude": 14.4045774
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47263678": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1801848,
+        "Longitude": 14.3897918
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47263680": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1798086,
+        "Longitude": 14.3893879
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47573851": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1648237,
+        "Longitude": 14.4081073
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47573927": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1652002,
+        "Longitude": 14.4076942
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_47586577": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1731417,
+        "Longitude": 14.4181295
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_47587261": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1756696,
+        "Longitude": 14.4157371
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_48125969": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1644079,
+        "Longitude": 14.4453401
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48393156": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1618344,
+        "Longitude": 14.4400265
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48393157": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1629327,
+        "Longitude": 14.4377435
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_48598017": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1693614,
+        "Longitude": 14.3731165
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_489644082": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1795107,
+        "Longitude": 14.4332229
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_489644083": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.180695,
+        "Longitude": 14.4342941
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50133285": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1896047,
+        "Longitude": 14.3537296
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50133287": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1957982,
+        "Longitude": 14.3523518
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50147717": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1877888,
+        "Longitude": 14.4042775
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_54741563": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2059084,
+        "Longitude": 14.4317664
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_54741567": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2053816,
+        "Longitude": 14.4327835
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_59533761": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1618585,
+        "Longitude": 14.436766
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_59533762": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1623516,
+        "Longitude": 14.4374035
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_59861535": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1698098,
+        "Longitude": 14.4026755
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_601716662": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2066091,
+        "Longitude": 14.3715812
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_64547131": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.2132028,
+        "Longitude": 14.3610458
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_64547272": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2130293,
+        "Longitude": 14.3612446
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_64577511": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2063692,
+        "Longitude": 14.3727501
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_64933357": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2043125,
+        "Longitude": 14.3729314
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_659382318": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1916964,
+        "Longitude": 14.4146872
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66192838": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2150889,
+        "Longitude": 14.4081596
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66192875": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2146504,
+        "Longitude": 14.4183125
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66192930": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2196014,
+        "Longitude": 14.3978916
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66192997": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2189437,
+        "Longitude": 14.4272842
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_66193026": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.21465,
+        "Longitude": 14.4203415
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145371": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1481345,
+        "Longitude": 14.4297421
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145374": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1480961,
+        "Longitude": 14.430247
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_680784041": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.197825,
+        "Longitude": 14.436715
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_680784042": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1971048,
+        "Longitude": 14.4415205
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_700138669": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1877385,
+        "Longitude": 14.3515719
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_737698734": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1578637,
+        "Longitude": 14.4371259
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_744784908": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1652242,
+        "Longitude": 14.4462092
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_751544605": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1591828,
+        "Longitude": 14.4398108
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_801854788": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1452939,
+        "Longitude": 14.4192298
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_813078423": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1734766,
+        "Longitude": 14.4773993
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_813078425": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1754109,
+        "Longitude": 14.4821421
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_815639308": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1800604,
+        "Longitude": 14.4548777
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792323": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.17888,
+        "Longitude": 14.4552583
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792330": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.187254,
+        "Longitude": 14.4621564
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_81792369": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1793964,
+        "Longitude": 14.4565067
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_828761347": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.211838,
+        "Longitude": 14.3800263
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_838533047": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2072231,
+        "Longitude": 14.4161238
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_839643798": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1719965,
+        "Longitude": 14.4133635
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86258366": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2165244,
+        "Longitude": 14.3881
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86259235": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2217597,
+        "Longitude": 14.3769262
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86259243": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2191235,
+        "Longitude": 14.380782
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86260283": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2124127,
+        "Longitude": 14.3828807
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86260287": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2134509,
+        "Longitude": 14.3836389
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86260288": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2119422,
+        "Longitude": 14.3831857
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86260291": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2143091,
+        "Longitude": 14.387014
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86323919": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1956572,
+        "Longitude": 14.3973427
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86350962": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2001663,
+        "Longitude": 14.417095
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86350974": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2038012,
+        "Longitude": 14.4166561
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86354309": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2107381,
+        "Longitude": 14.401299
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86354314": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2150216,
+        "Longitude": 14.405936
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86382421": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1998194,
+        "Longitude": 14.4397645
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86413147": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2150555,
+        "Longitude": 14.4155389
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695693": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1660896,
+        "Longitude": 14.4499881
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695697": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.165966,
+        "Longitude": 14.4515477
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695698": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1650798,
+        "Longitude": 14.4500161
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695700": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1652048,
+        "Longitude": 14.4495677
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695702": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1653278,
+        "Longitude": 14.4507147
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695704": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1662191,
+        "Longitude": 14.4480102
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695705": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1662653,
+        "Longitude": 14.4475116
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695706": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1671901,
+        "Longitude": 14.4483281
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695708": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1665117,
+        "Longitude": 14.4481698
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695710": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1668138,
+        "Longitude": 14.448333
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695713": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1661344,
+        "Longitude": 14.4466732
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695714": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1664463,
+        "Longitude": 14.4455302
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695715": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1658497,
+        "Longitude": 14.4452685
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695721": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1667419,
+        "Longitude": 14.4455855
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695723": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1670362,
+        "Longitude": 14.4456913
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_881695728": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1662842,
+        "Longitude": 14.4495028
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_94629680": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1598027,
+        "Longitude": 14.4416088
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_968168654": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1954107,
+        "Longitude": 14.4491428
+      },
+      "TimeLimit": null
+    },
+    "OSM_soccer_practice_location_way_976981353": {
+      "LocationType": "Soccer Practice Location",
+      "Coordinates": {
+        "Latitude": 51.1783384,
+        "Longitude": 14.4555736
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1039569544": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1600652,
+        "Longitude": 14.4205734
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1053253336": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1962709,
+        "Longitude": 14.4216707
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1138672810": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1603851,
+        "Longitude": 14.4333355
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1160493996": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2160831,
+        "Longitude": 14.4718599
+      },
+      "TimeLimit": null
+    },
+    "OSM_outdoor_swimming_pool_way_118239404": {
+      "LocationType": "Outdoor Swimming Pool",
+      "Coordinates": {
+        "Latitude": 51.1732635,
+        "Longitude": 14.4118863
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1307030204": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.149249,
+        "Longitude": 14.4182397
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1392219643": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1709775,
+        "Longitude": 14.414318
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_145951372": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1873612,
+        "Longitude": 14.33767
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_146619133": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1774413,
+        "Longitude": 14.4240749
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_146619134": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1770717,
+        "Longitude": 14.4244245
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1467830224": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1786245,
+        "Longitude": 14.4708813
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1467830225": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1792422,
+        "Longitude": 14.470394
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1499838480": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1593313,
+        "Longitude": 14.4535204
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1532391685": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1817913,
+        "Longitude": 14.4729209
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_1560901152": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1671463,
+        "Longitude": 14.4320864
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_166915836": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.211224,
+        "Longitude": 14.3902419
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_180989389": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1819466,
+        "Longitude": 14.4698938
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_180989391": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.18005,
+        "Longitude": 14.4680578
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_180989392": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1821992,
+        "Longitude": 14.4709755
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_211610016": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1957188,
+        "Longitude": 14.3944956
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_257425178": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1741495,
+        "Longitude": 14.4017179
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_26631539": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1838124,
+        "Longitude": 14.4301541
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_37014938": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.2131418,
+        "Longitude": 14.3580289
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_397098199": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1915936,
+        "Longitude": 14.354729
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_419082361": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2064939,
+        "Longitude": 14.3306394
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_436222498": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1998579,
+        "Longitude": 14.3587257
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_489644079": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1785088,
+        "Longitude": 14.4317351
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_489644080": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.17748,
+        "Longitude": 14.4301345
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_489644081": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1771407,
+        "Longitude": 14.4271492
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_49799102": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1825082,
+        "Longitude": 14.4347682
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_50058114": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1526216,
+        "Longitude": 14.4413767
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_609225666": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1502517,
+        "Longitude": 14.4197972
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_609225667": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1489405,
+        "Longitude": 14.4233438
+      },
+      "TimeLimit": null
+    },
+    "OSM_local_recreational_area_way_641841724": {
+      "LocationType": "Local Recreational Area",
+      "Coordinates": {
+        "Latitude": 51.1847613,
+        "Longitude": 14.4045109
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_651215228": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.187916,
+        "Longitude": 14.3721456
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_667907690": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2144392,
+        "Longitude": 14.4723476
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145364": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.151213,
+        "Longitude": 14.4218152
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145365": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1507641,
+        "Longitude": 14.4224509
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145366": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1495284,
+        "Longitude": 14.4212581
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145367": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1496357,
+        "Longitude": 14.4202705
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145368": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1499591,
+        "Longitude": 14.4206358
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_668145369": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1502337,
+        "Longitude": 14.4206747
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_790329049": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1673689,
+        "Longitude": 14.4438413
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_85554960": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2153735,
+        "Longitude": 14.4691745
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_862811162": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1767015,
+        "Longitude": 14.4044295
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_86413150": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.2134604,
+        "Longitude": 14.412505
+      },
+      "TimeLimit": null
+    },
+    "OSM_mountain_road_way_986755064": {
+      "LocationType": "Mountain Road",
+      "Coordinates": {
+        "Latitude": 51.1455815,
+        "Longitude": 14.4204087
+      },
+      "TimeLimit": null
+    }
+  }
+}

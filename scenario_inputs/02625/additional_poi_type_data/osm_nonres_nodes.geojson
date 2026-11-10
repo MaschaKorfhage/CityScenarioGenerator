@@ -1,0 +1,4467 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-09T08:15:37Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/190743275",
+      "properties": {
+        "@id": "node/190743275",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "email": "info@scarabaeusapo.de",
+        "fax": "+49 3591 481042",
+        "healthcare": "pharmacy",
+        "name": "Scarabeus Apotheke",
+        "opening_hours": "Mo-Th 07:30-18:30; We,Fr 07:30-18:00; Sa 08:00-12:00; PH off",
+        "operator": "Stefanie Seichter",
+        "phone": "+49 3591 481149",
+        "website": "https://www.scarabaeusapo.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4296961,
+          51.183164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/446026873",
+      "properties": {
+        "@id": "node/446026873",
+        "amenity": "bar",
+        "check_date:opening_hours": "2026-10-10",
+        "name": "Habana",
+        "opening_hours:signed": "no",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4287153,
+          51.1805243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/446027048",
+      "properties": {
+        "@id": "node/446027048",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "02625",
+        "addr:street": "Schulstraße",
+        "amenity": "bar",
+        "name": "Canapee",
+        "phone": "+49 172 3789798",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4252843,
+          51.1802335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/446027233",
+      "properties": {
+        "@id": "node/446027233",
+        "amenity": "pub",
+        "name": "Radeberger Bierstuben",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.424321,
+          51.1790579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/494494957",
+      "properties": {
+        "@id": "node/494494957",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Äußere Lauenstraße",
+        "amenity": "theatre",
+        "email": "info@sne-gmbh.com",
+        "name": "Serbski ludowy ansambl - Sorbisches National-Ensemble",
+        "name:de": "Sorbisches National-Ensemble",
+        "name:en": "Sorbian National Ensemble",
+        "name:hsb": "Serbski ludowy ansambl",
+        "phone": "+49 3591 358 0",
+        "website": "http://www.sorbisches-national-ensemble.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4225827,
+          51.1800341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/506290199",
+      "properties": {
+        "@id": "node/506290199",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "cafe",
+        "brand": "Schwerdtner",
+        "brand:wikidata": "Q111431951",
+        "contact:email": "kontakt@baeckerei-schwerdtner.de",
+        "contact:phone": "+49 3591 327816",
+        "contact:website": "https://www.baeckerei-schwerdtner.de",
+        "diet:vegetarian": "yes",
+        "drink:coffee": "yes",
+        "name": "Schwerdtner",
+        "opening_hours": "Mo-Sa 07:00-18:00; Su 08:00-18:00; PH off",
+        "operator": "Bäckerei & Konditorei Schwerdtner GmbH",
+        "outdoor_seating": "pedestrian_zone",
+        "payment:cash": "yes",
+        "shop": "bakery",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4247418,
+          51.1812633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/590034494",
+      "properties": {
+        "@id": "node/590034494",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "cafe",
+        "ice_cream": "yes",
+        "name": "Caffé Creme VENEZIA",
+        "opening_hours": "Feb 01-Dec 15 Mo-Su,PH 09:30-20:00",
+        "phone": "+49 3591 532257",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4264545,
+          51.1810676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/590036851",
+      "properties": {
+        "@id": "node/590036851",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "02625",
+        "addr:street": "Karl-Marx-Straße",
+        "air_conditioning": "yes",
+        "amenity": "cafe",
+        "changing_table": "no",
+        "diet:vegetarian": "yes",
+        "indoor_seating": "yes",
+        "name": "Schwerdtners Café Jannasch",
+        "opening_hours": "Mo-Sa 07:00-18:00; Su 07:30-18:00",
+        "outdoor_seating": "pedestrian_zone",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "phone": "+49 3591 5312065",
+        "smoking": "outside",
+        "toilets": "yes",
+        "toilets:wheelchair": "no",
+        "website": "https://www.baeckerei-schwerdtner.de/filialen",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4279455,
+          51.1791117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/590036988",
+      "properties": {
+        "@id": "node/590036988",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "25",
+        "addr:postcode": "02625",
+        "addr:street": "Seminarstraße",
+        "amenity": "ice_cream",
+        "check_date": "2026-10-19",
+        "contact:facebook": "share/1C9AjDGYDJ",
+        "contact:instagram": "eisdealer1974",
+        "cuisine": "ice_cream",
+        "description": "Softeis",
+        "name": "Eisdealer",
+        "note:de": "ehemals Absinth-Lounge",
+        "operator": "Alexander Schiebel",
+        "outdoor_seating": "yes",
+        "phone": "+49 3591 40727",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4254014,
+          51.1776866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/612175249",
+      "properties": {
+        "@id": "node/612175249",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "49",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Salvador-Allende-Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2021-09-28",
+        "contact:email": "ost.apotheke.bautzen@t-online.de",
+        "contact:phone": "+49 3591 604477",
+        "contact:website": "https://ihreapotheken.de/apotheke/ost-apotheke-bautzen-02625-62120",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Ost-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:30-11:00; Su,PH off",
+        "operator": "Steffen Teuber",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4531672,
+          51.1753699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/629035018",
+      "properties": {
+        "@id": "node/629035018",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20c",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Dipl.-Med. Isolde Werner",
+        "operator": "Isolde Werner",
+        "phone": "+49 3591 601477",
+        "website": "https://www.jameda.de/bautzen/aerzte/innere-allgemeinmediziner/dipl-med-isolde-werner/uebersicht/80020678_1/",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4426294,
+          51.1852678
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/701248693",
+      "properties": {
+        "@id": "node/701248693",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Hauptmarkt",
+        "addr:street:hsb": "Hłowne torhošćo",
+        "amenity": "pharmacy",
+        "contact:email": "info@stadtapotheke-bautzen.de",
+        "contact:fax": "+49 3591 40149",
+        "contact:phone": "+49 3591 42280",
+        "contact:website": "http://www.stadtapotheke-bautzen.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Stadtapotheke",
+        "name:hsb": "Měšćanska apoteka",
+        "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:00-12:00; Su,PH off",
+        "operator": "Sylvia Janze",
+        "source": "extrapolation",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4234728,
+          51.1813759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/701821592",
+      "properties": {
+        "@id": "node/701821592",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "02625",
+        "addr:street": "Seminarstraße",
+        "amenity": "cafe",
+        "name": "Jeremias",
+        "source": "extrapolation",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4257333,
+          51.1785157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/701821595",
+      "properties": {
+        "@id": "node/701821595",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "16",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "cafe",
+        "name": "Bistro Adria",
+        "opening_hours": "Mo-Sa 11:00-21:00; PH off",
+        "outdoor_seating": "pedestrian_zone",
+        "phone": "+49 3591 45668",
+        "source": "extrapolation",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4258939,
+          51.1810604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/769216496",
+      "properties": {
+        "@id": "node/769216496",
+        "amenity": "cafe",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3612795,
+          51.2151376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/775913751",
+      "properties": {
+        "@id": "node/775913751",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Hanns-Eisler-Straße",
+        "brand": "Edeka",
+        "brand:wikidata": "Q701755",
+        "brand:wikipedia": "de:Edeka",
+        "name": "nah und gut",
+        "opening_hours": "Mo-Sa 07:00-20:00; PH off",
+        "shop": "supermarket",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4526447,
+          51.1745737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1003155973",
+      "properties": {
+        "@id": "node/1003155973",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "136",
+        "addr:postcode": "02625",
+        "addr:street": "Hoyerswerdaer Straße",
+        "addr:suburb": "Kleinwelka",
+        "brand": "Penny",
+        "brand:wikidata": "Q284688",
+        "brand:wikipedia": "en:Penny (supermarket)",
+        "check_date:opening_hours": "2026-07-05",
+        "contact:email": "kontakt@penny.de",
+        "contact:facebook": "https://www.facebook.com/PennyDeutschland",
+        "contact:instagram": "https://www.instagram.com/pennydeutschland/",
+        "contact:website": "https://www.penny.de",
+        "name": "Penny. Am Saurierpark",
+        "opening_hours": "Mo-Sa 08:00-20:00; PH off",
+        "operator": "Penny-Markt GmbH",
+        "shop": "supermarket",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3928522,
+          51.2141287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1004513331",
+      "properties": {
+        "@id": "node/1004513331",
+        "amenity": "pharmacy",
+        "email": "info@husaren-apo.de",
+        "fax": "+49 3591 273809",
+        "healthcare": "pharmacy",
+        "name": "Husarenapotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-16:00",
+        "operator": "Frank Schreiter",
+        "phone": "+49 3591 273766",
+        "website": "https://www.husaren-apo.de/",
+        "wheelchair": "yes",
+        "wheelchair:description": "teilweise,kein Beh.-WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.436683,
+          51.1715031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1012406755",
+      "properties": {
+        "@id": "node/1012406755",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "62",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "amenity": "pharmacy",
+        "email": "info@gesundbrunnen-apotheke.de",
+        "fax": "+49 3591 672624",
+        "healthcare": "pharmacy",
+        "name": "Gesundbrunnen Apotheke",
+        "opening_hours": "Mo-Sa 08:00-20:00",
+        "phone": "+49 3591 23027",
+        "website": "https://www.gesundbrunnen-apotheke.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4452927,
+          51.1921065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1013108454",
+      "properties": {
+        "@id": "node/1013108454",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Paulistraße",
+        "amenity": "bar",
+        "email": "doubleinn.bz@web.de",
+        "fax": "+49 3591 98393",
+        "internet_access": "terminal",
+        "name": "Double Inn",
+        "opening_hours": "10:00-01:00",
+        "operator": "Julia Lindemann",
+        "phone": "+49 3591 481376",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4414321,
+          51.1801213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1131009712",
+      "properties": {
+        "@id": "node/1131009712",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;anaesthetics",
+        "name": "Dipl. med. Ute Zielina",
+        "phone": "+49 3591 23163"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4421692,
+          51.1927814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1341106413",
+      "properties": {
+        "@id": "node/1341106413",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "02625",
+        "addr:street": "Strandpromenade",
+        "amenity": "bar",
+        "comment": "Bootsverleih, Beachvolleyball, Cafe",
+        "indoor_seating": "yes",
+        "name": "Ocean Beach Bar",
+        "outdoor_seating": "yes",
+        "phone": "+4915231715367",
+        "website": "http://www.finde-dein-erlebnis.de/ocean-beach-bar-bautzen.html",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4650997,
+          51.2061727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1478456887",
+      "properties": {
+        "@id": "node/1478456887",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "doctors",
+        "email": "info@orthopaedie-pfeifer.de",
+        "fax": "+49 3591 460456",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics",
+        "name": "Dr. med. Carsten Pfeifer",
+        "phone": "+49 3591 460455",
+        "website": "https://www.orthopaedie-pfeifer.de/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.43264,
+          51.17566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1746036827",
+      "properties": {
+        "@id": "node/1746036827",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Friedrich-Ebert-Straße",
+        "amenity": "doctors",
+        "contact:fax": "+49 3591 277340",
+        "contact:phone": "+49 3591 22084",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "name": "Kinderarztpraxis Punde",
+        "opening_hours": "Mo 07:30-12:00,14:00-16:00; Tu 07:30-12:00,14:00-18:00; We 07:30-12:00; Th 07:30-12:00,14:00-18:00; Fr 07:30-12:00",
+        "operator": "Ines Punde",
+        "website": "https://kinderarztpraxis-bautzen.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4499313,
+          51.1925834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1763499766",
+      "properties": {
+        "@id": "node/1763499766",
+        "amenity": "bar",
+        "name": "Tanzbar Rendezvous",
+        "opening_hours": "Th-Sa 19:00-04:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4507413,
+          51.1881622
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1992386019",
+      "properties": {
+        "@id": "node/1992386019",
+        "name": "Kornmarktpassage",
+        "name:hsb": "Pasaža při Žitnych wikach",
+        "shop": "mall",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4268233,
+          51.1792562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2166715582",
+      "properties": {
+        "@id": "node/2166715582",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "62",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "brand": "Kaufland",
+        "brand:wikidata": "Q685967",
+        "brand:wikipedia": "en:Kaufland",
+        "name": "Kaufland",
+        "opening_hours": "Mo-Sa 07:00-22:00; PH off",
+        "phone": "+49 3591 67190",
+        "shop": "supermarket",
+        "website": "https://www.kaufland.de",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4449898,
+          51.1916555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264237847",
+      "properties": {
+        "@id": "node/2264237847",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "fee": "yes",
+        "museum": "history",
+        "name": "Museum Bautzen",
+        "name:hsb": "Muzej Budyšin",
+        "operator": "Stadt Bautzen",
+        "operator:type": "government",
+        "phone": "+49 3591 498533",
+        "toilets:wheelchair": "yes",
+        "tourism": "museum",
+        "website": "https://www.bautzen.de/museum-bautzen",
+        "wheelchair": "limited",
+        "wheelchair:description": "kein Barrieren",
+        "wikidata": "Q1471331"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4270748,
+          51.1802455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264271190",
+      "properties": {
+        "@id": "node/2264271190",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "5a",
+        "addr:postcode": "02625",
+        "addr:street": "Postplatz",
+        "amenity": "cafe",
+        "name": "Café Marx",
+        "outdoor_seating": "yes",
+        "phone": "+49 3591 481188",
+        "website": "https://www.konditorei-in-bautzen.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "nicht Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4286407,
+          51.1777807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264292484",
+      "properties": {
+        "@id": "node/2264292484",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "brand": "Aldi Nord",
+        "brand:wikidata": "Q41171373",
+        "brand:wikipedia": "en:Aldi",
+        "name": "Aldi",
+        "opening_hours": "Mo-Sa 07:00-20:00; PH off",
+        "operator": "Aldi Nord",
+        "shop": "supermarket",
+        "website": "https://www.aldi-nord.de/filialen-und-oeffnungszeiten.html/l/bautzen/gesundbrunnenring-4/3180893",
+        "wheelchair": "limited",
+        "wheelchair:description": "ohne beh.WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4405264,
+          51.1865711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264294662",
+      "properties": {
+        "@id": "node/2264294662",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20c",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "brand": "Norma",
+        "brand:wikidata": "Q450180",
+        "name": "Norma",
+        "opening_hours": "Mo-Sa 07:00-20:00; PH off",
+        "shop": "supermarket",
+        "website": "https://www.norma-online.de",
+        "wheelchair": "limited",
+        "wheelchair:description": "ohne beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4426939,
+          51.1855007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264296453",
+      "properties": {
+        "@id": "node/2264296453",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20c",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "pharmacy",
+        "contact:email": "mitarbeiter@ahornapothekebautzen.de",
+        "contact:phone": "+49 3591 6770017",
+        "healthcare": "pharmacy",
+        "name": "Ahorn-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 08:00-12:00",
+        "website": "https://www.ahornapothekebautzen.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "ohne beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4424071,
+          51.1854858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264301318",
+      "properties": {
+        "@id": "node/2264301318",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "43b",
+        "addr:postcode": "02625",
+        "addr:street": "Neusalzaer Straße",
+        "amenity": "cafe",
+        "contact:facebook": "https://de-de.facebook.com/pages/Cafe-Fehrmann",
+        "name": "Cafe Fehrmann",
+        "opening_hours": "Mo-Sa 06:00-19:00; Su 07:00-19:00",
+        "phone": "+49 3591 3189548",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4269157,
+          51.1669273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2264310790",
+      "properties": {
+        "@id": "node/2264310790",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "cafe",
+        "name": "Café im Ärztehaus",
+        "phone": "+49 3591 42613",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4298915,
+          51.1831351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2286531975",
+      "properties": {
+        "@id": "node/2286531975",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "Fleischmarkt",
+        "amenity": "bar",
+        "contact:email": "samsbar@gmx.de",
+        "contact:facebook": "https://facebook.com/samsbautzen/",
+        "contact:phone": "+49 3591 490964",
+        "name": "Sam's Bar",
+        "opening_hours": "We-Su 19:00+",
+        "operator": "Lydia Schubert",
+        "start_date": "1995",
+        "wheelchair": "limited",
+        "wheelchair:description": "ohne beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4243658,
+          51.1819288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2286532371",
+      "properties": {
+        "@id": "node/2286532371",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Fleischmarkt",
+        "amenity": "pub",
+        "check_date": "2025-10-07",
+        "name": "O'Conners",
+        "opening_hours": "Tu-Sa 19:00-22:00+",
+        "phone": "+49 3591 389839",
+        "website": "https://oconners.de/",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4244773,
+          51.1820813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2317008719",
+      "properties": {
+        "@id": "node/2317008719",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "38",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "contact:email": "info@vorwerkpodemus.de",
+        "contact:fax": "+49 3591 2727664",
+        "contact:instagram": "https://www.instagram.com/vorwerk_podemus/",
+        "contact:phone": "+49 3591 2727663",
+        "contact:website": "https://www.vorwerkpodemus.de/markt/bautzen/",
+        "name": "Vorwerk Podemus Bio-Stadtmarkt Bautzen",
+        "name:hsb": "Bio-wiki na wudworje",
+        "note": "Es gibt hier noch ein altes Schild mit Vorwerk Bautzen, wahrscheinlich der ehemalige Name des Hofs.",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 08:00-14:00; Su, PH off",
+        "operator": "Vorwerk Podemus",
+        "operator:wikidata": "Q96402396",
+        "organic": "only",
+        "shop": "supermarket",
+        "wheelchair": "limited",
+        "wheelchair:description": "Es sind keine Toiletten vorhanden, ansonsten barrierefrei."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4323283,
+          51.1819962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2403427431",
+      "properties": {
+        "@id": "node/2403427431",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Schloßstraße",
+        "addr:street:hsb": "Hrodowska",
+        "amenity": "bar",
+        "name": "Caracas",
+        "opening_hours": "Tu-Sa,PH 19:00+; Su,Mo off",
+        "phone": "+49 3591 530050",
+        "website": "https://www.bar-caracas.de",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4220521,
+          51.1830388
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561032211",
+      "properties": {
+        "@id": "node/2561032211",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20c",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "doctors",
+        "email": "praxis@oncos.de",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal;oncology",
+        "name": "ONCOS Bautzen",
+        "opening_hours": "Mo,We,Th 07:00-12:00,14:00-18:00; Tu,Fr 07:00-12:00",
+        "operator": "Dr. Anke Freidt & Dr. med. Conrad Heuchel",
+        "phone": "+49 3591 40424",
+        "website": "https://oncos.de",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4429684,
+          51.1857873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561035245",
+      "properties": {
+        "@id": "node/2561035245",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "24",
+        "addr:postcode": "02625",
+        "addr:street": "Taucherstraße",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "name": "Lessingapotheke",
+        "name:hsb": "Lessingowa lěkarnja",
+        "opening_hours": "Mo-Sa 07:30-18:00; Sa 09:00-12:00",
+        "phone": "+49 3591 47060",
+        "website": "https://www.lessingapotheke-bautzen.de",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise duch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4346699,
+          51.1777574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561042439",
+      "properties": {
+        "@id": "node/2561042439",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "Lessingstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. Jatzke Frauenarzt",
+        "phone": "+49 3591 530095",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise mit Hilfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4336775,
+          51.1782046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561058281",
+      "properties": {
+        "@id": "node/2561058281",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Lessingstraße",
+        "amenity": "dentist",
+        "email": "info@barth-zahnmedizin.de",
+        "healthcare": "dentist",
+        "name": "Barth Zahnmedizin",
+        "operator": "Dr. med. dent. Sebastian Barth, MSc",
+        "phone": "+49 3591 44466",
+        "website": "https://zahnmedizin-bautzen.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise mit Hilfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4346193,
+          51.1781419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561064029",
+      "properties": {
+        "@id": "node/2561064029",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "45",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. Ute Israel",
+        "phone": "+49 3591 23163",
+        "wheelchair": "yes",
+        "wheelchair:description": "keine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4421736,
+          51.1928302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561069060",
+      "properties": {
+        "@id": "node/2561069060",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "45",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dipl. Med. Birgit Truhel",
+        "phone": "+49 3591 23163",
+        "wheelchair": "yes",
+        "wheelchair:description": "keine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4420506,
+          51.1927889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561069842",
+      "properties": {
+        "@id": "node/2561069842",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "45",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "amenity": "doctors",
+        "healthcare": "physiotherapist",
+        "name": "Physiotherapie Amenda",
+        "name:hsb": "Fyzioterapija Amenda",
+        "phone": "+49 3591 601040",
+        "website": "https://www.praxis-amenda.de",
+        "wheelchair": "yes",
+        "wheelchair:description": "keine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4419408,
+          51.1928801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561071978",
+      "properties": {
+        "@id": "node/2561071978",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "42",
+        "addr:postcode": "02625",
+        "addr:street": "Albert-Einstein-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Heinze",
+        "opening_hours": "Mo,Tu 08:00-12:00,14:00-18:00; We 08:00-14:00; Th 10:00-17:00; Fr 08:00-12:00",
+        "phone": "+49 3591 23020",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4424044,
+          51.1922231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561078922",
+      "properties": {
+        "@id": "node/2561078922",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20c",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "healthcare:speciality": "stomatology",
+        "name": "Dr. Gawantka",
+        "phone": "+49 3591 601466",
+        "website": "https://www.med-kolleg.de/arzt/zahnarzt/8039.html",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4427354,
+          51.1857187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561095440",
+      "properties": {
+        "@id": "node/2561095440",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "62",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Salvador-Allende-Straße",
+        "amenity": "doctors",
+        "healthcare": "psychotherapist",
+        "name": "Dr. Tümmel Psychotherapeut",
+        "phone": "+49 3591 460000",
+        "website": "https://web2.cylex.de/firma-home/thuemmel-barbara-2861367.html",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit duch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4506661,
+          51.1757593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561099879",
+      "properties": {
+        "@id": "node/2561099879",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "28",
+        "addr:postcode": "02625",
+        "addr:street": "Friedrich-Wolf-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Kerstin",
+        "phone": "+49 3591 23119",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4580961,
+          51.1758899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561101953",
+      "properties": {
+        "@id": "node/2561101953",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "31",
+        "addr:postcode": "02625",
+        "addr:street": "Erich-Weinert-Straße",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "medical_system:western": "yes",
+        "name": "H. Pietsch - Physiotherapeut",
+        "office": "therapist",
+        "opening_hours": "Mo-Th 07:30-18:00, Fr 07:30-14:00; PH off",
+        "phone": "+49 3591 271675",
+        "website": "https://px.de/Physiotherapie/02625%20Bautzen/Heiko_Pietsch,Ralf_Wobad/3",
+        "wheelchair": "limited",
+        "wheelchair:description": "mit Hilfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.454717,
+          51.175783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2561103855",
+      "properties": {
+        "@id": "node/2561103855",
+        "amenity": "doctors",
+        "email": "physiotherapie-kobalz@t-online.de",
+        "fax": "+49 3591 600249",
+        "healthcare": "physiotherapist",
+        "name": "Physiotherapie Kobalz",
+        "opening_hours": "Mo-Fr 08:00-19:00",
+        "phone": "+49 3591 600243",
+        "website": "https://www.physiotherapie-kobalz.de/",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4622136,
+          51.1737186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564192657",
+      "properties": {
+        "@id": "node/2564192657",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Wendische Straße",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2026-07-11",
+        "healthcare": "doctor",
+        "name": "Dr. med Annette Eisler",
+        "opening_hours": "Mo 07:00-18:00; Tu 07:00-16:00; We,Fr 07:00-13:00; Th 07:00-15:00",
+        "phone": "+49 3591 42028",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4261809,
+          51.1820435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564198570",
+      "properties": {
+        "@id": "node/2564198570",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "Kesselstraße",
+        "amenity": "doctors",
+        "healthcare": "physiotherapist",
+        "name": "K. Teich - Physiotherapie",
+        "name:hsb": "K. Teich - fyzioterapija",
+        "phone": "+49 3591 530040",
+        "website": "https://www.physiotherapie-teich.de/",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheitdurch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.42533,
+          51.180592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564204106",
+      "properties": {
+        "@id": "node/2564204106",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Vor dem Schülertor",
+        "addr:street:hsb": "Před Šulerskimi wrotami",
+        "amenity": "doctors",
+        "healthcare": "psychotherapist",
+        "name": "Dr. Sälzer - Psychotherapeut",
+        "phone": "+49 3591 530531",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4258553,
+          51.1833627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564216529",
+      "properties": {
+        "@id": "node/2564216529",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "An den Fleischbänken",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. Cschille - Zytologe",
+        "phone": "+49 3591 42066",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4253791,
+          51.1822162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564222407",
+      "properties": {
+        "@id": "node/2564222407",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "An den Fleischbänken",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. Konrad Flössel - Zytologe",
+        "phone": "+49 3591 42066",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4253281,
+          51.1822082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564230428",
+      "properties": {
+        "@id": "node/2564230428",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Am Stadtwall",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal",
+        "name": "Dr. Haase - Internist",
+        "phone": "+49 3591 522757",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.429533,
+          51.18516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564241352",
+      "properties": {
+        "@id": "node/2564241352",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Maria-Grollmuß-Straße",
+        "addr:street:hsb": "Dróha dr. Marje Grólmusec",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "medical_system:western": "yes",
+        "name": "Physiotherapie Pooch",
+        "office": "therapist",
+        "opening_hours": "Mo-Th 07:00-19:00; Fr 07:00-15:00",
+        "phone": "+49 3591 49431",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit duch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.428437,
+          51.18373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564244344",
+      "properties": {
+        "@id": "node/2564244344",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. med. Huschmann",
+        "operator": "Dr. med. Ulrike Huschmann",
+        "phone": "+49 3591 43075",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4265027,
+          51.1795996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564251943",
+      "properties": {
+        "@id": "node/2564251943",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dipl.med. Gruhl",
+        "phone": "+49 3591 45033",
+        "website": "http://www.imedo.de/practice/provider/show/97997-margrit-gruhl",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.430511,
+          51.1762741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564322455",
+      "properties": {
+        "@id": "node/2564322455",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "31",
+        "addr:postcode": "02625",
+        "addr:street": "Jägerstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Dr. St. Kretschmar, Augenarzt",
+        "name:de": "Dr. St. Kretschmar, Augenarzt",
+        "name:hsb": "dr. St. Kretschmar, wóčny lěkar",
+        "phone": "+49 3591 44259",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.434386,
+          51.172908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564322767",
+      "properties": {
+        "@id": "node/2564322767",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics",
+        "name": "Dr. Seibold",
+        "phone": "+49 3591 6779494",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4280391,
+          51.1801143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564322896",
+      "properties": {
+        "@id": "node/2564322896",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. Jeremies - Frauenheilkunde",
+        "phone": "+49 3591 5312090",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4291672,
+          51.174691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2564322912",
+      "properties": {
+        "@id": "node/2564322912",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "check_date": "2020-03-22",
+        "contact:email": "info@orthopaedie-bautzen.de",
+        "contact:fax": "+49 3591 491501",
+        "contact:phone": "+49 3591 491500",
+        "contact:website": "https://www.orthopaedie-bautzen.de",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics;chiropractic",
+        "name": "Orthopädische Praxis Dieter Gammerdinger",
+        "opening_hours": "Mo 08:00-13:00,14:00-18:00; Tu 08:00-13:00,15:00-18:30; We 08:00-13:00; Th 08:00-13:00,14:00-17:30; Fr 08:00-13:00; PH off",
+        "operator": "Dieter Gamerdinger",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4295523,
+          51.1748886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566048401",
+      "properties": {
+        "@id": "node/2566048401",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "11",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "doctors",
+        "healthcare": "physiotherapist",
+        "name": "B. Rother - Physiotherapeut",
+        "opening_hours": "\"nach Vereinbarung\"",
+        "phone": "+49 3591 270654",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei Duch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.431848,
+          51.17676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566050259",
+      "properties": {
+        "@id": "node/2566050259",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Hellebrand",
+        "phone": "+49 3591 42250",
+        "website": "https://bautzen.stadtbranchenbuch.com/138537.html",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4336025,
+          51.1764525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566053530",
+      "properties": {
+        "@id": "node/2566053530",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. Spanier-Pech",
+        "phone": "+49 3591 43117",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4336866,
+          51.1764383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566056139",
+      "properties": {
+        "@id": "node/2566056139",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Ernst-Mucke-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "urology",
+        "name": "Urologischen Praxis Dr. med. Detlef Müller",
+        "name:hsb": "Dr. med. Detlef Müller - urologa",
+        "operator": "Dr. med. Detlef Müller",
+        "phone": "+49 3591 43108",
+        "website": "https://web2.cylex.de/firma-home/dr--med--detlef-mueller-1375887.html",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4303273,
+          51.1779962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566056627",
+      "properties": {
+        "@id": "node/2566056627",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Ernst-Mucke-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "healthcare:speciality": "stomatology",
+        "name": "Dipl.-Stom. Axel Becker",
+        "operator": "Dipl.-Stom. Axel Becker",
+        "phone": "+49 3591 42245",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4303596,
+          51.1781828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566059416",
+      "properties": {
+        "@id": "node/2566059416",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "8",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Ernst-Mucke-Straße",
+        "amenity": "dentist",
+        "check_date:opening_hours": "2023-08-05",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "R. Domel Kieferorthopäde",
+        "opening_hours:signed": "no",
+        "phone": "+49 3591 44010",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.431816,
+          51.177525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566066712",
+      "properties": {
+        "@id": "node/2566066712",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "pulmonology",
+        "name": "Dr. T. Paufler - Pneumologe",
+        "phone": "+49 3591 2551",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei duch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.430441,
+          51.1763026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2566076194",
+      "properties": {
+        "@id": "node/2566076194",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "18",
+        "addr:postcode": "02625",
+        "addr:street": "Thomas-Mann-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr.med. dent. Kosiolek",
+        "phone": "+49 3591 42344",
+        "website": "https://bautzen.staedte-info.net/thomas-mann-str_705114.php",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht Barrierefrei durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4396353,
+          51.1789801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2615986817",
+      "properties": {
+        "@id": "node/2615986817",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Hanns-Eisler-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Zahnarztpraxis Aleksandra K. Kaszak",
+        "opening_hours": "Mo 08:00-12:00, Tu 14:00-18:00, We 08:00-12:00, Th 08:00-12:00, Fr 08:00-12:00; PH off",
+        "phone": "+49 3591 23135",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit durch Stufen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4533459,
+          51.1748539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2666795634",
+      "properties": {
+        "@id": "node/2666795634",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "36",
+        "addr:postcode": "02625",
+        "addr:street": "Taucherstraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Herkner",
+        "phone": "+49 3591 490065",
+        "wheelchair": "no",
+        "wheelchair:description": "nicht rollstuhlgerecht"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.430642,
+          51.1746569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2666825649",
+      "properties": {
+        "@id": "node/2666825649",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "47",
+        "addr:postcode": "02625",
+        "addr:street": "Paulistraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Grohmann",
+        "opening_hours": "Mo 08:00-13:00,14:00-18:00; Tu 10:00-13:00,14:00-20:00; We 08:00-14:00; Th 08:00-13:00,14:00-18:00; Fr 08:00-14:00",
+        "operator": "Dr. Veselin Grohmann",
+        "phone": "+49 3591 47431",
+        "website": "https://zahnarztpraxis-grohmann.de",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4358991,
+          51.1742374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2668978396",
+      "properties": {
+        "@id": "node/2668978396",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "11",
+        "addr:postcode": "02625",
+        "addr:street": "Karl-Liebknecht-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "V. Worms",
+        "phone": "+49 3591 395123",
+        "website": "https://www.jameda.de/doberschau/zahnaerzte",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4346753,
+          51.1745523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2671155989",
+      "properties": {
+        "@id": "node/2671155989",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "M. Wunsch",
+        "phone": "+49 3591 43140",
+        "website": "https://www.zahnarzt-wunsch.de/",
+        "wheelchair": "no",
+        "wheelchair:description": "keine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.429442,
+          51.17636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2671168122",
+      "properties": {
+        "@id": "node/2671168122",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "M. Schneider",
+        "phone": "+49 3591 45803",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.432336,
+          51.1808131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2671179087",
+      "properties": {
+        "@id": "node/2671179087",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "33",
+        "addr:postcode": "02625",
+        "addr:street": "Goschwitzstraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Chr. Wittenberg",
+        "phone": "+49 3591 42329",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4281441,
+          51.1782399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2671190016",
+      "properties": {
+        "@id": "node/2671190016",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "21",
+        "addr:postcode": "02625",
+        "addr:street": "Goschwitzstraße",
+        "email": "info@ergotherapie-bautzen.de",
+        "health_facility:type": "office",
+        "health_specialty:occupational_therapist": "yes",
+        "healthcare": "occupational_therapist",
+        "healthcare:speciality": "occupational_therapy",
+        "medical_system:western": "yes",
+        "name": "Ergotherapie Hanel",
+        "operator": "Dörte Hanel",
+        "phone": "+49 3591 326182",
+        "website": "https://www.ergotherapie-bautzen.de",
+        "wheelchair": "yes",
+        "wheelchair:description": "Voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4263953,
+          51.1786697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2671214439",
+      "properties": {
+        "@id": "node/2671214439",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "10",
+        "addr:postcode": "02625",
+        "addr:street": "Wallstraße",
+        "amenity": "clinic",
+        "contact:fax": "+49 3591 460867",
+        "email": "info@kardiologie-bautzen.de",
+        "healthcare": "clinic",
+        "healthcare:speciality": "cardiology",
+        "name": "Kardiologische Praxis",
+        "operator": "PD Dr. med. habil. Uwe Speiser, Dr. med. N. Krujatz Kardiologe",
+        "operator:type": "private",
+        "phone": "+49 3591 490908",
+        "website": "https://www.kardiologie-bautzen.de",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.431905,
+          51.178045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2682184384",
+      "properties": {
+        "@id": "node/2682184384",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "5",
+        "addr:postcode": "02625",
+        "addr:street": "Lessingstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "psychiatry",
+        "name": "Dr. Danner, Psychologe",
+        "phone": "+49 3591 270020",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4349408,
+          51.1780245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2683216279",
+      "properties": {
+        "@id": "node/2683216279",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "5",
+        "addr:postcode": "02625",
+        "addr:street": "Lessingstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Gemeinschaftspraxis Dr. med. Christiane Stehr & Cornelia Boeck",
+        "operator": "Gemeinschaftspraxis Dr. med. Christiane Stehr & Cornelia Boeck GbR",
+        "phone": "+49 3591 328822",
+        "website": "https://www.praxis-stehr-boeck.de",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4349745,
+          51.1779925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2683236202",
+      "properties": {
+        "@id": "node/2683236202",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "24",
+        "addr:postcode": "02625",
+        "addr:street": "Tuchmacherstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "psychiatry",
+        "name": "Dr. G. Mieth",
+        "phone": "+49 3591 460692",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4294522,
+          51.1791581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2683242683",
+      "properties": {
+        "@id": "node/2683242683",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Kurt-Pchalek-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "I. R. Ranke Augenheilkunde",
+        "phone": "+49 3591 37970",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4304783,
+          51.1807589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2683262746",
+      "properties": {
+        "@id": "node/2683262746",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "doctors",
+        "health_facility:type": "office",
+        "health_specialty:podiatry": "yes",
+        "healthcare": "podiatrist",
+        "healthcare:speciality": "podiatry",
+        "medical_system:western": "yes",
+        "name": "Podologie Silke Lange",
+        "office": "therapist",
+        "operator": "Silke Lange",
+        "phone": "+49 3591 45856",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4337359,
+          51.1764966
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2683278327",
+      "properties": {
+        "@id": "node/2683278327",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Weigangstraße",
+        "contact:fax": "+49 3591 3189598",
+        "contact:mobile": "+49 160 7579429",
+        "email": "info@physiotherapie-bautzen.de",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy;osteopathy",
+        "medical_system:western": "yes",
+        "name": "Claus Physiotherapie",
+        "office": "therapist",
+        "opening_hours": "Mo-Th 08:00-18:00, Fr 08:00-14:00; PH off",
+        "operator": "Stefanie Claus",
+        "phone": "+49 3591 47805",
+        "website": "https://www.physiotherapie-bautzen.de",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4389462,
+          51.1775325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2736935829",
+      "properties": {
+        "@id": "node/2736935829",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Straße",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "medical_system:western": "yes",
+        "name": "Physiotherapie Steffi Hurtig",
+        "office": "therapist",
+        "opening_hours": "Mo-Fr 07:00-18:00; PH off",
+        "operator": "Steffi Hurtig",
+        "phone": "+49 3591 40560",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4301771,
+          51.1764529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2737033633",
+      "properties": {
+        "@id": "node/2737033633",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "8",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Ernst-Mucke-Straße",
+        "amenity": "dentist",
+        "check_date:opening_hours": "2023-08-05",
+        "healthcare": "dentist",
+        "name": "Dipl.-Stomat. Petra Schmidt",
+        "opening_hours:signed": "no",
+        "phone": "+49 3591 44010",
+        "website": "http://www.pointoo.de/poi/Bautzen",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4317356,
+          51.177487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2737042891",
+      "properties": {
+        "@id": "node/2737042891",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "10",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Ernst-Mucke-Straße",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2023-08-05",
+        "healthcare": "doctor",
+        "name": "Rasch",
+        "opening_hours:signed": "no",
+        "phone": "+49 3591 43922",
+        "website": "https://bautzen.staedte-info.net/dr-ernst-mucke-str_704950.php",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4320494,
+          51.1773726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2739605880",
+      "properties": {
+        "@id": "node/2739605880",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Postplatz",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Mühlmann",
+        "phone": "+49 3591 44176",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4285703,
+          51.1784131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2739610116",
+      "properties": {
+        "@id": "node/2739610116",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Postplatz",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "J. Wunderlich",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4285531,
+          51.1784339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2739624539",
+      "properties": {
+        "@id": "node/2739624539",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "36",
+        "addr:postcode": "02625",
+        "addr:street": "Tuchmacherstraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "H.-Krusch",
+        "phone": "+49 3591 42442",
+        "website": "https://www.zahnarztpraxis-krusch.de/",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4308612,
+          51.1791207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2741933895",
+      "properties": {
+        "@id": "node/2741933895",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Martin-Hoop-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "K. Fuchs",
+        "phone": "+49 3591 531200",
+        "website": "http://www.khbrisch.de/files/degpt_therapeutenliste.pdf",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.434163,
+          51.1762625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2742209560",
+      "properties": {
+        "@id": "node/2742209560",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "9",
+        "addr:postcode": "02625",
+        "addr:street": "Lotzestraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;internal",
+        "name": "Dr. med. Püschel",
+        "phone": "+49 3591 270377",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.432599,
+          51.18039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2742266981",
+      "properties": {
+        "@id": "node/2742266981",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Löbauer Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "dermatology",
+        "name": "Dr. Bär",
+        "phone": "+49 3591 2777140",
+        "website": "https://www.hautarztpraxis-baer.de/",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4420943,
+          51.1805965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2853097901",
+      "properties": {
+        "@id": "node/2853097901",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Paulistraße",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "medical_system:western": "yes",
+        "name": "Physiotherapie Borsdorf",
+        "office": "therapist",
+        "opening_hours": "\"nach Vereinbarung\"",
+        "operator": "Yvonne Borsdorf",
+        "phone": "+49 3591 271369",
+        "wheelchair": "no",
+        "wheelchair:description": "keine"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4406652,
+          51.1781565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2853691938",
+      "properties": {
+        "@id": "node/2853691938",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20",
+        "addr:postcode": "02625",
+        "addr:street": "Taucherstraße",
+        "amenity": "dentist",
+        "email": "info@trenkmann.eu",
+        "healthcare": "dentist",
+        "healthcare:speciality": "stomatology",
+        "name": "Dr. med. Lars Trenkmann",
+        "opening_hours": "Mo-Th 08:00-12:00, 14:00-18:00; Fr 08:00-12:00; PH off",
+        "operator": "Dr. med. Ulrike Trenkmann & Dr. med. Lars Trenkmann",
+        "phone": "+49 3591 44097",
+        "website": "https://www.trenkmann.eu",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4354043,
+          51.1785034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2854777601",
+      "properties": {
+        "@id": "node/2854777601",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "16",
+        "addr:postcode": "02625",
+        "addr:street": "Goschwitzstraße",
+        "amenity": "doctors",
+        "fixme": "Bitte Rollstuhlzugang ergänzen!",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Ruth Venus",
+        "name:hsb": "Ruth Venus, žónska lěkarka",
+        "opening_hours": "Mo 07:30-12:00,14:00-18:00; Tu,Fr 07:30-12:00; We 07:30-13:00; Th 07:30-12:00,14:00-17:00; PH off",
+        "operator": "Ruth Venus",
+        "phone": "+49 3591 5317094",
+        "website": "https://www.frauenaerzte-im-netz.de/aerzte/arzt_2645.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4259405,
+          51.1784569
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2854792441",
+      "properties": {
+        "@id": "node/2854792441",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "37",
+        "addr:postcode": "02625",
+        "addr:street": "Löbauer Straße",
+        "amenity": "doctors",
+        "description:hsb": "Žónski lěkar A. Hauke",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "A. Hauke",
+        "phone": "+49 3591 607950",
+        "wheelchair": "yes",
+        "wheelchair:description": "Voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.446823,
+          51.1800122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2855604401",
+      "properties": {
+        "@id": "node/2855604401",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "21",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal",
+        "name": "Dr. med. Balzer",
+        "operator": "Dr. med. Sabine Balzer",
+        "phone": "+49 3591 31463",
+        "website": "https://web2.cylex.de/firma-home/dr--med--sabine-balzer-2860312.html",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4358662,
+          51.1844785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2855634301",
+      "properties": {
+        "@id": "node/2855634301",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "37",
+        "addr:postcode": "02625",
+        "addr:street": "Schäfferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. Sarfert Frauenarzt",
+        "name:hsb": "Dr. Sarfert žónska lěkarka",
+        "phone": "+49 3591 43055",
+        "website": "https://web2.cylex.de/firma-home/dr--med--brigitte-sarfert-36395.html",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4300156,
+          51.1855263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2883508101",
+      "properties": {
+        "@id": "node/2883508101",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20",
+        "addr:postcode": "02625",
+        "addr:street": "Taucherstraße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "Kieferorthopädische und zahnärztliche Gemeinschaftspraxis",
+        "opening_hours": "Mo-Th 08:00-12:00,14:00-18:00; Fr 08:00-12:00; PH off",
+        "operator": "Dr. med. Ulrike Trenkmann & Dr. med. Lars Trenkmann",
+        "phone": "+49 3591 44097",
+        "website": "https://www.trenkmann.eu",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4353848,
+          51.1784665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3041259147",
+      "properties": {
+        "@id": "node/3041259147",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "surgery",
+        "name": "Dr. med. Gebhardt",
+        "operator": "Dr. med. Ullrich Gebhardt",
+        "phone": "+49 3591 43149",
+        "website": "https://www.op-zentrum-ol.com/",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4294755,
+          51.1832842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3041259438",
+      "properties": {
+        "@id": "node/3041259438",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Am Stadtwall",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "surgery",
+        "name": "Ralf Körner",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.429104,
+          51.1843237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3041259839",
+      "properties": {
+        "@id": "node/3041259839",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "surgery",
+        "name": "Dr. med. R. Jähnig",
+        "operator": "Dr. med. Ralf Jähnig",
+        "phone": "+49 3591 41135",
+        "website": "https://www.sanego.de/Arzt/Sachsen/5662-Bautzen/Allgemeine+Chirurgie/",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4296319,
+          51.1832905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3041259840",
+      "properties": {
+        "@id": "node/3041259840",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "surgery",
+        "name": "Dr. med. S. Jähnig",
+        "operator": "Susanne Jähnig",
+        "phone": "+49 3591 47052",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4293996,
+          51.1831692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3070380133",
+      "properties": {
+        "@id": "node/3070380133",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Hintere Reichenstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. Pavel",
+        "phone": "+49 3591 44089",
+        "website": "https://www.jameda.de/bautzen/aerzte/frauenaerzte-gynaekologen/dr-pavel",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4249117,
+          51.1815593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3070400333",
+      "properties": {
+        "@id": "node/3070400333",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "45",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Zahnarztpraxis Thomas W. Beer",
+        "note": "Praxisübernahme von Zahnärztin Fr. Handrick",
+        "opening_hours": "Mo,Tu 08:00-13:00, 14:00-18:00; We 08:00-13:00,14:00-16:00; Th,Fr 08:00-13:00",
+        "phone": "+49 3591 23164",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4417546,
+          51.1927935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3070411733",
+      "properties": {
+        "@id": "node/3070411733",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "21",
+        "addr:postcode": "02625",
+        "addr:street": "Otto-Nagel-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "C. Schleiffer Stomatologe",
+        "phone": "+49 3591 23075",
+        "website": "https://www.sanego.de/Zahnarzt/Sachsen/5662-Bautzen/Parodontologie/3534...",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.44722,
+          51.1941204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3166274961",
+      "properties": {
+        "@id": "node/3166274961",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Schafbergstraße",
+        "amenity": "pub",
+        "name": "Nadelwitzer Pilspub",
+        "phone": "+49 3591 22537",
+        "website": "http://www.nadelwitzer-pilspub.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4593523,
+          51.1784611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3180353503",
+      "properties": {
+        "@id": "node/3180353503",
+        "amenity": "biergarten",
+        "name": "Leo Gartenlokal",
+        "opening_hours": "Tu-Sa 17:00-23:00+, Su 15:00-23:00+",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise ohne Beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4471202,
+          51.1896679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3180353914",
+      "properties": {
+        "@id": "node/3180353914",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:postcode": "02625",
+        "addr:street": "Muskauer Straße",
+        "amenity": "biergarten",
+        "name": "Gartenlokal Strauch",
+        "nohousenumber": "yes",
+        "note": "ohne Hausnummer",
+        "phone": "+49 3591 530601",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise ohne Beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4409243,
+          51.1856769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3180383861",
+      "properties": {
+        "@id": "node/3180383861",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "32",
+        "addr:postcode": "02625",
+        "addr:street": "Fichtestraße",
+        "amenity": "biergarten",
+        "name": "Gartenlokal \"Land in Sonne\"",
+        "opening_hours": "Mo 16:00+; We-Sa 15:00+; Su,PH 09:30-12:00,11:30-13:30,15:00+",
+        "phone": "+49 3591 2100435",
+        "website": "http://www.landinsonne.de",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise ohne Beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4430003,
+          51.1841099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3180393161",
+      "properties": {
+        "@id": "node/3180393161",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Paulistraße",
+        "amenity": "pub",
+        "name": "Double Inn",
+        "phone": "+49 3591 481376",
+        "sport": "darts;billiards",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise ohne Beh. WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4414956,
+          51.1801516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3223034961",
+      "properties": {
+        "@id": "node/3223034961",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "F. Heiduschke",
+        "operator": "Franziska Heiduschke",
+        "phone": "+49 3591 42311",
+        "website": "https://www.frauenaerzte-im-netz.de/aerzte/bautzen/heiduschke/startseite.html",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4295501,
+          51.1831218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3223041061",
+      "properties": {
+        "@id": "node/3223041061",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "urology",
+        "name": "Dr. med. Hentschel",
+        "operator": "Dr. med. Markus Hentschel",
+        "phone": "+49 3591 47089",
+        "wheelchair": "yes",
+        "wheelchair:description": "voll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4295232,
+          51.1830906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3233988670",
+      "properties": {
+        "@id": "node/3233988670",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Am Stadtwall",
+        "amenity": "clinic",
+        "healthcare": "rehabilitation",
+        "healthcare:speciality": "physiotherapy",
+        "name": "Oberlausitzer Therapiezentrum",
+        "name:hsb": "Hornjołužiski terapijowy centrum",
+        "operator": "OL Physio GmbH",
+        "operator:type": "private",
+        "phone": "+49 3591 2707870",
+        "website": "https://ol-physio.de",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4291326,
+          51.1852049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3233998061",
+      "properties": {
+        "@id": "node/3233998061",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal;general",
+        "name": "Dr. med. Bulang",
+        "operator": "Dr. med. Thomas Bulang",
+        "phone": "+49 3591 275765",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4298044,
+          51.1830201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3234009961",
+      "properties": {
+        "@id": "node/3234009961",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "An den Fleischbänken",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. Zschille & Dr. Flössel",
+        "phone": "+49 3591 42066",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.425486,
+          51.1821929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3234033561",
+      "properties": {
+        "@id": "node/3234033561",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Am Stadtwall",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. med. Haase",
+        "phone": "+49 3591 3632501",
+        "wheelchair": "yes",
+        "wheelchair:description": "Barrierefrei"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4327226,
+          51.1842004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3234626875",
+      "properties": {
+        "@id": "node/3234626875",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "15",
+        "addr:postcode": "02625",
+        "addr:street": "Karl-Marx-Straße",
+        "amenity": "dentist",
+        "email": "praxis@zahn-sperling.de",
+        "fax": "+49 3591 460227",
+        "healthcare": "dentist",
+        "healthcare:speciality": "dentist",
+        "name": "Ludwig Sperling",
+        "opening_hours": "Mo 08:00-15:30; Tu 08:00-16:00; We 08:00-14:00; Th 08:00-17:30",
+        "operator": "Ludwig Sperling",
+        "phone": "+49 3591 42329",
+        "website": "http://zahn-sperling.de/#3",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4284751,
+          51.1785489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3236442661",
+      "properties": {
+        "@id": "node/3236442661",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "26",
+        "addr:postcode": "02625",
+        "addr:street": "Taucherstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "name": "Dr. Med. Püschel",
+        "operator": "Dr. Med. Katja Püschel",
+        "phone": "+49 3591 44040",
+        "wheelchair": "no",
+        "wheelchair:description": "Treppenhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4343732,
+          51.1775352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3237529463",
+      "properties": {
+        "@id": "node/3237529463",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Bertolt-Brecht-Straße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Chr. Stöckel",
+        "phone": "+49 3591 211012",
+        "wheelchair": "no",
+        "wheelchair:description": "keine Barrierefreiheit"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4414183,
+          51.1777473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3274807361",
+      "properties": {
+        "@id": "node/3274807361",
+        "amenity": "cinema",
+        "check_date:opening_hours": "2023-10-04",
+        "name": "Steinhaus-Kino",
+        "name:hsb": "Kino w Kamjentnym domje",
+        "note": "Veranstaltungssaal des Steinhaus e.V., einem soziokulturellen Zentrum. In dem Saal finden u.a. Konzert-, Theater und auch Kinovorstellungen statt. Die Bezeichnung \"Steinhaus-Kino\" ist deshalb irreführend und kann entfernt werden",
+        "opening_hours": "We 20:00-23:00",
+        "wikidata": "Q50843754"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4320425,
+          51.1814387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3274812651",
+      "properties": {
+        "@id": "node/3274812651",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "22",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "brand": "Edeka",
+        "brand:wikidata": "Q701755",
+        "check_date:opening_hours": "2026-07-12",
+        "name": "EDEKA",
+        "opening_hours": "Mo-Sa 07:00-20:00; PH off",
+        "shop": "supermarket",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4280781,
+          51.1802701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4247162291",
+      "properties": {
+        "@id": "node/4247162291",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Niederkainaer Straße",
+        "amenity": "cafe",
+        "brand": "Schwerdtner",
+        "brand:wikidata": "Q111431951",
+        "contact:phone": "+49 3591 2773126",
+        "contact:website": "https://www.baeckerei-schwerdtner.de",
+        "cuisine": "bistro",
+        "email": "kontakt@baeckerei-schwerdtner.de",
+        "name": "Schwerdtner",
+        "opening_hours": "Mo-Sa 07:00-19:00; PH off",
+        "operator": "Bäckerei und Konditorei Schwerdtner GmbH",
+        "shop": "bakery",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4566198,
+          51.1887621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4456657177",
+      "properties": {
+        "@id": "node/4456657177",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "August-Bebel-Platz",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "name": "Dr. med. Ines Schampera",
+        "phone": "+49 3591 211260"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4332888,
+          51.1761828
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4902225381",
+      "properties": {
+        "@id": "node/4902225381",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "An der Petrikirche",
+        "name": "Domschatzkammer Bautzen",
+        "name:hsb": "Tachantska pokładnja Budyšin",
+        "opening_hours": "Mo-Fr 10:00-12:00,13:00-16:00",
+        "operator": "Bistum Dresden-Meißen",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4235192,
+          51.1830873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5071366523",
+      "properties": {
+        "@id": "node/5071366523",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "ice_cream",
+        "name": "Frozen Candy Shop",
+        "opening_hours": "Mo-Fr 13:00-17:00; Sa 11:00-17:00; PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4256807,
+          51.1810641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5405805872",
+      "properties": {
+        "@id": "node/5405805872",
+        "amenity": "marketplace",
+        "name": "Bautzner Trödelmarkt",
+        "name:hsb": "Budyske čaporowe wiki",
+        "website": "https://www.oberlausitzer-troedelmarkt.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.421165,
+          51.1635583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5406117520",
+      "properties": {
+        "@id": "node/5406117520",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Lessingstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "dermatology",
+        "name": "Dr. Ehlers",
+        "phone": "+49 3591 42436",
+        "website": "https://web2.cylex.de/firma-home/dr--med--ulrike-ehlers-43534.html",
+        "wheelchair": "limited",
+        "wheelchair:description": "teilweise mit Hilfe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4339369,
+          51.1780034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6009736888",
+      "properties": {
+        "@id": "node/6009736888",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "24",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "cafe",
+        "email": "evi@evis-deko-cafe.de",
+        "indoor_seating": "yes",
+        "name": "Evis Deko & Café",
+        "opening_hours": "Mo-Sa 09:00-18:00; PH off",
+        "outdoor_seating": "pedestrian_zone",
+        "phone": "+49 3591 5318302",
+        "smoking": "outside",
+        "toilets:wheelchair": "no",
+        "website": "https://evis-deko-cafe.de/",
+        "wheelchair": "yes",
+        "wheelchair:description": "Café und Deko, kleine Gerichte, sehr lecker"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4268836,
+          51.1810585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6617611764",
+      "properties": {
+        "@id": "node/6617611764",
+        "amenity": "bar",
+        "name": "Sundowner Budyšin",
+        "website": "https://sundowner.bar/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4222971,
+          51.1802422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6707915318",
+      "properties": {
+        "@id": "node/6707915318",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housename": "Kornmarktcenter",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "addr:street:hsb": "Žitne wiki",
+        "amenity": "cafe",
+        "brand": "Schwerdtner",
+        "brand:wikidata": "Q111431951",
+        "cuisine": "bistro",
+        "level": "0",
+        "name": "Schwerdtner",
+        "opening_hours": "Mo-Fr 08:00-19:00, Sa 08:00-18:00; PH off",
+        "operator": "Bäckerei und Konditorei Schwerdtner GmbH",
+        "phone": "+49 3591 2777976",
+        "shop": "bakery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4258681,
+          51.1800032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6707915319",
+      "properties": {
+        "@id": "node/6707915319",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housename": "Kornmarktcenter",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "addr:street:hsb": "Žitne wiki",
+        "amenity": "cafe",
+        "level": "1",
+        "name": "Reimann",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4252156,
+          51.1800222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6707983298",
+      "properties": {
+        "@id": "node/6707983298",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Alte Dresdener Straße",
+        "amenity": "cafe",
+        "cuisine": "bistro",
+        "email": "kontakt@baeckerei-schwerdtner.de",
+        "name": "Schwerdtners Café",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-18:00; PH off",
+        "operator": "Bäckerei und Konditorei Schwerdtner GmbH",
+        "phone": "+49 3591 351771",
+        "shop": "bakery",
+        "website": "https://www.baeckerei-schwerdtner.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3966082,
+          51.1787641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6723636177",
+      "properties": {
+        "@id": "node/6723636177",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housename": "Kornmarktcenter",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "addr:street:hsb": "Žitne wiki",
+        "amenity": "cafe",
+        "cuisine": "ice_cream",
+        "level": "1",
+        "name": "Eiscafé Italia",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4267587,
+          51.1798836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6723651798",
+      "properties": {
+        "@id": "node/6723651798",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housename": "Kornmarktcenter",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "addr:street:hsb": "Žitne wiki",
+        "amenity": "ice_cream",
+        "cuisine": "ice_cream",
+        "level": "0",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4244426,
+          51.1798348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6723651817",
+      "properties": {
+        "@id": "node/6723651817",
+        "addr:city": "Bautzen",
+        "addr:city:hsb": "Budyšin",
+        "addr:country": "DE",
+        "addr:housename": "Kornmarktcenter",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Kornmarkt",
+        "addr:street:hsb": "Žitne wiki",
+        "amenity": "pharmacy",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Pluspunkt Apotheke"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4266863,
+          51.1799971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6726809090",
+      "properties": {
+        "@id": "node/6726809090",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "22",
+        "addr:postcode": "02625",
+        "addr:street": "Dresdener Straße",
+        "amenity": "dancing_school",
+        "check_date": "2025-11-11",
+        "dance:teaching": "yes",
+        "education": "dancing_school",
+        "email": "info@tanzschule-pohle.de",
+        "mobile": "+49 1512 0591874",
+        "name": "ADTV Tanzschule Pohle",
+        "operator": "Rita Pohle",
+        "phone": "+49 3591 302325",
+        "website": "https://www.tanzschule-pohle.de/index.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4145668,
+          51.1794186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6764239070",
+      "properties": {
+        "@id": "node/6764239070",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "38",
+        "addr:postcode": "02625",
+        "addr:street": "Äußere Lauenstraße",
+        "amenity": "cafe",
+        "description": "Nähcafé mit Futter",
+        "name": "Nähcafé Lotte",
+        "opening_hours": "Tu \"Nähkurstag (nach Vereinbarung)\"; Th 09:00-17:00; We,Fr 09:00-18:00; Sa 09:30-13:00",
+        "phone": "+49 3591 5979675",
+        "website": "http://ww.naehcafe-lotte.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4233204,
+          51.1784286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6970024848",
+      "properties": {
+        "@id": "node/6970024848",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "6",
+        "addr:postcode": "02625",
+        "addr:street": "Käthe-Kollwitz-Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Zahnarztpraxis Dr. Grita & Thomas Beer",
+        "opening_hours": "Mo-Th 08:00-13:00,14:00-18:00; Fr 08:00-13:00",
+        "operator": "Dr. Grita & Thomas Beer",
+        "phone": "+49 3591 600225",
+        "website": "https://www.zahnarztpraxisbeer.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4372554,
+          51.1721088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6974020103",
+      "properties": {
+        "@id": "node/6974020103",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "11",
+        "addr:postcode": "02625",
+        "addr:street": "Kreckwitzer Straße",
+        "amenity": "school",
+        "email": "bautzen@faw.de",
+        "long_name": "Fortbildungsakadamie der Wirtschaft (FAW) gGmbH",
+        "name": "FAW Akademie Bautzen",
+        "official_name": "Fortbildungsakademie der Wirtschaft (FAW)  gemeinnützige Gesellschaft mbH Akademie Bautzen",
+        "operator": "Fortbildungsakademie der Wirtschaft (FAW)  gemeinnützige Gesellschaft mbH Köln",
+        "operator:type": "private_non_profit",
+        "phone": "+49 3591 617960",
+        "short_name": "FAW",
+        "website": "https://www.faw.de/standorte/bautzen/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4588385,
+          51.1904343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7007480417",
+      "properties": {
+        "@id": "node/7007480417",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Niederkainaer Straße",
+        "brand": "Apollo-Optik",
+        "brand:wikidata": "Q618940",
+        "check_date:opening_hours": "2021-02-26",
+        "contact:email": "onlinekundenservice@apollo.de",
+        "contact:facebook": "https://www.facebook.com/ApolloOptik",
+        "contact:instagram": "https://www.instagram.com/apollo.optik",
+        "contact:phone": "+49 3591 211028",
+        "contact:website": "https://filialen.apollo.de/sachsen/bautzen/niederkainaer-str--14.html",
+        "healthcare": "optometrist",
+        "name": "Apollo-Optik Bautzen",
+        "opening_hours": "Mo-Fr 09:00-19:00; Sa 09:00-18:00; Su,PH off",
+        "operator": "Apollo-Optik Holding GmbH & Co. KG",
+        "shop": "optician",
+        "short_name": "Apollo",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4564309,
+          51.1885315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7035939403",
+      "properties": {
+        "@id": "node/7035939403",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "9",
+        "addr:postcode": "02625",
+        "addr:street": "Steinstraße",
+        "amenity": "pub",
+        "email": "kontakt@billardgarage.de",
+        "name": "Billardgarage Bautzen",
+        "opening_hours": "Mo-Su 12:00+",
+        "phone": "+493591600250",
+        "sport": "billards;darts;9pin",
+        "website": "https://www.billardgarage.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.428946,
+          51.1814557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7137257735",
+      "properties": {
+        "@id": "node/7137257735",
+        "amenity": "cafe",
+        "brand": "Dreißig",
+        "brand:wikidata": "Q1018923",
+        "level": "0",
+        "name": "Dreißig",
+        "opening_hours": "Mo-Th 06:00-17:00; Fr 06:00-15:00; Sa,Su 07:00-13:00",
+        "outdoor_seating": "yes",
+        "shop": "bakery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4292056,
+          51.1733592
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7554536964",
+      "properties": {
+        "@id": "node/7554536964",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "20",
+        "addr:postcode": "02625",
+        "addr:street": "Karl-Liebknecht-Straße",
+        "amenity": "ice_cream",
+        "name": "Eisgarten",
+        "opening_hours": "Th-Su 14:00-18:00",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.434979,
+          51.1739313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7601975434",
+      "properties": {
+        "@id": "node/7601975434",
+        "amenity": "cafe",
+        "name": "Betty's Nasch-Kaffee"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.439402,
+          51.1805895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9674212720",
+      "properties": {
+        "@id": "node/9674212720",
+        "check_date": "2026-08-07",
+        "check_date:opening_hours": "2026-08-07",
+        "healthcare": "physiotherapist",
+        "name": "Physiotherapie Gesundbrunnen",
+        "opening_hours": "Mo-Th 08:00-12:00,13:00-18:00; Fr 08:00-16:00",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4461983,
+          51.190438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9923905391",
+      "properties": {
+        "@id": "node/9923905391",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Niederkainaer Straße",
+        "amenity": "pharmacy",
+        "contact:email": "apotheke.marktkauf@web.de",
+        "contact:fax": "+49 3591 676763",
+        "contact:phone": "+49 3591 676767",
+        "contact:website": "https://www.marktkauf-apotheke-bautzen.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke im Martkauf",
+        "opening_hours": "Mo-Fr 08:00-19:30; Sa 08:00-16:00; Su,PH off",
+        "operator": "Marie Zimmermann",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4564153,
+          51.1883983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9942024317",
+      "properties": {
+        "@id": "node/9942024317",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "9",
+        "addr:postcode": "02625",
+        "addr:street": "An der Petrikirche",
+        "amenity": "bar",
+        "name": "JC Moosmutzel Weinbar",
+        "opening_hours": "Th-Fr 17:00-22:00",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4242608,
+          51.1826263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10095334043",
+      "properties": {
+        "@id": "node/10095334043",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "30a",
+        "addr:postcode": "02625",
+        "addr:street": "Stieberstraße",
+        "check_date": "2024-12-27",
+        "health_facility:type": "office",
+        "health_specialty:speech_therapist": "yes",
+        "healthcare": "speech_therapist",
+        "healthcare:speciality": "speech_therapy",
+        "medical_system:western": "yes",
+        "name": "Praxis Wanda Wocko",
+        "office": "therapist",
+        "operator": "Wanda Wocko",
+        "phone": "+49 3591 274443",
+        "website": "https://www.praxis-wocko.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4386557,
+          51.1747231
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10114306738",
+      "properties": {
+        "@id": "node/10114306738",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "amenity": "cafe",
+        "name": "Cafe Coffee Time Kaffeerösterei",
+        "opening_hours": "Mo-Fr 12:00-17:00; Sa 11:00-18:00; PH,Su 13:00-18:00",
+        "outdoor_seating": "yes",
+        "phone": "+49 3591 5327012",
+        "source": "survey"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4245358,
+          51.1811146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11576125672",
+      "properties": {
+        "@id": "node/11576125672",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "4",
+        "addr:postcode": "02625",
+        "addr:street": "Reichenstraße",
+        "alt_name": "The Woodroom by Laura",
+        "amenity": "cafe",
+        "contact:instagram": "thewoodroom2026",
+        "contact:phone": "+49 3591 3815890",
+        "contact:whatsapp": "+49 3591 3815890",
+        "cuisine": "bistro;breakfast;salad",
+        "delivery": "no",
+        "indoor_seating": "yes",
+        "name": "The Woodroom",
+        "opening_hours": "Mo-Fr 08:30-14:30; PH off",
+        "operator": "Laura Strykowski",
+        "short_name": "Woodroom",
+        "start_date": "2026-10-03",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4248179,
+          51.1810846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11939085215",
+      "properties": {
+        "@id": "node/11939085215",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "49",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Salvador-Allende-Straße",
+        "amenity": "ice_cream",
+        "indoor_seating": "yes",
+        "name": "Eiscafe Valentini",
+        "opening_hours": "Mo-Fr 09:00-18:00, Sa-Su 11:00-18:00",
+        "outdoor_seating": "yes",
+        "website": "https://www.instagram.com/eiscafevalentini/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4537176,
+          51.1752538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12071755152",
+      "properties": {
+        "@id": "node/12071755152",
+        "amenity": "ice_cream",
+        "name": "Eismanufaktur"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.427482,
+          51.1810983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12104118264",
+      "properties": {
+        "@id": "node/12104118264",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "17",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 3591 6770018",
+        "email": "kontakt@hausarztpraxis-klemm.de",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal",
+        "name": "Hausarztpraxis Klemm",
+        "operator": "Tobias Klemm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4295193,
+          51.1830447
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12563220953",
+      "properties": {
+        "@id": "node/12563220953",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "53",
+        "addr:postcode": "02625",
+        "addr:street": "Töpferstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "urology;acupuncture",
+        "name": "Dr. Katarina von Dorp",
+        "operator": "Dr. Katarina von Dorp",
+        "phone": "+49 3591 328833",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4328135,
+          51.182186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12694644652",
+      "properties": {
+        "@id": "node/12694644652",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Clara-Zetkin-Straße",
+        "amenity": "pharmacy",
+        "contact:email": "info@apothekebautzen.de",
+        "contact:facebook": "https://www.facebook.com/Apothekebautzen",
+        "contact:fax": "+49 3591 303235",
+        "contact:phone": "+49 3591 303234",
+        "contact:twitter": "https://twitter.com/apothekebautzen",
+        "contact:website": "https://www.apothekebautzen.de",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Apotheke zur Brücke",
+        "name:hsb": "Lěkarnja při mosće",
+        "opening_hours": "Mo-Fr 08:00-18:30,Sa 08:00-12:00; Su,PH off",
+        "operator": "Stefan Gänsler",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4177152,
+          51.1792508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12777856816",
+      "properties": {
+        "@id": "node/12777856816",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Bauerngasse",
+        "health_facility:type": "office",
+        "health_specialty:physiotherapy": "yes",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "medical_system:western": "yes",
+        "name": "Physiotherapie Dornick",
+        "office": "therapist",
+        "phone": "+49 3591 530814"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4240548,
+          51.1783566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12790353926",
+      "properties": {
+        "@id": "node/12790353926",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Friedrich-List-Straße - Friedricha Listowa dróha",
+        "healthcare": "speech_therapist",
+        "name": "Marie Berthold & Linda Biehl - Praxisgemeinschaft für Logopädie",
+        "website": "https://www.logopaeden-bautzen.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4375012,
+          51.1853802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12795796566",
+      "properties": {
+        "@id": "node/12795796566",
+        "amenity": "cafe",
+        "brand": "Coffee Fellows",
+        "brand:wikidata": "Q23461429",
+        "cuisine": "coffee_shop",
+        "name": "Coffee Fellows",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3322253,
+          51.1996433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12795796567",
+      "properties": {
+        "@id": "node/12795796567",
+        "amenity": "cafe",
+        "brand": "Coffee Fellows",
+        "brand:wikidata": "Q23461429",
+        "cuisine": "coffee_shop",
+        "indoor_seating": "yes",
+        "name": "Coffee Fellows",
+        "outdoor_seating": "yes",
+        "takeaway": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3288167,
+          51.1984267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13171220860",
+      "properties": {
+        "@id": "node/13171220860",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Wendischer Kirchhof",
+        "amenity": "cafe",
+        "name": "Alte Wasserkunst",
+        "opening_hours": "Sa-Th,PH 10:00-16:00; Fr off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4207241,
+          51.1806476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13291066961",
+      "properties": {
+        "@id": "node/13291066961",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "32",
+        "addr:postcode": "02625",
+        "addr:street": "Wilthener Straße",
+        "amenity": "school",
+        "education": "school",
+        "email": "ostsachsen@asg-sachsen.de",
+        "fax": "+49 3591 358697",
+        "name": "Anerkannte Schulgesellschaft",
+        "operator": "Anerkannte Schulgesellschaft mbH",
+        "operator:short": "ASG",
+        "phone": "+49 3591 358696",
+        "school": "vocational",
+        "website": "https://asg-bildungszentrum-dresden.de/standorte/bautzen"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4205343,
+          51.1688029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13294109336",
+      "properties": {
+        "@id": "node/13294109336",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "32",
+        "addr:postcode": "02625",
+        "addr:street": "Wilthener Straße",
+        "amenity": "school",
+        "branch": "Standort Bautzen",
+        "education": "school",
+        "email": "rib-bz@bfw-dresden.de",
+        "fax": "+49 3591 530376",
+        "name": "Berufsförderungswerk Dresden",
+        "phone": "+49 3591 530368",
+        "school": "vocational",
+        "website": "https://www.bfw-dresden.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4201397,
+          51.1681581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13460372569",
+      "properties": {
+        "@id": "node/13460372569",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "14",
+        "addr:postcode": "02625",
+        "addr:street": "Weigangstraße",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Dr. med. Conrad Hoffmann",
+        "operator": "Dr. med. Conrad Hoffmann"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4390196,
+          51.1775033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13485211281",
+      "properties": {
+        "@id": "node/13485211281",
+        "email": "logopaedie.bautzen@gmx.de",
+        "healthcare": "speech_therapist",
+        "healthcare:speciality": "speech_therapy",
+        "name": "Praxis für Logopädie Ornella Hädrich",
+        "opening_hours": "Mo-Fr 07:30-14:00",
+        "operator": "Ornella Hädrich",
+        "phone": "+49 176 37684922",
+        "website": "https://logopädie-bautzen.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4601041,
+          51.1794607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13850271346",
+      "properties": {
+        "@id": "node/13850271346",
+        "healthcare": "physiotherapist",
+        "name": "ProVital Ergo- & Physiotherapie",
+        "phone": "+49 3591 2777381",
+        "website": "https://www.provital-bautzen.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.452661,
+          51.1750142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13909223560",
+      "properties": {
+        "@id": "node/13909223560",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "3",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Peter-Jordan-Straße - dr. Pětra Jordanowa",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Nadja Kanngießer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.430779,
+          51.1731461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14070396324",
+      "properties": {
+        "@id": "node/14070396324",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "45",
+        "addr:postcode": "02625",
+        "addr:street": "Gesundbrunnenring - Wobkruh Strowotneje studnje",
+        "amenity": "doctors",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Dr. Ida Manak"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4420582,
+          51.1928479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14196406908",
+      "properties": {
+        "@id": "node/14196406908",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "21",
+        "addr:postcode": "02625",
+        "addr:street": "Am Strehlaer Wasser",
+        "addr:suburb": "Oberkaina",
+        "amenity": "doctors",
+        "contact:fax": "+49 3591 531261",
+        "contact:phone": "+49 3591 43055",
+        "email": "kontakt@frauenarztpraxis-urban.de",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Frauenarztpraxis Dr. med. Helen Urban",
+        "operator": "Dr. med. Helen Urban",
+        "website": "https://www.frauenarztpraxis-urban.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4335479,
+          51.1560401
+        ]
+      }
+    }
+  ]
+}

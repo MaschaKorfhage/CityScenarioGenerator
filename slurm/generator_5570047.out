@@ -1,0 +1,4 @@
+usage: main.py [-h] [-o OUTPUT] [-l LPG] [-n NUTS] [-c CITY] [-p POSTCODE]
+               [-s STREET] [-r] [--pharmacy-source {city,custom}]
+main.py: error: unrecognized arguments: 
+srun: error: n23m0034: task 0: Exited with exit code 2

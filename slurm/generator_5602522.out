@@ -1,0 +1,32 @@
+2026-11-10 12:33:02 INFO     Applying no custom adaptations
+2026-11-10 12:33:02 INFO     Using RNG seed 0
+2026-11-10 12:33:02 INFO     Using numpy RNG seed 3626764237
+2026-11-10 12:33:03 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-10 12:33:21 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-10 12:33:22 INFO     Collected 173 POIs from 1 dataframes.
+2026-11-10 12:33:22 INFO     Matched 145 of 173 OSM nodes to BUILDA buildings. Max distance: 30 m.
+2026-11-10 12:33:22 INFO     Identical location types (5): [('Museum -> Museum', 2), ('Opera, Theater -> Theater', 1), ('Doctors Office -> Doctors Office', 1), ('Bar Location -> Bar Location', 1)]
+2026-11-10 12:33:22 INFO     Added location types (130): [(' -> Doctors Office', 81), (' -> Cafe', 20), (' -> Bar Location', 16), (' -> Pharmacy', 6), (' -> Supermarket', 3), (' -> School', 3), (' -> Dance Studio', 1)]
+2026-11-10 12:33:22 INFO     Changed location types (10): [('Pharmacy -> Doctors Office', 4), ('Generic Errand Location -> Shopping Mall', 1), ('Doctors Office -> Supermarket', 1), ('Pharmacy -> Cafe', 1), ('Dance Club -> Cinema Location', 1), ('Shopping Mall -> Cafe', 1), ('Museum -> Cafe', 1)]
+2026-11-10 12:33:22 INFO     Matched 75 POIs to residential buildings.
+2026-11-10 12:33:22 INFO     Created 83 new non-residential building objects from residential buildings.
+2026-11-10 12:33:22 INFO     Created in total 20 copies of building objects.
+2026-11-10 12:33:22 INFO     Created 28 new non-residential buildings for unmatched POIs.
+2026-11-10 12:33:23 INFO     Custom POIs loaded from scenario_inputs/02625/custom_pois.json: 20 total, 0 pharmacies: []
+2026-11-10 12:33:23 INFO     Loaded 20 custom POIs
+2026-11-10 12:33:23 INFO     Pharmacy POIs after loading customs (10): ['Pharmacy DED_DESNATP1Jx0001rx-6977', 'Pharmacy DED_DESNATPU1000BRGY-756', 'Pharmacy DED_DESNATPU1000CoyG-8928', 'Pharmacy DED_DESNATPU1000FYQk-11952', 'Pharmacy DED_DESNATPU1000ErF6-2825_nonres', 'Pharmacy DED_DESNATPU1000BEsm-465_nonres', 'Pharmacy Generated_node1004513331', 'Pharmacy Generated_node1012406755', 'Pharmacy Generated_node6723651817', 'Pharmacy Generated_node9923905391']
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 189, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 178, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 80, in create_city_scenario
+    create_configs_from_buildings(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/create_lpg_configs.py", line 98, in create_configs_from_buildings
+    config_creator.create_poi_preferences(generate_test_routes)
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 448, in create_poi_preferences
+    self.check_location_availability()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 375, in check_location_availability
+    raise Exception(
+Exception: The following 22 locations are not covered by any POI: {'Local Recreational Area', 'Bicycle Route', 'Flea Market Location', 'Singing School', 'Fishing Location', 'Concert House', 'Car Wash', 'Bow Range', 'Hiking Location', 'Golf Club', 'Horse Stable', 'Running Path', 'Hunting Forest', 'Fitness Studio', 'Yoga Studio', 'Outdoor Swimming Pool', 'Walking Location', 'Musical Society', 'Festival Location', 'Community College', 'Soccer Practice Location', 'Mountain Road'}
+srun: error: n23m0002: task 0: Exited with exit code 1

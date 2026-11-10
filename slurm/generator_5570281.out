@@ -1,0 +1,7 @@
+2026-11-09 14:13:02 INFO     Applying no custom adaptations
+2026-11-09 14:13:02 INFO     Using RNG seed 0
+2026-11-09 14:13:02 INFO     Using numpy RNG seed 3626764237
+2026-11-09 14:13:03 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-11-09T14:13:11.089] error: *** STEP 5570281.0 ON n23m0067 CANCELLED AT 2026-11-09T14:13:11 DUE to SIGNAL Terminated ***
+[2026-11-09T14:13:11.090] error: *** JOB 5570281 ON n23m0067 CANCELLED AT 2026-11-09T14:13:11 DUE to SIGNAL Terminated ***

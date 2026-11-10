@@ -58,5 +58,5 @@ def generate_query(city: str) -> str:
 
 
 if __name__ == "__main__":
-    query = generate_query("Aachen")
+    query = generate_query("Bautzen")
     print(query)

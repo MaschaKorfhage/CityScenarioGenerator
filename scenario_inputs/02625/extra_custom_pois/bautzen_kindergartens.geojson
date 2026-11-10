@@ -1,0 +1,659 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-10T10:53:34Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/49916448",
+      "properties": {
+        "@id": "way/49916448",
+        "amenity": "kindergarten",
+        "brand": "Deutsches Rotes Kreuz",
+        "brand:short": "DRK",
+        "brand:wikidata": "Q694104",
+        "name": "DRK-Kindertagesstätte \"Findikus\"",
+        "name:hsb": "Pěstowarnja \"Findikus\"",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4470813,
+          51.1939963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/58662708",
+      "properties": {
+        "@id": "way/58662708",
+        "building": "kindergarten",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4541907,
+          51.1741567
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/59645497",
+      "properties": {
+        "@id": "way/59645497",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "02625",
+        "addr:street": "Seminarstraße",
+        "building": "kindergarten",
+        "description": "Evangelischer Kindergarten",
+        "description:hsb": "Ewangelska pěstowarnja",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4264072,
+          51.1778439
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/77032860",
+      "properties": {
+        "@id": "way/77032860",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "02625",
+        "addr:street": "Daimlerstraße",
+        "building": "kindergarten",
+        "source": "Luftbilder http://wiki.openstreetmap.org/wiki/User:MartinDornfelder",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4110951,
+          51.1772299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/104001496",
+      "properties": {
+        "@id": "way/104001496",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "21",
+        "addr:postcode": "02625",
+        "addr:street": "Otto-Nagel-Straße",
+        "amenity": "kindergarten",
+        "brand": "Deutsches Rotes Kreuz",
+        "brand:short": "DRK",
+        "brand:wikidata": "Q694104",
+        "building": "yes",
+        "name": "DRK-Kindertagesstätte \"Findikus\"",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4472407,
+          51.1940318
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/104503334",
+      "properties": {
+        "@id": "way/104503334",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "1a",
+        "addr:postcode": "02625",
+        "addr:street": "Albert-Schweitzer-Straße",
+        "amenity": "kindergarten",
+        "building": "kindergarten",
+        "check_date": "2024-07-16",
+        "name": "Kindertagesstätte Löwenzahn",
+        "name:hsb": "Pěstowarnja \"Löwenzahn\"",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4165053,
+          51.1773486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/104676837",
+      "properties": {
+        "@id": "way/104676837",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Tzschirnerstraße",
+        "building": "kindergarten",
+        "building:levels": "1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4273185,
+          51.1752146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/104729185",
+      "properties": {
+        "@id": "way/104729185",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "02625",
+        "addr:street": "Weigangstraße",
+        "amenity": "childcare",
+        "building": "yes",
+        "name": "Kinderkrippe Weigangstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4350935,
+          51.1793481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/104888329",
+      "properties": {
+        "@id": "way/104888329",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "81",
+        "addr:postcode": "02625",
+        "addr:street": "Löbauer Straße",
+        "building": "kindergarten",
+        "building:levels": "1",
+        "name": "Kita Klettermaxe",
+        "operator": "BBZ Bautzen e.V.",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4586607,
+          51.1783483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117161236",
+      "properties": {
+        "@id": "way/117161236",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "80",
+        "addr:postcode": "02625",
+        "addr:street": "Preuschwitzer Straße",
+        "amenity": "kindergarten",
+        "capacity": "92",
+        "check_date": "2026-07-13",
+        "email": "kitaspreewichtel@bautzen.de",
+        "name": "Kita „Spreewichtel“",
+        "name:hsb": "Pěstowarnja „Sprjewine palčiki“",
+        "operator": "Stadt Bautzen",
+        "operator:type": "public",
+        "phone": "+49 3591 5347130",
+        "preschool": "yes",
+        "short_name": "Benjamin Blümchen",
+        "website": "https://www.bautzen.de/kitaspreewichtel",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.41726,
+          51.1675824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/117175975",
+      "properties": {
+        "@id": "way/117175975",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "63",
+        "addr:postcode": "02625",
+        "addr:street": "Paulistraße",
+        "building": "kindergarten",
+        "building:levels": "2",
+        "disused": "yes",
+        "roof:levels": "1",
+        "source": "bing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.433402,
+          51.1720888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146717453",
+      "properties": {
+        "@id": "way/146717453",
+        "amenity": "kindergarten",
+        "name": "Oberlausitzer Lebens- und Familienhilfe",
+        "operator": "Verein",
+        "website": "https://www.lebenshilfebautzen.de/",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4108478,
+          51.1772933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146723200",
+      "properties": {
+        "@id": "way/146723200",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "63",
+        "addr:postcode": "02625",
+        "addr:street": "Frederic-Joliot-Curie-Straße",
+        "amenity": "kindergarten",
+        "loc_name": "Kita Knirpsenland",
+        "name": "Kindertagesstätte Knirpsenland",
+        "nursery": "yes",
+        "opening_hours": "Mo-Fr 06:00-17:00",
+        "operator": "Arbeiterwohlfahrt Kreisverband Bautzen e.V",
+        "phone": "+49 3591 22184",
+        "short_name": "Knirpsenland",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4438936,
+          51.1889711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146723208",
+      "properties": {
+        "@id": "way/146723208",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "63",
+        "addr:postcode": "02625",
+        "addr:street": "Frederic-Joliot-Curie-Straße - Frédérica Joliot Curiejowa",
+        "amenity": "kindergarten",
+        "brand": "Arbeiterwohlfahrt",
+        "brand:short": "AWO",
+        "brand:wikidata": "Q627256",
+        "building": "yes",
+        "email": "knirpsenland@awo-bautzen.de",
+        "name": "Knirpsenland",
+        "operator": "AWO",
+        "operator:type": "charitable",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4440745,
+          51.1891802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146727024",
+      "properties": {
+        "@id": "way/146727024",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "76",
+        "addr:postcode": "02625",
+        "addr:street": "Hanns-Eisler-Straße",
+        "amenity": "kindergarten",
+        "email": "kitakneipp@bautzen.de",
+        "name": "Kindertageseinrichtung Sebastian Kneipp",
+        "name:hsb": "Pěstowarnja \"Sebastian Kneipp\"",
+        "official_name": "Kindertageseinrichtung Sebastian Kneipp®",
+        "operator": "Stadtverwaltung Bautzen, Amt für Bildung und Soziales",
+        "phone": "+49 3591 5347110",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4542023,
+          51.1742733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146779275",
+      "properties": {
+        "@id": "way/146779275",
+        "building": "kindergarten",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4379541,
+          51.1689658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/146779283",
+      "properties": {
+        "@id": "way/146779283",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "50",
+        "addr:postcode": "02625",
+        "addr:street": "Dr.-Peter-Jordan-Straße",
+        "amenity": "kindergarten",
+        "contact:phone": "+49 3591 675415",
+        "contact:website": "https://www.bbz-bautzen.de/kitas/naturkita",
+        "name": "Naturkindergarten",
+        "name:hsb": "Swobodna pěstowarnja na Jordanowej",
+        "operator": "BBZ Bautzen e.V.",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4378108,
+          51.1689052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/543094517",
+      "properties": {
+        "@id": "way/543094517",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "02625",
+        "addr:street": "Obere Straße",
+        "amenity": "childcare",
+        "building": "kindergarten",
+        "name": "Kindergarten St. Michael Auritz",
+        "name:hsb": "Pěstowarnja Swj. Michał Wuricy",
+        "operator": "Evangelischer Schulverein im Landkreis Bautzen e.V.",
+        "operator:type": "religious",
+        "phone": "+49 3591 22655",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4677465,
+          51.1722176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/563276134",
+      "properties": {
+        "@id": "way/563276134",
+        "amenity": "childcare",
+        "building": "yes",
+        "building:levels": "2",
+        "building:roof": "flat",
+        "name": "Hort",
+        "operator": "Stadt Bautzen",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4148929,
+          51.18553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1189606711",
+      "properties": {
+        "@id": "way/1189606711",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "02625",
+        "addr:street": "Tzschirnerstraße",
+        "amenity": "kindergarten",
+        "brand": "Arbeiterwohlfahrt",
+        "brand:wikidata": "Q627256",
+        "capacity": "61",
+        "contact:fax": "+49 3591 44101",
+        "contact:phone": "+49 3591 44101",
+        "email": "bimmelbahn@awo-bautzen.de",
+        "lunch": "yes",
+        "name": "Bimmelbahn",
+        "name:hsb": "Pěstowarnja \"Bimmelbahn\"",
+        "opening_hours": "Mo-Th 06:00-17:00, Fr 06:00-16:30; PH off",
+        "operator": "Arbeiterwohlfahrt",
+        "operator:type": "association",
+        "website": "https://www.awo-bautzen.de/kindertagesstaetten/kita-bimmelbahn-bautzen/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4275532,
+          51.1751385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1189616317",
+      "properties": {
+        "@id": "way/1189616317",
+        "addr:city": "Bautzen",
+        "addr:housenumber": "5",
+        "addr:postcode": "02625",
+        "addr:street": "Tzschirnerstraße - Tzschirnerowa",
+        "amenity": "kindergarten",
+        "name": "Katholisches Kinderhaus",
+        "name:hsb": "Katolski dźěćacy dom",
+        "operator": "Dompfarrei St. Petri",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.425947,
+          51.1755206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1413107961",
+      "properties": {
+        "@id": "way/1413107961",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "15b",
+        "addr:postcode": "02625",
+        "addr:street": "Flinzstraße",
+        "amenity": "kindergarten",
+        "brand": "Volkssolidarität",
+        "brand:wikidata": "Q2532186",
+        "description": "Kita \"Glückskäfer\"",
+        "description:hsb": "Pěstowarnja \"Bručk zboža\"",
+        "education": "kindergarten",
+        "isced:level": "0",
+        "landuse": "education",
+        "name": "Glückskäfer",
+        "name:hsb": "Bručk zboža",
+        "operator": "Volkssolidarität",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4331481,
+          51.1868751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1413832740",
+      "properties": {
+        "@id": "way/1413832740",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "02625",
+        "addr:street": "Seminarstraße",
+        "amenity": "kindergarten",
+        "contact:fax": "+49 3591 3186698",
+        "contact:phone": "+49 3591 47383",
+        "denomination": "protestant",
+        "description": "Evangelischer Kindergarten St. Petri",
+        "education": "kindergarten",
+        "email": "kindergarten@st-petri-bautzen.de",
+        "lunch": "yes",
+        "name": "Sankt Petri",
+        "operator": "Evangelisch Lutherische Landeskirche Sachsen",
+        "operator:type": "religious",
+        "religion": "christian",
+        "short_name": "St. Petri",
+        "website": "https://www.st-petri-bautzen.de/evangelischer-kindergarten",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4264147,
+          51.1778058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1426881765",
+      "properties": {
+        "@id": "way/1426881765",
+        "addr:city": "Bautzen",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "02625",
+        "addr:street": "Friedrich-Engels-Platz",
+        "amenity": "kindergarten",
+        "description": "Sorbischer Kindergarten",
+        "description:hsb": "Serbska pěstowarnja",
+        "name": "Jan Radyserb-Wjela",
+        "name:hsb": "Jan Radyserb-Wjela",
+        "preschool": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4354237,
+          51.1766344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7594852275",
+      "properties": {
+        "@id": "node/7594852275",
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Auritz Kindergarten",
+        "name:hsb": "Wuricy pěstowarnja",
+        "network": "ZVON",
+        "network:wikidata": "Q2516483",
+        "network:wikipedia": "de:Verkehrsverbund Oberlausitz-Niederschlesien",
+        "public_transport": "platform",
+        "ref:IFOPT": "de:14625:7934",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.467568,
+          51.1722606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8856332104",
+      "properties": {
+        "@id": "node/8856332104",
+        "bench": "no",
+        "bus": "yes",
+        "departures_board": "timetable",
+        "highway": "bus_stop",
+        "name": "Auritz Kindergarten",
+        "name:hsb": "Wuricy pěstowarnja",
+        "network": "ZVON",
+        "network:wikidata": "Q2516483",
+        "network:wikipedia": "de:Verkehrsverbund Oberlausitz-Niederschlesien",
+        "public_transport": "platform",
+        "ref:IFOPT": "de:14625:7934",
+        "shelter": "no",
+        "tactile_paving": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4674756,
+          51.1725198
+        ]
+      }
+    }
+  ]
+}

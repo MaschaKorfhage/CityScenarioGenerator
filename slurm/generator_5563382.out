@@ -1,0 +1,9 @@
+2026-11-09 09:21:29 WARNING  Scenario input directory not found: scenario_inputs/bautzen
+2026-11-09 09:21:29 WARNING  No valid scenario input data for query 'bautzen' found. Using dummy data.
+2026-11-09 09:21:29 INFO     Applying no custom adaptations
+2026-11-09 09:21:29 INFO     Using RNG seed 0
+2026-11-09 09:21:29 INFO     Using numpy RNG seed 3626764237
+2026-11-09 09:21:29 INFO     Sending query to ETHOS.BUILDA: {'city': 'Bautzen'}
+srun: Job step aborted: Waiting up to 92 seconds for job step to finish.
+[2026-11-09T09:22:14.150] error: *** STEP 5563382.0 ON n23m0029 CANCELLED AT 2026-11-09T09:22:14 DUE to SIGNAL Terminated ***
+[2026-11-09T09:22:14.150] error: *** JOB 5563382 ON n23m0029 CANCELLED AT 2026-11-09T09:22:14 DUE to SIGNAL Terminated ***

@@ -1,0 +1,3641 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-09T09:22:06Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/304330504",
+      "properties": {
+        "@id": "node/304330504",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "38",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "amenity": "cinema",
+        "contact:phone": "+49 4471 2000",
+        "contact:website": "https://www.cinecenter.de/",
+        "email": "info@cinecenter.de",
+        "name": "CineCenter Cloppenburg",
+        "operator": "Cinecenter Cloppenburg GmbH & Co. KG",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0456543,
+          52.8486111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/405929151",
+      "properties": {
+        "@id": "node/405929151",
+        "addr:city": "Cloppenburg",
+        "addr:place": "Bührener Tannen",
+        "addr:postcode": "49661",
+        "amenity": "kindergarten",
+        "contact:email": "waldkindergarten.cloppenburg@gmx.de",
+        "contact:website": "https://www.cloppenburg.de/info/poi/waldkindergarten-900000010-31040.html",
+        "name": "Waldkindergarten",
+        "opening_hours": "Mo-Fr 08:30-12:30",
+        "operator": "Stadt Cloppenburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0287983,
+          52.8770856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/626604167",
+      "properties": {
+        "@id": "node/626604167",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "pharmacy",
+        "check_date": "2026-10-20",
+        "check_date:opening_hours": "2024-02-13",
+        "entrance": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Marien-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-14:00; Su,PH off",
+        "phone": "+49 4471 6691",
+        "website": "https://www.marien-apotheke-cloppenburg.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426153,
+          52.8488062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/627634995",
+      "properties": {
+        "@id": "node/627634995",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "pharmacy",
+        "check_date": "2026-09-10",
+        "check_date:opening_hours": "2026-09-10",
+        "contact:email": "postapotheke.bestellung@t-online.de",
+        "contact:phone": "+49 4471 4778",
+        "contact:website": "https://post-apotheke-cloppenburg.de/",
+        "delivery": "yes",
+        "healthcare": "pharmacy",
+        "name": "Post-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:30-13:30; Su,PH off",
+        "operator": "Klaus Debring",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0457324,
+          52.8453929
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/907180799",
+      "properties": {
+        "@id": "node/907180799",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "49661",
+        "addr:street": "Am Capitol",
+        "amenity": "pharmacy",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "name": "Krapendorfer Apotheke",
+        "opening_hours": "Mo-Fr 08:30-18:30; Sa 09:00-13:00; Su,PH off",
+        "phone": "+49 4471 5992",
+        "website": "https://www.krapendorfer-apotheke.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0399037,
+          52.8445594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1326935682",
+      "properties": {
+        "@id": "node/1326935682",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "34",
+        "addr:postcode": "49661",
+        "addr:street": "Friesoyther Straße",
+        "check_date": "2025-10-12",
+        "contact:phone": "+49 4471 2963",
+        "contact:website": "https://www.nahundgut-deeken.de/",
+        "int_name": "Spar",
+        "name": "Thomas Deeken",
+        "opening_hours": "Mo-Fr 06:00-13:00,14:30-18:30; Sa 06:00-14:00; Su,PH off",
+        "shop": "supermarket",
+        "wheelchair": "limited",
+        "wheelchair:description": "kein WC"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0336673,
+          52.8538333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1327269539",
+      "properties": {
+        "@id": "node/1327269539",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "33",
+        "addr:postcode": "49661",
+        "addr:street": "Alter Emsteker Weg",
+        "amenity": "cafe",
+        "name": "Cafe Petra Siemer",
+        "opening_hours": "Mo-Fr 05:45-13:30; Sa 06:45-11:30; PH,Su off",
+        "shop": "bakery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0784666,
+          52.8451249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1327271638",
+      "properties": {
+        "@id": "node/1327271638",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "amenity": "pharmacy",
+        "check_date": "2026-10-20",
+        "check_date:opening_hours": "2024-02-13",
+        "dispensing": "yes",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Burg Apotheke",
+        "opening_hours": "Mo,Tu,Th 08:00-19:00; We,Fr 08:00-18:30; Sa 08:00-13:00; Su,PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.04248,
+          52.8483786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1327283549",
+      "properties": {
+        "@id": "node/1327283549",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "7",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "pharmacy",
+        "check_date": "2026-06-30",
+        "check_date:opening_hours": "2025-04-25",
+        "healthcare": "pharmacy",
+        "name": "Rathaus-Apotheke",
+        "opening_hours": "Mo-Fr 08:00-18:30; Sa 09:00-13:00; Su,PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426481,
+          52.8456408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1356829541",
+      "properties": {
+        "@id": "node/1356829541",
+        "amenity": "cafe",
+        "cuisine": "ice_cream",
+        "indoor_seating": "yes",
+        "name": "Venezia II",
+        "outdoor_seating": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0369881,
+          52.8443502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1745314292",
+      "properties": {
+        "@id": "node/1745314292",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "49661",
+        "addr:street": "Am Capitol",
+        "amenity": "pub",
+        "contact:facebook": "https://www.facebook.com/jennes.clp",
+        "name": "Jenne's Bar-Kneipe-Pub",
+        "opening_hours": "Th 19:00-02:00; Fr,Sa 20:00-03:00; Mo-We,Su off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0401632,
+          52.8443807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1787236332",
+      "properties": {
+        "@id": "node/1787236332",
+        "addr:housenumber": "32",
+        "addr:street": "Hagenstraße",
+        "amenity": "cafe",
+        "check_date": "2025-09-05",
+        "check_date:opening_hours": "2024-03-19",
+        "contact:facebook": "Eiscafe.Italia.Cloppenburg",
+        "cuisine": "ice_cream;coffee_shop;waffles",
+        "diet:vegetarian": "yes",
+        "level": "0",
+        "name": "Eiscafè Italia",
+        "opening_hours": "Mo-Sa 11:30-20:00; Su,PH 12:00-20:00",
+        "wheelchair": "limited",
+        "wheelchair:description": "Beim Eingang kleine Barriere, sonst eben"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.047418,
+          52.8485716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/2076830210",
+      "properties": {
+        "@id": "node/2076830210",
+        "amenity": "bar",
+        "check_date": "2025-02-24",
+        "entrance": "yes",
+        "name": "Leibeswohl Winebar",
+        "opening_hours": "Tu-Fr 16:00+; Sa 12:00+; Mo,Su,PH off; Apr-Oct: Su 14:00+",
+        "phone": "+49 4471 1874900",
+        "website": "http://www.schaefers-hotel-cloppenburg.de/leibeswohl/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0371781,
+          52.8441005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3010366006",
+      "properties": {
+        "@id": "node/3010366006",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "20 - 22",
+        "addr:postcode": "49661",
+        "addr:street": "Mühlenstraße",
+        "amenity": "pub",
+        "description": "café; bar; pub; liveclub",
+        "name": "Bernay's",
+        "opening_hours": "Mo-Fr 11:00-18:00+; Sa 10:00-18:00+; Su 14:00-18:00+",
+        "phone": "+49 4471 7013100",
+        "toilets:wheelchair": "yes",
+        "website": "https://www.bernays.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "Toilette befindet sich in der benachbarten Stadthalle, welche bei Bedarf gerne geöffnet wird."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0428895,
+          52.8467948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3256730472",
+      "properties": {
+        "@id": "node/3256730472",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Cappelner Straße",
+        "brand": "famila",
+        "brand:wikidata": "Q1395108",
+        "brand:wikipedia": "de:Famila",
+        "check_date": "2024-11-01",
+        "check_date:opening_hours": "2024-02-27",
+        "contact:phone": "+49 4471 9530",
+        "contact:website": "https://www.famila-nordwest.de/",
+        "internet_access": "wlan",
+        "name": "famila",
+        "opening_hours": "Mo-Fr 08:00-21:00; Sa 08:00-20:00; Su,PH off",
+        "shop": "supermarket",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0538902,
+          52.8417597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3256931352",
+      "properties": {
+        "@id": "node/3256931352",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "49661",
+        "addr:street": "Fortmannsweg",
+        "amenity": "pub",
+        "check_date": "2025-05-06",
+        "contact:phone": "+49 4471 4488",
+        "contact:website": "http://dieters-bierstube.de/",
+        "min_age": "18",
+        "name": "Dieter's Bierstube",
+        "opening_hours": "Tu-Su; Mo off",
+        "smoking": "dedicated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.038865,
+          52.8443645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3256932089",
+      "properties": {
+        "@id": "node/3256932089",
+        "addr:housenumber": "12",
+        "addr:street": "Am Capitol",
+        "amenity": "pub",
+        "name": "Bierhaus"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0399728,
+          52.8443792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3263050713",
+      "properties": {
+        "@id": "node/3263050713",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "49661",
+        "addr:street": "Kirchhofstraße",
+        "amenity": "cafe",
+        "check_date": "2026-10-29",
+        "contact:phone": "+49 4471 7029590",
+        "contact:website": "https://www.stadtbaeckerei-frerker.de/filialen/",
+        "name": "Frerker",
+        "opening_hours": "Mo-Fr 05:45-11:45; Sa 06:00-11:45; Su 07:00-12:00",
+        "shop": "bakery",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0339879,
+          52.842046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3263241130",
+      "properties": {
+        "@id": "node/3263241130",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "49661",
+        "addr:street": "Hagenstraße",
+        "check_date": "2026-09-11",
+        "contact:phone": "+49 4471 932212",
+        "contact:website": "https://www.logopaedie-prante.de/",
+        "description": "Praxis für Logopädie & Ergotherapie",
+        "healthcare": "speech_therapist",
+        "name": "Helga Prante",
+        "opening_hours": "\"Termine nach Vereinbarung unter 04471 932213\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474543,
+          52.8469706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3263272302",
+      "properties": {
+        "@id": "node/3263272302",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "13",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "amenity": "pharmacy",
+        "check_date:opening_hours": "2026-09-04",
+        "contact:phone": "+49 4471 947160",
+        "contact:website": "https://www.pinguin-apotheke-cloppenburg.de/",
+        "email": "info@pinguin-apotheke.com",
+        "healthcare": "pharmacy",
+        "level": "0",
+        "name": "Pinguin Apotheke",
+        "opening_hours": "Mo,Tu,Th,Fr 08:00-18:30; We 08:00-14:00; Sa 08:00-13:00; Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0371425,
+          52.8417271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3263869990",
+      "properties": {
+        "@id": "node/3263869990",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "cafe",
+        "check_date": "2026-06-25",
+        "indoor_seating": "yes",
+        "level": "0",
+        "name": "Der Tortenprinz - Konditorei",
+        "opening_hours": "Mo,Su off; Tu-Sa 08:00-17:00",
+        "outdoor_seating": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0442655,
+          52.8456418
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3268558231",
+      "properties": {
+        "@id": "node/3268558231",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "12",
+        "addr:postcode": "49661",
+        "addr:street": "Wallfahrtsweg",
+        "amenity": "kindergarten",
+        "name": "Kindertagesstätte Sonnenblume"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474003,
+          52.8583419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3268558273",
+      "properties": {
+        "@id": "node/3268558273",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "9",
+        "addr:postcode": "49661",
+        "addr:street": "Friesoyther Straße",
+        "amenity": "kindergarten",
+        "education": "kindergarten",
+        "name": "EV. Kindergarten Schwedenheim"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0384361,
+          52.850574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3268567667",
+      "properties": {
+        "@id": "node/3268567667",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Tegernseestraße",
+        "amenity": "kindergarten",
+        "check_date": "2024-08-25",
+        "name": "Kindertagesstätte St. Vincenz"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0088996,
+          52.8408672
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3292330799",
+      "properties": {
+        "@id": "node/3292330799",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "13",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:email": "nuklearmedizin.clp@kk-om.de",
+        "contact:fax": "+49 4471 161557",
+        "contact:phone": "+49 4471 161550",
+        "contact:website": "http://www.nuklearmedizin-clp.de",
+        "healthcare": "doctor",
+        "name": "Dr. med. Günther Klaushenke / Nuklearmedizin",
+        "opening_hours": "Mo-Th 08:00-11:30, Mo,Tu,Th 15:00-17:00; PH off",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0411237,
+          52.8476709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4345107697",
+      "properties": {
+        "@id": "node/4345107697",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "49661",
+        "addr:street": "Lindenallee",
+        "amenity": "kindergarten",
+        "check_date": "2023-11-02",
+        "name": "Kindertagesstätte St. Bernhard",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0821196,
+          52.8390901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4403339792",
+      "properties": {
+        "@id": "node/4403339792",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "23-25",
+        "addr:postcode": "49661",
+        "addr:street": "Mühlenstraße",
+        "amenity": "pub",
+        "check_date": "2024-11-20",
+        "level": "0",
+        "name": "Grand Verace",
+        "opening_hours": "Mo-Sa 11:00+; Su 14:00+",
+        "phone": "+49 4471 1804 400",
+        "toilets:wheelchair": "yes",
+        "website": "https://grand-verace.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0424375,
+          52.8468918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4524646596",
+      "properties": {
+        "@id": "node/4524646596",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "11",
+        "addr:postcode": "49661",
+        "addr:street": "Teichstraße",
+        "amenity": "bar",
+        "brewery": "Krombacher",
+        "check_date": "2024-11-18",
+        "check_date:opening_hours": "2024-10-08",
+        "contact:facebook": "https://www.facebook.com/die.Zwei.Cloppenburg/",
+        "contact:phone": "+49 4471 1843737",
+        "entrance": "main",
+        "level": "0",
+        "name": "\"Die Zwei\" Am Schwanenteich",
+        "opening_hours": "Tu-Sa 17:00+; Su 11:00-14:00,17:00+; Mo off",
+        "opening_hours:signed": "no",
+        "outdoor_seating": "yes",
+        "start_date": "2023-09-09"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0171851,
+          52.8395428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4524778298",
+      "properties": {
+        "@id": "node/4524778298",
+        "addr:housenumber": "11",
+        "addr:street": "Pater-Delp-Straße",
+        "amenity": "dentist",
+        "contact:website": "https://www.zahnarzt-joerg-ulrich.de/",
+        "healthcare": "dentist",
+        "name": "Jörg Ulrich",
+        "opening_hours": "Mo-Fr 08:00-18:00",
+        "phone": "+49 4471 2332"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0416824,
+          52.8424385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4524843195",
+      "properties": {
+        "@id": "node/4524843195",
+        "amenity": "school",
+        "check_date": "2024-08-07",
+        "contact:website": "https://www.bbst-clp.de",
+        "name": "BBS Technik - Bautechnik"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0643054,
+          52.836479
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4567355090",
+      "properties": {
+        "@id": "node/4567355090",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Kessener Weg",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "name": "Dr. Dieter Greten",
+        "opening_hours": "Mo 08:00-12:00,14:00-17:00; Tu,Fr 08:00-12:00; We,Th 08:00-12:00,15:00-18:00",
+        "phone": "+49 4471 933355"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0361865,
+          52.8396354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4594542392",
+      "properties": {
+        "@id": "node/4594542392",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "42",
+        "addr:postcode": "49661",
+        "addr:street": "Eschstraße",
+        "amenity": "dentist",
+        "check_date:opening_hours": "2026-07-03",
+        "healthcare": "dentist",
+        "name": "J. Kühling-Thees",
+        "opening_hours": "Mo-Fr 08:00-12:00,14:00-18:00",
+        "phone": "+49 44071 855 51"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0380138,
+          52.8433137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4606461290",
+      "properties": {
+        "@id": "node/4606461290",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "24",
+        "addr:postcode": "49661",
+        "addr:street": "Mühlenstraße",
+        "amenity": "dentist",
+        "check_date": "2026-09-11",
+        "check_date:opening_hours": "2026-09-11",
+        "healthcare": "dentist",
+        "name": "Dr. Ambrus - Zahnärzte an der Soeste",
+        "opening_hours": "Mo-Fr 07:00-19:00; Sa,Su,PH off",
+        "phone": "+49 4471 85055 0",
+        "website": "https://www.dr-ambrus.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0430023,
+          52.8471448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4610194691",
+      "properties": {
+        "@id": "node/4610194691",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "49661",
+        "addr:street": "Inselstraße",
+        "description": "Kinder- und Jugendlichen-Psychotherapeutin",
+        "healthcare": "doctor",
+        "name": "Dipl. Psych. Elke Mund",
+        "phone": "+49 4471 1804414"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426051,
+          52.857121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4619268590",
+      "properties": {
+        "@id": "node/4619268590",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "check_date": "2026-06-30",
+        "contact:phone": "+49 4471 957 54 17",
+        "contact:website": "http://www.praxiskhreis.de",
+        "description": "Dr. med. Cosima Khreis: Fachärztin für Innere Medizin (Akupunktur); Dr. med. H. Issa Khreis: Facharzt für Innere Medizin (Angiologie, Rettungsmedizin, reisemedizinische Beratung, vekehrsmedizinische Begutachtung)",
+        "healthcare": "doctor",
+        "level": "1",
+        "name": "Dr. Med. Cosima Khreis",
+        "opening_hours": "Mo-Tu,Th 08:00-12:30,15:00-18:00; We 09:30-13:00; Fr 08:00-12:30",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0459346,
+          52.8453707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4620967591",
+      "properties": {
+        "@id": "node/4620967591",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "pharmacy",
+        "contact:website": "https://www.apo-meis.de/",
+        "healthcare": "pharmacy",
+        "level": "1",
+        "name": "Apotheke Meis am Krankenhaus",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 09:00-19:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0401189,
+          52.8480148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4620990790",
+      "properties": {
+        "@id": "node/4620990790",
+        "addr:housenumber": "23",
+        "addr:street": "Soestenstraße",
+        "check_date": "2026-10-20",
+        "level": "0",
+        "name": "Planeta",
+        "opening_hours": "Mo-Fr 08:00-19:00; Sa 08:00-17:00; Su,PH off",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "shop": "supermarket"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0361335,
+          52.8464491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4657159205",
+      "properties": {
+        "@id": "node/4657159205",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "40",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "dentist",
+        "check_date:opening_hours": "2023-11-21",
+        "entrance": "yes",
+        "healthcare": "dentist",
+        "healthcare:speciality": "endodontics;implantology",
+        "name": "Dr. Klaushenke / Nerenberg",
+        "opening_hours": "Mo,Tu,Th 08:00-12:00,15:00-18:00; We,Fr 08:00-12:00; Sa,PH off",
+        "phone": "+49 4471 2089",
+        "website": "https://www.zahnarztpraxis-klaushenke-nerenberg.de/",
+        "wheelchair": "limited",
+        "wheelchair:description": "Treppen im Eingangsbereich. Ein rollstuhlgerechter Spezialzugang für Gehbehinderte kann nach telefonischer Anmeldung benutzt werden."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0492608,
+          52.8449272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4657180698",
+      "properties": {
+        "@id": "node/4657180698",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "80",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "bar",
+        "check_date:opening_hours": "2024-04-04",
+        "description": "Contails + Shisha Lounge",
+        "name": "Le Château",
+        "opening_hours:signed": "no",
+        "phone": "+49 1522 3367076"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0544148,
+          52.8440676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4676379190",
+      "properties": {
+        "@id": "node/4676379190",
+        "amenity": "doctors",
+        "description": "Allgemeinmedizin, Hausärztliche Versorgung, Chirotherapie, Ernährungsmedizin, Palliativmedizin, Notfallmedizin und Gesundheitsvorsorge",
+        "entrance": "yes",
+        "healthcare": "doctor",
+        "healthcare:speciality": "emergency;general;palliative",
+        "name": "Dr. med. Berndt",
+        "opening_hours": "Mo,Tu,Th 08:00-12:30,15:30-18:00; We,Fr 08:00-12:30; Sa,Su,PH off",
+        "phone": "+49 4471 3436",
+        "website": "https://www.doktor-berndt.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0465594,
+          52.8484429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5083318381",
+      "properties": {
+        "@id": "node/5083318381",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "3",
+        "addr:postcode": "49661",
+        "addr:street": "Bether Dorfstraße",
+        "amenity": "cafe",
+        "name": "Cottage Garden"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0614758,
+          52.8633539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5325556536",
+      "properties": {
+        "@id": "node/5325556536",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "30",
+        "addr:street": "Emsteker Straße",
+        "brand": "Aldi Nord",
+        "brand:wikidata": "Q41171373",
+        "brand:wikipedia": "en:Aldi",
+        "check_date": "2026-10-17",
+        "level": "0",
+        "name": "Aldi",
+        "opening_hours": "Mo-Sa 07:00-20:00; Su,PH off",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "shop": "supermarket",
+        "website": "https://www.aldi-nord.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0508398,
+          52.8432443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5499473856",
+      "properties": {
+        "@id": "node/5499473856",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "14",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "check_date": "2025-05-21",
+        "contact:facebook": "https://www.facebook.com/aphysioperformance/",
+        "contact:phone": "+49 4471 1808588",
+        "contact:website": "https://www.aphysioperformance.de/stadtpraxis-cloppenburg/",
+        "entrance": "yes",
+        "healthcare": "physiotherapist",
+        "level": "0",
+        "name": "die stadtpraxis",
+        "opening_hours": "Mo-Th 07:00-20:00; Fr 07:00-16:00; PH,Sa,Su off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0496297,
+          52.8440728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5512490338",
+      "properties": {
+        "@id": "node/5512490338",
+        "amenity": "ice_cream",
+        "check_date:opening_hours": "2025-04-25",
+        "diet:vegan": "no",
+        "indoor_seating": "yes",
+        "name": "Eiscafe Venezia",
+        "opening_hours": "10:00-20:00",
+        "outdoor_seating": "yes",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0427888,
+          52.8456515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5512493925",
+      "properties": {
+        "@id": "node/5512493925",
+        "amenity": "dentist",
+        "check_date": "2023-08-01",
+        "healthcare": "dentist",
+        "level": "1",
+        "name": "J. Siemund, Th. Drestomark",
+        "opening_hours": "Mo 08:00-12:00, 14:00-18:00; Tu 08:00-12:00, 14:00-19:00; We 08:00-12:00; Th 08:00-12:00, 14:00-18:00; Fr 08:00-12:00 || \"nach Vereinbarung\"",
+        "phone": "+49 4471 4275"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0434929,
+          52.8457973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5726345821",
+      "properties": {
+        "@id": "node/5726345821",
+        "amenity": "bar",
+        "check_date:opening_hours": "2023-08-17",
+        "description": "Bar, Lounge, Shisha; Zutritt an 18 Jahren",
+        "entrance": "yes",
+        "name": "Cloud",
+        "opening_hours": "Mo-Th 18:00-24:00, Fr,Sa 18:00-02:00, Su,PH 18:00-24:00",
+        "smoking": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0403947,
+          52.8458786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5731145587",
+      "properties": {
+        "@id": "node/5731145587",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "11",
+        "addr:postcode": "49661",
+        "addr:street": "Hagenstraße",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2026-09-11",
+        "contact:phone": "+49 4471 9001761",
+        "contact:website": "https://www.praxis-albrecht-sander.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "child_psychiatry",
+        "name": "Isabel Albrecht",
+        "opening_hours:reception": "Mo 09:30-10:15,12:30-13:00; Tu 12:30-13:00; We 08:45-09:30,12:30-13:00",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0471742,
+          52.8470674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5997045162",
+      "properties": {
+        "@id": "node/5997045162",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Soestenstraße",
+        "amenity": "doctors",
+        "check_date": "2026-09-10",
+        "check_date:opening_hours": "2026-09-10",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Dr. Crone-Münzebrock",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo,Tu,Th 14:00-17:00",
+        "phone": "+49 4471 6262",
+        "toilets:wheelchair": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0367733,
+          52.8450021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6186447018",
+      "properties": {
+        "@id": "node/6186447018",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "contact:fax": "+49 4471 8847096",
+        "contact:phone": "+49 4471 8820657",
+        "contact:website": "http://www.dr-gerdes-kuhn.de/",
+        "description": "Fachärztin für Orthopädie, Sportmedizin und Chirotherapie (Privatsprechstunde, Eigenleistung)",
+        "healthcare": "doctor",
+        "healthcare:speciality": "chiropractic;orthopaedics;sports_medicine",
+        "name": "Dr. med. Roswitha Gerdes-Kuhn",
+        "opening_hours": "We,Th 09:00-11:00 \"und nach Vereinbarung\"; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0425925,
+          52.8487401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6403439791",
+      "properties": {
+        "@id": "node/6403439791",
+        "fee": "no",
+        "name": "Landmaschinen Dauerausstellung",
+        "opening_hours": "Mar-Oct: 09:00-18:00; Nov-Feb: Sa,Su 10:00-16:30",
+        "operator": "Museumsdorf Cloppenburg",
+        "tourism": "museum",
+        "website": "https://museumsdorf.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.054962,
+          52.8513036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6448532764",
+      "properties": {
+        "@id": "node/6448532764",
+        "amenity": "doctors",
+        "description": "Facharzt für Neurochirurgie, Tätigkeitsschwerpunkt: Osteopathische Medizin - Privatpraxis",
+        "healthcare": "doctor",
+        "healthcare:speciality": "neurosurgery",
+        "name": "Samir Eissa",
+        "opening_hours": "\"Termine nach Vereinbarung\"",
+        "phone": "+49 2593 928556",
+        "website": "http://www.cenosmed.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0832687,
+          52.8421786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6456414842",
+      "properties": {
+        "@id": "node/6456414842",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "49661",
+        "addr:street": "Wallgärten",
+        "amenity": "school",
+        "check_date": "2024-04-25",
+        "contact:website": "https://www.marienschule-ikt.de/",
+        "isced:level": "2",
+        "name": "Marienschule Cloppenburg",
+        "operator": "Schulstiftung St. Benedikt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0464661,
+          52.8501483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6708472168",
+      "properties": {
+        "@id": "node/6708472168",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "pub",
+        "check_date": "2024-11-18",
+        "entrance": "yes",
+        "indoor_seating": "yes",
+        "level": "0",
+        "name": "Anna's Eck",
+        "opening_hours": "Mo-Fr 15:00+; Sa-Su 13:00+",
+        "outdoor_seating": "yes",
+        "smoking": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0430791,
+          52.8457497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7259178829",
+      "properties": {
+        "@id": "node/7259178829",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "44",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "amenity": "doctors",
+        "check_date": "2024-10-09",
+        "contact:fax": "+49 4471 1843133",
+        "contact:phone": "+49 4471 1843131",
+        "contact:website": "https://www.gastroenterologie-cloppenburg.de/",
+        "description": "Dr. med. Adji Widjaja: Facharzt für Magen- und Darmerkrankungen; Dr. med. Zsolt Havasi Facharzt für Innere Medizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gastroenterology;internal",
+        "name": "Privatdozent Dr. med. Adji Widjaja",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo-Th 15:00-17:00 \"und nach Vereinbarung\"; Sa,Su,PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.046502,
+          52.8486148
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8189022642",
+      "properties": {
+        "@id": "node/8189022642",
+        "addr:housenumber": "4",
+        "addr:street": "Osterstraße",
+        "amenity": "doctors",
+        "check_date": "2025-10-13",
+        "contact:phone": "+49 4471 6670",
+        "contact:website": "https://www.praxis-wenck-vondalwigk.de/",
+        "description": "Hausärztliche Gemeinschaftspraxis: Dr. med. Matthias Wenck \"Facharzt für Allgemeinmedizin\"; Dr. med. Elke Dalwigk \"Fachärztin für Innere Medizin\"; Alexander von Dalwigk \"Facharzt für Innere Medizin\"; Gelbfieberimpfstelle",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;internal;vaccination",
+        "name": "Dr. med. Wenck & von Dalwigk",
+        "opening_hours": "Mo,Tu,Th 08:00-16:30; We,Fr 08:00-12:00; Sa,Su,PH off",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0429457,
+          52.8480425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8312911320",
+      "properties": {
+        "@id": "node/8312911320",
+        "name": "Museumsdorf Cloppenburg",
+        "operator": "Stiftung Museumsdorf Cloppenburg",
+        "tourism": "museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0552595,
+          52.8517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8591566177",
+      "properties": {
+        "@id": "node/8591566177",
+        "amenity": "school",
+        "isced:level": "1",
+        "name": "St. Andreas Grundschule",
+        "website": "https://www.grundschule-st-andreas.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.034014,
+          52.8437804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8591566184",
+      "properties": {
+        "@id": "node/8591566184",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4a",
+        "addr:postcode": "49661",
+        "addr:street": "Kirchhofstraße",
+        "amenity": "kindergarten",
+        "check_date": "2023-10-06",
+        "isced:level": "0",
+        "name": "Kita Du und Ich",
+        "phone": "+49 4471 7092350"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0353591,
+          52.8436079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8591566185",
+      "properties": {
+        "@id": "node/8591566185",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "7",
+        "addr:postcode": "49661",
+        "addr:street": "Dechant-Brust-Straße",
+        "amenity": "kindergarten",
+        "check_date": "2023-10-06",
+        "isced:level": "0",
+        "name": "Kita Schatzkiste",
+        "phone": "+49 4471 707431"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0353591,
+          52.8438647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8612020993",
+      "properties": {
+        "@id": "node/8612020993",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "113",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "amenity": "school",
+        "isced:level": "1",
+        "name": "Grundschule Emstekerfeld",
+        "phone": "+49 4471 2011",
+        "website": "https://www.gs-emstekerfeld.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0846876,
+          52.8379804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8677638954",
+      "properties": {
+        "@id": "node/8677638954",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "49661",
+        "addr:street": "Warthestraße",
+        "check_date:opening_hours": "2023-09-16",
+        "description": "Praxis für Physio, Eregotherapie und Logopädie",
+        "healthcare": "physiotherapist",
+        "name": "Therapie Voss",
+        "opening_hours:signed": "no",
+        "phone": "+49 4471 84204",
+        "website": "https://therapie-voss.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0243137,
+          52.8376288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8795334264",
+      "properties": {
+        "@id": "node/8795334264",
+        "access": "private",
+        "leisure": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0602527,
+          52.8718886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9044145083",
+      "properties": {
+        "@id": "node/9044145083",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "43",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "amenity": "cafe",
+        "brand": "GS energie",
+        "brand:wikidata": "Q111391868",
+        "diet:vegan": "no",
+        "diet:vegetarian": "limited",
+        "internet_access": "no",
+        "name": "GS Café",
+        "opening_hours": "Mo-Sa 06:00-22:00; Su 07:00-22:00; Dec 24 07:00-16:00; Dec 25,26,31,Jan 01 07:00-18:00; easter -2 days 07:00-20:00; easter 07:00-18:00; easter +1 day 07:00-18:00",
+        "operator": "GS Die Genossenschaft eG",
+        "operator:wikidata": "Q111391474",
+        "outdoor_seating": "no",
+        "website": "https://www.gs-genossenschaft.de/energie",
+        "wikidata": "Q111391868"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0548907,
+          52.8430369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146750553",
+      "properties": {
+        "@id": "node/9146750553",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "2",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "doctors",
+        "check_date": "2025-02-20",
+        "description": "Praxis für Frauenheilkunde",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "name": "Dr. med. Nienaber, Schlegel und Stratmann",
+        "opening_hours": "Mo-Fr 09:00-13:00, 15:00-17:00 \"und nach Vereinbarung\"; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0423771,
+          52.8458305
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146760376",
+      "properties": {
+        "@id": "node/9146760376",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "description": "Neurologische Gemeinschaftspraxis: E. Potratz, Dr. G. Hermanns: Fachärzte für Neurologie; Dr. U. Teschendorf, R. Witte: Fachärzte für Neurologie u. Psychiatrie",
+        "healthcare": "doctor",
+        "healthcare:speciality": "neurology;psychiatry",
+        "level": "1",
+        "name": "E. Potratz, Dr. G. Hermanns, Dr. U. Teschendorf, R. Witte",
+        "opening_hours": "Mo-Tu,Th 08:30-13:00,14:00-16:30; We,Fr 08:30-13:00; Sa-Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0425272,
+          52.8485658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146760377",
+      "properties": {
+        "@id": "node/9146760377",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "description": "Facharzt für Innere Medizin; Rettungsmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal;emergency",
+        "level": "2",
+        "name": "Alexander Kirchberg",
+        "opening_hours": "Mo-Tu 08:00-13:00,15:00-18:00; We,Sa-Su,PH off; Th 08:00-13:00,15:00-19:00; Fr 08:00-13:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426834,
+          52.8485266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146760380",
+      "properties": {
+        "@id": "node/9146760380",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "description": "Thomas Övermöhle Facharzt für Urologie; Philipp Rehker Facharzt für Urologie, medikamentöse Tumortherapie",
+        "healthcare": "doctor",
+        "healthcare:speciality": "urology",
+        "name": "Urologie Cloppenburg",
+        "opening_hours": "Mo-Fr 08:30-12:00, Mo,Tu,Th 15:00-18:00; Sa,Su,PH off",
+        "operator": "Thomas Övermöhle, Philipp Rehker"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.042571,
+          52.8486797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146760383",
+      "properties": {
+        "@id": "node/9146760383",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "contact:phone": "+49 4471 933949",
+        "contact:website": "https://www.herzlungenpraxis-cloppenburg.de/",
+        "description": "Ärztepartnerschaft Dr. med. Meyer, Silvia Schütz, Dr. med Andreas Bußmeyer: Fachärzte für Innere Medizin und Kardiologie, Sportmedizin, Rettungsmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal;cardiology;emergency;sports_medicine",
+        "name": "Meyer / Bußmeyer / Schütz",
+        "opening_hours": "Mo-Fr 09:00-12:00, Mo-Th 16:00-18:00 || \"und nach Vereinbarung\"; Sa,Su,PH off",
+        "operator": "Dr. med. Paul Meyer, Silvia Schütz, Dr. med. Andreas Bußmeyer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.042793,
+          52.8489324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146760385",
+      "properties": {
+        "@id": "node/9146760385",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "contact:phone": "+49 4471 6121",
+        "contact:website": "https://www.herzlungenpraxis-cloppenburg.de/",
+        "description": "Ärztepartnerschaft Nerenz / Deitmar: Ulrich Nerenz: Facharzt für Innere Medizin, Lungen- und Bronchialheilkunde, Schlafmedizin; Gerrit Deitmar: Facharzt für Innere Medizin, Lungen- und Bronchialheilkunde, Allergologie, Schlafmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "allergology;internal;pulmonology;sleep_medicine",
+        "name": "U. Nerenz / G. Deitmar",
+        "opening_hours": "Mo-Fr 09:00-12:00, Mo,Tu,Th,Fr 16:00-18:00 || \"und nach Vereinbarung\"; Sa,Su,PH off",
+        "operator": "Ulrich Nerenz / Gerrit Deitmar"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0428859,
+          52.8489979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9146778833",
+      "properties": {
+        "@id": "node/9146778833",
+        "contact:phone": "+49 4471 930 000",
+        "healthcare": "physiotherapist",
+        "name": "Karin Stammer",
+        "opening_hours": "\"Termin nach Absprache\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.046501,
+          52.8486787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9149536981",
+      "properties": {
+        "@id": "node/9149536981",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "9",
+        "addr:postcode": "49661",
+        "addr:street": "Pingel-Anton-Platz",
+        "amenity": "doctors",
+        "check_date": "2026-09-11",
+        "contact:email": "info@internisten-cloppenburg.com",
+        "contact:fax": "+49 4471 8827 667",
+        "contact:phone": "+49 4471 8827 666",
+        "contact:website": "https://www.internisten-cloppenburg.com/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal;general",
+        "name": "Hausärztliche Internisten Cloppenburg",
+        "opening_hours": "Mo 09:00-15:00; Tu 09:00-12:00, \"danach nur Termine und Impfungen\"; We 09:00-12:00, \"und nach Vereinbarung\"; Th 09:00-12:00, \"danach nur Termine und Impfungen\"; Fr 09:00-12:00; Sa,Su,PH off",
+        "operator": "Dr. Lisa Giller & Dr. Gregor Siemon"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0476932,
+          52.8460768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9149536989",
+      "properties": {
+        "@id": "node/9149536989",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "check_date": "2025-05-21",
+        "contact:phone": "+49 4471 5059",
+        "description": "Facharzt für Frauenheilkunde und Geburtshilfe",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "level": "1",
+        "name": "Herr Omar Briaki",
+        "opening_hours": "Mo-Fr 08:30-13:00, Mo-Th 14:00-16:30 || \"Termine nach Vereinbarung\"; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0438483,
+          52.8456499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9149652379",
+      "properties": {
+        "@id": "node/9149652379",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "45",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "alt_name": "ULF",
+        "amenity": "school",
+        "contact:fax": "+49 4471 9477 83",
+        "contact:phone": "+49 4471 9176 0",
+        "contact:website": "https://www.ulf-clp.de/",
+        "isced:level": "2;3",
+        "name": "Liebfrauenschule Cloppenburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474237,
+          52.8494939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9210170208",
+      "properties": {
+        "@id": "node/9210170208",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "49661",
+        "addr:street": "Eschstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 3778",
+        "contact:website": "https://www.augenarztpraxis-darrelmann.de/",
+        "description": "Augenärzte Dr. med. Benedikt große Darrelmann, Dr. med. Michael Freistühler, Dr. med. Barbara Glitz sowie Michaela große Darrelmann (Orthoptistin (BOD), Lerntherapeutin (FiL)) und Wiebke Meyer zu Menslage (Orthoptistin (BOD))",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Augenärzte Dres. große Darrelmann, Freistühler & Glitz",
+        "opening_hours": "Mo,Tu,Th,Fr 08:00-12:00, 14:00-17:00; We \"keine reguläre Sprechstunde\"; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.041142,
+          52.8438963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9225519913",
+      "properties": {
+        "@id": "node/9225519913",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 3571",
+        "description": "Gemeinschaftspraxis (Hausärztliche Versorgung): Dr. med Holger Laing und Ute Buerke - Fachärzte für Allgemeinmedizin und Innere Medizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "emergency;general;internal",
+        "name": "Dr. med. Holger Laing",
+        "opening_hours": "Mo 09:00-12:00, 16:00-18:00; Tu,We 09:00-12:00 \"n. Vereinb.\"; Th 16:00-18:00 \"n. Vereinb.\"; Fr 09:00-12:00 \"n. Vereinb.\"; Sa \"n. Vereinb.\"; Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0399012,
+          52.8445896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9289076742",
+      "properties": {
+        "@id": "node/9289076742",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "56",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "doctors",
+        "check_date": "2026-09-04",
+        "check_date:opening_hours": "2026-09-04",
+        "contact:phone": "+49 4471 2488",
+        "description": "Fachärztin für Allgemeinmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Dr. med. A. Naber",
+        "opening_hours": "Mo,We-Fr 09:00-12:30; Tu 15:00-18:00; PH,Sa,Su off",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.037869,
+          52.8444321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9289099341",
+      "properties": {
+        "@id": "node/9289099341",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "49661",
+        "addr:street": "Mühlenstraße",
+        "contact:mobile": "+49 178 1101837",
+        "healthcare": "speech_therapist",
+        "level": "1",
+        "name": "Logopädie Marlen Bröring"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0425769,
+          52.8464081
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9543840416",
+      "properties": {
+        "@id": "node/9543840416",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "82",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "amenity": "cafe",
+        "contact:phone": "+49 4471 7029330",
+        "contact:website": "https://www.stadtbaeckerei-frerker.de/filialen/",
+        "level": "0",
+        "name": "Stadtbäckerei Frerker",
+        "opening_hours": "Mo-Sa 05:00-13:00; Su 07:00-13:00",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "shop": "bakery",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0612311,
+          52.8415057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9690010810",
+      "properties": {
+        "@id": "node/9690010810",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "22",
+        "addr:postcode": "49661",
+        "addr:street": "Schützenstraße",
+        "check_date:opening_hours": "2024-08-20",
+        "contact:phone": "+49 4471 947033",
+        "contact:website": "https://www.ergotherapie-wessjohann.de/",
+        "description": "Praxis für Ergotherapie und Integrative Lernthearpie",
+        "healthcare": "speech_therapist",
+        "name": "Mechthild Weßjohann",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0579285,
+          52.8401838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9690010811",
+      "properties": {
+        "@id": "node/9690010811",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "29",
+        "addr:postcode": "49661",
+        "addr:street": "Schützenstraße",
+        "contact:phone": "+49 4471 7555",
+        "contact:website": "https://ellers-physiotherapie.de/",
+        "healthcare": "physiotherapist",
+        "name": "Physiotherapie Ellers",
+        "opening_hours": "Mo-Th 08:00-12:30,14:30-18:30; Fr 08:00-12:30,14:30-16:15; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0572003,
+          52.8397999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9711718842",
+      "properties": {
+        "@id": "node/9711718842",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Bether Straße",
+        "amenity": "cafe",
+        "check_date": "2025-09-04",
+        "contact:website": "https://bruno-ol.de",
+        "level": "0",
+        "name": "Bruno",
+        "opening_hours": "Mo-Fr 06:00-17:00; Sa 07:00-13:00; Su 07:00-17:00",
+        "operator": "Bruno der Oldenbäcker GmbH",
+        "outdoor_seating": "yes",
+        "shop": "bakery",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0522852,
+          52.8516434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9711791153",
+      "properties": {
+        "@id": "node/9711791153",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 87888",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Nienhaus genannt Sur"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0416798,
+          52.8479923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9711791154",
+      "properties": {
+        "@id": "node/9711791154",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 70350",
+        "description": "Radiologie, MRT, CT, Röntgen",
+        "healthcare": "doctor",
+        "healthcare:speciality": "radiology",
+        "name": "Dr. med. Meyer-Galander"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0417779,
+          52.8479083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9711791156",
+      "properties": {
+        "@id": "node/9711791156",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 701330",
+        "description": "Gutachterstelle und Praxis Prof. Olivier: Orthopädie, Unfallarzt und Handchirurg",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics;trauma",
+        "name": "Olivier"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.041555,
+          52.84791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9715846659",
+      "properties": {
+        "@id": "node/9715846659",
+        "amenity": "doctors",
+        "description": "Allgemeinmedizin, Vorsorge",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Rautgundis Fischer",
+        "opening_hours": "Mo-Fr 10:00-12:00 || \"Nachmittags nach Vereinbarung\"; Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0518815,
+          52.8453964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9715846660",
+      "properties": {
+        "@id": "node/9715846660",
+        "amenity": "doctors",
+        "check_date": "2023-09-15",
+        "description": "Augenarzt, Sehschule, Kontaktlinsen",
+        "healthcare": "doctor",
+        "healthcare:speciality": "ophthalmology",
+        "name": "Andreas Fischer",
+        "opening_hours": "Mo,Tu,Th,Fr 08:30-13:00, 15:00-18:00; We 08:30-13:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0518962,
+          52.8454361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9715846662",
+      "properties": {
+        "@id": "node/9715846662",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "51",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 2286",
+        "contact:website": "https://www.arztpraxis-cloppenburg.de/",
+        "entrance": "yes",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;abdominal_surgery",
+        "name": "Andrea Meinel",
+        "opening_hours": "Mo,Tu,Th 08:00-12:00,15:00-18:00; We,Fr 08:00-12:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0522682,
+          52.8449184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9716287574",
+      "properties": {
+        "@id": "node/9716287574",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "18",
+        "addr:postcode": "49661",
+        "addr:street": "Graf-Stauffenberg-Straße",
+        "contact:website": "https://mpu-vorbereitung-hettwer.de/",
+        "healthcare": "psychotherapist",
+        "name": "MPU Vorbereitung Hettwer",
+        "operator": "MPU Fachpraxis Elena Hettwer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0418514,
+          52.8420186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9716287576",
+      "properties": {
+        "@id": "node/9716287576",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "49661",
+        "addr:street": "Graf-Stauffenberg-Straße",
+        "contact:phone": "+49 4471 850518 5",
+        "contact:website": "http://podologie-luebbe.de/",
+        "healthcare": "podiatrist",
+        "name": "Sabine Lübbe",
+        "opening_hours": "Mo,We,Th 08:00-12:00,14:00-17:00; Tu,Fr 08:00-12:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0417535,
+          52.8420859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9919273884",
+      "properties": {
+        "@id": "node/9919273884",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "69a",
+        "addr:postcode": "49661",
+        "addr:street": "Cappelner Damm",
+        "contact:phone": "+49 4471 186181",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "massage_therapy",
+        "name": "Physio Balance Cloppenburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0711263,
+          52.8361511
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9919419993",
+      "properties": {
+        "@id": "node/9919419993",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "107",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "check_date": "2026-06-09",
+        "name": "nah & gut Schäufler",
+        "opening_hours": "Mo-Sa 07:00-20:00; Su,PH off",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "shop": "supermarket",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0824861,
+          52.8383915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9920046230",
+      "properties": {
+        "@id": "node/9920046230",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "49661",
+        "addr:street": "Ostring",
+        "contact:phone": "+49 4471 84569",
+        "contact:website": "https://www.angelika-koelsch.de/",
+        "healthcare": "speech_therapist",
+        "name": "Angelika Kölsch"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.070024,
+          52.8516021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9932461382",
+      "properties": {
+        "@id": "node/9932461382",
+        "amenity": "doctors",
+        "check_date": "2026-09-11",
+        "check_date:opening_hours": "2026-09-11",
+        "description": "Dr. med. Beate Poggemann, Fachärztin für Kinderheilkunde und Jugendmedizin; Neonatologie, Homöopathie, genetische Beratung",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;paediatrics",
+        "name": "Beate Poggemann",
+        "opening_hours": "Mo,Tu,Th 08:00-12:00,14:00-17:00; We,Fr 08:00-12:00; Sa,Su,PH off",
+        "operator": "Dr. med. Beate Poggemann",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0473867,
+          52.8459136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9932461383",
+      "properties": {
+        "@id": "node/9932461383",
+        "check_date": "2025-09-05",
+        "contact:phone": "+49 4471 184485",
+        "description": "REVT-Verhaltenstherapeutin, Psychotherapie, Gutachterin",
+        "healthcare": "psychotherapist",
+        "healthcare:speciality": "behavior;humanistic",
+        "level": "1",
+        "name": "Rita Bökamp-Hagemeier",
+        "opening_hours": "\"Telefonische Sprechstundenvereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474035,
+          52.8459481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9932461384",
+      "properties": {
+        "@id": "node/9932461384",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Pingel-Anton-Platz",
+        "amenity": "dentist",
+        "check_date": "2026-09-11",
+        "check_date:opening_hours": "2026-09-11",
+        "contact:phone": "+49 4471 933433",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "Kiefernorthopädie Dr. Balaom",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474947,
+          52.8459488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10019180667",
+      "properties": {
+        "@id": "node/10019180667",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "69",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "massage_therapy",
+        "level": "2",
+        "name": "Physiotherapie Pleye",
+        "opening_hours": "\"Termine nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0373986,
+          52.8441211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10025641740",
+      "properties": {
+        "@id": "node/10025641740",
+        "amenity": "cafe",
+        "check_date": "2025-11-29",
+        "check_date:opening_hours": "2024-08-19",
+        "contact:phone": "+49 4471 8503500",
+        "contact:website": "https://www.behrens-meyer.de/",
+        "name": "Behrens-Meyer",
+        "opening_hours": "Mo-Fr 06:30-19:00; Sa 07:00-19:00; Su 07:45-11:00",
+        "outdoor_seating": "yes",
+        "shop": "bakery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0245733,
+          52.8360972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10151546661",
+      "properties": {
+        "@id": "node/10151546661",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "82",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "alt_name": "Kulturkneipe Bistro und Bühne",
+        "amenity": "pub",
+        "check_date": "2025-03-18",
+        "contact:phone": "+49 4471 9574220",
+        "food": "yes",
+        "name": "Bahnhof - Bistro, Bar, Bühne",
+        "opening_hours": "Mo-Sa 17:00+; Su off; PH off",
+        "outdoor_seating": "yes",
+        "website": "https://www.bahnhof-cloppenburg.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0555218,
+          52.8440752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10151546662",
+      "properties": {
+        "@id": "node/10151546662",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "82",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "theatre",
+        "name": "Theater im Kulturbahnhof",
+        "operator": "Kulturforum Stadt Cloppenburg",
+        "toilets:wheelchair": "yes",
+        "website": "https://www.kulturbahnhof-cloppenburg.de",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0558416,
+          52.844173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10270443281",
+      "properties": {
+        "@id": "node/10270443281",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "https://hno-om.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "otolaryngology",
+        "level": "3",
+        "name": "HNO Zentrum Oldenburger Münsterland",
+        "opening_hours": "Mo,Tu,Th 08:30-12:00,14:30-17:00; We,Fr 08:30-12:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0403946,
+          52.8479881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10270443301",
+      "properties": {
+        "@id": "node/10270443301",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "https://www.hautarztcentrum.de/praxisklinik-cloppenburg",
+        "healthcare": "doctor",
+        "healthcare:speciality": "dermatology",
+        "level": "2",
+        "name": "Praxisklinik für Dermatologie, Cloppenburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0400891,
+          52.8479351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10270443302",
+      "properties": {
+        "@id": "node/10270443302",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "17",
+        "addr:postcode": "49661",
+        "addr:street": "Ritterstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 161334",
+        "contact:website": "https://www.cloppenburg-mvz.de/neurologie.html",
+        "healthcare": "doctor",
+        "healthcare:speciality": "neurology",
+        "level": "2",
+        "name": "Neurologische Praxis im MVZ Cloppenburg",
+        "opening_hours": "Mo-Th 08:00-13:00, Th 14:00-16:00 || \"Wir bitten um vorherige telefonische Anmeldung\";Fr,Sa,Su off",
+        "operator": "Rima Desiukeviciene, Dr. med. Janina Grimsel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0381876,
+          52.8474237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10270443307",
+      "properties": {
+        "@id": "node/10270443307",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "17",
+        "addr:postcode": "49661",
+        "addr:street": "Ritterstraße",
+        "amenity": "dentist",
+        "description": "Dr. med. Dr. dent. M. KnollFacharzt für Mund- Kiefer und Gesichtschirurgie",
+        "healthcare": "dentist",
+        "healthcare:speciality": "dental_oral_maxillo_facial_surgery",
+        "name": "Dr. Med. Dr. Dent. Markus Knoll"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0372846,
+          52.8474824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10276839732",
+      "properties": {
+        "@id": "node/10276839732",
+        "amenity": "clinic",
+        "healthcare": "dialysis",
+        "healthcare:speciality": "nephrology",
+        "name": "Ambulantes Dialysezentrum - St. Josefs-Hospital Cloppenburg",
+        "website": "https://www.josefshospital-cloppenburg.de/leistungen/innere-medizin/nephrologie.html"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0375066,
+          52.8471576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10276839733",
+      "properties": {
+        "@id": "node/10276839733",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "17",
+        "addr:postcode": "49661",
+        "addr:street": "Ritterstraße",
+        "description": "Praxis Physikalische Therapie am St. Josefs Hospital",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "physiotherapy",
+        "name": "Nuxoll",
+        "website": "http://www.physikalische-therapie-nuxoll.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0380325,
+          52.8474026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10276839734",
+      "properties": {
+        "@id": "node/10276839734",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "15",
+        "addr:postcode": "49661",
+        "addr:street": "Ritterstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 882700",
+        "contact:website": "http://tueting.cgm-docsite.com/",
+        "description": "Diabetologische Schwerpunktpraxis",
+        "healthcare": "doctor",
+        "healthcare:speciality": "diabetology;general;internal",
+        "level": "1",
+        "name": "Johannes Tüting, Dr. Eliana Mocanu"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0376966,
+          52.8474169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10278945511",
+      "properties": {
+        "@id": "node/10278945511",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "https://hno-om.de/aesthetik/",
+        "description": "ästhetische Behandlungen; plastische Gesichtschirurgie; plastisch-ästhetische Gesichtschirurgie",
+        "healthcare": "doctor",
+        "healthcare:speciality": "maxillofacial_surgery",
+        "level": "3",
+        "name": "Soesten Institut"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0405296,
+          52.8480194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10278945512",
+      "properties": {
+        "@id": "node/10278945512",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "https://www.cloppenburg-mvz.de/gastroenterologie.html",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gastroenterology",
+        "level": "2",
+        "name": "Praxis Gastroenterologie Dr. med. Brinkmann",
+        "opening_hours": "Mo,Tu,Th 08:00-13:00,14:00-17:00; We,Fr 08:00-13:00; Sa,Su,PH off",
+        "operator": "St. Josefs-Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0404384,
+          52.8479085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10278945513",
+      "properties": {
+        "@id": "node/10278945513",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "http://www.cloppenburg-orthopaedie.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics",
+        "level": "1",
+        "name": "Praxis für Orthopädie, Sportorthopädie und Unfallchirurgie",
+        "opening_hours": "Mo,Tu,Th 08:00-12:00,14:00-15:30; We,Fr 08:00-12:00; Sa,Su,PH off",
+        "operator": "St. Josefs-Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0402712,
+          52.8479348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10278945514",
+      "properties": {
+        "@id": "node/10278945514",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "contact:website": "https://www.cloppenburg-mvz.de/onkologie/praxis-pd-dr-baesecke/unsere-praxis.html",
+        "healthcare": "doctor",
+        "healthcare:speciality": "oncology",
+        "level": "1",
+        "name": "Praxis für ambulante Onkologie",
+        "opening_hours": "Mo,Tu,Th 09:00-12:00,14:00-16:00; We,Fr 09:00-12:00; Sa,Su,PH off",
+        "operator": "St. Josefs-Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.040143,
+          52.8478793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10278945517",
+      "properties": {
+        "@id": "node/10278945517",
+        "addr:city": "Cloppenburg",
+        "addr:housename": "Haus St. Damiano - Neues Ärztehaus",
+        "addr:housenumber": "8-12",
+        "addr:postcode": "49661",
+        "addr:street": "Krankenhausstraße",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2025-10-02",
+        "contact:website": "https://www.cloppenburg-mvz.de/gynaekologie/mvz-praxis-karima-boukhchina/unsere-praxis.html",
+        "healthcare": "doctor",
+        "healthcare:speciality": "gynaecology",
+        "level": "1",
+        "name": "Frauenarztpraxis Boukhchina Karima",
+        "opening_hours": "Mo,Tu,Th 08:00-12:00,14:00-16:00; We,Fr 08:00-12:00",
+        "operator": "St. Josefs-Hospital"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0405141,
+          52.847963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311834508",
+      "properties": {
+        "@id": "node/10311834508",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 8888317",
+        "description": "Psychologischer Psychotherapeut",
+        "healthcare": "doctor",
+        "healthcare:speciality": "psychiatry",
+        "name": "Dipl. Psychologe Oliver Wältermann",
+        "opening_hours": "\"Sprechstunden nur nach telefonischer Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0476024,
+          52.8483426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311955714",
+      "properties": {
+        "@id": "node/10311955714",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "20",
+        "addr:postcode": "49661",
+        "addr:street": "St.-Thomas-Straße",
+        "amenity": "doctors",
+        "contact:mobile": "+49 1573 1089623",
+        "contact:website": "https://dr-lehmkuhl-eichhorn.de/",
+        "description": "Fachärztin für Allgemeinmedizin ( Privatärztliche Versorgung: Privat und Selbstzahler)",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Dr. med Lehmkuhl-Eichhorn",
+        "opening_hours": "Mo-Th 10:00-12:00",
+        "operator": "Dr. med Susanne Lehmkuhl-Eichhorn"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0520094,
+          52.8577181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311955720",
+      "properties": {
+        "@id": "node/10311955720",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "13",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "amenity": "doctors",
+        "check_date:opening_hours": "2024-03-20",
+        "description": "T. Tissen: Fachärztin für Allgemeinmedizin; K. Inomjonov: Fachärztin für Innere Medizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general;internal",
+        "level": "1",
+        "name": "Tatjana Tissen, Katharina Inomjonov",
+        "opening_hours": "Mo-Th 08:00-12:00, Mo,Tu,Th 16:00-18:00; Fr 08:00-13:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0374021,
+          52.8416214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10311955721",
+      "properties": {
+        "@id": "node/10311955721",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "13",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 94600",
+        "description": "Fachärzte für Neurologie und Psychiatrie, Psychotherapie",
+        "healthcare": "doctor",
+        "healthcare:speciality": "neurology;psychiatry",
+        "level": "2",
+        "name": "Joachim Hylla, Dr. med. Werner Fölsch",
+        "opening_hours": "Mo,Tu,Th 09:00-13:00,15:00-18:00; We 09:00-13:00; Fr 09:00-14:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0373914,
+          52.8417177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10312048644",
+      "properties": {
+        "@id": "node/10312048644",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "29",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "dentist",
+        "contact:email": "info@dasy-kfo.de",
+        "contact:fax": "+49 4471 84165",
+        "contact:phone": "+49 4471 83232",
+        "contact:website": "https://www.dasy-kfo.de/",
+        "entrance": "yes",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "Dasy & Höne",
+        "operator": "Dasy & Höne - Die Kieferorthopäden",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0406049,
+          52.8450115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10571582740",
+      "properties": {
+        "@id": "node/10571582740",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Cappelner Straße",
+        "amenity": "cafe",
+        "contact:phone": "+49 4471 884320",
+        "contact:website": "https://www.stadtbaeckerei-frerker.de/filialen/",
+        "indoor_seating": "yes",
+        "name": "Stadtbäckerei Frerker",
+        "opening_hours": "Mo-Sa 08:00-19:00; Su, PH off",
+        "outdoor_seating": "no",
+        "shop": "bakery",
+        "smoking": "no",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0529543,
+          52.8417123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10591420737",
+      "properties": {
+        "@id": "node/10591420737",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "15",
+        "addr:postcode": "49661",
+        "addr:street": "Am Bürgerpark",
+        "contact:mobile": "+49 171 1844174",
+        "contact:phone": "+49 4471 1844174",
+        "contact:website": "https://physio-clp.de/",
+        "healthcare": "physiotherapist",
+        "healthcare:speciality": "massage_therapy;occupational",
+        "name": "Therapiepunkt",
+        "opening_hours": "Mo-Th 07:00-20:00; Fr 07:00-14:00; Sa,Su,PH off",
+        "operator": "Therapiepunkt Gesundheits GBR"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0620605,
+          52.8434411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10591428655",
+      "properties": {
+        "@id": "node/10591428655",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "10a",
+        "addr:postcode": "49661",
+        "addr:street": "Südstraße",
+        "amenity": "doctors",
+        "check_date": "2025-03-18",
+        "check_date:opening_hours": "2024-03-20",
+        "description": "Gemeinschaftspraxis Dr. med. Matthias Herzog: Facharzt für Allgemeinmedizin & Innere Medizin, Palliativmedizin, Notarzt; Frau Sabine Siebels: Fachärztin für Allgemeinmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "emergency;general;internal;palliative",
+        "name": "Gemeinschaftspraxis Dr. med. Herzog / Siebels",
+        "opening_hours": "Mo-Fr 08:00-12:30, Mo,Tu,Th 15:00-18:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.032127,
+          52.8403426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10591428657",
+      "properties": {
+        "@id": "node/10591428657",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "6",
+        "addr:postcode": "49661",
+        "addr:street": "Dietrich-Bonhoeffer-Straße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 4420",
+        "description": "Fachärzte für Allgemeinmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "general",
+        "name": "Alexander Hermann, Ludmilla Hermann",
+        "opening_hours": "Mo-Fr 08:00-12:00, Mo,Th 16:00-18:00; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0425917,
+          52.8429955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10766509942",
+      "properties": {
+        "@id": "node/10766509942",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Am Alten Lokschuppen",
+        "amenity": "cafe",
+        "diet:vegan": "yes",
+        "diet:vegetarian": "yes",
+        "email": "info@dertortenprinz.de",
+        "name": "Café - Der Tortenprinz",
+        "opening_hours": "Sa-Su 14:00-18:00",
+        "phone": "+491717031412",
+        "website": "https://www.dertortenprinz.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0615565,
+          52.8462402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11016764857",
+      "properties": {
+        "@id": "node/11016764857",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "8",
+        "addr:postcode": "49661",
+        "addr:street": "Bachstraße",
+        "amenity": "kindergarten",
+        "contact:phone": "+49 4471 918031",
+        "contact:website": "https://www.caritas-altenoythe.de/kindliche-betreuung-foerderung/kita-fuer-alle/sprachheilkindergarten-cloppenburg/",
+        "name": "KITA für ALLE - Cloppenburg",
+        "opening_hours:office": "Mo-Fr 08:00-14:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0637261,
+          52.8402106
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11105541170",
+      "properties": {
+        "@id": "node/11105541170",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Pregelstraße",
+        "contact:phone": "+49 4471 9006773",
+        "contact:website": "https://www.kjp-karmann.de/",
+        "description": "Kinder- und Jugenlichenpsychotherapeutin (VT)",
+        "healthcare": "physiotherapist",
+        "name": "Marina Karmann",
+        "opening_hours": "\"Termine nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0288051,
+          52.8380383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11308561188",
+      "properties": {
+        "@id": "node/11308561188",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "23",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 82280",
+        "contact:website": "https://www.chirurgie-cloppenburg.de/",
+        "entrance": "yes",
+        "healthcare": "doctor",
+        "healthcare:speciality": "surgery;trauma",
+        "name": "Gensigk",
+        "opening_hours": "Mo-Fr 08:00-11:30, Mo-Th 15:00-17:00",
+        "operator": "Franz Gensigk"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0369812,
+          52.8410695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11347083358",
+      "properties": {
+        "@id": "node/11347083358",
+        "addr:housenumber": "4",
+        "addr:street": "Lange Straße",
+        "check_date": "2025-09-12",
+        "check_date:opening_hours": "2024-04-30",
+        "healthcare": "physiotherapist",
+        "level": "2",
+        "name": "Praxis Brand",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0419841,
+          52.8458553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11551978679",
+      "properties": {
+        "@id": "node/11551978679",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housename": "Zahnärzte am Markt",
+        "addr:housenumber": "8",
+        "addr:postcode": "49661",
+        "addr:street": "Am Markt",
+        "amenity": "dentist",
+        "contact:phone": "+49 4471 4433",
+        "healthcare": "dentist",
+        "name": "Zahnärzte am Markt",
+        "opening_hours": "Mo-Th 08:00-12:30, 14:00-18:00; Fr 08:00-15:30; Sa \"nach Vereinbarung\"; Su,PH off",
+        "operator": "Dres. Mählmann, Bahlmann & Partner"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.03758,
+          52.842369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11557948336",
+      "properties": {
+        "@id": "node/11557948336",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Vahrener Straße",
+        "brand": "nah und gut",
+        "brand:wikidata": "Q701755",
+        "brand:wikipedia": "de:Edeka",
+        "check_date": "2026-06-03",
+        "entrance": "yes",
+        "level": "0",
+        "name": "nah und gut Konofol",
+        "opening_hours": "Mo,We-Fr 06:30-12:30,14:30-18:00; Tu 06:30-12:30; Sa 06:30-12:00; Su 08:00-11:00",
+        "payment:cash": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:paypal": "yes",
+        "phone": "+49 4471 2704",
+        "shop": "supermarket",
+        "website": "https://www.konofol.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0264434,
+          52.840088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11599445848",
+      "properties": {
+        "@id": "node/11599445848",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Antoniusplatz",
+        "amenity": "doctors",
+        "check_date": "2026-10-20",
+        "contact:phone": "+49 4471 7078425",
+        "contact:website": "https://kinderarzt-clp.de/",
+        "description": "Facharzt für Kinderheilkunde und Jugendmedizin",
+        "healthcare": "doctor",
+        "healthcare:speciality": "paediatrics",
+        "level": "2",
+        "name": "Dr. med. Sebastian Pfahl",
+        "opening_hours": "Mo,Tu,Th 08:30-13:00, 14:00-16:30; We 08:30-12:30; Fr,Sa,Su,PH off",
+        "start_date": "2023-05"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426929,
+          52.8486046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11631773674",
+      "properties": {
+        "@id": "node/11631773674",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Am Capitol",
+        "healthcare": "physiotherapist",
+        "name": "Physio 4 You",
+        "opening_hours": "\"Termine nach Vereinbarung\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0398437,
+          52.8447099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11631773675",
+      "properties": {
+        "@id": "node/11631773675",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "17",
+        "addr:postcode": "49661",
+        "addr:street": "Altes Stadttor",
+        "amenity": "doctors",
+        "check_date": "2024-11-13",
+        "contact:phone": "+49 4471 86777",
+        "contact:website": "http://www.orthopaedie-scholtz.de/",
+        "healthcare": "doctor",
+        "healthcare:speciality": "orthopaedics;trauma",
+        "level": "1",
+        "name": "Orthopäden & Unfallchirurgen Am alten Stadttor",
+        "opening_hours": "Mo-Fr 07:30-13:00, Mo,Tu,Th 15:00-18:00; Sa,Su,PH off",
+        "operator": "Herr Scholtz, Dr. med. Krehmeiner und Dr. med. Bramlage"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0413967,
+          52.8461298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11642847403",
+      "properties": {
+        "@id": "node/11642847403",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Wilke-Steding-Straße",
+        "amenity": "doctors",
+        "check_date": "2025-10-12",
+        "description": "Dr. med. Xenia Brinkmann Fachärztin für Innere Medizin, Hausärztliche Versorgung",
+        "healthcare": "doctor",
+        "healthcare:speciality": "internal",
+        "name": "Dr. med. Xenia Brinkmann",
+        "opening_hours": "Mo-Fr 08:00-12:00, Tu 15:00-17:00 || \"und nach Vereinbarung\"; Sa,Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0337598,
+          52.8498438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11673278246",
+      "properties": {
+        "@id": "node/11673278246",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "19",
+        "addr:postcode": "49661",
+        "addr:street": "Bürgermeister-Winkler-Straße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 81010",
+        "description": "Fachärztin für Psychiatrie und Psychotherapie",
+        "healthcare": "doctor",
+        "healthcare:speciality": "psychiatry",
+        "name": "Dr. med. M. Weiler-Berges",
+        "opening_hours": "\"Sprechstunden nach Vereinbarung Tel. 04471 81010\""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.040631,
+          52.8439911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11673303283",
+      "properties": {
+        "@id": "node/11673303283",
+        "healthcare": "podiatrist",
+        "name": "Institut für angewandte Podologie",
+        "opening_hours": "Mo-Th 08:00-18:00, Fr 08:00-16:00 || \"und nach Vereinbarung, Mittwochs nachmittags geschlossen\"",
+        "operator": "Reinhard Bröring und Elena Wakengut"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0391917,
+          52.8453768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11746773778",
+      "properties": {
+        "@id": "node/11746773778",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "30",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "check_date": "2026-10-17",
+        "contact:website": "https://physiovital-garrel.de/",
+        "healthcare": "physiotherapist",
+        "name": "Physiovital Cloppenburg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0506591,
+          52.8432811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11746773779",
+      "properties": {
+        "@id": "node/11746773779",
+        "check_date:opening_hours": "2026-09-11",
+        "contact:mobile": "+49 151 54250889",
+        "description": "Psychologischer Psychotherapie",
+        "healthcare": "psychotherapist",
+        "healthcare:speciality": "behavior",
+        "name": "Susanne Voet",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0473056,
+          52.8470917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11764437854",
+      "properties": {
+        "@id": "node/11764437854",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "48",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "addr:suburb": "Sedelsberg",
+        "contact:mobile": "+49 172 6096691",
+        "contact:phone": "+49 4471 8827073",
+        "contact:website": "http://ergo-cloppenburg.de/",
+        "healthcare": "physiotherapist",
+        "name": "Frank Fröhlich",
+        "opening_hours": "Mo-Fr 09:00-12:00, 13:30-18:30 || \"und nach Vereinbarung\"; Sa, Su, PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.033731,
+          52.8387338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11879624880",
+      "properties": {
+        "@id": "node/11879624880",
+        "healthcare": "physiotherapist",
+        "name": "Physiotherapie an der Soeste",
+        "operator": "Anne Linschmann"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0429611,
+          52.8472419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11981566535",
+      "properties": {
+        "@id": "node/11981566535",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "16",
+        "addr:postcode": "49661",
+        "addr:street": "Eschstraße",
+        "check_date:opening_hours": "2024-08-20",
+        "contact:phone": "+49 4471 932211",
+        "contact:website": "https://therapie-voss.de/",
+        "healthcare": "physiotherapist",
+        "name": "Therapie Voss",
+        "opening_hours:signed": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0414293,
+          52.8439656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12160708491",
+      "properties": {
+        "@id": "node/12160708491",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "3",
+        "addr:postcode": "49661",
+        "addr:street": "Hagenstraße",
+        "amenity": "dentist",
+        "check_date": "2026-09-11",
+        "contact:phone": "+49 4471 933966",
+        "contact:website": "http://www.dr-rueter.de/",
+        "healthcare": "dentist",
+        "name": "Dr. med Rüter",
+        "opening_hours": "Mo-Fr 07:00-20:00; Sa \"nach Vereinbarung\";Su,PH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0477628,
+          52.8463114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12160708492",
+      "properties": {
+        "@id": "node/12160708492",
+        "contact:phone": "+49 4471 9333",
+        "healthcare": "physiotherapist"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.047791,
+          52.8462419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12312661236",
+      "properties": {
+        "@id": "node/12312661236",
+        "amenity": "cafe",
+        "check_date": "2024-11-04",
+        "name": "Bruno",
+        "outdoor_seating": "yes",
+        "shop": "bakery",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0466314,
+          52.8444703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12856122487",
+      "properties": {
+        "@id": "node/12856122487",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Bahnhofstraße",
+        "amenity": "doctors",
+        "contact:phone": "+49 4471 9574535",
+        "contact:website": "https://www.substitutionsambulanz.de/",
+        "description": "Fachärzte für Suchtmedizin",
+        "entrance": "yes",
+        "healthcare": "doctor",
+        "healthcare:speciality": "addiction_medicine",
+        "name": "Substitutionstherapie Cloppenburg",
+        "opening_hours": "Mo-Fr 08:30-11:00, Th 16:00-18:00; Sa 09:00-11:00; Su,PH off",
+        "operator": "Dr. med. Katharina Meyer-Albert, Dr. med Franz Meyer, Georg Meyer, Viktoria Danielyan und Raged Al Yousef"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0438203,
+          52.8457793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13650897509",
+      "properties": {
+        "@id": "node/13650897509",
+        "amenity": "cafe",
+        "name": "Café Holmström",
+        "opening_hours": "Tu,Th 15:00-17:00; SH off"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0379187,
+          52.8503786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14300395306",
+      "properties": {
+        "@id": "node/14300395306",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "1",
+        "addr:postcode": "49661",
+        "addr:street": "Blexener Straße",
+        "amenity": "dentist",
+        "contact:phone": "+49 4471 6361",
+        "contact:website": "https://www.zahnaerzte-cloppenburg.de/",
+        "healthcare": "dentist",
+        "name": "Zahnärzte Bether Höhe",
+        "operator": "Annette Heidemann; Karin Vallo"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0590673,
+          52.8584113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14312488417",
+      "properties": {
+        "@id": "node/14312488417",
+        "addr:city": "Cloppenburg",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "amenity": "dentist",
+        "healthcare": "dentist",
+        "healthcare:speciality": "orthodontics",
+        "name": "Dasy & Höne",
+        "operator": "Dasy & Höne",
+        "phone": "+49 4471 83232",
+        "website": "https://www.dasy-kfo.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0405507,
+          52.8450948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14354130791",
+      "properties": {
+        "@id": "node/14354130791",
+        "amenity": "cafe",
+        "name": "City Cafe"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0417625,
+          52.8492329
+        ]
+      }
+    }
+  ]
+}
