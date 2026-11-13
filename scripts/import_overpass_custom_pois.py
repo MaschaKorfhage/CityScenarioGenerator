@@ -17,13 +17,12 @@ from dataclasses import dataclass
 from typing import Any
 
 if __package__:
-    from scripts.generate_missing_location_queries import infer_location_type
+    from scripts.generate_missing_location_queries import infer_location_types
 else:
-    from generate_missing_location_queries import infer_location_type
+    from generate_missing_location_queries import infer_location_types
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = PROJECT_ROOT / "scenario_inputs/02625/custom_pois.json"
 OSM_MAPPING_DIR = PROJECT_ROOT / "data/osm_mapping"
 LPG_LOCATIONS_PATH = PROJECT_ROOT / "data/lpg_locations/all_remote.txt"
 
@@ -36,12 +35,18 @@ class PoiCandidate:
     longitude: float
     name: str
     properties: dict[str, Any]
+    include_location_type_in_id: bool = False
 
     @property
     def custom_poi_id(self) -> str:
         name_part = slug_component(self.name or self.location_type)
         source_part = slug_component(self.source_id)
-        return f"OSM_{name_part}_{source_part}"
+        type_part = (
+            f"_{slug_component(self.location_type)}"
+            if self.include_location_type_in_id
+            else ""
+        )
+        return f"OSM_{name_part}_{source_part}{type_part}"
 
     def to_custom_poi(self) -> dict[str, Any]:
         return {
@@ -114,6 +119,7 @@ def candidate_from_feature(
     mappings: dict[str, dict[str, set[str]]],
     valid_locations: set[str],
     location_type_override: str | None = None,
+    include_location_type_in_id: bool = False,
 ) -> PoiCandidate:
     properties = feature.get("properties")
     geometry = feature.get("geometry")
@@ -179,7 +185,35 @@ def candidate_from_feature(
         longitude=longitude,
         name=name,
         properties=properties,
+        include_location_type_in_id=include_location_type_in_id,
     )
+
+
+def candidates_from_feature(
+    feature: dict[str, Any],
+    mappings: dict[str, dict[str, set[str]]],
+    valid_locations: set[str],
+    location_type_override: str | None = None,
+    infer_missing_location_types: bool = False,
+) -> list[PoiCandidate]:
+    if location_type_override is not None:
+        location_types = (location_type_override,)
+    elif infer_missing_location_types:
+        location_types = infer_location_types(feature)
+    else:
+        return [candidate_from_feature(feature, mappings, valid_locations)]
+
+    include_location_type_in_id = len(location_types) > 1
+    return [
+        candidate_from_feature(
+            feature,
+            mappings,
+            valid_locations,
+            location_type_override=location_type,
+            include_location_type_in_id=include_location_type_in_id,
+        )
+        for location_type in location_types
+    ]
 
 
 def distance_meters(first: PoiCandidate, second: PoiCandidate) -> float:
@@ -345,6 +379,27 @@ def resolve_path(path: Path) -> Path:
     return path if path.is_absolute() else PROJECT_ROOT / path
 
 
+def default_output_path(input_paths: list[Path]) -> Path:
+    output_directories = set()
+    for input_path in input_paths:
+        resolved_input = resolve_path(input_path)
+        scenario_directory = next(
+            (
+                parent
+                for parent in resolved_input.parents
+                if parent.parent.name == "scenario_inputs"
+            ),
+            None,
+        )
+        output_directories.add(scenario_directory or resolved_input.parent)
+
+    if len(output_directories) != 1:
+        raise ValueError(
+            "Input files belong to different scenario directories; specify --output."
+        )
+    return output_directories.pop() / "custom_pois.json"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
                 description="Overpass-Turbo-GeoJSON sicher in custom_pois.json übernehmen.",
@@ -352,7 +407,7 @@ def main() -> int:
     Preview without writing:
                 ./.cityvenv/bin/python scripts/import_overpass_custom_pois.py --input scenario_inputs/02625/extra_custom_pois/overpass_queries/missing_locations.geojson --infer-missing-location-types --dry-run
 
-    Write all unambiguous matches to custom_pois.json:
+    Write all matched LPG types to custom_pois.json:
                 ./.cityvenv/bin/python scripts/import_overpass_custom_pois.py --input scenario_inputs/02625/extra_custom_pois/overpass_queries/missing_locations.geojson --infer-missing-location-types --output scenario_inputs/02625/custom_pois.json""",
                 formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -366,8 +421,8 @@ def main() -> int:
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUTPUT,
-        help=f"Ziel-JSON (Standard: {DEFAULT_OUTPUT})",
+        default=None,
+        help="Ziel-JSON (Standard: custom_pois.json im Szenarioverzeichnis der Eingabe)",
     )
     location_group = parser.add_mutually_exclusive_group()
     location_group.add_argument(
@@ -416,15 +471,13 @@ def main() -> int:
         feature_count += len(features)
         for feature in features:
             try:
-                location_type = args.location_type
-                if args.infer_missing_location_types:
-                    location_type = infer_location_type(feature)
-                candidates.append(
-                    candidate_from_feature(
+                candidates.extend(
+                    candidates_from_feature(
                         feature,
                         mappings,
                         valid_locations,
-                        location_type,
+                        location_type_override=args.location_type,
+                        infer_missing_location_types=args.infer_missing_location_types,
                     )
                 )
             except ValueError as error:
@@ -436,7 +489,14 @@ def main() -> int:
                         f"{feature.get('id') or properties.get('@id') or '<ohne OSM-ID>'}: {reason}"
                     )
 
-    output_path = resolve_path(args.output)
+    try:
+        output_path = (
+            resolve_path(args.output)
+            if args.output is not None
+            else default_output_path(args.input)
+        )
+    except ValueError as error:
+        parser.error(str(error))
     try:
         payload = load_custom_pois(output_path)
     except (OSError, ValueError) as error:
@@ -446,7 +506,7 @@ def main() -> int:
     )
 
     print(f"GeoJSON-Features gelesen: {feature_count}")
-    print(f"Features mit zugeordnetem LPG-Typ: {len(candidates)}")
+    print(f"POI-Zuordnungen mit LPG-Typ: {len(candidates)}")
     print(f"Neu: {added}; aktualisiert: {updated}; Duplikate: {duplicates}")
     print(f"Übersprungen: {sum(skipped.values())}")
     for reason, count in sorted(skipped.items()):

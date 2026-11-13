@@ -1,9 +1,16 @@
+from pathlib import Path
+
 from scripts.import_overpass_custom_pois import (
     PoiCandidate,
     candidate_from_feature,
+    candidates_from_feature,
+    default_output_path,
     merge_candidates,
 )
-from scripts.generate_missing_location_queries import infer_location_type
+from scripts.generate_missing_location_queries import (
+    infer_location_type,
+    infer_location_types,
+)
 
 
 def _kindergarten_feature(
@@ -62,7 +69,54 @@ def test_combined_import_reports_ambiguous_location_type():
     except ValueError as error:
         assert "ambiguous missing LPG location type" in str(error)
     else:
-        raise AssertionError("Expected an ambiguous music school to be reported")
+        raise AssertionError("Expected an ambiguous feature to be reported")
+
+
+def test_combined_import_keeps_all_matching_types_and_is_idempotent():
+    feature = {
+        "id": "node/6186304266",
+        "properties": {
+            "leisure": "fitness_centre",
+            "sport": "yoga",
+            "name": "Example Fitness",
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [14.42, 51.18],
+        },
+    }
+    location_types = infer_location_types(feature)
+
+    candidates = candidates_from_feature(
+        feature,
+        {},
+        set(location_types),
+        infer_missing_location_types=True,
+    )
+
+    assert location_types == ("Fitness Studio", "Yoga Studio")
+    assert {candidate.location_type for candidate in candidates} == set(location_types)
+    assert len({candidate.custom_poi_id for candidate in candidates}) == 2
+
+    merged, added, updated, duplicates = merge_candidates(
+        {"PointsOfInterest": {}}, candidates
+    )
+    assert (added, updated, duplicates) == (2, 0, 0)
+
+    rerun, added, updated, duplicates = merge_candidates(merged, candidates)
+    assert (added, updated, duplicates) == (0, 0, 2)
+    assert rerun == merged
+
+
+def test_default_output_uses_scenario_root_for_nested_input():
+    input_path = Path(
+        "/workspace/scenario_inputs/49661/extra_custom_pois/overpass_queries/"
+        "cloppenburg_extra.geojson"
+    )
+
+    assert default_output_path([input_path]) == Path(
+        "/workspace/scenario_inputs/49661/custom_pois.json"
+    )
 
 
 def test_merge_keeps_one_nearby_same_named_osm_poi_and_preserves_existing():

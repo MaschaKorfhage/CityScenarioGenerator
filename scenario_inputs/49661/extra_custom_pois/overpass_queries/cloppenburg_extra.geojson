@@ -1,0 +1,8226 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-12T15:34:22Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "relation/132104",
+      "properties": {
+        "@id": "relation/132104",
+        "name": "Geestweg",
+        "network": "rcn",
+        "ref": "Geest",
+        "route": "bicycle",
+        "symbol:de": "Stilisierter gelber Weg über einen blauen und einen grünen Streifen, darunter Text \"Geestweg\"",
+        "type": "route",
+        "website": "https://www.emsland.com/tour/geest-radweg",
+        "wikidata": "Q1239231",
+        "wikipedia": "de:Geestweg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.1178605,
+          52.88782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/572231",
+      "properties": {
+        "@id": "relation/572231",
+        "distance": "341",
+        "name": "Boxenstopp-Route",
+        "network": "rcn",
+        "note": "ref-Tag inoffiziell, noch o.t.g.",
+        "ref": "Box",
+        "roundtrip": "yes",
+        "route": "bicycle",
+        "symbol:de": "weißes Bauernhaus auf grünem Grund, Text \"Boxenstop Route\"",
+        "type": "route",
+        "website": "https://www.oldenburger-muensterland.de/boxenstopp-route/8752",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0530627,
+          52.8423973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/1921237",
+      "properties": {
+        "@id": "relation/1921237",
+        "distance": "192.7",
+        "email": "info@oldenburger-muensterland.de",
+        "name": "Cloppenburger Radtour",
+        "network": "rcn",
+        "roundtrip": "yes",
+        "route": "bicycle",
+        "type": "route",
+        "website": "https://www.oldenburger-muensterland.de/freizeit-urlaub/entdecken/touren/cloppenburger-radtour/8727",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.8782475,
+          52.9241906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/2201595",
+      "properties": {
+        "@id": "relation/2201595",
+        "distance": "168",
+        "fixme": "incomplete",
+        "name": "Radtour durch Geest und Moor",
+        "network": "rcn",
+        "roundtrip": "yes",
+        "route": "bicycle",
+        "type": "route",
+        "url": "https://www.emsland.com/urlaub/natur-aktiv/touren/details/radtour-durch-geest-und-moor",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.979883,
+          52.9225145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/3565720",
+      "properties": {
+        "@id": "relation/3565720",
+        "name": "Brunnenweg (Hoheging)",
+        "network": "lwn",
+        "osmc:symbol": "red::::",
+        "ref": "6",
+        "route": "foot",
+        "symbol": "rote Pfostenspitze",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.1216104,
+          52.9045714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/4599679",
+      "properties": {
+        "@id": "relation/4599679",
+        "distance": "392",
+        "from": "Oldenburg",
+        "name": "Radroute der Megalithkultur",
+        "network": "rcn",
+        "ref": "Megalithkultur",
+        "route": "bicycle",
+        "symbol:de": "Dolmen vor Landkarte mit Routenverlauf, darunter grün hinterlegtes Textfeld mit Weißem Text: \"Radroute\", Dunkelgrün (schwarz?) \"der Megalithkultur\"",
+        "to": "Osnabrück",
+        "type": "route",
+        "website": "https://www.strassedermegalithkultur.de/de/die-megalith-radroute",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.8910003,
+          52.7061515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/6955711",
+      "properties": {
+        "@id": "relation/6955711",
+        "from": "Meppen",
+        "name": "Geestweg",
+        "network": "rwn",
+        "operator": "Wiehengebirgsverband Weser Ems e.V.",
+        "osmc:symbol": "black:black::G:white",
+        "ref": "G",
+        "route": "hiking",
+        "symbol": "weißes G im schwarzen Quadrat",
+        "to": "Bremen",
+        "type": "route",
+        "website": "https://www.wiehengebirgsverband-weser-ems.de/Unsere-Wanderwege/Fernwanderwege-100-km/Der-Geestweg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.086924,
+          52.8847722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/8080359",
+      "properties": {
+        "@id": "relation/8080359",
+        "landuse": "forest",
+        "leisure": "park",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0163119,
+          52.8415014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9764826",
+      "properties": {
+        "@id": "relation/9764826",
+        "check_date": "2026-10-29",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "19-63",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0492749,
+          52.8491133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9764827",
+      "properties": {
+        "@id": "relation/9764827",
+        "cycle_network": "Oldenburger Münsterland",
+        "name": "Cloppenburg (20) - Cloppenburg (59)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Erholungsgebiet Thülsfelder Talsperre e.V.",
+        "ref": "20-59",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0430871,
+          52.8453437
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/9764828",
+      "properties": {
+        "@id": "relation/9764828",
+        "name": "Cloppenburg (20) - Cloppenburg (53)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "20-53",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0416397,
+          52.8438022
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12037763",
+      "properties": {
+        "@id": "relation/12037763",
+        "check_date": "2026-09-21",
+        "distance": "1.9",
+        "name": "Cloppenburg (40) - Lastrup (71)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "40-71",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9674713,
+          52.8082568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12037764",
+      "properties": {
+        "@id": "relation/12037764",
+        "check_date": "2026-09-21",
+        "distance": "0.7",
+        "name": "Cloppenburg (39) - Cloppenburg (96)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "39-96",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9825831,
+          52.8201528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12040251",
+      "properties": {
+        "@id": "relation/12040251",
+        "distance": "2.6",
+        "name": "Lastrup (43) - Cloppenburg (46)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "43-46",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.965621,
+          52.8302995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12040252",
+      "properties": {
+        "@id": "relation/12040252",
+        "check_date": "2026-09-21",
+        "distance": "1.4",
+        "name": "Cloppenburg (3) - Cloppenburg (18)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "3-18",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0182978,
+          52.8585284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12200617",
+      "properties": {
+        "@id": "relation/12200617",
+        "leisure": "park",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0274693,
+          52.8343556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12228547",
+      "properties": {
+        "@id": "relation/12228547",
+        "check_date": "2026-09-21",
+        "distance": "1.3",
+        "name": "Cloppenburg (23) - Hoheging (29)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "23-29",
+        "ref:LKCLP_IntName": "23 (Clp Cloppenburg) -> 29 (Clp Emstek)",
+        "ref:LKCLP_NKStr_ID": "522300456",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0879778,
+          52.898952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12228595",
+      "properties": {
+        "@id": "relation/12228595",
+        "distance": "4.3",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "12-55",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0875823,
+          52.8609642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12228631",
+      "properties": {
+        "@id": "relation/12228631",
+        "distance": "2.6",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "23-27",
+        "ref:LKCLP_IntName": "23 (Clp Cloppenburg) -> 27 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300461",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0681471,
+          52.8909721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12228632",
+      "properties": {
+        "@id": "relation/12228632",
+        "distance": "2.0",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "27-60",
+        "ref:LKCLP_IntName": "27 (Clp Cloppenburg) -> 60 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300466",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0577729,
+          52.8754664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12229013",
+      "properties": {
+        "@id": "relation/12229013",
+        "distance": "0.9",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "25-27",
+        "ref:LKCLP_IntName": "25 (Clp Garrel) -> 27 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300467",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0566245,
+          52.8880934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12229670",
+      "properties": {
+        "@id": "relation/12229670",
+        "distance": "1.9",
+        "fixme": "Routenverlauf überprüfen, besonders Position Knoten 26",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "Survey nur an KP 74, Wo liegt nun genau Knoten 26 nach dem Umbau?",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "26-74",
+        "ref:LKCLP_IntName": "26 (Clp Garrel) -> 74 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522000220",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0251445,
+          52.8918603
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12229808",
+      "properties": {
+        "@id": "relation/12229808",
+        "check_date": "2026-10-30",
+        "distance": "4.0",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "18-26",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0198759,
+          52.8756725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12250385",
+      "properties": {
+        "@id": "relation/12250385",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "4.6",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "25-52",
+        "ref:LKCLP_IntName": "25 (Clp Garrel) -> 52 (Clp Garrel)",
+        "ref:LKCLP_NKStr_ID": "522300434",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0515534,
+          52.910973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/12638104",
+      "properties": {
+        "@id": "relation/12638104",
+        "leisure": "track",
+        "sport": "running",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0106093,
+          52.8340913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14891507",
+      "properties": {
+        "@id": "relation/14891507",
+        "distance": "1.8",
+        "name": "Cloppenburg (16) - Cloppenburg (19)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "16-19",
+        "route": "bicycle",
+        "survey:date": "2026-07-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0568833,
+          52.857394
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14894822",
+      "properties": {
+        "@id": "relation/14894822",
+        "description": "RVN CLP, Cloppenburg, Garreler Weg Süd",
+        "network:type": "basic_network",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0430555,
+          52.8537296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14894894",
+      "properties": {
+        "@id": "relation/14894894",
+        "distance": "1.8",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "Von KP 53 aus ist der Verlauf richtungsabhängig ausgeschildert",
+        "ref": "53-97",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0321738,
+          52.8387735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14894934",
+      "properties": {
+        "@id": "relation/14894934",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "2.1",
+        "name": "Cappeln (28) - Cloppenburg (40)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "28-40",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9946017,
+          52.8102475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/14895078",
+      "properties": {
+        "@id": "relation/14895078",
+        "check_date": "2026-09-21",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "1.9",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "79-82",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9998122,
+          52.8421553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15084104",
+      "properties": {
+        "@id": "relation/15084104",
+        "distance": "4.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "23-35",
+        "ref:LKCLP_IntName": "23 (Clp Cloppenburg) -> 35 (Clp Garrel)",
+        "ref:LKCLP_NKStr_ID": "522300438",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0706974,
+          52.9165246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/15432878",
+      "properties": {
+        "@id": "relation/15432878",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "5.9",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "48-55",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9534247,
+          52.8464374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/17558130",
+      "properties": {
+        "@id": "relation/17558130",
+        "leisure": "park",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.034484,
+          52.8253577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/19985807",
+      "properties": {
+        "@id": "relation/19985807",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "4",
+        "addr:postcode": "49661",
+        "addr:street": "Cappelner Straße",
+        "amenity": "car_wash",
+        "automated": "yes",
+        "building": "yes",
+        "check_date:opening_hours": "2024-07-01",
+        "name": "Janzen Autowasch",
+        "opening_hours": "Mo-Sa 09:00-19:00; Su,PH off",
+        "self_service": "no",
+        "type": "multipolygon",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0550325,
+          52.8415267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368307",
+      "properties": {
+        "@id": "relation/20368307",
+        "description": "RVN CLP, Cloppenburg, Am Dorfkamp",
+        "network:type": "basic_network",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0467165,
+          52.8526425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368308",
+      "properties": {
+        "@id": "relation/20368308",
+        "description": "RVN CLP, Cloppenburg, Garreler Weg Nord",
+        "network:type": "basic_network",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0447419,
+          52.8595171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368309",
+      "properties": {
+        "@id": "relation/20368309",
+        "check_date": "2026-09-21",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "60-98",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0511912,
+          52.8651021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368310",
+      "properties": {
+        "@id": "relation/20368310",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "74-98",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0408758,
+          52.8787526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368311",
+      "properties": {
+        "@id": "relation/20368311",
+        "distance": "3.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "9-74",
+        "ref:LKCLP_IntName": "9 (Clp Garrel) -> 74 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522000218",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0358906,
+          52.9086056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20368324",
+      "properties": {
+        "@id": "relation/20368324",
+        "check_date": "2026-10-29",
+        "distance": "0.7",
+        "name": "Cloppenburg (63) - Cloppenburg (75)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "63-75",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0513468,
+          52.8456271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20375769",
+      "properties": {
+        "@id": "relation/20375769",
+        "description": "RVN CLP, Cloppenburg, Verbindung Hagenstr.-Pingel-Anton-Platz",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0478491,
+          52.8454282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20375770",
+      "properties": {
+        "@id": "relation/20375770",
+        "check_date": "2026-09-21",
+        "distance": "1.1",
+        "name": "Cloppenburg (18) - Cloppenburg (98)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "18-98",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0356433,
+          52.8620957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20375771",
+      "properties": {
+        "@id": "relation/20375771",
+        "description": "RVN CLP, Garrel, Flugplatzweg",
+        "fixme": "incomplete",
+        "network:type": "basic_network",
+        "route": "bicycle",
+        "survey:date": "2026-03-20",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0238571,
+          52.9020807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20376192",
+      "properties": {
+        "@id": "relation/20376192",
+        "distance": "1.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "25-74",
+        "ref:LKCLP_IntName": "25 (Clp Garrel) -> 74 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522000219",
+        "route": "bicycle",
+        "survey:date": "2026-07-24",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0467749,
+          52.8941059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20376193",
+      "properties": {
+        "@id": "relation/20376193",
+        "distance": "0.5",
+        "name": "Cloppenburg (59) - Cloppenburg (63)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "59-63",
+        "route": "bicycle",
+        "survey:date": "2026-07-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0451679,
+          52.8471926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20376195",
+      "properties": {
+        "@id": "relation/20376195",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "0.8",
+        "name": "(75) - (87)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Erholungsgebiet Thülsfelder Talsperre e.V.",
+        "ref": "75-87",
+        "route": "bicycle",
+        "survey:date": "2026-07-14",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0583567,
+          52.8468829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20998620",
+      "properties": {
+        "@id": "relation/20998620",
+        "distance": "4.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "16-23",
+        "ref:LKCLP_IntName": "16 (Clp Cloppenburg) -> 23 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300462",
+        "route": "bicycle",
+        "survey:date": "2026-09-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.071094,
+          52.8807181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20998621",
+      "properties": {
+        "@id": "relation/20998621",
+        "distance": "4.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "23-60",
+        "route": "bicycle",
+        "survey:date": "2026-09-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0695442,
+          52.8815237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20999481",
+      "properties": {
+        "@id": "relation/20999481",
+        "distance": "0.6",
+        "fixme": "resurvey recommended - info based on data provided by LK CLP 2026-08",
+        "name": "Cloppenburg (16) - Cloppenburg (55)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "noch nicht abgefahren",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "16-55",
+        "ref:LKCLP_IntName": "16 (Clp Cloppenburg) -> 55 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300936",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0638128,
+          52.8623403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/20999482",
+      "properties": {
+        "@id": "relation/20999482",
+        "distance": "0.5",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "16-60",
+        "ref:LKCLP_IntName": "16 (Clp Cloppenburg) -> 60 (Clp Cloppenburg)",
+        "ref:LKCLP_NKStr_ID": "522300932",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.060597,
+          52.865204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21002673",
+      "properties": {
+        "@id": "relation/21002673",
+        "distance": "0.7",
+        "name": "Cloppenburg (19) - Cloppenburg (87)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "19-87",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0567275,
+          52.8503677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21003241",
+      "properties": {
+        "@id": "relation/21003241",
+        "distance": "3.2",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "32-98",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.1150303,
+          52.8353633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21003242",
+      "properties": {
+        "@id": "relation/21003242",
+        "check_date": "2026-09-14",
+        "distance": "1.3",
+        "name": "(8) - (32)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "8-32",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0891553,
+          52.8353221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21003243",
+      "properties": {
+        "@id": "relation/21003243",
+        "distance": "2.3",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "Bitte Zwischenwegweiser ergänzen",
+        "ref": "32-87",
+        "route": "bicycle",
+        "source": "Karten und Wegweiser an Knotenpunkten 19 und 32 sowie Wegweisern",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0774307,
+          52.845073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21003244",
+      "properties": {
+        "@id": "relation/21003244",
+        "description": "Teilstrecke CLP.016-CLP.065",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0585631,
+          52.8510453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21003245",
+      "properties": {
+        "@id": "relation/21003245",
+        "distance": "1.6",
+        "name": "Cloppenburg (55) - Cloppenburg (87)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "55-87",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0634103,
+          52.8550572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21096921",
+      "properties": {
+        "@id": "relation/21096921",
+        "check_date": "2026-09-14",
+        "distance": "2.3",
+        "name": "Cappeln (49) - Cloppenburg (97)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "49-97",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0193446,
+          52.8246196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21100457",
+      "properties": {
+        "@id": "relation/21100457",
+        "distance": "2.6",
+        "name": "Cloppenburg (59) - Cloppenburg (65)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "59-65",
+        "route": "bicycle",
+        "survey:date": "2026-07-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0261269,
+          52.8478075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21100458",
+      "properties": {
+        "@id": "relation/21100458",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "2.1",
+        "name": "Cloppenburg (18) - Cloppenburg (59)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "18-59",
+        "route": "bicycle",
+        "survey:date": "2026-07-21",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0351959,
+          52.8539947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21104421",
+      "properties": {
+        "@id": "relation/21104421",
+        "distance": "1.3",
+        "name": "(8) - (82)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "8 - 82",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0932508,
+          52.8267121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21104422",
+      "properties": {
+        "@id": "relation/21104422",
+        "check_date": "2026-09-14",
+        "distance": "2.9",
+        "name": "(8) - (75)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "8-75",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0686488,
+          52.8371471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21112880",
+      "properties": {
+        "@id": "relation/21112880",
+        "distance": "1.5",
+        "name": "Lastrup (59) - Cloppenburg (96)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "59-96",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9693089,
+          52.8170795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21112881",
+      "properties": {
+        "@id": "relation/21112881",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "1.2",
+        "name": "Cloppenburg (39 - Cloppenburg (46)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "39-46",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9834983,
+          52.8279419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21112882",
+      "properties": {
+        "@id": "relation/21112882",
+        "check_date": "2026-09-21",
+        "distance": "0.2",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "46-48",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9828526,
+          52.8337636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21112883",
+      "properties": {
+        "@id": "relation/21112883",
+        "check_date": "2026-09-21",
+        "distance": "1.1",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "48-79",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9849626,
+          52.8387746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21112884",
+      "properties": {
+        "@id": "relation/21112884",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "2.0",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "Bisher nur zw. KP 53 und CLP.057 abgefahren",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "53-82",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0263942,
+          52.8413766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21119531",
+      "properties": {
+        "@id": "relation/21119531",
+        "check_date": "2026-09-21",
+        "distance": "0.8",
+        "name": "Cloppenburg (40) - Cloppenburg (96)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "40-96",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.980339,
+          52.8141356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21127297",
+      "properties": {
+        "@id": "relation/21127297",
+        "check_date": "2026-09-21",
+        "distance": "1.4",
+        "name": "Cloppenburg (65) - Cloppenburg (82)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "65-82",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0107876,
+          52.8457281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21127298",
+      "properties": {
+        "@id": "relation/21127298",
+        "check_date": "2026-09-21",
+        "distance": "0.6",
+        "name": "Cloppenburg (3) - Cloppenburg (65)",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "3-65",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0093652,
+          52.8534536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21141460",
+      "properties": {
+        "@id": "relation/21141460",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "3.4",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Erholungsgebiet Thülsfelder Talsperre e.V.",
+        "ref": "21-31",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9775979,
+          52.8607019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21141461",
+      "properties": {
+        "@id": "relation/21141461",
+        "cycle_network": "Oldenburger Münsterland",
+        "distance": "1.1",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Erholungsgebiet Thülsfelder Talsperre e.V.",
+        "ref": "3-31",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0010699,
+          52.8556494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409051",
+      "properties": {
+        "@id": "relation/21409051",
+        "description": "Teilstrecke CLP.052 - ?",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0450518,
+          52.8461444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409052",
+      "properties": {
+        "@id": "relation/21409052",
+        "description": "Teilstrecke Bahnhofstraße 1",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.044201,
+          52.845461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409053",
+      "properties": {
+        "@id": "relation/21409053",
+        "fixme": "incomplete",
+        "network": "rcn",
+        "network:type": "node_network",
+        "ref": "20-24",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0435134,
+          52.8430721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409054",
+      "properties": {
+        "@id": "relation/21409054",
+        "distance": "3.4",
+        "fixme": "incomplete",
+        "network": "rcn",
+        "network:type": "node_network",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "39-97",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0044639,
+          52.827139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409452",
+      "properties": {
+        "@id": "relation/21409452",
+        "description": "Teilstrecke Bahnhofstraße 2",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0461638,
+          52.8453663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409740",
+      "properties": {
+        "@id": "relation/21409740",
+        "description": "Teilstrecke CLP.005 - Pingel-Anton-Platz",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0478491,
+          52.8454283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21409741",
+      "properties": {
+        "@id": "relation/21409741",
+        "description": "Teilstrecke Emstejker Straße - Pingel-Anton-Platz",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0502531,
+          52.8441796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21440152",
+      "properties": {
+        "@id": "relation/21440152",
+        "distance": "1.9",
+        "network": "rcn",
+        "network:type": "node_network",
+        "note": "Noch nicht abgefahren, bitte Zwischenwegweiser ergänzen",
+        "operator": "Landkreis Cloppenburg",
+        "ref": "31-79",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9901744,
+          52.8490946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21908475",
+      "properties": {
+        "@id": "relation/21908475",
+        "description": "Teilstrecke CLP.046 - CLP.057",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "survey:date": "2026-10-29",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0032634,
+          52.8362838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21910333",
+      "properties": {
+        "@id": "relation/21910333",
+        "description": "Teilstrecke CLP010 - CLP.011",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "survey:date": "2026-10-29",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0371111,
+          52.8443776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21913028",
+      "properties": {
+        "@id": "relation/21913028",
+        "description": "Teilstrecke CLP.034 - CLP.043",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "survey:date": "2026-10-29",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0035249,
+          52.8616428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21913029",
+      "properties": {
+        "@id": "relation/21913029",
+        "description": "Teilstrecke CLP.034 - CLP.036",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "survey:date": "2026-10-29",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0240816,
+          52.8542973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21913030",
+      "properties": {
+        "@id": "relation/21913030",
+        "description": "Teilstrecke CLP.011 - CLP.036",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "survey:date": "2026-10-29",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0368938,
+          52.8487522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21913031",
+      "properties": {
+        "@id": "relation/21913031",
+        "description": "Teilstrecke Antoniusplatz - ?",
+        "fixme": "incomplete",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0418066,
+          52.8499916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "relation/21913654",
+      "properties": {
+        "@id": "relation/21913654",
+        "description": "Teilstrecke CLP.043 - ?",
+        "network": "lcn",
+        "network:type": "basic_network",
+        "note": "Route ohne Namen, s. https://community.openstreetmap.org/t/reprasentation-des-aktuellen-offiziellen-deutschen-radverkehrsnetzes-nach-den-vorgaben-der-fgsv-in-osm/4805/135",
+        "operator": "Landkreis Cloppenburg",
+        "route": "bicycle",
+        "type": "route",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9855317,
+          52.8712764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/29280731",
+      "properties": {
+        "@id": "way/29280731",
+        "highway": "track",
+        "tracktype": "grade4",
+        "vehicle": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0067963,
+          52.8237601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/29280736",
+      "properties": {
+        "@id": "way/29280736",
+        "highway": "track",
+        "name": "Henkingsweg",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9999337,
+          52.8258677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/29280738",
+      "properties": {
+        "@id": "way/29280738",
+        "highway": "track",
+        "name": "Dwagtweg",
+        "surface": "paving_stones",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9804363,
+          52.8163028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/34660761",
+      "properties": {
+        "@id": "way/34660761",
+        "highway": "track",
+        "name": "Witthöge",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0736605,
+          52.8754552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/34660763",
+      "properties": {
+        "@id": "way/34660763",
+        "highway": "track",
+        "name": "Witthöge",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0774412,
+          52.8719589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/34766643",
+      "properties": {
+        "@id": "way/34766643",
+        "highway": "track",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0239275,
+          52.8758505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/34766644",
+      "properties": {
+        "@id": "way/34766644",
+        "highway": "track",
+        "motorcar": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0278097,
+          52.8768677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/35014183",
+      "properties": {
+        "@id": "way/35014183",
+        "leisure": "park",
+        "name": "Stadtpark Cloppenburg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0452903,
+          52.8471324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/35287301",
+      "properties": {
+        "@id": "way/35287301",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0094705,
+          52.8522051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/36986510",
+      "properties": {
+        "@id": "way/36986510",
+        "highway": "track",
+        "surface": "paving_stones",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0519768,
+          52.8380085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/37647920",
+      "properties": {
+        "@id": "way/37647920",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0873451,
+          52.8529175
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/37839403",
+      "properties": {
+        "@id": "way/37839403",
+        "highway": "track",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0270027,
+          52.8524521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/37839407",
+      "properties": {
+        "@id": "way/37839407",
+        "highway": "track",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0281898,
+          52.8536239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/38290944",
+      "properties": {
+        "@id": "way/38290944",
+        "highway": "track",
+        "lit": "no",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0516935,
+          52.8625139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/43154034",
+      "properties": {
+        "@id": "way/43154034",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9754886,
+          52.8587024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/43154035",
+      "properties": {
+        "@id": "way/43154035",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9725277,
+          52.8601738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/51527661",
+      "properties": {
+        "@id": "way/51527661",
+        "highway": "track",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0250703,
+          52.8690911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53026518",
+      "properties": {
+        "@id": "way/53026518",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0398045,
+          52.9194579
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53027019",
+      "properties": {
+        "@id": "way/53027019",
+        "highway": "track",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0637384,
+          52.9021333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53027021",
+      "properties": {
+        "@id": "way/53027021",
+        "access": "destination",
+        "highway": "track",
+        "name": "Steinweg",
+        "surface": "sand",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0423918,
+          52.8980493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53027022",
+      "properties": {
+        "@id": "way/53027022",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0592717,
+          52.8936577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53027024",
+      "properties": {
+        "@id": "way/53027024",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0575182,
+          52.913798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53040104",
+      "properties": {
+        "@id": "way/53040104",
+        "highway": "track",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0706273,
+          52.8904689
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53040108",
+      "properties": {
+        "@id": "way/53040108",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0664374,
+          52.8749986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53040111",
+      "properties": {
+        "@id": "way/53040111",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0480303,
+          52.8951138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53046485",
+      "properties": {
+        "@id": "way/53046485",
+        "highway": "track",
+        "name": "Käseweg",
+        "surface": "ground",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0340061,
+          52.8821433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53046492",
+      "properties": {
+        "@id": "way/53046492",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "sand",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0515062,
+          52.8854458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53072733",
+      "properties": {
+        "@id": "way/53072733",
+        "leisure": "pitch",
+        "name": "S.V. Bethen e.V.",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0541204,
+          52.8683544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53083216",
+      "properties": {
+        "@id": "way/53083216",
+        "leisure": "pitch",
+        "name": "S.V. Bethen e.V.",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0532784,
+          52.8692868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53279396",
+      "properties": {
+        "@id": "way/53279396",
+        "landuse": "forest",
+        "leisure": "park",
+        "name": "Klugewald",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0212396,
+          52.8408387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/53369008",
+      "properties": {
+        "@id": "way/53369008",
+        "highway": "track",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0549006,
+          52.8647999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/54731251",
+      "properties": {
+        "@id": "way/54731251",
+        "highway": "track",
+        "motorcar": "private",
+        "motorcycle": "private",
+        "surface": "ground",
+        "width": "3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.072038,
+          52.8485179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/59727667",
+      "properties": {
+        "@id": "way/59727667",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "track",
+        "lit": "no",
+        "motorcar": "unknown",
+        "motorcycle": "unknown",
+        "mtb:scale": "0",
+        "oneway": "no",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "width": "2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0809582,
+          52.82306
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/61117778",
+      "properties": {
+        "@id": "way/61117778",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0672744,
+          52.862245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/61117780",
+      "properties": {
+        "@id": "way/61117780",
+        "highway": "track",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0744368,
+          52.8585912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/74284992",
+      "properties": {
+        "@id": "way/74284992",
+        "access": "destination",
+        "highway": "track",
+        "lit": "no",
+        "motorcar": "yes",
+        "motorcycle": "yes",
+        "mtb:scale": "0",
+        "surface": "grass",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0617125,
+          52.8269146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/74285029",
+      "properties": {
+        "@id": "way/74285029",
+        "highway": "track",
+        "lit": "no",
+        "motorcar": "yes",
+        "motorcycle": "yes",
+        "mtb:scale": "0",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0715405,
+          52.8245484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/75426346",
+      "properties": {
+        "@id": "way/75426346",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0169609,
+          52.8429378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/83274234",
+      "properties": {
+        "@id": "way/83274234",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9739464,
+          52.8547961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/83274236",
+      "properties": {
+        "@id": "way/83274236",
+        "access": "yes",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0005338,
+          52.8556289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/87983255",
+      "properties": {
+        "@id": "way/87983255",
+        "leisure": "swimming_pool",
+        "location": "outdoor",
+        "sport": "swimming",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "yes",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.048652,
+          52.847797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/87983259",
+      "properties": {
+        "@id": "way/87983259",
+        "leisure": "swimming_pool",
+        "location": "outdoor",
+        "sport": "swimming",
+        "toilets:wheelchair": "yes",
+        "wheelchair": "limited",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0485294,
+          52.8481228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/87983262",
+      "properties": {
+        "@id": "way/87983262",
+        "leisure": "swimming_pool",
+        "length": "25",
+        "location": "outdoor",
+        "sport": "swimming",
+        "wheelchair": "limited",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0482772,
+          52.8480293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/87985562",
+      "properties": {
+        "@id": "way/87985562",
+        "highway": "track",
+        "surface": "gravel",
+        "tracktype": "grade2",
+        "traffic_sign": "DE:250;DE:1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.989701,
+          52.8026472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/92919943",
+      "properties": {
+        "@id": "way/92919943",
+        "building": "stable",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0590491,
+          52.833021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/92920087",
+      "properties": {
+        "@id": "way/92920087",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0550511,
+          52.827753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/95610623",
+      "properties": {
+        "@id": "way/95610623",
+        "cutting": "yes",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0073394,
+          52.8524913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/98290672",
+      "properties": {
+        "@id": "way/98290672",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0016312,
+          52.8136193
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/98290698",
+      "properties": {
+        "@id": "way/98290698",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0033284,
+          52.8111916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/98298453",
+      "properties": {
+        "@id": "way/98298453",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0029894,
+          52.832046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/98905248",
+      "properties": {
+        "@id": "way/98905248",
+        "highway": "track",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0969049,
+          52.8309631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99369466",
+      "properties": {
+        "@id": "way/99369466",
+        "access": "private",
+        "highway": "track",
+        "tracktype": "grade4",
+        "traffic_sign": "DE:250",
+        "vehicle": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0931574,
+          52.8478503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/99378782",
+      "properties": {
+        "@id": "way/99378782",
+        "leisure": "pitch",
+        "lit": "no",
+        "sport": "soccer",
+        "surface": "tartan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0343346,
+          52.8440632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/100054865",
+      "properties": {
+        "@id": "way/100054865",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "5",
+        "addr:postcode": "49661",
+        "addr:street": "Albert-Einstein-Straße",
+        "building": "yes",
+        "contact:phone": "+49 4471 9588 165",
+        "contact:website": "https://www.benefit-fitness.de/",
+        "leisure": "fitness_centre",
+        "name": "Benefit Fitness",
+        "opening_hours": "Mo-Fr 06:00-23:00; Sa,Su 08:00-20:00; PH 10:00-20:00",
+        "sport": "fitness",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0681172,
+          52.8380245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/101389614",
+      "properties": {
+        "@id": "way/101389614",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.981948,
+          52.8366245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/103286120",
+      "properties": {
+        "@id": "way/103286120",
+        "bicycle": "yes",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0097183,
+          52.8540639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/110080352",
+      "properties": {
+        "@id": "way/110080352",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "track",
+        "surface": "sand",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.972372,
+          52.862211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111489501",
+      "properties": {
+        "@id": "way/111489501",
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0481954,
+          52.8365469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111539904",
+      "properties": {
+        "@id": "way/111539904",
+        "bicycle": "yes",
+        "dog": "leashed",
+        "highway": "track",
+        "horse": "no",
+        "surface": "sand",
+        "tracktype": "grade3",
+        "vehicle": "agricultural;forestry",
+        "width": "4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0084835,
+          52.8654307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111539906",
+      "properties": {
+        "@id": "way/111539906",
+        "bicycle": "yes",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "horrible",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "vehicle": "agricultural;forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0221014,
+          52.8677695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111539912",
+      "properties": {
+        "@id": "way/111539912",
+        "bicycle": "yes",
+        "highway": "track",
+        "lit": "no",
+        "motorcar": "no",
+        "motorcycle": "no",
+        "smoothness": "horrible",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "vehicle": "agricultural;forestry",
+        "width": "1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0207836,
+          52.8672773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111539913",
+      "properties": {
+        "@id": "way/111539913",
+        "bicycle": "yes",
+        "highway": "track",
+        "lit": "no",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "vehicle": "agricultural;forestry",
+        "width": "4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0206931,
+          52.8643553
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/111539914",
+      "properties": {
+        "@id": "way/111539914",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "width": "4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0206022,
+          52.8662484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/118756131",
+      "properties": {
+        "@id": "way/118756131",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0045133,
+          52.8346904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/118864563",
+      "properties": {
+        "@id": "way/118864563",
+        "leisure": "pitch",
+        "sport": "archery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0093479,
+          52.8624457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/133391261",
+      "properties": {
+        "@id": "way/133391261",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0379866,
+          52.8815002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/156821138",
+      "properties": {
+        "@id": "way/156821138",
+        "agricultural": "yes",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "traffic_sign": "DE:250;DE:1026-38",
+        "vehicle": "forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0337201,
+          52.8734554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/156825579",
+      "properties": {
+        "@id": "way/156825579",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.034352,
+          52.8600801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/156825581",
+      "properties": {
+        "@id": "way/156825581",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "traffic_sign": "DE:250,DE:1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0329858,
+          52.8595939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/156826375",
+      "properties": {
+        "@id": "way/156826375",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "traffic_sign": "DE:250,1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0318718,
+          52.8582599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/158416001",
+      "properties": {
+        "@id": "way/158416001",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0392034,
+          52.8337817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/160501915",
+      "properties": {
+        "@id": "way/160501915",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0476549,
+          52.885834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/160501916",
+      "properties": {
+        "@id": "way/160501916",
+        "highway": "track",
+        "tracktype": "grade1",
+        "traffic_sign": "DE:250",
+        "vehicle": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0415146,
+          52.8881498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/162747634",
+      "properties": {
+        "@id": "way/162747634",
+        "leisure": "pitch",
+        "lit": "no",
+        "sport": "soccer",
+        "surface": "tartan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0522455,
+          52.8461534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/165281901",
+      "properties": {
+        "@id": "way/165281901",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "traffic_sign": "DE:250,1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0018526,
+          52.8504423
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169982351",
+      "properties": {
+        "@id": "way/169982351",
+        "highway": "track",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9728696,
+          52.8413976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169982353",
+      "properties": {
+        "@id": "way/169982353",
+        "highway": "track",
+        "surface": "dirt",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9801168,
+          52.8449653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169982354",
+      "properties": {
+        "@id": "way/169982354",
+        "check_date:surface": "2026-07-11",
+        "highway": "track",
+        "surface": "unpaved",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.968539,
+          52.847277
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169982355",
+      "properties": {
+        "@id": "way/169982355",
+        "highway": "track",
+        "name": "Vor den Rieden",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9767383,
+          52.8392942
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/169986049",
+      "properties": {
+        "@id": "way/169986049",
+        "bicycle": "yes",
+        "foot": "yes",
+        "highway": "track",
+        "smoothness": "intermediate",
+        "surface": "gravel",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.009389,
+          52.848067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192521388",
+      "properties": {
+        "@id": "way/192521388",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0296127,
+          52.8335019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192531017",
+      "properties": {
+        "@id": "way/192531017",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0394496,
+          52.8306588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192772741",
+      "properties": {
+        "@id": "way/192772741",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "traffic_sign": "DE:250;DE:1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0919145,
+          52.8461644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192772742",
+      "properties": {
+        "@id": "way/192772742",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0928934,
+          52.8472956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192775794",
+      "properties": {
+        "@id": "way/192775794",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0876009,
+          52.838998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192775802",
+      "properties": {
+        "@id": "way/192775802",
+        "leisure": "pitch",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0860406,
+          52.8386972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192775806",
+      "properties": {
+        "@id": "way/192775806",
+        "leisure": "pitch",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0871591,
+          52.8379607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/192960450",
+      "properties": {
+        "@id": "way/192960450",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0334055,
+          52.9208737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196198970",
+      "properties": {
+        "@id": "way/196198970",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "57",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "amenity": "car_wash",
+        "automated": "yes",
+        "brand": "Shell",
+        "brand:wikidata": "Q110716465",
+        "building": "yes",
+        "name": "Shell",
+        "opening_hours": "Mo-Fr 06:00-22:00; Sa 07:00-22:00; PH,Su 08:00-22:00",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0485318,
+          52.8498393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196288274",
+      "properties": {
+        "@id": "way/196288274",
+        "highway": "track",
+        "name": "Osterberg",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9998273,
+          52.855761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/196663432",
+      "properties": {
+        "@id": "way/196663432",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0231744,
+          52.8409549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/197905441",
+      "properties": {
+        "@id": "way/197905441",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0434021,
+          52.8261416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198201053",
+      "properties": {
+        "@id": "way/198201053",
+        "dog": "leashed",
+        "highway": "track",
+        "motor_vehicle": "private",
+        "smoothness": "bad",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "trail_visibility": "excellent",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0267819,
+          52.8797551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198677313",
+      "properties": {
+        "@id": "way/198677313",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0481292,
+          52.8453795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198719691",
+      "properties": {
+        "@id": "way/198719691",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.054984,
+          52.881403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198719692",
+      "properties": {
+        "@id": "way/198719692",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.049499,
+          52.8900493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198719693",
+      "properties": {
+        "@id": "way/198719693",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0502363,
+          52.8903131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/198719694",
+      "properties": {
+        "@id": "way/198719694",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0524098,
+          52.8813095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/200139448",
+      "properties": {
+        "@id": "way/200139448",
+        "agricultural": "yes",
+        "bicycle": "yes",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "sand",
+        "tracktype": "grade3",
+        "traffic_sign": "DE:250;DE:1026-38",
+        "vehicle": "agricultural;forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0297477,
+          52.8728654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/200140331",
+      "properties": {
+        "@id": "way/200140331",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0294677,
+          52.8751006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/200247002",
+      "properties": {
+        "@id": "way/200247002",
+        "highway": "track",
+        "maxspeed": "30",
+        "name": "An den Ambührener Tannen",
+        "surface": "paved",
+        "tracktype": "grade1",
+        "width": "4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0085886,
+          52.8616202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/201674545",
+      "properties": {
+        "@id": "way/201674545",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0052057,
+          52.8440074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/212770454",
+      "properties": {
+        "@id": "way/212770454",
+        "access": "private",
+        "highway": "track",
+        "surface": "fine_gravel",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0655169,
+          52.8473367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221552595",
+      "properties": {
+        "@id": "way/221552595",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "5b",
+        "addr:postcode": "49661",
+        "addr:street": "Lise-Meitner-Straße",
+        "amenity": "car_wash",
+        "building": "yes",
+        "check_date": "2024-11-15",
+        "contact:phone": "+49 160 1856245",
+        "contact:website": "https://www.vitalis-autopflege.de/",
+        "name": "Vitali's Autopflege",
+        "opening_hours": "Mo-Fr 08:00-18:00; Sa \"nach Vereinbarung\"",
+        "operator": "Vitali Lizenberger",
+        "service": "car_repair;cleaning",
+        "service:vehicle:painting": "yes",
+        "shop": "car_repair",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0698459,
+          52.8374766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223476855",
+      "properties": {
+        "@id": "way/223476855",
+        "bicycle": "yes",
+        "highway": "track",
+        "horse": "no",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "traffic_sign": "DE:250,1026-38;257-51;255",
+        "vehicle": "agricultural;forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0114239,
+          52.8632264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223612070",
+      "properties": {
+        "@id": "way/223612070",
+        "bicycle": "yes",
+        "highway": "track",
+        "lanes": "1",
+        "lit": "no",
+        "name": "Bührener Ring",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "vehicle": "agricultural;forestry",
+        "width": "5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.013781,
+          52.8642698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223612071",
+      "properties": {
+        "@id": "way/223612071",
+        "bicycle": "yes",
+        "highway": "track",
+        "lanes": "1",
+        "name": "Bührener Ring",
+        "postal_code": "49661",
+        "surface": "paved",
+        "tracktype": "grade3",
+        "traffic_sign": "DE:250,1026-38",
+        "vehicle": "agricultural;forestry",
+        "width": "5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0161791,
+          52.8606525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223612078",
+      "properties": {
+        "@id": "way/223612078",
+        "bicycle": "yes",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "vehicle": "agricultural;forestry",
+        "width": "2.5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.010298,
+          52.8644944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223612080",
+      "properties": {
+        "@id": "way/223612080",
+        "bicycle": "yes",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade5",
+        "vehicle": "agricultural;forestry",
+        "width": "1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0109287,
+          52.8668706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/223612081",
+      "properties": {
+        "@id": "way/223612081",
+        "bicycle": "yes",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "vehicle": "agricultural;forestry",
+        "width": "3.5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0072533,
+          52.8626487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/252110552",
+      "properties": {
+        "@id": "way/252110552",
+        "highway": "track",
+        "name": "Zur Basilika",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0674149,
+          52.8654918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/252110553",
+      "properties": {
+        "@id": "way/252110553",
+        "highway": "track",
+        "name": "Zur Basilika",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0670592,
+          52.8654214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/257422277",
+      "properties": {
+        "@id": "way/257422277",
+        "highway": "track",
+        "lit": "no",
+        "motorcar": "no",
+        "smoothness": "intermediate",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.016697,
+          52.8248294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/268903738",
+      "properties": {
+        "@id": "way/268903738",
+        "leisure": "pitch",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0387505,
+          52.8525884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/274255952",
+      "properties": {
+        "@id": "way/274255952",
+        "highway": "track",
+        "surface": "dirt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0114271,
+          52.8187264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276134134",
+      "properties": {
+        "@id": "way/276134134",
+        "highway": "track",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0467788,
+          52.9138376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155234",
+      "properties": {
+        "@id": "way/276155234",
+        "highway": "track",
+        "source": "gpx",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0780052,
+          52.8626402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155237",
+      "properties": {
+        "@id": "way/276155237",
+        "highway": "track",
+        "smoothness": "bad",
+        "source": "bing_imagery; gpx",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9808772,
+          52.827533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155281",
+      "properties": {
+        "@id": "way/276155281",
+        "highway": "track",
+        "source": "bing_imagery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.076429,
+          52.8620837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155292",
+      "properties": {
+        "@id": "way/276155292",
+        "highway": "track",
+        "lit": "no",
+        "source": "bing_imagery",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9906509,
+          52.8306793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155314",
+      "properties": {
+        "@id": "way/276155314",
+        "highway": "track",
+        "source": "bing_imagery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9748826,
+          52.823233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/276155315",
+      "properties": {
+        "@id": "way/276155315",
+        "highway": "track",
+        "smoothness": "intermediate",
+        "source": "gpx",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9776505,
+          52.8289955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/278901187",
+      "properties": {
+        "@id": "way/278901187",
+        "highway": "track",
+        "surface": "sand",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0426618,
+          52.9020054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/279194092",
+      "properties": {
+        "@id": "way/279194092",
+        "highway": "track",
+        "name": "Upn Höft",
+        "source": "bing_imagery",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9872057,
+          52.8309898
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/279194093",
+      "properties": {
+        "@id": "way/279194093",
+        "highway": "track",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.964345,
+          52.8257559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/279194095",
+      "properties": {
+        "@id": "way/279194095",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9961347,
+          52.8789685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/280432469",
+      "properties": {
+        "@id": "way/280432469",
+        "highway": "track",
+        "surface": "paving_stones",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9971646,
+          52.8174965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/280445208",
+      "properties": {
+        "@id": "way/280445208",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9866968,
+          52.804917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/280445775",
+      "properties": {
+        "@id": "way/280445775",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9870266,
+          52.8083229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283074950",
+      "properties": {
+        "@id": "way/283074950",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0202237,
+          52.8364877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807679",
+      "properties": {
+        "@id": "way/283807679",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9838534,
+          52.8366379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807681",
+      "properties": {
+        "@id": "way/283807681",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9714831,
+          52.8289383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807683",
+      "properties": {
+        "@id": "way/283807683",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9952136,
+          52.8392713
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807684",
+      "properties": {
+        "@id": "way/283807684",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9817159,
+          52.825281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807686",
+      "properties": {
+        "@id": "way/283807686",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9884145,
+          52.8355014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807687",
+      "properties": {
+        "@id": "way/283807687",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9842845,
+          52.8374948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807688",
+      "properties": {
+        "@id": "way/283807688",
+        "highway": "track",
+        "lit": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9884728,
+          52.8268613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/283807690",
+      "properties": {
+        "@id": "way/283807690",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9893115,
+          52.8380521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/290511085",
+      "properties": {
+        "@id": "way/290511085",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0634797,
+          52.828034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/298472628",
+      "properties": {
+        "@id": "way/298472628",
+        "highway": "track",
+        "name": "Distelkamp",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9936191,
+          52.8483243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/299211493",
+      "properties": {
+        "@id": "way/299211493",
+        "highway": "track",
+        "name": "Hammoor",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0175687,
+          52.8709584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/299223149",
+      "properties": {
+        "@id": "way/299223149",
+        "highway": "track",
+        "lit": "no",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.992541,
+          52.8297889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/299223459",
+      "properties": {
+        "@id": "way/299223459",
+        "highway": "track",
+        "name": "Zum Alten Kamp",
+        "source": "bing_imagery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9730052,
+          52.8245139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/299785092",
+      "properties": {
+        "@id": "way/299785092",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.1023989,
+          52.8425548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/300462615",
+      "properties": {
+        "@id": "way/300462615",
+        "highway": "track",
+        "maxspeed": "100",
+        "name": "Riedenweg",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9750504,
+          52.8419059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/303484218",
+      "properties": {
+        "@id": "way/303484218",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9901825,
+          52.826206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/303484222",
+      "properties": {
+        "@id": "way/303484222",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0002292,
+          52.8245441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/303484224",
+      "properties": {
+        "@id": "way/303484224",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9794507,
+          52.8345773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/307774641",
+      "properties": {
+        "@id": "way/307774641",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0675705,
+          52.8577976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/307915908",
+      "properties": {
+        "@id": "way/307915908",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0772649,
+          52.8571563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308125615",
+      "properties": {
+        "@id": "way/308125615",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0766669,
+          52.8718259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308125622",
+      "properties": {
+        "@id": "way/308125622",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0843786,
+          52.855783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308183567",
+      "properties": {
+        "@id": "way/308183567",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0155181,
+          52.8526061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308183568",
+      "properties": {
+        "@id": "way/308183568",
+        "highway": "track",
+        "motor_vehicle": "agricultural",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "traffic_sign": "DE:260;DE:1026-36",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0187541,
+          52.8573961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/308203859",
+      "properties": {
+        "@id": "way/308203859",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9751217,
+          52.8550381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/344738534",
+      "properties": {
+        "@id": "way/344738534",
+        "access": "private",
+        "covered": "no",
+        "leisure": "swimming_pool",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0302237,
+          52.850282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/392514917",
+      "properties": {
+        "@id": "way/392514917",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0444303,
+          52.8686833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/435782620",
+      "properties": {
+        "@id": "way/435782620",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.099419,
+          52.8458914
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/443840630",
+      "properties": {
+        "@id": "way/443840630",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.097187,
+          52.8301103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/443840634",
+      "properties": {
+        "@id": "way/443840634",
+        "highway": "track",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0918861,
+          52.8317159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/458905822",
+      "properties": {
+        "@id": "way/458905822",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "grass",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0425705,
+          52.8885518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/458905825",
+      "properties": {
+        "@id": "way/458905825",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0414083,
+          52.892762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/458905838",
+      "properties": {
+        "@id": "way/458905838",
+        "bicycle": "yes",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "fine_gravel",
+        "tracktype": "grade2",
+        "traffic_sign": "DE:250,1026-38",
+        "vehicle": "agricultural;forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0336564,
+          52.8883666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/458905844",
+      "properties": {
+        "@id": "way/458905844",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.02433,
+          52.8884006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/460075907",
+      "properties": {
+        "@id": "way/460075907",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0038011,
+          52.8454565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/473419867",
+      "properties": {
+        "@id": "way/473419867",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "90",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "amenity": "car_wash",
+        "automated": "yes",
+        "building": "yes",
+        "name": "Albers",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0510934,
+          52.8502831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031430",
+      "properties": {
+        "@id": "way/474031430",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0225362,
+          52.884779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031431",
+      "properties": {
+        "@id": "way/474031431",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0216676,
+          52.8827794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031432",
+      "properties": {
+        "@id": "way/474031432",
+        "highway": "track",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0378746,
+          52.8659873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031433",
+      "properties": {
+        "@id": "way/474031433",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0299042,
+          52.8703964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031435",
+      "properties": {
+        "@id": "way/474031435",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0350057,
+          52.8842982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031443",
+      "properties": {
+        "@id": "way/474031443",
+        "fixme": "gibt es das südliche Ende dieses Weges überhaupt??",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0352852,
+          52.882304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031444",
+      "properties": {
+        "@id": "way/474031444",
+        "foot": "yes",
+        "highway": "track",
+        "motorcar": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.033682,
+          52.8789647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474031445",
+      "properties": {
+        "@id": "way/474031445",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0395287,
+          52.8673989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/474032103",
+      "properties": {
+        "@id": "way/474032103",
+        "highway": "track",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0254487,
+          52.8713069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/475549198",
+      "properties": {
+        "@id": "way/475549198",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9834257,
+          52.8031324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/476132822",
+      "properties": {
+        "@id": "way/476132822",
+        "leisure": "pitch",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9867246,
+          52.8229046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/495275623",
+      "properties": {
+        "@id": "way/495275623",
+        "highway": "track",
+        "smoothness": "horrible",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9920908,
+          52.7928215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/503657080",
+      "properties": {
+        "@id": "way/503657080",
+        "leisure": "pitch",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0403683,
+          52.8527864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/559054661",
+      "properties": {
+        "@id": "way/559054661",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9991594,
+          52.8386203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/579958578",
+      "properties": {
+        "@id": "way/579958578",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9705813,
+          52.820903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/582056486",
+      "properties": {
+        "@id": "way/582056486",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.996258,
+          52.8192837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/589700854",
+      "properties": {
+        "@id": "way/589700854",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "traffic_sign": "DE:250,1026-38",
+        "vehicle": "agricultural;forestry",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0070234,
+          52.8806566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/589700856",
+      "properties": {
+        "@id": "way/589700856",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0143868,
+          52.8793249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/589700863",
+      "properties": {
+        "@id": "way/589700863",
+        "highway": "track",
+        "lit": "no",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0138989,
+          52.8732742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/589700872",
+      "properties": {
+        "@id": "way/589700872",
+        "bicycle": "yes",
+        "highway": "track",
+        "motorcar": "no",
+        "motorcycle": "no",
+        "name": "Hammoor",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "vehicle": "agricultural;forestry",
+        "width": "4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0190508,
+          52.8694531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/595618095",
+      "properties": {
+        "@id": "way/595618095",
+        "highway": "track",
+        "smoothness": "horrible",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0055682,
+          52.8717259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/603833394",
+      "properties": {
+        "@id": "way/603833394",
+        "highway": "track",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0228717,
+          52.855738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/603852591",
+      "properties": {
+        "@id": "way/603852591",
+        "highway": "track",
+        "maxspeed": "20",
+        "smoothness": "very_bad",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0492371,
+          52.8731448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/612035074",
+      "properties": {
+        "@id": "way/612035074",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0077746,
+          52.8193613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/612035075",
+      "properties": {
+        "@id": "way/612035075",
+        "highway": "track",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0067465,
+          52.8188087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/645059827",
+      "properties": {
+        "@id": "way/645059827",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.041485,
+          52.8446087
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/667754639",
+      "properties": {
+        "@id": "way/667754639",
+        "highway": "track",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0610802,
+          52.8720119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/669425008",
+      "properties": {
+        "@id": "way/669425008",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0673662,
+          52.8536604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/684318557",
+      "properties": {
+        "@id": "way/684318557",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0363122,
+          52.8312466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/685519464",
+      "properties": {
+        "@id": "way/685519464",
+        "highway": "track",
+        "surface": "paving_stones",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0340062,
+          52.910925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/699470618",
+      "properties": {
+        "@id": "way/699470618",
+        "highway": "track",
+        "tracktype": "grade4",
+        "traffic_sign": "DE:250,1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0116192,
+          52.8268757
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/700585301",
+      "properties": {
+        "@id": "way/700585301",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0395194,
+          52.8876746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/700585302",
+      "properties": {
+        "@id": "way/700585302",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "sand",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0359071,
+          52.8783046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/702152344",
+      "properties": {
+        "@id": "way/702152344",
+        "highway": "track",
+        "smoothness": "horrible",
+        "surface": "ground",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0211111,
+          52.8695967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/702155646",
+      "properties": {
+        "@id": "way/702155646",
+        "dog": "leashed",
+        "highway": "track",
+        "lit": "no",
+        "motor_vehicle": "private",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0233611,
+          52.8778304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/702831046",
+      "properties": {
+        "@id": "way/702831046",
+        "highway": "track",
+        "maxspeed": "100",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0417443,
+          52.8600794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721027117",
+      "properties": {
+        "@id": "way/721027117",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "traffic_sign": "DE:250,DE:1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0020404,
+          52.8501778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030978",
+      "properties": {
+        "@id": "way/721030978",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "horrible",
+        "surface": "ground",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0451672,
+          52.8858455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030979",
+      "properties": {
+        "@id": "way/721030979",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0470932,
+          52.8873806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030981",
+      "properties": {
+        "@id": "way/721030981",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "compacted",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0419543,
+          52.8835416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030982",
+      "properties": {
+        "@id": "way/721030982",
+        "highway": "track",
+        "lit": "no",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0514974,
+          52.8824329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030992",
+      "properties": {
+        "@id": "way/721030992",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "compacted",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0403541,
+          52.8749615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/721030994",
+      "properties": {
+        "@id": "way/721030994",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0415059,
+          52.8767594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/725201581",
+      "properties": {
+        "@id": "way/725201581",
+        "access": "yes",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0077889,
+          52.8562972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/725201582",
+      "properties": {
+        "@id": "way/725201582",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.009524,
+          52.8560255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/725202917",
+      "properties": {
+        "@id": "way/725202917",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "traffic_sign": "DE:250,DE:1026-36",
+        "vehicle": "agricultural",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0340956,
+          52.8574491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/730320865",
+      "properties": {
+        "@id": "way/730320865",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9754886,
+          52.8587024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/731200972",
+      "properties": {
+        "@id": "way/731200972",
+        "highway": "track",
+        "surface": "gravel",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0455384,
+          52.8259311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/731572847",
+      "properties": {
+        "@id": "way/731572847",
+        "highway": "track",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0973701,
+          52.8316119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/751243729",
+      "properties": {
+        "@id": "way/751243729",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "very_bad",
+        "surface": "unpaved",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0119274,
+          52.8735832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/766824240",
+      "properties": {
+        "@id": "way/766824240",
+        "highway": "track",
+        "surface": "paving_stones",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9974456,
+          52.8171645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/782040218",
+      "properties": {
+        "@id": "way/782040218",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0291531,
+          52.9175806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/810352011",
+      "properties": {
+        "@id": "way/810352011",
+        "highway": "track",
+        "lit": "no",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0911014,
+          52.9055232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/810436298",
+      "properties": {
+        "@id": "way/810436298",
+        "highway": "track",
+        "surface": "compacted",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.031849,
+          52.910243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/810440187",
+      "properties": {
+        "@id": "way/810440187",
+        "highway": "track",
+        "lit": "no",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0404152,
+          52.8650237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/819784171",
+      "properties": {
+        "@id": "way/819784171",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0468398,
+          52.8415632
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/840204857",
+      "properties": {
+        "@id": "way/840204857",
+        "leisure": "park",
+        "name": "Soestepolder",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0338959,
+          52.845455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/840868746",
+      "properties": {
+        "@id": "way/840868746",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9771826,
+          52.8420608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/858300211",
+      "properties": {
+        "@id": "way/858300211",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0538382,
+          52.9188697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/858300212",
+      "properties": {
+        "@id": "way/858300212",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0547372,
+          52.9206798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/858300213",
+      "properties": {
+        "@id": "way/858300213",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.053633,
+          52.9200208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/858300214",
+      "properties": {
+        "@id": "way/858300214",
+        "highway": "track",
+        "surface": "grass",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0468055,
+          52.918564
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/858300215",
+      "properties": {
+        "@id": "way/858300215",
+        "highway": "track",
+        "lit": "no",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0542349,
+          52.9180731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/878088303",
+      "properties": {
+        "@id": "way/878088303",
+        "highway": "track",
+        "smoothness": "good",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0647203,
+          52.860584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/894704664",
+      "properties": {
+        "@id": "way/894704664",
+        "check_date:opening_hours": "2024-03-21",
+        "leisure": "park",
+        "name": "Mehrgenerationenpark",
+        "opening_hours": "07:15-22:00",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0394853,
+          52.8514196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/907159795",
+      "properties": {
+        "@id": "way/907159795",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0075648,
+          52.8254892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/907159798",
+      "properties": {
+        "@id": "way/907159798",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.007322,
+          52.8236738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/907159800",
+      "properties": {
+        "@id": "way/907159800",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0037519,
+          52.8238279
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/935969322",
+      "properties": {
+        "@id": "way/935969322",
+        "leisure": "pitch",
+        "lit": "no",
+        "sport": "soccer",
+        "surface": "sand",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0100551,
+          52.8351392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/935969325",
+      "properties": {
+        "@id": "way/935969325",
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0105681,
+          52.8340859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/935969326",
+      "properties": {
+        "@id": "way/935969326",
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "soccer",
+        "surface": "artificial_turf",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0119099,
+          52.8347495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/935969328",
+      "properties": {
+        "@id": "way/935969328",
+        "leisure": "pitch",
+        "lit": "no",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.011061,
+          52.8356115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/935969329",
+      "properties": {
+        "@id": "way/935969329",
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0111508,
+          52.8365067
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/953065361",
+      "properties": {
+        "@id": "way/953065361",
+        "highway": "track",
+        "lit": "no",
+        "source": "bing_imagery",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.989871,
+          52.8299109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/977413906",
+      "properties": {
+        "@id": "way/977413906",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "43",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "amenity": "car_wash",
+        "automated": "yes",
+        "brand": "GS energie",
+        "brand:wikidata": "Q111391868",
+        "building": "yes",
+        "name": "GS energie",
+        "opening_hours": "Mo-Sa 06:00-21:00; Su off; PH off",
+        "operator": "GS Die Genossenschaft eG",
+        "operator:wikidata": "Q111391474",
+        "payment:american_express": "yes",
+        "payment:apple_pay": "yes",
+        "payment:cards": "yes",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:contactless": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:dkv": "yes",
+        "payment:girocard": "yes",
+        "payment:maestro": "yes",
+        "payment:mastercard": "yes",
+        "payment:notes": "yes",
+        "payment:uta": "yes",
+        "payment:visa": "yes",
+        "website": "https://www.gs-genossenschaft.de/energie",
+        "wikidata": "Q111391868",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0550913,
+          52.8430243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/984385352",
+      "properties": {
+        "@id": "way/984385352",
+        "highway": "track",
+        "tracktype": "grade4",
+        "vehicle": "no",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0028991,
+          52.8201492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1028729652",
+      "properties": {
+        "@id": "way/1028729652",
+        "highway": "track",
+        "name": "Lilienthalstraße",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0390633,
+          52.9056913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1028729662",
+      "properties": {
+        "@id": "way/1028729662",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0315451,
+          52.9193121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1028729673",
+      "properties": {
+        "@id": "way/1028729673",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0311171,
+          52.9181705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1028729674",
+      "properties": {
+        "@id": "way/1028729674",
+        "access": "private",
+        "foot": "yes",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0305054,
+          52.9178484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1028729676",
+      "properties": {
+        "@id": "way/1028729676",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0321504,
+          52.9182643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1037310441",
+      "properties": {
+        "@id": "way/1037310441",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0255259,
+          52.8518045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1037310527",
+      "properties": {
+        "@id": "way/1037310527",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0156534,
+          52.8821681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1056491905",
+      "properties": {
+        "@id": "way/1056491905",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0529097,
+          52.8550276
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1056491906",
+      "properties": {
+        "@id": "way/1056491906",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0495715,
+          52.8579859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1059358097",
+      "properties": {
+        "@id": "way/1059358097",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0407711,
+          52.8355325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1063748859",
+      "properties": {
+        "@id": "way/1063748859",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0559205,
+          52.8519883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1073999337",
+      "properties": {
+        "@id": "way/1073999337",
+        "highway": "track",
+        "lit": "no",
+        "smoothness": "bad",
+        "surface": "fine_gravel",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0874914,
+          52.8514491
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1081345444",
+      "properties": {
+        "@id": "way/1081345444",
+        "area": "yes",
+        "leisure": "track",
+        "sport": "running",
+        "surface": "tartan",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0485034,
+          52.8389536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1081564351",
+      "properties": {
+        "@id": "way/1081564351",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "83",
+        "addr:postcode": "49661",
+        "addr:street": "Sevelter Straße",
+        "leisure": "sports_centre",
+        "name": "SC Sternbusch 1983 e. V.",
+        "sport": "soccer",
+        "website": "https://scsternbusch.de",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0482305,
+          52.8360539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1081564352",
+      "properties": {
+        "@id": "way/1081564352",
+        "leisure": "pitch",
+        "lit": "yes",
+        "sport": "soccer",
+        "surface": "grass",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0484372,
+          52.8354715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1081627918",
+      "properties": {
+        "@id": "way/1081627918",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "2",
+        "addr:postcode": "49661",
+        "addr:street": "Nußbaumallee",
+        "leisure": "sports_centre",
+        "name": "TuS Emstekerfeld 1995 e.V.",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0863588,
+          52.8383116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1084113041",
+      "properties": {
+        "@id": "way/1084113041",
+        "highway": "track",
+        "smoothness": "intermediate",
+        "surface": "fine_gravel",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0172077,
+          52.8506998
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1084114276",
+      "properties": {
+        "@id": "way/1084114276",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0187041,
+          52.8528189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1193759551",
+      "properties": {
+        "@id": "way/1193759551",
+        "leisure": "park",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0507322,
+          52.8491132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1208228103",
+      "properties": {
+        "@id": "way/1208228103",
+        "contact:website": "https://heimatverein-cloppenburg.de/aktuelles/projekte/terrifca",
+        "leisure": "park",
+        "name": "Cloppenburger Klima-Eck",
+        "start_date": "2022-05-21",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0411845,
+          52.8449094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1215610279",
+      "properties": {
+        "@id": "way/1215610279",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0839305,
+          52.8704637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1215610280",
+      "properties": {
+        "@id": "way/1215610280",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0826886,
+          52.8689718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1215610281",
+      "properties": {
+        "@id": "way/1215610281",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0869993,
+          52.8703349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1229911508",
+      "properties": {
+        "@id": "way/1229911508",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0929843,
+          52.8913868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1229911511",
+      "properties": {
+        "@id": "way/1229911511",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0934289,
+          52.8783634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1254129713",
+      "properties": {
+        "@id": "way/1254129713",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9894601,
+          52.8241111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1254129715",
+      "properties": {
+        "@id": "way/1254129715",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9912337,
+          52.8244803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1310622242",
+      "properties": {
+        "@id": "way/1310622242",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "20",
+        "addr:postcode": "49661",
+        "addr:street": "Emsstraße",
+        "leisure": "sports_centre",
+        "name": "Blau-Weiß Galgenmoor",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0112005,
+          52.835643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430955",
+      "properties": {
+        "@id": "way/1363430955",
+        "dog": "leashed",
+        "highway": "track",
+        "motor_vehicle": "private",
+        "smoothness": "intermediate",
+        "surface": "ground",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.023616,
+          52.8771877
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430958",
+      "properties": {
+        "@id": "way/1363430958",
+        "dog": "leashed",
+        "highway": "track",
+        "motor_vehicle": "private",
+        "smoothness": "bad",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "trail_visibility": "excellent",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0261823,
+          52.8774492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430959",
+      "properties": {
+        "@id": "way/1363430959",
+        "fixme": "genauen Verlauf geschätzt",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0265102,
+          52.8801859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430967",
+      "properties": {
+        "@id": "way/1363430967",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0227681,
+          52.8799473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430968",
+      "properties": {
+        "@id": "way/1363430968",
+        "highway": "track",
+        "smoothness": "bad",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0248453,
+          52.8790894
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363430970",
+      "properties": {
+        "@id": "way/1363430970",
+        "dog": "leashed",
+        "highway": "track",
+        "motor_vehicle": "private",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.024896,
+          52.8772608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363459352",
+      "properties": {
+        "@id": "way/1363459352",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0259534,
+          52.8746155
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363459353",
+      "properties": {
+        "@id": "way/1363459353",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0262164,
+          52.8742144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363459355",
+      "properties": {
+        "@id": "way/1363459355",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0270679,
+          52.8749694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363459356",
+      "properties": {
+        "@id": "way/1363459356",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0272409,
+          52.8752465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363459361",
+      "properties": {
+        "@id": "way/1363459361",
+        "fixme": "geht's da weiter?",
+        "highway": "track",
+        "smoothness": "horrible",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.02538,
+          52.8659544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363695724",
+      "properties": {
+        "@id": "way/1363695724",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0162425,
+          52.8506461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363695751",
+      "properties": {
+        "@id": "way/1363695751",
+        "highway": "track",
+        "motor_vehicle": "destination",
+        "smoothness": "intermediate",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0253314,
+          52.855687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363695753",
+      "properties": {
+        "@id": "way/1363695753",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0271471,
+          52.8561737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363712138",
+      "properties": {
+        "@id": "way/1363712138",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.009815,
+          52.85189
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363712143",
+      "properties": {
+        "@id": "way/1363712143",
+        "fixme": "geht's da weiter?",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0265303,
+          52.8899645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1363712145",
+      "properties": {
+        "@id": "way/1363712145",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0291605,
+          52.8915576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389377086",
+      "properties": {
+        "@id": "way/1389377086",
+        "highway": "track",
+        "smoothness": "very_horrible",
+        "surface": "ground",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0522576,
+          52.8312078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389377088",
+      "properties": {
+        "@id": "way/1389377088",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0608002,
+          52.8289722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389377095",
+      "properties": {
+        "@id": "way/1389377095",
+        "fixme": "geht's da weiter?",
+        "highway": "track",
+        "smoothness": "horrible",
+        "surface": "grass",
+        "tracktype": "grade4",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0628224,
+          52.8301692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389377102",
+      "properties": {
+        "@id": "way/1389377102",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "grass",
+        "tracktype": "grade3",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0500293,
+          52.8310906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389403689",
+      "properties": {
+        "@id": "way/1389403689",
+        "bicycle": "yes",
+        "highway": "track",
+        "smoothness": "very_bad",
+        "surface": "ground",
+        "tracktype": "grade3",
+        "vehicle": "private",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0625469,
+          52.8348129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389403697",
+      "properties": {
+        "@id": "way/1389403697",
+        "highway": "track",
+        "smoothness": "good",
+        "surface": "paved",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0621879,
+          52.8354517
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1389403752",
+      "properties": {
+        "@id": "way/1389403752",
+        "access": "private",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0601417,
+          52.8385919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1419980204",
+      "properties": {
+        "@id": "way/1419980204",
+        "hgv": "no",
+        "highway": "track",
+        "surface": "compacted",
+        "tracktype": "grade2",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9984081,
+          52.8672169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1460366109",
+      "properties": {
+        "@id": "way/1460366109",
+        "highway": "track",
+        "source": "bing_imagery",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9732051,
+          52.8232735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1460366110",
+      "properties": {
+        "@id": "way/1460366110",
+        "highway": "track",
+        "smoothness": "very_horrible",
+        "surface": "ground",
+        "tracktype": "grade5",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9706568,
+          52.8207124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1461662813",
+      "properties": {
+        "@id": "way/1461662813",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0229871,
+          52.8611357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1530555987",
+      "properties": {
+        "@id": "way/1530555987",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0604018,
+          52.886972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1530555998",
+      "properties": {
+        "@id": "way/1530555998",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0652323,
+          52.8937332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1530587356",
+      "properties": {
+        "@id": "way/1530587356",
+        "leisure": "pitch",
+        "name": "S.V. Bethen e.V.",
+        "sport": "soccer",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0549194,
+          52.8689019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1557892621",
+      "properties": {
+        "@id": "way/1557892621",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0925456,
+          52.8252376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1560102828",
+      "properties": {
+        "@id": "way/1560102828",
+        "highway": "track",
+        "surface": "dirt",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0113666,
+          52.8193151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562216431",
+      "properties": {
+        "@id": "way/1562216431",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9839706,
+          52.8316286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487817",
+      "properties": {
+        "@id": "way/1562487817",
+        "highway": "track",
+        "surface": "asphalt",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0353012,
+          52.8614646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487870",
+      "properties": {
+        "@id": "way/1562487870",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0142646,
+          52.8554556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487890",
+      "properties": {
+        "@id": "way/1562487890",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9982465,
+          52.8591074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487893",
+      "properties": {
+        "@id": "way/1562487893",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9984552,
+          52.8579034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487899",
+      "properties": {
+        "@id": "way/1562487899",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0039863,
+          52.8569004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487907",
+      "properties": {
+        "@id": "way/1562487907",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0070439,
+          52.8564127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487923",
+      "properties": {
+        "@id": "way/1562487923",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0008785,
+          52.8574465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487924",
+      "properties": {
+        "@id": "way/1562487924",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0047196,
+          52.8567774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487926",
+      "properties": {
+        "@id": "way/1562487926",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0129168,
+          52.8554258
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562487927",
+      "properties": {
+        "@id": "way/1562487927",
+        "highway": "track",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0113316,
+          52.8557531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1562502945",
+      "properties": {
+        "@id": "way/1562502945",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0653067,
+          52.8690248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1576030987",
+      "properties": {
+        "@id": "way/1576030987",
+        "highway": "track",
+        "surface": "paving_stones",
+        "tracktype": "grade1",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9970143,
+          52.8653009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/1576163815",
+      "properties": {
+        "@id": "way/1576163815",
+        "highway": "track",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0160478,
+          52.8730848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/1751039804",
+      "properties": {
+        "@id": "node/1751039804",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "58",
+        "addr:postcode": "49661",
+        "addr:street": "Löninger Straße",
+        "amenity": "car_wash",
+        "automated": "no",
+        "name": "Gebrauchtwagenhandel Seifert",
+        "opening_hours": "Mo-Fr 08:00-18:00; Sa 08:00-16:00",
+        "operator": "Seifert",
+        "self_service": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0319279,
+          52.8381107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3263096681",
+      "properties": {
+        "@id": "node/3263096681",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "57",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "leisure": "fitness_centre",
+        "name": "VIVA Fitness Cloppenburg 1.0",
+        "opening_hours": "Mo-Fr 08:00-22:00; Sa, Su 10:00-16:00; PH 10:00-13:00",
+        "phone": "+49 4471 958 033 0",
+        "sport": "fitness",
+        "toilets:wheelchair": "yes",
+        "website": "https://vivafitness.de/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0570111,
+          52.8428207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3923126161",
+      "properties": {
+        "@id": "node/3923126161",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "35",
+        "addr:postcode": "49661",
+        "addr:street": "Mühlenstraße",
+        "brand": "EasyFitness",
+        "brand:wikidata": "Q106166703",
+        "leisure": "fitness_centre",
+        "name": "EasyFitness",
+        "opening_hours": "Mo-Fr 09:00-22:00; Sa-Su 09:00-16:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0421977,
+          52.8474983
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4348057161",
+      "properties": {
+        "@id": "node/4348057161",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "39",
+        "addr:postcode": "49661",
+        "addr:street": "Memelstraße",
+        "description": "Fitnessstudie vor Ort ohne Aufsicht",
+        "email": "cloppenburg2.0@vivafitness.de",
+        "leisure": "fitness_centre",
+        "name": "Viva Fitness Cloppenburg 2.0",
+        "opening_hours": "Mo-Fr 06:00-00:00; Sa,Su 06:00-20:00",
+        "phone": "+49 4471 900 5253",
+        "sport": "fitness",
+        "website": "https://www.vivafitness.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0257849,
+          52.8364338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4820980250",
+      "properties": {
+        "@id": "node/4820980250",
+        "amenity": "car_wash",
+        "automated": "yes",
+        "maxheight": "2.8",
+        "maxwidth": "2.58",
+        "name": "Reifen Günther",
+        "opening_hours": "Mo-Fr 08:00-17:00; Sa 08:00-12:00"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0742223,
+          52.8384885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4820980635",
+      "properties": {
+        "@id": "node/4820980635",
+        "amenity": "car_wash",
+        "check_date:opening_hours": "2024-03-01",
+        "name": "Reifen Günther (SB)",
+        "opening_hours": "Mo-Sa 06:00-22:00; PH,Su off",
+        "self_service": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0743644,
+          52.8382876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6040074375",
+      "properties": {
+        "@id": "node/6040074375",
+        "addr:housenumber": "27",
+        "addr:street": "Mühlenstraße",
+        "check_date": "2024-11-13",
+        "leisure": "fitness_centre",
+        "name": "N Gym",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-13:00; PH,Sa,Su off",
+        "phone": "+49 4471 8820580",
+        "sport": "fitness",
+        "website": "https://www.ngym-physioportal.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0424602,
+          52.8470617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6186304266",
+      "properties": {
+        "@id": "node/6186304266",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "41",
+        "addr:postcode": "49661",
+        "addr:street": "Osterstraße",
+        "check_date": "2026-10-20",
+        "leisure": "fitness_centre",
+        "name": "Yoga vivo",
+        "sport": "yoga",
+        "website": "https://www.yogavivo.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0465062,
+          52.8489741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6410399150",
+      "properties": {
+        "@id": "node/6410399150",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "47",
+        "addr:postcode": "49661",
+        "addr:street": "Soestenstraße",
+        "amenity": "car_wash",
+        "brand": "Independent",
+        "fax": "+49 4471 83884",
+        "name": "SOESTEN Tank",
+        "operator": "Albert Themann",
+        "phone": "+49 4471 2845",
+        "website": "https://www.soestentank.net/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0366841,
+          52.8488006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/7185189376",
+      "properties": {
+        "@id": "node/7185189376",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "26,30",
+        "addr:postcode": "49661",
+        "addr:street": "Lange Straße",
+        "brand": "VIVA Fitness Cloppenburg 3.0",
+        "check_date": "2026-08-01",
+        "check_date:opening_hours": "2026-08-01",
+        "contact:phone": "+49 4471 9587070",
+        "leisure": "fitness_centre",
+        "name": "VIVA Fitness Cloppenburg 3.0",
+        "not:brand:wikidata": "Q127120",
+        "opening_hours": "Mo-Su 06:00-24:00; PH 06:00-24:00 \"Abweichungen an Feiertagen möglich\"",
+        "sport": "fitness",
+        "website": "https://www.vivafitness.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0399527,
+          52.8455442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8189022645",
+      "properties": {
+        "@id": "node/8189022645",
+        "addr:housenumber": "30",
+        "addr:street": "Hagenstraße",
+        "leisure": "fitness_centre",
+        "name": "Personalspeedbox",
+        "opening_hours": "Mo,We 09:00-20:00; Tu,Th 12:00-20:00; Fr 11:00-17:00; PH,Sa,Su off",
+        "sport": "fitness",
+        "website": "https://personalspeedbox.de/ems-training-cloppenburg/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0474679,
+          52.848343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/8795334264",
+      "properties": {
+        "@id": "node/8795334264",
+        "access": "private",
+        "leisure": "swimming_pool"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0602527,
+          52.8718886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9082134489",
+      "properties": {
+        "@id": "node/9082134489",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Leharstraße",
+        "alt_name": "Kapelle;Musikzug der Feuerwehr",
+        "check_date:opening_hours": "2026-09-05",
+        "club": "music",
+        "email": "1vors@fk-clp.de",
+        "loc_name": "Feuerwehrkapelle",
+        "name": "Feuerwehrkapelle Cloppenburg",
+        "official_name": "Feuerwehrkapelle von 1884 e.V. Cloppenburg",
+        "opening_hours": "Tu 19:30-21:30",
+        "phone": "+49 4473 2866",
+        "reg_name": "Feuerwehrkapelle Cloppenburg",
+        "short_name": "FKC",
+        "website": "http://www.feuerwehrkapelle-cloppenburg.de/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0502384,
+          52.8404343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9082134491",
+      "properties": {
+        "@id": "node/9082134491",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "10",
+        "addr:postcode": "49661",
+        "addr:street": "Leharstraße",
+        "check_date": "2026-09-05",
+        "club": "music",
+        "name": "Feuerwehr - Spielmannszug Cloppenburg",
+        "website": "http://feuerwehr-spielmannszug-cloppenburg.net/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0502093,
+          52.8406215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9719023694",
+      "properties": {
+        "@id": "node/9719023694",
+        "addr:city": "Cloppenburg",
+        "addr:country": "DE",
+        "addr:housenumber": "104",
+        "addr:postcode": "49661",
+        "addr:street": "Westallee",
+        "amenity": "car_wash",
+        "check_date": "2026-10-13",
+        "check_date:opening_hours": "2023-12-02",
+        "contact:facebook": "williwewer",
+        "contact:phone": "+49 175 5880727",
+        "high_pressure_washer": "yes",
+        "name": "SB Waschanlage Willi Wewer",
+        "opening_hours": "Mo-Sa 06:00-22:00; Su,PH off",
+        "payment:cash": "no",
+        "payment:contactless": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "self_service": "yes",
+        "vacuum_cleaner": "yes",
+        "vacuum_cleaner:self_service": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.9960218,
+          52.8286935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10750785053",
+      "properties": {
+        "@id": "node/10750785053",
+        "addr:city": "Cloppenburg",
+        "addr:housenumber": "30",
+        "addr:postcode": "49661",
+        "addr:street": "Emsteker Straße",
+        "brand": "INJOY Fitness",
+        "brand:wikidata": "Q1663622",
+        "check_date": "2026-10-17",
+        "leisure": "fitness_centre",
+        "level": "1",
+        "name": "INJOY",
+        "opening_hours": "Mo-Th 08:00-22:00; Fr 08:00-21:00; Sa-Su 08:00-15:00",
+        "phone": "+494471958190",
+        "website": "https://www.injoy-cloppenburg.de"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0507006,
+          52.8431864
+        ]
+      }
+    }
+  ]
+}

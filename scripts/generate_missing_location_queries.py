@@ -140,15 +140,20 @@ def matching_location_types(feature: dict[str, object]) -> set[str]:
     }
 
 
-def infer_location_type(feature: dict[str, object]) -> str:
+def infer_location_types(feature: dict[str, object]) -> tuple[str, ...]:
     matches = matching_location_types(feature)
     if not matches:
         raise ValueError("no matching missing-location tags")
+    return tuple(sorted(matches))
+
+
+def infer_location_type(feature: dict[str, object]) -> str:
+    matches = infer_location_types(feature)
     if len(matches) > 1:
         raise ValueError(
             "ambiguous missing LPG location type: " + ", ".join(sorted(matches))
         )
-    return next(iter(matches))
+    return matches[0]
 
 
 def generate_query(city: str, output_path: Path) -> Path:

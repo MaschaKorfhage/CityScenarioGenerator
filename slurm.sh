@@ -14,4 +14,4 @@
 
 source /home/gzi37280/CityScenarioGenerator/.cityvenv/bin/activate
 
-srun python cityscenariogenerator/main.py -p "02625"
+srun python cityscenariogenerator/main.py -p "49661"

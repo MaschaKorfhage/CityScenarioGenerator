@@ -176,6 +176,14 @@
       },
       "TimeLimit": null
     },
+    "OSM_kreismusikschule_singing_school_way_104590984": {
+      "LocationType": "Singing School",
+      "Coordinates": {
+        "Latitude": 51.1766134,
+        "Longitude": 14.4263219
+      },
+      "TimeLimit": null
+    },
     "OSM_esso_way_541313902": {
       "LocationType": "Car Wash",
       "Coordinates": {
@@ -274,6 +282,14 @@
     },
     "OSM_attaim_node_5973342985": {
       "LocationType": "Fitness Studio",
+      "Coordinates": {
+        "Latitude": 51.1820791,
+        "Longitude": 14.4262856
+      },
+      "TimeLimit": null
+    },
+    "OSM_attaim_yoga_node_5973342985": {
+      "LocationType": "Yoga Studio",
       "Coordinates": {
         "Latitude": 51.1820791,
         "Longitude": 14.4262856
@@ -416,8 +432,24 @@
       },
       "TimeLimit": null
     },
+    "OSM_focus_privatfitness_lounge_yoga_node_11323120119": {
+      "LocationType": "Yoga Studio",
+      "Coordinates": {
+        "Latitude": 51.1776265,
+        "Longitude": 14.4235615
+      },
+      "TimeLimit": null
+    },
     "OSM_clever_fit_node_731025529": {
       "LocationType": "Fitness Studio",
+      "Coordinates": {
+        "Latitude": 51.1640419,
+        "Longitude": 14.4268851
+      },
+      "TimeLimit": null
+    },
+    "OSM_clever_fit_yoga_node_731025529": {
+      "LocationType": "Yoga Studio",
       "Coordinates": {
         "Latitude": 51.1640419,
         "Longitude": 14.4268851
@@ -3637,6 +3669,54 @@
       "Coordinates": {
         "Latitude": 51.1455815,
         "Longitude": 14.4204087
+      },
+      "TimeLimit": null
+    },
+    "Hunting_forest_custom": {
+      "LocationType": "Hunting Forest",
+      "Coordinates": {
+        "Latitude": 51.180167,
+        "Longitude": 14.391583
+      },
+      "TimeLimit": null
+    },
+    "Flea_Market_Location_custom": {
+      "LocationType": "Flea Market Location",
+      "Coordinates": {
+        "Latitude": 51.163083,
+        "Longitude": 14.420944
+      },
+      "TimeLimit": null
+    },
+    "Concert_House_custom": {
+      "LocationType": "Concert House",
+      "Coordinates": {
+        "Latitude": 51.181500,
+        "Longitude": 14.429139
+      },
+      "TimeLimit": null
+    },
+    "Festival_Location_custom": {
+      "LocationType": "Festival Location",
+      "Coordinates": {
+        "Latitude": 51.181500,
+        "Longitude": 14.429139
+      },
+      "TimeLimit": null
+    },
+    "Golf_Club_custom": {
+      "LocationType": "Golf Club",
+      "Coordinates": {
+        "Latitude": 51.077611,
+        "Longitude": 13.895639
+      },
+      "TimeLimit": null
+    },
+    "Bow_Range_custom": {
+      "LocationType": "Bow Range",
+      "Coordinates": {
+        "Latitude": 51.180167,
+        "Longitude": 14.391583
       },
       "TimeLimit": null
     }

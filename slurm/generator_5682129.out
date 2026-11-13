@@ -1,0 +1,35 @@
+2026-11-12 16:55:24 INFO     Applying no custom adaptations
+2026-11-12 16:55:24 INFO     Using RNG seed 0
+2026-11-12 16:55:24 INFO     Using numpy RNG seed 3626764237
+2026-11-12 16:55:24 INFO     Sending query to ETHOS.BUILDA: {'postcode': '49661'}
+2026-11-12 16:58:02 INFO     Residential buildings in {'postcode': '49661'}: 8904
+2026-11-12 16:58:03 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-12 16:59:09 INFO     Non-residential buildings in {'postcode': '49661'}: 14626
+2026-11-12 16:59:09 INFO     Some building IDs only differ in case. Added a counter to make IDs unique without case.
+2026-11-12 16:59:10 INFO     Collected 146 POIs from 1 dataframes.
+2026-11-12 16:59:10 INFO     Matched 119 of 146 OSM nodes to BUILDA buildings. Max distance: 30 m.
+2026-11-12 16:59:10 INFO     Identical location types (16): [('Doctors Office -> Doctors Office', 13), ('Bar Location -> Bar Location', 1), ('Museum -> Museum', 1), ('School -> School', 1)]
+2026-11-12 16:59:10 INFO     Added location types (64): [(' -> Doctors Office', 41), (' -> Cafe', 7), (' -> Bar Location', 7), (' -> Kindergarden', 5), (' -> Pharmacy', 3), (' -> Supermarket', 1)]
+2026-11-12 16:59:10 INFO     Changed location types (39): [('Generic Errand Location -> Doctors Office', 12), ('Pharmacy -> Doctors Office', 9), ('Generic Errand Location -> Cafe', 5), ('Generic Errand Location -> Supermarket', 4), ('Generic Errand Location -> Pharmacy', 3), ('Generic Errand Location -> Bar Location', 1), ('Community College -> School', 1), ('Pharmacy -> Cafe', 1), ('Bar Location -> Doctors Office', 1), ('Bar Location -> Theater', 1), ('Supermarket -> Doctors Office', 1)]
+2026-11-12 16:59:10 INFO     Matched 19 POIs to residential buildings.
+2026-11-12 16:59:10 INFO     Created 46 new non-residential building objects from residential buildings.
+2026-11-12 16:59:10 INFO     Created in total 29 copies of building objects.
+2026-11-12 16:59:10 INFO     Created 27 new non-residential buildings for unmatched POIs.
+2026-11-12 16:59:10 INFO     Custom POIs loaded from scenario_inputs/49661/custom_pois.json: 415 total, 0 pharmacies: []
+2026-11-12 16:59:10 INFO     Loaded 415 custom POIs
+2026-11-12 16:59:10 INFO     Pharmacy POIs after loading customs (7): ['Pharmacy DE9_DENILD190000mlAR-2062', 'Pharmacy DE9_DENILD190000mmh2-3576', 'Pharmacy DE9_DENILD190000mmhq-3607', 'Pharmacy DE9_DENILD190000mog3-17936', 'Pharmacy DE9_DENILD190000moO5-18367', 'Pharmacy DE9_DENILD190000sTIp-7906', 'Pharmacy Generated_node1327271638']
+Traceback (most recent call last):
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 189, in <module>
+    main()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 178, in main
+    create_city_scenario(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/main.py", line 80, in create_city_scenario
+    create_configs_from_buildings(
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/create_lpg_configs.py", line 98, in create_configs_from_buildings
+    config_creator.create_poi_preferences(generate_test_routes)
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 448, in create_poi_preferences
+    self.check_location_availability()
+  File "/rwthfs/rz/cluster/home/gzi37280/CityScenarioGenerator/cityscenariogenerator/lpg_config_creator.py", line 375, in check_location_availability
+    raise Exception(
+Exception: The following 13 locations are not covered by any POI: {'Singing School', 'Dance Studio', 'Dance Club', 'Flea Market Location', 'Shopping Mall', 'Hunting Forest', 'University', 'Opera', 'Concert House', 'Golf Club', 'Fishing Location', 'Festival Location', 'Food Market'}
+srun: error: n23m0021: task 0: Exited with exit code 1
